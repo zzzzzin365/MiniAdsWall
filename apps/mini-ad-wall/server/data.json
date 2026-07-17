@@ -1,0 +1,170 @@
+[
+  {
+    "id": "1",
+    "title": "巨量引擎1",
+    "publisher": "字节广告君",
+    "content": "巨量引擎是字节跳动旗下综合的数字化营销服务平台，致力于让不分体量、地域的企业及个体，都能通过数字化技术激发创造、驱动生意，实现商业的可持续增长。",
+    "url": "https://www.oceanengine.com/",
+    "price": 120,
+    "clicks": 63,
+    "videos": [
+      "http://localhost:3001/1765354607496-557535527.mov"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "巨量引擎22",
+    "publisher": "字节广告君",
+    "content": "巨量引擎是字节跳动旗下综合的数字化营销服务平台，致力于让不分体量、地域的企业及个体，都能通过数字化技术激发创造、驱动生意，实现商业的可持续增长。",
+    "url": "https://www.oceanengine.com/",
+    "price": 85,
+    "clicks": 44,
+    "videos": [
+      "http://localhost:3001/1765354598465-168347486.mov",
+      "http://localhost:3001/1765355267032-815003589.mov"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "数字化营销，让生意飞速增长！",
+    "publisher": "字节广告君",
+    "content": "巨量引擎是字节跳动旗下综合的数字化营销服务平台，致力于让不分体量、地域的企业及个体，都能通过数字化技术激发创造、驱动生意，实现商业的可持续增长。",
+    "url": "https://www.oceanengine.com/",
+    "price": 200,
+    "clicks": 89,
+    "videos": [
+      "http://localhost:3001/1765354632074-263329318.mov",
+      "http://localhost:3001/1765354636028-688540221.mov"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "巨量星图，品牌达人强势联动，引爆电商销量！",
+    "publisher": "字节广告君",
+    "content": "巨量星图是品牌与达人合作的服务平台，连接品牌与创作者，实现内容营销价值。",
+    "url": "https://www.xingtu.cn/",
+    "price": 28,
+    "clicks": 100,
+    "videos": [
+      "http://localhost:3001/1765354584578-855445055.mov",
+      "http://localhost:3001/1765354665414-723187686.mov"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "千川电商推广",
+    "publisher": "字节广告君",
+    "content": "巨量千川是电商广告平台，为商家提供抖音电商一体化营销解决方案。",
+    "url": "https://qianchuan.jinritemai.com/",
+    "price": 110,
+    "clicks": 78,
+    "videos": [
+      "http://localhost:3001/1765354624539-844312263.mov",
+      "http://localhost:3001/1765388642837-307480849.mov"
+    ]
+  },
+  {
+    "id": "1765388777842",
+    "title": "口腔健康，从最强牙刷开始！",
+    "publisher": "wo",
+    "content": "最强牙刷，为你的口腔健康保驾护航！",
+    "url": "https://www.oceanengine.com/",
+    "price": 75,
+    "clicks": 2,
+    "videos": [
+      "http://localhost:3001/1765388745394-736421138.mov"
+    ]
+  },
+  {
+    "id": "1765438168672",
+    "title": "不将就，只用最强牙刷！",
+    "publisher": "wo",
+    "content": "不将就，只用最强牙刷，让口腔健康更强势！",
+    "url": "https://www.oceanengine.com/",
+    "price": 45,
+    "clicks": 3,
+    "videos": [
+      "http://localhost:3001/1765438098761-755036609.mov",
+      "http://localhost:3001/1765438104712-137637789.mov",
+      "http://localhost:3001/1765445118882-947225880.mov"
+    ]
+  },
+  {
+    "id": "1765446722049",
+    "title": "穿山甲广告2",
+    "publisher": "字节广告君",
+    "content": "穿山甲是全球开发者成长平台，帮助开发者实现流量变现与用户增长的双重价值。",
+    "url": "https://www.csjplatform.com/",
+    "price": 459,
+    "clicks": 0,
+    "videos": [
+      "http://localhost:3001/1765352153216-927622537.mov",
+      "http://localhost:3001/1765352158292-506011709.mov"
+    ]
+  },
+  {
+    "id": "1765447572295",
+    "title": "巨量引擎22",
+    "publisher": "字节广告君",
+    "content": "巨量引擎是字节跳动旗下综合的数字化营销服务平台，致力于让不分体量、地域的企业及个体，都能通过数字化技术激发创造、驱动生意，实现商业的可持续增长。",
+    "url": "https://www.oceanengine.com/",
+    "price": 185,
+    "clicks": 0,
+    "videos": [
+      "http://localhost:3001/1765354598465-168347486.mov",
+      "http://localhost:3001/1765355267032-815003589.mov"
+    ]
+  },
+  {
+    "id": "1765447598289",
+    "title": "穿山甲广告2",
+    "publisher": "字节广告君",
+    "content": "穿山甲是全球开发者成长平台，帮助开发者实现流量变现与用户增长的双重价值。",
+    "url": "https://www.csjplatform.com/",
+    "price": 459,
+    "clicks": 0,
+    "videos": [
+      "http://localhost:3001/1765352153216-927622537.mov",
+      "http://localhost:3001/1765352158292-506011709.mov"
+    ]
+  },
+  {
+    "id": "1765447701524",
+    "title": "强势刷牙，洁齿无忧！",
+    "publisher": "wo",
+    "content": "强势刷牙，洁齿无忧，让你的笑容更自信！",
+    "url": "https://www.oceanengine.com/",
+    "price": 45,
+    "clicks": 0,
+    "videos": [
+      "http://localhost:3001/1765447667925-492462114.mov",
+      "http://localhost:3001/1765447672852-157462312.mov"
+    ]
+  },
+  {
+    "id": "1765448528984",
+    "title": "牙刷革命，强势来袭！",
+    "publisher": "wo",
+    "content": "强势清洁，一刷到底，让牙齿焕然一新！",
+    "url": "https://www.oceanengine.com/",
+    "price": 45,
+    "clicks": 1,
+    "videos": [
+      "http://localhost:3001/1765448497370-683139505.mov",
+      "http://localhost:3001/1765448501978-44295026.mov"
+    ]
+  },
+  {
+    "id": "1765448981874",
+    "title": "强势刷牙，一刷到底！",
+    "publisher": "wo",
+    "content": "这根牙刷，不刷干净誓不罢休！",
+    "url": "https://www.oceanengine.com/",
+    "price": 45,
+    "clicks": 1,
+    "videos": [
+      "http://localhost:3001/1765448953672-753612449.mov",
+      "http://localhost:3001/1765448958057-800021827.mov"
+    ]
+  }
+]

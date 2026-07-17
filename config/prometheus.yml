@@ -1,0 +1,26 @@
+# Prometheus 配置文件 — MiniAdsWall Agent 智能客服系统
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'miniadswall'
+    environment: 'production'
+
+rule_files:
+  - "alerts/*.yml"
+
+scrape_configs:
+  # MiniAdsWall Agent 主应用指标
+  - job_name: 'miniadswall-app'
+    static_configs:
+      - targets: ['miniadswall:8000']
+        labels:
+          service: 'miniadswall'
+    scrape_interval: 10s
+    metrics_path: '/metrics'
+
+  # Prometheus 自监控
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
