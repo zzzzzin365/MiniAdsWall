@@ -4,7 +4,7 @@
 MiniAdsWall Agent 在这条最小完整业务链路上，引入广告领域 Agent，将投放数据、广告知识库和运营工具连接起来，帮助运营人员完成 Campaign 表现查询、异常归因、Creative 优化、Budget 分配、Bid 策略模拟等工作，把“看报表”升级为“得到可执行的投放建议”。
 
 # 技术背景
-<img width="1004" height="583" alt="image" src="https://github.com/user-attachments/assets/3f85af19-954e-4124-8c6b-5b38a8a8000a" />
+<img width="4792" height="3194" alt="image" src="https://github.com/user-attachments/assets/72e1aae8-ea3b-4f7b-bdbb-995c1347af52" />
 
 MiniAddwall + MiniAdsWall Agent 是一个一个基于 React/Koa 的全栈广告管理系统，连接至 FastAPI 多智能体 AI 后端。
 前端为MiniAddwall，保留了广告增删改查、视频上传、点击追踪、排序、仪表盘以及创意生成功能。而MiniAdsWall Agent增加了代理层，包含广告代理路由、结构化广告分析工具、RAG知识检索、记忆、技能、监控与评估功能。
