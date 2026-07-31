@@ -6,6 +6,13 @@ interface AdsAgentChatResponse {
     response: string;
     intent: string;
     agent_type: string;
+    decision: 'execute' | 'clarify' | 'reject' | 'confirm';
+    decision_reason: string;
+    missing_fields?: string[];
+    confirmation_id?: string;
+    risk_level: 'low' | 'medium' | 'high';
+    action_name?: string;
+    confirmed: boolean;
     escalated: boolean;
     knowledge_used?: boolean;
     tools_used?: string[];
@@ -46,16 +53,36 @@ async function getStatus(): Promise<{
     }
 }
 
-function buildAgentMessage(input: AssistantChatInput): string {
-    return [
-        '你是 Mini Ad Manager 的广告运营助手。请基于 MiniAdsWall Agent 的广告工具分析和知识库结果回答。',
-        '如果用户询问优化建议，请优先给出标题、出价、素材和下一步实验建议。',
-        '',
-        `[用户问题]\n${input.message}`
-    ].join('\n');
+function isPotentiallyMutating(message: string): boolean {
+    if (/^(确认|确认执行|我确认|继续执行|取消|取消操作|confirm|proceed|cancel)$/i.test(message.trim())) {
+        return true;
+    }
+    const advisory = /(哪些|建议|怎么|如何|策略|模拟|应该|分析)/i;
+    if (advisory.test(message)) {
+        return false;
+    }
+    return /(删除|移除|下线|停用).{0,8}(广告|计划|素材|视频|图片)|(修改|调整|设置|提高|降低|增加|减少).{0,10}(预算|出价)|(预算|出价).{0,10}(修改|调整|设置|提高|降低|增加|减少)|delete\s+(ad|campaign|asset|creative|video|image)|(change|raise|lower|increase|decrease).{0,10}(budget|bid)/i.test(message);
 }
 
 function localFallback(input: AssistantChatInput, reason?: string): AssistantChatOutput {
+    if (isPotentiallyMutating(input.message) || input.confirmationId) {
+        return {
+            convId: input.convId || null,
+            response: '安全决策服务当前不可用，无法校验权限或恢复确认状态。本次请求已拒绝，没有执行任何变更。',
+            intent: 'other',
+            agentType: 'local',
+            decision: 'reject',
+            decisionReason: 'safety_service_unavailable',
+            missingFields: [],
+            riskLevel: 'high',
+            actionName: undefined,
+            confirmed: false,
+            escalated: false,
+            knowledgeUsed: false,
+            source: 'local'
+        };
+    }
+
     const ads = input.ads || [];
     const totalClicks = ads.reduce((sum, ad) => sum + Number(ad.clicks || 0), 0);
     const noVideoCount = ads.filter(ad => !ad.videos || ad.videos.length === 0).length;
@@ -76,6 +103,12 @@ function localFallback(input: AssistantChatInput, reason?: string): AssistantCha
         response: `${suggestions.join('\n')}\n\n注：AdsAgent 当前不可用，已使用 MiniAddwall 本地诊断。${reason ? ` (${reason})` : ''}`,
         intent: 'local_analysis',
         agentType: 'local',
+        decision: 'execute',
+        decisionReason: 'safe_local_analysis_fallback',
+        missingFields: [],
+        riskLevel: 'low',
+        actionName: undefined,
+        confirmed: false,
         escalated: false,
         knowledgeUsed: false,
         source: 'local'
@@ -90,10 +123,11 @@ async function chat(input: AssistantChatInput): Promise<AssistantChatOutput> {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                message: buildAgentMessage(input),
+                message: input.message,
                 user_id: input.userId || 'mini-ad-manager',
                 conv_id: input.convId || undefined,
-                ads: input.ads || []
+                ads: input.ads || [],
+                confirmation_id: input.confirmationId
             })
         });
 
@@ -108,6 +142,13 @@ async function chat(input: AssistantChatInput): Promise<AssistantChatOutput> {
             response: data.response,
             intent: data.intent,
             agentType: data.agent_type,
+            decision: data.decision,
+            decisionReason: data.decision_reason,
+            missingFields: data.missing_fields || [],
+            confirmationId: data.confirmation_id,
+            riskLevel: data.risk_level,
+            actionName: data.action_name,
+            confirmed: data.confirmed,
             escalated: data.escalated,
             knowledgeUsed: Boolean(data.knowledge_used),
             toolsUsed: data.tools_used || [],

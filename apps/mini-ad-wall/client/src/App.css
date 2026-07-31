@@ -1611,6 +1611,34 @@ body::after {
   color: var(--text-muted);
 }
 
+.assistant-decision-actions {
+  padding: 10px 12px;
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid var(--border-light);
+  background: #fff7ed;
+}
+
+.assistant-decision-actions button {
+  flex: 1;
+  height: 36px;
+  border-radius: var(--radius-std);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.assistant-decision-actions .confirm {
+  border: 1px solid #dc2626;
+  background: #dc2626;
+  color: #fff;
+}
+
+.assistant-decision-actions .cancel {
+  border: 1px solid var(--border-light);
+  background: #fff;
+  color: var(--text-body);
+}
+
 .assistant-input-row {
   padding: 12px;
   display: flex;

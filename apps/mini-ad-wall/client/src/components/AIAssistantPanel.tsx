@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { chatWithAssistant, getAssistantStatus } from '../api';
 import { Ad, AssistantMessage, AssistantStatus } from '../types';
 
@@ -16,7 +16,9 @@ function AIAssistantPanel({ ads }: AIAssistantPanelProps) {
     const [open, setOpen] = useState(false);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
+    const loadingRef = useRef(false);
     const [convId, setConvId] = useState<string | undefined>();
+    const [pendingConfirmationId, setPendingConfirmationId] = useState<string | undefined>();
     const [status, setStatus] = useState<AssistantStatus | null>(null);
     const [messages, setMessages] = useState<AssistantMessage[]>([
         {
@@ -47,12 +49,13 @@ function AIAssistantPanel({ ads }: AIAssistantPanelProps) {
             });
     }, [open]);
 
-    const sendMessage = async (message: string) => {
+    const sendMessage = async (message: string, confirmationId?: string) => {
         const text = message.trim();
-        if (!text || loading) {
+        if (!text || loadingRef.current) {
             return;
         }
 
+        loadingRef.current = true;
         setInput('');
         setLoading(true);
         setMessages(prev => [...prev, { role: 'user', content: text }]);
@@ -62,15 +65,22 @@ function AIAssistantPanel({ ads }: AIAssistantPanelProps) {
                 message: text,
                 userId: 'mini-ad-manager',
                 convId,
-                ads
+                ads,
+                confirmationId
             });
             if (result.convId) {
                 setConvId(result.convId);
             }
+            if (result.decision === 'confirm' && result.confirmationId) {
+                setPendingConfirmationId(result.confirmationId);
+            } else if (result.decision === 'execute' || result.decision === 'reject') {
+                setPendingConfirmationId(undefined);
+            }
             setMessages(prev => [...prev, {
                 role: 'assistant',
                 content: result.response,
-                source: result.source
+                source: result.source,
+                decision: result.decision
             }]);
         } catch (error) {
             setMessages(prev => [...prev, {
@@ -79,6 +89,7 @@ function AIAssistantPanel({ ads }: AIAssistantPanelProps) {
                 source: 'local'
             }]);
         } finally {
+            loadingRef.current = false;
             setLoading(false);
         }
     };
@@ -125,7 +136,10 @@ function AIAssistantPanel({ ads }: AIAssistantPanelProps) {
                                         ))}
                                     </div>
                                     {message.source && (
-                                        <div className="assistant-source">{message.source === 'adsAgent' ? 'AdsAgent' : '本地诊断'}</div>
+                                        <div className="assistant-source">
+                                            {message.source === 'adsAgent' ? 'AdsAgent' : '本地诊断'}
+                                            {message.decision && message.decision !== 'execute' && ` · ${message.decision}`}
+                                        </div>
                                     )}
                                 </div>
                             );
@@ -136,6 +150,25 @@ function AIAssistantPanel({ ads }: AIAssistantPanelProps) {
                             </div>
                         )}
                     </div>
+
+                    {pendingConfirmationId && !loading && (
+                        <div className="assistant-decision-actions" role="group" aria-label="确认高风险操作">
+                            <button
+                                type="button"
+                                className="confirm"
+                                onClick={() => sendMessage('确认执行', pendingConfirmationId)}
+                            >
+                                确认执行
+                            </button>
+                            <button
+                                type="button"
+                                className="cancel"
+                                onClick={() => sendMessage('取消操作', pendingConfirmationId)}
+                            >
+                                取消操作
+                            </button>
+                        </div>
+                    )}
 
                     <form className="assistant-input-row" onSubmit={(event) => { event.preventDefault(); sendMessage(input); }}>
                         <input

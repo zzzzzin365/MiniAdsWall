@@ -82,7 +82,8 @@ async function chatAssistant(ctx: RouterContext): Promise<void> {
         message: body.message.trim(),
         userId: body.userId,
         convId: body.convId,
-        ads: Array.isArray(body.ads) ? body.ads : []
+        ads: Array.isArray(body.ads) ? body.ads : [],
+        confirmationId: body.confirmationId
     });
 
     ctx.status = 200;

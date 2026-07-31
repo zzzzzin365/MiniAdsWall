@@ -111,6 +111,7 @@ export interface AssistantChatInput {
     userId?: string;
     convId?: string;
     ads?: Ad[];
+    confirmationId?: string;
 }
 
 export interface AssistantChatOutput {
@@ -118,6 +119,13 @@ export interface AssistantChatOutput {
     response: string;
     intent: string;
     agentType: string;
+    decision: 'execute' | 'clarify' | 'reject' | 'confirm';
+    decisionReason: string;
+    missingFields: string[];
+    confirmationId?: string;
+    riskLevel: 'low' | 'medium' | 'high';
+    actionName?: string;
+    confirmed: boolean;
     escalated: boolean;
     knowledgeUsed: boolean;
     toolsUsed?: string[];

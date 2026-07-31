@@ -13,7 +13,8 @@
   - 结果由 Orchestrator 合并后返回
 
 升级机制：
-  - Agent 置信度低于阈值 → 自动升级到更高级 Agent 或转人工
+  - 融合置信度低于阈值 → OTHER → 安全门拒识
+  - 高风险动作即使被识别为 OTHER，也优先执行权限和确认规则
 """
 import asyncio
 import logging
@@ -25,6 +26,12 @@ from typing import Any, Dict, List, Optional
 
 from anthropic import AsyncAnthropic
 
+from core.action_decision import (
+    ActionDecision,
+    ActionDecisionEngine,
+    DecisionType,
+    RiskLevel,
+)
 from core.intent_recognizer import IntentCategory, IntentRecognizer, UrgencyLevel
 
 logger = logging.getLogger(__name__)
@@ -81,6 +88,13 @@ class Request:
     history:     Optional[List[Dict[str, str]]] = None  # 对话历史，传给意图识别
     intent:      Optional[IntentCategory] = None
     urgency:     Optional[UrgencyLevel]   = None
+    entities:    Dict[str, List[str]] = field(default_factory=dict)
+    permissions: List[str] = field(default_factory=list)
+    intent_confidence: float = 0.0
+    confirmation_id: Optional[str] = None
+    confirmed_action: bool = False
+    action_name: Optional[str] = None
+    prepared_decision: Optional[ActionDecision] = None
     request_id:  str = field(default_factory=lambda: str(uuid.uuid4())[:8])
 
 
@@ -90,6 +104,13 @@ class OrchestratorResult:
     response:    str
     agent_type:  AgentType
     intent:      Optional[IntentCategory]
+    decision:    DecisionType = DecisionType.EXECUTE
+    decision_reason: str = ""
+    missing_fields: List[str] = field(default_factory=list)
+    confirmation_id: Optional[str] = None
+    risk_level: RiskLevel = RiskLevel.LOW
+    action_name: Optional[str] = None
+    confirmed: bool = False
     escalated:   bool  = False
     latency_ms:  float = 0.0
 
@@ -155,12 +176,22 @@ class BaseAgent:
 
     def _build_system_prompt(self, req: Request) -> str:
         """把动态加载的 Skills 拼入 system prompt，让业务规则随请求生效。"""
-        if self._skill_manager is None:
-            return self.system_prompt
-        skill_prompt = self._skill_manager.prompt_for(req.message, self.agent_type.value)
-        if not skill_prompt:
-            return self.system_prompt
-        return f"{self.system_prompt}\n\n[动态 Skills]\n{skill_prompt}"
+        parts = [self.system_prompt]
+        if self._skill_manager is not None:
+            skill_prompt = self._skill_manager.prompt_for(
+                req.message,
+                self.agent_type.value,
+            )
+            if skill_prompt:
+                parts.append(f"[动态 Skills]\n{skill_prompt}")
+        if req.confirmed_action:
+            parts.append(
+                "[安全决策]\n"
+                f"用户已确认高风险操作（{req.action_name or 'unknown'}）。"
+                "只有已注册写操作工具明确返回成功时，才能声称操作已经完成；"
+                "当前只有分析或模拟工具时，必须说明无法执行真实变更，不能假装成功。"
+            )
+        return "\n\n".join(parts)
 
     def _needs_escalation(self, content: str) -> bool:
         """检测 Agent 是否建议升级（简单关键词检测）。"""
@@ -222,6 +253,9 @@ class AgentOrchestrator:
         base_url: Optional[str] = None,
         model:    str = "claude-3-5-sonnet-20241022",
         skill_manager: Optional[Any] = None,
+        confirmation_ttl_seconds: int = 300,
+        clarification_ttl_seconds: int = 600,
+        redis_url: Optional[str] = None,
     ):
         kwargs: Dict[str, Any] = {"api_key": api_key}
         if base_url:
@@ -229,6 +263,11 @@ class AgentOrchestrator:
         client = AsyncAnthropic(**kwargs)
 
         self._intent_recognizer = IntentRecognizer(api_key=api_key, base_url=base_url, model=model)
+        self._decision_engine = ActionDecisionEngine(
+            confirmation_ttl_seconds=confirmation_ttl_seconds,
+            clarification_ttl_seconds=clarification_ttl_seconds,
+            redis_url=redis_url,
+        )
         self._skill_manager = skill_manager
 
         # Agent 池：每种类型可有多个实例（水平扩展）
@@ -250,20 +289,20 @@ class AgentOrchestrator:
     async def run(self, req: Request) -> OrchestratorResult:
         """
         处理一次请求的完整流程：
-          意图识别 → 路由选 Agent → 执行 → 检查升级 → 返回结果
+          待处理状态恢复 → 意图识别 → 四态决策 → 路由执行 → 升级检查
         """
         t0 = time.monotonic()
-
-        # 1. 意图识别（如果调用方已识别则跳过）
-        if req.intent is None:
-            intent_result = await self._intent_recognizer.recognize(req.message, history=req.history)
-            req.intent  = intent_result.intent
-            req.urgency = intent_result.urgency
+        decision = req.prepared_decision
+        req.prepared_decision = None
+        if decision is None:
+            decision = await self._prepare_decision(req)
+        if decision.decision != DecisionType.EXECUTE:
+            return self._decision_result(req, decision, t0)
 
         # 复杂问题自动并行协作，例如同一句同时涉及上传故障和广告投放优化。
         collaboration = self._collaboration_targets(req)
         if len(collaboration) > 1:
-            return await self.run_parallel(req, collaboration)
+            return await self.run_parallel(req, collaboration, decision)
 
         # 2. 路由：选择 Agent 类型
         agent_type = self._route(req.intent, req.urgency)
@@ -283,11 +322,113 @@ class AgentOrchestrator:
             response=response.content,
             agent_type=response.agent_type,
             intent=req.intent,
+            decision=DecisionType.EXECUTE,
+            decision_reason=decision.reason,
+            confirmation_id=decision.confirmation_id,
+            risk_level=decision.risk_level,
+            action_name=decision.action_name,
+            confirmed=decision.confirmed,
             escalated=escalated,
             latency_ms=(time.monotonic() - t0) * 1000,
         )
 
-    async def run_parallel(self, req: Request, agent_types: List[AgentType]) -> OrchestratorResult:
+    async def preflight(self, req: Request) -> Optional[OrchestratorResult]:
+        """只进行意图识别和安全决策；非执行状态不调用 Agent、业务工具或 RAG。"""
+        t0 = time.monotonic()
+        decision = await self._prepare_decision(req)
+        if decision.decision != DecisionType.EXECUTE:
+            return self._decision_result(req, decision, t0)
+        req.prepared_decision = decision
+        return None
+
+    async def _prepare_decision(self, req: Request) -> ActionDecision:
+        # 1. 优先处理待确认和待追问状态。
+        pending_decision = self._decision_engine.resolve_pending(
+            user_id=req.user_id,
+            conv_id=req.conv_id,
+            message=req.message,
+            confirmation_id=req.confirmation_id,
+            permissions=req.permissions,
+        )
+        if pending_decision is None:
+            pending_decision = self._decision_engine.resolve_clarification(
+                user_id=req.user_id,
+                conv_id=req.conv_id,
+                message=req.message,
+                permissions=req.permissions,
+            )
+
+        if pending_decision is not None:
+            if pending_decision.decision != DecisionType.EXECUTE:
+                return pending_decision
+            pending = pending_decision.pending_action
+            if pending is None:
+                return ActionDecision(
+                    decision=DecisionType.REJECT,
+                    response="恢复信息不完整，请重新发起操作。",
+                    reason="missing_pending_action",
+                )
+            req.message = pending.message
+            req.intent = pending.intent
+            req.urgency = pending.urgency
+            req.entities = pending.entities
+            req.confirmed_action = pending_decision.confirmed
+            req.action_name = pending.action_name
+
+        # 2. 新请求才做意图和实体识别；恢复请求直接复用原状态。
+        if req.intent is None:
+            intent_result = await self._intent_recognizer.recognize(
+                req.message,
+                history=req.history,
+            )
+            req.intent = intent_result.intent
+            req.urgency = intent_result.urgency
+            req.entities = intent_result.entities
+            req.intent_confidence = intent_result.confidence
+
+        req.urgency = req.urgency or UrgencyLevel.LOW
+
+        # 3. 已确认/已补全请求不重新进入确认循环。
+        if pending_decision is not None:
+            return pending_decision
+        return self._decision_engine.decide(
+            message=req.message,
+            user_id=req.user_id,
+            conv_id=req.conv_id,
+            intent=req.intent or IntentCategory.OTHER,
+            urgency=req.urgency,
+            entities=req.entities,
+            permissions=req.permissions,
+        )
+
+    @staticmethod
+    def _decision_result(
+        req: Request,
+        decision: ActionDecision,
+        started_at: float,
+    ) -> OrchestratorResult:
+        """追问、拒识和确认直接返回，不调用任何 Agent。"""
+        return OrchestratorResult(
+            request_id=req.request_id,
+            response=decision.response,
+            agent_type=AgentType.GENERAL,
+            intent=req.intent,
+            decision=decision.decision,
+            decision_reason=decision.reason,
+            missing_fields=decision.missing_fields,
+            confirmation_id=decision.confirmation_id,
+            risk_level=decision.risk_level,
+            action_name=decision.action_name,
+            confirmed=decision.confirmed,
+            latency_ms=(time.monotonic() - started_at) * 1000,
+        )
+
+    async def run_parallel(
+        self,
+        req: Request,
+        agent_types: List[AgentType],
+        decision: Optional[ActionDecision] = None,
+    ) -> OrchestratorResult:
         """
         并行派发给多个 Agent，合并结果。
         适用于复杂问题（如同时涉及技术和广告投放优化）。
@@ -310,6 +451,12 @@ class AgentOrchestrator:
             response=combined,
             agent_type=agent_types[0],
             intent=req.intent,
+            decision=DecisionType.EXECUTE,
+            decision_reason=decision.reason if decision else "parallel_execution",
+            confirmation_id=decision.confirmation_id if decision else None,
+            risk_level=decision.risk_level if decision else RiskLevel.LOW,
+            action_name=decision.action_name if decision else None,
+            confirmed=decision.confirmed if decision else False,
             escalated=escalated,
             latency_ms=(time.monotonic() - t0) * 1000,
         )

@@ -79,6 +79,21 @@ _URGENCY_KEYWORDS = {
     UrgencyLevel.MEDIUM:   ["这周", "soon", "快点"],
 }
 
+# 关键词模式集中定义，既供识别器使用，也供固定测评集做泄漏检查。
+_PATTERNS: Dict[IntentCategory, List[str]] = {
+    IntentCategory.ESCALATION: ["投诉", "经理", "转人工", "supervisor"],
+    IntentCategory.COMPLAINT:  ["太差", "糟糕", "horrible", "等了很久"],
+    IntentCategory.QUERY:      ["?", "？", "怎么", "什么", "status"],
+    IntentCategory.REQUEST:    ["帮我", "需要", "please", "help"],
+    IntentCategory.GREETING:   ["你好", "嗨", "hello", "hi"],
+    IntentCategory.AD_OPTIMIZATION: ["优化", "表现", "效果", "点击率", "ctr", "转化", "诊断"],
+    IntentCategory.CREATIVE_GENERATION: ["生成", "文案", "标题", "素材", "创意", "卖点"],
+    IntentCategory.BID_STRATEGY: ["出价", "预算", "加价", "降价", "竞价", "排名", "bid"],
+    IntentCategory.ADS:        ["广告", "投放", "ad", "ads", "campaign"],
+    IntentCategory.TECHNICAL:  ["崩溃", "报错", "error", "crash"],
+    IntentCategory.ACCOUNT:    ["密码", "邮箱", "账户", "password"],
+}
+
 
 def _cosine(a: List[float], b: List[float]) -> float:
     """纯 Python 余弦相似度，不依赖 numpy。"""
@@ -254,21 +269,8 @@ class IntentRecognizer:
     def _pattern_recognize(self, message: str) -> Dict[str, Any]:
         """策略 3：关键词模式匹配（同步，零延迟兜底）。"""
         msg = message.lower()
-        patterns = {
-            IntentCategory.ESCALATION: ["投诉", "经理", "转人工", "supervisor"],
-            IntentCategory.COMPLAINT:  ["太差", "糟糕", "horrible", "等了很久"],
-            IntentCategory.QUERY:      ["?", "？", "怎么", "什么", "status"],
-            IntentCategory.REQUEST:    ["帮我", "需要", "please", "help"],
-            IntentCategory.GREETING:   ["你好", "嗨", "hello", "hi"],
-            IntentCategory.AD_OPTIMIZATION: ["优化", "表现", "效果", "点击率", "ctr", "转化", "诊断"],
-            IntentCategory.CREATIVE_GENERATION: ["生成", "文案", "标题", "素材", "创意", "卖点"],
-            IntentCategory.BID_STRATEGY: ["出价", "预算", "加价", "降价", "竞价", "排名", "bid"],
-            IntentCategory.ADS:        ["广告", "投放", "ad", "ads", "campaign"],
-            IntentCategory.TECHNICAL:  ["崩溃", "报错", "error", "crash"],
-            IntentCategory.ACCOUNT:    ["密码", "邮箱", "账户", "password"],
-        }
         best_cat, best_score = IntentCategory.OTHER, 0.0
-        for cat, kws in patterns.items():
+        for cat, kws in _PATTERNS.items():
             hits = sum(1 for kw in kws if kw in msg)
             if hits:
                 score = hits / len(kws)
@@ -307,7 +309,7 @@ class IntentRecognizer:
         message = self._clean_text(message)
         prompt = f"""从客服消息中提取实体，返回 JSON（字段值为列表，没有则为空列表）:
 消息: "{message}"
-格式: {{"order_id":[],"product":[],"date":[],"amount":[],"error_code":[]}}"""
+格式: {{"ad_id":[],"asset_id":[],"order_id":[],"product":[],"date":[],"amount":[],"error_code":[]}}"""
         prompt = self._clean_text(prompt)
         try:
             resp = await self.client.messages.create(
@@ -318,7 +320,15 @@ class IntentRecognizer:
             s, e = raw.find("{"), raw.rfind("}") + 1
             return json.loads(raw[s:e])
         except Exception:
-            return {"order_id": [], "product": [], "date": [], "amount": [], "error_code": []}
+            return {
+                "ad_id": [],
+                "asset_id": [],
+                "order_id": [],
+                "product": [],
+                "date": [],
+                "amount": [],
+                "error_code": [],
+            }
 
     # ── 辅助 ──────────────────────────────────────────────────────────────────
 

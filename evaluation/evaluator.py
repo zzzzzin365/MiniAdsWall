@@ -25,7 +25,12 @@ from typing import Any, Dict, List, Optional
 
 from anthropic import AsyncAnthropic
 
-from core.intent_recognizer import IntentCategory, IntentRecognizer
+from core.intent_recognizer import (
+    IntentCategory,
+    IntentRecognizer,
+    _PATTERNS,
+    _TEMPLATES,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +42,9 @@ class IntentTestCase:
     message:          str
     expected_intent:  str
     context:          Optional[Dict[str, Any]] = None
+    case_id:          Optional[str] = None
+    variant:          Optional[str] = None
+    annotation_status: Optional[str] = None
 
 
 @dataclass
@@ -171,9 +179,12 @@ class IntentEvaluator:
             predictions.append(predicted)
             ground_truth.append(case.expected_intent)
             case_details.append({
+                "id": case.case_id,
                 "message": case.message,
                 "expected": case.expected_intent,
                 "predicted": predicted,
+                "variant": case.variant,
+                "annotation_status": case.annotation_status,
                 "confidence": result.confidence,
                 "reasoning": result.reasoning,
             })
@@ -183,7 +194,9 @@ class IntentEvaluator:
         accuracy = correct / len(predictions) if predictions else 0.0
 
         # 每类 F1
-        labels = sorted(set(ground_truth + predictions))
+        observed = set(ground_truth + predictions)
+        labels = [category.value for category in IntentCategory if category.value in observed]
+        labels.extend(sorted(observed - set(labels)))
         per_class: Dict[str, Dict[str, float]] = {}
         for label in labels:
             tp = sum(p == label and g == label for p, g in zip(predictions, ground_truth))
@@ -192,14 +205,38 @@ class IntentEvaluator:
             prec = tp / (tp + fp) if (tp + fp) else 0.0
             rec  = tp / (tp + fn) if (tp + fn) else 0.0
             f1   = 2 * prec * rec / (prec + rec) if (prec + rec) else 0.0
-            per_class[label] = {"precision": prec, "recall": rec, "f1": f1}
+            per_class[label] = {
+                "precision": round(prec, 4),
+                "recall": round(rec, 4),
+                "f1": round(f1, 4),
+                "support": sum(g == label for g in ground_truth),
+            }
 
         macro_f1 = statistics.mean(v["f1"] for v in per_class.values()) if per_class else 0.0
+        confusion_matrix = {
+            actual: {
+                predicted: sum(
+                    g == actual and p == predicted
+                    for p, g in zip(predictions, ground_truth)
+                )
+                for predicted in labels
+            }
+            for actual in labels
+        }
+        confusions = [
+            {"expected": actual, "predicted": predicted, "count": count}
+            for actual, row in confusion_matrix.items()
+            for predicted, count in row.items()
+            if actual != predicted and count > 0
+        ]
+        confusions.sort(key=lambda item: (-item["count"], item["expected"], item["predicted"]))
 
         return {
             "accuracy":   round(accuracy, 4),
             "macro_f1":   round(macro_f1, 4),
             "per_class":  per_class,
+            "confusion_matrix": confusion_matrix,
+            "confusions": confusions,
             "total":      len(cases),
             "correct":    correct,
             "cases":      case_details,
@@ -274,6 +311,9 @@ class EndToEndEvaluator:
                 metadata={
                     "total": intent_metrics.get("total", 0),
                     "correct": intent_metrics.get("correct", 0),
+                    "per_class": intent_metrics.get("per_class", {}),
+                    "confusion_matrix": intent_metrics.get("confusion_matrix", {}),
+                    "confusions": intent_metrics.get("confusions", []),
                     "cases": intent_metrics.get("cases", []),
                 },
             ))
@@ -294,6 +334,7 @@ class EndToEndEvaluator:
         }
         if intent_metrics:
             avg_scores["intent_accuracy"] = intent_metrics["accuracy"]
+            avg_scores["intent_macro_f1"] = intent_metrics["macro_f1"]
 
         passed_count = sum(1 for r in results if r.passed)
         pass_rate    = passed_count / len(results) if results else 0.0
@@ -413,7 +454,10 @@ class EndToEndEvaluator:
     ) -> List[str]:
         recs = []
         if scores.get("intent_accuracy", 1.0) < 0.90:
-            recs.append("意图识别准确率 < 90%：增加 Few-shot 示例，或对低 F1 的意图类别补充训练数据")
+            recs.append(
+                "意图识别准确率 < 90%：在独立开发集复现并优化，"
+                "不得将固定测评样本加入 Few-shot、关键词或训练数据"
+            )
         if scores.get("relevance", 1.0) < 0.75:
             recs.append("相关性偏低：检查 Agent system_prompt，确保 Agent 聚焦于用户问题")
         if scores.get("completeness", 1.0) < 0.75:
@@ -474,20 +518,115 @@ class EndToEndEvaluator:
         )
 
 
-# ── 内置测试用例（开箱即用）──────────────────────────────────────────────────
+# ── 固定意图测评集（开箱即用，不参与调参）────────────────────────────────────
 
-DEFAULT_INTENT_CASES: List[IntentTestCase] = [
-    IntentTestCase("我的订单什么时候到？",       "query"),
-    IntentTestCase("帮我取消订单",               "request"),
-    IntentTestCase("你们服务太差了！",            "complaint"),
-    IntentTestCase("应用一直报500错误",           "technical"),
-    IntentTestCase("分析当前广告表现",            "ad_optimization"),
-    IntentTestCase("帮我生成三条广告标题",        "creative_generation"),
-    IntentTestCase("哪些广告应该提高出价？",      "bid_strategy"),
-    IntentTestCase("我要投诉，转人工！",          "escalation"),
-    IntentTestCase("你好",                        "greeting"),
-    IntentTestCase("修改我的邮箱地址",            "account"),
-]
+_INTENT_TEST_SET_PATH = pathlib.Path(__file__).with_name("intent_test_set.json")
+
+
+def _normalize_eval_text(text: str) -> str:
+    """仅用于重复/泄漏检查：忽略空白和常见标点，不改变评测输入。"""
+    punctuation = "，。！？；：、,.!?;:'\"“”‘’（）()【】[]《》<>-—_"
+    table = str.maketrans("", "", punctuation)
+    return "".join(text.lower().translate(table).split())
+
+
+def load_fixed_intent_cases(
+    path: pathlib.Path = _INTENT_TEST_SET_PATH,
+) -> List[IntentTestCase]:
+    """加载并严格校验冻结测评集，防止类别失衡、重复和模板泄漏。"""
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    rows = payload.get("cases", [])
+    expected_labels = [category.value for category in IntentCategory]
+    allowed_variants = set(payload.get("allowed_variants", []))
+
+    if payload.get("frozen") is not True:
+        raise ValueError("固定意图测评集必须标记 frozen=true")
+    if payload.get("review_status") != "complete":
+        raise ValueError("固定意图测评集必须完成标注复核")
+    if len(rows) != 260:
+        raise ValueError(f"固定意图测评集必须为260条，当前为{len(rows)}条")
+
+    ids = [str(row.get("id", "")).strip() for row in rows]
+    messages = [str(row.get("message", "")).strip() for row in rows]
+    normalized_messages = [_normalize_eval_text(message) for message in messages]
+    if any(not case_id for case_id in ids) or len(ids) != len(set(ids)):
+        raise ValueError("固定意图测评集存在空ID或重复ID")
+    if any(not message for message in messages) or len(normalized_messages) != len(set(normalized_messages)):
+        raise ValueError("固定意图测评集存在空消息或归一化后的重复消息")
+
+    counts = {
+        label: sum(row.get("expected_intent") == label for row in rows)
+        for label in expected_labels
+    }
+    if any(count != 20 for count in counts.values()):
+        raise ValueError(f"固定意图测评集必须每类20条，当前分布为{counts}")
+    unknown_labels = sorted({
+        str(row.get("expected_intent"))
+        for row in rows
+        if row.get("expected_intent") not in expected_labels
+    })
+    if unknown_labels:
+        raise ValueError(f"固定意图测评集包含未知标签: {unknown_labels}")
+
+    variants = {str(row.get("variant", "")) for row in rows}
+    required_variants = {"standard", "colloquial", "typo", "ambiguous", "out_of_scope"}
+    if not required_variants.issubset(variants):
+        raise ValueError(f"固定意图测评集缺少表达类型: {sorted(required_variants - variants)}")
+    if not variants.issubset(allowed_variants):
+        raise ValueError(f"固定意图测评集包含未声明表达类型: {sorted(variants - allowed_variants)}")
+
+    annotation_statuses = {str(row.get("annotation_status", "")) for row in rows}
+    allowed_annotation_statuses = {"confirmed", "adjudicated"}
+    if not annotation_statuses.issubset(allowed_annotation_statuses):
+        raise ValueError(
+            "固定意图测评集存在未完成标注: "
+            f"{sorted(annotation_statuses - allowed_annotation_statuses)}"
+        )
+    if any(
+        row.get("variant") == "ambiguous"
+        and row.get("annotation_status") != "adjudicated"
+        for row in rows
+    ):
+        raise ValueError("模糊表达样本必须完成争议复核")
+    if any(
+        row.get("variant") == "out_of_scope"
+        and row.get("expected_intent") != IntentCategory.OTHER.value
+        for row in rows
+    ):
+        raise ValueError("超出能力范围的样本必须标为other")
+
+    source_examples = {
+        _normalize_eval_text(text)
+        for examples in _TEMPLATES.values()
+        for text in examples
+    }
+    source_keywords = {
+        _normalize_eval_text(keyword)
+        for keywords in _PATTERNS.values()
+        for keyword in keywords
+    }
+    leaked_templates = sorted(set(normalized_messages) & source_examples)
+    leaked_keywords = sorted(set(normalized_messages) & source_keywords)
+    if leaked_templates or leaked_keywords:
+        raise ValueError(
+            "固定意图测评集与代码模板未隔离: "
+            f"Few-shot={leaked_templates}, keywords={leaked_keywords}"
+        )
+
+    return [
+        IntentTestCase(
+            message=row["message"],
+            expected_intent=row["expected_intent"],
+            context={"dataset": payload["name"], "version": payload["version"]},
+            case_id=row["id"],
+            variant=row["variant"],
+            annotation_status=row["annotation_status"],
+        )
+        for row in rows
+    ]
+
+
+DEFAULT_INTENT_CASES: List[IntentTestCase] = load_fixed_intent_cases()
 
 DEFAULT_DIALOG_CASES: List[Dict[str, Any]] = [
     {"question": "我的订单 #12345 还没到，已经超时了"},

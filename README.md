@@ -55,5 +55,6 @@ flowchart LR
 - `mcp/ads_tools.py` implements `ads_summary`, `ad_performance_search`, and `bid_simulation`.
 - `agents/agent_orchestrator.py` routes `ad_optimization`, `creative_generation`, and `bid_strategy` to `AdsAgent`.
 - `core/intent_recognizer.py` contains multi-strategy intent recognition with ad-specific categories.
+- `core/action_decision.py` turns recognition results into resumable `execute` / `clarify` / `reject` / `confirm` decisions with entity, permission, and risk checks.
 - `mcp/knowledge_base.py` contains ChromaDB-backed RAG with default advertising operations documents.
 - `skills/ads_optimization/SKILL.md` contains hot-loadable business rules for AdsAgent behavior.

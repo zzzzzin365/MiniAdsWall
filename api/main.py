@@ -5,6 +5,7 @@ MiniAdsWall Agent 智能客服系统 — FastAPI 入口
 所有核心组件在 lifespan 中初始化，通过环境变量配置。
 """
 import asyncio
+import json
 import logging
 import os
 import pathlib
@@ -66,6 +67,29 @@ def _anthropic_cfg() -> Dict[str, Any]:
     return cfg
 
 
+def _permissions_for(user_id: str) -> List[str]:
+    """
+    从服务端策略映射解析权限。
+
+    权限不能由 /chat 请求体直接提交，避免客户端给自己伪造 ads.delete 等权限。
+    生产环境还应由认证层保证 user_id 不可伪造。
+    """
+    raw = os.getenv("ACTION_PERMISSION_MAP", "{}")
+    try:
+        mapping = json.loads(raw)
+        values = mapping.get(user_id, []) if isinstance(mapping, dict) else []
+        if not isinstance(values, list):
+            raise ValueError("用户权限必须是字符串数组")
+        return sorted({
+            str(permission).strip()
+            for permission in values
+            if str(permission).strip()
+        })
+    except (json.JSONDecodeError, ValueError, TypeError) as ex:
+        logger.warning(f"ACTION_PERMISSION_MAP 配置无效，按无权限处理: {ex}")
+        return []
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global _orchestrator, _memory, _tool_manager, _monitor, _evaluator, _skill_manager
@@ -105,6 +129,13 @@ async def lifespan(app: FastAPI):
         base_url=cfg.get("base_url"),
         model=cfg["model"],
         skill_manager=_skill_manager,
+        confirmation_ttl_seconds=int(
+            os.getenv("CONFIRMATION_TTL_SECONDS", "300")
+        ),
+        clarification_ttl_seconds=int(
+            os.getenv("CLARIFICATION_TTL_SECONDS", "600")
+        ),
+        redis_url=os.getenv("REDIS_URL", "redis://redis:6379/0"),
     )
 
     # 记忆管理器（Redis 工作记忆 + ChromaDB 情景记忆/用户画像）
@@ -268,6 +299,7 @@ class ChatRequest(BaseModel):
     user_id:     str = "anonymous"
     conv_id:     Optional[str] = None
     ads:         Optional[List[Dict[str, Any]]] = None
+    confirmation_id: Optional[str] = None
 
 
 class ChatResponse(BaseModel):
@@ -275,6 +307,13 @@ class ChatResponse(BaseModel):
     response:    str
     intent:      str
     agent_type:  str
+    decision:    str
+    decision_reason: str
+    missing_fields: List[str] = Field(default_factory=list)
+    confirmation_id: Optional[str] = None
+    risk_level: str = "low"
+    action_name: Optional[str] = None
+    confirmed: bool = False
     escalated:   bool
     latency_ms:  float
     knowledge_used: bool = False
@@ -312,7 +351,7 @@ async def reload_skills():
 async def chat(req: ChatRequest):
     """
     主对话接口。完整流程：
-      记忆读取 → 意图识别 → Agent 路由 → 执行 → 记忆写入
+      记忆读取 → 意图/实体识别 → 四态安全门 → 工具/RAG → Agent → 记忆写入
     """
     if _orchestrator is None or _memory is None:
         raise HTTPException(503, "服务未就绪")
@@ -331,38 +370,74 @@ async def chat(req: ChatRequest):
         for m in mem_ctx.recent_messages[-5:]
     ] if mem_ctx.recent_messages else None
 
-    ads_text, ads_tools_used = await _build_ads_context(req.message, req.ads or [])
-    knowledge_text, knowledge_used = await _build_knowledge_context(req.message)
-    context_parts = [mem_ctx.to_prompt_text()]
-    if ads_text:
-        context_parts.append(ads_text)
-    if knowledge_text:
-        context_parts.append(knowledge_text)
-    full_context = "\n\n".join(part for part in context_parts if part)
-
     orch_req = OrcReq(
         message=req.message,
         user_id=req.user_id,
         conv_id=conv_id,
-        context=full_context,
+        context=mem_ctx.to_prompt_text(),
         history=history,
+        confirmation_id=req.confirmation_id,
+        permissions=_permissions_for(req.user_id),
     )
 
-    # 3. 执行
-    result = await _orchestrator.run(orch_req)
+    # 3. 四态安全门：clarify/reject/confirm 不得调用广告工具、RAG 或 Agent。
+    result = await _orchestrator.preflight(orch_req)
+    ads_tools_used: List[str] = []
+    knowledge_used = False
+    if result is None:
+        # 4. 只有 execute 状态才能构建业务上下文并进入 Agent。
+        ads_text, ads_tools_used = await _build_ads_context(
+            orch_req.message,
+            req.ads or [],
+        )
+        knowledge_text, knowledge_used = await _build_knowledge_context(
+            orch_req.message,
+        )
+        context_parts = [orch_req.context, ads_text, knowledge_text]
+        orch_req.context = "\n\n".join(
+            part for part in context_parts if part
+        )
+        result = await _orchestrator.run(orch_req)
 
-    # 4. 写入记忆
-    await _memory.add_message(req.user_id, conv_id, MsgRole.USER, req.message)
-    await _memory.add_message(req.user_id, conv_id, MsgRole.ASSISTANT, result.response)
+    # 5. 写入记忆，同时保留决策元数据用于审计。
+    await _memory.add_message(
+        req.user_id,
+        conv_id,
+        MsgRole.USER,
+        req.message,
+        metadata={"confirmation_id": req.confirmation_id or ""},
+    )
+    await _memory.add_message(
+        req.user_id,
+        conv_id,
+        MsgRole.ASSISTANT,
+        result.response,
+        metadata={
+            "decision": result.decision.value,
+            "decision_reason": result.decision_reason,
+            "confirmation_id": result.confirmation_id or "",
+            "risk_level": result.risk_level.value,
+            "action_name": result.action_name or "",
+            "confirmed": result.confirmed,
+        },
+    )
 
-    # 5. 异步更新用户画像（不阻塞响应）
-    asyncio.create_task(_memory.update_profile(req.user_id, conv_id))
+    # 6. 只有实际进入执行链路才异步更新画像，其他状态保持纯决策返回。
+    if result.decision.value == "execute":
+        asyncio.create_task(_memory.update_profile(req.user_id, conv_id))
 
     return ChatResponse(
         conv_id=conv_id,
         response=result.response,
         intent=result.intent.value if result.intent else "other",
         agent_type=result.agent_type.value,
+        decision=result.decision.value,
+        decision_reason=result.decision_reason,
+        missing_fields=result.missing_fields,
+        confirmation_id=result.confirmation_id,
+        risk_level=result.risk_level.value,
+        action_name=result.action_name,
+        confirmed=result.confirmed,
         escalated=result.escalated,
         latency_ms=round(result.latency_ms, 1),
         knowledge_used=knowledge_used,
@@ -633,7 +708,7 @@ async def knowledge_stats():
 
 @app.post("/eval/run")
 async def run_eval(body: Optional[EvalRunInput] = None):
-    """运行内置评测用例，返回评测报告。"""
+    """运行固定测评集，返回 Accuracy、Macro-F1、每类指标和混淆情况。"""
     if _evaluator is None:
         raise HTTPException(503, "服务未就绪")
     from evaluation.evaluator import DEFAULT_DIALOG_CASES, DEFAULT_INTENT_CASES, IntentTestCase
@@ -662,11 +737,27 @@ async def run_eval(body: Optional[EvalRunInput] = None):
         intent_cases=intent_cases,
         dialog_cases=dialog_cases,
     )
+    intent_result = next(
+        (result for result in report.results if result.test_id == "intent_recognition"),
+        None,
+    )
+    intent_metrics = None
+    if intent_result is not None:
+        intent_metrics = {
+            "total": intent_result.metadata.get("total", 0),
+            "correct": intent_result.metadata.get("correct", 0),
+            "accuracy": intent_result.scores.get("accuracy", 0.0),
+            "macro_f1": intent_result.scores.get("macro_f1", 0.0),
+            "per_class": intent_result.metadata.get("per_class", {}),
+            "confusion_matrix": intent_result.metadata.get("confusion_matrix", {}),
+            "confusions": intent_result.metadata.get("confusions", []),
+        }
     return {
         "pass_rate":       report.pass_rate,
         "total":           report.total,
         "passed":          report.passed,
         "avg_scores":      report.avg_scores,
+        "intent_metrics":  intent_metrics,
         "regressions":     report.regressions,
         "recommendations": report.recommendations,
         "results": [
