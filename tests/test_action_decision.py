@@ -144,6 +144,25 @@ class ActionDecisionEngineTest(unittest.TestCase):
         )
         self.assertEqual(third.decision, DecisionType.CONFIRM)
 
+    def test_profile_or_llm_cannot_fill_current_request_action_fields(self):
+        result = self.engine.decide(
+            message="调整预算",
+            user_id="user-1",
+            conv_id="profile-must-not-fill",
+            intent=IntentCategory.BID_STRATEGY,
+            urgency=UrgencyLevel.LOW,
+            entities={
+                "ad_id": ["ad-from-profile"],
+                "amount": ["500 元"],
+                "budget": ["500 元"],
+                "bid": ["2.5 元"],
+            },
+            permissions=self.ALL_PERMISSIONS,
+        )
+
+        self.assertEqual(result.decision, DecisionType.CLARIFY)
+        self.assertEqual(result.missing_fields, ["ad_id", "amount"])
+
     def test_advisory_bid_request_does_not_require_confirmation(self):
         result = self.decide(
             "哪些广告应该提高出价？",

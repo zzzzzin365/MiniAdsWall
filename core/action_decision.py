@@ -393,6 +393,10 @@ class ActionDecisionEngine:
         r"^(怎么办|帮帮我|help)[。.!！]?$",
     )
 
+    # 这些字段会触发真实广告操作，绝不能由画像、历史或 LLM 猜测补全。
+    # amount 是当前实现中预算、出价和调整幅度共用的请求字段。
+    CURRENT_REQUEST_ONLY_FIELDS = {"ad_id", "budget", "bid", "amount"}
+
     def __init__(
         self,
         pending_store: Optional[PendingActionStore] = None,
@@ -623,8 +627,15 @@ class ActionDecisionEngine:
         permissions: Optional[Sequence[str]] = None,
     ) -> ActionDecision:
         normalized = self._normalize(message)
+        supplied_entities = {
+            key: values
+            for key, values in (entities or {}).items()
+            if key not in self.CURRENT_REQUEST_ONLY_FIELDS
+        }
+        # 高风险执行参数只信任当前请求文本的确定性提取结果。
+        # 即使上游 LLM 或画像返回 ad_id/预算/出价，也不能进入决策链。
         merged_entities = self._merge_entities(
-            entities or {},
+            supplied_entities,
             self.extract_entities(message),
         )
         granted_permissions = set(permissions or ())
