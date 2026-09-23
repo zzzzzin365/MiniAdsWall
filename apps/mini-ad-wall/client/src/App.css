@@ -1689,3 +1689,13 @@ body::after {
     height: min(560px, calc(100vh - 96px));
   }
 }
+
+.assistant-session-controls { display: flex; gap: 8px; padding: 10px 16px; border-bottom: 1px solid #dfe5ef; }
+.assistant-session-controls select { flex: 1; min-width: 0; padding: 6px; border: 1px solid #dfe5ef; border-radius: 6px; }
+.assistant-session-controls button { flex-shrink: 0; }
+.assistant-messages [role="alert"] { color: #a12727; padding: 8px 0; }
+.assistant-messages [role="status"] { color: #566278; font-size: 13px; padding: 8px 0; }
+.assistant-panel > :not(.assistant-messages) { flex-shrink: 0; }
+.assistant-messages { min-height: 0; }
+.assistant-messages > * { flex-shrink: 0; }
+.assistant-run-status { padding: 6px 16px; font-size: 13px; color: #566278; border-top: 1px solid #dfe5ef; }

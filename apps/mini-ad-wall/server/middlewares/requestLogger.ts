@@ -12,13 +12,13 @@ function getClientIP(ctx: Context): string {
 }
 
 async function requestLogger(ctx: Context, next: Next): Promise<void> {
-    const requestId = Math.random().toString(36).substring(2, 10);
+    const requestId = ctx.state.requestId;
     const startTime = Date.now();
 
     console.log(`[${getTimeString()}] ← ${requestId} | ${ctx.method} ${ctx.url} | IP: ${getClientIP(ctx)}`);
 
     const body = (ctx.request as any).body as Record<string, any>;
-    if (body && Object.keys(body).length > 0 && !ctx.url.includes('/upload')) {
+    if (body && Object.keys(body).length > 0 && !ctx.url.includes('/upload') && !ctx.path.startsWith('/api/agent/')) {
         console.log(`[${getTimeString()}]   ${requestId} | Body:`, JSON.stringify(body).substring(0, 200));
     }
 

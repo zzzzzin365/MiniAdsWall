@@ -1,0 +1,6 @@
+FROM python:3.12-slim
+COPY hosting/sandbox_entry.py /runner.py
+RUN useradd --uid 1000 --no-create-home sandbox
+USER 1000:1000
+WORKDIR /workspace
+ENTRYPOINT ["python", "-I", "/runner.py"]

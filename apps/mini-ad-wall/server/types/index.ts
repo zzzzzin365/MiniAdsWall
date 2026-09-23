@@ -70,9 +70,6 @@ export interface Config {
     UPLOAD_DIR: string;
     AD_SCORE_FACTOR: number;
     DEFAULT_ADS: Ad[];
-    OPENROUTER_API_KEY: string;
-    OPENROUTER_MODEL: string;
-    OPENROUTER_API_URL: string;
     ADS_AGENT_API_URL: string;
 }
 

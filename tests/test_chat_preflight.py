@@ -154,6 +154,26 @@ class ChatPreflightTest(unittest.IsolatedAsyncioTestCase):
         self.assertIn("knowledge context", orchestrator.run_request.context)
         self.assertEqual(memory.profile_updates, 1)
 
+    async def test_model_cannot_claim_business_mutation_completed(self):
+        result = OrchestratorResult(
+            request_id="mutation-test", response="广告已删除",
+            agent_type=AgentType.ADS, intent=IntentCategory.REQUEST,
+            decision=DecisionType.EXECUTE, action_name="delete_ad", confirmed=True,
+        )
+        api._orchestrator = StubOrchestrator(None, result)
+        memory = FakeMemory()
+        api._memory = memory
+        with patch.object(api, "_build_ads_context", AsyncMock(return_value=("", []))), patch.object(
+            api, "_build_knowledge_context", AsyncMock(return_value=("", False))
+        ):
+            response = await api.chat(api.ChatRequest(message="确认", user_id="operator"))
+        self.assertEqual(response.decision, "reject")
+        self.assertEqual(response.decision_reason, "business_execution_unavailable")
+        self.assertFalse(response.confirmed)
+        self.assertIn("未执行", response.response)
+        self.assertEqual(memory.profile_updates, 0)
+        self.assertNotIn("广告已删除", str(memory.messages))
+
     def test_invalid_permission_map_fails_closed(self):
         with patch.dict(os.environ, {"ACTION_PERMISSION_MAP": "not-json"}):
             self.assertEqual(api._permissions_for("user-1"), [])

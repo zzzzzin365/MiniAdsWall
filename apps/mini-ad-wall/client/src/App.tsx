@@ -65,7 +65,7 @@ function App() {
             loadAds();
         } catch (error) {
             console.error("Operation failed", error);
-            alert("操作失败，请重试");
+            alert(error instanceof Error ? error.message : "操作未完成，请重试");
         }
     };
 
@@ -79,7 +79,7 @@ function App() {
             }
         } catch (error) {
             console.error("Delete failed", error);
-            alert("删除失败，请重试");
+            alert(error instanceof Error ? error.message : "删除未完成，请重试");
         }
     };
 

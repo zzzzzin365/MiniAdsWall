@@ -1,4 +1,5 @@
 import { RouterContext } from 'koa-router';
+import { mutate } from '../middlewares/businessBoundary';
 import adsService from '../services/ads.service';
 import uploadService from '../services/upload.service';
 
@@ -8,43 +9,24 @@ async function getAds(ctx: RouterContext): Promise<void> {
 }
 
 async function createAd(ctx: RouterContext): Promise<void> {
-    const data = ctx.request.body as any;
-    const result = adsService.createAd(data);
-
-    if (!result.success) {
-        ctx.status = 400;
-        ctx.body = { error: result.error };
-        return;
-    }
-
-    ctx.body = result.data;
+    mutate(ctx, () => {
+        const result = adsService.createAd(ctx.request.body as any);
+        return { status: result.success ? 201 : 400, body: result.success ? result.data : { error: result.error } };
+    });
 }
 
 async function updateAd(ctx: RouterContext): Promise<void> {
-    const { id } = ctx.params;
-    const data = ctx.request.body as any;
-    const result = adsService.updateAd(id, data);
-
-    if (!result.success) {
-        ctx.status = 404;
-        ctx.body = { error: result.error };
-        return;
-    }
-
-    ctx.body = result.data;
+    mutate(ctx, () => {
+        const result = adsService.updateAd(ctx.params.id, ctx.request.body as any);
+        return { status: result.success ? 200 : result.error === 'Ad not found' ? 404 : 400, body: result.success ? result.data : { error: result.error } };
+    });
 }
 
 async function deleteAd(ctx: RouterContext): Promise<void> {
-    const { id } = ctx.params;
-    const result = adsService.deleteAd(id);
-
-    if (!result.success) {
-        ctx.status = 404;
-        ctx.body = { error: result.error };
-        return;
-    }
-
-    ctx.status = 204;
+    mutate(ctx, () => {
+        const result = adsService.deleteAd(ctx.params.id);
+        return { status: result.success ? 204 : 404, body: result.success ? null : { error: result.error } };
+    });
 }
 
 async function clickAd(ctx: RouterContext): Promise<void> {

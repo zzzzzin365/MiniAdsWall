@@ -1,0 +1,97 @@
+# Standalone durable runtime: docker compose -f docker-compose.hosting.yml up --build
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: miniadswall
+      MYSQL_USER: agent
+      MYSQL_PASSWORD: ${HOSTING_DB_PASSWORD:?Set HOSTING_DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${HOSTING_DB_ROOT_PASSWORD:?Set HOSTING_DB_ROOT_PASSWORD}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_bin", "--max-connections=150"]
+    volumes: ["mysql-data:/var/lib/mysql"]
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_PASSWORD mysql -uagent -e 'SELECT 1' miniadswall"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "noeviction"]
+    volumes: ["redis-data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 2s
+      retries: 10
+    restart: unless-stopped
+  migrate:
+    build: { context: ., dockerfile: hosting/Dockerfile }
+    environment: &runtime
+      DATABASE_URL: mysql+pymysql://agent:${HOSTING_DB_PASSWORD}@mysql:3306/miniadswall?charset=utf8mb4
+      REDIS_URL: redis://redis:6379/0
+      HOSTING_CURSOR_SECRET: ${HOSTING_CURSOR_SECRET:?Set a stable random secret of at least 32 bytes}
+      AGENT_SERVICE_TOKEN: ${AGENT_SERVICE_TOKEN:?Set AGENT_SERVICE_TOKEN}
+      HOSTING_OBJECT_DIR: /objects
+      HOSTING_S3_BUCKET: ${HOSTING_S3_BUCKET:-}
+      HOSTING_S3_ENDPOINT: ${HOSTING_S3_ENDPOINT:-}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+    volumes: ["objects:/objects"]
+    command: ["python", "-m", "hosting.migrate"]
+    depends_on:
+      mysql: { condition: service_healthy }
+  api:
+    build: { context: ., dockerfile: hosting/Dockerfile }
+    environment: *runtime
+    volumes: ["objects:/objects"]
+    ports: ["127.0.0.1:8002:8002"]
+    command: ["python", "-m", "uvicorn", "hosting.api:app", "--host", "0.0.0.0", "--port", "8002"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 1
+  worker:
+    build: { context: ., dockerfile: hosting/Dockerfile }
+    environment:
+      <<: *runtime
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-openrouter/free}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-}
+      ANTHROPIC_BASE_URL: ${ANTHROPIC_BASE_URL:-}
+      MODEL_GATE_MODE: redis
+      MODEL_EXECUTION_SECONDS: "125"
+      ACTION_PERMISSION_MAP: ${ACTION_PERMISSION_MAP:-{}}
+      HOSTING_EXECUTOR_URL: ${HOSTING_EXECUTOR_URL:-}
+      HOSTING_EXECUTOR_TOKEN: ${HOSTING_EXECUTOR_TOKEN:-}
+    volumes: ["objects:/objects"]
+    command: ["python", "-m", "hosting.worker"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 1g
+    cpus: 2
+  executor:
+    profiles: ["shell"]
+    build: { context: ., dockerfile: hosting/Dockerfile, target: executor }
+    environment:
+      <<: *runtime
+      HOSTING_EXECUTOR_TOKEN: ${HOSTING_EXECUTOR_TOKEN:-}
+      HOSTING_SANDBOX_IMAGE: miniadswall-sandbox:1
+    # Trusted executor only. Never mount this socket into API, Worker or tool containers.
+    volumes: ["/var/run/docker.sock:/var/run/docker.sock", "objects:/objects"]
+    command: ["python", "-m", "uvicorn", "hosting.executor:app", "--host", "0.0.0.0", "--port", "8003", "--workers", "1"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    restart: unless-stopped
+    mem_limit: 1g
+    cpus: 1
+volumes:
+  mysql-data:
+  redis-data:
+  objects:

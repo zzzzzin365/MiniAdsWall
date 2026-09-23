@@ -2,6 +2,10 @@
 
 This repository combines two projects into one full-stack agent system.
 
+## Planned Backend Extension
+
+[存储、Agent 服务托管与性能设计](agent-hosting-design.md) specifies the planned MySQL/Redis data model, durable run lifecycle, SSE delivery, cancellation, timeouts, isolated subprocess execution, concurrency limits, restart recovery, pagination, and capacity/performance acceptance criteria. The core hosted path is implemented separately under `hosting/`; see [implementation and validation](agent-hosting-implementation.md) for startup instructions and remaining production checks. The sections below describe the original synchronous architecture.
+
 ## Product Layer: MiniAddwall
 
 MiniAddwall is the visible product surface:

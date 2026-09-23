@@ -29,3 +29,8 @@ apps/**/dist/
 apps/**/.npm-cache/
 apps/**/.vite/
 apps/**/coverage/
+
+# Runtime artifacts and local diagnostic files must never enter runtime images.
+.codex_tmp/
+data/hosting-objects/
+feishu-*.png

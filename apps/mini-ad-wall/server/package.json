@@ -4,9 +4,10 @@
   "description": "Koa backend for mini ad wall",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "ts-node --files index.ts",
     "build": "tsc",
-    "dev": "ts-node-dev --respawn index.ts"
+    "test": "npm run build && node --test tests/*.test.cjs",
+    "dev": "ts-node-dev --files --respawn index.ts"
   },
   "dependencies": {
     "koa": "^2.14.2",

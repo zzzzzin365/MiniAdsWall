@@ -1,0 +1,37 @@
+{
+  "kind": "HTTP query benchmark; excludes model and SSE",
+  "platform": "macOS-26.0.1-arm64-arm-64bit",
+  "elapsed_seconds": 10.008299833978526,
+  "requests": 1000,
+  "concurrency_limit": 50,
+  "target_qps": 100.0,
+  "database_scale": {
+    "engine": "temporary file-backed SQLite WAL",
+    "users": 1,
+    "sessions": 1,
+    "history_records": 3,
+    "version": "3.53.4"
+  },
+  "routes": {
+    "sessions": {
+      "p50_ms": 2.648332971148193,
+      "p95_ms": 3.9024580037221313,
+      "p99_ms": 6.6763750510290265,
+      "error_rate": 0.0,
+      "load_delay_p95_ms": 0.8549591293558478
+    },
+    "history": {
+      "p50_ms": 3.596708062104881,
+      "p95_ms": 4.955500015057623,
+      "p99_ms": 8.285832940600812,
+      "error_rate": 0.0,
+      "load_delay_p95_ms": 0.9756250074133277
+    }
+  },
+  "scope": "local chain smoke only; not MySQL or production capacity acceptance",
+  "hardware": {
+    "logical_cpus": 10,
+    "memory_bytes": 34359738368
+  },
+  "measurement": "Client-observed HTTP latency; local Redis, 10 seconds, warm tiny dataset; not a 30-minute capacity test."
+}

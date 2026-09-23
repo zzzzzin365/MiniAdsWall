@@ -1,4 +1,5 @@
 import config from '../config';
+import { agentRequest } from './agentHttp';
 import { Ad, AssistantChatInput, AssistantChatOutput } from '../types';
 
 interface AdsAgentChatResponse {
@@ -27,20 +28,11 @@ async function getStatus(): Promise<{
     const baseUrl = config.ADS_AGENT_API_URL.replace(/\/$/, '');
 
     try {
-        const res = await fetch(`${baseUrl}/health`);
-        if (!res.ok) {
-            return {
-                available: false,
-                url: baseUrl,
-                message: `MiniAdsWall Agent HTTP ${res.status}`
-            };
-        }
-
-        const data = await res.json() as { status?: string; agents?: unknown };
+        const data = await agentRequest('/health');
         return {
             available: data.status === 'ok',
             url: baseUrl,
-            message: data.status === 'ok' ? 'MiniAdsWall Agent 已连接' : 'MiniAdsWall Agent 状态异常',
+            message: data.status === 'ok' ? 'Agent 服务已连接 · 模型可用性以实际回复为准' : 'MiniAdsWall Agent 状态异常',
             agents: data.agents
         };
     } catch (error) {
@@ -115,28 +107,15 @@ function localFallback(input: AssistantChatInput, reason?: string): AssistantCha
     };
 }
 
-async function chat(input: AssistantChatInput): Promise<AssistantChatOutput> {
-    const url = `${config.ADS_AGENT_API_URL.replace(/\/$/, '')}/chat`;
-
+async function chat(input: AssistantChatInput, requestId?: string): Promise<AssistantChatOutput> {
     try {
-        const res = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                message: input.message,
-                user_id: input.userId || 'mini-ad-manager',
-                conv_id: input.convId || undefined,
-                ads: input.ads || [],
-                confirmation_id: input.confirmationId
-            })
-        });
-
-        if (!res.ok) {
-            const detail = await res.text();
-            return localFallback(input, `AdsAgent HTTP ${res.status}: ${detail.slice(0, 120)}`);
-        }
-
-        const data = await res.json() as AdsAgentChatResponse;
+        const data: AdsAgentChatResponse = await agentRequest('/chat', {
+            message: input.message,
+            user_id: input.userId || 'anonymous',
+            conv_id: input.convId || undefined,
+            ads: input.ads || [],
+            confirmation_id: input.confirmationId
+        }, requestId);
         return {
             convId: data.conv_id,
             response: data.response,

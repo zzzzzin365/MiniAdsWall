@@ -24,6 +24,7 @@ from typing import Any, Dict, List, Optional
 import chromadb
 import redis
 from anthropic import AsyncAnthropic
+from core.model_client import create_model_client
 
 logger = logging.getLogger(__name__)
 
@@ -160,13 +161,11 @@ class MemoryManager:
         base_url:     Optional[str] = None,
         model:        str = "claude-3-5-sonnet-20241022",
     ):
-        kwargs: Dict[str, Any] = {"api_key": api_key}
-        if base_url:
-            kwargs["base_url"] = base_url
-        self._client = AsyncAnthropic(**kwargs)
+        self._client = create_model_client(api_key, base_url)
         self._model  = model
 
-        self._redis = redis.from_url(redis_url, decode_responses=True)
+        self._redis = redis.from_url(redis_url, decode_responses=True,
+                                     socket_connect_timeout=1, socket_timeout=2)
 
         # ChromaDB：优先连接独立服务（docker compose 模式），连不上则降级为本地嵌入式
         try:

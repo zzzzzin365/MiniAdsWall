@@ -1,0 +1,36 @@
+{
+  "kind": "real model, synthetic input, SQLite test repository",
+  "model": "nex-agi/nex-n2.5-mini:free",
+  "status": "succeeded",
+  "error_code": null,
+  "trace": {
+    "execution_ms": 4817.693582968786,
+    "first_delta_ms": 1768.7610409921035,
+    "queue_ms": 8.698225021362305,
+    "run_id": "4079308690772131131",
+    "spans": [
+      {
+        "duration_ms": 2.9772500274702907,
+        "stage": "preflight"
+      },
+      {
+        "duration_ms": 0.0967920059338212,
+        "stage": "ads_summary",
+        "status": "succeeded",
+        "tool_call_id": "3112084177550751016"
+      },
+      {
+        "duration_ms": 0.07729092612862587,
+        "stage": "ad_performance_search",
+        "status": "succeeded",
+        "tool_call_id": "481368037738241419"
+      },
+      {
+        "duration_ms": 4795.19362503197,
+        "first_delta_ms": 1748.6102919792756,
+        "stage": "model"
+      }
+    ],
+    "tool_calls": 2
+  }
+}

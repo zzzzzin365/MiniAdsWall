@@ -24,6 +24,7 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional
 
 from anthropic import AsyncAnthropic
+from core.model_client import create_model_client
 
 from core.intent_recognizer import (
     IntentCategory,
@@ -268,10 +269,7 @@ class EndToEndEvaluator:
         model:    str = "claude-3-5-sonnet-20241022",
         baseline_path: Optional[str] = None,
     ):
-        kwargs: Dict[str, Any] = {"api_key": api_key}
-        if base_url:
-            kwargs["base_url"] = base_url
-        client = AsyncAnthropic(**kwargs)
+        client = create_model_client(api_key, base_url)
 
         self._orchestrator     = orchestrator
         self._judge            = LLMJudge(client, model)

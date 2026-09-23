@@ -22,6 +22,7 @@ from enum import Enum
 from typing import Any, Callable, Dict, List, Optional
 
 from anthropic import AsyncAnthropic
+from core.model_client import create_model_client
 
 logger = logging.getLogger(__name__)
 
@@ -132,10 +133,7 @@ class MCPToolManager:
     """
 
     def __init__(self, api_key: str, base_url: Optional[str] = None, model: str = "claude-3-5-sonnet-20241022"):
-        kwargs: Dict[str, Any] = {"api_key": api_key}
-        if base_url:
-            kwargs["base_url"] = base_url
-        self._client = AsyncAnthropic(**kwargs)
+        self._client = create_model_client(api_key, base_url)
         self._model  = model
         self._tools: Dict[str, Tool] = {}
         self._cache: Dict[str, tuple] = {}   # key → (result, expire_at)

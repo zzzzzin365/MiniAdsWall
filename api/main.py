@@ -6,6 +6,8 @@ MiniAdsWall Agent 智能客服系统 — FastAPI 入口
 """
 import asyncio
 import json
+import secrets
+import time
 import logging
 import os
 import pathlib
@@ -22,7 +24,11 @@ if _ROOT not in sys.path:
 
 import uvicorn
 from dotenv import load_dotenv
-from fastapi import FastAPI, HTTPException, Response, UploadFile, File
+from fastapi import FastAPI, HTTPException, Response, UploadFile, File, Request
+from fastapi.responses import JSONResponse
+from api.generation import router as generation_router
+from core.faq_cache import configured_cache
+from core.model_gate import close_model_gate, ModelBusy
 from fastapi.middleware.cors import CORSMiddleware
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from pydantic import BaseModel, Field
@@ -51,6 +57,8 @@ _tool_manager = None
 _monitor      = None
 _evaluator    = None
 _skill_manager = None
+_faq_cache = None
+CHAT_TIMEOUT_SECONDS = 28.0
 
 
 def _anthropic_cfg() -> Dict[str, Any]:
@@ -92,7 +100,7 @@ def _permissions_for(user_id: str) -> List[str]:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global _orchestrator, _memory, _tool_manager, _monitor, _evaluator, _skill_manager
+    global _orchestrator, _memory, _tool_manager, _monitor, _evaluator, _skill_manager, _faq_cache
 
     print(BANNER, flush=True)
 
@@ -270,10 +278,14 @@ async def lifespan(app: FastAPI):
         baseline_path=os.getenv("EVAL_BASELINE_PATH", "/app/data/eval/baseline.json"),
     )
 
+    _faq_cache = configured_cache()
     logger.info("MiniAdsWall Agent 已就绪")
     yield
 
     await _monitor.stop()
+    await close_model_gate()
+    if _faq_cache is not None:
+        await _faq_cache.redis.aclose()
     logger.info("MiniAdsWall Agent 已关闭")
 
 
@@ -284,6 +296,24 @@ app = FastAPI(
     lifespan=lifespan,
     docs_url="/docs",
 )
+
+app.include_router(generation_router)
+
+
+@app.middleware("http")
+async def service_boundary(request: Request, call_next):
+    candidate = request.headers.get("X-Request-ID", "")
+    request.state.request_id = candidate if len(candidate) <= 100 and candidate else str(uuid.uuid4())
+    if request.url.path not in {"/health", "/metrics"}:
+        token = os.getenv("AGENT_SERVICE_TOKEN", "")
+        supplied = request.headers.get("Authorization", "")
+        if not token or not secrets.compare_digest(supplied.encode(), f"Bearer {token}".encode()):
+            return JSONResponse(status_code=401, content={"detail": "服务认证失败"}, headers={"X-Request-ID": request.state.request_id})
+    response = await call_next(request)
+    response.headers["X-Request-ID"] = request.state.request_id
+    logger.info("request_id=%s method=%s path=%s status=%s", request.state.request_id, request.method, request.url.path, response.status_code)
+    return response
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -349,6 +379,15 @@ async def reload_skills():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
+    try:
+        return await asyncio.wait_for(_chat_impl(req), timeout=CHAT_TIMEOUT_SECONDS)
+    except ModelBusy as exc:
+        raise HTTPException(503, str(exc)) from exc
+    except asyncio.TimeoutError as exc:
+        raise HTTPException(504, "模型响应超时，请稍后重试") from exc
+
+
+async def _chat_impl(req: ChatRequest):
     """
     主对话接口。完整流程：
       记忆读取 → 意图/实体识别 → 四态安全门 → 工具/RAG → Agent → 记忆写入
@@ -360,6 +399,33 @@ async def chat(req: ChatRequest):
     from memory.conversation_memory import MsgRole
 
     conv_id = req.conv_id or str(uuid.uuid4())
+
+    # Only reviewed, standalone FAQ aliases may bypass the contextual Agent path.
+    faq = _faq_cache.eligible(req.message, req.conv_id, req.confirmation_id) if _faq_cache else None
+    if faq:
+        started = time.monotonic()
+        from core.model_client import create_model_client
+        async def generate_faq(item):
+            cfg = _anthropic_cfg()
+            client = create_model_client(cfg["api_key"], cfg.get("base_url"))
+            try:
+                response = await client.messages.create(
+                    model=cfg["model"], max_tokens=512,
+                    system="只根据给定规则回答操作说明，不分析实时广告，不执行操作，不补充未提供事实。",
+                    messages=[{"role": "user", "content": item["knowledge"] + "\n问题：" + item["question"]}],
+                )
+                return response.content[0].text
+            finally:
+                await client.close()
+        scope = json.dumps([req.user_id, sorted(_permissions_for(req.user_id))])
+        answer, hit = await _faq_cache.answer(faq, req.message, scope, generate_faq)
+        logger.info("faq_id=%s cache_hit=%s", faq["id"], hit)
+        await _memory.add_message(req.user_id, conv_id, MsgRole.USER, req.message)
+        await _memory.add_message(req.user_id, conv_id, MsgRole.ASSISTANT, answer,
+                                  metadata={"faq_cache_hit": hit, "faq_id": faq["id"]})
+        return ChatResponse(conv_id=conv_id, response=answer, intent="faq", agent_type="general",
+                            decision="execute", decision_reason="faq_cache_hit" if hit else "faq_generated",
+                            escalated=False, latency_ms=round((time.monotonic()-started)*1000, 1), knowledge_used=True, tools_used=["reviewed_faq"])
 
     # 1. 读取记忆上下文
     mem_ctx = await _memory.get_context(req.user_id, conv_id, query=req.message)
@@ -398,6 +464,15 @@ async def chat(req: ChatRequest):
             part for part in context_parts if part
         )
         result = await _orchestrator.run(orch_req)
+
+    # The current Agent has analysis tools only, not an authenticated business mutation tool.
+    # A model response must never be presented as a completed ad change.
+    if result.action_name in {"delete_ad", "delete_asset", "change_budget_or_bid"} and result.decision.value == "execute":
+        from core.action_decision import DecisionType
+        result.decision = DecisionType.REJECT
+        result.decision_reason = "business_execution_unavailable"
+        result.response = "助手仅提供建议，未执行广告变更。请在运营后台核对广告及出价后提交；预算变更暂不支持。"
+        result.confirmed = False
 
     # 5. 写入记忆，同时保留决策元数据用于审计。
     await _memory.add_message(
@@ -525,7 +600,12 @@ async def _build_knowledge_context(message: str, top_k: int = 3) -> tuple[str, b
     if not _should_use_knowledge(message):
         return "", False
     try:
-        result = await _tool_manager.search_with_rewrite("knowledge_search", message, top_k=top_k)
+        # Chat uses one local retrieval; query rewriting/reranking each adds a
+        # remote model call. Advanced search keeps its separate rewrite API.
+        result = await asyncio.wait_for(
+            _tool_manager.call("knowledge_search", {"query": message, "top_k": top_k}),
+            timeout=3.0,
+        )
         if not result.success or not isinstance(result.data, list) or not result.data:
             return "", False
 

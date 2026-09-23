@@ -21,6 +21,8 @@ MiniAddwall + MiniAdsWall Agent 是一个一个基于 React/Koa 的全栈广告�
 ├── api/                           # MiniAdsWall Agent FastAPI app
 ├── core/                          # Intent recognizer and Skill loader
 ├── mcp/                           # Knowledge and ad tools
+├── hosting/                       # Durable Agent API, Worker, MySQL and isolated tools
+├── migrations/                    # Initial MySQL hosting schema
 ├── memory/                        # Conversation memory
 ├── monitor/                       # Runtime monitoring
 ├── skills/                        # Hot-loadable business rules
@@ -48,7 +50,15 @@ flowchart LR
   Koa --> FE
 ```
 
+## 本地 OpenRouter 免费模型
+
+在项目根目录 `.env` 填写 `OPENROUTER_API_KEY`，设置 `OPENROUTER_MODEL=nex-agi/nex-n2.5-mini:free`，再运行 `.venv/bin/python scripts/run_local_agent.py`。启动器通过 OpenRouter 原生 Chat Completions 接口调用同一免费模型；不需要额外 Anthropic Key，也不切换到付费模型。免费模型仍需账户 Key，受提供方可用性和额度限制。
+
+本机 Redis 使用 `127.0.0.1:6380`，Chroma 使用 `data/chroma` 本地持久化。`.env` 的 `AGENT_SERVICE_TOKEN` 须与 Koa 的 `apps/mini-ad-wall/server/.env.local` 一致；Koa 可通过 `node --env-file=.env.local --require ts-node/register/transpile-only index.ts` 启动（先运行 `npm run build` 做类型检查）。本地环境文件已被 Git 忽略，不要提交密钥。
+
 ## Interviewer Reading Guide
+
+- [存储、Agent 服务托管与性能设计](docs/agent-hosting-design.md)：MySQL/Redis、SSE、取消与超时、隔离执行、并发与恢复的目标设计；[实现与运行](docs/agent-hosting-implementation.md) 说明已实现能力、部署方式和未完成的生产验收。
 
 - `apps/mini-ad-wall/server/services/adsAgent.service.ts` sends structured `ads` data to MiniAdsWall Agent instead of only a prompt summary.
 - `api/main.py` accepts `ads`, calls ad tools, injects tool/RAG context, and returns `tools_used`.

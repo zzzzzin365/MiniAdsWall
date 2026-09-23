@@ -25,6 +25,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 
 from anthropic import AsyncAnthropic
+from core.model_client import create_model_client
 
 from core.action_decision import (
     ActionDecision,
@@ -151,7 +152,7 @@ class BaseAgent:
             logger.error(f"{self.agent_type.value} 处理失败: {ex}")
             return AgentResponse(
                 agent_type=self.agent_type,
-                content="抱歉，处理您的请求时出现问题，请稍后重试。",
+                content="模型暂时繁忙、响应超时或返回无效内容，请稍后重试。本次未执行任何广告变更。",
                 success=False,
                 latency_ms=ms,
             )
@@ -265,10 +266,7 @@ class AgentOrchestrator:
         clarification_ttl_seconds: int = 600,
         redis_url: Optional[str] = None,
     ):
-        kwargs: Dict[str, Any] = {"api_key": api_key}
-        if base_url:
-            kwargs["base_url"] = base_url
-        client = AsyncAnthropic(**kwargs)
+        client = create_model_client(api_key, base_url)
 
         self._intent_recognizer = IntentRecognizer(api_key=api_key, base_url=base_url, model=model)
         self._decision_engine = ActionDecisionEngine(
@@ -544,13 +542,8 @@ class AgentOrchestrator:
 
         response = await agent.handle(req)
 
-        # 专属 Agent 失败时降级到 GeneralAgent
-        if not response.success and agent_type != AgentType.GENERAL:
-            logger.warning(f"{agent_type.value} 失败，降级到 GeneralAgent")
-            fallback = self._best_agent(AgentType.GENERAL)
-            if fallback:
-                response = await fallback.handle(req)
-
+        # Both agents share the same provider: retrying with GeneralAgent only
+        # doubles latency on rate limits, timeouts and invalid responses.
         return response
 
     # ── 统计（供 Monitor 读取）────────────────────────────────────────────────

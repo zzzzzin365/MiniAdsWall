@@ -1,8 +1,13 @@
 import fs from 'fs';
+import path from 'path';
+import { randomUUID } from 'crypto';
 import config from '../config';
 import { Ad, AdInput } from '../types';
 
 let ads: Ad[] = [];
+interface Operation { fingerprint: string; status: number; body: any; before: Ad[]; after: Ad[]; createdAt: string }
+let operations: Record<string, Operation> = Object.create(null);
+let inOperation = false;
 
 // ============ 点击计数性能优化 ============
 // 使用内存缓冲区累积点击，定时批量写入文件，避免每次点击都触发 I/O
@@ -15,24 +20,61 @@ function loadData(): void {
     try {
         if (fs.existsSync(config.DATA_FILE)) {
             const data = fs.readFileSync(config.DATA_FILE, 'utf8');
-            ads = JSON.parse(data);
+            const stored = JSON.parse(data);
+            ads = Array.isArray(stored) ? stored : stored.ads;
+            operations = Object.assign(Object.create(null), Array.isArray(stored) ? {} : stored.operations);
+            if (!Array.isArray(ads)) throw new Error('Invalid ads storage');
         } else {
             ads = [...config.DEFAULT_ADS];
             saveData();
         }
     } catch (err) {
         console.error("Error loading data:", err);
-        ads = [];
+        throw err;
     }
 }
 
 function saveData(): void {
+    if (inOperation) return;
+    fs.mkdirSync(path.dirname(config.DATA_FILE), { recursive: true });
+    const temporary = `${config.DATA_FILE}.${process.pid}.tmp`;
+    const fd = fs.openSync(temporary, 'w', 0o600);
     try {
-        fs.writeFileSync(config.DATA_FILE, JSON.stringify(ads, null, 2));
-    } catch (err) {
-        console.error("Error saving data:", err);
+        fs.writeFileSync(fd, JSON.stringify({ ads, operations }, null, 2));
+        fs.fsyncSync(fd);
+    } finally {
+        fs.closeSync(fd);
+    }
+    fs.renameSync(temporary, config.DATA_FILE);
+}
+
+// Synchronous transaction: ad changes and their result share one atomic file replacement.
+// Single Koa process only; move to database transactions before running multiple replicas.
+function executeOperation(key: string, fingerprint: string, apply: () => { status: number; body: any }): Operation {
+    const existing = operations[key];
+    if (existing) {
+        if (existing.fingerprint !== fingerprint) throw Object.assign(new Error('操作标识已用于不同请求'), { status: 409 });
+        return existing;
+    }
+    const before = JSON.parse(JSON.stringify(ads));
+    try {
+        inOperation = true;
+        const result = apply();
+        const record = { ...result, fingerprint, before, after: JSON.parse(JSON.stringify(ads)), createdAt: new Date().toISOString() };
+        operations[key] = record;
+        inOperation = false;
+        saveData();
+        return record;
+    } catch (error) {
+        ads = before;
+        delete operations[key];
+        throw error;
+    } finally {
+        inOperation = false;
     }
 }
+
+function getOperation(key: string): Operation | undefined { return operations[key]; }
 
 function getAllAds(): Ad[] {
     return [...ads];
@@ -48,7 +90,7 @@ function findIndexById(id: string): number {
 
 function create(adData: AdInput): Ad {
     const newAd: Ad = {
-        id: Date.now().toString(),
+        id: randomUUID(),
         title: adData.title,
         publisher: adData.publisher,
         content: adData.content,
@@ -166,6 +208,8 @@ process.on('SIGTERM', () => {
 loadData();
 
 export default {
+    executeOperation,
+    getOperation,
     getAllAds,
     findById,
     findIndexById,

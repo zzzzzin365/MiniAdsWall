@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "items": [
+    {
+      "id": "ad-ranking",
+      "question": "广告墙的排序分数如何计算？",
+      "aliases": ["广告墙的排序分数如何计算？", "广告的排序规则是什么？", "广告墙按什么规则排序？"],
+      "source": "apps/mini-ad-wall/server/services/ads.service.ts:calculateScore",
+      "knowledge": "当前广告墙按 score = price + price * clicks * 0.42 从高到低排序。price 是出价，clicks 是累计点击数。这个公式是项目演示规则，不是真实广告竞价算法，也不能证明广告转化效果。这里只解释规则，不分析任何具体广告的实时表现。"
+    }
+  ]
+}

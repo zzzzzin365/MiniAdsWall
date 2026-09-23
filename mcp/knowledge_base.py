@@ -17,6 +17,8 @@ from typing import Any, Dict, List, Optional
 
 import chromadb
 
+from mcp.advertising_knowledge import ARTICLE_KNOWLEDGE, LEGACY_ARTICLE_TITLES
+
 logger = logging.getLogger(__name__)
 
 
@@ -118,6 +120,8 @@ class KnowledgeBase:
                     "content":  doc,
                     "score":    round(1.0 - dist, 4),  # ChromaDB 返回距离，转为相似度
                     "chunk":    meta.get("chunk_index", 0),
+                    "source_url": meta.get("source_url", ""),
+                    "source_title": meta.get("source_title", ""),
                 })
 
         return items
@@ -226,6 +230,11 @@ class KnowledgeBase:
                     "不得建议虚假宣传、误导性标题或违规素材。"
                 ),
             },
+        ] + [
+            {**doc, "content": (
+                f"{doc['content']}\n外部业务参考；来源：{doc['source_title']} {doc['source_url']}"
+            )}
+            for doc in ARTICLE_KNOWLEDGE
         ]
 
     def _ensure_default_docs(self) -> None:
@@ -245,10 +254,22 @@ class KnowledgeBase:
                 doc_id = hashlib.md5(f"default_ads_{title}_{i}".encode()).hexdigest()
                 ids.append(doc_id)
                 docs.append(chunk)
-                metas.append({"title": title, "chunk_index": i, "total_chunks": len(chunks), "source": "default_ads"})
+                metas.append({
+                    "title": title, "chunk_index": i, "total_chunks": len(chunks),
+                    "source": "default_ads",
+                    "knowledge_id": doc.get("knowledge_id", ""),
+                    "source_url": doc.get("source_url", ""),
+                    "source_title": doc.get("source_title", ""),
+                })
 
         if ids:
             self._collection.upsert(ids=ids, documents=docs, metadatas=metas)
+            # 仅替换上一版内置文章摘要的已知 ID，保留用户自行导入的同名文档。
+            # 新条目写入成功后才清理旧摘要，避免写入失败时先丢失旧知识。
+            self._collection.delete(ids=[
+                hashlib.md5(f"default_ads_{title}_0".encode()).hexdigest()
+                for title in LEGACY_ARTICLE_TITLES
+            ])
             logger.info(f"广告默认知识已写入 {len(ids)} 个文档片段")
 
     def _load_default_docs(self) -> None:

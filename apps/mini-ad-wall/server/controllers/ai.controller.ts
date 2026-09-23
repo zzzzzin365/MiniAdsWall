@@ -1,4 +1,5 @@
 import { RouterContext } from 'koa-router';
+import adsService from '../services/ads.service';
 import aiService from '../services/ai.service';
 import adsAgentService from '../services/adsAgent.service';
 import { AdCreativeInput, AdStrategyInput, AssistantChatInput } from '../types';
@@ -24,7 +25,7 @@ async function generateCreative(ctx: RouterContext): Promise<void> {
         tone: body.tone || 'neutral'
     };
 
-    const result = await aiService.generateAdCreative(input);
+    const result = await aiService.generateAdCreative(input, ctx.state.requestId);
 
     if ('error' in result && result.error) {
         ctx.status = 500;
@@ -56,7 +57,7 @@ async function generateStrategy(ctx: RouterContext): Promise<void> {
         industry: body.industry.trim()
     };
 
-    const result = await aiService.generateAdStrategy(input);
+    const result = await aiService.generateAdStrategy(input, ctx.state.requestId);
 
     if ('error' in result && result.error) {
         ctx.status = 500;
@@ -80,11 +81,11 @@ async function chatAssistant(ctx: RouterContext): Promise<void> {
 
     const result = await adsAgentService.chat({
         message: body.message.trim(),
-        userId: body.userId,
+        userId: ctx.state.principal || 'anonymous',
         convId: body.convId,
-        ads: Array.isArray(body.ads) ? body.ads : [],
+        ads: adsService.getSortedAds(),
         confirmationId: body.confirmationId
-    });
+    }, ctx.state.requestId);
 
     ctx.status = 200;
     ctx.body = result;

@@ -1,5 +1,7 @@
 # API Flow
 
+The endpoints below describe the current implementation. Planned asynchronous run, SSE, cancellation/resume, and paginated history APIs are specified in [存储、Agent 服务托管与性能设计](agent-hosting-design.md); the implemented hosted path and remaining validation are described in [实现与运行](agent-hosting-implementation.md). The original synchronous endpoints remain compatible.
+
 ## Browser to MiniAddwall
 
 The React frontend uses `apps/mini-ad-wall/client/src/api.ts`.
@@ -97,3 +99,9 @@ curl -X POST http://localhost:8000/chat \
     ]
   }'
 ```
+
+## Chat latency limits
+
+OpenRouter chat calls use the native Chat Completions endpoint, with a text-response adapter for existing Agent callers. Empty text, HTTP-200 error bodies, and truncated output fail explicitly. Each model call has an 18-second wall-clock limit and no automatic retry. The chat handler has a 28-second total limit; Koa waits 32 seconds and the browser 35 seconds. These limits apply to chat, not creative/strategy generation.
+
+The three exact UI quick prompts skip model-based classification, but still pass pending-state, permission, and action checks. Other inputs run classification and entity extraction concurrently (5-second model limits). Chat retrieval uses one local knowledge search (3-second limit) without remote query rewriting/reranking. A failed specialist does not retry the same provider through GeneralAgent. The UI shows elapsed waiting time, not fabricated stage progress. This remains a non-streaming API.

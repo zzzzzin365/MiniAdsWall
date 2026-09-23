@@ -1,4 +1,5 @@
 import Koa from 'koa';
+import { businessBoundary } from './middlewares/businessBoundary';
 import { koaBody } from 'koa-body';
 import cors from '@koa/cors';
 import serve from 'koa-static';
@@ -13,6 +14,7 @@ const app = new Koa();
 app.use(errorHandler);
 app.use(responseTime);
 app.use(cors());
+app.use(businessBoundary);
 app.use(koaBody());
 app.use(requestLogger);
 app.use(serve(config.UPLOAD_DIR));

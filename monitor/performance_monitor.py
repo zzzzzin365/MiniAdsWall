@@ -1,9 +1,9 @@
 """
-亮点：利用 Monitor 监控 Agent 在线表现
+利用 Monitor 监控 Agent 在线表现
 
-核心问题：如何利用 Monitor 监控 Agent 的在线表现？
+遇到的核心问题：如何利用 Monitor 监控 Agent 的在线表现？
 
-本模块的答案：
+本模块：
   1. 实时采集 —— 每隔 N 秒从 Orchestrator 和 ToolManager 拉取最新统计
   2. 异常检测 —— Z-score 统计方法，自动发现指标突变
   3. 路由反馈 —— 将 Agent 成功率/延迟写回 Orchestrator，

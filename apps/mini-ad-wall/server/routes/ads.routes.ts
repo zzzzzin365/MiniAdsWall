@@ -1,9 +1,11 @@
+import { operationStatus } from '../middlewares/businessBoundary';
 import Router from 'koa-router';
 import adsController from '../controllers/ads.controller';
 import uploadService from '../services/upload.service';
 
 const router = new Router();
 
+router.get('/api/operations/:id', operationStatus);
 router.get('/api/ads', adsController.getAds);
 router.post('/api/ads', adsController.createAd);
 router.put('/api/ads/:id', adsController.updateAd);
