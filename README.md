@@ -49,10 +49,3 @@ flowchart LR
   AdsAgent --> Koa
   Koa --> FE
 ```
-
-## 本地 OpenRouter 免费模型
-
-在项目根目录 `.env` 填写 `OPENROUTER_API_KEY`，设置 `OPENROUTER_MODEL=nex-agi/nex-n2.5-mini:free`，再运行 `.venv/bin/python scripts/run_local_agent.py`。启动器通过 OpenRouter 原生 Chat Completions 接口调用同一免费模型；不需要额外 Anthropic Key，也不切换到付费模型。免费模型仍需账户 Key，受提供方可用性和额度限制。
-
-本机 Redis 使用 `127.0.0.1:6380`，Chroma 使用 `data/chroma` 本地持久化。`.env` 的 `AGENT_SERVICE_TOKEN` 须与 Koa 的 `apps/mini-ad-wall/server/.env.local` 一致；Koa 可通过 `node --env-file=.env.local --require ts-node/register/transpile-only index.ts` 启动（先运行 `npm run build` 做类型检查）。本地环境文件已被 Git 忽略，不要提交密钥。
-
