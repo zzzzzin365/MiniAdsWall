@@ -56,15 +56,3 @@ flowchart LR
 
 本机 Redis 使用 `127.0.0.1:6380`，Chroma 使用 `data/chroma` 本地持久化。`.env` 的 `AGENT_SERVICE_TOKEN` 须与 Koa 的 `apps/mini-ad-wall/server/.env.local` 一致；Koa 可通过 `node --env-file=.env.local --require ts-node/register/transpile-only index.ts` 启动（先运行 `npm run build` 做类型检查）。本地环境文件已被 Git 忽略，不要提交密钥。
 
-## Interviewer Reading Guide
-
-- [存储、Agent 服务托管与性能设计](docs/agent-hosting-design.md)：MySQL/Redis、SSE、取消与超时、隔离执行、并发与恢复的目标设计；[实现与运行](docs/agent-hosting-implementation.md) 说明已实现能力、部署方式和未完成的生产验收。
-
-- `apps/mini-ad-wall/server/services/adsAgent.service.ts` sends structured `ads` data to MiniAdsWall Agent instead of only a prompt summary.
-- `api/main.py` accepts `ads`, calls ad tools, injects tool/RAG context, and returns `tools_used`.
-- `mcp/ads_tools.py` implements `ads_summary`, `ad_performance_search`, and `bid_simulation`.
-- `agents/agent_orchestrator.py` routes `ad_optimization`, `creative_generation`, and `bid_strategy` to `AdsAgent`.
-- `core/intent_recognizer.py` contains multi-strategy intent recognition with ad-specific categories.
-- `core/action_decision.py` turns recognition results into resumable `execute` / `clarify` / `reject` / `confirm` decisions with entity, permission, and risk checks.
-- `mcp/knowledge_base.py` contains ChromaDB-backed RAG with default advertising operations documents.
-- `skills/ads_optimization/SKILL.md` contains hot-loadable business rules for AdsAgent behavior.
