@@ -128,7 +128,7 @@ async function remove(id: string): Promise<boolean> {
     return true;
 }
 
-async function incrementClicks(id: string): Promise<number | null> {
+async function incrementClicks(id: string, includeReceipt=false): Promise<any> {
     return withAdsConnection(async connection => {
         await connection.beginTransaction();
         try {
@@ -136,9 +136,9 @@ async function incrementClicks(id: string): Promise<number | null> {
             const [result] = await connection.execute<ResultSetHeader>('UPDATE ads_business_ads SET clicks = clicks + 1 WHERE id = ?', [id]);
             if (!result.affectedRows) { await connection.rollback(); return null; }
             const [rows] = await connection.execute<RowDataPacket[]>('SELECT clicks FROM ads_business_ads WHERE id = ?', [id]);
-            await recall.emit(connection,doc);
+            const receipt = await recall.emit(connection,doc);
             await connection.commit();
-            return Number(rows[0].clicks);
+            return includeReceipt ? {clicks:Number(rows[0].clicks), ...(receipt?{recall_receipt:receipt}:{})} : Number(rows[0].clicks);
         } catch (error) { await connection.rollback(); throw error; }
     });
 }

@@ -51,7 +51,7 @@ def _shape_ad(ad: Dict[str, Any], coefficient: float = SCORE_COEFFICIENT) -> Dic
         "title": _title(ad),
         "price": round(price, 2),
         "clicks": int(clicks),
-        "videos": len(videos),
+        "videos": int(_num(ad.get("video_count"), len(videos))),
         "score": round(_score(ad, coefficient), 2),
         "description": ad.get("description") or ad.get("content") or "",
     }

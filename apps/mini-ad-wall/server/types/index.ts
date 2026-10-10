@@ -55,6 +55,7 @@ export interface ValidationResult {
 }
 
 export interface ServiceResult<T = any> {
+    recall_receipt?: import('../recall/contracts').Receipt;
     success: boolean;
     data?: T;
     error?: string;

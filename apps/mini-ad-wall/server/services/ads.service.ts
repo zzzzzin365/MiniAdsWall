@@ -74,7 +74,7 @@ async function deleteAd(id: string): Promise<ServiceResult> {
 }
 
 async function clickAd(id: string): Promise<ServiceResult> {
-    const clicks = await adsModel.incrementClicks(id);
+    const clicks = await adsModel.incrementClicks(id,true);
     if (clicks === null) {
         return {
             success: false,
@@ -83,7 +83,7 @@ async function clickAd(id: string): Promise<ServiceResult> {
     }
     return {
         success: true,
-        clicks
+        ...clicks
     };
 }
 

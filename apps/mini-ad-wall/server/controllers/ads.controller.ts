@@ -39,7 +39,7 @@ async function clickAd(ctx: RouterContext): Promise<void> {
         return;
     }
 
-    ctx.body = { clicks: result.clicks };
+    ctx.body = { clicks: result.clicks, ...(result.recall_receipt ? {recall_receipt:result.recall_receipt} : {}) };
 }
 
 async function uploadVideo(ctx: RouterContext): Promise<void> {

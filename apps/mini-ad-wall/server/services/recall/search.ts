@@ -54,10 +54,10 @@ export async function listPage(raw:any,principal:string) {
  if(raw.cursor){try{const [data,signature]=String(raw.cursor).split('.');const expected=createHmac('sha256',key).update(data).digest('base64url');const a=Buffer.from(signature||''),b=Buffer.from(expected);if(a.length!==b.length||!timingSafeEqual(a,b))throw Error();cursor=JSON.parse(Buffer.from(data,'base64url').toString());if(cursor.principal!==principal||cursor.expires<Date.now()||typeof cursor.id!=='string'||!/^\d+\.\d{8}$/.test(cursor.score))throw Error();}catch{throw failure('invalid_cursor');}}
  return withAdsConnection(async c=>{
   const where=cursor?'WHERE ranking_score < ? OR (ranking_score = ? AND id > ?)':'';
-  const [rows]=await c.query<RowDataPacket[]>(`SELECT id,title,publisher,LEFT(content,800) AS content,url,price,clicks,JSON_EXTRACT(videos,'$[0 to 1]') AS videos,version,ranking_score FROM ads_business_ads ${where} ORDER BY ranking_score DESC,id ASC LIMIT ?`,[...(cursor?[cursor.score,cursor.score,cursor.id]:[]),limit+1]);
+  const [rows]=await c.query<RowDataPacket[]>(`SELECT id,title,publisher,LEFT(content,800) AS content,url,price,clicks,JSON_EXTRACT(videos,'$[0 to 1]') AS videos,JSON_LENGTH(videos) AS video_count,version,ranking_score FROM ads_business_ads ${where} ORDER BY ranking_score DESC,id ASC LIMIT ?`,[...(cursor?[cursor.score,cursor.score,cursor.id]:[]),limit+1]);
   const more=rows.length>limit,items=rows.slice(0,limit),last=items[items.length-1];let next_cursor:string|null=null;
   if(more){const data=Buffer.from(JSON.stringify({score:last.ranking_score,id:last.id,principal,expires:Date.now()+3600000})).toString('base64url');next_cursor=data+'.'+createHmac('sha256',key).update(data).digest('base64url');}
-  return {items:items.map(r=>({id:r.id,title:r.title,publisher:r.publisher,content:r.content,url:r.url,price:Number(r.price),clicks:Number(r.clicks),videos:decode(r.videos)||[],version:r.version})),next_cursor,omitted_fields:['content_after_800_chars','videos_after_2']};
+  return {items:items.map(r=>({id:r.id,title:r.title,publisher:r.publisher,content:r.content,url:r.url,price:Number(r.price),clicks:Number(r.clicks),videos:decode(r.videos)||[],version:r.version,video_count:r.video_count})),next_cursor,omitted_fields:['content_after_800_chars','videos_after_2']};
  });
 }
 export async function adContext(conditions:any,principal:string) {

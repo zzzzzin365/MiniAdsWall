@@ -51,7 +51,9 @@ router.all('(.*)', async ctx => {
         delete body.ad_context;
         if(['true','1'].includes(process.env.AD_CONTEXT_V1_ENABLED||'')) body.ad_context=context;
         } else {
-            body = { ...body, ads:await adsModel.getAllAds() };
+            if(body.conditions?.length) ctx.throw(503,'feature_disabled');
+            const context = await adContext([],ctx.state.principal);
+            body = { ...body, ads:context.items };
             delete body.ad_context;
         }
         delete body.user_id; delete body.userId;

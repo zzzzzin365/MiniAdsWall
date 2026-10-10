@@ -1,7 +1,7 @@
 # MiniAdsWall 后端可靠性与扩容修复 Coding Plan
 
-版本：0.1；日期：2026-10-10；状态：全部任务 pending。  
-依据：[后端可靠性与扩容修复 SDD](backend-reliability-sdd.md)。本文是实施计划，不是实现或压测结果。
+版本：0.1；日期：2026-10-10；状态：CP01、CP02 已完成；其余任务 pending。  
+依据：[后端可靠性与扩容修复 SDD](backend-reliability-sdd.md)。本文是实施计划；CP01、CP02 的实际结果见 [阶段验收记录](backend-reliability-acceptance.md)。
 
 ## 1. 执行边界
 
@@ -29,7 +29,7 @@
 
 ### CP01：记录现状、复现数量边界
 
-- 状态：pending；依赖：无。
+- 状态：done（2026-10-10）；依赖：无。阶段范围通过，正式 AC 仍按验收记录标记。
 - 修改：`tests/test_hosting_api.py`、`apps/mini-ad-wall/server/tests/hosting.test.cjs`；新增 `docs/backend-reliability-acceptance.md`。
 - 实现：记录 Git revision、既有未提交差异、数据库版本、服务配置及历史验收边界；复现当前 1,000 条可接受、1,001 条被拒绝的输入限制，同时验证 Koa 确实提交全量广告。
 - 验证：重跑相关业务 MySQL、托管 MySQL 竞争和客户端恢复回归，记录真实结果；不把历史记录当成此次通过。当前缺口复现与修复后的验收分栏记录。
@@ -37,7 +37,7 @@
 
 ### CP02：增加增量迁移、协议版本和功能开关
 
-- 状态：pending；依赖：CP01。
+- 状态：done（2026-10-10）；依赖：CP01。阶段范围通过，正式 AC 仍按验收记录标记。
 - 修改：`hosting/migrate.py`、`hosting/schema.py`、`hosting/config.py`、`apps/mini-ad-wall/server/config/index.ts`、`.env.example`；新增迁移记录与执行模块、Koa 增量迁移入口和迁移测试。
 - 实现：托管库和业务库分别记录迁移版本、校验值、执行批次；显式迁移命令串行执行 DDL，支持状态查询和重复检查。现有 `metadata.create_all()` 只负责初始化，不能用它替代已有表的升级。
 - 实现：增加输入协议版本、执行器协议版本及 `development/multi_node` 模式；分别控制新版上下文写入、共享素材写入、缩小锁范围、SSE 共享读取和动态执行器分配。新功能默认关闭。

@@ -40,7 +40,7 @@ CP01、CP02 的实现与阶段验证已完成。CP03–CP28、正式双宿主 HA
 业务库新增 `ads_schema_migrations`、`ads_migration_attempts`，同样记录版本、校验值、批次和执行结果，沿用旧导入器的数据库迁移锁。
 
 - `001_ads.sql` 原文件不变，旧 `schema-ads-v1` 校验标记仍检查。
-- `003_request_protocol.sql` 给业务幂等操作增加可空、默认 1 的请求协议字段。002 属于召回模块，由其独立迁移入口管理，本命令不顺带执行召回迁移。
+- `004_request_protocol.sql` 给业务幂等操作增加可空、默认 1 的请求协议字段。002 属于召回模块、003 属于营销模块，各由其独立迁移入口管理；本命令不顺带执行这些迁移。
 - `migrate:ads` 保留旧 JSON 验证和只读源文件语义，先调用显式 schema 迁移，再执行原导入事务。应用启动不调用该入口。
 - SQL 分句保留字符串中的分号、跳过注释中的分号；不支持 DELIMITER/存储过程体和 MySQL 可执行注释，遇到这些格式明确拒绝。
 
@@ -83,7 +83,7 @@ npm run migrate:schema --prefix apps/mini-ad-wall/server -- up --target 1
 
 | 范围 | 结果 | 证据 |
 | --- | --- | --- |
-| CP01/CP02 相关 Koa、业务 MySQL和客户端回归 | 以最终范围日志为准，必须 0 失败、0 skipped | [范围日志](evidence/backend-reliability/cp02-koa-scoped.log) |
+| CP01/CP02 相关 Koa、业务 MySQL和客户端回归 | 23 项全部通过，0 失败、0 skipped | [范围日志](evidence/backend-reliability/cp02-koa-scoped.log) |
 | 完整 Python 测试 | 104 项，91 通过、13 skipped，0 失败 | [Python 日志](evidence/backend-reliability/cp02-python-verified.log) |
 | 真实 MySQL 迁移专项 | 18 项全部通过，包含 8 项真实 MySQL、8 项文件 SQLite、2 项协议/开关验证 | [MySQL 日志](evidence/backend-reliability/cp02-mysql-verified.log) |
 | 托管六项多进程/SIGKILL 回归 | 全部通过；最后一次恢复 20.295 秒，旧写入被拒绝、检查点恢复成功 | [机器可读结果](evidence/backend-reliability/cp02-mysql-verified.json) |

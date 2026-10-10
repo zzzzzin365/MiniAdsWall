@@ -40,20 +40,20 @@ test('CP02 real MySQL upgrades preserve business data, serialize, resume and rej
 
         // Return to an actual v1 table layout; data and imported source are retained.
         await db.connection.query('ALTER TABLE ads_business_operations DROP COLUMN request_protocol_version');
-        await db.connection.query('DELETE FROM ads_schema_migrations WHERE version=3');
-        await db.connection.query('DELETE FROM ads_migration_attempts WHERE version=3');
+        await db.connection.query('DELETE FROM ads_schema_migrations WHERE version=4');
+        await db.connection.query('DELETE FROM ads_migration_attempts WHERE version=4');
         assert.equal((await adsMigrationStatus())[1].state, 'pending');
-        await assert.rejects(migrateAdsSchema({ afterStatement(version) { if (version === 3) throw new Error('secret must not be logged'); } }));
+        await assert.rejects(migrateAdsSchema({ afterStatement(version) { if (version === 4) throw new Error('secret must not be logged'); } }));
         const failed = (await adsMigrationStatus())[1];
         assert.equal(failed.state, 'failed'); assert.equal(failed.error_code, 'migration_step_failed');
-        await db.connection.query("UPDATE ads_schema_migrations SET state='applying' WHERE version=3");
+        await db.connection.query("UPDATE ads_schema_migrations SET state='applying' WHERE version=4");
         await migrateAdsSchema();
-        const [retried] = await db.connection.query('SELECT state FROM ads_migration_attempts WHERE version=3 ORDER BY started_at');
+        const [retried] = await db.connection.query('SELECT state FROM ads_migration_attempts WHERE version=4 ORDER BY started_at');
         assert.deepEqual(retried.map(r => r.state), ['failed', 'applied']);
 
         const directory = path.join(db.root, 'migrations'); fs.mkdirSync(directory);
-        for (const name of ['001_ads.sql', '003_request_protocol.sql']) fs.copyFileSync(path.join(__dirname, '../migrations', name), path.join(directory, name));
-        fs.appendFileSync(path.join(directory, '003_request_protocol.sql'), '\n-- forbidden drift\n');
+        for (const name of ['001_ads.sql', '004_request_protocol.sql']) fs.copyFileSync(path.join(__dirname, '../migrations', name), path.join(directory, name));
+        fs.appendFileSync(path.join(directory, '004_request_protocol.sql'), '\n-- forbidden drift\n');
         await assert.rejects(migrateAdsSchema({ directory }), /checksum_mismatch/);
         await assert.rejects(migrateAdsSchema({ target: 1 }), /downgrade/);
         await db.connection.query("INSERT INTO ads_schema_migrations (version,name,checksum,state,batch_id,started_at) VALUES (99,'future',REPEAT('a',64),'applied',UUID(),NOW(6))");

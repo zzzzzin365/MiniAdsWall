@@ -27,9 +27,9 @@ export class Engine {
  async setSequences(sequences:any[]){await Promise.all(this.workers.map(w=>w.call('seq',{sequences})));this.sequences=sequences;}
  async apply(events:any[]) {await Promise.all(this.workers.map(w=>w.call('events',{events:events.filter(e=>w.shards.includes(e.shard_id))})));this.sequences=(await Promise.all(this.workers.map(w=>w.call('status')))).flat().sort((a,b)=>a.shard_id-b.shard_id);}
  ready(){return !this.fatal&&!this.workers.some(w=>w.dead)&&Date.now()-this.lastPoll<=1000&&this.pendingAge<=2000;}
- async open(conditions:Condition[],limit:number,time:number) {
+ async open(conditions:Condition[],limit:number,time:number,timeout=100) {
   this.expire();if(this.queries.size>=32)throw failure('recall_overloaded',429);
-  const results=await Promise.allSettled(this.workers.map(w=>w.call('open',{conditions,limit,time},100)));
+  const results=await Promise.allSettled(this.workers.map(w=>w.call('open',{conditions,limit,time},timeout)));
   if(results.some(r=>r.status==='rejected')) {await Promise.all(results.map((r,i)=>r.status==='fulfilled'?this.workers[i].call('release',{token:r.value.token}).catch(()=>{}):undefined));throw (results.find(r=>r.status==='rejected') as PromiseRejectedResult).reason;}
   const packets=results.map(r=>(r as PromiseFulfilledResult<any>).value), token=randomUUID();
   const buffers=new Map<number,any>();packets.forEach((p,i)=>p.shards.forEach(s=>buffers.set(s.shard_id,{...s,offset:0,worker:this.workers[i],token:p.token})));
@@ -49,6 +49,7 @@ export class Engine {
   return {items,candidate_exhausted:[...q.buffers.values()].every(b=>b.done&&b.offset===b.items.length)};
  }
  async release(token:string){const q=this.queries.get(token);if(!q)return;this.queries.delete(token);await Promise.all(q.packets.map((p,i)=>this.workers[i].call('release',{token:p.token}).catch(()=>{})));}
+ hasQuery(token:string){return this.queries.has(token);}
  expire(){for(const [token,q]of this.queries)if(Date.now()-q.created>5000)void this.release(token);}
  async exportStart(){const packets=await Promise.all(this.workers.map(w=>w.call('export')));return {sequences:packets.flatMap(p=>p.sequences).sort((a,b)=>a.shard_id-b.shard_id),packets};}
  async close(){await Promise.all(this.workers.map(w=>w.close()));}

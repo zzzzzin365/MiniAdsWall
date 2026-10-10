@@ -10,8 +10,8 @@ const root = path.resolve(__dirname, fs.existsSync(path.join(__dirname, '../pack
 const lockSql = "CONCAT('ads:', LEFT(SHA2(DATABASE(), 256), 50))"; // same lock as the legacy importer
 type Options = { directory?: string; target?: number; lockTimeout?: number; afterStatement?: (version: number, index: number) => Promise<void> | void };
 type Migration = { version: number; name: string; sql: string; checksum: string };
-// Recall migration 002 has its own explicit entry point; do not execute it here.
-const files = ['001_ads.sql', '003_request_protocol.sql'];
+// Recall 002 and marketing 003 have separate explicit entry points; do not execute them here.
+const files = ['001_ads.sql', '004_request_protocol.sql'];
 
 function definitions(directory = path.join(root, 'migrations')): Migration[] {
     return files.map(name => {
@@ -30,7 +30,7 @@ async function protocolColumn(c: PoolConnection): Promise<boolean> {
     return true;
 }
 async function verify(c: PoolConnection, version: number): Promise<void> {
-    if (version === 3) {
+    if (version === 4) {
         if (!await protocolColumn(c)) throw new AdsMigrationError('missing_request_protocol_column');
         return;
     }
@@ -111,7 +111,7 @@ export async function migrateAdsSchema(options: Options = {}) {
                 // A semicolon in a full-line SQL comment is not a statement boundary.
                 const statements = splitSqlStatements(m.sql);
                 for (const [i, statement] of statements.entries()) {
-                    if (m.version !== 3 || !await protocolColumn(c)) await c.query(statement);
+                    if (m.version !== 4 || !await protocolColumn(c)) await c.query(statement);
                     await options.afterStatement?.(m.version, i);
                 }
                 await verify(c, m.version);
