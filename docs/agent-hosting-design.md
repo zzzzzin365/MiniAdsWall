@@ -1,10 +1,10 @@
 # 存储、Agent 服务托管与性能设计
 
-状态：**核心托管链路已实现，完整生产验收尚未完成。** 代码入口、启动命令、与本设计的差异及实测边界见 [实现与运行](agent-hosting-implementation.md)。MySQL 独立进程竞争、并发上限和 Worker 崩溃恢复已通过本地实测，见 [验证记录](hosting-mysql-validation.json)。下文保留目标设计，不能把未验收条目或演算数字当成已达标结果。
+状态：**待实现设计。**
 
-## 改造前基线与改造范围
+## 现状与改造范围
 
-改造前调用链为 React chatbox → Koa `adsAgent.service.ts` → FastAPI `/chat` → 工具/RAG/Agent → 一次性 JSON 响应。广告数据使用 JSON 文件；`memory/conversation_memory.py` 使用 Redis 工作记忆与 Chroma 长期记忆；`core/action_decision.py` 使用 Redis 加进程内兜底保存待澄清、待确认状态。`mcp/tool_manager.py` 已有 `asyncio.wait_for`，但取消协程不等于清理子进程。
+当前调用链为 React chatbox → Koa `adsAgent.service.ts` → FastAPI `/chat` → 工具/RAG/Agent → 一次性 JSON 响应。广告数据使用 JSON 文件；`memory/conversation_memory.py` 使用 Redis 工作记忆与 Chroma 长期记忆；`core/action_decision.py` 使用 Redis 加进程内兜底保存待澄清、待确认状态。`mcp/tool_manager.py` 已有 `asyncio.wait_for`，但取消协程不等于清理子进程。
 
 本设计新增 MySQL 持久化、独立 Agent Worker、SSE 事件接口及隔离工具执行器。现有广告分析工具和四态预检继续复用。涉及真实数据写入的工具仍必须完成权限检查和审批；现有出价模拟不能当成真实调价。
 

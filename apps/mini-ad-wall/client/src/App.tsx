@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAds, createAd, updateAd, deleteAd, clickAd } from './api';
+import { getAdsPage, getAd, createAd, updateAd, deleteAd, clickAd } from './api';
 import VirtualAdGrid from './components/VirtualAdGrid';
 import AdModal from './components/AdModal';
 import DeleteModal from './components/DeleteModal';
@@ -9,6 +9,8 @@ import AIAssistantPanel from './components/AIAssistantPanel';
 import { Ad, AdInput, AdModalState, DeleteModalState, VideoModalState, ToastState } from './types';
 
 function App() {
+    const [nextCursor, setNextCursor] = useState<string | null>(null);
+    const [loadingPage, setLoadingPage] = useState(false);
     const [ads, setAds] = useState<Ad[]>([]);
     const [adModal, setAdModal] = useState<AdModalState>({ open: false, mode: 'create', data: null });
     const [deleteModal, setDeleteModal] = useState<DeleteModalState>({ open: false, id: null });
@@ -21,11 +23,19 @@ function App() {
 
     const loadAds = async () => {
         try {
-            const data = await getAds();
-            setAds(data);
+            const page = await getAdsPage();
+            setAds(page.items); setNextCursor(page.next_cursor);
         } catch (error) {
             console.error("Failed to load ads", error);
         }
+    };
+
+    const loadNextPage = async () => {
+        if (!nextCursor || loadingPage) return;
+        setLoadingPage(true);
+        try { const page = await getAdsPage(nextCursor); setAds(previous => { const existing = new Set(previous.map(ad => ad.id)); return [...previous, ...page.items.filter(ad => !existing.has(ad.id))]; }); setNextCursor(page.next_cursor); }
+        catch { showToast('下一页读取失败'); }
+        finally { setLoadingPage(false); }
     };
 
     const showToast = (msg: string) => {
@@ -37,11 +47,13 @@ function App() {
         setAdModal({ open: true, mode: 'create', data: null });
     };
 
-    const handleEditClick = (ad: Ad) => {
+    const handleEditClick = async (ad: Ad) => {
+        try { ad = await getAd(ad.id); } catch { showToast("广告详情读取失败"); return; }
         setAdModal({ open: true, mode: 'edit', data: ad });
     };
 
-    const handleCopyClick = (ad: Ad) => {
+    const handleCopyClick = async (ad: Ad) => {
+        try { ad = await getAd(ad.id); } catch { showToast("广告详情读取失败"); return; }
         setAdModal({ open: true, mode: 'copy', data: ad });
     };
 
@@ -58,13 +70,14 @@ function App() {
                 await createAd(formData);
                 showToast(`已复制为草稿：${formData.title}`);
             } else if (adModal.mode === 'edit' && adModal.data) {
-                await updateAd(adModal.data.id, formData);
+                await updateAd(adModal.data.id, { ...formData, version: adModal.data.version });
                 showToast('广告更新成功');
             }
             setAdModal({ ...adModal, open: false });
             loadAds();
         } catch (error) {
             console.error("Operation failed", error);
+            if ((error as any).response?.status === 409) await loadAds();
             alert(error instanceof Error ? error.message : "操作未完成，请重试");
         }
     };
@@ -170,6 +183,8 @@ function App() {
                     />
                 )}
 
+                {nextCursor && <button className="btn" disabled={loadingPage} onClick={loadNextPage}>{loadingPage ? "加载中" : "加载下一页"}</button>}
+                <p>统计范围：当前已加载的 {ads.length} 条广告。</p>
                 <div className="ranking-alert">
                     <strong>算法说明</strong>
                     当前排名基于：Pricing + (Pricing × Clicks × 0.42)

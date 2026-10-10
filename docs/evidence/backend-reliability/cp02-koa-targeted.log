@@ -1,0 +1,109 @@
+✖ real MySQL: safe legacy import, persistence and rollback (4170.043292ms)
+✖ real MySQL: import refuses to merge existing business records (3959.575708ms)
+✔ lost write response is recovered by querying the recorded result (217.881917ms)
+✔ unknown result survives reload; retry queries then reuses the original operation ID (119.000959ms)
+✔ unavailable status service prevents blind resubmission (92.255709ms)
+✖ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (4180.206542ms)
+✔ CP02 defaults are disabled; unsupported releases fail explicitly (2.982834ms)
+✖ CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift (4164.499833ms)
+✖ CP02 adopts legacy business schema and status does not initialize an empty database (3961.320333ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 4
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8336.595667
+
+✖ failing tests:
+
+test at apps/mini-ad-wall/server/tests/ads-mysql.test.cjs:12:1
+✖ real MySQL: safe legacy import, persistence and rollback (4170.043292ms)
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.
+  ALTER TABLE ads_business_operations A' at line 1
+      at migrateAdsSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/ads.migrations.js:136:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.migrateAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/scripts/migrate-ads.js:49:5)
+      at async database (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/helpers/mysql.cjs:41:9)
+      at async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/ads-mysql.test.cjs:14:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.\nALTER TABLE ads_business_operations A' at line 1",
+    sql: 'future protocols need an explicit version.\nALTER TABLE ads_business_operations ADD COLUMN request_protocol_version INT NULL DEFAULT 1'
+  }
+
+test at apps/mini-ad-wall/server/tests/ads-mysql.test.cjs:67:1
+✖ real MySQL: import refuses to merge existing business records (3959.575708ms)
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.
+  ALTER TABLE ads_business_operations A' at line 1
+      at migrateAdsSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/ads.migrations.js:136:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.migrateAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/scripts/migrate-ads.js:49:5)
+      at async database (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/helpers/mysql.cjs:41:9)
+      at async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/ads-mysql.test.cjs:68:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.\nALTER TABLE ads_business_operations A' at line 1",
+    sql: 'future protocols need an explicit version.\nALTER TABLE ads_business_operations ADD COLUMN request_protocol_version INT NULL DEFAULT 1'
+  }
+
+test at apps/mini-ad-wall/server/tests/hosting.test.cjs:11:1
+✖ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (4180.206542ms)
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.
+  ALTER TABLE ads_business_operations A' at line 1
+      at migrateAdsSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/ads.migrations.js:136:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.migrateAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/scripts/migrate-ads.js:49:5)
+      at async database (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/helpers/mysql.cjs:41:9)
+      at async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/hosting.test.cjs:13:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.\nALTER TABLE ads_business_operations A' at line 1",
+    sql: 'future protocols need an explicit version.\nALTER TABLE ads_business_operations ADD COLUMN request_protocol_version INT NULL DEFAULT 1'
+  }
+
+test at apps/mini-ad-wall/server/tests/schema-migrations.test.cjs:16:1
+✖ CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift (4164.499833ms)
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.
+  ALTER TABLE ads_business_operations A' at line 1
+      at migrateAdsSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/ads.migrations.js:136:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.migrateAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/scripts/migrate-ads.js:49:5)
+      at async database (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/helpers/mysql.cjs:41:9)
+      at async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/schema-migrations.test.cjs:17:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.\nALTER TABLE ads_business_operations A' at line 1",
+    sql: 'future protocols need an explicit version.\nALTER TABLE ads_business_operations ADD COLUMN request_protocol_version INT NULL DEFAULT 1'
+  }
+
+test at apps/mini-ad-wall/server/tests/schema-migrations.test.cjs:52:1
+✖ CP02 adopts legacy business schema and status does not initialize an empty database (3961.320333ms)
+  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.
+  ALTER TABLE ads_business_operations A' at line 1
+      at migrateAdsSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/ads.migrations.js:136:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Object.migrateAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/scripts/migrate-ads.js:49:5)
+      at async database (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/helpers/mysql.cjs:41:9)
+      at async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/schema-migrations.test.cjs:53:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'future protocols need an explicit version.\nALTER TABLE ads_business_operations A' at line 1",
+    sql: 'future protocols need an explicit version.\nALTER TABLE ads_business_operations ADD COLUMN request_protocol_version INT NULL DEFAULT 1'
+  }

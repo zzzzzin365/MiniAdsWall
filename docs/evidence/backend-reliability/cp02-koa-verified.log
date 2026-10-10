@@ -1,0 +1,122 @@
+
+> mini-ad-wall-server@1.0.0 test
+> npm run build && node --test tests/*.test.cjs
+
+
+> mini-ad-wall-server@1.0.0 build
+> tsc
+
+▶ real MySQL: safe legacy import, persistence and rollback
+  ✔ legacy ads, click counts, historical results and audit are preserved (12.661583ms)
+  ✔ repeating migration leaves live edits intact and retains the source file (85.620584ms)
+  ✔ exceptions after the ad write leave neither a new ad nor operation nor audit (7.857208ms)
+  ✔ ranking matches the existing score formula and provides a ranking index (12.518542ms)
+  ✔ operator identities are exact, including trailing spaces (10.928959ms)
+  ✔ malformed legacy data fails before writes (2.683083ms)
+✔ real MySQL: safe legacy import, persistence and rollback (4350.1185ms)
+✔ real MySQL: import refuses to merge existing business records (3958.333875ms)
+▶ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+  ✔ authentication and validation still apply (153.7075ms)
+  ✔ same operation across processes commits exactly one ad and audit (123.413291ms)
+  ✔ concurrent edits reject the stale version and preserve the winning result (43.317833ms)
+  ✔ audit failure rolls back the ad and operation, allowing a safe retry (48.272584ms)
+  ✔ concurrent clicks persist across a hard process restart without overwriting edits (484.310416ms)
+  ✔ AI calls use the shared database snapshot and remain separate from business writes (153.286291ms)
+✔ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots (6258.420416ms)
+✔ lost write response is recovered by querying the recorded result (177.133167ms)
+✔ unknown result survives reload; retry queries then reuses the original operation ID (128.890709ms)
+✔ unavailable status service prevents blind resubmission (92.691958ms)
+Server Error: UnauthorizedError: 请提供有效的运营凭据
+    at Object.throw (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa/lib/context.js:97:11)
+    at businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:39:18)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:22)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:11)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at errorHandler (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/errorHandler.js:5:15)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:34:12 {
+  headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+}
+[2026-10-10 08:11:11] ← 06f44463-a0d5-464c-b013-278aff36f558 | GET /api/agent/identity | IP: 127.0.0.1
+[2026-10-10 08:11:11] → 06f44463-a0d5-464c-b013-278aff36f558 | GET /api/agent/identity | ✓ 200 | 16ms
+[2026-10-10 08:11:11] ← 723fdc3e-af73-4dfb-8993-96213591065e | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+[2026-10-10 08:11:11] → 723fdc3e-af73-4dfb-8993-96213591065e | POST /api/agent/sessions/1/runs | ✓ 200 | 49ms
+[2026-10-10 08:11:11] ← ee5f4b87-ce98-48af-8c39-3174791c3fd0 | GET /api/agent/runs/1/events | IP: 127.0.0.1
+[2026-10-10 08:11:11] → ee5f4b87-ce98-48af-8c39-3174791c3fd0 | GET /api/agent/runs/1/events | ✓ 200 | 7ms
+✔ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (5610.4955ms)
+✖ real MySQL: transactional recall, search recheck, restart and online rebuild (4446.338292ms)
+node:internal/modules/cjs/loader:1520
+  throw err;
+  ^
+
+Error: Cannot find module './build/Release/roaring.node'
+Require stack:
+- /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js
+- /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/RoaringBitmap32.js
+- /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js
+- /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1617:12)
+    at require (node:internal/modules/helpers:153:16)
+    at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js:36:14
+    at Object.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js:40:3) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js',
+    '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/RoaringBitmap32.js',
+    '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js',
+    '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs'
+  ]
+}
+
+Node.js v24.19.0
+✖ tests/recall.test.cjs (81.847125ms)
+✔ migration SQL boundaries ignore comments and preserve quoted semicolons (1.921125ms)
+✔ CP02 defaults are disabled; unsupported releases fail explicitly (0.604375ms)
+✔ CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift (6132.93575ms)
+✔ CP02 adopts legacy business schema and status does not initialize an empty database (4114.949083ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 23
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10381.0905
+
+✖ failing tests:
+
+test at tests/recall-mysql.test.cjs:4:1
+✖ real MySQL: transactional recall, search recheck, restart and online rebuild (4446.338292ms)
+  Error: Cannot find module './build/Release/roaring.node'
+  Require stack:
+  - /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js
+  - /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/RoaringBitmap32.js
+  - /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js
+  - /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/engine.js
+  - /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/server.js
+  - /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall-mysql.test.cjs
+      at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+      at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+      at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+      at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+      at Module._load (node:internal/modules/cjs/loader:1294:5)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+      at Module.require (node:internal/modules/cjs/loader:1617:12)
+      at require (node:internal/modules/helpers:153:16)
+      at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js:36:14
+      at Object.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js:40:3) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [ '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/index.js', '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/roaring/RoaringBitmap32.js', '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js', '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/engine.js', '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/server.js', '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall-mysql.test.cjs' ]
+  }
+
+test at tests/recall.test.cjs:1:1
+✖ tests/recall.test.cjs (81.847125ms)
+  'test failed'

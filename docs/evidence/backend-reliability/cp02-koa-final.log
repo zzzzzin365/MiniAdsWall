@@ -1,0 +1,60 @@
+
+> mini-ad-wall-server@1.0.0 test
+> npm run build && node --test tests/*.test.cjs
+
+
+> mini-ad-wall-server@1.0.0 build
+> tsc
+
+▶ real MySQL: safe legacy import, persistence and rollback
+  ✔ legacy ads, click counts, historical results and audit are preserved (6.803208ms)
+  ✔ repeating migration leaves live edits intact and retains the source file (36.371709ms)
+  ✔ exceptions after the ad write leave neither a new ad nor operation nor audit (3.89125ms)
+  ✔ ranking matches the existing score formula and provides a ranking index (4.679666ms)
+  ✔ operator identities are exact, including trailing spaces (6.336834ms)
+  ✔ malformed legacy data fails before writes (1.466208ms)
+✔ real MySQL: safe legacy import, persistence and rollback (4116.559834ms)
+✔ real MySQL: import refuses to merge existing business records (4037.643083ms)
+▶ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+  ✔ authentication and validation still apply (134.734083ms)
+  ✔ same operation across processes commits exactly one ad and audit (113.150334ms)
+  ✔ concurrent edits reject the stale version and preserve the winning result (28.495667ms)
+  ✔ audit failure rolls back the ad and operation, allowing a safe retry (42.280291ms)
+  ✔ concurrent clicks persist across a hard process restart without overwriting edits (445.210583ms)
+  ✔ AI calls use the shared database snapshot and remain separate from business writes (127.5145ms)
+✔ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots (6053.863625ms)
+✔ lost write response is recovered by querying the recorded result (166.003667ms)
+✔ unknown result survives reload; retry queries then reuses the original operation ID (140.397167ms)
+✔ unavailable status service prevents blind resubmission (61.845625ms)
+Server Error: UnauthorizedError: 请提供有效的运营凭据
+    at Object.throw (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa/lib/context.js:97:11)
+    at businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:39:18)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:22)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:11)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at errorHandler (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/errorHandler.js:5:15)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:34:12 {
+  headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+}
+[2026-10-10 08:06:05] ← f888ccea-30aa-4d84-aade-a8f418c3c0db | GET /api/agent/identity | IP: 127.0.0.1
+[2026-10-10 08:06:05] → f888ccea-30aa-4d84-aade-a8f418c3c0db | GET /api/agent/identity | ✓ 200 | 12ms
+[2026-10-10 08:06:05] ← 964017cb-4f46-40f8-80e4-3553a7963645 | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+[2026-10-10 08:06:05] → 964017cb-4f46-40f8-80e4-3553a7963645 | POST /api/agent/sessions/1/runs | ✓ 200 | 18ms
+[2026-10-10 08:06:05] ← 91a9682c-4760-4494-a96c-009f95a65895 | GET /api/agent/runs/1/events | IP: 127.0.0.1
+[2026-10-10 08:06:05] → 91a9682c-4760-4494-a96c-009f95a65895 | GET /api/agent/runs/1/events | ✓ 200 | 8ms
+✔ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (5065.216292ms)
+✔ migration SQL boundaries ignore comments and preserve quoted semicolons (2.133584ms)
+✔ CP02 defaults are disabled; unsupported releases fail explicitly (0.672375ms)
+✔ CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift (4110.913292ms)
+✔ CP02 adopts legacy business schema and status does not initialize an empty database (4023.035916ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8340.77125

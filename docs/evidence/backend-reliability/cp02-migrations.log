@@ -1,0 +1,43 @@
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.HostingMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... ok
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.HostingMigrationTests.test_future_schema_and_downgrade_are_rejected) ... ok
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.HostingMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... ERROR
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.HostingMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... ok
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.HostingMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... ok
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.HostingMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... ERROR
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.MySQLMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... skipped 'requires isolated real MySQL'
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.MySQLMigrationTests.test_future_schema_and_downgrade_are_rejected) ... skipped 'requires isolated real MySQL'
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.MySQLMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... skipped 'requires isolated real MySQL'
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.MySQLMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... skipped 'requires isolated real MySQL'
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.MySQLMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... skipped 'requires isolated real MySQL'
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.MySQLMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... skipped 'requires isolated real MySQL'
+test_defaults_and_no_premature_enablement (test_hosting_migrations.ReleaseGuardTests.test_defaults_and_no_premature_enablement) ... ok
+test_wire_protocols_reject_unknown_versions (test_hosting_migrations.ReleaseGuardTests.test_wire_protocols_reject_unknown_versions) ... ok
+
+======================================================================
+ERROR: test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.HostingMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_migrations.py", line 62, in test_legacy_database_adoption_preserves_input_and_fingerprint
+    repo = Repository(self.engine.url,objects,'k'*32,test=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/hosting/repository.py", line 44, in __init__
+    elif url.startswith('mysql'): options.update(pool_size=5, max_overflow=0, pool_timeout=3,
+         ^^^^^^^^^^^^^^
+AttributeError: 'URL' object has no attribute 'startswith'
+
+======================================================================
+ERROR: test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.HostingMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_migrations.py", line 94, in test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches
+    repo = Repository(self.engine.url,Objects(self.tmp.name+'/objects'),'k'*32,test=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/hosting/repository.py", line 44, in __init__
+    elif url.startswith('mysql'): options.update(pool_size=5, max_overflow=0, pool_timeout=3,
+         ^^^^^^^^^^^^^^
+AttributeError: 'URL' object has no attribute 'startswith'
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.254s
+
+FAILED (errors=2, skipped=6)

@@ -1,6 +1,8 @@
 import Router from 'koa-router';
 import { Readable, Transform } from 'stream';
+import { adContext } from '../services/recall/search';
 import adsModel from '../models/ads.model';
+import config from '../config';
 
 const router = new Router({ prefix: '/api/agent' });
 const logins = new Map<string, { token: string; user_id: string; workspace_id: string; expires: number }>();
@@ -39,17 +41,26 @@ router.all('(.*)', async ctx => {
         POST: [/^\/sessions$/, /^\/sessions\/\d+\/runs$/, /^\/runs\/\d+\/(cancel|resume)$/, /^\/approvals\/\d+\/decision$/]
     };
     if (!routes[ctx.method]?.some(pattern => pattern.test(path))) ctx.throw(404);
+    let session = await login(ctx.state.principal);
+    let body = ctx.request.body;
+    if (/^\/sessions\/\d+\/runs$/.test(path) && ctx.method === 'POST') {
+        // The Agent sees the authenticated server snapshot, never browser-forged ad facts.
+        if (config.RELIABILITY.features.AD_CONTEXT_V1_ENABLED) {
+            const context = await adContext(body.conditions,ctx.state.principal);
+            body = { ...body, conditions:body.conditions||[], ads:context.items };
+        delete body.ad_context;
+        if(['true','1'].includes(process.env.AD_CONTEXT_V1_ENABLED||'')) body.ad_context=context;
+        } else {
+            body = { ...body, ads:await adsModel.getAllAds() };
+            delete body.ad_context;
+        }
+        delete body.user_id; delete body.userId;
+    }
     const stream = path.endsWith('/events');
     const controller = new AbortController();
     const stop = () => controller.abort();
     ctx.res.once('close', stop);
     const timer = setTimeout(stop, stream ? 15 * 60000 : 15000);
-    let session = await login(ctx.state.principal);
-    let body = ctx.request.body;
-    if (/^\/sessions\/\d+\/runs$/.test(path) && ctx.method === 'POST') {
-        // The Agent sees the authenticated server snapshot, never browser-forged ad facts.
-        body = { ...body, ads: adsModel.getAllAds() };
-    }
     const send = () => fetch(`${base()}${path}${ctx.querystring ? '?' + ctx.querystring : ''}`, {
         method: ctx.method, signal: controller.signal,
         headers: { ...internalHeaders(), 'Content-Type': 'application/json', 'X-Agent-Session': session.token,

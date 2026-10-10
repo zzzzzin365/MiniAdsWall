@@ -1,0 +1,63 @@
+{
+  "mysql": "/opt/homebrew/opt/mysql@8.4/bin/mysqld  Ver 8.4.11 for macos26.6 on arm64 (Homebrew)",
+  "date": "2026-10-10",
+  "cases": [
+    {
+      "name": "single_run_claimed_once",
+      "passed": true,
+      "processes": 8,
+      "claims": 1,
+      "pids": [
+        48702,
+        48704,
+        48706,
+        48699,
+        48700,
+        48705,
+        48703,
+        48701
+      ]
+    },
+    {
+      "name": "per_user_limit",
+      "passed": true,
+      "processes": 8,
+      "running": 2,
+      "queued": 6
+    },
+    {
+      "name": "global_limit",
+      "passed": true,
+      "processes": 20,
+      "users": 10,
+      "running": 16,
+      "queued": 4
+    },
+    {
+      "name": "concurrent_idempotent_creation",
+      "passed": true,
+      "processes": 8,
+      "runs": 1,
+      "messages": 1
+    },
+    {
+      "name": "cancellation_holds_slot_until_finish",
+      "passed": true,
+      "final_status": "cancelled"
+    },
+    {
+      "name": "worker_sigkill_recovery_and_resume",
+      "passed": true,
+      "killed_pid": 48782,
+      "signal": 9,
+      "recovery_seconds": 20.295,
+      "stale_write_rejected": true,
+      "checkpoint_restored": true,
+      "resumed_status": "succeeded"
+    }
+  ],
+  "scope": "Local MySQL, independent OS processes, deterministic pipeline; no Docker/model/load-capacity validation.",
+  "migration_regressions_passed": true,
+  "passed": true,
+  "elapsed_seconds": 33.037
+}

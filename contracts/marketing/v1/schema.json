@@ -1,0 +1,460 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://miniadswall.local/contracts/marketing/v1",
+  "definitions": {
+    "Id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,100}$"
+    },
+    "UtcTime": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+    },
+    "AmountMinor": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "Environment": {
+      "enum": [
+        "synthetic",
+        "sandbox",
+        "production"
+      ]
+    },
+    "CreateCampaign": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "brand_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "product_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "pattern": "\\S"
+        },
+        "objective": {
+          "enum": [
+            "traffic",
+            "conversion"
+          ]
+        },
+        "starts_at": {
+          "$ref": "#/definitions/UtcTime"
+        },
+        "ends_at": {
+          "$ref": "#/definitions/UtcTime"
+        }
+      },
+      "required": [
+        "brand_id",
+        "product_id",
+        "name",
+        "objective",
+        "starts_at",
+        "ends_at"
+      ]
+    },
+    "CreateCreative": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "brand_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "campaign_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "ad_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "pattern": "\\S"
+        },
+        "asset_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "\\S"
+        },
+        "asset_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "landing_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://",
+          "maxLength": 2048
+        },
+        "authorization_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "pattern": "\\S"
+        },
+        "authorization_expires_at": {
+          "$ref": "#/definitions/UtcTime"
+        }
+      },
+      "required": [
+        "brand_id",
+        "campaign_id",
+        "ad_id",
+        "title",
+        "asset_ref",
+        "asset_hash",
+        "landing_url",
+        "authorization_ref",
+        "authorization_expires_at"
+      ]
+    },
+    "CampaignStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "expected_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967294
+        },
+        "status": {
+          "enum": [
+            "active",
+            "paused",
+            "ended"
+          ]
+        }
+      },
+      "required": [
+        "expected_version",
+        "status"
+      ]
+    },
+    "CreativeStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "expected_revision": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967294
+        },
+        "status": {
+          "enum": [
+            "pending_review",
+            "approved",
+            "rejected",
+            "archived"
+          ]
+        }
+      },
+      "required": [
+        "expected_revision",
+        "status"
+      ]
+    },
+    "Event": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "source": {
+          "$ref": "#/definitions/Id"
+        },
+        "source_event_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "type": {
+          "enum": [
+            "impression",
+            "click",
+            "order_paid",
+            "order_refunded"
+          ]
+        },
+        "occurred_at": {
+          "$ref": "#/definitions/UtcTime"
+        },
+        "received_at": {
+          "$ref": "#/definitions/UtcTime"
+        },
+        "environment": {
+          "$ref": "#/definitions/Environment"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "impression_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "click_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "order_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "product_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "amount_minor": {
+          "$ref": "#/definitions/AmountMinor"
+        },
+        "currency": {
+          "const": "CNY"
+        }
+      },
+      "required": [
+        "event_id",
+        "source",
+        "source_event_id",
+        "type",
+        "occurred_at",
+        "received_at",
+        "environment",
+        "schema_version"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "impression"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "impression_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "click"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "impression_id",
+              "click_id"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "order_paid",
+                  "order_refunded"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "order_id",
+              "product_id",
+              "amount_minor",
+              "currency"
+            ]
+          }
+        }
+      ]
+    },
+    "SpendEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source_entry_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "campaign_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "creative_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "creative_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967294
+        },
+        "occurred_at": {
+          "$ref": "#/definitions/UtcTime"
+        },
+        "amount_minor": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "currency": {
+          "const": "CNY"
+        },
+        "adjustment_ref": {
+          "$ref": "#/definitions/Id"
+        }
+      },
+      "required": [
+        "source_entry_id",
+        "campaign_id",
+        "creative_id",
+        "creative_version",
+        "occurred_at",
+        "amount_minor",
+        "currency"
+      ]
+    },
+    "CoverageMarker": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "campaign_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "start": {
+          "$ref": "#/definitions/UtcTime"
+        },
+        "end": {
+          "$ref": "#/definitions/UtcTime"
+        },
+        "entry_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "amount_minor": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "checksum": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "campaign_id",
+        "start",
+        "end",
+        "entry_count",
+        "amount_minor",
+        "checksum"
+      ]
+    },
+    "BidProposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "const": "set_bid"
+        },
+        "ad_id": {
+          "$ref": "#/definitions/Id"
+        },
+        "expected_version": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4294967294
+        },
+        "new_bid_minor": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "currency": {
+          "const": "CNY"
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "report_id": {
+              "$ref": "#/definitions/Id"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 4294967294
+            },
+            "start": {
+              "$ref": "#/definitions/UtcTime"
+            },
+            "end": {
+              "$ref": "#/definitions/UtcTime"
+            }
+          },
+          "required": [
+            "report_id",
+            "revision",
+            "start",
+            "end"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "action",
+        "ad_id",
+        "expected_version",
+        "new_bid_minor",
+        "currency",
+        "evidence",
+        "reason"
+      ]
+    },
+    "Error": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]{1,99}$"
+            },
+            "message": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500,
+              "pattern": "\\S"
+            },
+            "request_id": {
+              "$ref": "#/definitions/Id"
+            }
+          },
+          "required": [
+            "code",
+            "message",
+            "request_id"
+          ]
+        }
+      },
+      "required": [
+        "error"
+      ]
+    }
+  }
+}

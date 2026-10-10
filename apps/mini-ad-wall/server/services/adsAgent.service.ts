@@ -87,7 +87,7 @@ function localFallback(input: AssistantChatInput, reason?: string): AssistantCha
         `当前共有 ${ads.length} 条广告，总点击 ${totalClicks}，平均出价 ${avgPrice.toFixed(2)}。`,
         topAd ? `点击最高的是「${topAd.title}」，点击 ${topAd.clicks}，可以优先复用它的标题结构和素材方向。` : '当前还没有广告数据，建议先创建 3-5 条不同卖点的广告做初始测试。',
         noVideoCount > 0 ? `有 ${noVideoCount} 条广告没有绑定视频素材，建议补齐素材后再观察点击变化。` : '所有广告都已绑定视频素材，下一步可以比较不同素材长度与点击表现。',
-        '出价优化上，优先提高高点击广告预算；低点击高出价广告应先改文案或素材，不建议直接继续加价。'
+        '这些判断仅针对当前返回的广告样本；全量统计尚未提供。'
     ];
 
     return {
@@ -114,6 +114,7 @@ async function chat(input: AssistantChatInput, requestId?: string): Promise<Assi
             user_id: input.userId || 'anonymous',
             conv_id: input.convId || undefined,
             ads: input.ads || [],
+            ad_context: ['true','1'].includes(process.env.AD_CONTEXT_V1_ENABLED||'') ? input.ad_context : undefined,
             confirmation_id: input.confirmationId
         }, requestId);
         return {

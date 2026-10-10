@@ -49,3 +49,20 @@ flowchart LR
   AdsAgent --> Koa
   Koa --> FE
 ```
+
+## Interviewer Reading Guide
+
+- [存储、Agent 服务托管与性能设计](docs/agent-hosting-design.md)：MySQL/Redis、SSE、取消与超时、隔离执行、并发与恢复的目标设计；[实现与运行](docs/agent-hosting-implementation.md) 说明已实现能力、部署方式和未完成的生产验收。
+
+- `apps/mini-ad-wall/server/services/adsAgent.service.ts` sends structured `ads` data to MiniAdsWall Agent instead of only a prompt summary.
+- `api/main.py` accepts `ads`, calls ad tools, injects tool/RAG context, and returns `tools_used`.
+- `mcp/ads_tools.py` implements `ads_summary`, `ad_performance_search`, and `bid_simulation`.
+- `agents/agent_orchestrator.py` routes `ad_optimization`, `creative_generation`, and `bid_strategy` to `AdsAgent`.
+- `core/intent_recognizer.py` contains multi-strategy intent recognition with ad-specific categories.
+- `core/action_decision.py` turns recognition results into resumable `execute` / `clarify` / `reject` / `confirm` decisions with entity, permission, and risk checks.
+- `mcp/knowledge_base.py` contains ChromaDB-backed RAG with default advertising operations documents.
+- `skills/ads_optimization/SKILL.md` contains hot-loadable business rules for AdsAgent behavior.
+
+### 广告业务数据库
+
+Koa 广告 CRUD、操作查单和点击已迁至 MySQL 8.4，运行时不再写 JSON。新启动需设置 `ADS_MYSQL_URL`，先导入旧广告；多个 Koa 实例共享数据库。见 [迁移与多实例运行](docs/ads-mysql.md)。

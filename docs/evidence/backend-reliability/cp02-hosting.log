@@ -1,0 +1,127 @@
+test_ad_task_uses_real_preflight_tools_and_stream_adapter (test_hosting.PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-7szbqdnj'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_native_delta_and_truncated_rejection (test_hosting.ProviderStreamTests.test_native_delta_and_truncated_rejection) ... ok
+test_approval_is_bound_and_single_use (test_hosting.RepositoryTests.test_approval_is_bound_and_single_use) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-ivsogsbk'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_cancel_wins_over_success_and_releases_session (test_hosting.RepositoryTests.test_cancel_wins_over_success_and_releases_session) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-0v0lp1is'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_event_replay_and_expiration (test_hosting.RepositoryTests.test_event_replay_and_expiration) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-o_7ec4zg'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_history_keyset_with_tool_records_and_signed_cursor (test_hosting.RepositoryTests.test_history_keyset_with_tool_records_and_signed_cursor) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-03rzibru'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_idempotency_and_request_mismatch (test_hosting.RepositoryTests.test_idempotency_and_request_mismatch) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-m16g25ve'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_large_message_is_bounded_and_referenced (test_hosting.RepositoryTests.test_large_message_is_bounded_and_referenced) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-jc4nbtf_'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_object_key_traversal_rejected (test_hosting.RepositoryTests.test_object_key_traversal_rejected) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-hfjlpoe7'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_other_user_cannot_read_cancel_or_page (test_hosting.RepositoryTests.test_other_user_cannot_read_cancel_or_page) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-td5fopnd'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_pending_state_survives_adapter_restart (test_hosting.RepositoryTests.test_pending_state_survives_adapter_restart) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-fgr9ugmn'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_queue_limit (test_hosting.RepositoryTests.test_queue_limit) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-7v3g3idl'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_resume_keeps_old_run_and_checkpoint (test_hosting.RepositoryTests.test_resume_keeps_old_run_and_checkpoint) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-pq7u12ta'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_same_session_is_exclusive (test_hosting.RepositoryTests.test_same_session_is_exclusive) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-xxkb56pd'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_stale_worker_cannot_write (test_hosting.RepositoryTests.test_stale_worker_cannot_write) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-_fnfg5r7'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_terminal_is_immutable (test_hosting.RepositoryTests.test_terminal_is_immutable) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-21fs1lhy'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_user_concurrency_is_global (test_hosting.RepositoryTests.test_user_concurrency_is_global) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-kjpb50je'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_cancel_stops_inflight_work (test_hosting.WorkerTests.test_cancel_stops_inflight_work) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-wn2tzx_b'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_cleanup_failure_holds_capacity (test_hosting.WorkerTests.test_cleanup_failure_holds_capacity) ... Executing <Task finished name='Task-22' coro=<WorkerTests.asyncSetUp() done, defined at /Users/admin/MiniAdsWall/tests/test_hosting.py:112> result=None created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.244 seconds
+run=3463007005799937568 cleanup/persistence incomplete; recovery will retry
+Traceback (most recent call last):
+  File "/Users/admin/MiniAdsWall/hosting/worker.py", line 101, in execute
+    if self.sandbox: await self.sandbox.cleanup(r['id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting.py", line 149, in cleanup
+    async def cleanup(self,rid): raise RuntimeError('cannot confirm death')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cannot confirm death
+ok
+test_failed_pipeline_cannot_report_success (test_hosting.WorkerTests.test_failed_pipeline_cannot_report_success) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-zfh6q1ey'>
+  _warnings.warn(warn_message, ResourceWarning)
+run=1408581311143040635 failed: ValueError
+ok
+test_run_timeout_stops_work (test_hosting.WorkerTests.test_run_timeout_stops_work) ... ok
+test_stream_visible_before_completion (test_hosting.WorkerTests.test_stream_visible_before_completion) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-x1zt29pa'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-cg98k7b8'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-kietx8gb'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_tool_timeout_records_failure (test_hosting.WorkerTests.test_tool_timeout_records_failure) ... ok
+test_server_snapshot_change_does_not_duplicate_a_retry (test_hosting.WorkspaceTests.test_server_snapshot_change_does_not_duplicate_a_retry) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-owq2y0xx'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_snapshot_input_and_version_conflict (test_hosting.WorkspaceTests.test_snapshot_input_and_version_conflict) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-ej46qyue'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-nnepiq8o'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_snapshot_path_traversal (test_hosting.WorkspaceTests.test_snapshot_path_traversal) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-h4lvlbju'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_auth_and_logout (test_hosting_api.HostingAPITests.test_auth_and_logout) ... ok
+test_create_cancel_history_and_sse_replay (test_hosting_api.HostingAPITests.test_create_cancel_history_and_sse_replay) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-tjjm07k0'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+test_foreign_principal_and_disabled_account (test_hosting_api.HostingAPITests.test_foreign_principal_and_disabled_account) ... ok
+test_legacy_ads_quantity_boundary_baseline (test_hosting_api.HostingAPITests.test_legacy_ads_quantity_boundary_baseline) ... ok
+test_rate_limit_and_sse_slots (test_hosting_api.HostingAPITests.test_rate_limit_and_sse_slots) ... ok
+test_redis_loss_does_not_erase_history (test_hosting_api.HostingAPITests.test_redis_loss_does_not_erase_history) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-00h749rc'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-2tjgp71p'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-o6wmqceg'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-n1mo0ehs'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+test_grandchild_timeout_and_cleanup (test_hosting_docker.DockerIsolationTests.test_grandchild_timeout_and_cleanup) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_large_output_is_truncated_and_drained (test_hosting_docker.DockerIsolationTests.test_large_output_is_truncated_and_drained) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_memory_limit_is_reported (test_hosting_docker.DockerIsolationTests.test_memory_limit_is_reported) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_readonly_root_and_no_network (test_hosting_docker.DockerIsolationTests.test_readonly_root_and_no_network) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.HostingMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... ok
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.HostingMigrationTests.test_future_schema_and_downgrade_are_rejected) ... ok
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.HostingMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... ok
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.HostingMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... ok
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.HostingMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... ok
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.HostingMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... ok
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.MySQLMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... skipped 'requires isolated real MySQL'
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.MySQLMigrationTests.test_future_schema_and_downgrade_are_rejected) ... skipped 'requires isolated real MySQL'
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.MySQLMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... skipped 'requires isolated real MySQL'
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.MySQLMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... skipped 'requires isolated real MySQL'
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.MySQLMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... skipped 'requires isolated real MySQL'
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.MySQLMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... skipped 'requires isolated real MySQL'
+test_defaults_and_no_premature_enablement (test_hosting_migrations.ReleaseGuardTests.test_defaults_and_no_premature_enablement) ... ok
+test_wire_protocols_reject_unknown_versions (test_hosting_migrations.ReleaseGuardTests.test_wire_protocols_reject_unknown_versions) ... ok
+test_threads_cannot_overclaim (test_hosting_mysql.MySQLConcurrencyTests.test_threads_cannot_overclaim) ... skipped 'requires dedicated MySQL integration database'
+
+----------------------------------------------------------------------
+Ran 51 tests in 5.109s
+
+OK (skipped=11)

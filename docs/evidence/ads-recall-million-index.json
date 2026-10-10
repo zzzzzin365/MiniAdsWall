@@ -1,0 +1,26 @@
+{
+  "scope": "in_memory_bitmap_and_rank_workers_only",
+  "database_tested": false,
+  "koa_tested": false,
+  "rows": 1000000,
+  "average_attribute_values": 10,
+  "term_count_bound": 9010,
+  "queries": 200,
+  "accepted": 199,
+  "errors": {
+    "query_budget_exceeded": 1
+  },
+  "build_ms": 28351.835292,
+  "p50_ms": 12.450791999999637,
+  "p95_ms": 26.065875000000233,
+  "p99_ms": 44.848250000002736,
+  "rss_bytes": 1318633472,
+  "hardware": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v22.23.2",
+    "cpus": 10,
+    "total_memory": 34359738368
+  },
+  "measured_at": "2026-10-10T08:14:08.623Z"
+}

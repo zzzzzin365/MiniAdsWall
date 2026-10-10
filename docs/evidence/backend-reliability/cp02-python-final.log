@@ -1,0 +1,318 @@
+test_advisory_bid_request_does_not_require_confirmation (test_action_decision.ActionDecisionEngineTest.test_advisory_bid_request_does_not_require_confirmation) ... ok
+test_cancellation_consumes_pending_action (test_action_decision.ActionDecisionEngineTest.test_cancellation_consumes_pending_action) ... ok
+test_clarification_can_resume_from_another_instance (test_action_decision.ActionDecisionEngineTest.test_clarification_can_resume_from_another_instance) ... ok
+test_confirmation_is_bound_to_user_and_conversation (test_action_decision.ActionDecisionEngineTest.test_confirmation_is_bound_to_user_and_conversation) ... ok
+test_explicit_high_risk_rule_survives_other_intent (test_action_decision.ActionDecisionEngineTest.test_explicit_high_risk_rule_survives_other_intent) ... ok
+test_low_confidence_other_is_rejected (test_action_decision.ActionDecisionEngineTest.test_low_confidence_other_is_rejected) ... ok
+test_missing_field_clarifies_then_confirms_then_executes (test_action_decision.ActionDecisionEngineTest.test_missing_field_clarifies_then_confirms_then_executes) ... ok
+test_missing_permission_rejects_before_confirmation (test_action_decision.ActionDecisionEngineTest.test_missing_permission_rejects_before_confirmation) ... ok
+test_multiple_missing_fields_are_collected_across_turns (test_action_decision.ActionDecisionEngineTest.test_multiple_missing_fields_are_collected_across_turns) ... ok
+test_permission_is_checked_again_when_confirming (test_action_decision.ActionDecisionEngineTest.test_permission_is_checked_again_when_confirming) ... ok
+test_profile_or_llm_cannot_fill_current_request_action_fields (test_action_decision.ActionDecisionEngineTest.test_profile_or_llm_cannot_fill_current_request_action_fields) ... ok
+test_redis_state_is_shared_and_consumed_exactly_once (test_action_decision.ActionDecisionEngineTest.test_redis_state_is_shared_and_consumed_exactly_once) ... ok
+test_safe_request_executes (test_action_decision.ActionDecisionEngineTest.test_safe_request_executes) ... ok
+test_underspecified_request_clarifies (test_action_decision.ActionDecisionEngineTest.test_underspecified_request_clarifies) ... ok
+test_deadline_cancels_work (test_chat_latency.ChatLatencyTests.test_deadline_cancels_work) ... ok
+test_failed_agent_does_not_repeat_same_provider (test_chat_latency.ChatLatencyTests.test_failed_agent_does_not_repeat_same_provider) ... ok
+test_only_exact_preset_skips_recognition (test_chat_latency.ChatLatencyTests.test_only_exact_preset_skips_recognition) ... ok
+test_recognition_and_entities_start_together_and_cancel (test_chat_latency.ChatLatencyTests.test_recognition_and_entities_start_together_and_cancel) ... ok
+test_confirm_stops_before_tools_rag_and_profile_update (test_chat_preflight.ChatPreflightTest.test_confirm_stops_before_tools_rag_and_profile_update) ... ok
+test_execute_uses_server_permissions_then_builds_tools_and_rag (test_chat_preflight.ChatPreflightTest.test_execute_uses_server_permissions_then_builds_tools_and_rag) ... ok
+test_invalid_permission_map_fails_closed (test_chat_preflight.ChatPreflightTest.test_invalid_permission_map_fails_closed) ... 2026-10-10 16:06:03,200 [WARNING] api.main: ACTION_PERMISSION_MAP 配置无效，按无权限处理: Expecting value: line 1 column 1 (char 0)
+ok
+test_model_cannot_claim_business_mutation_completed (test_chat_preflight.ChatPreflightTest.test_model_cannot_claim_business_mutation_completed) ... ok
+test_service_auth_and_request_id (test_generation_boundary.GenerationBoundaryTests.test_service_auth_and_request_id) ... 2026-10-10 16:06:03,218 [INFO] api.main: request_id=729e0795-e5e7-4f24-944f-f57baf74c863 method=GET path=/health status=503
+2026-10-10 16:06:03,219 [INFO] httpx: HTTP Request: GET http://testserver/health "HTTP/1.1 503 Service Unavailable"
+2026-10-10 16:06:03,221 [INFO] httpx: HTTP Request: POST http://testserver/generate/creative "HTTP/1.1 401 Unauthorized"
+2026-10-10 16:06:03,224 [INFO] api.main: request_id=request-test method=POST path=/generate/creative status=422
+2026-10-10 16:06:03,224 [INFO] httpx: HTTP Request: POST http://testserver/generate/creative "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 16:06:03,226 [INFO] httpx: HTTP Request: POST http://testserver/chat "HTTP/1.1 401 Unauthorized"
+ok
+test_malformed_model_output (test_generation_boundary.GenerationModelTests.test_malformed_model_output) ... ok
+test_timeout (test_generation_boundary.GenerationModelTests.test_timeout) ... ok
+test_valid_creative (test_generation_boundary.GenerationModelTests.test_valid_creative) ... ok
+test_ad_task_uses_real_preflight_tools_and_stream_adapter (test_hosting.PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter) ... 2026-10-10 16:06:03,322 [INFO] core.skill_loader: 
+================ MiniAdsWall Agent Skills Loaded ================
+目录: /Users/admin/MiniAdsWall/skills
+数量: 3
+1. 广告投放运营规范
+   agents: ads
+   keywords: 广告, 投放, 出价, 点击, 点击率, CTR, 素材, 创意, ...
+   path: /Users/admin/MiniAdsWall/skills/ads_optimization/SKILL.md
+2. 通用客服接待规范
+   agents: general
+   keywords: 你好, 您好, 咨询, 帮助, 客服, 订单, 售后, 活动, ...
+   path: /Users/admin/MiniAdsWall/skills/general_customer_service/SKILL.md
+3. 技术支持处理规范
+   agents: technical
+   keywords: 报错, 错误, 异常, 崩溃, 卡顿, 无法登录, 登录失败, 接口, ...
+   path: /Users/admin/MiniAdsWall/skills/technical_support/SKILL.md
+========================================================
+2026-10-10 16:06:03,459 [WARNING] asyncio: Executing <Task pending name='Task-81' coro=<PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter() running at /Users/admin/MiniAdsWall/tests/test_hosting.py:187> wait_for=<Future pending cb=[Task.task_wakeup()] created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.144 seconds
+2026-10-10 16:06:03,484 [INFO] core.skill_loader: Skills 已注入: agent=ads matched=广告投放运营规范(keywords=广告) message='分析当前广告表现，给出三个优化动作'
+ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-jh5exic1'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_native_delta_and_truncated_rejection (test_hosting.ProviderStreamTests.test_native_delta_and_truncated_rejection) ... 2026-10-10 16:06:03,675 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-10 16:06:03,676 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+ok
+test_approval_is_bound_and_single_use (test_hosting.RepositoryTests.test_approval_is_bound_and_single_use) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-1r1f01rh'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_cancel_wins_over_success_and_releases_session (test_hosting.RepositoryTests.test_cancel_wins_over_success_and_releases_session) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-_bd2psos'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_event_replay_and_expiration (test_hosting.RepositoryTests.test_event_replay_and_expiration) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-n9ii9ohn'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_history_keyset_with_tool_records_and_signed_cursor (test_hosting.RepositoryTests.test_history_keyset_with_tool_records_and_signed_cursor) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-9p5m_wtc'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_idempotency_and_request_mismatch (test_hosting.RepositoryTests.test_idempotency_and_request_mismatch) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-fn3dek8x'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_large_message_is_bounded_and_referenced (test_hosting.RepositoryTests.test_large_message_is_bounded_and_referenced) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-fltdk_sd'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_object_key_traversal_rejected (test_hosting.RepositoryTests.test_object_key_traversal_rejected) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-53vid27m'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_other_user_cannot_read_cancel_or_page (test_hosting.RepositoryTests.test_other_user_cannot_read_cancel_or_page) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-m1gi6uzu'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_pending_state_survives_adapter_restart (test_hosting.RepositoryTests.test_pending_state_survives_adapter_restart) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-rpk1d2vp'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_queue_limit (test_hosting.RepositoryTests.test_queue_limit) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-tw1n1kvg'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_resume_keeps_old_run_and_checkpoint (test_hosting.RepositoryTests.test_resume_keeps_old_run_and_checkpoint) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-r15bgejg'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_same_session_is_exclusive (test_hosting.RepositoryTests.test_same_session_is_exclusive) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-0pvy0w6d'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_stale_worker_cannot_write (test_hosting.RepositoryTests.test_stale_worker_cannot_write) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-5xj5to_q'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_terminal_is_immutable (test_hosting.RepositoryTests.test_terminal_is_immutable) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-i_c4e_1x'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_user_concurrency_is_global (test_hosting.RepositoryTests.test_user_concurrency_is_global) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-_znlki5q'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_cancel_stops_inflight_work (test_hosting.WorkerTests.test_cancel_stops_inflight_work) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-iaafb5fc'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_cleanup_failure_holds_capacity (test_hosting.WorkerTests.test_cleanup_failure_holds_capacity) ... 2026-10-10 16:06:06,060 [ERROR] hosting.worker: run=919858894651972078 cleanup/persistence incomplete; recovery will retry
+Traceback (most recent call last):
+  File "/Users/admin/MiniAdsWall/hosting/worker.py", line 101, in execute
+    if self.sandbox: await self.sandbox.cleanup(r['id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting.py", line 149, in cleanup
+    async def cleanup(self,rid): raise RuntimeError('cannot confirm death')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cannot confirm death
+ok
+test_failed_pipeline_cannot_report_success (test_hosting.WorkerTests.test_failed_pipeline_cannot_report_success) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-f10x4pxq'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:06:06,146 [WARNING] hosting.worker: run=1870685368128442497 failed: ValueError
+ok
+test_run_timeout_stops_work (test_hosting.WorkerTests.test_run_timeout_stops_work) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-h1cjxrjx'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+test_stream_visible_before_completion (test_hosting.WorkerTests.test_stream_visible_before_completion) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-5fw_7za4'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_tool_timeout_records_failure (test_hosting.WorkerTests.test_tool_timeout_records_failure) ... ok
+test_server_snapshot_change_does_not_duplicate_a_retry (test_hosting.WorkspaceTests.test_server_snapshot_change_does_not_duplicate_a_retry) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-jwytiewn'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-mtyvs8xz'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_snapshot_input_and_version_conflict (test_hosting.WorkspaceTests.test_snapshot_input_and_version_conflict) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-glg5q5pc'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_snapshot_path_traversal (test_hosting.WorkspaceTests.test_snapshot_path_traversal) ... ok
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-k06o9j3f'>
+  _warnings.warn(warn_message, ResourceWarning)
+test_auth_and_logout (test_hosting_api.HostingAPITests.test_auth_and_logout) ... 2026-10-10 16:06:07,324 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,325 [INFO] httpx: HTTP Request: GET http://test/sessions "HTTP/1.1 401 Unauthorized"
+2026-10-10 16:06:07,331 [INFO] httpx: HTTP Request: DELETE http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,334 [INFO] httpx: HTTP Request: GET http://test/sessions "HTTP/1.1 401 Unauthorized"
+ok
+test_create_cancel_history_and_sse_replay (test_hosting_api.HostingAPITests.test_create_cancel_history_and_sse_replay) ... 2026-10-10 16:06:07,405 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,420 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:06:07,437 [INFO] httpx: HTTP Request: POST http://test/sessions/153030858339010650/runs "HTTP/1.1 400 Bad Request"
+FAIL
+test_foreign_principal_and_disabled_account (test_hosting_api.HostingAPITests.test_foreign_principal_and_disabled_account) ... 2026-10-10 16:06:07,518 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,531 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:06:07,541 [INFO] httpx: HTTP Request: POST http://test/sessions/2458730461426865052/runs "HTTP/1.1 400 Bad Request"
+FAIL
+test_legacy_ads_quantity_boundary_baseline (test_hosting_api.HostingAPITests.test_legacy_ads_quantity_boundary_baseline) ... 2026-10-10 16:06:07,614 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,626 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:06:07,643 [INFO] httpx: HTTP Request: POST http://test/sessions/3341436576378422770/runs "HTTP/1.1 400 Bad Request"
+FAIL
+test_protocol_guard_and_upgraded_health (test_hosting_api.HostingAPITests.test_protocol_guard_and_upgraded_health) ... 2026-10-10 16:06:07,735 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,743 [INFO] httpx: HTTP Request: GET http://test/health "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,759 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:06:07,770 [INFO] httpx: HTTP Request: POST http://test/sessions/562617760762811680/runs "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 16:06:07,783 [INFO] httpx: HTTP Request: POST http://test/sessions/562617760762811680/runs "HTTP/1.1 422 Unprocessable Entity"
+ok
+test_rate_limit_and_sse_slots (test_hosting_api.HostingAPITests.test_rate_limit_and_sse_slots) ... 2026-10-10 16:06:07,864 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+ok
+test_redis_loss_does_not_erase_history (test_hosting_api.HostingAPITests.test_redis_loss_does_not_erase_history) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-sse3vcbv'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:06:07,962 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:06:07,981 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:06:07,998 [INFO] httpx: HTTP Request: POST http://test/sessions/4430375103470984030/runs "HTTP/1.1 400 Bad Request"
+FAIL
+test_grandchild_timeout_and_cleanup (test_hosting_docker.DockerIsolationTests.test_grandchild_timeout_and_cleanup) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_large_output_is_truncated_and_drained (test_hosting_docker.DockerIsolationTests.test_large_output_is_truncated_and_drained) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_memory_limit_is_reported (test_hosting_docker.DockerIsolationTests.test_memory_limit_is_reported) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_readonly_root_and_no_network (test_hosting_docker.DockerIsolationTests.test_readonly_root_and_no_network) ... skipped 'requires Docker and miniadswall-sandbox:1 image'
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.HostingMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... ok
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.HostingMigrationTests.test_future_schema_and_downgrade_are_rejected) ... ok
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.HostingMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... ok
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.HostingMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... ok
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.HostingMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-3p8t3o6v'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-gaulq8mf'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-wtih8_dt'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.HostingMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... ok
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.MySQLMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... skipped 'requires isolated real MySQL'
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.MySQLMigrationTests.test_future_schema_and_downgrade_are_rejected) ... skipped 'requires isolated real MySQL'
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.MySQLMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... skipped 'requires isolated real MySQL'
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.MySQLMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... skipped 'requires isolated real MySQL'
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.MySQLMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... skipped 'requires isolated real MySQL'
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.MySQLMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... skipped 'requires isolated real MySQL'
+test_defaults_and_no_premature_enablement (test_hosting_migrations.ReleaseGuardTests.test_defaults_and_no_premature_enablement) ... ok
+test_wire_protocols_reject_unknown_versions (test_hosting_migrations.ReleaseGuardTests.test_wire_protocols_reject_unknown_versions) ... ok
+test_threads_cannot_overclaim (test_hosting_mysql.MySQLConcurrencyTests.test_threads_cannot_overclaim) ... skipped 'requires dedicated MySQL integration database'
+test_dataset_is_complete_and_balanced (test_intent_evaluation.FixedIntentDatasetTest.test_dataset_is_complete_and_balanced) ... ok
+test_metrics_include_all_classes_and_confusion_matrix (test_intent_evaluation.FixedIntentDatasetTest.test_metrics_include_all_classes_and_confusion_matrix) ... ok
+test_local_bounded_admission_and_cancel_cleanup (test_model_governance.LocalTests.test_local_bounded_admission_and_cancel_cleanup) ... ok
+test_model_factory_wrapper_enforces_admission_before_http (test_model_governance.LocalTests.test_model_factory_wrapper_enforces_admission_before_http) ... ok
+test_redis_failure_never_falls_back_to_execution (test_model_governance.LocalTests.test_redis_failure_never_falls_back_to_execution) ... ok
+test_cache_failure_degrades_and_failed_answers_not_cached (test_model_governance.RedisTests.test_cache_failure_degrades_and_failed_answers_not_cached) ... ok
+test_chat_cache_hit_skips_model_and_never_receives_private_context (test_model_governance.RedisTests.test_chat_cache_hit_skips_model_and_never_receives_private_context) ... 2026-10-10 16:06:08,714 [INFO] api.main: faq_id=ranking cache_hit=False
+2026-10-10 16:06:08,716 [INFO] api.main: faq_id=ranking cache_hit=True
+ok
+test_configuration_conflict_rejected (test_model_governance.RedisTests.test_configuration_conflict_rejected) ... ok
+test_faq_hit_scope_version_and_bypass (test_model_governance.RedisTests.test_faq_hit_scope_version_and_bypass) ... ok
+test_orphan_lease_expires_and_execution_is_cancelled (test_model_governance.RedisTests.test_orphan_lease_expires_and_execution_is_cancelled) ... ok
+test_two_instances_share_capacity_and_fifo_queue (test_model_governance.RedisTests.test_two_instances_share_capacity_and_fifo_queue) ... ok
+test_wait_timeout_and_cancellation_remove_tickets (test_model_governance.RedisTests.test_wait_timeout_and_cancellation_remove_tickets) ... ok
+test_invalid_success_bodies_fail_without_retries (test_openrouter_client.OpenRouterClientTests.test_invalid_success_bodies_fail_without_retries) ... 2026-10-10 16:06:09,329 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-10 16:06:09,330 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-10 16:06:09,330 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-10 16:06:09,331 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+ok
+test_native_endpoint_and_valid_text (test_openrouter_client.OpenRouterClientTests.test_native_endpoint_and_valid_text) ... 2026-10-10 16:06:09,349 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+ok
+test_native_sdk_has_bounded_timeout_and_no_retries (test_openrouter_client.OpenRouterClientTests.test_native_sdk_has_bounded_timeout_and_no_retries) ... ok
+test_timeout_cancels_inflight_request (test_openrouter_client.OpenRouterClientTests.test_timeout_cancels_inflight_request) ... ok
+test_confirm_preflight_never_calls_agent (test_orchestrator_decisions.OrchestratorDecisionTest.test_confirm_preflight_never_calls_agent) ... ok
+test_confirmation_restores_original_request (test_orchestrator_decisions.OrchestratorDecisionTest.test_confirmation_restores_original_request) ... ok
+test_reject_preflight_never_calls_agent (test_orchestrator_decisions.OrchestratorDecisionTest.test_reject_preflight_never_calls_agent) ... ok
+test_safe_execute_uses_prepared_decision_once (test_orchestrator_decisions.OrchestratorDecisionTest.test_safe_execute_uses_prepared_decision_once) ... ok
+test_profile_extraction_treats_conversation_as_data (test_user_profile.UserProfileTest.test_profile_extraction_treats_conversation_as_data) ... 2026-10-10 16:06:09,429 [INFO] memory.conversation_memory: 用户画像已更新: user-1
+ok
+test_profile_keeps_only_ad_fields_and_drops_request_parameters (test_user_profile.UserProfileTest.test_profile_keeps_only_ad_fields_and_drops_request_parameters) ... ok
+
+======================================================================
+FAIL: test_create_cancel_history_and_sse_replay (test_hosting_api.HostingAPITests.test_create_cancel_history_and_sse_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 90, in _callTestMethod
+    if self._callMaybeAsync(method) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 112, in _callMaybeAsync
+    return self._asyncioRunner.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 74, in test_create_cancel_history_and_sse_replay
+    session,run=await self.make_run()
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 45, in make_run
+    self.assertEqual(response.status_code,202,response.text)
+AssertionError: 400 != 202 : {"error":"unsupported_input_protocol"}
+
+======================================================================
+FAIL: test_foreign_principal_and_disabled_account (test_hosting_api.HostingAPITests.test_foreign_principal_and_disabled_account)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 90, in _callTestMethod
+    if self._callMaybeAsync(method) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 112, in _callMaybeAsync
+    return self._asyncioRunner.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 84, in test_foreign_principal_and_disabled_account
+    _,run=await self.make_run()
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 45, in make_run
+    self.assertEqual(response.status_code,202,response.text)
+AssertionError: 400 != 202 : {"error":"unsupported_input_protocol"}
+
+======================================================================
+FAIL: test_legacy_ads_quantity_boundary_baseline (test_hosting_api.HostingAPITests.test_legacy_ads_quantity_boundary_baseline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 90, in _callTestMethod
+    if self._callMaybeAsync(method) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 112, in _callMaybeAsync
+    return self._asyncioRunner.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 52, in test_legacy_ads_quantity_boundary_baseline
+    self.assertEqual(accepted.status_code,202,accepted.text)
+AssertionError: 400 != 202 : {"error":"unsupported_input_protocol"}
+
+======================================================================
+FAIL: test_redis_loss_does_not_erase_history (test_hosting_api.HostingAPITests.test_redis_loss_does_not_erase_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 90, in _callTestMethod
+    if self._callMaybeAsync(method) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/unittest/async_case.py", line 112, in _callMaybeAsync
+    return self._asyncioRunner.run(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 93, in test_redis_loss_does_not_erase_history
+    session,run=await self.make_run(); await self.redis.flushdb()
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting_api.py", line 45, in make_run
+    self.assertEqual(response.status_code,202,response.text)
+AssertionError: 400 != 202 : {"error":"unsupported_input_protocol"}
+
+----------------------------------------------------------------------
+Ran 100 tests in 6.303s
+
+FAILED (failures=4, skipped=11)

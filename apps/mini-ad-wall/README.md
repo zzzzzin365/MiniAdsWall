@@ -61,7 +61,11 @@ http://localhost:5173
 ## Important Files
 
 - `server/services/adsAgent.service.ts`: MiniAdsWall Agent integration
-- `server/services/ads.service.ts`: ad CRUD and ranking
-- `server/models/ads.model.ts`: persistence and click buffering
+- `server/services/ads.service.ts`: asynchronous ad CRUD and ranking
+- `server/models/ads.model.ts`: MySQL transactions, operation replay, version checks and atomic clicks
 - `client/src/components/AIAssistantPanel.tsx`: assistant UI
 - `client/src/components/DataDashboard.tsx`: dashboard
+
+## Advertising database
+
+Koa now requires MySQL 8.4 and `ADS_MYSQL_URL`. Import the existing JSON before starting the new server; all replicas use the same database. PUT requests must include the returned ad `version`. See [migration and multi-instance setup](../../docs/ads-mysql.md).

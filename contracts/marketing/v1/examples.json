@@ -1,0 +1,234 @@
+[
+  {
+    "name": "CreateCampaign",
+    "value": {
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "name": "测试活动",
+      "objective": "traffic",
+      "starts_at": "2026-10-10T00:00:00Z",
+      "ends_at": "2026-10-20T00:00:00Z"
+    },
+    "valid": true,
+    "label": "valid_campaign"
+  },
+  {
+    "name": "CreateCampaign",
+    "value": {
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "name": "测试活动",
+      "objective": "traffic",
+      "starts_at": "2026-10-10T00:00:00Z",
+      "ends_at": "2026-10-20T00:00:00Z",
+      "environment": "production"
+    },
+    "valid": false,
+    "label": "reject_forged_environment"
+  },
+  {
+    "name": "CreateCampaign",
+    "value": {
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "name": "测试活动",
+      "objective": "traffic",
+      "starts_at": "2026-10-10T00:00:00+08:00",
+      "ends_at": "2026-10-20T00:00:00Z"
+    },
+    "valid": false,
+    "label": "utc_only"
+  },
+  {
+    "name": "CreateCampaign",
+    "value": {
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "name": "测试活动",
+      "objective": "traffic",
+      "starts_at": "2026-02-30T00:00:00Z",
+      "ends_at": "2026-10-20T00:00:00Z"
+    },
+    "valid": false,
+    "label": "invalid_date"
+  },
+  {
+    "name": "CreateCampaign",
+    "value": {
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "name": "   ",
+      "objective": "traffic",
+      "starts_at": "2026-10-10T00:00:00Z",
+      "ends_at": "2026-10-20T00:00:00Z"
+    },
+    "valid": false,
+    "label": "blank_name"
+  },
+  {
+    "name": "CreateCreative",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "campaign_a",
+      "ad_id": "1",
+      "title": "素材一",
+      "asset_ref": "uploads/example.mp4",
+      "asset_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "landing_url": "https://example.com/product",
+      "authorization_ref": "license_001",
+      "authorization_expires_at": "2026-11-01T00:00:00Z"
+    },
+    "valid": true,
+    "label": "valid_creative"
+  },
+  {
+    "name": "CreateCreative",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "campaign_a",
+      "ad_id": "1",
+      "title": "素材一",
+      "asset_ref": "uploads/example.mp4",
+      "asset_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "landing_url": "javascript:alert(1)",
+      "authorization_ref": "license_001",
+      "authorization_expires_at": "2026-11-01T00:00:00Z"
+    },
+    "valid": false,
+    "label": "http_only"
+  },
+  {
+    "name": "Event",
+    "value": {
+      "event_id": "e_1",
+      "source": "browser",
+      "source_event_id": "e_1",
+      "type": "impression",
+      "occurred_at": "2026-10-10T00:00:00Z",
+      "received_at": "2026-10-10T00:00:01Z",
+      "environment": "synthetic",
+      "schema_version": 1,
+      "impression_id": "imp_1"
+    },
+    "valid": true,
+    "label": "valid_impression"
+  },
+  {
+    "name": "Event",
+    "value": {
+      "event_id": "e_1",
+      "source": "browser",
+      "source_event_id": "e_1",
+      "type": "impression",
+      "occurred_at": "2026-10-10T00:00:00Z",
+      "received_at": "2026-10-10T00:00:01Z",
+      "environment": "synthetic",
+      "schema_version": true,
+      "impression_id": "imp_1"
+    },
+    "valid": false,
+    "label": "bool_is_not_version"
+  },
+  {
+    "name": "Event",
+    "value": {
+      "event_id": "e_1",
+      "source": "browser",
+      "source_event_id": "e_1",
+      "type": "order_paid",
+      "occurred_at": "2026-10-10T00:00:00Z",
+      "received_at": "2026-10-10T00:00:01Z",
+      "environment": "synthetic",
+      "schema_version": 1,
+      "impression_id": "imp_1"
+    },
+    "valid": false,
+    "label": "paid_requires_amount"
+  },
+  {
+    "name": "Event",
+    "value": {
+      "event_id": "e_1",
+      "source": "browser",
+      "source_event_id": "e_1",
+      "type": "order_paid",
+      "occurred_at": "2026-10-10T00:00:00Z",
+      "received_at": "2026-10-10T00:00:01Z",
+      "environment": "synthetic",
+      "schema_version": 1,
+      "impression_id": "imp_1",
+      "order_id": "o1",
+      "product_id": "p1",
+      "amount_minor": 1.2,
+      "currency": "CNY"
+    },
+    "valid": false,
+    "label": "fraction_not_money"
+  },
+  {
+    "name": "CampaignStatus",
+    "value": {
+      "expected_version": 1,
+      "status": "active"
+    },
+    "valid": true,
+    "label": "valid_status"
+  },
+  {
+    "name": "CampaignStatus",
+    "value": {
+      "expected_version": "1",
+      "status": "active"
+    },
+    "valid": false,
+    "label": "no_coercion"
+  },
+  {
+    "name": "CampaignStatus",
+    "value": {
+      "expected_version": true,
+      "status": "active"
+    },
+    "valid": false,
+    "label": "boolean_version"
+  },
+  {
+    "name": "SpendEntry",
+    "value": {
+      "source_entry_id": "s1",
+      "campaign_id": "c1",
+      "creative_id": "cr1",
+      "creative_version": 1,
+      "occurred_at": "2026-10-10T00:00:00Z",
+      "amount_minor": 100,
+      "currency": "CNY"
+    },
+    "valid": true,
+    "label": "valid_spend"
+  },
+  {
+    "name": "CoverageMarker",
+    "value": {
+      "campaign_id": "c1",
+      "start": "2026-10-10T00:00:00Z",
+      "end": "2026-10-11T00:00:00Z",
+      "entry_count": 1,
+      "amount_minor": 100,
+      "checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "valid": true,
+    "label": "valid_coverage"
+  },
+  {
+    "name": "Error",
+    "value": {
+      "error": {
+        "code": "invalid_request",
+        "message": "请求错误",
+        "request_id": "r1"
+      }
+    },
+    "valid": true,
+    "label": "valid_error"
+  }
+]

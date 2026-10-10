@@ -1,0 +1,17 @@
+test_auth_and_logout (test_hosting_api.HostingAPITests.test_auth_and_logout) ... ok
+test_create_cancel_history_and_sse_replay (test_hosting_api.HostingAPITests.test_create_cancel_history_and_sse_replay) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-kud0987l'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+test_foreign_principal_and_disabled_account (test_hosting_api.HostingAPITests.test_foreign_principal_and_disabled_account) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-_w1m920u'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+test_legacy_ads_quantity_boundary_baseline (test_hosting_api.HostingAPITests.test_legacy_ads_quantity_boundary_baseline) ... ok
+test_rate_limit_and_sse_slots (test_hosting_api.HostingAPITests.test_rate_limit_and_sse_slots) ... ok
+test_redis_loss_does_not_erase_history (test_hosting_api.HostingAPITests.test_redis_loss_does_not_erase_history) ... /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-oazmdhlq'>
+  _warnings.warn(warn_message, ResourceWarning)
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.215s
+
+OK

@@ -15,7 +15,8 @@ SCORE_COEFFICIENT = 0.42
 def _ads(context: Optional[Dict[str, Any]]) -> List[Dict[str, Any]]:
     if not context:
         return []
-    value = context.get("ads", [])
+    ad_context = context.get("ad_context")
+    value = ad_context.get("items", []) if ad_context else context.get("ads", [])
     return value if isinstance(value, list) else []
 
 
@@ -57,6 +58,9 @@ def _shape_ad(ad: Dict[str, Any], coefficient: float = SCORE_COEFFICIENT) -> Dic
 
 
 async def ads_summary_handler(params: Dict[str, Any], context: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    bounded = (context or {}).get("ad_context")
+    if bounded is not None:
+        return {"scope": bounded.get("scope"), "summary": bounded.get("summary"), "summary_status": bounded.get("summary_status"), "selected_count": len(bounded.get("items", [])), "selection": bounded.get("selection"), "captured_at": bounded.get("captured_at")}
     coefficient = _num(params.get("score_coefficient"), SCORE_COEFFICIENT)
     ads = _ads(context)
     shaped = [_shape_ad(ad, coefficient) for ad in ads]
@@ -68,6 +72,7 @@ async def ads_summary_handler(params: Dict[str, Any], context: Optional[Dict[str
     no_video = [item for item in shaped if item["videos"] == 0]
 
     return {
+        "scope": "provided_snapshot",
         "ad_count": len(shaped),
         "total_clicks": total_clicks,
         "total_videos": total_videos,
@@ -90,6 +95,8 @@ async def ad_performance_search_handler(params: Dict[str, Any], context: Optiona
     avg_price = sum(item["price"] for item in shaped) / len(shaped)
     avg_clicks = sum(item["clicks"] for item in shaped) / len(shaped)
 
+    maximum_clicks = max(ad["clicks"] for ad in shaped)
+
     def reasons(item: Dict[str, Any]) -> List[str]:
         result: List[str] = []
         title = str(item["title"]).lower()
@@ -102,7 +109,7 @@ async def ad_performance_search_handler(params: Dict[str, Any], context: Optiona
             result.append("高出价低点击")
         if item["price"] <= avg_price and item["clicks"] > avg_clicks:
             result.append("低出价高点击")
-        if item["clicks"] == max(ad["clicks"] for ad in shaped):
+        if item["clicks"] == maximum_clicks:
             result.append("点击最高")
         return result
 
@@ -115,7 +122,10 @@ async def ad_performance_search_handler(params: Dict[str, Any], context: Optiona
     if not ranked:
         ranked = sorted(shaped, key=lambda item: item["score"], reverse=True)
 
-    return ranked[:top_k]
+    selected = ranked[:min(max(top_k,0),100)]
+    if (context or {}).get("ad_context"):
+        selected = [{**item, "scope": "selected_items", "sample_size": len(shaped)} for item in selected]
+    return selected
 
 
 async def bid_simulation_handler(params: Dict[str, Any], context: Optional[Dict[str, Any]]) -> Dict[str, Any]:
@@ -161,6 +171,8 @@ async def bid_simulation_handler(params: Dict[str, Any], context: Optional[Dict[
     priority = {"可小幅加价": 0, "先改素材/文案": 1, "先补素材": 2, "观察": 3}
     candidates.sort(key=lambda item: (priority.get(item["action"], 9), -item["clicks"], item["price"]))
     return {
+        "scope": "selected_items" if (context or {}).get("ad_context") else "legacy_snapshot",
+        "sample_size": len(shaped),
         "strategy": "incremental_bid_test",
         "increase_pct": increase_pct,
         "score_formula": f"price + price * clicks * {coefficient}",

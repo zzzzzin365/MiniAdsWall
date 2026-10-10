@@ -1,0 +1,169 @@
+TAP version 13
+# Subtest: real MySQL: safe legacy import, persistence and rollback
+    # Subtest: legacy ads, click counts, historical results and audit are preserved
+    ok 1 - legacy ads, click counts, historical results and audit are preserved
+      ---
+      duration_ms: 10.079292
+      type: 'test'
+      ...
+    # Subtest: repeating migration leaves live edits intact and retains the source file
+    ok 2 - repeating migration leaves live edits intact and retains the source file
+      ---
+      duration_ms: 86.172209
+      type: 'test'
+      ...
+    # Subtest: exceptions after the ad write leave neither a new ad nor operation nor audit
+    ok 3 - exceptions after the ad write leave neither a new ad nor operation nor audit
+      ---
+      duration_ms: 5.263625
+      type: 'test'
+      ...
+    # Subtest: ranking matches the existing score formula and provides a ranking index
+    ok 4 - ranking matches the existing score formula and provides a ranking index
+      ---
+      duration_ms: 5.33375
+      type: 'test'
+      ...
+    # Subtest: operator identities are exact, including trailing spaces
+    ok 5 - operator identities are exact, including trailing spaces
+      ---
+      duration_ms: 6.83225
+      type: 'test'
+      ...
+    # Subtest: malformed legacy data fails before writes
+    ok 6 - malformed legacy data fails before writes
+      ---
+      duration_ms: 1.881875
+      type: 'test'
+      ...
+    1..6
+ok 1 - real MySQL: safe legacy import, persistence and rollback
+  ---
+  duration_ms: 10073.859625
+  type: 'test'
+  ...
+# Subtest: real MySQL: import refuses to merge existing business records
+ok 2 - real MySQL: import refuses to merge existing business records
+  ---
+  duration_ms: 5234.221666
+  type: 'test'
+  ...
+# Subtest: real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+    # Subtest: authentication and validation still apply
+    ok 1 - authentication and validation still apply
+      ---
+      duration_ms: 196.12075
+      type: 'test'
+      ...
+    # Subtest: same operation across processes commits exactly one ad and audit
+    ok 2 - same operation across processes commits exactly one ad and audit
+      ---
+      duration_ms: 165.849208
+      type: 'test'
+      ...
+    # Subtest: concurrent edits reject the stale version and preserve the winning result
+    ok 3 - concurrent edits reject the stale version and preserve the winning result
+      ---
+      duration_ms: 39.610625
+      type: 'test'
+      ...
+    # Subtest: audit failure rolls back the ad and operation, allowing a safe retry
+    ok 4 - audit failure rolls back the ad and operation, allowing a safe retry
+      ---
+      duration_ms: 65.383917
+      type: 'test'
+      ...
+    # Subtest: concurrent clicks persist across a hard process restart without overwriting edits
+    ok 5 - concurrent clicks persist across a hard process restart without overwriting edits
+      ---
+      duration_ms: 1031.267375
+      type: 'test'
+      ...
+    # Subtest: AI calls use the shared database snapshot and remain separate from business writes
+    ok 6 - AI calls use the shared database snapshot and remain separate from business writes
+      ---
+      duration_ms: 174.2035
+      type: 'test'
+      ...
+    1..6
+ok 3 - real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+  ---
+  duration_ms: 13411.6305
+  type: 'test'
+  ...
+# Subtest: lost write response is recovered by querying the recorded result
+ok 4 - lost write response is recovered by querying the recorded result
+  ---
+  duration_ms: 1313.974291
+  type: 'test'
+  ...
+# Subtest: unknown result survives reload; retry queries then reuses the original operation ID
+ok 5 - unknown result survives reload; retry queries then reuses the original operation ID
+  ---
+  duration_ms: 698.807791
+  type: 'test'
+  ...
+# Subtest: unavailable status service prevents blind resubmission
+ok 6 - unavailable status service prevents blind resubmission
+  ---
+  duration_ms: 652.039875
+  type: 'test'
+  ...
+# Server Error: UnauthorizedError: 请提供有效的运营凭据
+#     at Object.throw (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa/lib/context.js:97:11)
+#     at businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:39:18)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:22)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:11)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at errorHandler (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/errorHandler.js:5:15)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:34:12 {
+#   headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+# }
+# [2026-10-10 08:14:03] ← 4e93269b-b304-4f3f-beb2-64f8e061a62e | GET /api/agent/identity | IP: 127.0.0.1
+# [2026-10-10 08:14:03] → 4e93269b-b304-4f3f-beb2-64f8e061a62e | GET /api/agent/identity | ✓ 200 | 32ms
+# [2026-10-10 08:14:03] ← 352d3c08-c3e7-45c0-ad6f-0842dd370ef2 | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+# [2026-10-10 08:14:04] → 352d3c08-c3e7-45c0-ad6f-0842dd370ef2 | POST /api/agent/sessions/1/runs | ✓ 200 | 85ms
+# [2026-10-10 08:14:04] ← 8dbc2197-9bf3-47c4-8ed9-15443eb73032 | GET /api/agent/runs/1/events | IP: 127.0.0.1
+# [2026-10-10 08:14:04] → 8dbc2197-9bf3-47c4-8ed9-15443eb73032 | GET /api/agent/runs/1/events | ✓ 200 | 8ms
+# Subtest: hosted gateway authenticates identity, trusts server snapshot and forwards real SSE
+ok 7 - hosted gateway authenticates identity, trusts server snapshot and forwards real SSE
+  ---
+  duration_ms: 11354.905917
+  type: 'test'
+  ...
+# Subtest: migration SQL boundaries ignore comments and preserve quoted semicolons
+ok 8 - migration SQL boundaries ignore comments and preserve quoted semicolons
+  ---
+  duration_ms: 25.93325
+  type: 'test'
+  ...
+# Subtest: CP02 defaults are disabled; unsupported releases fail explicitly
+ok 9 - CP02 defaults are disabled; unsupported releases fail explicitly
+  ---
+  duration_ms: 1.016333
+  type: 'test'
+  ...
+# Subtest: CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift
+ok 10 - CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift
+  ---
+  duration_ms: 10404.64075
+  type: 'test'
+  ...
+# Subtest: CP02 adopts legacy business schema and status does not initialize an empty database
+ok 11 - CP02 adopts legacy business schema and status does not initialize an empty database
+  ---
+  duration_ms: 5206.901958
+  type: 'test'
+  ...
+1..11
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17484.8715

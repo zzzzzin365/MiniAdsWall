@@ -328,7 +328,8 @@ class ChatRequest(BaseModel):
     message:     str
     user_id:     str = "anonymous"
     conv_id:     Optional[str] = None
-    ads:         Optional[List[Dict[str, Any]]] = None
+    ads:         Optional[List[Dict[str, Any]]] = Field(default=None,max_length=100)
+    ad_context: Optional[Dict[str, Any]] = None
     confirmation_id: Optional[str] = None
 
 
@@ -454,7 +455,8 @@ async def _chat_impl(req: ChatRequest):
         # 4. 只有 execute 状态才能构建业务上下文并进入 Agent。
         ads_text, ads_tools_used = await _build_ads_context(
             orch_req.message,
-            req.ads or [],
+            (req.ad_context.get('items') or []) if req.ad_context else req.ads or [],
+            req.ad_context,
         )
         knowledge_text, knowledge_used = await _build_knowledge_context(
             orch_req.message,
@@ -520,7 +522,7 @@ async def _chat_impl(req: ChatRequest):
     )
 
 
-async def _build_ads_context(message: str, ads: List[Dict[str, Any]]) -> tuple[str, List[str]]:
+async def _build_ads_context(message: str, ads: List[Dict[str, Any]], ad_context: Optional[Dict[str, Any]] = None) -> tuple[str, List[str]]:
     """
     为 AdsAgent 构建结构化广告工具上下文。
 
@@ -530,7 +532,7 @@ async def _build_ads_context(message: str, ads: List[Dict[str, Any]]) -> tuple[s
     if _tool_manager is None or not ads:
         return "", []
 
-    context = {"ads": ads}
+    context = {"ads": ads, "ad_context": ad_context}
     tools_used: List[str] = []
     parts = ["[广告工具分析]"]
 

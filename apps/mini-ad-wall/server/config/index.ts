@@ -1,11 +1,17 @@
 import path from 'path';
+import fs from 'fs';
+const serverRoot = path.resolve(__dirname, fs.existsSync(path.join(__dirname, '../package.json')) ? '..' : '../..');
 import { Config } from '../types';
+import { loadReliability } from './reliability';
+import { loadMarketing } from './marketing';
 
 const config: Config = {
+    RELIABILITY: loadReliability(),
+    MARKETING: loadMarketing(),
     PORT: process.env.PORT || 3001,
     HOST: process.env.HOST || '0.0.0.0',
-    DATA_FILE: process.env.ADS_DATA_FILE || path.join(__dirname, '..', 'data.json'),
-    UPLOAD_DIR: path.join(__dirname, '..', 'uploads'),
+    DATA_FILE: process.env.ADS_DATA_FILE || path.join(serverRoot, 'data.json'),
+    UPLOAD_DIR: process.env.ADS_UPLOAD_DIR || path.join(serverRoot, 'uploads'),
     AD_SCORE_FACTOR: 0.42,
     
     ADS_AGENT_API_URL: process.env.ADS_AGENT_API_URL || 'http://localhost:8000',
@@ -19,6 +25,7 @@ const config: Config = {
             url: 'https://www.oceanengine.com/',
             price: 5.0,
             clicks: 1,
+            version: 1,
             videos: []
         },
         {
@@ -29,6 +36,7 @@ const config: Config = {
             url: 'https://www.oceanengine.com/',
             price: 5.0,
             clicks: 1,
+            version: 1,
             videos: []
         },
         {
@@ -39,6 +47,7 @@ const config: Config = {
             url: 'https://www.oceanengine.com/',
             price: 5.0,
             clicks: 1,
+            version: 1,
             videos: []
         }
     ]

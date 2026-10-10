@@ -1,0 +1,26 @@
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.HostingMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... ok
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.HostingMigrationTests.test_future_schema_and_downgrade_are_rejected) ... ok
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.HostingMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... ok
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.HostingMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... ok
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.HostingMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... ok
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.HostingMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... ok
+test_checksum_mismatch_blocks_before_new_ddl (test_hosting_migrations.MySQLMigrationTests.test_checksum_mismatch_blocks_before_new_ddl) ... ok
+test_future_schema_and_downgrade_are_rejected (test_hosting_migrations.MySQLMigrationTests.test_future_schema_and_downgrade_are_rejected) ... ok
+test_legacy_database_adoption_preserves_input_and_fingerprint (test_hosting_migrations.MySQLMigrationTests.test_legacy_database_adoption_preserves_input_and_fingerprint) ... ok
+test_partial_ddl_failure_is_resumable_and_attempts_are_retained (test_hosting_migrations.MySQLMigrationTests.test_partial_ddl_failure_is_resumable_and_attempts_are_retained) ... ok
+test_status_is_read_only_and_upgrade_is_repeatable (test_hosting_migrations.MySQLMigrationTests.test_status_is_read_only_and_upgrade_is_repeatable) ... ok
+test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches (test_hosting_migrations.MySQLMigrationTests.test_unknown_input_is_not_created_or_claimed_and_legacy_retry_matches) ... ok
+test_defaults_and_no_premature_enablement (test_hosting_migrations.ReleaseGuardTests.test_defaults_and_no_premature_enablement) ... ok
+test_wire_protocols_reject_unknown_versions (test_hosting_migrations.ReleaseGuardTests.test_wire_protocols_reject_unknown_versions) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.748s
+
+OK
+{"name": "single_run_claimed_once", "passed": true, "processes": 8, "claims": 1, "pids": [43197, 43194, 43199, 43195, 43196, 43200, 43198, 43193]}
+{"name": "per_user_limit", "passed": true, "processes": 8, "running": 2, "queued": 6}
+{"name": "global_limit", "passed": true, "processes": 20, "users": 10, "running": 16, "queued": 4}
+{"name": "concurrent_idempotent_creation", "passed": true, "processes": 8, "runs": 1, "messages": 1}
+{"name": "cancellation_holds_slot_until_finish", "passed": true, "final_status": "cancelled"}
+{"name": "worker_sigkill_recovery_and_resume", "passed": true, "killed_pid": 43265, "signal": 9, "recovery_seconds": 20.424, "stale_write_rejected": true, "checkpoint_restored": true, "resumed_status": "succeeded"}
+PASS: docs/evidence/backend-reliability/cp02-mysql-final.json

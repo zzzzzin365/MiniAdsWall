@@ -1,4 +1,7 @@
 export interface Ad {
+    attributes?: Record<string, string[]>;
+    eligibility?: {enabled?: boolean; starts_at?: string | null; ends_at?: string | null};
+    recall_receipt?: import('../recall/contracts').Receipt;
     id: string;
     title: string;
     publisher: string;
@@ -6,15 +9,19 @@ export interface Ad {
     url: string;
     price: number;
     clicks: number;
+    version: number;
     videos: string[];
 }
 
 export interface AdInput {
+    attributes?: Record<string, string[]>;
+    eligibility?: {enabled?: boolean; starts_at?: string | null; ends_at?: string | null};
     title: string;
     publisher: string;
     content: string;
     url: string;
     price: number | string;
+    version?: number;
     videos?: string[];
 }
 
@@ -64,6 +71,8 @@ export interface UploadResult {
 }
 
 export interface Config {
+    MARKETING: ReturnType<typeof import('../config/marketing').loadMarketing>;
+    RELIABILITY: ReturnType<typeof import('../config/reliability').loadReliability>;
     PORT: number | string;
     HOST: string;
     DATA_FILE: string;
@@ -104,6 +113,8 @@ export interface AIErrorResponse {
 }
 
 export interface AssistantChatInput {
+    ad_context?: any;
+    conditions?: any[];
     message: string;
     userId?: string;
     convId?: string;

@@ -1,0 +1,113 @@
+
+> mini-ad-wall-server@1.0.0 test
+> npm run build && node --test tests/*.test.cjs
+
+
+> mini-ad-wall-server@1.0.0 build
+> tsc
+
+▶ real MySQL: safe legacy import, persistence and rollback
+  ✔ legacy ads, click counts, historical results and audit are preserved (6.832333ms)
+  ✔ repeating migration leaves live edits intact and retains the source file (41.546791ms)
+  ✔ exceptions after the ad write leave neither a new ad nor operation nor audit (5.084625ms)
+  ✔ ranking matches the existing score formula and provides a ranking index (9.447458ms)
+  ✔ operator identities are exact, including trailing spaces (7.7065ms)
+  ✔ malformed legacy data fails before writes (1.684542ms)
+✔ real MySQL: safe legacy import, persistence and rollback (3893.258916ms)
+✔ real MySQL: import refuses to merge existing business records (3770.025292ms)
+▶ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+  ✔ authentication and validation still apply (69.968041ms)
+  ✔ same operation across processes commits exactly one ad and audit (55.17875ms)
+  ✔ concurrent edits reject the stale version and preserve the winning result (13.378666ms)
+  ✔ audit failure rolls back the ad and operation, allowing a safe retry (21.479ms)
+  ✔ concurrent clicks persist across a hard process restart without overwriting edits (282.94ms)
+  ✖ AI calls use the shared database snapshot and remain separate from business writes (54.982625ms)
+✖ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots (4847.78075ms)
+✔ lost write response is recovered by querying the recorded result (139.983833ms)
+✔ unknown result survives reload; retry queries then reuses the original operation ID (107.08925ms)
+✔ unavailable status service prevents blind resubmission (63.517333ms)
+Server Error: UnauthorizedError: 请提供有效的运营凭据
+    at Object.throw (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa/lib/context.js:97:11)
+    at businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:39:18)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:22)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:11)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at errorHandler (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/errorHandler.js:5:15)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:34:12 {
+  headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+}
+[2026-10-10 08:03:34] ← c8318c68-57ee-4d07-b70d-8971dde44e64 | GET /api/agent/identity | IP: 127.0.0.1
+[2026-10-10 08:03:34] → c8318c68-57ee-4d07-b70d-8971dde44e64 | GET /api/agent/identity | ✓ 200 | 10ms
+[2026-10-10 08:03:34] ← 35ffb56a-0f3d-45e6-b6d5-70fbd1e757b2 | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+Server Error: Error: cursor_secret_required
+    at failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+    at listPage (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:112:39)
+    at adContext (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:151:28)
+    at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/agent.routes.js:52:54
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/agent.routes.js:34:5
+    at async serve (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-static/index.js:53:9)
+    at async requestLogger (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/requestLogger.js:20:5) {
+  status: 503,
+  code: 'cursor_secret_required',
+  headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+}
+
+  Error: cursor_secret_required
+      at failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+      at listPage (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:112:39)
+      at adContext (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:151:28)
+      at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/agent.routes.js:52:54
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/agent.routes.js:34:5
+      at async serve (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-static/index.js:53:9)
+      at async requestLogger (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/requestLogger.js:20:5)
+
+✖ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (3952.893667ms)
+✔ migration SQL boundaries ignore comments and preserve quoted semicolons (2.938666ms)
+✔ CP02 defaults are disabled; unsupported releases fail explicitly (1.133834ms)
+✔ CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift (3889.103958ms)
+✔ CP02 adopts legacy business schema and status does not initialize an empty database (3767.679ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 20
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7788.74275
+
+✖ failing tests:
+
+test at tests/business-boundary.test.cjs:97:17
+✖ AI calls use the shared database snapshot and remain separate from business writes (54.982625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'operator'
+  
+      at TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/business-boundary.test.cjs:101:20)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/business-boundary.test.cjs:97:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'operator',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/hosting.test.cjs:11:1
+✖ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (3952.893667ms)
+  TypeError: Cannot read properties of undefined (reading 'headers')
+      at TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/hosting.test.cjs:45:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

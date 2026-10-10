@@ -1,0 +1,5 @@
+
+> mini-ad-wall-server@1.0.0 migrate:schema
+> ts-node --files scripts/migrate-schema.ts --help
+
+npm run migrate:schema -- [up|status] [--target N] [--lock-timeout 0..60]

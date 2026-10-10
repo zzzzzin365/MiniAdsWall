@@ -1,0 +1,9 @@
+
+> mini-ad-wall-server@1.0.0 test
+> npm run build && node --test tests/*.test.cjs
+
+
+> mini-ad-wall-server@1.0.0 build
+> tsc
+
+recall/partition.ts(47,16): error TS2554: Expected 1 arguments, but got 0.

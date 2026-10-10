@@ -44,10 +44,32 @@ class HostingAPITests(unittest.IsolatedAsyncioTestCase):
         response=await self.http.post(f"/sessions/{session['id']}/runs",headers={**self.headers,'Idempotency-Key':'test-operation-12345'},json={'message':'hello'})
         self.assertEqual(response.status_code,202,response.text)
         return session,response.json()
+    async def test_legacy_ads_quantity_boundary_baseline(self):
+        session=(await self.http.post('/sessions',headers=self.headers,json={'workspace_id':self.identity['workspace_id']})).json()
+        url=f"/sessions/{session['id']}/runs"
+        ads=[{'id':str(i)} for i in range(1001)]
+        accepted=await self.http.post(url,headers={**self.headers,'Idempotency-Key':'baseline-1000-ads-1234'},json={'message':'baseline','ads':ads[:1000]})
+        self.assertEqual(accepted.status_code,202,accepted.text)
+        persisted=json.loads(self.repo.objects.get(self.repo.get_run(self.identity['user_id'],accepted.json()['id'])['input_ref']))
+        self.assertEqual(len(persisted['ads']),1000)
+        rejected=await self.http.post(url,headers={**self.headers,'Idempotency-Key':'baseline-1001-ads-1234'},json={'message':'baseline','ads':ads})
+        self.assertEqual(rejected.status_code,422,rejected.text)
+        self.assertTrue(any(item['loc'][-1]=='ads' and item['type']=='too_long' for item in rejected.json()['detail']))
+        from hosting import schema as s
+        from sqlalchemy import select,func
+        with self.repo.engine.connect() as c:
+            self.assertEqual(c.execute(select(func.count()).select_from(s.runs)).scalar_one(),1)
+
     async def test_auth_and_logout(self):
         self.assertEqual((await self.http.get('/sessions')).status_code,401)
         await self.http.delete('/auth/session',headers=self.headers)
         self.assertEqual((await self.http.get('/sessions',headers=self.headers)).status_code,401)
+    async def test_protocol_guard_and_upgraded_health(self):
+        self.assertEqual((await self.http.get('/health')).status_code,200)
+        session=(await self.http.post('/sessions',headers=self.headers,json={'workspace_id':self.identity['workspace_id']})).json()
+        for payload in [{'message':'test','input_protocol_version':2},{'message':'test','ad_context':{'version':1}}]:
+            response=await self.http.post(f"/sessions/{session['id']}/runs",headers={**self.headers,'Idempotency-Key':'unknown-protocol-12345'},json=payload)
+            self.assertEqual(response.status_code,422,response.text)
     async def test_create_cancel_history_and_sse_replay(self):
         session,run=await self.make_run()
         self.assertIsInstance(run['id'],str)

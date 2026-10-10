@@ -1,222 +1,160 @@
-import fs from 'fs';
-import path from 'path';
+import { AsyncLocalStorage } from 'async_hooks';
 import { randomUUID } from 'crypto';
-import config from '../config';
+import { PoolConnection, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
+import * as recall from '../services/recall/repository';
+import { enabled } from '../recall/contracts';
+import { Receipt } from '../recall/contracts';
 import { Ad, AdInput } from '../types';
+import { storedPrice } from '../services/ad-value';
+import { withAdsConnection, closeAdsDatabase } from '../services/ads.database';
 
-let ads: Ad[] = [];
-interface Operation { fingerprint: string; status: number; body: any; before: Ad[]; after: Ad[]; createdAt: string }
-let operations: Record<string, Operation> = Object.create(null);
-let inOperation = false;
-
-// ============ 点击计数性能优化 ============
-// 使用内存缓冲区累积点击，定时批量写入文件，避免每次点击都触发 I/O
-const clickBuffer: Map<string, number> = new Map();
-let flushTimer: NodeJS.Timeout | null = null;
-const FLUSH_INTERVAL = 5000; // 5秒批量写入一次
-// ==========================================
-
-function loadData(): void {
-    try {
-        if (fs.existsSync(config.DATA_FILE)) {
-            const data = fs.readFileSync(config.DATA_FILE, 'utf8');
-            const stored = JSON.parse(data);
-            ads = Array.isArray(stored) ? stored : stored.ads;
-            operations = Object.assign(Object.create(null), Array.isArray(stored) ? {} : stored.operations);
-            if (!Array.isArray(ads)) throw new Error('Invalid ads storage');
-        } else {
-            ads = [...config.DEFAULT_ADS];
-            saveData();
-        }
-    } catch (err) {
-        console.error("Error loading data:", err);
-        throw err;
-    }
+interface Operation { fingerprint: string; status: number; body: any; createdAt: string; recall_receipt?: Receipt }
+interface Change { before: Ad | null; after: Ad | null }
+interface Transaction { connection: PoolConnection; changes: Change[]; receipt?: Receipt }
+const transactions = new AsyncLocalStorage<Transaction>();
+const conflict = (message: string) => Object.assign(new Error(message), { status: 409 });
+const json = (value: any) => typeof value === 'string' ? JSON.parse(value) : value;
+function ad(row: RowDataPacket): Ad {
+    return { id: row.id, title: row.title, publisher: row.publisher, content: row.content,
+        url: row.url, price: Number(row.price), clicks: Number(row.clicks), videos: json(row.videos), version: row.version };
+}
+function operation(row: RowDataPacket): Operation {
+    return { fingerprint: row.fingerprint, status: row.status, body: json(row.body), createdAt: row.created_at.toISOString(), ...(row.recall_receipt ? {recall_receipt: json(row.recall_receipt)} : {}) };
+}
+function transaction(): Transaction {
+    const current = transactions.getStore();
+    if (!current) throw new Error('广告变更必须在幂等业务事务中执行');
+    return current;
 }
 
-function saveData(): void {
-    if (inOperation) return;
-    fs.mkdirSync(path.dirname(config.DATA_FILE), { recursive: true });
-    const temporary = `${config.DATA_FILE}.${process.pid}.tmp`;
-    const fd = fs.openSync(temporary, 'w', 0o600);
-    try {
-        fs.writeFileSync(fd, JSON.stringify({ ads, operations }, null, 2));
-        fs.fsyncSync(fd);
-    } finally {
-        fs.closeSync(fd);
-    }
-    fs.renameSync(temporary, config.DATA_FILE);
+// Marketing resource mutations share the existing idempotency/audit transaction.
+export function currentAdsConnection(): PoolConnection { return transaction().connection; }
+export function recordOperationChange(before: any, after: any): void { transaction().changes.push({ before, after }); }
+
+async function executeOperation(owner: string, key: string, fingerprint: string, action: string,
+    apply: () => Promise<{ status: number; body: any }>): Promise<Operation> {
+    return withAdsConnection(async connection => {
+        await connection.query('SET TRANSACTION ISOLATION LEVEL READ COMMITTED');
+        await connection.beginTransaction();
+        try {
+            try {
+                // The unique key serializes only duplicates of this operation, across all replicas.
+                await connection.execute('INSERT INTO ads_business_operations (owner, operation_key, fingerprint) VALUES (?, ?, ?)', [owner, key, fingerprint]);
+            } catch (error: any) {
+                if (error.code !== 'ER_DUP_ENTRY') throw error;
+                const [rows] = await connection.execute<RowDataPacket[]>('SELECT * FROM ads_business_operations WHERE owner = ? AND operation_key = ?', [owner, key]);
+                const previous = rows[0];
+                if (!previous || previous.fingerprint !== fingerprint) throw conflict('操作标识已用于不同请求');
+                if (previous.status === null) throw conflict('操作尚未完成');
+                await connection.rollback();
+                return operation(previous);
+            }
+            const current: Transaction = { connection, changes: [] };
+            const result = await transactions.run(current, apply);
+            await connection.execute('UPDATE ads_business_operations SET status = ?, body = ? WHERE owner = ? AND operation_key = ?',
+                [result.status, JSON.stringify(result.body), owner, key]);
+            if (current.receipt) await connection.execute('UPDATE ads_business_operations SET recall_receipt=? WHERE owner=? AND operation_key=?', [current.receipt ? JSON.stringify(current.receipt) : null, owner, key]);
+            if (!current.changes.length) current.changes.push({ before: null, after: null });
+            for (const change of current.changes) {
+                await connection.execute('INSERT INTO ads_business_audit (owner, operation_key, action, before_data, after_data) VALUES (?, ?, ?, ?, ?)',
+                    [owner, key, action, JSON.stringify(change.before), JSON.stringify(change.after)]);
+            }
+            const [rows] = await connection.execute<RowDataPacket[]>('SELECT * FROM ads_business_operations WHERE owner = ? AND operation_key = ?', [owner, key]);
+            await connection.commit();
+            return operation(rows[0]);
+        } catch (error) { await connection.rollback(); throw error; }
+    });
 }
 
-// Synchronous transaction: ad changes and their result share one atomic file replacement.
-// Single Koa process only; move to database transactions before running multiple replicas.
-function executeOperation(key: string, fingerprint: string, apply: () => { status: number; body: any }): Operation {
-    const existing = operations[key];
-    if (existing) {
-        if (existing.fingerprint !== fingerprint) throw Object.assign(new Error('操作标识已用于不同请求'), { status: 409 });
-        return existing;
-    }
-    const before = JSON.parse(JSON.stringify(ads));
-    try {
-        inOperation = true;
-        const result = apply();
-        const record = { ...result, fingerprint, before, after: JSON.parse(JSON.stringify(ads)), createdAt: new Date().toISOString() };
-        operations[key] = record;
-        inOperation = false;
-        saveData();
-        return record;
-    } catch (error) {
-        ads = before;
-        delete operations[key];
-        throw error;
-    } finally {
-        inOperation = false;
-    }
+async function getOperation(owner: string, key: string): Promise<Operation | undefined> {
+    return withAdsConnection(async connection => {
+        const [rows] = await connection.execute<RowDataPacket[]>('SELECT * FROM ads_business_operations WHERE owner = ? AND operation_key = ? AND status IS NOT NULL', [owner, key]);
+        return rows[0] ? operation(rows[0]) : undefined;
+    });
 }
 
-function getOperation(key: string): Operation | undefined { return operations[key]; }
-
-function getAllAds(): Ad[] {
-    return [...ads];
+async function getAllAds(): Promise<Ad[]> {
+    return withAdsConnection(async connection => {
+        const [rows] = await connection.query<RowDataPacket[]>('SELECT id, title, publisher, content, url, price, clicks, videos, version FROM ads_business_ads ORDER BY ranking_score DESC, id ASC');
+        return rows.map(ad);
+    });
 }
 
-function findById(id: string): Ad | null {
-    return ads.find(a => a.id === id) || null;
+async function create(data: AdInput): Promise<Ad> {
+    const current = transaction();
+    const value: Ad = { id: randomUUID(), title: data.title, publisher: data.publisher, content: data.content,
+        url: data.url, price: Number(data.price), clicks: 0, videos: data.videos || [], version: 1 };
+    const doc = await recall.lock(current.connection, value.id, true);
+    await current.connection.execute('INSERT INTO ads_business_ads (id, title, publisher, content, url, price, videos) VALUES (?, ?, ?, ?, ?, ?, ?)',
+        [value.id, value.title, value.publisher, value.content, value.url, storedPrice(data.price), JSON.stringify(value.videos)]);
+    current.receipt = await recall.emit(current.connection, doc, data);
+    const result = await recall.decorate(current.connection,value,doc);
+    if(current.receipt) result.recall_receipt=current.receipt;
+    current.changes.push({ before: null, after: result });
+    return result;
 }
 
-function findIndexById(id: string): number {
-    return ads.findIndex(a => a.id === id);
+async function lockedAd(connection: PoolConnection, id: string): Promise<Ad | null> {
+    const [rows] = await connection.execute<RowDataPacket[]>('SELECT * FROM ads_business_ads WHERE id = ? FOR UPDATE', [id]);
+    return rows[0] ? ad(rows[0]) : null;
 }
 
-function create(adData: AdInput): Ad {
-    const newAd: Ad = {
-        id: randomUUID(),
-        title: adData.title,
-        publisher: adData.publisher,
-        content: adData.content,
-        url: adData.url,
-        price: parseFloat(String(adData.price)),
-        clicks: 0,
-        videos: adData.videos || []
-    };
-    ads.push(newAd);
-    saveData();
-    return newAd;
+async function update(id: string, data: AdInput): Promise<Ad | null> {
+    const current = transaction();
+    const doc = await recall.lock(current.connection,id);
+    const before = await recall.decorate(current.connection, await lockedAd(current.connection, id), doc);
+    if (!before) return null;
+    if (before.version !== data.version) throw conflict('广告已被其他运营修改，请刷新列表后重新编辑');
+    const after: Ad = { ...before, title: data.title, publisher: data.publisher, content: data.content,
+        url: data.url, price: Number(data.price), videos: data.videos ?? before.videos, version: before.version + 1 };
+    const [updated] = await current.connection.execute<ResultSetHeader>('UPDATE ads_business_ads SET title = ?, publisher = ?, content = ?, url = ?, price = ?, videos = ?, version = version + 1 WHERE id = ? AND version = ?',
+        [after.title, after.publisher, after.content, after.url, storedPrice(data.price), JSON.stringify(after.videos), id, before.version]);
+    if (updated.affectedRows !== 1) throw conflict('广告版本冲突');
+    current.receipt = await recall.emit(current.connection,doc,data);
+    const result = await recall.decorate(current.connection,after,doc);
+    if(current.receipt) result.recall_receipt=current.receipt;
+    current.changes.push({ before, after: result });
+    return result;
 }
 
-function update(id: string, updateData: AdInput): Ad | null {
-    const index = findIndexById(id);
-    if (index === -1) {
-        return null;
-    }
-    const updatedAd: Ad = {
-        ...ads[index],
-        title: updateData.title,
-        publisher: updateData.publisher,
-        content: updateData.content,
-        url: updateData.url,
-        price: parseFloat(String(updateData.price)),
-        videos: updateData.videos !== undefined ? updateData.videos : ads[index].videos
-    };
-    ads[index] = updatedAd;
-    saveData();
-    return updatedAd;
-}
-
-function remove(id: string): boolean {
-    const initialLength = ads.length;
-    ads = ads.filter(a => a.id !== id);
-    if (ads.length === initialLength) {
-        return false;
-    }
-    saveData();
+async function remove(id: string): Promise<boolean> {
+    const current = transaction();
+    const doc = await recall.lock(current.connection,id);
+    const before = await recall.decorate(current.connection, await lockedAd(current.connection, id), doc);
+    if (!before) return false;
+    await current.connection.execute('DELETE FROM ads_business_ads WHERE id = ?', [id]);
+    current.receipt = await recall.emit(current.connection,doc,{},true);
+    current.changes.push({ before, after: null });
     return true;
 }
 
-/**
- * 批量写入缓冲区中的点击数据到文件
- * 性能优化：将多次点击合并为一次文件写入
- */
-function flushClicks(): void {
-    if (clickBuffer.size === 0) {
-        flushTimer = null;
-        return;
-    }
-
-    console.log(`[ClickBuffer] Flushing ${clickBuffer.size} ad(s) click data to disk`);
-    
-    // 将缓冲区的点击数同步到 ads 数组（实际上已经在 incrementClicks 中同步了）
-    // 这里主要是写入文件
-    saveData();
-    clickBuffer.clear();
-    flushTimer = null;
+async function incrementClicks(id: string): Promise<number | null> {
+    return withAdsConnection(async connection => {
+        await connection.beginTransaction();
+        try {
+            const doc = await recall.lock(connection,id);
+            const [result] = await connection.execute<ResultSetHeader>('UPDATE ads_business_ads SET clicks = clicks + 1 WHERE id = ?', [id]);
+            if (!result.affectedRows) { await connection.rollback(); return null; }
+            const [rows] = await connection.execute<RowDataPacket[]>('SELECT clicks FROM ads_business_ads WHERE id = ?', [id]);
+            await recall.emit(connection,doc);
+            await connection.commit();
+            return Number(rows[0].clicks);
+        } catch (error) { await connection.rollback(); throw error; }
+    });
 }
 
-/**
- * 增加广告点击数（性能优化版）
- * - 点击数立即在内存中更新，保证读取时数据正确
- * - 文件写入延迟批量执行，减少 I/O 操作
- */
-function incrementClicks(id: string): number | null {
-    const ad = findById(id);
-    if (!ad) {
-        return null;
-    }
-    
-    // 立即更新内存中的点击数
-    ad.clicks = (ad.clicks || 0) + 1;
-    
-    // 记录到缓冲区（用于追踪哪些广告有变更）
-    const buffered = clickBuffer.get(id) || 0;
-    clickBuffer.set(id, buffered + 1);
-    
-    // 启动延迟写入定时器（如果还没启动）
-    if (!flushTimer) {
-        flushTimer = setTimeout(flushClicks, FLUSH_INTERVAL);
-        console.log(`[ClickBuffer] Timer started, will flush in ${FLUSH_INTERVAL}ms`);
-    }
-    
-    return ad.clicks;
+async function initialize(): Promise<void> {
+    await withAdsConnection(async connection => {
+        await connection.query('SELECT id, version FROM ads_business_ads LIMIT 0');
+        await connection.query('SELECT owner FROM ads_business_operations LIMIT 0');
+        await connection.query('SELECT id FROM ads_business_audit LIMIT 0');
+        if(enabled()) {
+            await connection.query('SELECT doc_id FROM ads_business_recall_docs LIMIT 0');
+            const [missing] = await connection.query<RowDataPacket[]>('SELECT a.id FROM ads_business_ads a LEFT JOIN ads_business_recall_docs d ON d.ad_id=a.id WHERE d.doc_id IS NULL LIMIT 1');
+            if(missing.length) throw Object.assign(new Error('recall_migration_required'),{status:503});
+        }
+    });
 }
 
-/**
- * 强制立即写入所有缓冲的点击数据
- * 用于服务关闭前确保数据不丢失
- */
-function forceFlush(): void {
-    if (flushTimer) {
-        clearTimeout(flushTimer);
-        flushTimer = null;
-    }
-    if (clickBuffer.size > 0) {
-        console.log('[ClickBuffer] Force flushing before shutdown...');
-        saveData();
-        clickBuffer.clear();
-    }
-}
-
-// 确保进程退出时数据不丢失
-process.on('SIGINT', () => {
-    forceFlush();
-    process.exit(0);
-});
-process.on('SIGTERM', () => {
-    forceFlush();
-    process.exit(0);
-});
-
-loadData();
-
-export default {
-    executeOperation,
-    getOperation,
-    getAllAds,
-    findById,
-    findIndexById,
-    create,
-    update,
-    remove,
-    incrementClicks,
-    forceFlush,      // 导出强制写入方法，用于优雅关闭
-    flushClicks      // 导出手动触发写入方法
-};
+export default { executeOperation, getOperation, getAllAds, create, update, remove, incrementClicks,
+    initialize, close: closeAdsDatabase };

@@ -26,3 +26,5 @@ python-dotenv==1.0.1
 SQLAlchemy==2.0.43
 PyMySQL[rsa]==1.1.2
 boto3==1.40.25
+jsonschema==4.25.1          # shared marketing draft-07 runtime contracts
+rfc3339-validator==0.1.4   # date-time format parity with ajv-formats

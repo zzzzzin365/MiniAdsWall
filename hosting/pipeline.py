@@ -115,7 +115,8 @@ class Pipeline:
             checkpoint=json.loads(await asyncio.to_thread(self.repo.objects.get,r['checkpoint_ref']))
         completed=checkpoint.get('tools',{})
         context=[]
-        ads=payload.get('ads') or []
+        ad_context=payload.get('ad_context')
+        ads=(ad_context.get('items') or []) if ad_context else payload.get('ads') or []
         candidates=[('ads_summary',ads_summary_handler,{'score_coefficient':.42}),
                     ('ad_performance_search',ad_performance_search_handler,{'query':req.message,'top_k':5})]
         if any(word in req.message.lower() for word in ['出价','预算','竞价','排名','bid','price']):
@@ -124,7 +125,7 @@ class Pipeline:
         for name,handler,args in candidates:
             if name not in completed:
                 async def invoke(handler=handler,args=args):
-                    value=await handler(args,{'ads':ads})
+                    value=await handler(args,{'ads':ads,'ad_context':ad_context})
                     return {'output':dumps(value),'status':'succeeded','exit_code':0}
                 result=await ctx.tool(name,args,invoke,30)
                 completed[name]=preview(result['output'])

@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-10-10T03:46:37.972473+00:00",
+  "git_revision": "8ff5e2a7a7eeda384406de0f0e1a84e627638774",
+  "tracked_diff_sha256": "bf0bff288eb4b5cf44f6e93167aec354336ab5d6d6ca1f45c2009306cb9d397e",
+  "worktree_status": " M .env.example\n M README.md\n M apps/mini-ad-wall/DEVELOPMENT.md\n M apps/mini-ad-wall/README.md\n M apps/mini-ad-wall/client/index.html\n M apps/mini-ad-wall/client/src/App.tsx\n M apps/mini-ad-wall/client/src/types/index.ts\n M apps/mini-ad-wall/server/config/index.ts\n M apps/mini-ad-wall/server/controllers/ads.controller.ts\n M apps/mini-ad-wall/server/controllers/ai.controller.ts\n M apps/mini-ad-wall/server/index.ts\n M apps/mini-ad-wall/server/middlewares/businessBoundary.ts\n M apps/mini-ad-wall/server/models/ads.model.ts\n M apps/mini-ad-wall/server/package-lock.json\n M apps/mini-ad-wall/server/package.json\n M apps/mini-ad-wall/server/routes/agent.routes.ts\n M apps/mini-ad-wall/server/services/ads.service.ts\n M apps/mini-ad-wall/server/tests/business-boundary.test.cjs\n M apps/mini-ad-wall/server/tests/hosting.test.cjs\n M apps/mini-ad-wall/server/types/index.ts\n M docs/agent-hosting-design.md\n M docs/business-agent-boundary.md\n?? apps/mini-ad-wall/server/migrations/\n?? apps/mini-ad-wall/server/scripts/\n?? apps/mini-ad-wall/server/services/ad-value.ts\n?? apps/mini-ad-wall/server/services/ads.database.ts\n?? apps/mini-ad-wall/server/tests/ads-mysql.test.cjs\n?? apps/mini-ad-wall/server/tests/helpers/\n?? docs/ads-mysql.md\n?? docs/ads-recall-sdd.md\n?? docs/backend-reliability-coding-plan.md\n?? docs/backend-reliability-sdd.md\n?? \"docs/\\346\\225\\264\\344\\275\\223\\344\\270\\232\\345\\212\\241\\345\\220\\221\\344\\274\\230\\345\\214\\226SDD.md\"\n?? \"docs/\\346\\225\\264\\344\\275\\223\\344\\270\\232\\345\\212\\241\\345\\220\\221\\344\\274\\230\\345\\214\\226coding plan.md\"\n",
+  "diff_numstat": "8\t2\t.env.example\n4\t0\tREADME.md\n2\t0\tapps/mini-ad-wall/DEVELOPMENT.md\n6\t2\tapps/mini-ad-wall/README.md\n1\t1\tapps/mini-ad-wall/client/index.html\n2\t1\tapps/mini-ad-wall/client/src/App.tsx\n2\t0\tapps/mini-ad-wall/client/src/types/index.ts\n7\t2\tapps/mini-ad-wall/server/config/index.ts\n8\t8\tapps/mini-ad-wall/server/controllers/ads.controller.ts\n1\t1\tapps/mini-ad-wall/server/controllers/ai.controller.ts\n20\t3\tapps/mini-ad-wall/server/index.ts\n3\t3\tapps/mini-ad-wall/server/middlewares/businessBoundary.ts\n111\t198\tapps/mini-ad-wall/server/models/ads.model.ts\n111\t1\tapps/mini-ad-wall/server/package-lock.json\n9\t7\tapps/mini-ad-wall/server/package.json\n6\t6\tapps/mini-ad-wall/server/routes/agent.routes.ts\n16\t13\tapps/mini-ad-wall/server/services/ads.service.ts\n85\t62\tapps/mini-ad-wall/server/tests/business-boundary.test.cjs\n4\t3\tapps/mini-ad-wall/server/tests/hosting.test.cjs\n2\t0\tapps/mini-ad-wall/server/types/index.ts\n3\t3\tdocs/agent-hosting-design.md\n2\t2\tdocs/business-agent-boundary.md\n",
+  "platform": "Darwin-25.0.0-arm64-arm-64bit-Mach-O",
+  "python": "Python 3.11.15",
+  "configured_environment_names": [],
+  "runtime_versions": {
+    "node": "unavailable",
+    "mysql": "/opt/homebrew/opt/mysql@8.4/bin/mysqld  Ver 8.4.11 for macos26.6 on arm64 (Homebrew)",
+    "redis": "Redis server v=8.10.0 sha=00000000:1 malloc=libc bits=64 build=80fd3081013fc32b"
+  },
+  "verification_runtimes": {
+    "baseline_and_first_koa_verification": "Node v24.19.0 (bundled)",
+    "final_koa_with_recall_native_dependency": "Node v22.23.2 (Homebrew node@22)",
+    "reason": "system Node 25 cannot load libsimdjson; recall native ABI 127 matches Node 22"
+  }
+}

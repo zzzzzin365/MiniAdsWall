@@ -1,0 +1,56 @@
+
+> mini-ad-wall-server@1.0.0 test
+> npm run build && node --test tests/*.test.cjs
+
+
+> mini-ad-wall-server@1.0.0 build
+> tsc
+
+▶ real MySQL: safe legacy import, persistence and rollback
+  ✔ legacy ads, click counts, historical results and audit are preserved (5.658542ms)
+  ✔ repeating migration leaves live edits intact and retains the source file (24.10525ms)
+  ✔ exceptions after the ad write leave neither a new ad nor operation nor audit (3.848833ms)
+  ✔ ranking matches the existing score formula and provides a ranking index (3.335208ms)
+  ✔ operator identities are exact, including trailing spaces (3.368416ms)
+  ✔ malformed legacy data fails before writes (1.398959ms)
+✔ real MySQL: safe legacy import, persistence and rollback (4021.602875ms)
+✔ real MySQL: import refuses to merge existing business records (3036.44625ms)
+▶ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+  ✔ authentication and validation still apply (71.829625ms)
+  ✔ same operation across processes commits exactly one ad and audit (61.01025ms)
+  ✔ concurrent edits reject the stale version and preserve the winning result (18.067792ms)
+  ✔ audit failure rolls back the ad and operation, allowing a safe retry (27.70525ms)
+  ✔ concurrent clicks persist across a hard process restart without overwriting edits (389.464458ms)
+  ✔ AI calls use the shared database snapshot and remain separate from business writes (112.566083ms)
+✔ real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots (4900.494625ms)
+✔ lost write response is recovered by querying the recorded result (136.353875ms)
+✔ unknown result survives reload; retry queries then reuses the original operation ID (60.770959ms)
+✔ unavailable status service prevents blind resubmission (98.28175ms)
+Server Error: UnauthorizedError: 请提供有效的运营凭据
+    at Object.throw (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa/lib/context.js:97:11)
+    at businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:39:18)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:22)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:11)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at errorHandler (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/errorHandler.js:5:15)
+    at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:34:12 {
+  headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+}
+[2026-10-10 03:47:51] ← 65d0f5c7-1b84-486b-a775-3256dab016b3 | GET /api/agent/identity | IP: 127.0.0.1
+[2026-10-10 03:47:51] → 65d0f5c7-1b84-486b-a775-3256dab016b3 | GET /api/agent/identity | ✓ 200 | 8ms
+[2026-10-10 03:47:51] ← 173af1d6-744f-481c-b601-ee22056de00a | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+[2026-10-10 03:47:51] → 173af1d6-744f-481c-b601-ee22056de00a | POST /api/agent/sessions/1/runs | ✓ 200 | 6ms
+[2026-10-10 03:47:51] ← 8e15ed61-8bc4-47f9-83bf-ab9b7a9714c9 | GET /api/agent/runs/1/events | IP: 127.0.0.1
+[2026-10-10 03:47:51] → 8e15ed61-8bc4-47f9-83bf-ab9b7a9714c9 | GET /api/agent/runs/1/events | ✓ 200 | 5ms
+✔ hosted gateway authenticates identity, trusts server snapshot and forwards real SSE (4001.235125ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7238.385959

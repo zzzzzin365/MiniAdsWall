@@ -21,8 +21,8 @@ export async function businessBoundary(ctx: Context, next: Next) {
     ctx.set('X-Request-ID', ctx.state.requestId);
     ctx.state.principal = authenticated(ctx);
     const mutation = ['POST', 'PUT', 'DELETE', 'PATCH'].includes(ctx.method)
-        && (/^\/api\/ads(?:\/[^/]+)?$/.test(ctx.path) || ctx.path.startsWith('/api/upload'));
-    const operatorOnly = mutation || ctx.path.startsWith('/api/operations') || ctx.path.startsWith('/api/ai/') || ctx.path.startsWith('/api/agent/');
+        && ctx.path !== '/api/ads/search' && (/^\/api\/ads(?:\/[^/]+)?$/.test(ctx.path) || ctx.path.startsWith('/api/upload'));
+    const operatorOnly = ctx.path === '/api/ads/search' || mutation || ctx.path.startsWith('/api/operations') || ctx.path.startsWith('/api/ai/') || ctx.path.startsWith('/api/agent/');
     if (operatorOnly && !ctx.state.principal) ctx.throw(401, '请提供有效的运营凭据');
     await next();
 }
@@ -33,18 +33,19 @@ function canonical(value: any): string {
     return JSON.stringify(value);
 }
 
-export function mutate(ctx: Context, apply: () => { status: number; body: any }) {
+export async function mutate(ctx: Context, apply: () => Promise<{ status: number; body: any }>) {
     const id = ctx.get('Idempotency-Key');
     if (!/^[a-zA-Z0-9_-]{16,100}$/.test(id)) ctx.throw(400, '缺少有效的 Idempotency-Key');
     const fingerprint = createHash('sha256').update(canonical({ method: ctx.method, path: ctx.path, body: ctx.request.body || null })).digest('hex');
-    const result = adsModel.executeOperation(`${ctx.state.principal}:${id}`, fingerprint, apply);
+    const result = await adsModel.executeOperation(ctx.state.principal, id, fingerprint, `${ctx.method} ${ctx.path}`, apply);
     ctx.status = result.status;
     ctx.body = result.body;
     ctx.set('X-Operation-ID', id);
+    if(result.recall_receipt) ctx.set('X-Recall-Receipt', Buffer.from(JSON.stringify(result.recall_receipt)).toString('base64url'));
 }
 
 export async function operationStatus(ctx: RouterContext) {
-    const record = adsModel.getOperation(`${ctx.state.principal}:${ctx.params.id}`);
+    const record = await adsModel.getOperation(ctx.state.principal, ctx.params.id);
     if (!record) { ctx.status = 404; ctx.body = { state: 'not_found' }; return; }
-    ctx.body = { state: 'completed', status: record.status, body: record.body, createdAt: record.createdAt };
+    ctx.body = { state: 'completed', status: record.status, body: record.body, createdAt: record.createdAt, ...(record.recall_receipt ? {recall_receipt:record.recall_receipt} : {}) };
 }

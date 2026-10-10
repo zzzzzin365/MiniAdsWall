@@ -6,6 +6,7 @@ export interface Ad {
     url: string;
     price: number;
     clicks: number;
+    version: number;
     videos: string[];
 }
 
@@ -15,6 +16,7 @@ export interface AdInput {
     content: string;
     url: string;
     price: number | string;
+    version?: number;
     videos?: string[];
 }
 

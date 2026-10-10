@@ -81,6 +81,8 @@ def crash_worker(url, root, queue):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--mysqld', default='/opt/homebrew/opt/mysql@8.4/bin/mysqld')
+    parser.add_argument('--output', default='docs/hosting-mysql-validation.json')
+    parser.add_argument('--verify-migrations', action='store_true')
     args = parser.parse_args()
     report = {'mysql': subprocess.check_output([args.mysqld, '--version'], text=True).strip(),
               'date': time.strftime('%Y-%m-%d'), 'cases': [],
@@ -110,9 +112,15 @@ def main():
             conn.close()
             url = 'mysql+pymysql://root@localhost/hosting_verify?unix_socket='+socket
             repo = repository(url, root+'/objects')
+            if args.verify_migrations:
+                subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_hosting_migrations.py','-v'],
+                               env={**os.environ,'HOSTING_TEST_MYSQL_URL':url},check=True)
+                report['migration_regressions_passed']=True
             def reset():
                 # This database exists only inside the private disposable server above.
                 s.metadata.drop_all(repo.engine)
+                from hosting.migrations import metadata as migration_metadata
+                migration_metadata.drop_all(repo.engine)
                 repo.migrate()
             def setup(n=1, identity=None):
                 identity = identity or repo.provision(uuid.uuid4().hex)
@@ -204,7 +212,7 @@ def main():
             try: server.wait(timeout=30)
             except subprocess.TimeoutExpired: server.kill(); server.wait()
     report['elapsed_seconds']=round(time.monotonic()-started,3)
-    Path('docs/hosting-mysql-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-    print('PASS: docs/hosting-mysql-validation.json',flush=True)
+    Path(args.output).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    print('PASS: '+args.output,flush=True)
 
 if __name__=='__main__': main()

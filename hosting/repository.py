@@ -10,6 +10,7 @@ import secrets
 import time
 from sqlalchemy import create_engine, select, update, insert, delete, func, and_, or_
 from . import schema as s
+from .reliability import load_reliability
 from .objects import preview
 
 TERMINAL = {'succeeded', 'failed', 'cancelled', 'timed_out', 'interrupted'}
@@ -55,11 +56,8 @@ class Repository:
     def migrate(self):
         if self.test and self.engine.dialect.name=='sqlite':
             with self.engine.connect() as c: c.exec_driver_sql('PRAGMA journal_mode=WAL')
-        s.metadata.create_all(self.engine)
-        with self.engine.begin() as c:
-            if c.execute(select(s.versions.c.version)).scalar() is None:
-                c.execute(insert(s.capacity).values(scope='global', last_dispatch_at=0))
-                c.execute(insert(s.versions).values(version=1, created_at=time.time()))
+        from .migrations import upgrade
+        return upgrade(self.engine)
 
     @contextmanager
     def tx(self):
@@ -172,12 +170,17 @@ class Repository:
         c.execute(update(s.sessions).where(s.sessions.c.id==r['session_id']).values(next_seq=seq,updated_at=time.time(),version=session['version']+1))
 
     def create_run(self,user,session_id,key,payload,resume=None):
+        protocol=payload.get('input_protocol_version',1)
+        if type(protocol) is not int or protocol!=1 or ((payload.get('ad_context') is not None or payload.get('conditions')) and not load_reliability().features['AD_CONTEXT_V1_ENABLED']):
+            raise Conflict('unsupported_input_protocol',400)
         if not 16<=len(key)<=100: raise Conflict('invalid_idempotency_key',400)
         if len(str(payload.get('message','')).encode())>65536: raise Conflict('message_too_large',413)
         encoded=dumps(payload)
         if len(encoded.encode())>262144: raise Conflict('request_too_large',413)
         # ads is a server-owned snapshot; retrying the same user action keeps the FIRST snapshot.
-        request_fields={k:v for k,v in payload.items() if k!='ads'}
+        request_fields={k:v for k,v in payload.items() if k not in ('ads','ad_context','input_protocol_version') and not (k=='conditions' and not v)}
+        if request_fields.get('ad_context') is None: request_fields.pop('ad_context',None)
+        if not request_fields.get('conditions'): request_fields.pop('conditions',None)
         digest=hashlib.sha256(dumps({'payload':request_fields,'session_id':int(session_id),'resume':resume}).encode()).hexdigest()
         ref=self.objects.put(encoded)
         with self.tx() as c:
@@ -209,8 +212,8 @@ class Repository:
             if self._count(c,ACTIVE)>=self.max_running: return None
             # Round-robin by last user dispatch; bounded by configured waiting capacity.
             candidates=c.execute(select(s.runs).join(s.capacity,s.capacity.c.scope==func.concat('user:',s.runs.c.user_id))
-                .where(s.runs.c.status=='queued',s.runs.c.next_dispatch_at<=time.time())
-                .order_by(s.capacity.c.last_dispatch_at,s.runs.c.created_at,s.runs.c.id).limit(self.max_waiting)).mappings() if not self.test else c.execute(select(s.runs).where(s.runs.c.status=='queued').order_by(s.runs.c.created_at).limit(self.max_waiting)).mappings()
+                .where(s.runs.c.status=='queued',s.runs.c.next_dispatch_at<=time.time(),func.coalesce(s.runs.c.input_protocol_version,1)==1)
+                .order_by(s.capacity.c.last_dispatch_at,s.runs.c.created_at,s.runs.c.id).limit(self.max_waiting)).mappings() if not self.test else c.execute(select(s.runs).where(s.runs.c.status=='queued',func.coalesce(s.runs.c.input_protocol_version,1)==1).order_by(s.runs.c.created_at).limit(self.max_waiting)).mappings()
             for row in list(candidates):
                 r=dict(row); now=time.time()
                 if r['queue_deadline']<=now or (r['deadline_at'] and r['deadline_at']<=now):

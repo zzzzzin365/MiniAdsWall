@@ -1,0 +1,12 @@
+usage: migrate.py [-h] [--target TARGET] [--lock-timeout LOCK_TIMEOUT]
+                  [{up,status}]
+
+Explicit upgrades: python -m hosting.migrate [up|status] [--target N].
+
+positional arguments:
+  {up,status}
+
+options:
+  -h, --help            show this help message and exit
+  --target TARGET
+  --lock-timeout LOCK_TIMEOUT

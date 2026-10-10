@@ -1,4 +1,6 @@
 import adsModel from '../models/ads.model';
+import { storedPrice } from './ad-value';
+import { enabled } from '../recall/contracts';
 import config from '../config';
 import { Ad, AdInput, ServiceResult } from '../types';
 
@@ -8,23 +10,25 @@ function calculateScore(ad: Ad): number {
     return price + (price * clicks * config.AD_SCORE_FACTOR);
 }
 
-function getSortedAds(): Ad[] {
-    const ads = adsModel.getAllAds();
-    return ads.sort((a, b) => calculateScore(b) - calculateScore(a));
+async function getSortedAds(): Promise<Ad[]> {
+    return adsModel.getAllAds();
 }
 
-function validateAd(data: AdInput): string | undefined {
+export function validateAd(data: AdInput): string | undefined {
+    if (!enabled() && data && (data.attributes !== undefined || data.eligibility !== undefined)) return '广告属性召回未启用';
     if (!data || ['title', 'publisher', 'content', 'url'].some(key => typeof data[key] !== 'string' || !data[key].trim())) return '广告字段不完整';
-    if (Object.keys(data).some(key => !['title', 'publisher', 'content', 'url', 'price', 'videos'].includes(key))) return '不支持的广告字段（当前不支持预算变更）';
+    if (Object.keys(data).some(key => !['title', 'publisher', 'content', 'url', 'price', 'videos', 'version', 'attributes', 'eligibility'].includes(key))) return '不支持的广告字段（当前不支持预算变更）';
     const price = Number(data.price);
     const ceiling = Number(process.env.MAX_AD_BID || 100);
     if (!Number.isFinite(ceiling) || ceiling <= 0) return '服务出价上限配置错误';
     if (!['number', 'string'].includes(typeof data.price) || String(data.price).trim() === '' || !Number.isFinite(price) || price <= 0 || price > ceiling) return `出价必须大于 0 且不超过 ${ceiling}`;
+    if (data.title.length > 500 || data.publisher.length > 255 || Buffer.byteLength(data.content) > 1024 * 1024 || Buffer.byteLength(data.url) > 65535) return '广告字段过长';
+    if (!storedPrice(data.price)) return '出价最多支持 8 位小数';
     try { if (!['http:', 'https:'].includes(new URL(data.url).protocol)) return '广告链接必须使用 HTTP 或 HTTPS'; } catch { return '广告链接无效'; }
     if (data.videos !== undefined && (!Array.isArray(data.videos) || data.videos.some(v => typeof v !== 'string'))) return '视频列表无效';
 }
 
-function createAd(data: AdInput): ServiceResult<Ad> {
+async function createAd(data: AdInput): Promise<ServiceResult<Ad>> {
     const error = validateAd(data);
     if (error) return { success: false, error };
     const { title, publisher, content, url, price } = data;
@@ -34,17 +38,18 @@ function createAd(data: AdInput): ServiceResult<Ad> {
             error: 'Missing required fields'
         };
     }
-    const newAd = adsModel.create(data);
+    const newAd = await adsModel.create(data);
     return {
         success: true,
         data: newAd
     };
 }
 
-function updateAd(id: string, data: AdInput): ServiceResult<Ad> {
+async function updateAd(id: string, data: AdInput): Promise<ServiceResult<Ad>> {
     const error = validateAd(data);
     if (error) return { success: false, error };
-    const updatedAd = adsModel.update(id, data);
+    if (!Number.isInteger(data.version) || data.version < 1 || data.version > 4294967294) return { success: false, error: '修改广告必须提供有效的 version，请刷新列表后重新编辑' };
+    const updatedAd = await adsModel.update(id, data);
     if (!updatedAd) {
         return {
             success: false,
@@ -57,8 +62,8 @@ function updateAd(id: string, data: AdInput): ServiceResult<Ad> {
     };
 }
 
-function deleteAd(id: string): ServiceResult {
-    const deleted = adsModel.remove(id);
+async function deleteAd(id: string): Promise<ServiceResult> {
+    const deleted = await adsModel.remove(id);
     if (!deleted) {
         return {
             success: false,
@@ -68,8 +73,8 @@ function deleteAd(id: string): ServiceResult {
     return { success: true };
 }
 
-function clickAd(id: string): ServiceResult {
-    const clicks = adsModel.incrementClicks(id);
+async function clickAd(id: string): Promise<ServiceResult> {
+    const clicks = await adsModel.incrementClicks(id);
     if (clicks === null) {
         return {
             success: false,

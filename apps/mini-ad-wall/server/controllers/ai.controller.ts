@@ -1,4 +1,6 @@
 import { RouterContext } from 'koa-router';
+import { adContext } from '../services/recall/search';
+import config from '../config';
 import adsService from '../services/ads.service';
 import aiService from '../services/ai.service';
 import adsAgentService from '../services/adsAgent.service';
@@ -79,11 +81,14 @@ async function chatAssistant(ctx: RouterContext): Promise<void> {
         return;
     }
 
+    const context = config.RELIABILITY.features.AD_CONTEXT_V1_ENABLED
+        ? await adContext(body.conditions,ctx.state.principal) : undefined;
     const result = await adsAgentService.chat({
         message: body.message.trim(),
         userId: ctx.state.principal || 'anonymous',
         convId: body.convId,
-        ads: adsService.getSortedAds(),
+        ads: context ? context.items : await adsService.getSortedAds(),
+        ad_context: context,
         confirmationId: body.confirmationId
     }, ctx.state.requestId);
 

@@ -5,23 +5,43 @@ import json
 import os
 import secrets
 import time
+from typing import Literal
 from fastapi import FastAPI, Request, Depends, Header, Query
 from fastapi.responses import JSONResponse, StreamingResponse, Response
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator, model_validator
 from redis.asyncio import Redis
 from sqlalchemy.exc import SQLAlchemyError
 from redis.exceptions import RedisError
 from .auth import Auth
 from .repository import Conflict, TERMINAL, public
+from .reliability import load_reliability
+from marketing.config import load_marketing
 
 class SessionInput(BaseModel):
     workspace_id: str
     title: str = Field(default='New session',max_length=120)
 class RunInput(BaseModel):
+    input_protocol_version: Literal[1] = 1
     message: str = Field(min_length=1,max_length=65536)
     ads: list[dict] = Field(default_factory=list,max_length=1000)
+    ad_context: dict | None = None
+    conditions: list[dict] = Field(default_factory=list,max_length=16)
+
+    @field_validator('ad_context')
+    @classmethod
+    def bounded_context(cls,value):
+        if value is not None and (len(json.dumps(value,ensure_ascii=False).encode()) > 65536 or value.get('version') != 1 or not isinstance(value.get('items'),list) or len(value['items']) > 100):
+            raise ValueError('invalid_ad_context')
+        return value
+
     tool: str | None = None
     argv: list[str] | None = Field(default=None,max_length=100)
+    @model_validator(mode='before')
+    @classmethod
+    def supported_protocol(cls,value):
+        if isinstance(value,dict) and (((value.get('ad_context') is not None or value.get('conditions')) and not load_reliability().features['AD_CONTEXT_V1_ENABLED']) or type(value.get('input_protocol_version',1)) is not int):
+            raise ValueError('unsupported_input_protocol')
+        return value
 class ApprovalInput(BaseModel):
     allow: bool
 class LoginInput(BaseModel):
@@ -30,6 +50,8 @@ class LoginInput(BaseModel):
 async def call(fn,*args,**kwargs): return await asyncio.to_thread(fn,*args,**kwargs)
 
 def create_app(repo=None,redis=None):
+    load_reliability()
+    load_marketing()
     @asynccontextmanager
     async def lifespan(app):
         if app.state.repo is None:
@@ -73,10 +95,10 @@ def create_app(repo=None,redis=None):
 
     @app.get('/health')
     async def health():
-        from sqlalchemy import select
+        from sqlalchemy import select, func
         from . import schema as s
         def check():
-            with app.state.repo.engine.connect() as c: return c.execute(select(s.versions.c.version)).scalar_one()
+            with app.state.repo.engine.connect() as c: return c.execute(select(func.max(s.versions.c.version))).scalar_one()
         await call(check); await app.state.auth.redis.ping()
         return {'status':'ready'}
 

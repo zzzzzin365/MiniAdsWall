@@ -8,18 +8,25 @@ import json
 import os
 import secrets
 import time
+from typing import Literal
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import select
 from .repository import Conflict, LostLease
 from . import schema as s
 
 class Execution(BaseModel):
+    executor_protocol_version:Literal[1]=1
     run_id:int
     fence_token:int
     argv:list[str]=Field(min_length=1,max_length=100)
     timeout:float=Field(gt=0,le=120)
+    @field_validator('executor_protocol_version',mode='before')
+    @classmethod
+    def strict_version(cls,value):
+        if type(value) is not int: raise ValueError('unsupported_executor_protocol')
+        return value
 
 async def command(*args,timeout=10):
     process=await asyncio.create_subprocess_exec('docker',*args,stdout=asyncio.subprocess.PIPE,stderr=asyncio.subprocess.PIPE)
@@ -46,6 +53,7 @@ class Executor:
             self.repo._session(c,r['user_id'],r['session_id'])
             tool=c.execute(select(s.tools).where(s.tools.c.run_id==req.run_id,s.tools.c.status=='running',s.tools.c.sandbox_id==f'agent-{req.run_id}-{req.fence_token}')).mappings().first()
             if not tool: raise Conflict('tool_not_registered',403)
+            if tool['executor_protocol_version'] not in (None,1): raise Conflict('unsupported_executor_protocol',400)
             supplied=json.loads(tool['args_preview']) if not tool['args_ref'] else json.loads(self.repo.objects.get(tool['args_ref']))
             if supplied.get('argv')!=req.argv: raise Conflict('tool_arguments_changed',403)
             return r
