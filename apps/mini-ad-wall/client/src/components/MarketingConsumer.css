@@ -1,0 +1,6 @@
+.marketing-consumer { max-width: 680px; margin: 48px auto; padding: 24px; }
+.marketing-material { background: white; padding: 24px; border-radius: 12px; }
+.marketing-material h1 { font-size: 24px; margin-bottom: 20px; }
+.marketing-material img, .marketing-material video { display: block; width: 100%; max-height: 360px; object-fit: contain; margin-bottom: 24px; }
+.marketing-material a { display: inline-block; padding: 12px 24px; border-radius: 8px; background: #004c9e; color: white; text-decoration: none; }
+.marketing-material a:focus-visible { outline: 3px solid #07e7ff; outline-offset: 4px; }

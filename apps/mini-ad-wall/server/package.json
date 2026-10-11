@@ -15,7 +15,8 @@
     "benchmark:recall": "node dist/scripts/benchmark-recall.js",
     "migrate:marketing": "ts-node --files scripts/migrate-marketing.ts",
     "seed:marketing": "ts-node --files scripts/seed-marketing-scope.ts",
-    "prune:recall": "node dist/scripts/prune-recall.js"
+    "prune:recall": "node dist/scripts/prune-recall.js",
+    "seed:marketing-events": "ts-node --files scripts/seed-marketing-events.ts"
   },
   "dependencies": {
     "@koa/cors": "^4.0.0",

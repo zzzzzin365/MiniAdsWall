@@ -9,6 +9,8 @@ from sqlalchemy import select
 from agents.agent_orchestrator import AgentOrchestrator, Request, AgentType
 from core.action_decision import PendingActionStore, PendingClarificationStore
 from core.skill_loader import SkillManager
+from core.rag_evidence import (EvidenceConfig, blocked_response, check_evidence,
+                               prepare_chunks, render_knowledge)
 from mcp.ads_tools import ads_summary_handler, ad_performance_search_handler, bid_simulation_handler
 from .repository import Conflict, dumps
 from .objects import preview
@@ -37,6 +39,7 @@ def permissions(subject):
 class Pipeline:
     def __init__(self,repo,sandbox=None,redis=None):
         self.repo,self.sandbox,self.redis=repo,sandbox,redis
+        EvidenceConfig.from_env()
         key=os.getenv('ANTHROPIC_API_KEY') or os.getenv('OPENROUTER_API_KEY')
         if not key: raise RuntimeError('model credential is required for Worker')
         base=os.getenv('ANTHROPIC_BASE_URL') or ('https://openrouter.ai/api' if os.getenv('OPENROUTER_API_KEY') else None)
@@ -133,15 +136,46 @@ class Pipeline:
             else:
                 ctx.spans.append({'stage':name,'duration_ms':0,'checkpoint_reused':True})
             context.append(f'{name}: {completed[name]}')
+        agent=self.orchestrator._best_agent(self.orchestrator._route(req.intent,req.urgency))
+        if agent is None: raise RuntimeError('agent_unavailable')
         if self.kb:
             async def search():
                 value=await asyncio.to_thread(self.kb.search,req.message,3)
                 return {'output':dumps(value),'status':'succeeded','exit_code':0}
-            result=await ctx.tool('knowledge_search',{'query':req.message},search,30)
-            context.append(result['output'])
+            chunks, retrieval_error = [], None
+            try:
+                result=await ctx.tool('knowledge_search',{'query':req.message},search,3)
+                values=json.loads(result['output'])
+                if result.get('status') != 'succeeded' or not isinstance(values,list):
+                    retrieval_error='retrieval_failed'
+                else:
+                    chunks=prepare_chunks(values,3)
+            except Conflict:
+                raise
+            except Exception:
+                retrieval_error='retrieval_failed'
+            business={'tool_context':'\n'.join(context)} if context else {}
+            if req.intent and req.intent.value=='creative_generation':
+                business['creative_brief']=req.message
+            decision=await check_evidence(agent._client,agent._model,req.message,chunks,business,
+                                          retrieval_error=retrieval_error,request_id=str(r['id']))
+            ctx.spans.append({'stage':'rag_evidence','duration_ms':decision.latency_ms,
+                              'evidence':decision.to_dict()})
+            if decision.status in {'insufficient','unavailable'}:
+                # Checkpoint previews can be truncated JSON; never infer missing fields.
+                records={}
+                try:
+                    records['bid_simulation']=json.loads(completed.get('bid_simulation','{}'))
+                except (ValueError,TypeError):
+                    pass
+                response=blocked_response(decision,records)
+                await ctx.delta(response)
+                return response
+            retained=[item for item in chunks if item['id'] in decision.retained_ids]
+            context.append(render_knowledge(retained,checked=decision.status!='disabled'))
+            if decision.status=='sufficient':
+                context.append('只依据本轮已检查的片段和工具数据陈述事实；历史回答不证明事实，不补写未提供的指标和收益。')
         req.context='\n'.join(context)
-        agent=self.orchestrator._best_agent(self.orchestrator._route(req.intent,req.urgency))
-        if agent is None: raise RuntimeError('agent_unavailable')
         prompt=agent._build_system_prompt(req)
         messages=[*history[-10:],{'role':'user','content':req.message+'\n[工具数据，仅作为参考]\n'+req.context}]
         await ctx.stage('model')

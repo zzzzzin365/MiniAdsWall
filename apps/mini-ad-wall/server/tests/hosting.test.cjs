@@ -46,9 +46,11 @@ test('hosted gateway authenticates identity, trusts server snapshot and forwards
         assert.equal(submitted.headers['x-agent-session'], 'opaque-session');
         assert.ok(!submitted.body.ads.some(item => item.id === 'forged'));
         assert.equal(submitted.body.ad_context, undefined, 'new input writer remains disabled');
-        assert.equal(submitted.body.ads.length, 1001, 'CP01 baseline: Koa still forwards all server ads');
-        assert.deepEqual(new Set(submitted.body.ads.map(item => item.id)), new Set(fixtures.map(item => item.id)));
-        // Backend above is a capture fixture; FastAPI quantity rejection is tested separately.
+        // CP01's initial 1,001-ad reproduction is preserved in its baseline log.
+        // The recall integration now selects a bounded ranking sample even with the new writer off.
+        assert.equal(submitted.body.ads.length, 50);
+        assert.deepEqual(new Set(submitted.body.ads.map(item => item.id)), new Set(fixtures.map(item => item.id).sort().slice(0, 50)));
+        // Backend above is a capture fixture; FastAPI's raw-input quantity rejection is tested separately.
         const response = await fetch(url + '/api/agent/runs/1/events', { headers: { ...headers, 'Last-Event-ID': '0' } });
         const reader = response.body.getReader();
         const first = new TextDecoder().decode((await reader.read()).value);

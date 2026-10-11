@@ -1,0 +1,2 @@
+{"loaded":1000000,"rss_bytes":1302167552}
+{"scope":"in_memory_bitmap_and_rank_workers_only","database_tested":false,"koa_tested":false,"rows":1000000,"average_attribute_values":10,"term_count_bound":9010,"queries":200,"accepted":200,"errors":{},"build_ms":6530.5405,"p50_ms":3.2695829999993293,"p95_ms":4.224625000000742,"p99_ms":4.6301669999993464,"rss_bytes":1354235904,"peak_rss_bytes":1354235904,"hardware":{"platform":"darwin","arch":"arm64","node":"v22.23.2","cpus":10,"total_memory":34359738368},"measured_at":"2026-10-10T09:22:29.206Z"}

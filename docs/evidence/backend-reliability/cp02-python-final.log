@@ -31,7 +31,7 @@ ok
 test_malformed_model_output (test_generation_boundary.GenerationModelTests.test_malformed_model_output) ... ok
 test_timeout (test_generation_boundary.GenerationModelTests.test_timeout) ... ok
 test_valid_creative (test_generation_boundary.GenerationModelTests.test_valid_creative) ... ok
-test_ad_task_uses_real_preflight_tools_and_stream_adapter (test_hosting.PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter) ... 2026-10-10 16:06:03,322 [INFO] core.skill_loader: 
+test_ad_task_uses_real_preflight_tools_and_stream_adapter (test_hosting.PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter) ... 2026-10-10 16:06:03,322 [INFO] core.skill_loader:
 ================ MiniAdsWall Agent Skills Loaded ================
 目录: /Users/admin/MiniAdsWall/skills
 数量: 3

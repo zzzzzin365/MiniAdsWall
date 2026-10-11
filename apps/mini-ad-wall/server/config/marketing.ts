@@ -15,6 +15,6 @@ export function loadMarketing(env: NodeJS.ProcessEnv = process.env) {
     const environment = env.MARKETING_ENVIRONMENT ?? 'synthetic';
     if (!['synthetic', 'sandbox', 'production'].includes(environment)) throw new Error('invalid_MARKETING_ENVIRONMENT');
     if ((env.MARKETING_PROTOCOL_VERSION ?? '1') !== '1') throw new Error('unsupported_MARKETING_PROTOCOL_VERSION');
-    // CP01 only opens resource APIs. Event/serve/write-agent endpoints are not installed.
+    // S1 resources and ingestion only; later content/Agent/delivery/learning stages stay closed.
     return { features, environment: environment as 'synthetic' | 'sandbox' | 'production', protocolVersion: 1 };
 }

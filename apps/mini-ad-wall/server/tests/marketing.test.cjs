@@ -7,7 +7,9 @@ const { randomUUID } = require('node:crypto');
 const { database } = require('./helpers/mysql.cjs');
 const { loadMarketing, marketingFlags } = require('../dist/config/marketing');
 const { validContract } = require('../dist/services/marketing/contracts');
-const { migrateMarketingSchema, marketingMigrationStatus } = require('../dist/services/marketing/migrations');
+const { migrateMarketingSchema: migrate, marketingMigrationStatus: status } = require('../dist/services/marketing/migrations');
+const migrateMarketingSchema = (options={}) => migrate({...options,target:10});
+const marketingMigrationStatus = (options={}) => status({...options,target:10});
 const { seedMarketingScope } = require('../dist/services/marketing/seed');
 const { closeAdsDatabase } = require('../dist/services/ads.database');
 
@@ -35,7 +37,12 @@ test('real MySQL marketing migration resumes partial DDL, preserves ads and reje
         const [after] = await db.connection.query('SELECT id,title,price,clicks,version FROM ads_business_ads ORDER BY id'); assert.deepEqual(after, before);
         const [count] = await db.connection.query('SELECT COUNT(*) AS total FROM marketing_events'); assert.equal(Number(count[0].total), 0);
         const directory = path.join(db.root, 'changed'); fs.mkdirSync(directory);
-        fs.writeFileSync(path.join(directory, '003_marketing_events.sql'), fs.readFileSync(path.join(__dirname, '../migrations/003_marketing_events.sql')) + '\n-- drift\n');
+        fs.mkdirSync(path.join(directory, 'legacy'));
+        fs.copyFileSync(path.join(__dirname, '../migrations/legacy/003_marketing_events.sql'), path.join(directory, 'legacy/003_marketing_events.sql'));
+        fs.copyFileSync(path.join(__dirname, '../migrations/011_marketing_ingestion.sql'),path.join(directory,'011_marketing_ingestion.sql'));
+        fs.copyFileSync(path.join(__dirname, '../migrations/012_marketing_aggregation.sql'),path.join(directory,'012_marketing_aggregation.sql'));
+        fs.copyFileSync(path.join(__dirname, '../migrations/013_marketing_reports.sql'),path.join(directory,'013_marketing_reports.sql'));
+        fs.writeFileSync(path.join(directory, '010_marketing_events.sql'), fs.readFileSync(path.join(__dirname, '../migrations/010_marketing_events.sql')) + '\n-- drift\n');
         await assert.rejects(migrateMarketingSchema({ directory }), /checksum_mismatch/);
         await db.connection.query('ALTER TABLE marketing_events DROP INDEX uq_valid_click');
         await assert.rejects(marketingMigrationStatus(), /schema_index_mismatch/);
@@ -116,6 +123,7 @@ test('real MySQL and two Koa processes: scope, idempotency, resource lifecycle a
         assert.equal((await call(a, 'POST', `/creatives/${id}/status`, { expected_revision: 1, status: 'approved' }, randomUUID())).status, 409);
         const approved = await call(a, 'POST', `/creatives/${id}/status`, { expected_revision: 2, status: 'approved' }, randomUUID()); assert.equal(approved.status, 200); assert.equal(approved.body.reviewer, 'operator'); assert.equal(approved.body.version, 1);
         assert.equal((await call(a, 'POST', `/campaigns/${activity.id}/status`, { expected_version: 1, status: 'active' }, randomUUID())).status, 200);
+        assert.equal((await call(a, 'POST', '/serve', { campaign_id: activity.id })).status, 503); // ingestion requires v11
         assert.equal((await call(a, 'POST', '/creatives', material, randomUUID())).status, 409);
         const [after] = await db.connection.query('SELECT id,price,clicks,version FROM ads_business_ads ORDER BY id'); assert.deepEqual(after, before);
         const [links] = await db.connection.query('SELECT * FROM marketing_ad_links'); assert.equal(links.length, 1);

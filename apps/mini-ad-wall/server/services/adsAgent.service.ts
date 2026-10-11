@@ -77,14 +77,14 @@ function localFallback(input: AssistantChatInput, reason?: string): AssistantCha
 
     const ads = input.ads || [];
     const totalClicks = ads.reduce((sum, ad) => sum + Number(ad.clicks || 0), 0);
-    const noVideoCount = ads.filter(ad => !ad.videos || ad.videos.length === 0).length;
+    const noVideoCount = ads.filter(ad => Number((ad as any).video_count ?? ad.videos?.length ?? 0) === 0).length;
     const topAd = [...ads].sort((a, b) => Number(b.clicks || 0) - Number(a.clicks || 0))[0];
     const avgPrice = ads.length
         ? ads.reduce((sum, ad) => sum + Number(ad.price || 0), 0) / ads.length
         : 0;
 
     const suggestions = [
-        `当前共有 ${ads.length} 条广告，总点击 ${totalClicks}，平均出价 ${avgPrice.toFixed(2)}。`,
+        `本次样本有 ${ads.length} 条广告，样本总点击 ${totalClicks}，平均出价 ${avgPrice.toFixed(2)}。`,
         topAd ? `点击最高的是「${topAd.title}」，点击 ${topAd.clicks}，可以优先复用它的标题结构和素材方向。` : '当前还没有广告数据，建议先创建 3-5 条不同卖点的广告做初始测试。',
         noVideoCount > 0 ? `有 ${noVideoCount} 条广告没有绑定视频素材，建议补齐素材后再观察点击变化。` : '所有广告都已绑定视频素材，下一步可以比较不同素材长度与点击表现。',
         '这些判断仅针对当前返回的广告样本；全量统计尚未提供。'

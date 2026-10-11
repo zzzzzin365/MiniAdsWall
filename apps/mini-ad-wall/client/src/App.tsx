@@ -199,7 +199,7 @@ function App() {
                         <h4>产品</h4>
                         <ul className="footer-links">
                             <li><a href="#">广告管理</a></li>
-                            <li><a href="#">数据分析</a></li>
+                            <li><a href="#data-analysis">数据分析</a></li>
                             <li><a href="#">智能投放</a></li>
                             <li><a href="#">效果优化</a></li>
                         </ul>

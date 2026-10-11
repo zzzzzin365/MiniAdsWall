@@ -1,0 +1,11 @@
+{"loaded":1000000,"rss_bytes":1306378240}
+{"loaded":2000000,"rss_bytes":2353184768}
+{"loaded":3000000,"rss_bytes":3379101696}
+{"loaded":4000000,"rss_bytes":4341481472}
+{"loaded":5000000,"rss_bytes":5329174528}
+{"loaded":6000000,"rss_bytes":6456901632}
+{"loaded":7000000,"rss_bytes":7154008064}
+{"loaded":8000000,"rss_bytes":8019607552}
+{"loaded":9000000,"rss_bytes":8343666688}
+{"loaded":10000000,"rss_bytes":8072921088}
+{"scope":"in_memory_bitmap_and_rank_workers_only","database_tested":false,"koa_tested":false,"rows":10000000,"average_attribute_values":10,"term_count_bound":9010,"queries":200,"accepted":112,"errors":{"query_budget_exceeded":2,"recall_deadline_exceeded":86},"build_ms":224592.582167,"p50_ms":9.703959000005852,"p95_ms":29.233957999997074,"p99_ms":41.56166700000176,"rss_bytes":9852911616,"peak_rss_bytes":10280812544,"hardware":{"platform":"darwin","arch":"arm64","node":"v22.23.2","cpus":10,"total_memory":34359738368},"measured_at":"2026-10-10T09:13:15.554Z"}

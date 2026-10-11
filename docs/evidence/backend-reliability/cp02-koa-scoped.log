@@ -135,9 +135,9 @@ not ok 7 - hosted gateway authenticates identity, trusts server snapshot and for
   failureType: 'testCodeFailure'
   error: |-
     CP01 baseline: Koa still forwards all server ads
-    
+
     50 !== 1001
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 1001

@@ -11,7 +11,7 @@ function contractRoot() {
     }
 }
 const schema = JSON.parse(fs.readFileSync(contractRoot(), 'utf8'));
-const ajv = new Ajv({ allErrors: true, strict: true, coerceTypes: false });
+const ajv = new Ajv({ allErrors: true, strict: true, strictRequired: false, coerceTypes: false });
 addFormats(ajv);
 ajv.addSchema(schema);
 export function validContract(name: string, value: unknown): boolean {

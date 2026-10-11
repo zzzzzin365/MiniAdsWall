@@ -1,0 +1,17 @@
+
+> mini-ad-wall-client@0.0.0 build
+> tsc && vite build
+
+vite v4.5.14 building for production...
+transforming...
+✓ 103 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.52 kB │ gzip:   0.33 kB
+dist/assets/hashWorker-2caa25d2.js            9.21 kB
+dist/assets/Analyst-58a4e9eb.png             25.15 kB
+dist/assets/MarketingConsumer-029db970.css    0.53 kB │ gzip:   0.29 kB
+dist/assets/index-977c9e60.css               25.54 kB │ gzip:   5.63 kB
+dist/assets/MarketingConsumer-c738b471.js     3.09 kB │ gzip:   1.66 kB
+dist/assets/index-957f563f.js               419.85 kB │ gzip: 143.10 kB
+✓ built in 5.62s

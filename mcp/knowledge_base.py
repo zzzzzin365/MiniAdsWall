@@ -11,6 +11,7 @@ ChromaDB 在这里的角色：
   - 这里用于存储知识库文档（RAG 检索）
   两者是不同的 collection，互不干扰。
 """
+import asyncio
 import hashlib
 import logging
 from typing import Any, Dict, List, Optional
@@ -110,12 +111,14 @@ class KnowledgeBase:
 
         items = []
         if results["documents"] and results["documents"][0]:
-            for doc, meta, dist in zip(
+            for chunk_id, doc, meta, dist in zip(
+                results["ids"][0],
                 results["documents"][0],
                 results["metadatas"][0],
                 results["distances"][0],
             ):
                 items.append({
+                    "id":       chunk_id,
                     "title":    meta.get("title", ""),
                     "content":  doc,
                     "score":    round(1.0 - dist, 4),  # ChromaDB 返回距离，转为相似度
@@ -144,7 +147,9 @@ class KnowledgeBase:
         """
         query = params.get("query", "")
         top_k = params.get("top_k", 5)
-        return self.search(query, top_k=top_k)
+        # Chroma and embedding calls are synchronous; keep them off the event
+        # loop so the caller's retrieval deadline can cancel the await.
+        return await asyncio.to_thread(self.search, query, top_k=top_k)
 
     # ── 内部方法 ──────────────────────────────────────────────────────────────
 

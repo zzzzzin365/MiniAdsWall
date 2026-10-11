@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-10T08:23:14.767088+00:00",
+  "git_revision": "3285981bdad3f1a3b84b27a6babef40bf1e67150",
+  "scope": "CP01/CP02 Koa/MySQL/client recovery; unrelated modules excluded",
+  "tests_exit": 0,
+  "summary": {
+    "tests": 23,
+    "pass": 23,
+    "fail": 0,
+    "skipped": 0
+  },
+  "source_hashes_after": {
+    "hosting/migrations.py": "2f724e3ff0e6298c9863b9cc7856dc1495ab395553c52d14a7a11aa054ad72c8",
+    "hosting/reliability.py": "f179d18a1ae3f036ce35a7b690d1bca902fa793c7d3c67d6fd189cae1220ba3b",
+    "apps/mini-ad-wall/server/services/ads.migrations.ts": "f9db430dd2ee834720939a8421b9a03abfcc2b78571e702a39383ff9125dbabe",
+    "apps/mini-ad-wall/server/tests/schema-migrations.test.cjs": "98ca2bddec7bdf762a57469a91eedcf4e11474e472c8b10777015b5f102359a7",
+    "apps/mini-ad-wall/server/tests/hosting.test.cjs": "de1975b1f8ecbe719832a2b25a2b7687139766e8f1d28f32945534a016f7370a"
+  },
+  "log": "cp02-scope-final-confirmation.log",
+  "build_log": "cp02-final-build.log",
+  "full_repository_koa_result": "See cp02-koa-node22.log: marketing failures are not counted as CP01/CP02 passes."
+}

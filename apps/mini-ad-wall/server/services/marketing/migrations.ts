@@ -4,32 +4,37 @@ import { createHash, randomUUID } from 'crypto';
 import { PoolConnection, RowDataPacket } from 'mysql2/promise';
 import { adsPool } from '../ads.database';
 import { migrateAdsSchema } from '../ads.migrations';
+import { splitSqlStatements } from '../sql-statements';
 
 const serverRoot = path.resolve(__dirname, fs.existsSync(path.join(__dirname, '../../package.json')) ? '../..' : '../../..');
-export const marketingMigrationVersion = 3;
-const name = '003_marketing_events.sql';
+export const marketingMigrationVersion = 13;
+const filenames = ['010_marketing_events.sql', '011_marketing_ingestion.sql', '012_marketing_aggregation.sql', '013_marketing_reports.sql'];
 const lockSql = "CONCAT('ads:', LEFT(SHA2(DATABASE(), 256), 50))";
-type Options = { directory?: string; afterStatement?: (index: number) => void | Promise<void> };
-function definition(directory = path.join(serverRoot, 'migrations')) {
-    const sql = fs.readFileSync(path.join(directory, name), 'utf8');
-    return { sql, checksum: createHash('sha256').update(sql).digest('hex'), statements: sql.split(';').map(s => s.trim()).filter(Boolean) };
+type Options = { directory?: string; target?: number; afterStatement?: (index: number) => void | Promise<void> };
+function definitions(directory = path.join(serverRoot, 'migrations')) {
+    return ['legacy/003_marketing_events.sql', ...filenames].map(relative => {
+        const name = path.basename(relative);
+        const sql = fs.readFileSync(path.join(directory, relative), 'utf8');
+        return { version: Number(name.slice(0, 3)), name, checksum: createHash('sha256').update(sql).digest('hex'), statements: splitSqlStatements(sql) };
+    });
 }
 function failure(code: string) { return Object.assign(new Error(code), { status: 503, code }); }
-const normalize = (value: string) => value.toLowerCase().replace(/_utf8mb4/g, '').replace(/[`\s()]/g, '');
+const normalize = (value: string) => value.toLowerCase().replace(/_utf8mb4/g, '').replace(/\\'/g, "'").replace(/[`\s()]/g, '');
 
 async function exists(c: PoolConnection) {
     const [r] = await c.query<RowDataPacket[]>("SELECT 1 FROM information_schema.tables WHERE table_schema=DATABASE() AND table_name='marketing_schema_migrations'");
     return r.length > 0;
 }
-async function audit(c: PoolConnection, checksum: string) {
-    if (!await exists(c)) return undefined;
+async function audit(c: PoolConnection, migrations: ReturnType<typeof definitions>) {
+    if (!await exists(c)) return new Map<number, RowDataPacket>();
     const [r] = await c.query<RowDataPacket[]>('SELECT * FROM marketing_schema_migrations ORDER BY version');
     for (const row of r) {
-        if (row.version !== marketingMigrationVersion) throw failure('unknown_marketing_migration');
-        if (row.name !== name || row.checksum !== checksum) throw failure('marketing_migration_checksum_mismatch');
+        const definition = migrations.find(m => m.version === row.version);
+        if (!definition) throw failure('unknown_marketing_migration');
+        if (row.name !== definition.name || row.checksum !== definition.checksum) throw failure('marketing_migration_checksum_mismatch');
         if (!['applying', 'failed', 'applied'].includes(row.state)) throw failure('invalid_marketing_migration_state');
     }
-    return r[0];
+    return new Map<number, RowDataPacket>(r.map(row => [row.version, row]));
 }
 // Inspect types, nullability, generated expressions, indexes, FKs and CHECKs.
 // CREATE IF NOT EXISTS alone must not adopt an incompatible pre-existing table.
@@ -38,7 +43,7 @@ async function verify(c: PoolConnection, statements: string[]) {
         const match = statement.match(/^CREATE TABLE IF NOT EXISTS (marketing_\w+) \(/);
         if (!match) throw failure('invalid_marketing_migration_definition');
         const table = match[1], lines = statement.split('\n').slice(1, -1).map(s => s.trim().replace(/,$/, ''));
-        const expected = lines.map(s => ({ line: s, match: s.match(/^(\w+) (ENUM\([^)]*\)|(?:VARCHAR|CHAR|DATETIME|DATE|INT|BIGINT|BOOLEAN|JSON)(?:\(\d+\))?(?: UNSIGNED)?)(?: |$)/) })).filter(v => v.match);
+        const expected = lines.map(s => ({ line: s, match: s.match(/^(\w+) (ENUM\([^)]*\)|(?:VARCHAR|CHAR|DATETIME|DATE|INT|BIGINT|BOOLEAN|JSON|TEXT)(?:\(\d+\))?(?: UNSIGNED)?)(?: |$)/) })).filter(v => v.match);
         const [columns] = await c.execute<RowDataPacket[]>('SELECT COLUMN_NAME,COLUMN_TYPE,IS_NULLABLE,GENERATION_EXPRESSION FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name=? ORDER BY ORDINAL_POSITION', [table]);
         if (columns.length !== expected.length) throw failure('marketing_schema_columns_mismatch');
         for (const [i, e] of expected.entries()) {
@@ -68,34 +73,38 @@ async function verify(c: PoolConnection, statements: string[]) {
     }
 }
 export async function marketingMigrationStatus(options: Options = {}) {
-    const d = definition(options.directory), c = await adsPool().getConnection();
+    const migrations = definitions(options.directory), target = options.target ?? marketingMigrationVersion;
+    if (!migrations.some(m => m.version === target)) throw failure('unknown_marketing_target');
+    const c = await adsPool().getConnection();
     try {
-        const row = await audit(c, d.checksum);
-        if (row?.state === 'applied') await verify(c, d.statements);
-        return { version: marketingMigrationVersion, name, checksum: d.checksum, state: row?.state || 'pending', error_code: row?.error_code || null };
+        const rows = await audit(c, migrations);
+        for (const m of migrations) if (rows.get(m.version)?.state === 'applied') await verify(c, m.statements);
+        const d = migrations.find(m => m.version === target)!;
+        return { version: target, name: d.name, checksum: d.checksum, state: rows.get(target)?.state || 'pending', error_code: rows.get(target)?.error_code || null };
     } finally { c.release(); }
 }
-export async function requireMarketingSchema() {
+export async function requireMarketingSchema(minimum = 10) {
+    const c = await adsPool().getConnection().catch(() => { throw failure('marketing_storage_unavailable'); });
     try {
-        if ((await marketingMigrationStatus()).state !== 'applied') throw failure('marketing_migration_required');
+        const rows = await audit(c, definitions());
+        if (rows.get(minimum)?.state !== 'applied') throw failure('marketing_migration_required');
     } catch (e) {
-        if ((e as any).code?.startsWith('marketing_')) throw e;
+        if ((e as any).code?.startsWith('marketing_') || (e as any).code === 'unknown_marketing_migration') throw e;
         throw failure('marketing_storage_unavailable');
-    }
+    } finally { c.release(); }
 }
 export async function migrateMarketingSchema(options: Options = {}) {
-    const d = definition(options.directory);
-    // Status is read-only and validates an existing record before base-schema DDL.
-    await marketingMigrationStatus(options);
-    await migrateAdsSchema(); // initializes an empty DB; never imports ads
+    const migrations = definitions(options.directory), target = options.target ?? marketingMigrationVersion;
+    await marketingMigrationStatus({ ...options, target });
+    await migrateAdsSchema();
     const c = await adsPool().getConnection(), batch = randomUUID();
     let locked = false;
     try {
         const [r] = await c.query<RowDataPacket[]>(`SELECT GET_LOCK(${lockSql},30) AS acquired`);
         if (Number(r[0].acquired) !== 1) throw failure('marketing_migration_lock_timeout');
         locked = true;
-        const row = await audit(c, d.checksum);
-        if (row?.state === 'applied') { await verify(c, d.statements); return { version: marketingMigrationVersion, state: 'applied', changed: false }; }
+        const rows = await audit(c, migrations);
+        if ([...rows.keys()].some(version => version > target)) throw failure('marketing_downgrade_not_supported');
         await c.query(`CREATE TABLE IF NOT EXISTS marketing_schema_migrations (
             version INT NOT NULL PRIMARY KEY,name VARCHAR(100) NOT NULL,checksum CHAR(64) NOT NULL,
             state ENUM('applying','failed','applied') NOT NULL,batch_id CHAR(36) NOT NULL,
@@ -106,23 +115,30 @@ export async function migrateMarketingSchema(options: Options = {}) {
             started_at DATETIME(3) NOT NULL,finished_at DATETIME(3) NULL,error_code VARCHAR(100) NULL,
             PRIMARY KEY(version,batch_id)
         ) ENGINE=InnoDB`);
-        await c.execute(`INSERT INTO marketing_schema_migrations(version,name,checksum,state,batch_id,started_at) VALUES (?,?,?,'applying',?,NOW(3)) ON DUPLICATE KEY UPDATE state='applying',batch_id=VALUES(batch_id),started_at=NOW(3),applied_at=NULL,error_code=NULL`, [marketingMigrationVersion, name, d.checksum, batch]);
-        await c.execute("INSERT INTO marketing_migration_attempts(version,batch_id,state,started_at) VALUES (?,?,'applying',NOW(3))", [marketingMigrationVersion, batch]);
-        try {
-            for (const [index, sql] of d.statements.entries()) { await c.query(sql); await options.afterStatement?.(index); }
-            await verify(c, d.statements);
-            await c.beginTransaction();
-            await c.execute("UPDATE marketing_schema_migrations SET state='applied',applied_at=NOW(3) WHERE version=?", [marketingMigrationVersion]);
-            await c.execute("UPDATE marketing_migration_attempts SET state='applied',finished_at=NOW(3) WHERE version=? AND batch_id=?", [marketingMigrationVersion, batch]);
-            await c.commit();
-        } catch (error) {
-            await c.rollback();
-            const code = (error as any).code?.startsWith('marketing_') ? (error as any).code : 'marketing_migration_step_failed';
-            await c.execute("UPDATE marketing_schema_migrations SET state='failed',error_code=? WHERE version=?", [code, marketingMigrationVersion]);
-            await c.execute("UPDATE marketing_migration_attempts SET state='failed',finished_at=NOW(3),error_code=? WHERE version=? AND batch_id=?", [code, marketingMigrationVersion, batch]);
-            throw failure(code);
+        let changed = false;
+        // Never apply the archived namespace to a fresh database. Existing v3 rows
+        // retain their exact checksum and audit history before advancing to v10/v11.
+        for (const d of migrations.filter(m => m.version <= target && (m.version !== 3 || rows.has(3)))) {
+            if (rows.get(d.version)?.state === 'applied') { await verify(c, d.statements); continue; }
+            changed = true;
+            await c.execute(`INSERT INTO marketing_schema_migrations(version,name,checksum,state,batch_id,started_at) VALUES (?,?,?,'applying',?,NOW(3)) ON DUPLICATE KEY UPDATE state='applying',batch_id=VALUES(batch_id),started_at=NOW(3),applied_at=NULL,error_code=NULL`, [d.version, d.name, d.checksum, batch]);
+            await c.execute("INSERT INTO marketing_migration_attempts(version,batch_id,state,started_at) VALUES (?,?,'applying',NOW(3))", [d.version, batch]);
+            try {
+                for (const [index, sql] of d.statements.entries()) { await c.query(sql); await options.afterStatement?.(index); }
+                await verify(c, d.statements);
+                await c.beginTransaction();
+                await c.execute("UPDATE marketing_schema_migrations SET state='applied',applied_at=NOW(3) WHERE version=?", [d.version]);
+                await c.execute("UPDATE marketing_migration_attempts SET state='applied',finished_at=NOW(3) WHERE version=? AND batch_id=?", [d.version, batch]);
+                await c.commit();
+            } catch (error) {
+                await c.rollback();
+                const code = (error as any).code?.startsWith('marketing_') ? (error as any).code : 'marketing_migration_step_failed';
+                await c.execute("UPDATE marketing_schema_migrations SET state='failed',error_code=? WHERE version=?", [code, d.version]);
+                await c.execute("UPDATE marketing_migration_attempts SET state='failed',finished_at=NOW(3),error_code=? WHERE version=? AND batch_id=?", [code, d.version, batch]);
+                throw failure(code);
+            }
         }
-        return { version: marketingMigrationVersion, state: 'applied', changed: true, batch_id: batch };
+        return { version: target, state: 'applied', changed, batch_id: batch };
     } finally {
         if (locked) await c.query(`SELECT RELEASE_LOCK(${lockSql})`).catch(() => undefined);
         c.release();

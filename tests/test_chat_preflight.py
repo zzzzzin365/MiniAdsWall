@@ -87,7 +87,7 @@ class ChatPreflightTest(unittest.IsolatedAsyncioTestCase):
         knowledge_context = AsyncMock()
         with patch.object(api, "_build_ads_context", ads_context), patch.object(
             api,
-            "_build_knowledge_context",
+            "_prepare_knowledge_context",
             knowledge_context,
         ):
             response = await api.chat(
@@ -126,8 +126,8 @@ class ChatPreflightTest(unittest.IsolatedAsyncioTestCase):
             AsyncMock(return_value=("ads context", ["ads_summary"])),
         ) as ads_context, patch.object(
             api,
-            "_build_knowledge_context",
-            AsyncMock(return_value=("knowledge context", True)),
+            "_prepare_knowledge_context",
+            AsyncMock(return_value=api.KnowledgeContext("knowledge context", True)),
         ) as knowledge_context:
             response = await api.chat(
                 api.ChatRequest(
@@ -164,7 +164,7 @@ class ChatPreflightTest(unittest.IsolatedAsyncioTestCase):
         memory = FakeMemory()
         api._memory = memory
         with patch.object(api, "_build_ads_context", AsyncMock(return_value=("", []))), patch.object(
-            api, "_build_knowledge_context", AsyncMock(return_value=("", False))
+            api, "_prepare_knowledge_context", AsyncMock(return_value=api.KnowledgeContext())
         ):
             response = await api.chat(api.ChatRequest(message="确认", user_id="operator"))
         self.assertEqual(response.decision, "reject")

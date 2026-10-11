@@ -1,0 +1,136 @@
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-y201rg2p'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:42,662 [WARNING] asyncio: Executing <Task pending name='Task-7' coro=<HostingAPITests.asyncSetUp() running at /Users/admin/MiniAdsWall/tests/test_hosting_api.py:32> wait_for=<Future pending cb=[Task.task_wakeup()] created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.104 seconds
+2026-10-10 16:21:42,776 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:42,777 [INFO] httpx: HTTP Request: GET http://test/sessions "HTTP/1.1 401 Unauthorized"
+2026-10-10 16:21:42,792 [INFO] httpx: HTTP Request: DELETE http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:42,801 [INFO] httpx: HTTP Request: GET http://test/sessions "HTTP/1.1 401 Unauthorized"
+2026-10-10 16:21:42,943 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:42,970 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:21:43,127 [INFO] httpx: HTTP Request: POST http://test/sessions/260556228097450400/runs "HTTP/1.1 202 Accepted"
+2026-10-10 16:21:43,152 [INFO] httpx: HTTP Request: POST http://test/runs/3027888544287661873/cancel "HTTP/1.1 202 Accepted"
+2026-10-10 16:21:43,195 [INFO] httpx: HTTP Request: GET http://test/runs/3027888544287661873/events "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,211 [INFO] httpx: HTTP Request: GET http://test/sessions/260556228097450400/history "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,318 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,336 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:21:43,367 [INFO] httpx: HTTP Request: POST http://test/sessions/4226244262596621389/runs "HTTP/1.1 202 Accepted"
+2026-10-10 16:21:43,378 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,385 [INFO] httpx: HTTP Request: GET http://test/runs/2203524768341308043 "HTTP/1.1 404 Not Found"
+2026-10-10 16:21:43,392 [INFO] httpx: HTTP Request: GET http://test/sessions "HTTP/1.1 403 Forbidden"
+2026-10-10 16:21:43,471 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,484 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:21:43,511 [INFO] httpx: HTTP Request: POST http://test/sessions/34728983971047896/runs "HTTP/1.1 202 Accepted"
+2026-10-10 16:21:43,527 [INFO] httpx: HTTP Request: POST http://test/sessions/34728983971047896/runs "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 16:21:43,596 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,600 [INFO] httpx: HTTP Request: GET http://test/health "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,611 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:21:43,620 [INFO] httpx: HTTP Request: POST http://test/sessions/4049913369469064209/runs "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 16:21:43,629 [INFO] httpx: HTTP Request: POST http://test/sessions/4049913369469064209/runs "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 16:21:43,702 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-yn0qbj7i'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:43,798 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,812 [INFO] httpx: HTTP Request: POST http://test/sessions "HTTP/1.1 201 Created"
+2026-10-10 16:21:43,837 [INFO] httpx: HTTP Request: POST http://test/sessions/3595899989075359387/runs "HTTP/1.1 202 Accepted"
+2026-10-10 16:21:43,843 [INFO] httpx: HTTP Request: GET http://test/runs/3478239155682346321 "HTTP/1.1 401 Unauthorized"
+2026-10-10 16:21:43,854 [INFO] httpx: HTTP Request: POST http://test/auth/session "HTTP/1.1 200 OK"
+2026-10-10 16:21:43,864 [INFO] httpx: HTTP Request: GET http://test/sessions/3595899989075359387/history "HTTP/1.1 200 OK"
+2026-10-10 16:21:44,075 [INFO] core.skill_loader: 
+================ MiniAdsWall Agent Skills Loaded ================
+目录: /Users/admin/MiniAdsWall/skills
+数量: 3
+1. 广告投放运营规范
+   agents: ads
+   keywords: 广告, 投放, 出价, 点击, 点击率, CTR, 素材, 创意, ...
+   path: /Users/admin/MiniAdsWall/skills/ads_optimization/SKILL.md
+2. 通用客服接待规范
+   agents: general
+   keywords: 你好, 您好, 咨询, 帮助, 客服, 订单, 售后, 活动, ...
+   path: /Users/admin/MiniAdsWall/skills/general_customer_service/SKILL.md
+3. 技术支持处理规范
+   agents: technical
+   keywords: 报错, 错误, 异常, 崩溃, 卡顿, 无法登录, 登录失败, 接口, ...
+   path: /Users/admin/MiniAdsWall/skills/technical_support/SKILL.md
+========================================================
+2026-10-10 16:21:44,220 [WARNING] asyncio: Executing <Task pending name='Task-106' coro=<PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter() running at /Users/admin/MiniAdsWall/tests/test_hosting.py:187> wait_for=<Future pending cb=[Task.task_wakeup()] created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:428> cb=[_run_until_complete_cb() at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/base_events.py:181] created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.149 seconds
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-egjgx14w'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-5l6p9yu_'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-u_neayyf'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-inrk0tof'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-bp6qaq8m'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-rce_6q7j'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:44,344 [INFO] core.skill_loader: Skills 已注入: agent=ads matched=广告投放运营规范(keywords=广告) message='分析当前广告表现，给出三个优化动作'
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-edln0uhc'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:44,514 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-10 16:21:44,515 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-skw17320'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-y6a7nrci'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-87y_axl6'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-elei7142'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-gvxp5_cg'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-9i3xbc4p'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-o9hamt9v'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-yuhsh6i9'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-rthps44c'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-3fvnvf0z'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-2170njak'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-hofpaq1h'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-yefi7bnc'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-ak1epvec'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-g6sxd3jz'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-hto29468'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:46,108 [ERROR] hosting.worker: run=1149003791973227558 cleanup/persistence incomplete; recovery will retry
+Traceback (most recent call last):
+  File "/Users/admin/MiniAdsWall/hosting/worker.py", line 101, in execute
+    if self.sandbox: await self.sandbox.cleanup(r['id'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/MiniAdsWall/tests/test_hosting.py", line 149, in cleanup
+    async def cleanup(self,rid): raise RuntimeError('cannot confirm death')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cannot confirm death
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-irkgs5bw'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:46,221 [WARNING] hosting.worker: run=1604281509982689295 failed: ValueError
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-qzff1qr8'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-0xpfaldk'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-yf5cyk0m'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-0i144gtp'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-o3pzknok'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-4w_zey69'>
+  _warnings.warn(warn_message, ResourceWarning)
+/Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/tempfile.py:934: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/var/folders/yb/qd2mvkfj4q1_60f7f_f30v_r0000gn/T/agent-repo-98zd1n90'>
+  _warnings.warn(warn_message, ResourceWarning)
+2026-10-10 16:21:47,695 [WARNING] asyncio: Executing <Task finished name='Task-167' coro=<_chat_impl() done, defined at /Users/admin/MiniAdsWall/api/main.py:398> result=ChatResponse(...tools_used=[]) created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/tasks.py:680> took 0.604 seconds
+2026-10-10 16:21:47,701 [WARNING] api.main: ACTION_PERMISSION_MAP 配置无效，按无权限处理: Expecting value: line 1 column 1 (char 0)
+----------------------------------------------------------------------
+Ran 39 tests in 5.411s
+
+OK

@@ -29,9 +29,11 @@ from fastapi.responses import JSONResponse
 from api.generation import router as generation_router
 from core.faq_cache import configured_cache
 from core.model_gate import close_model_gate, ModelBusy
+from core.rag_evidence import (EvidenceConfig, KnowledgeContext,
+                               blocked_response, check_evidence, prepare_chunks, render_knowledge)
 from fastapi.middleware.cors import CORSMiddleware
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 load_dotenv()
 
@@ -113,6 +115,7 @@ async def lifespan(app: FastAPI):
     from monitor.performance_monitor import PerformanceMonitor
     from core.skill_loader import SkillManager
 
+    EvidenceConfig.from_env()
     cfg = _anthropic_cfg()
     logger.info(f"模型: {cfg['model']}  base_url: {cfg.get('base_url', '(官方)')}")
 
@@ -330,6 +333,13 @@ class ChatRequest(BaseModel):
     conv_id:     Optional[str] = None
     ads:         Optional[List[Dict[str, Any]]] = Field(default=None,max_length=100)
     ad_context: Optional[Dict[str, Any]] = None
+
+    @field_validator('ad_context')
+    @classmethod
+    def bounded_ad_context(cls, value):
+        if value is not None and (value.get('version') != 1 or not isinstance(value.get('items'), list) or len(value['items']) > 100 or len(json.dumps(value, ensure_ascii=False).encode()) > 65536):
+            raise ValueError('invalid_ad_context')
+        return value
     confirmation_id: Optional[str] = None
 
 
@@ -349,6 +359,7 @@ class ChatResponse(BaseModel):
     latency_ms:  float
     knowledge_used: bool = False
     tools_used: List[str] = Field(default_factory=list)
+    knowledge_evidence: Optional[Dict[str, Any]] = None
 
 
 # ── 路由 ──────────────────────────────────────────────────────────────────────
@@ -395,6 +406,7 @@ async def _chat_impl(req: ChatRequest):
     """
     if _orchestrator is None or _memory is None:
         raise HTTPException(503, "服务未就绪")
+    chat_started = time.monotonic()
 
     from agents.agent_orchestrator import Request as OrcReq
     from memory.conversation_memory import MsgRole
@@ -451,21 +463,45 @@ async def _chat_impl(req: ChatRequest):
     result = await _orchestrator.preflight(orch_req)
     ads_tools_used: List[str] = []
     knowledge_used = False
+    knowledge = KnowledgeContext()
+    tool_records: Dict[str, Any] = {}
     if result is None:
         # 4. 只有 execute 状态才能构建业务上下文并进入 Agent。
         ads_text, ads_tools_used = await _build_ads_context(
             orch_req.message,
             (req.ad_context.get('items') or []) if req.ad_context else req.ads or [],
             req.ad_context,
+            tool_records=tool_records,
         )
-        knowledge_text, knowledge_used = await _build_knowledge_context(
+        business_data = {"tool_context": ads_text} if ads_tools_used else {}
+        if orch_req.intent and orch_req.intent.value == "creative_generation":
+            business_data["creative_brief"] = orch_req.message
+        knowledge = await _prepare_knowledge_context(
             orch_req.message,
+            business_data=business_data,
+            request_id=orch_req.request_id,
         )
-        context_parts = [orch_req.context, ads_text, knowledge_text]
-        orch_req.context = "\n\n".join(
-            part for part in context_parts if part
-        )
-        result = await _orchestrator.run(orch_req)
+        if knowledge.evidence and knowledge.evidence.status in {"insufficient", "unavailable"}:
+            from agents.agent_orchestrator import AgentType, OrchestratorResult
+            from core.action_decision import DecisionType
+            result = OrchestratorResult(
+                request_id=orch_req.request_id,
+                response=blocked_response(knowledge.evidence, tool_records),
+                agent_type=AgentType.GENERAL, intent=orch_req.intent,
+                decision=DecisionType.CLARIFY,
+                decision_reason="rag_evidence_" + knowledge.evidence.status,
+                missing_fields=knowledge.evidence.missing_information,
+                latency_ms=knowledge.evidence.latency_ms,
+            )
+        else:
+            knowledge_used = knowledge.used
+            context_parts = [orch_req.context, ads_text, knowledge.text]
+            # This instruction also applies when business data alone is sufficient.
+            if knowledge.evidence and knowledge.evidence.status == "sufficient":
+                context_parts.append("只依据本轮已检查的知识片段和业务工具数据陈述事实；"
+                                     "历史回答不证明事实。不要编造未提供的指标、收益或项目规则。")
+            orch_req.context = "\n\n".join(part for part in context_parts if part)
+            result = await _orchestrator.run(orch_req)
 
     # The current Agent has analysis tools only, not an authenticated business mutation tool.
     # A model response must never be presented as a completed ad change.
@@ -496,6 +532,7 @@ async def _chat_impl(req: ChatRequest):
             "risk_level": result.risk_level.value,
             "action_name": result.action_name or "",
             "confirmed": result.confirmed,
+            "knowledge_evidence": knowledge.evidence.to_dict() if knowledge.evidence else None,
         },
     )
 
@@ -516,13 +553,15 @@ async def _chat_impl(req: ChatRequest):
         action_name=result.action_name,
         confirmed=result.confirmed,
         escalated=result.escalated,
-        latency_ms=round(result.latency_ms, 1),
+        latency_ms=round((time.monotonic() - chat_started) * 1000, 1),
         knowledge_used=knowledge_used,
         tools_used=ads_tools_used + (["knowledge_search"] if knowledge_used else []),
+        knowledge_evidence=knowledge.evidence.to_dict() if knowledge.evidence else None,
     )
 
 
-async def _build_ads_context(message: str, ads: List[Dict[str, Any]], ad_context: Optional[Dict[str, Any]] = None) -> tuple[str, List[str]]:
+async def _build_ads_context(message: str, ads: List[Dict[str, Any]], ad_context: Optional[Dict[str, Any]] = None,
+                             *, tool_records: Optional[Dict[str, Any]] = None) -> tuple[str, List[str]]:
     """
     为 AdsAgent 构建结构化广告工具上下文。
 
@@ -545,6 +584,8 @@ async def _build_ads_context(message: str, ads: List[Dict[str, Any]], ad_context
     if summary.success:
         tools_used.append("ads_summary")
         parts.append(f"ads_summary: {_compact_tool_data(summary.data)}")
+        if tool_records is not None:
+            tool_records["ads_summary"] = summary.data
 
     performance = await _tool_manager.call(
         "ad_performance_search",
@@ -555,6 +596,8 @@ async def _build_ads_context(message: str, ads: List[Dict[str, Any]], ad_context
     if performance.success:
         tools_used.append("ad_performance_search")
         parts.append(f"ad_performance_search: {_compact_tool_data(performance.data)}")
+        if tool_records is not None:
+            tool_records["ad_performance_search"] = performance.data
 
     if _should_simulate_bid(message):
         simulation = await _tool_manager.call(
@@ -566,6 +609,8 @@ async def _build_ads_context(message: str, ads: List[Dict[str, Any]], ad_context
         if simulation.success:
             tools_used.append("bid_simulation")
             parts.append(f"bid_simulation: {_compact_tool_data(simulation.data)}")
+            if tool_records is not None:
+                tool_records["bid_simulation"] = simulation.data
 
     if len(parts) == 1:
         return "", []
@@ -591,46 +636,35 @@ def _compact_tool_data(data: Any, max_chars: int = 1800) -> str:
     return text[:max_chars].rstrip() + "..."
 
 
-async def _build_knowledge_context(message: str, top_k: int = 3) -> tuple[str, bool]:
-    """
-    为 /chat 主链路构建 RAG 知识上下文。
-
-    这里复用 MCPToolManager 的查询改写、并行召回、重排、fallback 能力。
-    """
-    if _tool_manager is None:
-        return "", False
+async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
+                                     business_data: Optional[Dict[str, Any]] = None,
+                                     request_id: Optional[str] = None) -> KnowledgeContext:
+    """Single local recall, then bounded evidence checks before generation."""
     if not _should_use_knowledge(message):
-        return "", False
+        return KnowledgeContext()
+    config = EvidenceConfig.from_env()
+    if _tool_manager is None:
+        decision = await check_evidence(None, "", message, [], retrieval_error="retrieval_unavailable",
+                                        request_id=request_id, config=config)
+        return KnowledgeContext(evidence=decision)
+    chunks, retrieval_error = [], None
     try:
-        # Chat uses one local retrieval; query rewriting/reranking each adds a
-        # remote model call. Advanced search keeps its separate rewrite API.
         result = await asyncio.wait_for(
             _tool_manager.call("knowledge_search", {"query": message, "top_k": top_k}),
             timeout=3.0,
         )
-        if not result.success or not isinstance(result.data, list) or not result.data:
-            return "", False
-
-        parts = ["[知识库检索结果]"]
-        used = False
-        for i, item in enumerate(result.data[:top_k], start=1):
-            if not isinstance(item, dict):
-                continue
-            title = str(item.get("title", "未命名文档"))
-            content = str(item.get("content", "")).strip()
-            score = item.get("score", "")
-            if not content:
-                continue
-            used = True
-            parts.append(f"{i}. 标题: {title}\n   相关度: {score}\n   内容: {content[:600]}")
-
-        if not used:
-            return "", False
-        parts.append("请优先依据以上知识库内容回答；如果知识库内容不足，再结合通用客服能力说明。")
-        return "\n".join(parts), True
-    except Exception as ex:
-        logger.warning(f"构建知识库上下文失败: {ex}")
-        return "", False
+        if not result.success or not isinstance(result.data, list) or any(isinstance(x, dict) and x.get("fallback") for x in result.data):
+            retrieval_error = "retrieval_failed"
+        else:
+            chunks = prepare_chunks(result.data, top_k)
+    except Exception:
+        retrieval_error = "retrieval_failed"
+    decision = await check_evidence(_tool_manager._client, _tool_manager._model, message, chunks,
+                                    business_data, retrieval_error=retrieval_error, request_id=request_id, config=config)
+    if decision.status in {"insufficient", "unavailable"}:
+        return KnowledgeContext(evidence=decision)
+    retained = [x for x in chunks if x["id"] in decision.retained_ids]
+    return KnowledgeContext(render_knowledge(retained, checked=decision.status != "disabled"), bool(retained), decision)
 
 
 def _should_use_knowledge(message: str) -> bool:
@@ -642,7 +676,7 @@ def _should_use_knowledge(message: str) -> bool:
     if msg in greetings:
         return False
     business_keywords = [
-        "广告", "投放", "出价", "点击", "点击率", "素材", "创意", "文案", "预算", "竞价", "排名",
+        "广告", "投放", "出价", "加价", "降价", "收益", "转化", "成本", "佣金", "点击", "点击率", "素材", "创意", "文案", "预算", "竞价", "排名",
         "退款", "订单", "物流", "配送", "发票", "扣款", "支付", "账单", "订阅",
         "登录", "报错", "错误", "崩溃", "会员", "积分", "账户", "密码", "地址",
         "ad", "ads", "campaign", "bid", "creative", "ctr",
@@ -673,8 +707,12 @@ async def search(query: str, top_k: int = 5):
     """
     if _tool_manager is None:
         raise HTTPException(503, "服务未就绪")
+    if not 1 <= top_k <= 20:
+        raise HTTPException(422, "top_k 必须在 1 到 20 之间")
     result = await _tool_manager.search_with_rewrite("knowledge_search", query, top_k=top_k)
-    return {"query": query, "results": result.data, "reranked": result.reranked}
+    if result.evidence and result.evidence["status"] == "unavailable":
+        raise HTTPException(503, detail={"message": "证据检查暂时不可用", "evidence": result.evidence})
+    return {"query": query, "results": result.data, "reranked": result.reranked, "evidence": result.evidence}
 
 
 class DocInput(BaseModel):

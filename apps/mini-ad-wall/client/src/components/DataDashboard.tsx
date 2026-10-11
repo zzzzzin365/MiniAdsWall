@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { lazy, Suspense, useState, useMemo } from 'react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -15,6 +15,9 @@ import {
 import { Bar, Scatter, Line } from 'react-chartjs-2';
 import { Ad } from '../types';
 import AnalystImage from '../../Analyst.png';
+
+const MarketingDashboard = lazy(() => import('./MarketingDashboard'));
+const initialMetricsView = () => new URLSearchParams(window.location.search).get('marketing') === '1';
 
 ChartJS.register(
     CategoryScale,
@@ -42,6 +45,8 @@ const PRICE_RANGES = [
 ];
 
 const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
+    const [showMetrics, setShowMetrics] = useState(initialMetricsView);
+    const [metricsOpened, setMetricsOpened] = useState(initialMetricsView);
     const [selectedAd, setSelectedAd] = useState<Ad | null>(null);
     const [highlightedRange, setHighlightedRange] = useState<number | null>(null);
 
@@ -506,19 +511,17 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
         return { totalAds: ads.length, avgPrice, totalClicks, maxPrice };
     }, [ads]);
 
-    if (ads.length === 0) {
-        return (
-            <div className="data-dashboard">
-                <div className="dashboard-empty">
-                    <p>暂无广告数据，请先创建广告</p>
+    return (
+        <section className="data-dashboard" id="data-analysis" aria-labelledby="data-analysis-title">
+            <div className="dashboard-heading">
+                <h2 id="data-analysis-title">数据分析</h2>
+                <div className="dashboard-views" role="group" aria-label="分析视图">
+                    <button type="button" aria-pressed={!showMetrics} aria-controls="ad-overview" onClick={() => setShowMetrics(false)}>广告概览</button>
+                    <button type="button" aria-pressed={showMetrics} aria-controls="marketing-analysis" onClick={() => { setMetricsOpened(true); setShowMetrics(true); }}>投放效果</button>
                 </div>
             </div>
-        );
-    }
-
-    return (
-        <div className="data-dashboard">
-
+            <div className="analysis-panel" id="ad-overview" hidden={showMetrics}>
+            {ads.length === 0 ? <div className="dashboard-empty"><p>暂无广告数据，请先创建广告</p></div> : <>
             {/* 统计概览 */}
             <div className="dashboard-stats">
                 <div className="dashboard-stat-item">
@@ -590,7 +593,12 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
                     <div className="chart-hint">💡 悬停查看详情，点击选中广告</div>
                 </div>
             </div>
-        </div>
+            </>}
+            </div>
+            <div className="analysis-panel" id="marketing-analysis" hidden={!showMetrics}>
+                {metricsOpened ? <Suspense fallback={<p role="status">正在加载投放效果…</p>}><MarketingDashboard /></Suspense> : null}
+            </div>
+        </section>
     );
 };
 

@@ -1,0 +1,61 @@
+TAP version 13
+# Subtest: recall contract rejects invalid filters and distinguishes missing attributes
+ok 1 - recall contract rejects invalid filters and distinguishes missing attributes
+  ---
+  duration_ms: 2.681625
+  type: 'test'
+  ...
+# Subtest: bitmap IN/NOT IN, immutable query roots, tombstones and exact decimal ranking
+ok 2 - bitmap IN/NOT IN, immutable query roots, tombstones and exact decimal ranking
+  ---
+  duration_ms: 2.220166
+  type: 'test'
+  ...
+# Subtest: deterministic randomized bitmap results equal a row-by-row reference
+not ok 3 - deterministic randomized bitmap results equal a row-by-row reference
+  ---
+  duration_ms: 1597398.932041
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs:91:1'
+  failureType: 'testCodeFailure'
+  error: 'query_budget_exceeded'
+  code: 'query_budget_exceeded'
+  stack: |-
+    failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+    check (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js:134:47)
+    source (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js:219:29)
+    source.next (<anonymous>)
+    top (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/tree.js:107:16)
+    /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/partition.js:225:50
+    Generator.next (<anonymous>)
+    /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs:137:31
+    Array.flatMap (<anonymous>)
+    TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs:137:10)
+  ...
+# Subtest: query budgets reject work instead of returning a truncated successful result
+ok 4 - query budgets reject work instead of returning a truncated successful result
+  ---
+  duration_ms: 1.115209
+  type: 'test'
+  ...
+# Subtest: score bands skip correlated nonmatching prefixes and retain exact snapshot ranking
+ok 5 - score bands skip correlated nonmatching prefixes and retain exact snapshot ranking
+  ---
+  duration_ms: 1052.542834
+  type: 'test'
+  ...
+# Subtest: failed worker queries free their handles immediately
+ok 6 - failed worker queries free their handles immediately
+  ---
+  duration_ms: 1250.771167
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 5
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1599859.684834

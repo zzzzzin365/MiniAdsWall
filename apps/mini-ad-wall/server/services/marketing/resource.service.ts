@@ -28,7 +28,7 @@ export async function createCampaign(principal: string, environment: string, inp
     const [p] = await c.execute<RowDataPacket[]>('SELECT id FROM marketing_products WHERE id=? AND brand_id=? AND environment=?', [input.product_id, input.brand_id, environment]);
     if (!p.length) throw resourceError('product_scope_mismatch', 422, '商品不属于该品牌或环境');
     const id = randomUUID();
-    await c.execute(`INSERT INTO marketing_campaigns(id,brand_id,environment,product_id,name,objective,starts_at,ends_at,created_by) VALUES (?,?,?,?,?,?,?,?,?)`, [id, input.brand_id, environment, input.product_id, input.name, input.objective, new Date(input.starts_at), new Date(input.ends_at), principal]);
+    await c.execute(`INSERT INTO marketing_campaigns(id,brand_id,environment,product_id,name,objective,starts_at,ends_at,created_by,created_at) VALUES (?,?,?,?,?,?,?,?,?,UTC_TIMESTAMP(3))`, [id, input.brand_id, environment, input.product_id, input.name, input.objective, new Date(input.starts_at), new Date(input.ends_at), principal]);
     const result = iso(await campaign(c, id, environment));
     recordOperationChange(null, result);
     return result;
@@ -47,7 +47,7 @@ export async function createCreative(principal: string, environment: string, inp
     const [clock] = await c.query<RowDataPacket[]>('SELECT UTC_TIMESTAMP(3) AS now');
     if (new Date(input.authorization_expires_at).getTime() <= clock[0].now.getTime()) throw resourceError('authorization_expired', 422, '素材授权已过期');
     const id = randomUUID();
-    await c.execute(`INSERT INTO marketing_creatives(id,brand_id,environment,campaign_id,ad_id,title,asset_ref,asset_hash,landing_url,authorization_ref,authorization_expires_at,created_by) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`, [id, input.brand_id, environment, input.campaign_id, input.ad_id, input.title, input.asset_ref, input.asset_hash, input.landing_url, input.authorization_ref, new Date(input.authorization_expires_at), principal]);
+    await c.execute(`INSERT INTO marketing_creatives(id,brand_id,environment,campaign_id,ad_id,title,asset_ref,asset_hash,landing_url,authorization_ref,authorization_expires_at,created_by,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,UTC_TIMESTAMP(3))`, [id, input.brand_id, environment, input.campaign_id, input.ad_id, input.title, input.asset_ref, input.asset_hash, input.landing_url, input.authorization_ref, new Date(input.authorization_expires_at), principal]);
     // Serialize bindings on the owner row; retain historical link revisions.
     // Never replace an active link with a draft while its campaign is running.
     const [links] = await c.execute<RowDataPacket[]>('SELECT * FROM marketing_ad_links WHERE ad_id=? ORDER BY revision DESC LIMIT 1', [input.ad_id]);
@@ -56,7 +56,7 @@ export async function createCreative(principal: string, environment: string, inp
         if (linked.status === 'active') throw resourceError('active_ad_link', 409, '广告正在活动中使用，请先暂停原活动再绑定新素材');
         await c.execute('UPDATE marketing_ad_links SET is_current=FALSE WHERE ad_id=? AND is_current=TRUE', [input.ad_id]);
     }
-    await c.execute(`INSERT INTO marketing_ad_links(ad_id,revision,brand_id,environment,campaign_id,creative_id,creative_version) VALUES (?,?,?,?,?,?,1)`, [input.ad_id, (links[0]?.revision || 0) + 1, input.brand_id, environment, input.campaign_id, id]);
+    await c.execute(`INSERT INTO marketing_ad_links(ad_id,revision,brand_id,environment,campaign_id,creative_id,creative_version,effective_at) VALUES (?,?,?,?,?,?,1,UTC_TIMESTAMP(3))`, [input.ad_id, (links[0]?.revision || 0) + 1, input.brand_id, environment, input.campaign_id, id]);
     const result = iso(await creative(c, id, environment));
     recordOperationChange(null, result);
     return result;

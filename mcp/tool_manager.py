@@ -23,6 +23,7 @@ from typing import Any, Callable, Dict, List, Optional
 
 from anthropic import AsyncAnthropic
 from core.model_client import create_model_client
+from core.rag_evidence import check_evidence, prepare_chunks
 
 logger = logging.getLogger(__name__)
 
@@ -44,6 +45,7 @@ class ToolResult:
     cached:         bool = False
     latency_ms:     float = 0.0
     reranked:       bool = False   # 是否经过重排
+    evidence:       Optional[Dict[str, Any]] = None
 
 
 @dataclass
@@ -305,17 +307,36 @@ class MCPToolManager:
         for r in results:
             if isinstance(r, ToolResult) and r.success and isinstance(r.data, list):
                 for item in r.data:
-                    key = hashlib.md5(str(item).encode()).hexdigest()
+                    if tool_name == "knowledge_search" and isinstance(item, dict):
+                        normalized = prepare_chunks([item], 1)
+                        if not normalized:
+                            continue
+                        key = normalized[0]["id"]
+                    else:
+                        key = hashlib.md5(str(item).encode()).hexdigest()
                     if key not in seen:
                         seen.add(key)
                         merged.append(item)
 
         if not merged:
-            return ToolResult(success=False, data=[], tool_name=tool_name, error="所有子查询均无结果")
+            if tool_name != "knowledge_search":
+                return ToolResult(success=False, data=[], tool_name=tool_name, error="所有子查询均无结果")
+            available = any(isinstance(r, ToolResult) and r.success and isinstance(r.data, list)
+                            and not any(isinstance(x, dict) and x.get("fallback") for x in r.data) for r in results)
+            decision = await check_evidence(self._client, self._model, query, [],
+                                            retrieval_error=None if available else "retrieval_failed")
+            return ToolResult(success=decision.status != "unavailable", data=[], tool_name=tool_name,
+                              error=decision.error_code, evidence=decision.to_dict())
 
         # 4. 重排：用 LLM 对合并结果按相关性打分，取 Top-K
         reranked = await self._rerank(query, merged, top_k)
-        return ToolResult(success=True, data=reranked, tool_name=tool_name, reranked=True)
+        if tool_name != "knowledge_search":
+            return ToolResult(success=True, data=reranked, tool_name=tool_name, reranked=True)
+        chunks = prepare_chunks(reranked, top_k)
+        decision = await check_evidence(self._client, self._model, query, chunks)
+        allowed = set(decision.retained_ids) if decision.status in {"sufficient", "insufficient", "disabled"} else set()
+        return ToolResult(success=decision.status != "unavailable", data=[x for x in chunks if x["id"] in allowed],
+                          tool_name=tool_name, reranked=True, error=decision.error_code, evidence=decision.to_dict())
 
     # ── 结果重排（解决召回不好）──────────────────────────────────────────────
 

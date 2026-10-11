@@ -9,6 +9,10 @@ MiniAdsWall Agent 在这条最小完整业务链路上，引入广告领域 Agen
 MiniAddwall + MiniAdsWall Agent 是一个一个基于 React/Koa 的全栈广告管理系统，连接至 FastAPI 多智能体 AI 后端。
 前端为MiniAddwall，保留了广告增删改查、视频上传、点击追踪、排序、仪表盘以及创意生成功能。而MiniAdsWall Agent增加了代理层，包含广告代理路由、结构化广告分析工具、RAG知识检索、记忆、技能、监控与评估功能。
 
+营销效果链路当前完成 CP00–CP04：可信曝光/点击、支付/退款、费用账本、来源核对，以及独立 MySQL outbox Worker 的最后点击归因、日聚合与显式重建。已增加 CTR/CVR/CPA/CPC/CPM/ROAS 等统一报表、不可变快照和同页效果指标（数据分析 → 投放效果），并提供单独的 eCPM/LTV 假设估算；大范围异步导出和 S1 整体验收尚未完成。默认营销入口关闭；部署需执行营销 010–013 迁移，并使用专用 Worker 数据库账号。指标口径见 [业务指标与报表](docs/marketing-reports.md)，运行边界见 [营销聚合说明](docs/marketing-aggregation.md)，阶段状态见 [整体业务向优化coding plan](docs/整体业务向优化coding%20plan.md)。本地模拟验收不代表真实营销收益或生产吞吐。
+
+面试投屏：双击根目录 `演示.command`，或执行 `./demo.sh`，检查并启动本机演示服务后自动打开网页。`./demo.sh status` 查看状态，`./demo.sh stop` 只停止启动器创建的进程。首次配置与功能范围见 [面试演示说明](docs/interview-demo.md)。
+
 ## Repository Layout
 
 ```text
@@ -22,6 +26,7 @@ MiniAddwall + MiniAdsWall Agent 是一个一个基于 React/Koa 的全栈广告�
 ├── core/                          # Intent recognizer and Skill loader
 ├── mcp/                           # Knowledge and ad tools
 ├── hosting/                       # Durable Agent API, Worker, MySQL and isolated tools
+├── marketing/aggregation/         # Marketing attribution, daily metrics and rebuild worker
 ├── migrations/                    # Initial MySQL hosting schema
 ├── memory/                        # Conversation memory
 ├── monitor/                       # Runtime monitoring

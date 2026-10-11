@@ -1,8 +1,9 @@
 # MiniAdsWall 多属性广告召回 SDD
 
-- 版本：0.1
+- 版本：0.2
 - 日期：2026-10-10
-- 状态：设计完成；代码、迁移与容量验收尚未完成。
+- 状态：单实例代码与增量迁移已落地；功能验证通过，正式容量验收未完成。
+- 实施：[实现与运行](ads-recall-implementation.md)；证据：[验证记录](ads-recall-validation.md)。
 - 目标：在百万至千万条广告上执行多属性 `IN / NOT IN` 筛选，并有界地返回排名靠前的广告。
 - 技术路线：MySQL 保存业务事实；倒排索引以 Roaring Bitmap 保存广告 ID 集合；独立召回服务执行集合运算和 Top-K。
 
@@ -18,7 +19,7 @@
 
 ## 2. 源码基线与缺口
 
-基线为当前工作区，包括尚未提交的 MySQL 改造，不等于已部署状态。
+以下为设计前的源码基线和当时缺口。当前实现状态见实施文档；本地代码不等于已部署状态。
 
 | 位置 | 当前行为 | 所需变化 |
 | --- | --- | --- |
@@ -192,7 +193,9 @@ query_hash 覆盖规范化条件、missing 语义、排序规则和服务端授�
 每个分区根据候选数量选择两条路径：
 
 - 候选 ≤ 5,000：迭代候选，过滤投放时间，用大小为 K 的最小堆得到局部 Top-K，成本约 O(C log K)。
-- 候选 > 5,000：按有序排名结构从高到低遍历，测试候选位图 membership 与投放时间，找到 K 个后停止；单分区最多访问 20,000 个排名条目。
+- 候选 > 5,000：先将候选与分数分桶位图相交，跳过没有候选的整个分数区间；在非空区间内从排名树定位边界，按精确分数/doc_id 遍历并过滤投放时间，找到 K 个后停止；单分区累计最多访问 20,000 个排名条目。
+
+分桶使用精确固定小数整数的二进制长度及最高 8 位确定单调区间，不用浮点数排序。每条启用广告额外属于一个分桶位图；修改分数时移出旧桶、加入新桶。查询开始克隆分桶与候选的交集，并固定排名根，续取不读取已更新的共享桶。分桶用于跳过不可能命中的范围，桶内仍按原精确排名取结果，不把桶编号当作分数。临时交集也计入 8 MiB 预算。
 
 两条路径都返回有序流以及继续读取的位置。协调器做多路合并，按排名请求后续条目。排名扫描达到上限但仍无法证明 Top-K 完整时，返回 422 query_budget_exceeded；不以“找到一些广告”替代完整排名。多值 IN 的去重在位图阶段完成。
 
@@ -230,7 +233,7 @@ limit 默认 50、最大 100。第一轮每个分区最多提供 limit 条 ID/�
 
 创建/更新/删除继续经过现有 mutate 与 executeOperation。新增索引事件写在其事务内，事件 payload 为完整索引文档快照，包含 doc_id、index_revision、属性 term_id、enabled、时间、精确排名分数及删除标记，不含正文和视频。
 
-统一锁序：操作幂等记录（点击没有）→确定稳定 doc_id/shard_id→分区序号行→广告行→recall_docs/属性行→outbox/审计。创建可先插入仅本事务可见的新映射，再获取分区锁。已有映射首次只读定位，随后持锁复核；映射分区永不改变。批量写首版不开放，避免跨分区锁序复杂化。
+统一锁序：操作幂等记录（点击没有）→确定稳定 doc_id/shard_id→分区序号行→recall_docs→广告行→属性行→outbox/审计。创建可先插入仅本事务可见的新映射，再获取分区锁。已有映射首次只读定位，随后持锁复核；映射分区永不改变。批量写首版不开放，避免跨分区锁序复杂化。
 
 每个影响索引的事务：
 
@@ -461,12 +464,12 @@ F=100 场景单独提交资源、QPS、延迟、拒绝率、MySQL 写吞吐与�
 
 | 阶段 | 交付 | 文件落点与通过条件 |
 | --- | --- | --- |
-| P0 合约与数据 | 属性登记、规范化、映射、eligibility、版本、增量迁移 | server/types/recall.ts、server/services/recall/validation.ts、server/migrations/下一可用编号_ads_recall.sql；小数据语义与迁移可重跑 |
-| P1 本地索引 | BitmapAdapter、分区索引、精确排名、预算控制 | recall/src/bitmap.ts、partition.ts、ranking.ts、planner.ts；差分测试与原生最坏耗时通过 |
-| P2 增量同步 | 同事务事件、序号锁、消费者、不可变发布、持久快照 | server/models/ads.model.ts、recall/src/consumer.ts、snapshot.ts、rebuild.ts；并发、故障、重建不漏事件 |
-| P3 接口与复核 | search、健康检查、min_receipts、批量详情 | server/routes/ads.routes.ts、server/services/recall/client.ts、search.ts；错误语义与资源预算通过 |
+| P0 合约与数据 | 属性登记、规范化、映射、eligibility、版本、增量迁移 | server/recall/contracts.ts、server/migrations/002_ads_recall.sql、server/scripts/migrate-recall.ts；小数据语义与迁移可重跑 |
+| P1 本地索引 | BitmapAdapter、分区索引、精确排名、预算控制 | server/recall/partition.ts、tree.ts、worker.ts、engine.ts；差分测试与原生最坏耗时通过 |
+| P2 增量同步 | 同事务事件、序号锁、消费者、不可变发布、持久快照 | server/models/ads.model.ts、server/recall/storage.ts、manifest.ts、server.ts；并发、故障、重建不漏事件 |
+| P3 接口与复核 | search、健康检查、min_receipts、批量详情 | server/routes/ads.routes.ts、server/services/recall/search.ts；错误语义与资源预算通过 |
 | P4 调用迁移 | 列表分页、ad_context、同步/托管兼容与工具范围 | client/src/App.tsx、server/routes/agent.routes.ts、server/controllers/ai.controller.ts、hosting/api.py、hosting/pipeline.py、mcp/ads_tools.py；新链路没有全量广告输入 |
-| P5 容量与切换 | 数据生成、压测、故障、对账、灰度报告 | evaluation/ads_recall/、scripts/verify_ads_recall.*、docs/ads-recall-validation.md；满足第 15 节并发布实际证据 |
+| P5 容量与切换 | 数据生成、压测、故障、对账、灰度报告 | server/scripts/benchmark-recall.ts、server/tests/recall*.test.cjs、docs/ads-recall-validation.md；满足第 15 节并发布实际证据 |
 
 迁移编号与营销 SDD 的 002–006 计划统一分配，本文不抢占固定编号。DDL 在独立迁移流程执行；不能宣称多条 DDL 与业务回填可一起事务回滚。回填不覆盖既有 price/clicks/version，旧 JSON 不重新导入。
 
@@ -476,7 +479,9 @@ F=100 场景单独提交资源、QPS、延迟、拒绝率、MySQL 写吞吐与�
 
 ## 17. 完成定义与待实测事项
 
-设计阶段完成定义：规则无歧义、表与事务边界明确、更新/删除/恢复有路径、接口有资源上限、测试可证明无漏召回，并明确现有代码缺口。本文满足该阶段；实现完成须逐项交付 P0–P5 的代码、迁移、配置、测试与报告。
+设计阶段完成定义：规则无歧义、表与事务边界明确、更新/删除/恢复有路径、接口有资源上限、测试可证明无漏召回，并明确现有代码缺口。本文满足设计阶段。单实例代码、迁移、配置和功能测试已交付；P1 最坏原生调用、P2 高点击锁等待与 P5 正式拓扑容量门尚未通过，不能宣称 P0–P5 全部验收完成。
+
+当前持久化使用完整紧凑文档基线与增量事件链，恢复时重建位图和排名；尚未实现对象存储上的原生位图分块复用、自动 generation 退役、自动快照 GC。32 个逻辑分区目前由同一物理进程的 4 个 Worker 承载，跨节点路由另需实现。总体统计明确返回未物化，异步报告未实现。
 
 实施前 P1 必须实测原生 roaring 安装与版本快照成本、有序树内存与更新吞吐；P2 必须实测分区序号锁在高点击量下的等待；P5 必须实测属性关系行数、outbox 日增量与重建的 MySQL 压力。这些是具体技术验证点，不以“后续优化”代替验收。
 

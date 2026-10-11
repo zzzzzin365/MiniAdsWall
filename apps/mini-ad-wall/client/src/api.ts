@@ -1,4 +1,5 @@
 import axios from 'axios';
+import type { MarketingReport, MetricEstimateInput, MetricEstimates } from './types/marketing';
 import { 
     Ad, 
     AdInput, 
@@ -20,23 +21,49 @@ const api = axios.create({
     baseURL: '/api'
 });
 
-// Minimal single-operator authentication; credential stays in memory, never in the bundle.
+export async function getMarketingReport(query: MarketingReport['query'], signal?: AbortSignal): Promise<MarketingReport> {
+    return (await api.get<MarketingReport>('/marketing/reports', { params: query, signal })).data;
+}
+export async function getMarketingSnapshot(id: string, signal?: AbortSignal): Promise<MarketingReport> {
+    return (await api.get<MarketingReport>('/marketing/reports/' + encodeURIComponent(id), { signal })).data;
+}
+export async function getMetricEstimates(input: MetricEstimateInput, signal?: AbortSignal): Promise<MetricEstimates> {
+    return (await api.post<MetricEstimates>('/marketing/metrics/estimates', input, { signal })).data;
+}
+
+// Remember the operator credential in this browser across page reloads.
+const operatorTokenKey = 'mini-ad-wall:operator-token';
 let operatorToken = '';
+try { operatorToken = localStorage.getItem(operatorTokenKey)?.trim() || ''; } catch { /* Storage may be disabled. */ }
+
+function getOperatorToken(): string {
+    if (!operatorToken) {
+        operatorToken = window.prompt('请输入运营凭据')?.trim() || '';
+        if (!operatorToken) throw new Error('未提供运营凭据');
+        try { localStorage.setItem(operatorTokenKey, operatorToken); } catch { /* Keep the in-memory fallback. */ }
+    }
+    return operatorToken;
+}
+
+function clearOperatorToken(authorization: string | undefined): void {
+    if (authorization !== `Bearer ${operatorToken}`) return;
+    operatorToken = '';
+    try { localStorage.removeItem(operatorTokenKey); } catch { /* Storage may be disabled. */ }
+}
+
 api.interceptors.request.use(config => {
     const url = config.url || '';
     const method = (config.method || 'get').toLowerCase();
     const publicRequest = (method === 'get' && ['/ads', '/form-config'].includes(url)) || /^\/ads\/[^/]+\/click$/.test(url);
     if (!publicRequest) {
-        if (!operatorToken) operatorToken = window.prompt('请输入运营凭据')?.trim() || '';
-        if (!operatorToken) throw new Error('未提供运营凭据');
-        config.headers.Authorization = `Bearer ${operatorToken}`;
+        config.headers.Authorization = `Bearer ${getOperatorToken()}`;
     }
     config.headers['X-Request-ID'] = crypto.randomUUID();
     config.timeout = url === '/ai/assistant/chat' ? 35000 : url.startsWith('/ai/') ? 60000 : 15000;
     return config;
 });
 api.interceptors.response.use(response => response, error => {
-    if (error.response?.status === 401) operatorToken = '';
+    if (error.response?.status === 401) clearOperatorToken(error.config?.headers?.Authorization);
     if (typeof error.response?.data?.error === 'string') error.message = error.response.data.error;
     return Promise.reject(error);
 });
@@ -174,10 +201,11 @@ export const hostedApprove = (id: string, allow: boolean) => api.post<HostedRun>
 
 export async function hostedEvents(id: string, after: number, signal: AbortSignal,
     onEvent: (seq: number, type: string, data: any) => void): Promise<void> {
-    if (!operatorToken) throw new Error('未提供运营凭据');
+    const authorization = `Bearer ${getOperatorToken()}`;
     const response = await fetch(`/api/agent/runs/${id}/events`, {
-        headers: { Authorization: `Bearer ${operatorToken}`, 'Last-Event-ID': String(after) }, signal
+        headers: { Authorization: authorization, 'Last-Event-ID': String(after) }, signal
     });
+    if (response.status === 401) clearOperatorToken(authorization);
     if (!response.ok || !response.body) throw new Error(`events:${response.status}`);
     const reader = response.body.getReader(); const decoder = new TextDecoder(); let buffer = '';
     try {

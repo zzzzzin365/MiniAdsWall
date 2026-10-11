@@ -56,7 +56,8 @@ class OpenRouterClient:
                         raise ModelResponseError("模型未返回有效文本")
                 except (ValueError, KeyError, IndexError, TypeError, AttributeError) as exc:
                     raise ModelResponseError("模型响应格式无效") from exc
-        return SimpleNamespace(content=[SimpleNamespace(type="text", text=text.strip())])
+        return SimpleNamespace(content=[SimpleNamespace(type="text", text=text.strip())],
+                               usage=data.get("usage"))
 
 
 class GovernedClient:

@@ -1,8 +1,8 @@
 # 整体业务向优化coding plan
 
 - 日期：2026-10-10
-- 依据：[整体业务向优化SDD](整体业务向优化SDD.md)，版本 0.1。
-- 状态：实施计划；下列开发任务全部待执行，本文不代表代码、部署或验收已完成。
+- 依据：[整体业务向优化SDD](整体业务向优化SDD.md)，版本 0.3。
+- 状态：CP00–CP04 已实现并本地验证；CP05 指标/快照和 CP06 指标页已交付，异步导出、S1 整体验收与后续阶段待执行，S1 尚未整体验收。
 - 顺序：基线与合约 → S1 效果数据 → S2 内容生产 → S3 Agent 执行 → S4 分发策略 → S5 反馈学习 → 总体验收。
 - 首个可交付版本：完成 CP00–CP06，得到可对账的曝光、点击、订单、花费与报表闭环。
 
@@ -22,11 +22,11 @@
 
 | 状态 | 编号 | 任务 | 前置依赖 | 验收依据 |
 | --- | --- | --- | --- | --- |
-| [ ] | CP00 | 基线、共用文件和协议冻结 | 无 | SDD §2、§9、§11、§15 |
-| [ ] | CP01 | S1 数据迁移、归属与最小资源 | CP00 | SDD §4、§10、§15 |
-| [ ] | CP02 | 展示凭证、曝光和点击接入 | CP01 | E01、E02 |
-| [ ] | CP03 | 订单、退款、花费与完整性接入 | CP01、CP02 | E02、E05、E07 |
-| [ ] | CP04 | 异步归因、聚合与重建 | CP02、CP03 | E04、E05、E07 |
+| [x] | CP00 | 基线、共用文件和协议冻结 | 无 | SDD §2、§9、§11、§15 |
+| [x] | CP01 | S1 数据迁移、归属与最小资源 | CP00 | SDD §4、§10、§15 |
+| [x] | CP02 | 展示凭证、曝光和点击接入 | CP01 | E01、E02 |
+| [x] | CP03 | 订单、退款、花费与完整性接入 | CP01、CP02 | E02、E05、E07 |
+| [x] | CP04 | 异步归因、聚合与重建 | CP02、CP03 | E04、E05、E07 |
 | [ ] | CP05 | 统一报表与证据快照 | CP04 | E03、E06 |
 | [ ] | CP06 | 效果看板、消费者页与 S1 验收 | CP02–CP05 | E01–E07 |
 | [ ] | CP07 | S2 品牌、商品事实、创作者与角色 | S1 验收通过 | SDD §4、§6 |
@@ -61,7 +61,7 @@
 5. 明确补充协议：展示凭证有效期与续发方式、自动重算窗口、退款先于支付的待处理状态、指标观察截止时间、接入来源完整性标记格式、策略随机种子、实验停止阈值。把决定同步写入 SDD，不能留到实现中各自猜测。
 6. 引入五个阶段开关，默认关闭；校验依赖能力、迁移版本和阶段配置。过期提案、查单、回执及已接受事件不受入口关闭影响。
 
-建议落点：`docs/marketing-api-contract.md`、`contracts/marketing/v1/`、Koa config/types、Python schema、`.env.example`、`docs/validation/marketing/`。这些是待新增位置。
+建议落点：`docs/marketing-api-contract.md`、`contracts/marketing/v1/`、Koa config/types、Python schema、`.env.example`、`docs/validation/marketing/`。CP00 的合约与验证记录现已落地。
 
 验收：旧广告与聊天行为无回归；没有默认打开营销能力；字段和错误样例在两端校验一致；迁移编号与共用文件无冲突。首版事件等功能先在 synthetic 环境推进，无真实营销数据也可继续。
 
@@ -73,7 +73,7 @@
 
 实施步骤：
 
-1. 新增 `002_marketing_events.sql` 和独立营销迁移入口；记录版本/校验摘要，禁止修改 `001_ads.sql`。DDL 失败须明确报告，不宣称自动事务回滚；验证中途失败后可继续迁移。
+1. 新增 `010_marketing_events.sql、011_marketing_ingestion.sql` 和独立营销迁移入口；记录版本/校验摘要，禁止修改 `001_ads.sql`。DDL 失败须明确报告，不宣称自动事务回滚；验证中途失败后可继续迁移。
 2. 建立 S1 所需品牌、最小 membership、商品、Campaign、Creative、广告绑定、serving decision、event、attribution、ledger、coverage、daily metrics 和 outbox 表。
 3. 品牌/商品初始记录通过幂等演示种子创建；S2 再扩展事实和创作者资料。最小归属检查从 S1 开始，完整创作者角色在 S2 开放。
 4. 为 Campaign/Creative 增加状态、版本、起止时间、审核人和授权有效期；实现 SDD 的两个资源创建接口及旧广告绑定，资源读查询必须限于已授权品牌。
@@ -173,7 +173,7 @@
 
 ### CP07：品牌、商品事实、创作者与角色
 
-- 新增 `003_marketing_content.sql`，扩展品牌需求、商品事实、创作者档案、素材授权与审核数据；S1 已建的资源表增量演进，不重复建另一套资源。
+- 新增 `014_marketing_content.sql`，扩展品牌需求、商品事实、创作者档案、素材授权与审核数据；S1 已建的资源表增量演进，不重复建另一套资源。
 - 实现 briefs、product facts、creators 接口，版本不可变；明确事实来源、有效期、受众来源和更新时间。
 - 增加运营、创作者、审核者角色；服务端统一检查品牌与素材归属，创作者仅修改自己的草稿，不能批准自己的发布请求或操作预算。
 - 活动/素材状态变更在服务层检查迁移规则、版本、审核和授权；S1 手工审核记录继续可读取。
@@ -222,7 +222,7 @@
 
 ### CP12：出价提案与原子执行
 
-- 新增 `004_marketing_actions.sql`；保存 proposal、参数哈希、报告证据、当前出价、广告版本、身份、配置版本与有效期。
+- 新增 `015_marketing_actions.sql`；保存 proposal、参数哈希、报告证据、当前出价、广告版本、身份、配置版本与有效期。
 - 实现提案创建/拒绝/执行接口；仅允许 set_bid，300 秒有效期、默认涨价≤20%、MAX_AD_BID 上限。
 - 新出价整数分精确转为旧 DECIMAL；旧值有超过两位小数时首版明确拒绝，不能四舍五入。
 - 执行事务复用现有操作幂等能力，固定锁顺序；同事务完成提案消费、广告更新、version+1、操作结果、审计和回执 outbox。
@@ -254,7 +254,7 @@
 
 ### CP15：策略快照、候选过滤与频控
 
-- 新增 `005_marketing_delivery.sql`，创建策略版本、实验和预算基础表；分发引用不可变素材与策略版本。
+- 新增 `016_marketing_delivery.sql`，创建策略版本、实验和预算基础表；分发引用不可变素材与策略版本。
 - 候选按活动状态、时间、商品、审核、授权和显式受众条件过滤；通过索引有界召回，单 Campaign 活跃候选最多 200。
 - 实现可解释规则排序与新素材探索；历史点击率先平滑，记录先验、权重、随机种子、候选集/截断信息与选中原因。
 - 同会话/Campaign 每小时最多 3 次曝光；Redis 原子 reservation 在曝光后转已曝光计数，未曝光过期释放；重复曝光不重复转计数。
@@ -297,7 +297,7 @@
 
 ### CP19：观察窗口、反馈去重与学习
 
-- 新增 `006_marketing_learning.sql`；每个 impression/learning_version 一个反馈状态，24 小时观察窗口。
+- 新增 `017_marketing_learning.sql`；每个 impression/learning_version 一个反馈状态，24 小时观察窗口。
 - 窗口内首次有效点击形成成功；到期仍无点击形成失败；窗口未到期不计失败，迟到点击保留业务指标但不重训已封账样本。
 - 同一 MySQL 事务保存反馈已处理标记、成功/失败累计和模型状态；Worker 崩溃重放不多加样本。
 - 实现 Beta-Bernoulli Thompson Sampling，先验 Beta(1,1)；按素材版本和学习版本隔离，不混环境。
@@ -343,11 +343,11 @@
 
 | 阶段 | 迁移建议 | 主要新增数据 |
 | --- | --- | --- |
-| S1 | 002_marketing_events.sql | 最小资源、decision、event、归因、账本、coverage、聚合、outbox、报告快照 |
-| S2 | 003_marketing_content.sql | 品牌需求、事实版本、创作者档案、分析/生成产物与审核 |
-| S3 | 004_marketing_actions.sql | 业务提案、执行关联与回执去重 |
-| S4 | 005_marketing_delivery.sql | Campaign/日/组预算、实验、策略与 reservation 持久审计 |
-| S5 | 006_marketing_learning.sql | 唯一反馈、学习状态与快照元数据 |
+| S1 | 010_marketing_events.sql、011_marketing_ingestion.sql、012_marketing_aggregation.sql、013_marketing_reports.sql | 最小资源、decision、event、归因、账本、coverage、聚合、outbox、报告快照 |
+| S2 | 014_marketing_content.sql | 品牌需求、事实版本、创作者档案、分析/生成产物与审核 |
+| S3 | 015_marketing_actions.sql | 业务提案、执行关联与回执去重 |
+| S4 | 016_marketing_delivery.sql | Campaign/日/组预算、实验、策略与 reservation 持久审计 |
+| S5 | 017_marketing_learning.sql | 唯一反馈、学习状态与快照元数据 |
 
 迁移目录统一为 `apps/mini-ad-wall/server/migrations/`；Python 营销 Worker 使用同一业务数据库的专用权限，不自行维护另一套冲突迁移。若开发时编号已被占用，重新登记未使用编号并同步文档，绝不覆盖已执行迁移。
 
@@ -399,3 +399,22 @@ git diff --check
 先执行 CP00，再完成 CP01–CP06。首版必须交付可对账的效果数据与看板；多模态、真实业务提案执行和学习策略分别在 S2、S3、S5 启用。
 
 CP06 完成前，不将项目描述为已经具备效果度量闭环；CP14 完成前，不宣称 Agent 能真实调价；CP21 的合成实验通过后，也不宣称已提升真实投放收益。
+
+
+## 13. CP00–CP03 交付记录（2026-10-10）
+
+- CP00：共用 Schema/样例、Node/Python 校验、五阶段默认关闭、协议冻结。基线曾有共用迁移解析错误和一次 Python 托管时序失败，已通过修复后的回归验证，不沿用旧失败结果作为通过证据。
+- CP01：品牌/商品/membership/legacy 映射、草稿和人工审核状态、版本/幂等/审计、品牌范围检查；迁移支持空库、旧库、失败续跑、并发、checksum/结构漂移拒绝。旧 003 文件原字节归档，保留已执行历史记录后升级到 010/011。
+- CP02：delivery.service.ts、security.ts、ingestion.ts、消费页与 useAdImpression；签名机会、可见曝光、唯一点击、素材文件入口、旧 clicks 隔离。
+- CP03：conversion.service.ts、spend.service.ts、synthetic.ts、seed-marketing-events.ts；来源范围、支付/退款去重、待支付验证修订、追加费用更正、覆盖核对和失效、事务 outbox。
+- 来源认证集中在 security.ts，覆盖逻辑集中在 spend.service.ts；原“建议落点”中的拆文件名不作为完成条件。
+- [实际验收与命令](validation/marketing/CP00-03.md)、[接口与运行说明](marketing-api-contract.md)、[SDD 冻结决定](整体业务向优化SDD.md#17-cp00cp03-冻结决定与当前实现)。
+- CP04 已完成：独立 outbox Worker、输入 epoch/发布 generation/租约代次检查、最后点击归因与历史指针、支付日日报和点击订单关联、跨窗标记与显式重建、失败/积压监测。迁移新增 012；未来阶段迁移顺延为 013–016。
+- [CP04 验收](validation/marketing/CP04.md)、[运行与容量边界](marketing-aggregation.md)：Node 全量 51/51，额外 012 迁移验收 1/1，截止时间提交检查复测 1/1；Python 108 通过、13 跳过；前后端构建及真实 Chrome 回归通过。
+- CP05 指标/快照及 CP06 指标页已实现；大范围异步导出和 S1 整体验收仍未完成；默认入口关闭，尚未部署，不能把有界本地核对称为亿级吞吐。
+
+## 15. 业务指标增量交付
+
+已交付 CP05 的 31 天内指标查询、来源覆盖、观察状态、不可变快照，以及 CP06 的指标查询页面和 JSON 下载。新增 CPC、CPM、历史千次曝光归因净收入；独立 eCPM/LTV 假设计算器不等于真实预测/生命周期跟踪。013_marketing_reports.sql 已占用，后续阶段迁移顺延 014–017。
+
+CP05 大范围托管异步导出、CP06 全部 E01–E07 对账与 S1 总体验收尚未交付，因此任务总表仍不勾选这两个完整任务。实现与验证见 [业务指标说明](marketing-reports.md) 与 [本地验证](validation/marketing/business-metrics.md)。

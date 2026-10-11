@@ -1,0 +1,384 @@
+TAP version 13
+# Subtest: real MySQL: safe legacy import, persistence and rollback
+    # Subtest: legacy ads, click counts, historical results and audit are preserved
+    ok 1 - legacy ads, click counts, historical results and audit are preserved
+      ---
+      duration_ms: 5.124083
+      type: 'test'
+      ...
+    # Subtest: repeating migration leaves live edits intact and retains the source file
+    ok 2 - repeating migration leaves live edits intact and retains the source file
+      ---
+      duration_ms: 18.126666
+      type: 'test'
+      ...
+    # Subtest: exceptions after the ad write leave neither a new ad nor operation nor audit
+    ok 3 - exceptions after the ad write leave neither a new ad nor operation nor audit
+      ---
+      duration_ms: 2.307792
+      type: 'test'
+      ...
+    # Subtest: ranking matches the existing score formula and provides a ranking index
+    ok 4 - ranking matches the existing score formula and provides a ranking index
+      ---
+      duration_ms: 2.767459
+      type: 'test'
+      ...
+    # Subtest: operator identities are exact, including trailing spaces
+    ok 5 - operator identities are exact, including trailing spaces
+      ---
+      duration_ms: 2.64625
+      type: 'test'
+      ...
+    # Subtest: malformed legacy data fails before writes
+    ok 6 - malformed legacy data fails before writes
+      ---
+      duration_ms: 1.151792
+      type: 'test'
+      ...
+    1..6
+ok 1 - real MySQL: safe legacy import, persistence and rollback
+  ---
+  duration_ms: 4907.447042
+  type: 'test'
+  ...
+# Subtest: real MySQL: import refuses to merge existing business records
+ok 2 - real MySQL: import refuses to merge existing business records
+  ---
+  duration_ms: 2823.150375
+  type: 'test'
+  ...
+# Subtest: real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+    # Subtest: authentication and validation still apply
+    ok 1 - authentication and validation still apply
+      ---
+      duration_ms: 88.459583
+      type: 'test'
+      ...
+    # Subtest: same operation across processes commits exactly one ad and audit
+    ok 2 - same operation across processes commits exactly one ad and audit
+      ---
+      duration_ms: 62.761709
+      type: 'test'
+      ...
+    # Subtest: concurrent edits reject the stale version and preserve the winning result
+    ok 3 - concurrent edits reject the stale version and preserve the winning result
+      ---
+      duration_ms: 16.549584
+      type: 'test'
+      ...
+    # Subtest: audit failure rolls back the ad and operation, allowing a safe retry
+    ok 4 - audit failure rolls back the ad and operation, allowing a safe retry
+      ---
+      duration_ms: 24.983333
+      type: 'test'
+      ...
+    # Subtest: concurrent clicks persist across a hard process restart without overwriting edits
+    ok 5 - concurrent clicks persist across a hard process restart without overwriting edits
+      ---
+      duration_ms: 362.495709
+      type: 'test'
+      ...
+    # Subtest: AI calls use the shared database snapshot and remain separate from business writes
+    ok 6 - AI calls use the shared database snapshot and remain separate from business writes
+      ---
+      duration_ms: 109.63025
+      type: 'test'
+      ...
+    1..6
+ok 3 - real MySQL: two Koa processes, transactions, replay and trusted Agent snapshots
+  ---
+  duration_ms: 3810.758333
+  type: 'test'
+  ...
+# Subtest: lost write response is recovered by querying the recorded result
+ok 4 - lost write response is recovered by querying the recorded result
+  ---
+  duration_ms: 84.184625
+  type: 'test'
+  ...
+# Subtest: unknown result survives reload; retry queries then reuses the original operation ID
+ok 5 - unknown result survives reload; retry queries then reuses the original operation ID
+  ---
+  duration_ms: 46.292416
+  type: 'test'
+  ...
+# Subtest: unavailable status service prevents blind resubmission
+ok 6 - unavailable status service prevents blind resubmission
+  ---
+  duration_ms: 46.456541
+  type: 'test'
+  ...
+# Server Error: UnauthorizedError: 请提供有效的运营凭据
+#     at Object.throw (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa/lib/context.js:97:11)
+#     at businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:39:18)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:22)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:11)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at errorHandler (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/errorHandler.js:5:15)
+#     at dispatch (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:42:32)
+#     at /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-compose/index.js:34:12 {
+#   headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+# }
+# [2026-10-10 08:27:13] ← 32bfd55f-1f67-4b73-add4-ce1adda14f91 | GET /api/agent/identity | IP: 127.0.0.1
+# [2026-10-10 08:27:13] → 32bfd55f-1f67-4b73-add4-ce1adda14f91 | GET /api/agent/identity | ✓ 200 | 10ms
+# [2026-10-10 08:27:13] ← 3ca3bc3e-177f-4c32-830f-3256f708fa4a | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+# [2026-10-10 08:27:13] → 3ca3bc3e-177f-4c32-830f-3256f708fa4a | POST /api/agent/sessions/1/runs | ✓ 200 | 7ms
+# [2026-10-10 08:27:13] ← 2703bef1-f0d6-4ad8-8b0b-74cda2823ed3 | GET /api/agent/runs/1/events | IP: 127.0.0.1
+# [2026-10-10 08:27:13] → 2703bef1-f0d6-4ad8-8b0b-74cda2823ed3 | GET /api/agent/runs/1/events | ✓ 200 | 4ms
+# Subtest: hosted gateway authenticates identity, trusts server snapshot and forwards real SSE
+ok 7 - hosted gateway authenticates identity, trusts server snapshot and forwards real SSE
+  ---
+  duration_ms: 2934.95
+  type: 'test'
+  ...
+# Subtest: marketing v1 fixtures have the same expectations in Node/Python; flags fail closed
+not ok 8 - marketing v1 fixtures have the same expectations in Node/Python; flags fail closed
+  ---
+  duration_ms: 13.681083
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'strict mode: required property "impression_id" is not defined at "https://miniadswall.local/contracts/marketing/v1#/allOf/0/then" (strictRequired)'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    checkStrictMode (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/util.js:174:15)
+    Object.code (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/vocabularies/validation/required.js:33:48)
+    keywordCode (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/validate/index.js:464:13)
+    /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/validate/index.js:222:17
+    CodeGen.code (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/codegen/index.js:439:13)
+    CodeGen.block (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/codegen/index.js:568:18)
+    iterateKeywords (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/validate/index.js:219:9)
+    groupKeywords (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/validate/index.js:200:13)
+    /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/validate/index.js:192:13
+    CodeGen.code (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/ajv/dist/compile/codegen/index.js:439:13)
+  ...
+# Subtest: real MySQL marketing migration resumes partial DDL, preserves ads and rejects schema/checksum drift
+not ok 9 - real MySQL marketing migration resumes partial DDL, preserves ads and rejects schema/checksum drift
+  ---
+  duration_ms: 2810.110875
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:22:1'
+  failureType: 'testCodeFailure'
+  error: 'marketing_schema_check_mismatch'
+  code: 'marketing_schema_check_mismatch'
+  stack: |-
+    failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/marketing/migrations.js:23:47)
+    migrateMarketingSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/marketing/migrations.js:156:19)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Promise.all (index 0)
+    async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:30:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: real MySQL empty-db status is read-only and explicit marketing up initializes without ads or seeds
+not ok 10 - real MySQL empty-db status is read-only and explicit marketing up initializes without ads or seeds
+  ---
+  duration_ms: 2814.724625
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:49:1'
+  failureType: 'testCodeFailure'
+  error: 'marketing_schema_check_mismatch'
+  code: 'marketing_schema_check_mismatch'
+  stack: |-
+    failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/marketing/migrations.js:23:47)
+    migrateMarketingSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/marketing/migrations.js:156:19)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:57:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: real MySQL and two Koa processes: scope, idempotency, resource lifecycle and storage errors
+not ok 11 - real MySQL and two Koa processes: scope, idempotency, resource lifecycle and storage errors
+  ---
+  duration_ms: 3773.891
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:64:1'
+  failureType: 'testCodeFailure'
+  error: 'marketing_schema_check_mismatch'
+  code: 'marketing_schema_check_mismatch'
+  stack: |-
+    failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/marketing/migrations.js:23:47)
+    migrateMarketingSchema (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/marketing/migrations.js:156:19)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/marketing.test.cjs:88:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# [2026-10-10 08:27:25] ← 7e4bbbf2-1da0-4b94-bfa4-006c47d8df7f | POST /api/agent/sessions/1/runs | IP: 127.0.0.1
+# [2026-10-10 08:27:25] → 7e4bbbf2-1da0-4b94-bfa4-006c47d8df7f | POST /api/agent/sessions/1/runs | ✓ 200 | 19ms
+# Subtest: enabled context protocol bounds real database facts and rejects forged snapshots
+not ok 12 - enabled context protocol bounds real database facts and rejects forged snapshots
+  ---
+  duration_ms: 2803.301458
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall-context.test.cjs:4:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(captured.ads.every(a=>a.video_count===3))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall-context.test.cjs:13:408)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# [2026-10-10 08:27:28] ← 7a31c2ba-7010-418a-8b6f-c6818cdeecb8 | POST /api/ads/search | IP: 127.0.0.1
+# [2026-10-10 08:27:28]   7a31c2ba-7010-418a-8b6f-c6818cdeecb8 | Body: {"conditions":[{"field":"tags","op":"in","values":["d","e"]},{"field":"tags","op":"not_in","values":["a","b","c"]}],"limit":50,"min_receipts":[{"seq":"1","shard_id":2,"index_revision":"1"}]}
+# [2026-10-10 08:27:28] → 7a31c2ba-7010-418a-8b6f-c6818cdeecb8 | POST /api/ads/search | ✓ 200 | 22ms
+# [2026-10-10 08:27:28] ← b6a245be-03a2-45a3-84e9-18f740e3714e | GET /api/ads/page?limit=1 | IP: 127.0.0.1
+# [2026-10-10 08:27:28] → b6a245be-03a2-45a3-84e9-18f740e3714e | GET /api/ads/page?limit=1 | ✓ 200 | 4ms
+# [2026-10-10 08:27:28] ← 03dca25f-5ac2-4a0a-a830-322b18895e85 | GET /api/ads/page?limit=1&cursor=eyJzY29yZSI6IjUuMDAwMDAwMDAiLCJpZCI6IjU0MWI3YzY1LTBjMDgtNDBhNi04MjEwLTZiYWVjNjBlNTYyZSIsInByaW5jaXBhbCI6Im9wZXJhdG9yIiwiZXhwaXJlcyI6MTc5MTYyNDQ0ODk2OH0.zvLuJmMxdmgO54xZD63bg-SRplCkigrgrdmzrRU1Aqc | IP: 127.0.0.1
+# [2026-10-10 08:27:28] → 03dca25f-5ac2-4a0a-a830-322b18895e85 | GET /api/ads/page?limit=1&cursor=eyJzY29yZSI6IjUuMDAwMDAwMDAiLCJpZCI6IjU0MWI3YzY1LTBjMDgtNDBhNi04MjEwLTZiYWVjNjBlNTYyZSIsInByaW5jaXBhbCI6Im9wZXJhdG9yIiwiZXhwaXJlcyI6MTc5MTYyNDQ0ODk2OH0.zvLuJmMxdmgO54xZD63bg-SRplCkigrgrdmzrRU1Aqc | ✓ 200 | 2ms
+# [2026-10-10 08:27:28] ← db84d70d-e9d0-4138-b5df-1c0872757f50 | POST /api/ads/search | IP: 127.0.0.1
+# [2026-10-10 08:27:28]   db84d70d-e9d0-4138-b5df-1c0872757f50 | Body: {"conditions":[{"field":"unknown","op":"exists"}]}
+# Server Error: Error: invalid_filter
+#     at failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+#     at call (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:31:39)
+#     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+#     at async findAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:69:20)
+#     at async /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/ads.routes.js:14:60
+#     at async serve (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-static/index.js:53:9)
+#     at async requestLogger (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/requestLogger.js:20:5)
+#     at async businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:40:5)
+#     at async cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:16)
+#     at async responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:5) {
+#   status: 400,
+#   code: 'invalid_filter',
+#   headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+# }
+#   Error: invalid_filter
+#       at failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+#       at call (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:31:39)
+#       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+#       at async findAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:69:20)
+#       at async /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/ads.routes.js:14:60
+#       at async serve (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-static/index.js:53:9)
+#       at async requestLogger (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/requestLogger.js:20:5)
+#       at async businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:40:5)
+#       at async cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:16)
+#       at async responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:5)
+# [2026-10-10 08:27:28] ← f983c249-f49d-478b-9222-5cc78da5eb4d | POST /api/ads/search | IP: 127.0.0.1
+# [2026-10-10 08:27:28]   f983c249-f49d-478b-9222-5cc78da5eb4d | Body: {"conditions":[{"field":"tags","op":"in","values":["d","e"]},{"field":"tags","op":"not_in","values":["a","b","c"]}],"limit":50,"min_receipts":[{"shard_id":0,"seq":"999999","index_revision":"1"}]}
+# Server Error: Error: index_not_caught_up
+#     at failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+#     at call (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:31:39)
+#     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+#     at async findAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:69:20)
+#     at async /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/ads.routes.js:14:60
+#     at async serve (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-static/index.js:53:9)
+#     at async requestLogger (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/requestLogger.js:20:5)
+#     at async businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:40:5)
+#     at async cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:16)
+#     at async responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:5) {
+#   status: 503,
+#   code: 'index_not_caught_up',
+#   headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+# }
+#   Error: index_not_caught_up
+#       at failure (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/recall/contracts.js:11:55)
+#       at call (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:31:39)
+#       at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+#       at async findAds (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/services/recall/search.js:69:20)
+#       at async /Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/routes/ads.routes.js:14:60
+#       at async serve (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/koa-static/index.js:53:9)
+#       at async requestLogger (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/requestLogger.js:20:5)
+#       at async businessBoundary (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/businessBoundary.js:40:5)
+#       at async cors (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/node_modules/@koa/cors/index.js:108:16)
+#       at async responseTime (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/dist/middlewares/responseTime.js:5:5)
+# [2026-10-10 08:27:29] ← 4f8a87d4-ca24-4a22-b283-5d1f75f723f0 | POST /api/ads/search | IP: 127.0.0.1
+# [2026-10-10 08:27:29]   4f8a87d4-ca24-4a22-b283-5d1f75f723f0 | Body: {"conditions":[{"field":"tags","op":"in","values":["d","e"]},{"field":"tags","op":"not_in","values":["a","b","c"]}],"limit":50,"min_receipts":[{"seq":"2","shard_id":2,"index_revision":"2"}]}
+# [2026-10-10 08:27:29] → 4f8a87d4-ca24-4a22-b283-5d1f75f723f0 | POST /api/ads/search | ✓ 200 | 28ms
+# Subtest: real MySQL: transactional recall, search recheck, restart and online rebuild
+ok 13 - real MySQL: transactional recall, search recheck, restart and online rebuild
+  ---
+  duration_ms: 3797.381917
+  type: 'test'
+  ...
+# Subtest: real MySQL: durable delta recovery, checksum rejection and conservative outbox pruning
+ok 14 - real MySQL: durable delta recovery, checksum rejection and conservative outbox pruning
+  ---
+  duration_ms: 2832.647875
+  type: 'test'
+  ...
+# Subtest: recall contract rejects invalid filters and distinguishes missing attributes
+ok 15 - recall contract rejects invalid filters and distinguishes missing attributes
+  ---
+  duration_ms: 2.918792
+  type: 'test'
+  ...
+# Subtest: bitmap IN/NOT IN, immutable query roots, tombstones and exact decimal ranking
+ok 16 - bitmap IN/NOT IN, immutable query roots, tombstones and exact decimal ranking
+  ---
+  duration_ms: 2.462958
+  type: 'test'
+  ...
+# Subtest: deterministic randomized bitmap results equal a row-by-row reference
+ok 17 - deterministic randomized bitmap results equal a row-by-row reference
+  ---
+  duration_ms: 2527.300167
+  type: 'test'
+  ...
+# Subtest: query budgets reject work instead of returning a truncated successful result
+not ok 18 - query budgets reject work instead of returning a truncated successful result
+  ---
+  duration_ms: 1.008208
+  type: 'test'
+  location: '/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs:32:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/tests/recall.test.cjs:35:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: migration SQL boundaries ignore comments and preserve quoted semicolons
+ok 19 - migration SQL boundaries ignore comments and preserve quoted semicolons
+  ---
+  duration_ms: 2.402667
+  type: 'test'
+  ...
+# Subtest: CP02 defaults are disabled; unsupported releases fail explicitly
+ok 20 - CP02 defaults are disabled; unsupported releases fail explicitly
+  ---
+  duration_ms: 0.52475
+  type: 'test'
+  ...
+# Subtest: CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift
+ok 21 - CP02 real MySQL upgrades preserve business data, serialize, resume and reject drift
+  ---
+  duration_ms: 2804.20375
+  type: 'test'
+  ...
+# Subtest: CP02 adopts legacy business schema and status does not initialize an empty database
+ok 22 - CP02 adopts legacy business schema and status does not initialize an empty database
+  ---
+  duration_ms: 2821.595292
+  type: 'test'
+  ...
+1..22
+# tests 34
+# suites 0
+# pass 28
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 43452.85

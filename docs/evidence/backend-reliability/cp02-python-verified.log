@@ -32,7 +32,7 @@ test_malformed_model_output (test_generation_boundary.GenerationModelTests.test_
 test_timeout (test_generation_boundary.GenerationModelTests.test_timeout) ... ok
 test_valid_creative (test_generation_boundary.GenerationModelTests.test_valid_creative) ... ok
 test_ad_task_uses_real_preflight_tools_and_stream_adapter (test_hosting.PipelineIntegrationTests.test_ad_task_uses_real_preflight_tools_and_stream_adapter) ... 2026-10-10 16:11:09,324 [WARNING] asyncio: Executing <Task finished name='Task-80' coro=<PipelineIntegrationTests.asyncSetUp() done, defined at /Users/admin/MiniAdsWall/tests/test_hosting.py:176> result=None created at /Users/admin/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/asyncio/runners.py:100> took 0.107 seconds
-2026-10-10 16:11:09,327 [INFO] core.skill_loader: 
+2026-10-10 16:11:09,327 [INFO] core.skill_loader:
 ================ MiniAdsWall Agent Skills Loaded ================
 目录: /Users/admin/MiniAdsWall/skills
 数量: 3

@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: recall contract rejects invalid filters and distinguishes missing attributes
+ok 1 - recall contract rejects invalid filters and distinguishes missing attributes
+  ---
+  duration_ms: 46.783041
+  type: 'test'
+  ...
+# Subtest: bitmap IN/NOT IN, immutable query roots, tombstones and exact decimal ranking
+ok 2 - bitmap IN/NOT IN, immutable query roots, tombstones and exact decimal ranking
+  ---
+  duration_ms: 2.195083
+  type: 'test'
+  ...
+# Subtest: deterministic randomized bitmap results equal a row-by-row reference
+ok 3 - deterministic randomized bitmap results equal a row-by-row reference
+  ---
+  duration_ms: 149205.879875
+  type: 'test'
+  ...
+# Subtest: query budgets reject work instead of returning a truncated successful result
+ok 4 - query budgets reject work instead of returning a truncated successful result
+  ---
+  duration_ms: 0.7665
+  type: 'test'
+  ...
+# Subtest: score bands skip correlated nonmatching prefixes and retain exact snapshot ranking
+ok 5 - score bands skip correlated nonmatching prefixes and retain exact snapshot ranking
+  ---
+  duration_ms: 308.285541
+  type: 'test'
+  ...
+# Subtest: failed worker queries free their handles immediately
+ok 6 - failed worker queries free their handles immediately
+  ---
+  duration_ms: 673.801625
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 150385.264834

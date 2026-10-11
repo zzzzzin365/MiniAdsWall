@@ -1,0 +1,104 @@
+{
+  "sources": [
+    {
+      "path": "docs/evidence/rag-evidence-ab-pilot-v1.json",
+      "sha256": "d1c06fa19e20e249d610052813b1908df8d7ec94b123dd6f6b4577172af3ccfa"
+    }
+  ],
+  "selection": "First completed graded pair per case; all attempt failures and usage retained",
+  "summary": {
+    "attempted_pairs": 6,
+    "graded_pairs": 6,
+    "answerable_graded": 3,
+    "unanswerable_graded": 3,
+    "arms": {
+      "baseline": {
+        "factual_errors": 0,
+        "factual_error_rate": 0.0,
+        "false_refusals": 0,
+        "false_refusal_rate_on_answerable": 0.0,
+        "correct": 5,
+        "correct_rate": 0.8333333333333334,
+        "pipeline_failures": 0,
+        "median_service_ms_on_graded": 8911.475,
+        "generation_skipped": 0,
+        "usage_all_attempts": {
+          "calls": 19,
+          "failed_calls": 8,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "provider_reported_cost_usd": null,
+          "known_prompt_tokens": 18530,
+          "known_completion_tokens": 2553,
+          "known_reported_cost_usd": 0,
+          "calls_without_usage": 8
+        },
+        "pipeline_failures_all_attempts": 8,
+        "usage_on_paired_cases": {
+          "calls": 6,
+          "failed_calls": 0,
+          "prompt_tokens": 8845,
+          "completion_tokens": 1608,
+          "provider_reported_cost_usd": 0
+        }
+      },
+      "gated": {
+        "factual_errors": 0,
+        "factual_error_rate": 0.0,
+        "false_refusals": 0,
+        "false_refusal_rate_on_answerable": 0.0,
+        "correct": 6,
+        "correct_rate": 1.0,
+        "pipeline_failures": 0,
+        "median_service_ms_on_graded": 9018.1,
+        "generation_skipped": 3,
+        "usage_all_attempts": {
+          "calls": 35,
+          "failed_calls": 7,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "provider_reported_cost_usd": null,
+          "known_prompt_tokens": 16948,
+          "known_completion_tokens": 1572,
+          "known_reported_cost_usd": 0,
+          "calls_without_usage": 7
+        },
+        "pipeline_failures_all_attempts": 8,
+        "usage_on_paired_cases": {
+          "calls": 15,
+          "failed_calls": 0,
+          "prompt_tokens": 9160,
+          "completion_tokens": 970,
+          "provider_reported_cost_usd": 0
+        }
+      }
+    },
+    "error_pairs_improved": 0,
+    "error_pairs_worsened": 0,
+    "exact_mcnemar_two_sided_p": 1.0,
+    "judge_usage": {
+      "calls": 6,
+      "failed_calls": 0,
+      "prompt_tokens": 7130,
+      "completion_tokens": 1285,
+      "provider_reported_cost_usd": 0
+    },
+    "attempted_pairs_all_runs": 19,
+    "unique_cases_attempted": 19,
+    "ungraded_case_ids": [
+      "B01",
+      "B02",
+      "B03",
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "F01",
+      "M01",
+      "M03",
+      "T01",
+      "T02",
+      "T03"
+    ]
+  }
+}

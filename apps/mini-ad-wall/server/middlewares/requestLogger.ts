@@ -14,11 +14,13 @@ function getClientIP(ctx: Context): string {
 async function requestLogger(ctx: Context, next: Next): Promise<void> {
     const requestId = ctx.state.requestId;
     const startTime = Date.now();
+    const marketing = ctx.path.startsWith('/api/marketing/');
+    const url = marketing ? ctx.path.replace(/(\/(?:click|media)\/).*/, '$1[redacted]') : ctx.url;
 
-    console.log(`[${getTimeString()}] ← ${requestId} | ${ctx.method} ${ctx.url} | IP: ${getClientIP(ctx)}`);
+    console.log(`[${getTimeString()}] ← ${requestId} | ${ctx.method} ${url} | IP: ${getClientIP(ctx)}`);
 
     const body = (ctx.request as any).body as Record<string, any>;
-    if (body && Object.keys(body).length > 0 && !ctx.url.includes('/upload') && !ctx.path.startsWith('/api/agent/')) {
+    if (body && Object.keys(body).length > 0 && !marketing && !ctx.url.includes('/upload') && !ctx.path.startsWith('/api/agent/')) {
         console.log(`[${getTimeString()}]   ${requestId} | Body:`, JSON.stringify(body).substring(0, 200));
     }
 
@@ -28,7 +30,7 @@ async function requestLogger(ctx: Context, next: Next): Promise<void> {
     const status = ctx.status;
     const statusIcon = status >= 400 ? '✗' : '✓';
 
-    console.log(`[${getTimeString()}] → ${requestId} | ${ctx.method} ${ctx.url} | ${statusIcon} ${status} | ${duration}ms`);
+    console.log(`[${getTimeString()}] → ${requestId} | ${ctx.method} ${url} | ${statusIcon} ${status} | ${duration}ms`);
 }
 
 export default requestLogger;

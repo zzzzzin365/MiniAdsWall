@@ -1,6 +1,6 @@
 # MiniAdsWall 后端可靠性与扩容修复 Coding Plan
 
-版本：0.1；日期：2026-10-10；状态：CP01、CP02 已完成；其余任务 pending。  
+版本：0.1；日期：2026-10-10；状态：CP01、CP02 已完成；其余任务 pending。
 依据：[后端可靠性与扩容修复 SDD](backend-reliability-sdd.md)。本文是实施计划；CP01、CP02 的实际结果见 [阶段验收记录](backend-reliability-acceptance.md)。
 
 ## 1. 执行边界

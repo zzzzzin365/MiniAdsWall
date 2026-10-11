@@ -1,0 +1,14 @@
+{
+  "configured_model": "nex-agi/nex-n2.5-mini:free",
+  "configured_model_http_status": 404,
+  "experiment_model": "nvidia/nemotron-3.5-lightning:free",
+  "experiment_model_smoke_succeeded": true,
+  "stop_http_status": 429,
+  "stop_message": "Rate limit exceeded: free-models-per-day",
+  "is_free_tier": true,
+  "configuration_files_changed": false,
+  "remaining_case_not_attempted": [
+    "B04"
+  ],
+  "replay_executed": false
+}

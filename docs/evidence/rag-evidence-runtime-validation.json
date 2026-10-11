@@ -1,0 +1,30 @@
+{
+  "time_utc": "2026-10-11T01:13:18.659908+00:00",
+  "scope": [
+    "test_rag_evidence_runtime.py",
+    "test_rag_evidence_hosting.py",
+    "test_rag_evidence_gate.py",
+    "test_openrouter_client.py",
+    "test_chat_preflight.py",
+    "test_chat_latency.py",
+    "test_ads_recall_context.py",
+    "test_hosting.py"
+  ],
+  "tests_run": 75,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "duration_seconds": 3.395,
+  "validation": "Offline regression: mocked model/Chroma, real HTTP handlers and local SQLite Worker trace persistence; not a live-provider accuracy or production latency evaluation",
+  "source_sha256": {
+    "core/rag_evidence.py": "4bb83752aedb59973cf2bd7a5113d82ce9911d3aa5812d938b8b1d24988a971d",
+    "api/main.py": "db964dbf8c2f88229cdd6cbade2ac5cb613a558afe08f463730fc26e22c15801",
+    "mcp/tool_manager.py": "e2aa6830c1d98f54a17069b67a1754d4bf29b0fd020db2a36500fcbf4b8bd0bc",
+    "mcp/knowledge_base.py": "db5144f383864810463988059fc9d8ca3cbaec40d87bae5b7041bdacf2fc3a1a",
+    "hosting/pipeline.py": "ce19cd32874c0aa8265ba13e4313baf6644bac30956f81f67cedf26b6cbe80a3",
+    "core/model_client.py": "328dfeee56b7bfe67777ae592aa02d67d1cde5cc8757be79581e00cbe80173f1",
+    "evaluation/run_rag_evidence_ab.py": "e1cee0bd136451c55d785648b2df995b24f179c24dad3391ddddf30d4a39149e",
+    "evaluation/retry_rag_evidence_pairs.py": "93e29ac046e788df560cab1404f073f2e3ac5b84cc70efc7e5ccfb2481a450e6"
+  }
+}

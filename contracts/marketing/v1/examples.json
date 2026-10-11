@@ -230,5 +230,268 @@
     },
     "valid": true,
     "label": "valid_error"
+  },
+  {
+    "label": "conversion valid",
+    "name": "ConversionInput",
+    "value": {
+      "source_event_id": "paid_1",
+      "type": "order_paid",
+      "order_id": "order_1",
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "occurred_at": "2026-10-10T01:00:00.000Z",
+      "amount_minor": 5000,
+      "currency": "CNY"
+    },
+    "valid": true
+  },
+  {
+    "label": "conversion rejects source",
+    "name": "ConversionInput",
+    "value": {
+      "source_event_id": "paid_1",
+      "type": "order_paid",
+      "order_id": "order_1",
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "occurred_at": "2026-10-10T01:00:00.000Z",
+      "amount_minor": 5000,
+      "currency": "CNY",
+      "source": "client"
+    },
+    "valid": false
+  },
+  {
+    "label": "fractional payment",
+    "name": "ConversionInput",
+    "value": {
+      "source_event_id": "paid_1",
+      "type": "order_paid",
+      "order_id": "order_1",
+      "brand_id": "brand_a",
+      "product_id": "product_a",
+      "occurred_at": "2026-10-10T01:00:00.000Z",
+      "amount_minor": 1.1,
+      "currency": "CNY"
+    },
+    "valid": false
+  },
+  {
+    "label": "spend valid",
+    "name": "SourceSpendInput",
+    "value": {
+      "source_entry_id": "spend_1",
+      "campaign_id": "campaign_a",
+      "creative_id": "creative_a",
+      "creative_version": 1,
+      "occurred_at": "2026-10-10T01:00:00Z",
+      "amount_minor": 1000,
+      "currency": "CNY"
+    },
+    "valid": true
+  },
+  {
+    "label": "adjustment valid",
+    "name": "SourceSpendInput",
+    "value": {
+      "source_entry_id": "spend_1",
+      "campaign_id": "campaign_a",
+      "creative_id": "creative_a",
+      "creative_version": 1,
+      "occurred_at": "2026-10-10T01:00:00Z",
+      "amount_minor": -20,
+      "currency": "CNY",
+      "adjustment_ref": "original"
+    },
+    "valid": true
+  },
+  {
+    "label": "boolean spend",
+    "name": "SourceSpendInput",
+    "value": {
+      "source_entry_id": "spend_1",
+      "campaign_id": "campaign_a",
+      "creative_id": "creative_a",
+      "creative_version": 1,
+      "occurred_at": "2026-10-10T01:00:00Z",
+      "amount_minor": true,
+      "currency": "CNY"
+    },
+    "valid": false
+  },
+  {
+    "label": "coverage valid",
+    "name": "SourceCoverageInput",
+    "value": {
+      "source_marker_id": "marker_1",
+      "campaign_id": "campaign_a",
+      "start": "2026-10-10T00:00:00Z",
+      "end": "2026-10-11T00:00:00Z",
+      "entry_count": 1,
+      "amount_minor": 1000,
+      "checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "valid": true
+  },
+  {
+    "label": "coverage rejects environment",
+    "name": "SourceCoverageInput",
+    "value": {
+      "source_marker_id": "marker_1",
+      "campaign_id": "campaign_a",
+      "start": "2026-10-10T00:00:00Z",
+      "end": "2026-10-11T00:00:00Z",
+      "entry_count": 1,
+      "amount_minor": 1000,
+      "checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "environment": "production"
+    },
+    "valid": false
+  },
+  {
+    "label": "serve valid",
+    "name": "ServeInput",
+    "value": {
+      "campaign_id": "campaign_a"
+    },
+    "valid": true
+  },
+  {
+    "label": "serve rejects creative spoof",
+    "name": "ServeInput",
+    "value": {
+      "campaign_id": "campaign_a",
+      "creative_id": "creative_b"
+    },
+    "valid": false
+  },
+  {
+    "label": "report query",
+    "name": "ReportQuery",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "camp_a",
+      "environment": "synthetic",
+      "start": "2026-10-01T00:00:00.000Z",
+      "end": "2026-10-02T00:00:00.000Z",
+      "timezone": "Asia/Shanghai",
+      "rule_version": "last-click-v1"
+    },
+    "valid": true
+  },
+  {
+    "label": "report creative without version",
+    "name": "ReportQuery",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "camp_a",
+      "environment": "synthetic",
+      "start": "2026-10-01T00:00:00.000Z",
+      "end": "2026-10-02T00:00:00.000Z",
+      "timezone": "Asia/Shanghai",
+      "rule_version": "last-click-v1",
+      "creative_id": "material_a"
+    },
+    "valid": false
+  },
+  {
+    "label": "report version without creative",
+    "name": "ReportQuery",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "camp_a",
+      "environment": "synthetic",
+      "start": "2026-10-01T00:00:00.000Z",
+      "end": "2026-10-02T00:00:00.000Z",
+      "timezone": "Asia/Shanghai",
+      "rule_version": "last-click-v1",
+      "creative_version": 1
+    },
+    "valid": false
+  },
+  {
+    "label": "report unsupported rule",
+    "name": "ReportQuery",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "camp_a",
+      "environment": "synthetic",
+      "start": "2026-10-01T00:00:00.000Z",
+      "end": "2026-10-02T00:00:00.000Z",
+      "timezone": "Asia/Shanghai",
+      "rule_version": "first-click"
+    },
+    "valid": false
+  },
+  {
+    "label": "report unknown field",
+    "name": "ReportQuery",
+    "value": {
+      "brand_id": "brand_a",
+      "campaign_id": "camp_a",
+      "environment": "synthetic",
+      "start": "2026-10-01T00:00:00.000Z",
+      "end": "2026-10-02T00:00:00.000Z",
+      "timezone": "Asia/Shanghai",
+      "rule_version": "last-click-v1",
+      "user_id": "other"
+    },
+    "valid": false
+  },
+  {
+    "label": "CPA eCPM assumption",
+    "name": "MetricEstimateInput",
+    "value": {
+      "ecpm": {
+        "predicted_ctr": 0.1,
+        "predicted_cvr": 0.2,
+        "bid_minor": 1000,
+        "bid_basis": "CPA"
+      }
+    },
+    "valid": true
+  },
+  {
+    "label": "CPA missing CVR",
+    "name": "MetricEstimateInput",
+    "value": {
+      "ecpm": {
+        "predicted_ctr": 0.1,
+        "bid_minor": 1000,
+        "bid_basis": "CPA"
+      }
+    },
+    "valid": false
+  },
+  {
+    "label": "probability outside range",
+    "name": "MetricEstimateInput",
+    "value": {
+      "ecpm": {
+        "predicted_ctr": 1.1,
+        "bid_minor": 1000,
+        "bid_basis": "CPC"
+      }
+    },
+    "valid": false
+  },
+  {
+    "label": "LTV assumption",
+    "name": "MetricEstimateInput",
+    "value": {
+      "ltv": {
+        "average_order_net_revenue_minor": 1000,
+        "orders_per_month": 2,
+        "lifetime_months": 12
+      }
+    },
+    "valid": true
+  },
+  {
+    "label": "empty estimates",
+    "name": "MetricEstimateInput",
+    "value": {},
+    "valid": false
   }
 ]

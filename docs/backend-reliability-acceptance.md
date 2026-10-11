@@ -58,7 +58,7 @@ CP01、CP02 的实现与阶段验证已完成。CP03–CP28、正式双宿主 HA
 | `DYNAMIC_EXECUTOR_ENABLED` | 默认 false，true 明确报未实现 |
 | `multi_node` | 配置值已定义；当前启动明确拒绝，等共享存储、执行归属和部署能力完成再开放 |
 
-Koa 两条上下文生产路径均受默认关闭的开关控制；旧路径仍读取服务端广告事实，剥离客户端伪造的 `ad_context`。新增可空字段的默认值不改变旧请求幂等指纹；普通输入重试与显式协议 1/空上下文/空条件的重试结果一致。
+Koa 新版上下文字段写入受默认关闭的开关控制，剥离客户端伪造的 `ad_context`。并行召回改动已使当前网关即使开关关闭也发送服务端排名前 50 条明细；因此全量发送的基线证据保留为初次运行记录，当前回归改为核对 50 条明细的来源和伪造事实拒绝。只有数量有界，不代表全量统计和正式 AC01 已完成。新增可空字段的默认值不改变旧请求幂等指纹；普通输入重试与显式协议 1/空上下文/空条件的重试结果一致。
 
 ### 3.3 命令和回滚限制
 
@@ -83,7 +83,7 @@ npm run migrate:schema --prefix apps/mini-ad-wall/server -- up --target 1
 
 | 范围 | 结果 | 证据 |
 | --- | --- | --- |
-| CP01/CP02 相关 Koa、业务 MySQL和客户端回归 | 23 项全部通过，0 失败、0 skipped | [范围日志](evidence/backend-reliability/cp02-koa-scoped.log) |
+| CP01/CP02 相关 Koa、业务 MySQL和客户端回归 | 23 项全部通过，0 失败、0 skipped | [范围日志](evidence/backend-reliability/cp02-scope-final-confirmation.log) |
 | 完整 Python 测试 | 104 项，91 通过、13 skipped，0 失败 | [Python 日志](evidence/backend-reliability/cp02-python-verified.log) |
 | 真实 MySQL 迁移专项 | 18 项全部通过，包含 8 项真实 MySQL、8 项文件 SQLite、2 项协议/开关验证 | [MySQL 日志](evidence/backend-reliability/cp02-mysql-verified.log) |
 | 托管六项多进程/SIGKILL 回归 | 全部通过；最后一次恢复 20.295 秒，旧写入被拒绝、检查点恢复成功 | [机器可读结果](evidence/backend-reliability/cp02-mysql-verified.json) |

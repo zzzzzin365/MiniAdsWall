@@ -14,11 +14,13 @@ class OpenRouterClientTests(unittest.IsolatedAsyncioTestCase):
             body = json.loads(request.content)
             self.assertEqual(body['messages'][0], {'role': 'system', 'content': 'rules'})
             self.assertFalse(body['reasoning']['enabled'])
-            return httpx.Response(200, json={'choices': [{'finish_reason': 'stop', 'message': {'content': 'ok'}}]})
+            return httpx.Response(200, json={'choices': [{'finish_reason': 'stop', 'message': {'content': 'ok'}}],
+                                             'usage': {'prompt_tokens': 12, 'completion_tokens': 4, 'cost': 0}})
         client = OpenRouterClient('test-key', httpx.MockTransport(handler))
         result = await client.messages.create(model='test:free', max_tokens=10, system='rules',
                                                messages=[{'role': 'user', 'content': 'hello'}])
         self.assertEqual(result.content[0].text, 'ok')
+        self.assertEqual(result.usage, {'prompt_tokens': 12, 'completion_tokens': 4, 'cost': 0})
 
     async def test_invalid_success_bodies_fail_without_retries(self):
         for body in [{'error': {'message': 'busy'}}, {'choices': []},

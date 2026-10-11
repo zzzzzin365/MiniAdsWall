@@ -1,0 +1,153 @@
+{
+  "kind": "Reference-based Codex review; not independent human annotation",
+  "source": "docs/evidence/rag-evidence-ab-pilot-v1.json",
+  "source_sha256": "d1c06fa19e20e249d610052813b1908df8d7ec94b123dd6f6b4577172af3ccfa",
+  "policy": "Use the predeclared rubric; count concrete factual errors separately from incomplete missing-information explanations; all completed pairs reviewed, no selection by answer quality",
+  "summary": {
+    "completed_pairs": 7,
+    "answerable_pairs": 3,
+    "unanswerable_pairs": 4,
+    "arms": {
+      "baseline": {
+        "factual_errors": 1,
+        "false_refusals": 0,
+        "correct": 6,
+        "median_service_ms": 6883.2,
+        "usage_on_complete_pairs": {
+          "calls": 7,
+          "failed_calls": 0,
+          "prompt_tokens": 9538,
+          "completion_tokens": 1906,
+          "provider_reported_cost_usd": 0
+        }
+      },
+      "gated": {
+        "factual_errors": 0,
+        "false_refusals": 0,
+        "correct": 6,
+        "median_service_ms": 6961.46,
+        "usage_on_complete_pairs": {
+          "calls": 16,
+          "failed_calls": 0,
+          "prompt_tokens": 9743,
+          "completion_tokens": 1022,
+          "provider_reported_cost_usd": 0
+        }
+      }
+    },
+    "error_pairs_improved": 1,
+    "error_pairs_worsened": 0,
+    "exact_mcnemar_two_sided_p": 1
+  },
+  "reviews": {
+    "F02": {
+      "baseline": {
+        "factual_error": true,
+        "false_refusal": false,
+        "correct": false,
+        "reason": "把固定计费单价称为竞价出价，混淆合同计费单价与出价；原话：单价为竞价出价，但不一定等于实际成交单价。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "明确固定单价，并区分出价与实际成交单价；额外的竞争机制说明不作为本项目事实。"
+      }
+    },
+    "F03": {
+      "baseline": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "DSP服务买方，SSP服务媒体，没有声称项目已接入外部平台。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "正确解释DSP和SSP角色。"
+      }
+    },
+    "F04": {
+      "baseline": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "明确CTR分母是曝光，核心公式正确。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "CTR核心公式和分母正确；到达率解释中有不清晰措辞，不影响本题核心答案。"
+      }
+    },
+    "M02": {
+      "baseline": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "未用出价乘页面点击冒充结算消耗，明确要求有效计费事件或账务数据。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "没有编造20元消耗，指出结算事件缺失；未完整列出实际计费单价，信息完整性不足。"
+      }
+    },
+    "M04": {
+      "baseline": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "明确缺支付转化次数，未编造支付转化率。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "明确缺支付转化次数，未编造转化率；额外提到转化金额不严谨，金额不能直接代替次数。"
+      }
+    },
+    "T02": {
+      "baseline": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "没有给佣金比例，要求查当前合同结算条款，缺失信息明确。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": false,
+        "reason": "只说没有能支持问题的资料，没有具体指出缺当前CPS合同佣金条款；按预设的缺失信息明确要求，不计为完整正确。"
+      }
+    },
+    "T04": {
+      "baseline": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "没有假装看到视频文字，要求用户提供视频开头文字；不可回答样本的合理追问不是误拒答。"
+      },
+      "gated": {
+        "factual_error": false,
+        "false_refusal": false,
+        "correct": true,
+        "reason": "未假装看过视频，明确缺视频内容。"
+      }
+    }
+  },
+  "automated_judge_disagreements": [
+    "F02: automated judge missed the baseline confusion between fixed unit price and bid.",
+    "T04: automated judge reason incorrectly treats this unanswerable example as answerable and marks a reasonable clarification incorrect.",
+    "M02 and M04: automated judge reasons credit explanations absent from the gated output.",
+    "T02: automatic grading timed out; both outputs were available and included in Codex review."
+  ],
+  "single_arm_observation_not_in_comparison": {
+    "case_id": "D01",
+    "finding": "Baseline correctly calculates2%, but claims the rate is中等偏上且不算异常波动 without benchmark or time-series evidence. Gated arm failed, so this observation cannot establish improvement."
+  },
+  "decision": "Inconclusive: one observed factual correction in seven complete pairs, no increase in fully correct answers, untested boundary cases and severe provider availability/quota limits. Do not enable in production from this pilot."
+}

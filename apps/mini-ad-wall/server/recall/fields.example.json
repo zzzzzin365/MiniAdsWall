@@ -1,0 +1,7 @@
+[
+  { "field_key": "region", "cardinality": "scalar", "max_values": 1 },
+  { "field_key": "category", "cardinality": "scalar", "max_values": 1 },
+  { "field_key": "tags", "cardinality": "multi", "max_values": 50 },
+  { "field_key": "device", "cardinality": "multi", "max_values": 10 },
+  { "field_key": "interests", "cardinality": "multi", "max_values": 50 }
+]

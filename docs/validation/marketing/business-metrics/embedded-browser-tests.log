@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: embedded metric dashboard: same-page views, real report, estimates, retained snapshot, download and mobile
+ok 1 - embedded metric dashboard: same-page views, real report, estimates, retained snapshot, download and mobile
+  ---
+  duration_ms: 11216.96725
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11477.874042
