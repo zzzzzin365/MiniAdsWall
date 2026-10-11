@@ -3,11 +3,12 @@ import React, { useRef, useEffect } from 'react';
 interface VideoModalProps {
     isOpen: boolean;
     videoUrl: string;
-    onEnded: () => void;
+    onEnded?: () => void;
+    hint?: string;
     onClose: () => void;
 }
 
-const VideoModal: React.FC<VideoModalProps> = ({ isOpen, videoUrl, onEnded, onClose }) => {
+const VideoModal: React.FC<VideoModalProps> = ({ isOpen, videoUrl, onEnded, onClose, hint = '视频播放结束后将自动跳转...' }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -24,6 +25,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, videoUrl, onEnded, onCl
                 <div style={{ position: 'relative' }}>
                     <button
                         onClick={onClose}
+                        aria-label="关闭视频预览"
                         className="video-close-btn"
                     >
                         ✕
@@ -36,7 +38,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, videoUrl, onEnded, onCl
                         onEnded={onEnded}
                     />
                     <div className="video-hint">
-                        视频播放结束后将自动跳转...
+                        {hint}
                     </div>
                 </div>
             </div>

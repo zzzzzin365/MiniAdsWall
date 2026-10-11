@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-10-11T06:16:10.298313+00:00",
+  "dataset": "evaluation/rag_evidence_business_cases_v1.json",
+  "sha256": "3a2e560ac04b069dec935c70d9ce232b6ca102836a668e143c9ed8e04e591df8",
+  "snapshots": 10,
+  "ads": 50,
+  "cases": 80,
+  "answerable": 40,
+  "unanswerable": 40,
+  "calibration_cases": 24,
+  "held_out_test_cases": 56,
+  "checks_per_category": {
+    "CTR": 10,
+    "BID": 10,
+    "CPC": 10,
+    "ROAS": 10,
+    "NO_IMPRESSIONS": 10,
+    "FUTURE_PROFIT": 10,
+    "WINDOW_CONFLICT": 10,
+    "PRICE_CONFLICT": 10
+  },
+  "validation": "Dataset structure, scope/windows/missing fields, arithmetic golden values and bid reference against the actual local bid_simulation_handler; no model calls or Jev benchmark",
+  "labels_independently_human_reviewed": false,
+  "jev_adapter_present": false,
+  "jev_calls": 0,
+  "model_calls": 0
+}

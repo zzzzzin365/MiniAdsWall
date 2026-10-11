@@ -47,7 +47,8 @@ const PRICE_RANGES = [
 const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
     const [showMetrics, setShowMetrics] = useState(initialMetricsView);
     const [metricsOpened, setMetricsOpened] = useState(initialMetricsView);
-    const [selectedAd, setSelectedAd] = useState<Ad | null>(null);
+    const [selectedAdId, setSelectedAdId] = useState<string | null>(null);
+    const selectedAd = ads.find(ad => ad.id === selectedAdId) ?? null;
     const [highlightedRange, setHighlightedRange] = useState<number | null>(null);
 
     const bidDistributionData = useMemo(() => {
@@ -186,7 +187,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
             },
             title: {
                 display: true,
-                text: '排名 vs 出价关系图',
+                text: '模拟排名 vs 出价关系图',
                 color: '#1A202C',
                 font: { size: 16, weight: 'bold' },
                 padding: { bottom: 20 },
@@ -247,7 +248,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
             if (elements.length > 0) {
                 const dataIndex = elements[0].index;
                 const clickedAd = ads[dataIndex];
-                setSelectedAd(selectedAd?.id === clickedAd.id ? null : clickedAd);
+                setSelectedAdId(selectedAdId === clickedAd.id ? null : clickedAd.id);
             }
         },
         onHover: (event, elements) => {
@@ -364,7 +365,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
             if (elements.length > 0) {
                 const dataIndex = elements[0].index;
                 const clickedAd = ads[dataIndex];
-                setSelectedAd(selectedAd?.id === clickedAd.id ? null : clickedAd);
+                setSelectedAdId(selectedAdId === clickedAd.id ? null : clickedAd.id);
             }
         },
         onHover: (event, elements) => {
@@ -490,7 +491,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
                 const dataPoints = videoPerformanceData.datasets[0].data as { ad: Ad }[];
                 const clickedAd = dataPoints[dataIndex]?.ad;
                 if (clickedAd) {
-                    setSelectedAd(selectedAd?.id === clickedAd.id ? null : clickedAd);
+                    setSelectedAdId(selectedAdId === clickedAd.id ? null : clickedAd.id);
                 }
             }
         },
@@ -553,7 +554,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
                         <span>发布者: {selectedAd.publisher}</span>
                     </div>
                     
-                    <button className="selected-ad-close" onClick={() => setSelectedAd(null)}>×</button>
+                    <button className="selected-ad-close" onClick={() => setSelectedAdId(null)}>×</button>
                 </div>
             )}
 
@@ -569,7 +570,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
                     <div className="chart-wrapper">
                         <Scatter data={rankVsBidData} options={rankVsBidOptions} />
                     </div>
-                    <div className="chart-hint">💡 点击数据点查看广告详情</div>
+                    <div className="chart-hint">模拟排序：出价 + 出价 × 累计点击 × 0.42；点击数据点选中广告</div>
                 </div>
 
                 <div className="chart-container">

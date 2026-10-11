@@ -154,6 +154,9 @@ export async function findAds(raw: any, principal: string) {
   }
 }
 export async function listPage(raw: any, principal: string) {
+  if (raw.q !== undefined && (typeof raw.q !== "string" || raw.q.length > 200))
+    throw failure("搜索词必须是最多 200 字的文本");
+  const query = (raw.q ?? "").trim();
   const limit = raw.limit === undefined ? 50 : Number(raw.limit);
   if (!Number.isInteger(limit) || limit < 1 || limit > 100)
     throw failure("invalid_filter");
@@ -178,6 +181,7 @@ export async function listPage(raw: any, principal: string) {
       cursor = JSON.parse(Buffer.from(data, "base64url").toString());
       if (
         cursor.principal !== principal ||
+        (cursor.q ?? "") !== query ||
         cursor.expires < Date.now() ||
         typeof cursor.id !== "string" ||
         !/^\d+\.\d{8}$/.test(cursor.score)
@@ -188,12 +192,22 @@ export async function listPage(raw: any, principal: string) {
     }
   }
   return withAdsConnection(async (c) => {
-    const where = cursor
-      ? "WHERE ranking_score < ? OR (ranking_score = ? AND id > ?)"
-      : "";
+    const filters: string[] = [];
+    const params: (string | number)[] = [];
+    if (query) {
+      // Treat LIKE wildcards as literal input; search the full content, not its card preview.
+      const pattern = `%${query.replace(/[!%_]/g, "!$&")}%`;
+      filters.push("(LOWER(title) LIKE LOWER(?) ESCAPE '!' OR LOWER(publisher) LIKE LOWER(?) ESCAPE '!' OR LOWER(content) LIKE LOWER(?) ESCAPE '!')");
+      params.push(pattern, pattern, pattern);
+    }
+    if (cursor) {
+      filters.push("(ranking_score < ? OR (ranking_score = ? AND id > ?))");
+      params.push(cursor.score, cursor.score, cursor.id);
+    }
+    const where = filters.length ? `WHERE ${filters.join(" AND ")}` : "";
     const [rows] = await c.query<RowDataPacket[]>(
       `SELECT id,title,publisher,LEFT(content,800) AS content,url,price,clicks,JSON_EXTRACT(videos,'$[0 to 1]') AS videos,JSON_LENGTH(videos) AS video_count,version,ranking_score FROM ads_business_ads ${where} ORDER BY ranking_score DESC,id ASC LIMIT ?`,
-      [...(cursor ? [cursor.score, cursor.score, cursor.id] : []), limit + 1],
+      [...params, limit + 1],
     );
     const selected: any[] = [];
     let bytes = 0;
@@ -229,6 +243,7 @@ export async function listPage(raw: any, principal: string) {
           score: last.ranking_score,
           id: last.id,
           principal,
+          q: query,
           expires: Date.now() + 3600000,
         }),
       ).toString("base64url");

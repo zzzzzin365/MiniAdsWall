@@ -111,7 +111,7 @@ async function mutateAd<T>(method: 'post' | 'put' | 'delete', url: string, data?
     }
 }
 
-export const getAdsPage = (cursor?: string): Promise<{items: Ad[]; next_cursor: string | null}> => api.get('/ads/page', {params: {cursor}}).then(res => res.data);
+export const getAdsPage = (cursor?: string, query?: string, signal?: AbortSignal): Promise<{items: Ad[]; next_cursor: string | null}> => api.get('/ads/page', {params: {cursor, q: query || undefined}, signal}).then(res => res.data);
 export const getAds = (): Promise<Ad[]> => getAdsPage().then(res => res.items);
 export const getAd = (id: string): Promise<Ad> => api.get(`/ads/${encodeURIComponent(id)}`).then(res => res.data);
 export const searchAds = (conditions: unknown[]) => api.post('/ads/search', {conditions,limit:50}).then(res=>res.data);

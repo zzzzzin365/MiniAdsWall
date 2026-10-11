@@ -1,0 +1,4563 @@
+{
+  "version": "synthetic-business-evidence-v1",
+  "frozen": true,
+  "seed": 20261011,
+  "scope": "Synthetic fixed-candidate business RAG evaluation; not live traffic or retrieval evaluation",
+  "annotation": "Developer-defined references with deterministic arithmetic; not independent human labels",
+  "provenance": {
+    "business_data": "entirely synthetic",
+    "ranking_formula": "existing project demo rule",
+    "measurement_and_billing_rules": "explicit evaluation fixture assumptions, not live project contracts"
+  },
+  "limitations": [
+    "50 simulated ads, 10 snapshots, 8 repeated templates; 80 cases are not 80 independent business scenarios",
+    "Split by snapshot: 24 calibration cases and 56 held-out test cases; templates still overlap",
+    "simulated_measurements are evaluation-only; existing app tools do not automatically ingest these fields",
+    "Golden labels/answers must never enter model input; reviewers need to check labels independently",
+    "No Jev calls or model comparison have been performed"
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "S01",
+      "window": "2026-10-01",
+      "split": "calibration",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-01-01",
+          "title": "模拟广告1-1",
+          "price": 2.53,
+          "clicks": 710,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-01",
+            "metric_scope": "same_ad",
+            "impressions": 14500,
+            "settled_valid_clicks": 694,
+            "fixed_cpc_yuan": 0.27,
+            "paid_orders": 3,
+            "ad_spend_yuan": 187.38,
+            "attributed_revenue_yuan": 120.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-01-02",
+          "title": "模拟广告1-2",
+          "price": 0.87,
+          "clicks": 127,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-01",
+            "metric_scope": "same_ad",
+            "impressions": 14200,
+            "settled_valid_clicks": 123,
+            "fixed_cpc_yuan": 0.55,
+            "paid_orders": 10,
+            "ad_spend_yuan": 67.65,
+            "attributed_revenue_yuan": 1960.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-01-03",
+          "title": "模拟广告1-3",
+          "price": 3.21,
+          "clicks": 1353,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-01",
+            "metric_scope": "same_ad",
+            "impressions": 18800,
+            "settled_valid_clicks": 1147,
+            "fixed_cpc_yuan": 0.11,
+            "paid_orders": 0,
+            "ad_spend_yuan": 126.17,
+            "attributed_revenue_yuan": 0.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-01-04",
+          "title": "模拟广告1-4",
+          "price": 3.12,
+          "clicks": 168,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-01",
+            "metric_scope": "same_ad",
+            "impressions": 5800,
+            "settled_valid_clicks": 157,
+            "fixed_cpc_yuan": 0.49,
+            "paid_orders": 4,
+            "ad_spend_yuan": 76.93,
+            "attributed_revenue_yuan": 112.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-01-05",
+          "title": "模拟广告1-5",
+          "price": 2.59,
+          "clicks": 493,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-01",
+            "metric_scope": "same_ad",
+            "impressions": 8500,
+            "settled_valid_clicks": 482,
+            "fixed_cpc_yuan": 0.59,
+            "paid_orders": 12,
+            "ad_spend_yuan": 284.38,
+            "attributed_revenue_yuan": 2100.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S02",
+      "window": "2026-10-02",
+      "split": "calibration",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-02-01",
+          "title": "模拟广告2-1",
+          "price": 1.63,
+          "clicks": 777,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-02",
+            "metric_scope": "same_ad",
+            "impressions": 11100,
+            "settled_valid_clicks": 648,
+            "fixed_cpc_yuan": 0.54,
+            "paid_orders": 57,
+            "ad_spend_yuan": 349.92,
+            "attributed_revenue_yuan": 3135.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-02-02",
+          "title": "模拟广告2-2",
+          "price": 2.27,
+          "clicks": 513,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-02",
+            "metric_scope": "same_ad",
+            "impressions": 10700,
+            "settled_valid_clicks": 456,
+            "fixed_cpc_yuan": 0.3,
+            "paid_orders": 29,
+            "ad_spend_yuan": 136.8,
+            "attributed_revenue_yuan": 3857.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-02-03",
+          "title": "模拟广告2-3",
+          "price": 1.97,
+          "clicks": 64,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-02",
+            "metric_scope": "same_ad",
+            "impressions": 3200,
+            "settled_valid_clicks": 59,
+            "fixed_cpc_yuan": 0.11,
+            "paid_orders": 4,
+            "ad_spend_yuan": 6.49,
+            "attributed_revenue_yuan": 1104.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-02-04",
+          "title": "模拟广告2-4",
+          "price": 2.34,
+          "clicks": 332,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-02",
+            "metric_scope": "same_ad",
+            "impressions": 12300,
+            "settled_valid_clicks": 310,
+            "fixed_cpc_yuan": 0.28,
+            "paid_orders": 8,
+            "ad_spend_yuan": 86.8,
+            "attributed_revenue_yuan": 1480.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-02-05",
+          "title": "模拟广告2-5",
+          "price": 2.67,
+          "clicks": 1030,
+          "video_count": 0,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-02",
+            "metric_scope": "same_ad",
+            "impressions": 18400,
+            "settled_valid_clicks": 1015,
+            "fixed_cpc_yuan": 0.36,
+            "paid_orders": 75,
+            "ad_spend_yuan": 365.4,
+            "attributed_revenue_yuan": 11550.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S03",
+      "window": "2026-10-03",
+      "split": "calibration",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-03-01",
+          "title": "模拟广告3-1",
+          "price": 1.18,
+          "clicks": 186,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-03",
+            "metric_scope": "same_ad",
+            "impressions": 3800,
+            "settled_valid_clicks": 178,
+            "fixed_cpc_yuan": 0.23,
+            "paid_orders": 10,
+            "ad_spend_yuan": 40.94,
+            "attributed_revenue_yuan": 2860.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-03-02",
+          "title": "模拟广告3-2",
+          "price": 1.72,
+          "clicks": 1383,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-03",
+            "metric_scope": "same_ad",
+            "impressions": 18200,
+            "settled_valid_clicks": 1244,
+            "fixed_cpc_yuan": 0.48,
+            "paid_orders": 58,
+            "ad_spend_yuan": 597.12,
+            "attributed_revenue_yuan": 3944.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-03-03",
+          "title": "模拟广告3-3",
+          "price": 3.95,
+          "clicks": 595,
+          "video_count": 0,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-03",
+            "metric_scope": "same_ad",
+            "impressions": 12400,
+            "settled_valid_clicks": 592,
+            "fixed_cpc_yuan": 0.59,
+            "paid_orders": 12,
+            "ad_spend_yuan": 349.28,
+            "attributed_revenue_yuan": 3504.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-03-04",
+          "title": "模拟广告3-4",
+          "price": 2.51,
+          "clicks": 790,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-03",
+            "metric_scope": "same_ad",
+            "impressions": 11800,
+            "settled_valid_clicks": 662,
+            "fixed_cpc_yuan": 0.19,
+            "paid_orders": 42,
+            "ad_spend_yuan": 125.78,
+            "attributed_revenue_yuan": 10542.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-03-05",
+          "title": "模拟广告3-5",
+          "price": 1.79,
+          "clicks": 123,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-03",
+            "metric_scope": "same_ad",
+            "impressions": 2200,
+            "settled_valid_clicks": 121,
+            "fixed_cpc_yuan": 0.38,
+            "paid_orders": 4,
+            "ad_spend_yuan": 45.98,
+            "attributed_revenue_yuan": 716.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S04",
+      "window": "2026-10-04",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-04-01",
+          "title": "模拟广告4-1",
+          "price": 3.12,
+          "clicks": 170,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-04",
+            "metric_scope": "same_ad",
+            "impressions": 2300,
+            "settled_valid_clicks": 138,
+            "fixed_cpc_yuan": 0.4,
+            "paid_orders": 13,
+            "ad_spend_yuan": 55.2,
+            "attributed_revenue_yuan": 3237.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-04-02",
+          "title": "模拟广告4-2",
+          "price": 1.89,
+          "clicks": 1014,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-04",
+            "metric_scope": "same_ad",
+            "impressions": 14700,
+            "settled_valid_clicks": 902,
+            "fixed_cpc_yuan": 0.16,
+            "paid_orders": 67,
+            "ad_spend_yuan": 144.32,
+            "attributed_revenue_yuan": 18827.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-04-03",
+          "title": "模拟广告4-3",
+          "price": 1.04,
+          "clicks": 808,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-04",
+            "metric_scope": "same_ad",
+            "impressions": 10100,
+            "settled_valid_clicks": 715,
+            "fixed_cpc_yuan": 0.52,
+            "paid_orders": 26,
+            "ad_spend_yuan": 371.8,
+            "attributed_revenue_yuan": 4654.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-04-04",
+          "title": "模拟广告4-4",
+          "price": 1.85,
+          "clicks": 677,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-04",
+            "metric_scope": "same_ad",
+            "impressions": 18300,
+            "settled_valid_clicks": 548,
+            "fixed_cpc_yuan": 0.52,
+            "paid_orders": 0,
+            "ad_spend_yuan": 284.96,
+            "attributed_revenue_yuan": 0.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-04-05",
+          "title": "模拟广告4-5",
+          "price": 2.53,
+          "clicks": 118,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-04",
+            "metric_scope": "same_ad",
+            "impressions": 2700,
+            "settled_valid_clicks": 104,
+            "fixed_cpc_yuan": 0.13,
+            "paid_orders": 8,
+            "ad_spend_yuan": 13.52,
+            "attributed_revenue_yuan": 1608.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S05",
+      "window": "2026-10-05",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-05-01",
+          "title": "模拟广告5-1",
+          "price": 1.47,
+          "clicks": 1082,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-05",
+            "metric_scope": "same_ad",
+            "impressions": 16400,
+            "settled_valid_clicks": 972,
+            "fixed_cpc_yuan": 0.47,
+            "paid_orders": 48,
+            "ad_spend_yuan": 456.84,
+            "attributed_revenue_yuan": 9840.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-05-02",
+          "title": "模拟广告5-2",
+          "price": 3.65,
+          "clicks": 1165,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-05",
+            "metric_scope": "same_ad",
+            "impressions": 18800,
+            "settled_valid_clicks": 1159,
+            "fixed_cpc_yuan": 0.19,
+            "paid_orders": 73,
+            "ad_spend_yuan": 220.21,
+            "attributed_revenue_yuan": 10804.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-05-03",
+          "title": "模拟广告5-3",
+          "price": 2.83,
+          "clicks": 257,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-05",
+            "metric_scope": "same_ad",
+            "impressions": 3900,
+            "settled_valid_clicks": 237,
+            "fixed_cpc_yuan": 0.33,
+            "paid_orders": 16,
+            "ad_spend_yuan": 78.21,
+            "attributed_revenue_yuan": 4384.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-05-04",
+          "title": "模拟广告5-4",
+          "price": 1.23,
+          "clicks": 472,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-05",
+            "metric_scope": "same_ad",
+            "impressions": 10500,
+            "settled_valid_clicks": 397,
+            "fixed_cpc_yuan": 0.38,
+            "paid_orders": 26,
+            "ad_spend_yuan": 150.86,
+            "attributed_revenue_yuan": 2288.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-05-05",
+          "title": "模拟广告5-5",
+          "price": 2.01,
+          "clicks": 1164,
+          "video_count": 0,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-05",
+            "metric_scope": "same_ad",
+            "impressions": 16400,
+            "settled_valid_clicks": 1088,
+            "fixed_cpc_yuan": 0.57,
+            "paid_orders": 67,
+            "ad_spend_yuan": 620.16,
+            "attributed_revenue_yuan": 17889.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S06",
+      "window": "2026-10-06",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-06-01",
+          "title": "模拟广告6-1",
+          "price": 3.87,
+          "clicks": 100,
+          "video_count": 0,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-06",
+            "metric_scope": "same_ad",
+            "impressions": 6300,
+            "settled_valid_clicks": 99,
+            "fixed_cpc_yuan": 0.21,
+            "paid_orders": 4,
+            "ad_spend_yuan": 20.79,
+            "attributed_revenue_yuan": 1188.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-06-02",
+          "title": "模拟广告6-2",
+          "price": 1.72,
+          "clicks": 259,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-06",
+            "metric_scope": "same_ad",
+            "impressions": 9600,
+            "settled_valid_clicks": 224,
+            "fixed_cpc_yuan": 0.46,
+            "paid_orders": 18,
+            "ad_spend_yuan": 103.04,
+            "attributed_revenue_yuan": 504.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-06-03",
+          "title": "模拟广告6-3",
+          "price": 3.69,
+          "clicks": 309,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-06",
+            "metric_scope": "same_ad",
+            "impressions": 17200,
+            "settled_valid_clicks": 301,
+            "fixed_cpc_yuan": 0.44,
+            "paid_orders": 22,
+            "ad_spend_yuan": 132.44,
+            "attributed_revenue_yuan": 4136.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-06-04",
+          "title": "模拟广告6-4",
+          "price": 1.88,
+          "clicks": 36,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-06",
+            "metric_scope": "same_ad",
+            "impressions": 4100,
+            "settled_valid_clicks": 32,
+            "fixed_cpc_yuan": 0.22,
+            "paid_orders": 2,
+            "ad_spend_yuan": 7.04,
+            "attributed_revenue_yuan": 534.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-06-05",
+          "title": "模拟广告6-5",
+          "price": 3.08,
+          "clicks": 100,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-06",
+            "metric_scope": "same_ad",
+            "impressions": 2400,
+            "settled_valid_clicks": 90,
+            "fixed_cpc_yuan": 0.5,
+            "paid_orders": 7,
+            "ad_spend_yuan": 45.0,
+            "attributed_revenue_yuan": 1309.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S07",
+      "window": "2026-10-07",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-07-01",
+          "title": "模拟广告7-1",
+          "price": 3.45,
+          "clicks": 858,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-07",
+            "metric_scope": "same_ad",
+            "impressions": 15600,
+            "settled_valid_clicks": 708,
+            "fixed_cpc_yuan": 0.48,
+            "paid_orders": 45,
+            "ad_spend_yuan": 339.84,
+            "attributed_revenue_yuan": 6435.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-07-02",
+          "title": "模拟广告7-2",
+          "price": 3.01,
+          "clicks": 927,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-07",
+            "metric_scope": "same_ad",
+            "impressions": 12700,
+            "settled_valid_clicks": 811,
+            "fixed_cpc_yuan": 0.54,
+            "paid_orders": 64,
+            "ad_spend_yuan": 437.94,
+            "attributed_revenue_yuan": 11712.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-07-03",
+          "title": "模拟广告7-3",
+          "price": 2.88,
+          "clicks": 281,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-07",
+            "metric_scope": "same_ad",
+            "impressions": 7400,
+            "settled_valid_clicks": 265,
+            "fixed_cpc_yuan": 0.12,
+            "paid_orders": 6,
+            "ad_spend_yuan": 31.8,
+            "attributed_revenue_yuan": 1548.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-07-04",
+          "title": "模拟广告7-4",
+          "price": 2.38,
+          "clicks": 165,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-07",
+            "metric_scope": "same_ad",
+            "impressions": 5900,
+            "settled_valid_clicks": 135,
+            "fixed_cpc_yuan": 0.44,
+            "paid_orders": 4,
+            "ad_spend_yuan": 59.4,
+            "attributed_revenue_yuan": 948.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-07-05",
+          "title": "模拟广告7-5",
+          "price": 2.95,
+          "clicks": 747,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-07",
+            "metric_scope": "same_ad",
+            "impressions": 17800,
+            "settled_valid_clicks": 670,
+            "fixed_cpc_yuan": 0.58,
+            "paid_orders": 28,
+            "ad_spend_yuan": 388.6,
+            "attributed_revenue_yuan": 1036.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S08",
+      "window": "2026-10-08",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-08-01",
+          "title": "模拟广告8-1",
+          "price": 3.29,
+          "clicks": 356,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-08",
+            "metric_scope": "same_ad",
+            "impressions": 10800,
+            "settled_valid_clicks": 286,
+            "fixed_cpc_yuan": 0.47,
+            "paid_orders": 14,
+            "ad_spend_yuan": 134.42,
+            "attributed_revenue_yuan": 434.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-08-02",
+          "title": "模拟广告8-2",
+          "price": 1.74,
+          "clicks": 700,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-08",
+            "metric_scope": "same_ad",
+            "impressions": 10000,
+            "settled_valid_clicks": 568,
+            "fixed_cpc_yuan": 0.4,
+            "paid_orders": 1,
+            "ad_spend_yuan": 227.2,
+            "attributed_revenue_yuan": 146.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-08-03",
+          "title": "模拟广告8-3",
+          "price": 3.74,
+          "clicks": 86,
+          "video_count": 0,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-08",
+            "metric_scope": "same_ad",
+            "impressions": 14400,
+            "settled_valid_clicks": 85,
+            "fixed_cpc_yuan": 0.32,
+            "paid_orders": 1,
+            "ad_spend_yuan": 27.2,
+            "attributed_revenue_yuan": 124.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-08-04",
+          "title": "模拟广告8-4",
+          "price": 1.04,
+          "clicks": 537,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-08",
+            "metric_scope": "same_ad",
+            "impressions": 16300,
+            "settled_valid_clicks": 526,
+            "fixed_cpc_yuan": 0.26,
+            "paid_orders": 24,
+            "ad_spend_yuan": 136.76,
+            "attributed_revenue_yuan": 1056.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-08-05",
+          "title": "模拟广告8-5",
+          "price": 1.51,
+          "clicks": 89,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-08",
+            "metric_scope": "same_ad",
+            "impressions": 11200,
+            "settled_valid_clicks": 75,
+            "fixed_cpc_yuan": 0.34,
+            "paid_orders": 4,
+            "ad_spend_yuan": 25.5,
+            "attributed_revenue_yuan": 1132.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S09",
+      "window": "2026-10-09",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-09-01",
+          "title": "模拟广告9-1",
+          "price": 2.68,
+          "clicks": 360,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-09",
+            "metric_scope": "same_ad",
+            "impressions": 5300,
+            "settled_valid_clicks": 342,
+            "fixed_cpc_yuan": 0.41,
+            "paid_orders": 1,
+            "ad_spend_yuan": 140.22,
+            "attributed_revenue_yuan": 148.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-09-02",
+          "title": "模拟广告9-2",
+          "price": 1.12,
+          "clicks": 806,
+          "video_count": 0,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-09",
+            "metric_scope": "same_ad",
+            "impressions": 10900,
+            "settled_valid_clicks": 645,
+            "fixed_cpc_yuan": 0.53,
+            "paid_orders": 41,
+            "ad_spend_yuan": 341.85,
+            "attributed_revenue_yuan": 9594.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-09-03",
+          "title": "模拟广告9-3",
+          "price": 1.63,
+          "clicks": 238,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-09",
+            "metric_scope": "same_ad",
+            "impressions": 5300,
+            "settled_valid_clicks": 201,
+            "fixed_cpc_yuan": 0.29,
+            "paid_orders": 7,
+            "ad_spend_yuan": 58.29,
+            "attributed_revenue_yuan": 147.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-09-04",
+          "title": "模拟广告9-4",
+          "price": 1.76,
+          "clicks": 108,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-09",
+            "metric_scope": "same_ad",
+            "impressions": 15500,
+            "settled_valid_clicks": 89,
+            "fixed_cpc_yuan": 0.14,
+            "paid_orders": 8,
+            "ad_spend_yuan": 12.46,
+            "attributed_revenue_yuan": 2368.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-09-05",
+          "title": "模拟广告9-5",
+          "price": 2.62,
+          "clicks": 856,
+          "video_count": 3,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-09",
+            "metric_scope": "same_ad",
+            "impressions": 11900,
+            "settled_valid_clicks": 785,
+            "fixed_cpc_yuan": 0.59,
+            "paid_orders": 64,
+            "ad_spend_yuan": 463.15,
+            "attributed_revenue_yuan": 5824.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "S10",
+      "window": "2026-10-10",
+      "split": "test",
+      "scope": "provided_snapshot",
+      "ads": [
+        {
+          "id": "mock-ad-10-01",
+          "title": "模拟广告10-1",
+          "price": 1.2,
+          "clicks": 957,
+          "video_count": 4,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-10",
+            "metric_scope": "same_ad",
+            "impressions": 17100,
+            "settled_valid_clicks": 799,
+            "fixed_cpc_yuan": 0.38,
+            "paid_orders": 12,
+            "ad_spend_yuan": 303.62,
+            "attributed_revenue_yuan": 2436.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-10-02",
+          "title": "模拟广告10-2",
+          "price": 2.49,
+          "clicks": 44,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-10",
+            "metric_scope": "same_ad",
+            "impressions": 2800,
+            "settled_valid_clicks": 39,
+            "fixed_cpc_yuan": 0.32,
+            "paid_orders": 3,
+            "ad_spend_yuan": 12.48,
+            "attributed_revenue_yuan": 744.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-10-03",
+          "title": "模拟广告10-3",
+          "price": 1.17,
+          "clicks": 313,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-10",
+            "metric_scope": "same_ad",
+            "impressions": 17400,
+            "settled_valid_clicks": 265,
+            "fixed_cpc_yuan": 0.33,
+            "paid_orders": 19,
+            "ad_spend_yuan": 87.45,
+            "attributed_revenue_yuan": 2128.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-10-04",
+          "title": "模拟广告10-4",
+          "price": 0.95,
+          "clicks": 369,
+          "video_count": 1,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-10",
+            "metric_scope": "same_ad",
+            "impressions": 9000,
+            "settled_valid_clicks": 344,
+            "fixed_cpc_yuan": 0.23,
+            "paid_orders": 25,
+            "ad_spend_yuan": 79.12,
+            "attributed_revenue_yuan": 1725.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        },
+        {
+          "id": "mock-ad-10-05",
+          "title": "模拟广告10-5",
+          "price": 2.73,
+          "clicks": 308,
+          "video_count": 2,
+          "videos": [],
+          "simulated_measurements": {
+            "window": "2026-10-10",
+            "metric_scope": "same_ad",
+            "impressions": 13400,
+            "settled_valid_clicks": 285,
+            "fixed_cpc_yuan": 0.27,
+            "paid_orders": 15,
+            "ad_spend_yuan": 76.95,
+            "attributed_revenue_yuan": 3285.0,
+            "attribution_window": "24h_click",
+            "currency": "CNY",
+            "settlement_policy": "fixed_cpc"
+          }
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "S01-CTR",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-01-01 在 2026-10-01 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "clicks": 710,
+        "impressions": 14500
+      },
+      "answerable": true,
+      "reference": "CTR=710/14500，约4.9%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 4.9
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S01-BID",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-01-01 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "price": 2.53,
+        "clicks": 710,
+        "increase_pct": 10,
+        "simulated_price_yuan": 2.78
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：2.53→2.78元；排序分756.98→831.78。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 2.53,
+        "simulated_price": 2.78,
+        "current_score": 756.98,
+        "simulated_score": 831.78,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S01-CPC",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-01-01 在 2026-10-01 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "page_clicks": 710,
+        "bid_price_yuan": 2.53,
+        "settled_valid_clicks": 694,
+        "fixed_cpc_yuan": 0.27,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=694×0.27=187.38元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 187.38
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S01-ROAS",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-01-01 在 2026-10-01 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 187.38,
+        "attributed_revenue_yuan": 120.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=120.0/187.38，约0.64倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 0.64
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S01-NO_IMPRESSIONS",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "missing_business_data",
+      "question": "mock-ad-01-01 在 2026-10-01 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "clicks": 710
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S01-FUTURE_PROFIT",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-01-01 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "price": 2.53,
+        "clicks": 710,
+        "impressions": 14500,
+        "past_ad_spend_yuan": 187.38,
+        "past_attributed_revenue_yuan": 120.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S01-WINDOW_CONFLICT",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "window_conflict",
+      "question": "mock-ad-01-01 在 2026-10-01 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "scope": "provided_snapshot",
+        "clicks": 710,
+        "clicks_window": "2026-10-01",
+        "impressions": 101500,
+        "impressions_window": {
+          "start": "2026-09-25",
+          "end": "2026-10-01"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S01-PRICE_CONFLICT",
+      "group_id": "S01",
+      "split": "calibration",
+      "category": "rule_conflict",
+      "question": "mock-ad-01-01 在 2026-10-01 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:0",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.27元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:0",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.38元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-01-01",
+        "window": "2026-10-01",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 694,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S02-CTR",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-02-02 在 2026-10-02 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "clicks": 513,
+        "impressions": 10700
+      },
+      "answerable": true,
+      "reference": "CTR=513/10700，约4.79%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 4.79
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S02-BID",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-02-02 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "price": 2.27,
+        "clicks": 513,
+        "increase_pct": 10,
+        "simulated_price_yuan": 2.5
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：2.27→2.5元；排序分491.36→541.15。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 2.27,
+        "simulated_price": 2.5,
+        "current_score": 491.36,
+        "simulated_score": 541.15,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S02-CPC",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-02-02 在 2026-10-02 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "page_clicks": 513,
+        "bid_price_yuan": 2.27,
+        "settled_valid_clicks": 456,
+        "fixed_cpc_yuan": 0.3,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=456×0.3=136.8元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 136.8
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S02-ROAS",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-02-02 在 2026-10-02 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 136.8,
+        "attributed_revenue_yuan": 3857.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=3857.0/136.8，约28.19倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 28.19
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S02-NO_IMPRESSIONS",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "missing_business_data",
+      "question": "mock-ad-02-02 在 2026-10-02 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "clicks": 513
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S02-FUTURE_PROFIT",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-02-02 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "price": 2.27,
+        "clicks": 513,
+        "impressions": 10700,
+        "past_ad_spend_yuan": 136.8,
+        "past_attributed_revenue_yuan": 3857.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S02-WINDOW_CONFLICT",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "window_conflict",
+      "question": "mock-ad-02-02 在 2026-10-02 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "scope": "provided_snapshot",
+        "clicks": 513,
+        "clicks_window": "2026-10-02",
+        "impressions": 74900,
+        "impressions_window": {
+          "start": "2026-09-26",
+          "end": "2026-10-02"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S02-PRICE_CONFLICT",
+      "group_id": "S02",
+      "split": "calibration",
+      "category": "rule_conflict",
+      "question": "mock-ad-02-02 在 2026-10-02 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:1",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.3元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:1",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.41元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-02-02",
+        "window": "2026-10-02",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 456,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S03-CTR",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-03-03 在 2026-10-03 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "clicks": 595,
+        "impressions": 12400
+      },
+      "answerable": true,
+      "reference": "CTR=595/12400，约4.8%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 4.8
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S03-BID",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-03-03 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "price": 3.95,
+        "clicks": 595,
+        "increase_pct": 10,
+        "simulated_price_yuan": 4.35
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：3.95→4.35元；排序分991.06→1091.41。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 3.95,
+        "simulated_price": 4.35,
+        "current_score": 991.06,
+        "simulated_score": 1091.41,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S03-CPC",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-03-03 在 2026-10-03 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "page_clicks": 595,
+        "bid_price_yuan": 3.95,
+        "settled_valid_clicks": 592,
+        "fixed_cpc_yuan": 0.59,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=592×0.59=349.28元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 349.28
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S03-ROAS",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "supported_data",
+      "question": "mock-ad-03-03 在 2026-10-03 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 349.28,
+        "attributed_revenue_yuan": 3504.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=3504.0/349.28，约10.03倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 10.03
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S03-NO_IMPRESSIONS",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "missing_business_data",
+      "question": "mock-ad-03-03 在 2026-10-03 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "clicks": 595
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S03-FUTURE_PROFIT",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-03-03 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "price": 3.95,
+        "clicks": 595,
+        "impressions": 12400,
+        "past_ad_spend_yuan": 349.28,
+        "past_attributed_revenue_yuan": 3504.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S03-WINDOW_CONFLICT",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "window_conflict",
+      "question": "mock-ad-03-03 在 2026-10-03 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "scope": "provided_snapshot",
+        "clicks": 595,
+        "clicks_window": "2026-10-03",
+        "impressions": 86800,
+        "impressions_window": {
+          "start": "2026-09-27",
+          "end": "2026-10-03"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S03-PRICE_CONFLICT",
+      "group_id": "S03",
+      "split": "calibration",
+      "category": "rule_conflict",
+      "question": "mock-ad-03-03 在 2026-10-03 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:2",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.59元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:2",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.7元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-03-03",
+        "window": "2026-10-03",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 592,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S04-CTR",
+      "group_id": "S04",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-04-04 在 2026-10-04 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "clicks": 677,
+        "impressions": 18300
+      },
+      "answerable": true,
+      "reference": "CTR=677/18300，约3.7%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 3.7
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S04-BID",
+      "group_id": "S04",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-04-04 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "price": 1.85,
+        "clicks": 677,
+        "increase_pct": 10,
+        "simulated_price_yuan": 2.04
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：1.85→2.04元；排序分527.88→582.09。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 1.85,
+        "simulated_price": 2.04,
+        "current_score": 527.88,
+        "simulated_score": 582.09,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S04-CPC",
+      "group_id": "S04",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-04-04 在 2026-10-04 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "page_clicks": 677,
+        "bid_price_yuan": 1.85,
+        "settled_valid_clicks": 548,
+        "fixed_cpc_yuan": 0.52,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=548×0.52=284.96元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 284.96
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S04-ROAS",
+      "group_id": "S04",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-04-04 在 2026-10-04 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 284.96,
+        "attributed_revenue_yuan": 0.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=0.0/284.96，约0.0倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 0.0
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S04-NO_IMPRESSIONS",
+      "group_id": "S04",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-04-04 在 2026-10-04 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "clicks": 677
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S04-FUTURE_PROFIT",
+      "group_id": "S04",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-04-04 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "price": 1.85,
+        "clicks": 677,
+        "impressions": 18300,
+        "past_ad_spend_yuan": 284.96,
+        "past_attributed_revenue_yuan": 0.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S04-WINDOW_CONFLICT",
+      "group_id": "S04",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-04-04 在 2026-10-04 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "scope": "provided_snapshot",
+        "clicks": 677,
+        "clicks_window": "2026-10-04",
+        "impressions": 128100,
+        "impressions_window": {
+          "start": "2026-09-28",
+          "end": "2026-10-04"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S04-PRICE_CONFLICT",
+      "group_id": "S04",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-04-04 在 2026-10-04 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:3",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.52元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:3",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.63元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-04-04",
+        "window": "2026-10-04",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 548,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S05-CTR",
+      "group_id": "S05",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-05-05 在 2026-10-05 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "clicks": 1164,
+        "impressions": 16400
+      },
+      "answerable": true,
+      "reference": "CTR=1164/16400，约7.1%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 7.1
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S05-BID",
+      "group_id": "S05",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-05-05 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "price": 2.01,
+        "clicks": 1164,
+        "increase_pct": 10,
+        "simulated_price_yuan": 2.21
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：2.01→2.21元；排序分984.66→1082.63。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 2.01,
+        "simulated_price": 2.21,
+        "current_score": 984.66,
+        "simulated_score": 1082.63,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S05-CPC",
+      "group_id": "S05",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-05-05 在 2026-10-05 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "page_clicks": 1164,
+        "bid_price_yuan": 2.01,
+        "settled_valid_clicks": 1088,
+        "fixed_cpc_yuan": 0.57,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=1088×0.57=620.16元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 620.16
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S05-ROAS",
+      "group_id": "S05",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-05-05 在 2026-10-05 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 620.16,
+        "attributed_revenue_yuan": 17889.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=17889.0/620.16，约28.85倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 28.85
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S05-NO_IMPRESSIONS",
+      "group_id": "S05",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-05-05 在 2026-10-05 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "clicks": 1164
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S05-FUTURE_PROFIT",
+      "group_id": "S05",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-05-05 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "price": 2.01,
+        "clicks": 1164,
+        "impressions": 16400,
+        "past_ad_spend_yuan": 620.16,
+        "past_attributed_revenue_yuan": 17889.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S05-WINDOW_CONFLICT",
+      "group_id": "S05",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-05-05 在 2026-10-05 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "scope": "provided_snapshot",
+        "clicks": 1164,
+        "clicks_window": "2026-10-05",
+        "impressions": 114800,
+        "impressions_window": {
+          "start": "2026-09-29",
+          "end": "2026-10-05"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S05-PRICE_CONFLICT",
+      "group_id": "S05",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-05-05 在 2026-10-05 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:4",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.57元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:4",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.68元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-05-05",
+        "window": "2026-10-05",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 1088,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S06-CTR",
+      "group_id": "S06",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-06-01 在 2026-10-06 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "clicks": 100,
+        "impressions": 6300
+      },
+      "answerable": true,
+      "reference": "CTR=100/6300，约1.59%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 1.59
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S06-BID",
+      "group_id": "S06",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-06-01 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "price": 3.87,
+        "clicks": 100,
+        "increase_pct": 10,
+        "simulated_price_yuan": 4.26
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：3.87→4.26元；排序分166.41→183.18。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 3.87,
+        "simulated_price": 4.26,
+        "current_score": 166.41,
+        "simulated_score": 183.18,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S06-CPC",
+      "group_id": "S06",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-06-01 在 2026-10-06 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "page_clicks": 100,
+        "bid_price_yuan": 3.87,
+        "settled_valid_clicks": 99,
+        "fixed_cpc_yuan": 0.21,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=99×0.21=20.79元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 20.79
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S06-ROAS",
+      "group_id": "S06",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-06-01 在 2026-10-06 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 20.79,
+        "attributed_revenue_yuan": 1188.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=1188.0/20.79，约57.14倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 57.14
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S06-NO_IMPRESSIONS",
+      "group_id": "S06",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-06-01 在 2026-10-06 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "clicks": 100
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S06-FUTURE_PROFIT",
+      "group_id": "S06",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-06-01 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "price": 3.87,
+        "clicks": 100,
+        "impressions": 6300,
+        "past_ad_spend_yuan": 20.79,
+        "past_attributed_revenue_yuan": 1188.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S06-WINDOW_CONFLICT",
+      "group_id": "S06",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-06-01 在 2026-10-06 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "scope": "provided_snapshot",
+        "clicks": 100,
+        "clicks_window": "2026-10-06",
+        "impressions": 44100,
+        "impressions_window": {
+          "start": "2026-09-30",
+          "end": "2026-10-06"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S06-PRICE_CONFLICT",
+      "group_id": "S06",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-06-01 在 2026-10-06 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:5",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.21元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:5",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.32元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-06-01",
+        "window": "2026-10-06",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 99,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S07-CTR",
+      "group_id": "S07",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-07-02 在 2026-10-07 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "clicks": 927,
+        "impressions": 12700
+      },
+      "answerable": true,
+      "reference": "CTR=927/12700，约7.3%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 7.3
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S07-BID",
+      "group_id": "S07",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-07-02 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "price": 3.01,
+        "clicks": 927,
+        "increase_pct": 10,
+        "simulated_price_yuan": 3.31
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：3.01→3.31元；排序分1174.92→1292.03。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 3.01,
+        "simulated_price": 3.31,
+        "current_score": 1174.92,
+        "simulated_score": 1292.03,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S07-CPC",
+      "group_id": "S07",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-07-02 在 2026-10-07 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "page_clicks": 927,
+        "bid_price_yuan": 3.01,
+        "settled_valid_clicks": 811,
+        "fixed_cpc_yuan": 0.54,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=811×0.54=437.94元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 437.94
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S07-ROAS",
+      "group_id": "S07",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-07-02 在 2026-10-07 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 437.94,
+        "attributed_revenue_yuan": 11712.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=11712.0/437.94，约26.74倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 26.74
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S07-NO_IMPRESSIONS",
+      "group_id": "S07",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-07-02 在 2026-10-07 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "clicks": 927
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S07-FUTURE_PROFIT",
+      "group_id": "S07",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-07-02 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "price": 3.01,
+        "clicks": 927,
+        "impressions": 12700,
+        "past_ad_spend_yuan": 437.94,
+        "past_attributed_revenue_yuan": 11712.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S07-WINDOW_CONFLICT",
+      "group_id": "S07",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-07-02 在 2026-10-07 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "scope": "provided_snapshot",
+        "clicks": 927,
+        "clicks_window": "2026-10-07",
+        "impressions": 88900,
+        "impressions_window": {
+          "start": "2026-10-01",
+          "end": "2026-10-07"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S07-PRICE_CONFLICT",
+      "group_id": "S07",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-07-02 在 2026-10-07 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:6",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.54元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:6",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.65元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-07-02",
+        "window": "2026-10-07",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 811,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S08-CTR",
+      "group_id": "S08",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-08-03 在 2026-10-08 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "clicks": 86,
+        "impressions": 14400
+      },
+      "answerable": true,
+      "reference": "CTR=86/14400，约0.6%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 0.6
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S08-BID",
+      "group_id": "S08",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-08-03 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "price": 3.74,
+        "clicks": 86,
+        "increase_pct": 10,
+        "simulated_price_yuan": 4.11
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：3.74→4.11元；排序分138.83→152.56。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 3.74,
+        "simulated_price": 4.11,
+        "current_score": 138.83,
+        "simulated_score": 152.56,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S08-CPC",
+      "group_id": "S08",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-08-03 在 2026-10-08 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "page_clicks": 86,
+        "bid_price_yuan": 3.74,
+        "settled_valid_clicks": 85,
+        "fixed_cpc_yuan": 0.32,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=85×0.32=27.2元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 27.2
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S08-ROAS",
+      "group_id": "S08",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-08-03 在 2026-10-08 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 27.2,
+        "attributed_revenue_yuan": 124.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=124.0/27.2，约4.56倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 4.56
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S08-NO_IMPRESSIONS",
+      "group_id": "S08",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-08-03 在 2026-10-08 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "clicks": 86
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S08-FUTURE_PROFIT",
+      "group_id": "S08",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-08-03 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "price": 3.74,
+        "clicks": 86,
+        "impressions": 14400,
+        "past_ad_spend_yuan": 27.2,
+        "past_attributed_revenue_yuan": 124.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S08-WINDOW_CONFLICT",
+      "group_id": "S08",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-08-03 在 2026-10-08 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "scope": "provided_snapshot",
+        "clicks": 86,
+        "clicks_window": "2026-10-08",
+        "impressions": 100800,
+        "impressions_window": {
+          "start": "2026-10-02",
+          "end": "2026-10-08"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S08-PRICE_CONFLICT",
+      "group_id": "S08",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-08-03 在 2026-10-08 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:7",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.32元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:7",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.43元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-08-03",
+        "window": "2026-10-08",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 85,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S09-CTR",
+      "group_id": "S09",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-09-04 在 2026-10-09 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "clicks": 108,
+        "impressions": 15500
+      },
+      "answerable": true,
+      "reference": "CTR=108/15500，约0.7%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 0.7
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S09-BID",
+      "group_id": "S09",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-09-04 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "price": 1.76,
+        "clicks": 108,
+        "increase_pct": 10,
+        "simulated_price_yuan": 1.94
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：1.76→1.94元；排序分81.59→89.94。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 1.76,
+        "simulated_price": 1.94,
+        "current_score": 81.59,
+        "simulated_score": 89.94,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S09-CPC",
+      "group_id": "S09",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-09-04 在 2026-10-09 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "page_clicks": 108,
+        "bid_price_yuan": 1.76,
+        "settled_valid_clicks": 89,
+        "fixed_cpc_yuan": 0.14,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=89×0.14=12.46元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 12.46
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S09-ROAS",
+      "group_id": "S09",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-09-04 在 2026-10-09 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 12.46,
+        "attributed_revenue_yuan": 2368.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=2368.0/12.46，约190.05倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 190.05
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S09-NO_IMPRESSIONS",
+      "group_id": "S09",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-09-04 在 2026-10-09 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "clicks": 108
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S09-FUTURE_PROFIT",
+      "group_id": "S09",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-09-04 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "price": 1.76,
+        "clicks": 108,
+        "impressions": 15500,
+        "past_ad_spend_yuan": 12.46,
+        "past_attributed_revenue_yuan": 2368.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S09-WINDOW_CONFLICT",
+      "group_id": "S09",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-09-04 在 2026-10-09 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "scope": "provided_snapshot",
+        "clicks": 108,
+        "clicks_window": "2026-10-09",
+        "impressions": 108500,
+        "impressions_window": {
+          "start": "2026-10-03",
+          "end": "2026-10-09"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S09-PRICE_CONFLICT",
+      "group_id": "S09",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-09-04 在 2026-10-09 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:8",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.14元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:8",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.25元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-09-04",
+        "window": "2026-10-09",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 89,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S10-CTR",
+      "group_id": "S10",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-10-05 在 2026-10-10 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "clicks": 308,
+        "impressions": 13400
+      },
+      "answerable": true,
+      "reference": "CTR=308/13400，约2.3%；只代表给定广告快照。",
+      "expected_values": {
+        "ctr_percent": 2.3
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S10-BID",
+      "group_id": "S10",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-10-05 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "price": 2.73,
+        "clicks": 308,
+        "increase_pct": 10,
+        "simulated_price_yuan": 3.0
+      },
+      "answerable": true,
+      "reference": "使用提供的模拟出价：2.73→3.0元；排序分355.88→391.08。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "expected_values": {
+        "current_price": 2.73,
+        "simulated_price": 3.0,
+        "current_score": 355.88,
+        "simulated_score": 391.08,
+        "score_absolute_tolerance": 0.01
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:ranking"
+      ]
+    },
+    {
+      "id": "S10-CPC",
+      "group_id": "S10",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-10-05 在 2026-10-10 按固定CPC规则已结算的费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "page_clicks": 308,
+        "bid_price_yuan": 2.73,
+        "settled_valid_clicks": 285,
+        "fixed_cpc_yuan": 0.27,
+        "currency": "CNY",
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": true,
+      "reference": "已结算费用=285×0.27=76.95元。不能用页面点击数乘竞价出价。",
+      "expected_values": {
+        "settled_cost_yuan": 76.95
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    },
+    {
+      "id": "S10-ROAS",
+      "group_id": "S10",
+      "split": "test",
+      "category": "supported_data",
+      "question": "mock-ad-10-05 在 2026-10-10 的历史 ROAS 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        },
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "ad_spend_yuan": 76.95,
+        "attributed_revenue_yuan": 3285.0,
+        "attribution_window": "24h_click",
+        "revenue_scope": "same_ad",
+        "spend_scope": "same_ad",
+        "currency": "CNY"
+      },
+      "answerable": true,
+      "reference": "历史ROAS=3285.0/76.95，约42.69倍。仅对应给定窗口和归因口径，不是净利润或加价效果。",
+      "expected_values": {
+        "roas": 42.69
+      },
+      "expected_missing_information": [],
+      "gold_chunk_ids": [
+        "synthetic:roas"
+      ]
+    },
+    {
+      "id": "S10-NO_IMPRESSIONS",
+      "group_id": "S10",
+      "split": "test",
+      "category": "missing_business_data",
+      "question": "mock-ad-10-05 在 2026-10-10 的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:creative",
+          "title": "素材测试建议",
+          "content": "测试素材时尽量一次只改变一个变量，保留对照。视频文件已上传不证明发生了曝光或成交。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "clicks": 308
+      },
+      "answerable": false,
+      "reference": "缺同一广告、同一窗口的曝光次数，不能算确定CTR。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "同一广告、同一统计窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S10-FUTURE_PROFIT",
+      "group_id": "S10",
+      "split": "test",
+      "category": "missing_causal_evidence",
+      "question": "mock-ad-10-05 从明天开始加价10%，一天能多赚多少元？",
+      "chunks": [
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        },
+        {
+          "id": "synthetic:future",
+          "title": "评测口径：增量收益",
+          "content": "历史点击、曝光、收入和消耗不能直接证明未来加价的增量利润。需要可识别加价效果的对照实验或经验证的预测模型，并明确收入与成本口径。演示排名分变化不能当作收益变化。"
+        },
+        {
+          "id": "synthetic:roas",
+          "title": "评测口径：历史ROAS",
+          "content": "本评测ROAS=归因收入/广告消耗。必须来自同一广告、相同统计窗口和已明确的归因口径。ROAS不是净利润；历史ROAS不证明加价会产生增量收益。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "price": 2.73,
+        "clicks": 308,
+        "impressions": 13400,
+        "past_ad_spend_yuan": 76.95,
+        "past_attributed_revenue_yuan": 3285.0
+      },
+      "answerable": false,
+      "reference": "不能根据历史快照推断未来加价的增量利润。需要对照实验或经验证的预测模型，并明确增量收入、广告消耗及其他成本；可以做排序分模拟，但不能当收益预测。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "加价效果的对照实验或经验证的预测模型",
+        "增量收入和成本口径"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:future"
+      ]
+    },
+    {
+      "id": "S10-WINDOW_CONFLICT",
+      "group_id": "S10",
+      "split": "test",
+      "category": "window_conflict",
+      "question": "mock-ad-10-05 在 2026-10-10 当天的 CTR 是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:ctr",
+          "title": "评测口径：CTR",
+          "content": "CTR=点击次数/曝光次数。必须是同一广告、同一统计窗口和相同计数口径。缺曝光、窗口不一致或曝光为零时，不能报确定的CTR。"
+        },
+        {
+          "id": "synthetic:cpm",
+          "title": "评测口径：CPM",
+          "content": "固定CPM费用=有效曝光数/1000*CPM单价。曝光不是点击，也不能用广告出价代替合同CPM单价。"
+        },
+        {
+          "id": "synthetic:ranking",
+          "title": "项目演示排序公式",
+          "content": "演示排序分=price+price*clicks*0.42。加价10%的模拟先将price乘1.10，保留当前点击数再算分。这不是未来点击、排名位置、收益或实际竞价结果；模拟不修改广告。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "scope": "provided_snapshot",
+        "clicks": 308,
+        "clicks_window": "2026-10-10",
+        "impressions": 93800,
+        "impressions_window": {
+          "start": "2026-10-04",
+          "end": "2026-10-10"
+        }
+      },
+      "answerable": false,
+      "reference": "当天点击与七天曝光不能混算当天CTR，需补当天曝光次数。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "与当天点击相同窗口的曝光次数"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:ctr"
+      ]
+    },
+    {
+      "id": "S10-PRICE_CONFLICT",
+      "group_id": "S10",
+      "split": "test",
+      "category": "rule_conflict",
+      "question": "mock-ad-10-05 在 2026-10-10 的固定CPC结算费用是多少？",
+      "chunks": [
+        {
+          "id": "synthetic:cpc-record-A:9",
+          "title": "单价记录甲",
+          "content": "该广告当前固定CPC单价为0.27元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc-record-B:9",
+          "title": "单价记录乙",
+          "content": "该广告当前固定CPC单价为0.38元。未注明时间、版本、环境或权威优先级。"
+        },
+        {
+          "id": "synthetic:cpc",
+          "title": "评测口径：固定CPC结算",
+          "content": "固定CPC单价条件下，费用=有效计费点击数*合同固定单价。页面clicks与有效计费点击不同；竞价price与固定结算单价不同。有冲突且无可信优先级的单价记录时，需核实当前合同或结算流水。"
+        }
+      ],
+      "business_data": {
+        "ad_id": "mock-ad-10-05",
+        "window": "2026-10-10",
+        "scope": "provided_snapshot",
+        "settled_valid_clicks": 285,
+        "settlement_policy": "fixed_cpc"
+      },
+      "answerable": false,
+      "reference": "固定CPC单价记录冲突且没有可确定的优先级，不能报一个结算金额；需当前合同或结算流水。",
+      "expected_values": {},
+      "expected_missing_information": [
+        "可确定当前单价的合同或结算流水"
+      ],
+      "gold_chunk_ids": [
+        "synthetic:cpc"
+      ]
+    }
+  ]
+}

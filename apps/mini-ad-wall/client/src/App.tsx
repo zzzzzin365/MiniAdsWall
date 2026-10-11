@@ -1,41 +1,88 @@
-import React, { useState, useEffect } from 'react';
-import { getAdsPage, getAd, createAd, updateAd, deleteAd, clickAd } from './api';
-import VirtualAdGrid from './components/VirtualAdGrid';
+import React, { useState, useEffect, useRef } from 'react';
+import { getAdsPage, getAd, createAd, updateAd, deleteAd } from './api';
+import AdManagement from './components/AdManagement';
+import AdDetailDrawer from './components/AdDetailDrawer';
 import AdModal from './components/AdModal';
 import DeleteModal from './components/DeleteModal';
 import VideoModal from './components/VideoModal';
-import DataDashboard from './components/DataDashboard';
 import AIAssistantPanel from './components/AIAssistantPanel';
 import { Ad, AdInput, AdModalState, DeleteModalState, VideoModalState, ToastState } from './types';
 
 function App() {
     const [nextCursor, setNextCursor] = useState<string | null>(null);
-    const [loadingPage, setLoadingPage] = useState(false);
+    const [loadingPage, setLoadingPage] = useState(true);
+    const [searchInput, setSearchInput] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [loadError, setLoadError] = useState('');
+    const [listRevision, setListRevision] = useState(0);
+    const queryRef = useRef('');
+    const requestId = useRef(0);
+    const requestController = useRef<AbortController | null>(null);
     const [ads, setAds] = useState<Ad[]>([]);
     const [adModal, setAdModal] = useState<AdModalState>({ open: false, mode: 'create', data: null });
     const [deleteModal, setDeleteModal] = useState<DeleteModalState>({ open: false, id: null });
     const [videoModal, setVideoModal] = useState<VideoModalState>({ open: false, url: '', adId: null, landingUrl: '' });
     const [toast, setToast] = useState<ToastState>({ show: false, msg: '' });
+    const [detail, setDetail] = useState<{ ad: Ad; loading: boolean; error: string } | null>(null);
+    const detailRequestId = useRef(0);
 
     useEffect(() => {
         loadAds();
+        return () => { requestId.current++; detailRequestId.current++; requestController.current?.abort(); };
     }, []);
 
-    const loadAds = async () => {
+    const loadAds = async (query = queryRef.current) => {
+        const id = ++requestId.current;
+        setListRevision(id);
+        requestController.current?.abort();
+        const controller = new AbortController();
+        requestController.current = controller;
+        queryRef.current = query;
+        setSearchQuery(query);
+        setLoadingPage(true);
+        setLoadError('');
+        setAds([]);
+        setNextCursor(null);
         try {
-            const page = await getAdsPage();
+            const page = await getAdsPage(undefined, query, controller.signal);
+            if (id !== requestId.current || controller.signal.aborted) return;
             setAds(page.items); setNextCursor(page.next_cursor);
         } catch (error) {
-            console.error("Failed to load ads", error);
+            if (id === requestId.current && !controller.signal.aborted) {
+                setLoadError(query ? '搜索失败，请重试' : '广告读取失败，请重试');
+            }
+        } finally {
+            if (id === requestId.current) setLoadingPage(false);
         }
     };
 
     const loadNextPage = async () => {
-        if (!nextCursor || loadingPage) return;
+        if (!nextCursor || loadingPage) return false;
+        const id = requestId.current;
+        const controller = new AbortController();
+        requestController.current = controller;
         setLoadingPage(true);
-        try { const page = await getAdsPage(nextCursor); setAds(previous => { const existing = new Set(previous.map(ad => ad.id)); return [...previous, ...page.items.filter(ad => !existing.has(ad.id))]; }); setNextCursor(page.next_cursor); }
-        catch { showToast('下一页读取失败'); }
-        finally { setLoadingPage(false); }
+        try {
+            const page = await getAdsPage(nextCursor, queryRef.current, controller.signal);
+            if (id !== requestId.current || controller.signal.aborted) return false;
+            setAds(previous => { const existing = new Set(previous.map(ad => ad.id)); return [...previous, ...page.items.filter(ad => !existing.has(ad.id))]; });
+            setNextCursor(page.next_cursor);
+            return true;
+        }
+        catch { if (id === requestId.current && !controller.signal.aborted) showToast('下一页读取失败，请重试'); return false; }
+        finally { if (id === requestId.current) setLoadingPage(false); }
+    };
+
+    const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const query = searchInput.trim();
+        setSearchInput(query);
+        void loadAds(query);
+    };
+
+    const clearSearch = () => {
+        setSearchInput('');
+        void loadAds('');
     };
 
     const showToast = (msg: string) => {
@@ -68,7 +115,7 @@ function App() {
                 showToast('广告创建成功');
             } else if (adModal.mode === 'copy') {
                 await createAd(formData);
-                showToast(`已复制为草稿：${formData.title}`);
+                showToast(`广告复制成功：${formData.title}`);
             } else if (adModal.mode === 'edit' && adModal.data) {
                 await updateAd(adModal.data.id, { ...formData, version: adModal.data.version });
                 showToast('广告更新成功');
@@ -96,43 +143,25 @@ function App() {
         }
     };
 
-    const handleAdCardClick = async (ad: Ad) => {
-        const hasVideos = ad.videos && ad.videos.length > 0;
-
-        if (hasVideos) {
-            const randomIndex = Math.floor(Math.random() * ad.videos.length);
-            const videoUrl = ad.videos[randomIndex];
-            setVideoModal({
-                open: true,
-                url: videoUrl,
-                adId: ad.id,
-                landingUrl: ad.url
-            });
-        } else {
-            setVideoModal({
-                open: true,
-                url: 'http://localhost:3001/test1.mov',
-                adId: ad.id,
-                landingUrl: ad.url
-            });
-        }
-
+    const handleDetailClick = async (ad: Ad) => {
+        const id = ++detailRequestId.current;
+        setDetail({ ad, loading: true, error: '' });
         try {
-            await clickAd(ad.id);
-            loadAds();
-        } catch (error) {
-            console.error("Click tracking failed", error);
+            const fullAd = await getAd(ad.id);
+            if (id === detailRequestId.current) setDetail({ ad: fullAd, loading: false, error: '' });
+        } catch {
+            if (id === detailRequestId.current) setDetail({ ad, loading: false, error: '完整详情读取失败，请重试。' });
         }
     };
 
-    const openLandingPage = (url: string) => {
-        window.open(url.startsWith('http') ? url : `http://${url}`, '_blank');
+    const closeDetail = () => {
+        detailRequestId.current++;
+        setDetail(null);
     };
 
-    const handleVideoEnded = () => {
-        const { landingUrl } = videoModal;
-        setVideoModal({ open: false, url: '', adId: null, landingUrl: '' });
-        openLandingPage(landingUrl);
+    const handlePreviewClick = (ad: Ad) => {
+        if (!ad.videos?.length) { void handleDetailClick(ad); return; }
+        setVideoModal({ open: true, url: ad.videos[0], adId: ad.id, landingUrl: ad.url });
     };
 
     const handleVideoClose = () => {
@@ -159,38 +188,40 @@ function App() {
             </div>
 
             <div className="container">
-                <div className="toolbar">
+                <div className="management-heading">
                     <div className="page-title">广告管理</div>
-                    <button className="btn btn-primary" onClick={handleCreateClick}>
-                        <span>+</span> 新建广告
-                    </button>
+                    <span>管理广告与创意素材，查看出价和点击数据</span>
                 </div>
-
-                {ads.length === 0 ? (
-                    <div className="ad-grid">
-                        <div className="empty-state">
-                            <div className="empty-state-icon">📭</div>
-                            <div className="empty-state-text">暂无广告数据，请点击右上角新建</div>
-                        </div>
-                    </div>
-                ) : (
-                    <VirtualAdGrid
-                        ads={ads}
-                        onEdit={handleEditClick}
-                        onCopy={handleCopyClick}
-                        onDelete={handleDeleteClick}
-                        onClick={handleAdCardClick}
-                    />
-                )}
-
-                {nextCursor && <button className="btn" disabled={loadingPage} onClick={loadNextPage}>{loadingPage ? "加载中" : "加载下一页"}</button>}
-                <p>统计范围：当前已加载的 {ads.length} 条广告。</p>
-                <div className="ranking-alert">
-                    <strong>算法说明</strong>
-                    当前排名基于：Pricing + (Pricing × Clicks × 0.42)
-                </div>
-
-                <DataDashboard ads={ads} />
+                <AdManagement
+                    ads={ads}
+                    loading={loadingPage}
+                    error={loadError}
+                    query={searchQuery}
+                    listRevision={listRevision}
+                    hasMore={!!nextCursor}
+                    onRetry={() => void loadAds()}
+                    onClearQuery={clearSearch}
+                    onLoadMore={loadNextPage}
+                    onEdit={handleEditClick}
+                    onCopy={handleCopyClick}
+                    onDelete={handleDeleteClick}
+                    onDetail={ad => void handleDetailClick(ad)}
+                    onPreview={handlePreviewClick}
+                    toolbar={<>
+                        <button type="button" className="btn btn-primary" onClick={handleCreateClick}><span>+</span> 新建广告</button>
+                        <form className="ad-search" role="search" onSubmit={handleSearch}>
+                            <div className="ad-search-input">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4 4" /></svg>
+                                <input type="search" aria-label="搜索广告" placeholder="搜索标题、发布者、正文" maxLength={200} value={searchInput} onChange={event => {
+                                    setSearchInput(event.target.value);
+                                    if (!event.target.value && queryRef.current) void loadAds('');
+                                }} />
+                                {(searchInput || searchQuery) && <button className="ad-search-clear" type="button" aria-label="清空搜索" onClick={clearSearch}>×</button>}
+                            </div>
+                            <button className="btn btn-default" type="submit">搜索</button>
+                        </form>
+                    </>}
+                />
             </div>
 
             <footer className="footer">
@@ -262,9 +293,15 @@ function App() {
             <VideoModal
                 isOpen={videoModal.open}
                 videoUrl={videoModal.url}
-                onEnded={handleVideoEnded}
+                hint="运营素材预览，不计入广告点击"
                 onClose={handleVideoClose}
             />
+
+            {detail && <AdDetailDrawer
+                ad={detail.ad} loading={detail.loading} error={detail.error}
+                onClose={closeDetail} onRetry={() => void handleDetailClick(detail.ad)}
+                onEdit={handleEditClick} onCopy={handleCopyClick} onPreview={handlePreviewClick}
+            />}
 
             <AIAssistantPanel ads={ads} />
 

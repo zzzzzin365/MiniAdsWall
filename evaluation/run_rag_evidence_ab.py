@@ -268,6 +268,17 @@ def resolve_config(model_override=None):
     return config
 
 
+def select_cases(dataset, split=None, limit=None):
+    cases = dataset["cases"]
+    if split:
+        cases = [case for case in cases if case.get("split") == split]
+    if limit:
+        cases = cases[:limit]
+    if not cases:
+        raise ValueError("No cases match the selected evaluation split")
+    return cases
+
+
 async def main(args):
     os.environ["MODEL_GATE_MODE"] = "local"
     config = resolve_config(args.model)
@@ -277,7 +288,7 @@ async def main(args):
     dataset = json.loads(dataset_bytes)
     if dataset.get("frozen") is not True:
         raise ValueError("Dataset must be frozen before running")
-    cases = dataset["cases"][:args.limit] if args.limit else dataset["cases"]
+    cases = select_cases(dataset, args.split, args.limit)
     skills = SkillManager(root_dir=str(ROOT / "skills"), max_prompt_chars=5000)
     skills.load()
     metadata = {"time": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(),
@@ -285,6 +296,7 @@ async def main(args):
                 "model": config["model"], "configured_model": config["configured_model"],
                 "provider": config["provider"], "threshold": args.threshold,
                 "gate_version": args.gate_version,
+                "evaluation_split": args.split or "all",
                 "threshold_calibrated": False, "rounds": args.rounds,
                 "generator_temperature": 0.2, "gate_and_judge_temperature": 0,
                 "seed": args.seed, "minimum_request_interval_seconds": args.interval,
@@ -337,6 +349,7 @@ if __name__ == "__main__":
     parser.add_argument("--interval", type=float, default=3.2)
     parser.add_argument("--rounds", type=int, default=1)
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--split", choices=["calibration", "test"])
     parser.add_argument("--seed", type=int, default=20261010)
     parser.add_argument("--allow-paid", action="store_true")
     args = parser.parse_args()

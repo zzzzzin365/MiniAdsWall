@@ -8,6 +8,7 @@ export interface Ad {
     clicks: number;
     version: number;
     videos: string[];
+    video_count?: number;
 }
 
 export interface AdInput {
