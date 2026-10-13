@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "head": "e06c0a55503759828930c273866628f22ed0cb2c",
+  "scope": "uncommitted studio implementation; existing non-studio edits preserved",
+  "hashes": {
+    "api/studio.py": "9e8d233a22a8266431b7e6a131c406f3b7808931994c23328d7c8f655108ac8e",
+    "api/main.py": "267baf947d4f5a7a120c4e84c78ebe4e9d7205b1bc879e9ed9d87983ba09f3e6",
+    "apps/mini-ad-wall/server/migrations/019_merchant_studio.sql": "6538fbea11cd522dcc7abd14187d4ff21111e53956ada83a019e4b5d2a5dfd1e",
+    "apps/mini-ad-wall/server/routes/studio.routes.ts": "eac718b8935aecd77fabccfae714e0269729f9c7325d7a3384988e71f063fc5f",
+    "apps/mini-ad-wall/server/services/merchant/studio/store.ts": "e9e81dd7fb20b43f11c2f4ab0e5bd5a7af06ff3cae6b08265792ad972c7beb37",
+    "apps/mini-ad-wall/server/services/merchant/studio/worker.ts": "70e30d9f8cc162cbfabd37b3625951a7903204acf555581ebf5db4ea41e1c1b6",
+    "apps/mini-ad-wall/client/src/components/merchant/studio/MerchantStudio.tsx": "bfb2e948a60df6776bab90605b7f8dacdbb6a454b3b63a7c861eb236913eff2a",
+    "apps/mini-ad-wall/client/src/components/merchant/studio/StudioConcept.tsx": "b9090f1926503f5c43ea739a0c4d792999e9a3f896579e5e4e1cf5eed7d5f32d",
+    "contracts/merchant/studio/v1/request.schema.json": "db758798f6864b8d1d8f67128fe52c20a608d60ac7116df8e6c0418e3a8cf273",
+    "contracts/merchant/studio/v1/result.schema.json": "bbc824207dcafd72cf01d0f403b25398525d356d269a187a6ed32e9a33994954"
+  },
+  "live_media_submit": false
+}

@@ -16,9 +16,15 @@ async def stream_text(client, *, model, messages, system, max_tokens=1024, total
             if isinstance(raw, OpenRouterClient):
                 payload = dict(model=model, messages=[{'role':'system','content':system}, *messages],
                                max_tokens=max_tokens, stream=True, reasoning={'enabled':False})
+                if raw.is_qwen:
+                    payload.pop("reasoning")
+                    payload["enable_thinking"] = False
+                if raw.is_seed:
+                    payload.pop("reasoning")
+                    payload["thinking"] = {"type": "disabled"}
                 timeout = httpx.Timeout(idle, connect=10)
                 async with httpx.AsyncClient(timeout=timeout, transport=raw.transport) as http:
-                    async with http.stream('POST', 'https://openrouter.ai/api/v1/chat/completions',
+                    async with http.stream('POST', raw.url,
                                            headers={'Authorization':f'Bearer {raw.api_key}'}, json=payload) as response:
                         response.raise_for_status()
                         # Split with a bounded buffer; a malicious/malformed provider cannot send an unbounded line.

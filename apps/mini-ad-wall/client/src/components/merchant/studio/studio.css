@@ -1,0 +1,177 @@
+.studio-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  color: #17233b;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+.studio-heading,
+.studio-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.studio-heading {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.studio-heading h1 {
+  margin: 12px 0;
+  font-size: 30px;
+}
+.studio-heading p,
+.studio-muted {
+  color: #586780;
+}
+.studio-badge {
+  padding: 8px 12px;
+  background: #e6eefc;
+  border-radius: 20px;
+}
+.studio-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+  align-items: start;
+}
+.studio-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.studio-card {
+  background: white;
+  border: 1px solid #dce2ec;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  overflow-wrap: anywhere;
+}
+.studio-card h2,
+.studio-card h3 {
+  margin: 0 0 12px;
+}
+.studio-shell label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 500;
+}
+.studio-shell label:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+}
+.studio-shell input,
+.studio-shell textarea,
+.studio-shell select {
+  font: inherit;
+  border: 1px solid #bfcade;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.studio-shell textarea {
+  width: 100%;
+  min-height: 88px;
+  resize: vertical;
+}
+.studio-shell button {
+  padding: 10px 16px;
+  border: 1px solid #c5d1e7;
+  border-radius: 8px;
+  background: #eff4fe;
+  color: #203c7b;
+  font: inherit;
+  cursor: pointer;
+}
+.studio-shell button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.studio-shell button:focus-visible,
+.studio-shell a:focus-visible {
+  outline: 3px solid #799fff;
+  outline-offset: 3px;
+}
+.studio-warning {
+  background: #fff4d9;
+  padding: 12px;
+  border-radius: 8px;
+  color: #795510;
+}
+.studio-error {
+  background: #ffeded;
+  color: #902b2b;
+  padding: 14px;
+  border-radius: 8px;
+}
+.studio-pre {
+  white-space: pre-wrap;
+}
+.studio-shell video,
+.studio-shell img {
+  max-width: 100%;
+  max-height: 420px;
+  display: block;
+  margin: 12px 0;
+}
+.studio-shell details {
+  margin: 12px 0;
+}
+.studio-shell summary {
+  cursor: pointer;
+}
+@media (max-width: 720px) {
+  .studio-layout {
+    grid-template-columns: 1fr;
+  }
+  .studio-shell {
+    padding: 16px 12px;
+  }
+  .studio-card {
+    padding: 16px;
+  }
+  .studio-heading h1 {
+    font-size: 24px;
+  }
+  .studio-actions > * {
+    max-width: 100%;
+  }
+  .studio-shell input[type="file"] {
+    width: 100%;
+  }
+}
+/* Embedded in the existing creative-material tab. */
+.studio-shell{max-width:none;min-height:0;padding:24px;background:#f7f9fc;margin:0;border-radius:0 0 12px 12px;color:#18243a}
+.studio-heading{margin-bottom:20px;align-items:flex-start}.studio-heading h2{font-size:24px;line-height:1.4;letter-spacing:-.4px;margin:6px 0 8px;font-weight:650}.studio-heading p{font-size:14px;line-height:1.7;margin:0;max-width:560px}.studio-eyebrow{font-size:12px;font-weight:600;letter-spacing:1px;color:#4263b0}.studio-badge{background:#eef3ff;color:#365598;border:1px solid #dce6fc;font-size:12px;border-radius:6px;padding:7px 10px;white-space:nowrap}
+.studio-connection{margin-bottom:20px;border:1px solid #dde4ef;background:#fff;border-radius:10px;padding:12px 16px;font-size:13px}.studio-connection>summary{color:#62718b;cursor:pointer;min-height:22px}.studio-connection .studio-actions{margin-top:16px}.studio-connection .studio-muted{margin-bottom:0}
+.studio-layout{grid-template-columns:minmax(270px,340px) minmax(0,1fr);gap:24px;margin-top:20px}.studio-card{border-color:#e0e6f0;border-radius:12px;box-shadow:0 2px 7px rgba(28,50,93,.025);padding:20px;margin-bottom:0}.studio-stack{gap:20px}.studio-stack>h2,.studio-card>h2{font-size:17px;line-height:1.5;font-weight:650}.studio-card h3{font-size:16px}.studio-shell label{font-size:13px;line-height:1.6;color:#3b4b66}.studio-shell input,.studio-shell textarea,.studio-shell select{border-color:#d4dce8;background:#fff;color:#23334f;font-size:14px;line-height:1.6;border-radius:7px;transition:border-color .15s,box-shadow .15s}.studio-shell input:focus,.studio-shell textarea:focus,.studio-shell select:focus{outline:0;border-color:#426ef0;box-shadow:0 0 0 3px #edf2ff}.studio-shell textarea{min-height:90px}.studio-shell button{font-size:13px;font-weight:550;line-height:1.5;border-color:#d6deeb;background:#fff;color:#3d527b;border-radius:7px;min-height:36px;transition:background .15s,border-color .15s}.studio-shell button:not(:disabled):hover{background:#f1f5ff;border-color:#aabde4}.studio-layout>.studio-card>button:first-of-type{background:#315fec;color:#fff;border-color:#315fec;width:100%;min-height:42px}.studio-layout>.studio-card>button:first-of-type:hover:not(:disabled){background:#244ed2}.studio-warning{background:#fff9ed;border:1px solid #f2e5c9;font-size:12px;line-height:1.7;padding:10px 12px;color:#866631;margin:0}.studio-muted{font-size:12px;line-height:1.7}.studio-actions{gap:8px}.studio-shell p{line-height:1.8}.studio-layout>.studio-stack{min-width:0}.studio-error{font-size:13px;line-height:1.7}.studio-shell details summary{font-size:13px;line-height:1.7}.studio-shell>section.studio-card{margin-top:20px}.studio-shell>section.studio-card h2{font-size:18px}.studio-shell [type=checkbox]{accent-color:#315fec}
+.creative-module[hidden],.management-toolbar[hidden],.management-list-footer[hidden]{display:none!important}.creative-existing{padding:20px 24px;border-top:1px solid #e4eaf3;background:#fff}.creative-existing>summary{font-size:14px;font-weight:600;cursor:pointer;color:#334563}.creative-existing>summary span{font-weight:400;color:#8793a6;font-size:12px;margin-left:10px}.creative-existing .management-creatives{margin-top:20px}
+@media(max-width:900px){.studio-layout{grid-template-columns:1fr}.studio-heading h2{font-size:21px}.studio-heading{gap:12px}.studio-layout>.studio-stack>h2{margin-top:8px}}@media(max-width:480px){.studio-shell{padding:16px 12px}.studio-card{padding:16px}.studio-heading h2{font-size:19px}.studio-badge{white-space:normal}.studio-actions button{flex:1 1 auto}.creative-existing{padding:16px 12px}}
+@media(prefers-reduced-motion:reduce){.studio-shell *{transition:none!important}}
+@media(max-width:480px){.studio-shell button,.studio-shell select,.studio-shell input:not([type=checkbox]){min-height:44px}.studio-shell input,.studio-shell textarea,.studio-shell select{font-size:16px}}
+
+.studio-layout{grid-template-columns:minmax(300px,380px) minmax(0,1fr);gap:20px}
+.studio-layout>.studio-card{gap:14px}
+.studio-workspace{background:white;border:1px solid #e0e6f0;border-radius:12px;padding:20px;min-height:480px}
+.studio-workspace>h2,.studio-layout>.studio-card>h2{margin:0;padding-bottom:14px;border-bottom:1px solid #edf0f6}
+.studio-empty{text-align:center;padding:60px 16px;color:#62718b;font-size:14px}
+.studio-empty>span{display:inline-grid;place-items:center;width:56px;height:56px;background:#eef3ff;border-radius:16px;color:#315fec;font-size:30px}
+.studio-empty h3{color:#23334f;font-size:19px}.studio-empty ol{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:28px;font-size:12px;color:#4263b0}
+.studio-shell select{width:100%}
+@media(max-width:900px){.studio-layout{grid-template-columns:1fr}.studio-workspace{min-height:300px}.studio-empty{padding:30px 8px}}
+
+.studio-upload-title{font-size:13px;font-weight:500;color:#3b4b66}
+.studio-upload-options{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.studio-shell .studio-upload-tile{position:relative;box-sizing:border-box;width:120px;height:90px;gap:0;border:2px dashed var(--c-blue-vibrant,#054dff);background:#f5f8ff;align-items:center;justify-content:center;overflow:hidden}
+.studio-upload-tile input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0;padding:0}
+.studio-upload-tile:focus-within{outline:3px solid #799fff;outline-offset:3px}
+.studio-shell .studio-upload-tile.is-disabled{opacity:.5;cursor:not-allowed}
+.studio-upload-tile.is-disabled input[type=file]{cursor:not-allowed}
+
+.studio-shell .studio-upload-tile{width:100%;height:100px}
+.studio-upload-options{width:100%}

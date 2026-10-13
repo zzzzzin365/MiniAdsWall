@@ -33,6 +33,8 @@ ChartJS.register(
 
 interface DataDashboardProps {
     ads: Ad[];
+    scope?: React.ReactNode;
+    loadMore?: React.ReactNode;
 }
 
 const PRICE_RANGES = [
@@ -44,7 +46,7 @@ const PRICE_RANGES = [
     { min: 300, max: Infinity, label: '300+' },
 ];
 
-const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
+const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) => {
     const [showMetrics, setShowMetrics] = useState(initialMetricsView);
     const [metricsOpened, setMetricsOpened] = useState(initialMetricsView);
     const [selectedAdId, setSelectedAdId] = useState<string | null>(null);
@@ -187,7 +189,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
             },
             title: {
                 display: true,
-                text: '模拟排名 vs 出价关系图',
+                text: '排名 vs 出价关系图',
                 color: '#1A202C',
                 font: { size: 16, weight: 'bold' },
                 padding: { bottom: 20 },
@@ -513,15 +515,16 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
     }, [ads]);
 
     return (
-        <section className="data-dashboard" id="data-analysis" aria-labelledby="data-analysis-title">
+        <section className="data-dashboard" id="data-analysis" aria-label="广告数据分析">
             <div className="dashboard-heading">
-                <h2 id="data-analysis-title">数据分析</h2>
                 <div className="dashboard-views" role="group" aria-label="分析视图">
                     <button type="button" aria-pressed={!showMetrics} aria-controls="ad-overview" onClick={() => setShowMetrics(false)}>广告概览</button>
                     <button type="button" aria-pressed={showMetrics} aria-controls="marketing-analysis" onClick={() => { setMetricsOpened(true); setShowMetrics(true); }}>投放效果</button>
                 </div>
+                {!showMetrics && loadMore}
             </div>
             <div className="analysis-panel" id="ad-overview" hidden={showMetrics}>
+            {scope}
             {ads.length === 0 ? <div className="dashboard-empty"><p>暂无广告数据，请先创建广告</p></div> : <>
             {/* 统计概览 */}
             <div className="dashboard-stats">
@@ -563,14 +566,14 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
                     <div className="chart-wrapper">
                         <Bar data={bidDistributionData} options={bidDistributionOptions} />
                     </div>
-                    <div className="chart-hint">💡 点击柱状图高亮价格区间</div>
+                    <div className="chart-hint">点击柱状图高亮价格区间</div>
                 </div>
 
                 <div className="chart-container">
                     <div className="chart-wrapper">
                         <Scatter data={rankVsBidData} options={rankVsBidOptions} />
                     </div>
-                    <div className="chart-hint">模拟排序：出价 + 出价 × 累计点击 × 0.42；点击数据点选中广告</div>
+                    <div className="chart-hint">排序：出价 + 出价 × 累计点击 × 0.42；点击数据点选中广告</div>
                 </div>
 
                 <div className="chart-container">
@@ -597,7 +600,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads }) => {
             </>}
             </div>
             <div className="analysis-panel" id="marketing-analysis" hidden={!showMetrics}>
-                {metricsOpened ? <Suspense fallback={<p role="status">正在加载投放效果…</p>}><MarketingDashboard /></Suspense> : null}
+                {metricsOpened ? <Suspense fallback={<p role="status">正在加载投放效果…</p>}><MarketingDashboard ads={ads} loadMore={loadMore} adStatus={scope} /></Suspense> : null}
             </div>
         </section>
     );

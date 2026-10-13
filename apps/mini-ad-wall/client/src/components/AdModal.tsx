@@ -1,13 +1,10 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { getFormConfig, generateAdCreative, generateAdStrategy } from '../api';
-import { chunkedUploadFile } from '../utils/chunkedUpload';
-import { 
-    Ad, 
-    AdInput, 
-    FormFieldConfig, 
-    AdCreativeOutput, 
-    AdStrategyOutput,
-    UploadProgress
+import React, { useState, useEffect } from 'react';
+import { getFormConfig, generateAdStrategy } from '../api';
+import {
+    Ad,
+    AdInput,
+    FormFieldConfig,
+    AdStrategyOutput
 } from '../types';
 
 interface FormFieldProps {
@@ -86,86 +83,7 @@ const FormField: React.FC<FormFieldProps> = ({ config, value, onChange, error })
     );
 };
 
-interface VideoUploadFieldProps {
-    config: FormFieldConfig;
-    videos: string[];
-    onAdd: (e: ChangeEvent<HTMLInputElement>) => void;
-    onRemove: (index: number) => void;
-    uploading: boolean;
-    uploadProgress: UploadProgress | null;
-}
-
-const PHASE_LABELS: Record<string, string> = {
-    hashing: '计算指纹',
-    checking: '检查状态',
-    uploading: '分片上传',
-    merging: '合并文件',
-    done: '完成',
-    error: '失败'
-};
-
-const VideoUploadField: React.FC<VideoUploadFieldProps> = ({ config, videos, onAdd, onRemove, uploading, uploadProgress }) => {
-    const { name, validator } = config;
-    const maxCount = validator?.maxCount || 5;
-
-    return (
-        <div className="form-group">
-            <label className="form-label">{name}</label>
-            <div className="video-upload-area">
-                {videos.map((v, i) => (
-                    <div key={i} className="video-preview-item">
-                        <video src={v} className="video-thumbnail" />
-                        <button
-                            onClick={() => onRemove(i)}
-                            className="video-remove-btn"
-                        >×</button>
-                    </div>
-                ))}
-                {videos.length < maxCount && (
-                    <label className="video-upload-btn">
-                        {uploading ? (
-                            <div className="chunk-upload-status">
-                                <span className="upload-loading">
-                                    {uploadProgress ? PHASE_LABELS[uploadProgress.phase] : '准备中...'}
-                                </span>
-                                {uploadProgress && uploadProgress.phase !== 'error' && (
-                                    <div className="chunk-progress-bar">
-                                        <div
-                                            className="chunk-progress-fill"
-                                            style={{ width: `${uploadProgress.percent}%` }}
-                                        />
-                                    </div>
-                                )}
-                                {uploadProgress && (
-                                    <span className="chunk-progress-text">{uploadProgress.message}</span>
-                                )}
-                            </div>
-                        ) : (
-                            <>
-                                <span className="upload-icon">+</span>
-                                <span className="upload-text">上传视频</span>
-                            </>
-                        )}
-                        <input
-                            type="file"
-                            accept="video/*"
-                            onChange={onAdd}
-                            style={{ display: 'none' }}
-                            disabled={uploading}
-                        />
-                    </label>
-                )}
-            </div>
-            <div className="form-hint">最多上传 {maxCount} 个视频，支持秒传与断点续传</div>
-            <div className="form-hint">单个视频最大不超过50MB，支持 .mp4、.mov 格式</div>
-        </div>
-    );
-};
-
-interface FormData {
-    [key: string]: string | number | string[];
-    videos: string[];
-}
+interface FormData { [key:string]: string | number | string[]; videos:string[]; }
 
 const validateFormData = (data: FormData, config: FormFieldConfig[]): Record<string, string> => {
     const errors: Record<string, string> = {};
@@ -247,17 +165,14 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
     const [formConfig, setFormConfig] = useState<FormFieldConfig[]>([]);
     const [formData, setFormData] = useState<FormData>({ videos: [] });
     const [errors, setErrors] = useState<Record<string, string>>({});
-    const [uploading, setUploading] = useState(false);
-    const [uploadProgress, setUploadProgress] = useState<UploadProgress | null>(null);
     const [loading, setLoading] = useState(false);
-    
+
     const [aiPanelOpen, setAiPanelOpen] = useState(false);
     const [aiLoading, setAiLoading] = useState(false);
     const [aiIndustry, setAiIndustry] = useState('食品饮料');
-    const [aiCreativeResult, setAiCreativeResult] = useState<AdCreativeOutput | null>(null);
     const [aiStrategyResult, setAiStrategyResult] = useState<AdStrategyOutput | null>(null);
     const [aiError, setAiError] = useState<string | null>(null);
-    
+
     const [appliedItem, setAppliedItem] = useState<string | null>(null);
 
     useEffect(() => {
@@ -304,73 +219,6 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
         }
     };
 
-    const VIDEO_UPLOAD_CONFIG = {
-        maxSize: 50 * 1024 * 1024, 
-        maxSizeMB: 50,
-        allowedTypes: ['video/mp4', 'video/quicktime', 'video/webm', 'video/x-msvideo'],
-        allowedExtensions: ['.mp4', '.mov'],
-    };
-
-    const validateVideoFile = (file: File): { valid: boolean; error?: string } => {
-        const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase();
-        const isValidType = VIDEO_UPLOAD_CONFIG.allowedTypes.includes(file.type) ||
-                           VIDEO_UPLOAD_CONFIG.allowedExtensions.includes(fileExtension);
-        
-        if (!isValidType) {
-            return {
-                valid: false,
-                error: `不支持的视频格式，仅支持 ${VIDEO_UPLOAD_CONFIG.allowedExtensions.join('、')} 格式`
-            };
-        }
-
-        if (file.size > VIDEO_UPLOAD_CONFIG.maxSize) {
-            return {
-                valid: false,
-                error: `视频文件过大，最大支持 ${VIDEO_UPLOAD_CONFIG.maxSizeMB}MB`
-            };
-        }
-
-        return { valid: true };
-    };
-
-    const handleVideoUpload = async (e: ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file) return;
-
-        const validation = validateVideoFile(file);
-        if (!validation.valid) {
-            alert(validation.error);
-            e.target.value = '';
-            return;
-        }
-
-        setUploading(true);
-        setUploadProgress(null);
-        try {
-            const url = await chunkedUploadFile(file, (progress) => {
-                setUploadProgress(progress);
-            });
-            setFormData(prev => ({
-                ...prev,
-                videos: [...(prev.videos || []), url]
-            }));
-        } catch (error) {
-            console.error("Upload failed", error);
-            setUploadProgress({ phase: 'error', percent: 0, message: '上传失败，请重试' });
-            alert("视频上传失败");
-        } finally {
-            setUploading(false);
-            e.target.value = '';
-        }
-    };
-
-    const handleRemoveVideo = (index: number) => {
-        setFormData(prev => ({
-            ...prev,
-            videos: prev.videos.filter((_, i) => i !== index)
-        }));
-    };
-
     const handleAiGenerate = async () => {
         const description = formData.content as string || formData.title as string;
         if (!description.trim()) {
@@ -380,28 +228,10 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
 
         setAiLoading(true);
         setAiError(null);
-        setAiCreativeResult(null);
         setAiStrategyResult(null);
 
         try {
-            const [creativeRes, strategyRes] = await Promise.all([
-                generateAdCreative({
-                    adDescription: description,
-                    industry: aiIndustry,
-                    tone: 'strong'
-                }),
-                generateAdStrategy({
-                    adDescription: description,
-                    industry: aiIndustry
-                })
-            ]);
-
-            if ('error' in creativeRes && creativeRes.error) {
-                setAiError(creativeRes.message);
-            } else {
-                setAiCreativeResult(creativeRes as AdCreativeOutput);
-            }
-
+            const strategyRes = await generateAdStrategy({ adDescription: description, industry: aiIndustry });
             if ('error' in strategyRes && strategyRes.error) {
                 if (!aiError) setAiError(strategyRes.message);
             } else {
@@ -417,16 +247,6 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
     const showApplyFeedback = (itemKey: string) => {
         setAppliedItem(itemKey);
         setTimeout(() => setAppliedItem(null), 1500);
-    };
-
-    const applyCreativeTitle = (title: string, index: number) => {
-        setFormData(prev => ({ ...prev, title }));
-        showApplyFeedback(`title-${index}`);
-    };
-
-    const applyCreativeText = (text: string, index: number) => {
-        setFormData(prev => ({ ...prev, content: text }));
-        showApplyFeedback(`text-${index}`);
     };
 
     const applyStrategyPrice = (price: number) => {
@@ -462,7 +282,6 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
         copy: '复制广告'
     };
 
-    const videoConfig = formConfig.find(f => f.component === 'VideoUpload');
 
     return (
         <div className="modal-overlay active">
@@ -484,34 +303,30 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
                                 />
                             ))}
 
-                            {videoConfig && (
-                                <VideoUploadField
-                                    config={videoConfig}
-                                    videos={formData.videos || []}
-                                    onAdd={handleVideoUpload}
-                                    onRemove={handleRemoveVideo}
-                                    uploading={uploading}
-                                    uploadProgress={uploadProgress}
-                                />
-                            )}
+                            <div className="ad-material-reference">
+                                <strong>广告素材</strong>
+                                <p>创意生成和素材上传请在“创意素材”中完成。这里保留当前广告已关联的素材。</p>
+                                {(formData.videos || []).map((url, i) => <video key={url + i} controls preload="metadata" src={url} style={{width:'100%',maxHeight:180,borderRadius:8}} />)}
+                                <button type="button" className="btn btn-default" onClick={() => { onClose(); window.location.hash = 'creatives'; }}>关闭编辑，前往创意素材</button>
+                            </div>
 
                             <div className="ai-assist-section">
                                 <div className="ai-assist-header" onClick={() => setAiPanelOpen(!aiPanelOpen)}>
                                     <div className="ai-assist-title">
                                         <span className="ai-icon">✨</span>
-                                        AI 智能助手
+                                        AI 投放助手
                                     </div>
                                     <span className={`ai-toggle ${aiPanelOpen ? 'open' : ''}`}>
                                         {aiPanelOpen ? '收起' : '展开'}
                                     </span>
                                 </div>
-                                
+
                                 {aiPanelOpen && (
                                     <div className="ai-assist-body">
                                         <div className="ai-input-row">
                                             <div className="ai-input-group">
                                                 <label className="ai-label">行业分类</label>
-                                                <select 
+                                                <select
                                                     className="ai-select"
                                                     value={aiIndustry}
                                                     onChange={(e) => setAiIndustry(e.target.value)}
@@ -521,7 +336,7 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
                                                     ))}
                                                 </select>
                                             </div>
-                                            <button 
+                                            <button
                                                 className="btn btn-ai"
                                                 onClick={handleAiGenerate}
                                                 disabled={aiLoading}
@@ -533,7 +348,7 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
                                                     </>
                                                 ) : (
                                                     <>
-                                                        AI 生成创意
+                                                        获取投放建议
                                                         <div className="icon">
                                                             <svg
                                                                 height="24"
@@ -554,75 +369,29 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
                                         </div>
 
                                         <div className="ai-hint">
-                                            提示：请先填写广告内容描述，AI 将根据描述生成创意建议
+                                            提示：请先填写广告内容描述，AI 将根据描述提供推广目标、人群及投放建议；不会修改创意素材
                                         </div>
 
                                         {aiError && (
                                             <div className="ai-error">{aiError}</div>
                                         )}
 
-                                        {aiCreativeResult && (
-                                            <div className="ai-result-section">
-                                                <div className="ai-result-title">广告创意建议</div>
-                                                
-                                                <div className="ai-result-group">
-                                                    <div className="ai-result-label">推荐标题</div>
-                                                    {aiCreativeResult.titles.map((title, i) => (
-                                                        <div key={i} className={`ai-result-item ${appliedItem === `title-${i}` ? 'applied' : ''}`}>
-                                                            <span className="ai-result-text">{title}</span>
-                                                            <button 
-                                                                className={`ai-apply-btn ${appliedItem === `title-${i}` ? 'applied' : ''}`}
-                                                                onClick={() => applyCreativeTitle(title, i)}
-                                                                disabled={appliedItem === `title-${i}`}
-                                                            >
-                                                                {appliedItem === `title-${i}` ? '✓ 已应用' : '应用'}
-                                                            </button>
-                                                        </div>
-                                                    ))}
-                                                </div>
-
-                                                <div className="ai-result-group">
-                                                    <div className="ai-result-label">推荐文案</div>
-                                                    {aiCreativeResult.texts.map((text, i) => (
-                                                        <div key={i} className={`ai-result-item ${appliedItem === `text-${i}` ? 'applied' : ''}`}>
-                                                            <span className="ai-result-text">{text}</span>
-                                                            <button 
-                                                                className={`ai-apply-btn ${appliedItem === `text-${i}` ? 'applied' : ''}`}
-                                                                onClick={() => applyCreativeText(text, i)}
-                                                                disabled={appliedItem === `text-${i}`}
-                                                            >
-                                                                {appliedItem === `text-${i}` ? '✓ 已应用' : '应用'}
-                                                            </button>
-                                                        </div>
-                                                    ))}
-                                                </div>
-
-                                                <div className="ai-result-group">
-                                                    <div className="ai-result-label">推荐关键词</div>
-                                                    <div className="ai-keywords">
-                                                        {aiCreativeResult.keywords.map((kw, i) => (
-                                                            <span key={i} className="ai-keyword-tag">{kw}</span>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
-
                                         {aiStrategyResult && (
                                             <div className="ai-result-section">
-                                                <div className="ai-result-title">投放策略建议</div>
-                                                
+                                                <div className="ai-result-title">投放策略建议（尚未执行）</div>
+                                                <div className="ai-result-group"><div className="ai-result-label">推广目标</div><p>{aiStrategyResult.recommendedObjective || '需进一步明确推广目标'}</p></div>
+
                                                 <div className="ai-result-group">
                                                     <div className={`ai-result-label ${appliedItem === 'price' ? 'applied' : ''}`}>
-                                                        建议出价: 
-                                                        <span className="ai-price">¥{aiStrategyResult.bidSuggestion}</span>
-                                                        <button 
+                                                        建议出价:
+                                                        <span className="ai-price">{aiStrategyResult.bidSuggestion === null ? '依据不足，暂不建议金额' : `¥${aiStrategyResult.bidSuggestion}`}</span>
+                                                        {aiStrategyResult.bidSuggestion !== null && <button
                                                             className={`ai-apply-btn small ${appliedItem === 'price' ? 'applied' : ''}`}
-                                                            onClick={() => applyStrategyPrice(aiStrategyResult.bidSuggestion)}
+                                                            onClick={() => applyStrategyPrice(aiStrategyResult.bidSuggestion!)}
                                                             disabled={appliedItem === 'price'}
                                                         >
                                                             {appliedItem === 'price' ? '✓ 已应用' : '应用到表单'}
-                                                        </button>
+                                                        </button>}
                                                     </div>
                                                 </div>
 

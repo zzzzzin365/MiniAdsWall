@@ -284,6 +284,9 @@ class MCPToolManager:
         query: str,
         top_k: int = 5,
         context: Optional[Dict[str, Any]] = None,
+        *,
+        check_retrieved_evidence: bool = True,
+        stage_timeout: float = 3.0,
     ) -> ToolResult:
         """
         完整的检索优化链路：查询改写 → 并行召回 → 去重 → 重排 → Top-K
@@ -291,13 +294,21 @@ class MCPToolManager:
         这是解决"检索不全、召回不好"的完整方案。
         """
         # 1. 查询改写：生成多角度子查询
-        sub_queries = await self.rewrite_query(query, n=3)
+        try:
+            sub_queries = await asyncio.wait_for(self.rewrite_query(query, n=3), stage_timeout)
+            if not isinstance(sub_queries, list):
+                sub_queries = []
+            sub_queries = list(dict.fromkeys([query] + [q.strip() for q in sub_queries
+                                                       if isinstance(q, str) and q.strip()]))[:4]
+        except Exception:
+            sub_queries = [query]
         logger.info(f"查询改写: {query!r} → {sub_queries}")
 
         # 2. 并行召回：所有子查询同时检索
         recall_k = max(top_k, 5)
         tasks = [
-            self.call(tool_name, {"query": q, "top_k": recall_k}, context, use_cache=True)
+            asyncio.wait_for(self.call(tool_name, {"query": q, "top_k": recall_k}, context, use_cache=True),
+                             stage_timeout)
             for q in sub_queries
         ]
         results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -323,20 +334,30 @@ class MCPToolManager:
                 return ToolResult(success=False, data=[], tool_name=tool_name, error="所有子查询均无结果")
             available = any(isinstance(r, ToolResult) and r.success and isinstance(r.data, list)
                             and not any(isinstance(x, dict) and x.get("fallback") for x in r.data) for r in results)
+            if not check_retrieved_evidence:
+                return ToolResult(success=available, data=[], tool_name=tool_name,
+                                  error=None if available else "retrieval_failed")
             decision = await check_evidence(self._client, self._model, query, [],
                                             retrieval_error=None if available else "retrieval_failed")
             return ToolResult(success=decision.status != "unavailable", data=[], tool_name=tool_name,
                               error=decision.error_code, evidence=decision.to_dict())
 
         # 4. 重排：用 LLM 对合并结果按相关性打分，取 Top-K
-        reranked = await self._rerank(query, merged, top_k)
+        did_rerank = True
+        try:
+            reranked = await asyncio.wait_for(self._rerank(query, merged, top_k), stage_timeout)
+        except Exception:
+            reranked = merged[:top_k]
+            did_rerank = False
         if tool_name != "knowledge_search":
-            return ToolResult(success=True, data=reranked, tool_name=tool_name, reranked=True)
+            return ToolResult(success=True, data=reranked, tool_name=tool_name, reranked=did_rerank)
         chunks = prepare_chunks(reranked, top_k)
+        if not check_retrieved_evidence:
+            return ToolResult(success=True, data=chunks, tool_name=tool_name, reranked=did_rerank)
         decision = await check_evidence(self._client, self._model, query, chunks)
         allowed = set(decision.retained_ids) if decision.status in {"sufficient", "insufficient", "disabled"} else set()
         return ToolResult(success=decision.status != "unavailable", data=[x for x in chunks if x["id"] in allowed],
-                          tool_name=tool_name, reranked=True, error=decision.error_code, evidence=decision.to_dict())
+                          tool_name=tool_name, reranked=did_rerank, error=decision.error_code, evidence=decision.to_dict())
 
     # ── 结果重排（解决召回不好）──────────────────────────────────────────────
 

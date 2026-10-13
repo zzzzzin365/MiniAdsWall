@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "time": "2026-10-11T18:12:18.695217+08:00",
+    "scope": "Synthetic fixed-candidate business RAG evaluation; not live traffic or retrieval evaluation",
+    "annotation": "Developer-defined references with deterministic arithmetic; not independent human labels",
+    "model": "nex-agi/nex-n2.5-mini:free",
+    "configured_model": "nex-agi/nex-n2.5-mini:free",
+    "provider": "openrouter",
+    "threshold": 0.7,
+    "gate_version": "runtime-v2",
+    "comparison": "llm-vs-clef",
+    "arm_labels": {
+      "baseline": "LLM passage scoring",
+      "gated": "Clef passage scoring + same LLM sufficiency check"
+    },
+    "clef": {
+      "model": "clef",
+      "deployment": "cloudflare",
+      "threshold": 0.7,
+      "input_rate_usd_per_million": 0.24
+    },
+    "evaluation_split": "calibration",
+    "threshold_calibrated": false,
+    "rounds": 1,
+    "generator_temperature": 0.2,
+    "gate_and_judge_temperature": 0,
+    "seed": 20261010,
+    "minimum_request_interval_seconds": 0.0,
+    "dataset_sha256": "3a2e560ac04b069dec935c70d9ce232b6ca102836a668e143c9ed8e04e591df8",
+    "code_sha256": {
+      "evaluation/run_rag_evidence_ab.py": "3876a191782facc768716e872f8a7d2ebc14fa06be8ce22409ecf670f48086f4",
+      "evaluation/rag_evidence_gate.py": "75a36d548675f045bd0f1ecabab8037c6619efa3260a9391c9e93a2983aa6e95",
+      "api/main.py": "db964dbf8c2f88229cdd6cbade2ac5cb613a558afe08f463730fc26e22c15801",
+      "agents/agent_orchestrator.py": "10f7039b6a02acb22d06c7ed3ecb719e85863e93cb0fd9fd3f81af9f2ca55bc3",
+      "core/rag_evidence.py": "4bb83752aedb59973cf2bd7a5113d82ce9911d3aa5812d938b8b1d24988a971d",
+      "core/model_client.py": "328dfeee56b7bfe67777ae592aa02d67d1cde5cc8757be79581e00cbe80173f1",
+      "evaluation/clef_client.py": "789472ecf21180f4e008b4f62755596efdcef0b3108ba9bc9dcf072c5a95e023"
+    },
+    "skills_sha256": {
+      "skills/README.md": "45f13ebad1c29f647221679f968e3b9c5b1c1169e5f559e17bdeb89d29ea303a",
+      "skills/ads_optimization/SKILL.md": "599b520667f446af32ca755e963aeb5792caa769f139449563ab7c9aaac03123",
+      "skills/general_customer_service/SKILL.md": "b71dea6f744fc6f09f46a60d096525d2b535ac10d3fd5c7d0c3f3aa18c28c57e",
+      "skills/technical_support/SKILL.md": "978ad60a930fac0c6619ebd4fa410eba881c10fe34a26121c931b14662169914"
+    },
+    "limitations": [
+      "Synthetic 2-case selected set, not live traffic or retrieval evaluation",
+      "Same model generates and anonymously grades; independent human validation is absent",
+      "Thresholds are not marked calibrated; use calibration split only to tune and freeze before testing",
+      "Existing AdsAgent and skills used; memory, routing, tool execution and HTTP excluded",
+      "Service durations exclude experimental rate-limit pacing; not a production latency benchmark",
+      "Model override, if supplied, applies only to this experiment",
+      "runtime-v2 includes its 8 second check deadline; experiment pacing can consume that budget",
+      "Only passage scoring is replaced; LLM sufficiency and answer generation are unchanged",
+      "Clef probabilities and LLM support scores have different semantics; equal thresholds are not calibration",
+      "Clef token costs are rate estimates, not provider-reported charges; local compute costs are unknown",
+      "Clef evaluation does not measure Jev performance"
+    ]
+  },
+  "summary": {
+    "attempted_pairs": 2,
+    "graded_pairs": 0,
+    "answerable_graded": 0,
+    "unanswerable_graded": 0,
+    "arms": {
+      "baseline": {
+        "factual_errors": 0,
+        "factual_error_rate": null,
+        "false_refusals": 0,
+        "false_refusal_rate_on_answerable": null,
+        "correct": 0,
+        "correct_rate": null,
+        "pipeline_failures": 2,
+        "median_service_ms_on_graded": null,
+        "generation_skipped": 0,
+        "usage_all_attempts": {
+          "calls": 2,
+          "failed_calls": 2,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "provider_reported_cost_usd": null,
+          "clef_estimated_cost_usd": 0,
+          "clef_calls_with_unknown_cost": 0
+        }
+      },
+      "gated": {
+        "factual_errors": 0,
+        "factual_error_rate": null,
+        "false_refusals": 0,
+        "false_refusal_rate_on_answerable": null,
+        "correct": 0,
+        "correct_rate": null,
+        "pipeline_failures": 2,
+        "median_service_ms_on_graded": null,
+        "generation_skipped": 0,
+        "usage_all_attempts": {
+          "calls": 4,
+          "failed_calls": 2,
+          "prompt_tokens": null,
+          "completion_tokens": null,
+          "provider_reported_cost_usd": null,
+          "clef_estimated_cost_usd": 0.0003828,
+          "clef_calls_with_unknown_cost": 0
+        }
+      }
+    },
+    "error_pairs_improved": 0,
+    "error_pairs_worsened": 0,
+    "exact_mcnemar_two_sided_p": 1.0,
+    "judge_usage": {
+      "calls": 0,
+      "failed_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "provider_reported_cost_usd": 0,
+      "clef_estimated_cost_usd": 0,
+      "clef_calls_with_unknown_cost": 0
+    }
+  },
+  "results": [
+    {
+      "case_id": "S01-CTR",
+      "round": 1,
+      "category": "supported_data",
+      "question": "mock-ad-01-01 在 2026-10-01 的 CTR 是多少？",
+      "answerable": true,
+      "reference": "CTR=710/14500，约4.9%；只代表给定广告快照。",
+      "execution_order": [
+        "baseline",
+        "gated"
+      ],
+      "baseline": {
+        "status": "failed",
+        "gate": {
+          "status": "unavailable",
+          "retained_ids": [],
+          "scores": [],
+          "missing_information": [],
+          "evidence_ids": [],
+          "candidate_ids": [
+            "synthetic:ctr",
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "rejected_ids": [],
+          "error_code": "provider_error",
+          "retrieval_error": null,
+          "check_id": "b88617ee-1945-42ee-acaa-b1010c627ff5",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 1551.89,
+          "calls": [
+            {
+              "model": "nex-agi/nex-n2.5-mini:free",
+              "status": "failed",
+              "input_tokens": null,
+              "output_tokens": null,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 1551.66
+            }
+          ]
+        },
+        "error": {
+          "type": "EvidenceCheckUnavailable",
+          "code": "provider_error"
+        },
+        "wall_ms_with_pacing": 1554.17,
+        "calls": [
+          {
+            "success": false,
+            "model": "nex-agi/nex-n2.5-mini:free",
+            "error": {
+              "type": "HTTPStatusError",
+              "http_status": 404
+            },
+            "duration_ms": 1551.61
+          }
+        ],
+        "service_ms": 1551.61
+      },
+      "gated": {
+        "status": "failed",
+        "gate": {
+          "status": "unavailable",
+          "retained_ids": [],
+          "scores": [
+            {
+              "id": "synthetic:ctr",
+              "support": 0.9561
+            },
+            {
+              "id": "synthetic:ranking",
+              "support": 0.0296
+            },
+            {
+              "id": "synthetic:cpm",
+              "support": 0.0254
+            }
+          ],
+          "missing_information": [],
+          "evidence_ids": [],
+          "candidate_ids": [
+            "synthetic:ctr",
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "rejected_ids": [
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "error_code": "provider_error",
+          "retrieval_error": null,
+          "check_id": "0c32eb98-1f20-41c3-aeb3-e9ae8f1f47b6",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 2031.93,
+          "calls": [
+            {
+              "model": "clef",
+              "status": "completed",
+              "input_tokens": 794,
+              "output_tokens": 0,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 1371.71,
+              "provider": "cloudflare"
+            },
+            {
+              "model": "nex-agi/nex-n2.5-mini:free",
+              "status": "failed",
+              "input_tokens": null,
+              "output_tokens": null,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 660.0
+            }
+          ],
+          "passage_scoring_backend": "clef"
+        },
+        "error": {
+          "type": "EvidenceCheckUnavailable",
+          "code": "provider_error"
+        },
+        "wall_ms_with_pacing": 2032.31,
+        "calls": [
+          {
+            "success": true,
+            "model": "clef",
+            "stage": "passage_scoring",
+            "provider": "cloudflare",
+            "usage": {
+              "prompt_tokens": 794,
+              "completion_tokens": 0,
+              "cost": null
+            },
+            "estimated_cost_usd": 0.00019056,
+            "resolved_model": "clef",
+            "duration_ms": 1371.58
+          },
+          {
+            "success": false,
+            "model": "nex-agi/nex-n2.5-mini:free",
+            "error": {
+              "type": "HTTPStatusError",
+              "http_status": 404
+            },
+            "duration_ms": 659.93
+          }
+        ],
+        "service_ms": 2031.51
+      },
+      "grading": {
+        "status": "not_graded",
+        "reason": "Incomplete pair"
+      }
+    },
+    {
+      "case_id": "S01-BID",
+      "round": 1,
+      "category": "supported_data",
+      "question": "mock-ad-01-01 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "answerable": true,
+      "reference": "使用提供的模拟出价：2.53→2.78元；排序分756.98→831.78。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "execution_order": [
+        "gated",
+        "baseline"
+      ],
+      "gated": {
+        "status": "failed",
+        "gate": {
+          "status": "unavailable",
+          "retained_ids": [],
+          "scores": [
+            {
+              "id": "synthetic:ranking",
+              "support": 0.9539
+            },
+            {
+              "id": "synthetic:ctr",
+              "support": 0.0312
+            },
+            {
+              "id": "synthetic:creative",
+              "support": 0.0221
+            }
+          ],
+          "missing_information": [],
+          "evidence_ids": [],
+          "candidate_ids": [
+            "synthetic:ranking",
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "rejected_ids": [
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "error_code": "provider_error",
+          "retrieval_error": null,
+          "check_id": "4708d6aa-40ea-4663-a188-a2efedf39af5",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 2293.63,
+          "calls": [
+            {
+              "model": "clef",
+              "status": "completed",
+              "input_tokens": 801,
+              "output_tokens": 0,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 1003.91,
+              "provider": "cloudflare"
+            },
+            {
+              "model": "nex-agi/nex-n2.5-mini:free",
+              "status": "failed",
+              "input_tokens": null,
+              "output_tokens": null,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 1289.55
+            }
+          ],
+          "passage_scoring_backend": "clef"
+        },
+        "error": {
+          "type": "EvidenceCheckUnavailable",
+          "code": "provider_error"
+        },
+        "wall_ms_with_pacing": 2293.81,
+        "calls": [
+          {
+            "success": true,
+            "model": "clef",
+            "stage": "passage_scoring",
+            "provider": "cloudflare",
+            "usage": {
+              "prompt_tokens": 801,
+              "completion_tokens": 0,
+              "cost": null
+            },
+            "estimated_cost_usd": 0.00019224,
+            "resolved_model": "clef",
+            "duration_ms": 1003.79
+          },
+          {
+            "success": false,
+            "model": "nex-agi/nex-n2.5-mini:free",
+            "error": {
+              "type": "HTTPStatusError",
+              "http_status": 404
+            },
+            "duration_ms": 1289.5
+          }
+        ],
+        "service_ms": 2293.29
+      },
+      "baseline": {
+        "status": "failed",
+        "gate": {
+          "status": "unavailable",
+          "retained_ids": [],
+          "scores": [],
+          "missing_information": [],
+          "evidence_ids": [],
+          "candidate_ids": [
+            "synthetic:ranking",
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "rejected_ids": [],
+          "error_code": "provider_error",
+          "retrieval_error": null,
+          "check_id": "fb1a9d03-97d2-490b-8948-c507f4305f30",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 529.01,
+          "calls": [
+            {
+              "model": "nex-agi/nex-n2.5-mini:free",
+              "status": "failed",
+              "input_tokens": null,
+              "output_tokens": null,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 528.81
+            }
+          ]
+        },
+        "error": {
+          "type": "EvidenceCheckUnavailable",
+          "code": "provider_error"
+        },
+        "wall_ms_with_pacing": 529.19,
+        "calls": [
+          {
+            "success": false,
+            "model": "nex-agi/nex-n2.5-mini:free",
+            "error": {
+              "type": "HTTPStatusError",
+              "http_status": 404
+            },
+            "duration_ms": 528.78
+          }
+        ],
+        "service_ms": 528.78
+      },
+      "grading": {
+        "status": "not_graded",
+        "reason": "Incomplete pair"
+      }
+    }
+  ]
+}

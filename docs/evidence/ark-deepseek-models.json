@@ -1,0 +1,214 @@
+[
+  {
+    "created": 1778837387,
+    "domain": "LLM",
+    "features": {
+      "batch": {
+        "batch_chat": true,
+        "batch_job": true
+      },
+      "cache": {
+        "prefix_cache": false,
+        "session_cache": false
+      },
+      "structured_outputs": {
+        "json_object": false,
+        "json_schema": false
+      },
+      "tools": {
+        "function_calling": true
+      }
+    },
+    "id": "deepseek-v4-pro-260425",
+    "modalities": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "name": "deepseek-v4-pro",
+    "object": "model",
+    "status": "Retiring",
+    "task_type": [
+      "TextGeneration"
+    ],
+    "token_limits": {
+      "context_window": 1048576,
+      "max_input_token_length": 1048576,
+      "max_output_token_length": 393216,
+      "max_reasoning_token_length": 393216
+    },
+    "version": "260425"
+  },
+  {
+    "created": 1778916543,
+    "domain": "LLM",
+    "features": {
+      "batch": {
+        "batch_chat": true,
+        "batch_job": true
+      },
+      "cache": {
+        "prefix_cache": false,
+        "session_cache": false
+      },
+      "structured_outputs": {
+        "json_object": false,
+        "json_schema": false
+      },
+      "tools": {
+        "function_calling": true
+      }
+    },
+    "id": "deepseek-v4-flash-260425",
+    "modalities": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "name": "deepseek-v4-flash",
+    "object": "model",
+    "status": "Shutdown",
+    "task_type": [
+      "TextGeneration"
+    ],
+    "token_limits": {
+      "context_window": 1048576,
+      "max_input_token_length": 1048576,
+      "max_output_token_length": 393216,
+      "max_reasoning_token_length": 393216
+    },
+    "version": "260425"
+  },
+  {
+    "created": 1785748879,
+    "domain": "LLM",
+    "features": {
+      "batch": {
+        "batch_chat": false,
+        "batch_job": false
+      },
+      "cache": {
+        "prefix_cache": false,
+        "session_cache": false
+      },
+      "structured_outputs": {
+        "json_object": false,
+        "json_schema": false
+      },
+      "tools": {
+        "function_calling": true
+      }
+    },
+    "id": "deepseek-v4-flash-ga-260731",
+    "modalities": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "name": "deepseek-v4-flash-ga",
+    "object": "model",
+    "task_type": [
+      "TextGeneration"
+    ],
+    "token_limits": {
+      "context_window": 1048576,
+      "max_input_token_length": 1048576,
+      "max_output_token_length": 393216,
+      "max_reasoning_token_length": 393216
+    },
+    "version": "260731"
+  },
+  {
+    "created": 1786682407,
+    "domain": "LLM",
+    "features": {
+      "batch": {
+        "batch_chat": false,
+        "batch_job": false
+      },
+      "cache": {
+        "prefix_cache": false,
+        "session_cache": false
+      },
+      "structured_outputs": {
+        "json_object": false,
+        "json_schema": false
+      },
+      "tools": {
+        "function_calling": true
+      }
+    },
+    "id": "deepseek-v4-pro-ga-260813",
+    "modalities": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "name": "deepseek-v4-pro-ga",
+    "object": "model",
+    "task_type": [
+      "TextGeneration"
+    ],
+    "token_limits": {
+      "context_window": 1048576,
+      "max_input_token_length": 1048576,
+      "max_output_token_length": 393216,
+      "max_reasoning_token_length": 131072
+    },
+    "version": "260813"
+  },
+  {
+    "created": 1789362846,
+    "domain": "LLM",
+    "features": {
+      "batch": {
+        "batch_chat": false,
+        "batch_job": false
+      },
+      "cache": {
+        "prefix_cache": false,
+        "session_cache": false
+      },
+      "structured_outputs": {
+        "json_object": false,
+        "json_schema": false
+      },
+      "tools": {
+        "function_calling": true
+      }
+    },
+    "id": "deepseek-v4-1-flash-260910",
+    "modalities": {
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "name": "deepseek-v4-1-flash",
+    "object": "model",
+    "task_type": [
+      "TextGeneration"
+    ],
+    "token_limits": {
+      "context_window": 1048576,
+      "max_input_token_length": 1048576,
+      "max_output_token_length": 393216,
+      "max_reasoning_token_length": 131072
+    },
+    "version": "260910"
+  }
+]

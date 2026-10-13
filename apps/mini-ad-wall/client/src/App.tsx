@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { getAdsPage, getAd, createAd, updateAd, deleteAd } from './api';
-import AdManagement from './components/AdManagement';
+import { getAdsPage, getAd, createAd, updateAd, deleteAd, setStudioCredential, hasStudioCredential } from './api';
+import AdManagement, { ManagementView } from './components/AdManagement';
 import AdDetailDrawer from './components/AdDetailDrawer';
 import AdModal from './components/AdModal';
 import DeleteModal from './components/DeleteModal';
@@ -8,7 +8,55 @@ import VideoModal from './components/VideoModal';
 import AIAssistantPanel from './components/AIAssistantPanel';
 import { Ad, AdInput, AdModalState, DeleteModalState, VideoModalState, ToastState } from './types';
 
+const moduleInfo: Record<ManagementView, { title: string; description: string; hash: string }> = {
+    list: { title: '广告管理', description: '管理广告、投放配置与素材', hash: 'ads' },
+    materials: { title: '已有素材管理', description: '浏览已有广告素材，预览、编辑与复用', hash: 'materials' },
+    creatives: { title: '素材生成工作台', description: '创造你的营销素材', hash: 'creatives' },
+    analytics: { title: '数据分析', description: '查看广告数据、营销指标与效果报告', hash: 'data-analysis' },
+};
+const readModule = (): ManagementView => {
+    const hash = window.location.hash.slice(1);
+    if (hash === 'creatives' || new URLSearchParams(window.location.search).get('studio') === '1') return 'creatives';
+    if (hash === 'materials') return 'materials';
+    if (hash === 'data-analysis' || new URLSearchParams(window.location.search).get('marketing') === '1') return 'analytics';
+    return 'list';
+};
+function NavIcon({ kind }: { kind: 'ads' | 'materials' | 'analytics' }) {
+    return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        {kind === 'ads' ? <><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></>
+            : kind === 'materials' ? <><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M7 5V3h10v2M3 16l5-5 4 4 3-3 6 6" /><circle cx="16" cy="10" r="1" /></>
+            : <><path d="M4 3v18h17M8 16v-5M13 16V7M18 16V4" /></>}
+    </svg>;
+}
+
 function App() {
+    const [profileOpen, setProfileOpen] = useState(false);
+    const [credential, setCredential] = useState('');
+    const [credentialSaved, setCredentialSaved] = useState(false);
+    const [activeModule, setActiveModule] = useState<ManagementView>(readModule);
+    const [materialsExpanded, setMaterialsExpanded] = useState(true);
+    const [connected, setConnected] = useState(hasStudioCredential);
+    const creativeActive = activeModule === 'creatives';
+    useEffect(() => {
+        const sync = () => setActiveModule(readModule());
+        const syncCredential = () => setConnected(hasStudioCredential());
+        window.addEventListener('hashchange', sync);
+        window.addEventListener('studio-credential-changed', syncCredential);
+        return () => { window.removeEventListener('hashchange', sync); window.removeEventListener('studio-credential-changed', syncCredential); };
+    }, []);
+    const navigate = (view: ManagementView) => {
+        setActiveModule(view);
+        const url = new URL(window.location.href);
+        url.searchParams.delete('studio'); url.searchParams.delete('marketing');
+        url.hash = moduleInfo[view].hash;
+        if (window.location.href !== url.href) window.history.pushState(null, '', url);
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    };
+    useEffect(() => {
+        const sync = () => setActiveModule(readModule());
+        window.addEventListener('popstate', sync);
+        return () => window.removeEventListener('popstate', sync);
+    }, []);
     const [nextCursor, setNextCursor] = useState<string | null>(null);
     const [loadingPage, setLoadingPage] = useState(true);
     const [searchInput, setSearchInput] = useState('');
@@ -49,6 +97,7 @@ function App() {
             setAds(page.items); setNextCursor(page.next_cursor);
         } catch (error) {
             if (id === requestId.current && !controller.signal.aborted) {
+                setConnected(hasStudioCredential());
                 setLoadError(query ? '搜索失败，请重试' : '广告读取失败，请重试');
             }
         } finally {
@@ -170,7 +219,8 @@ function App() {
 
     return (
         <>
-            <div className="navbar">
+            <div className="app-layout">
+            <aside className="app-sidebar" aria-label="工作台侧边栏">
                 <div className="brand">
                     <svg className="brand-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -180,19 +230,41 @@ function App() {
                             <path d="M208 624c-44.8 0-80-35.2-80-80s35.2-80 80-80 80 35.2 80 80-35.2 80-80 80z m0-32c27.2 0 48-20.8 48-48s-20.8-48-48-48-48 20.8-48 48 20.8 48 48 48zM528 960c-44.8 0-80-35.2-80-80s35.2-80 80-80 80 35.2 80 80-35.2 80-80 80z m0-32c27.2 0 48-20.8 48-48s-20.8-48-48-48-48 20.8-48 48 20.8 48 48 48zM528 224c-44.8 0-80-35.2-80-80s35.2-80 80-80 80 35.2 80 80-35.2 80-80 80z m0-32c27.2 0 48-20.8 48-48s-20.8-48-48-48-48 20.8-48 48 20.8 48 48 48zM816 624c-44.8 0-80-35.2-80-80s35.2-80 80-80 80 35.2 80 80-35.2 80-80 80z m0-32c27.2 0 48-20.8 48-48s-20.8-48-48-48-48 20.8-48 48 20.8 48 48 48z" fill="#2538b1"></path>
                         </g>
                     </svg>
-                    Mini Ad Manager <span>Beta</span>
+                    <div className="sidebar-brand-name">Mini Ad Manager <span>Beta</span></div>
                 </div>
-                <div>
-                    <div className="user-avatar">A</div>
+                <div className="sidebar-account">
+                    <button className="sidebar-account-button" aria-label="个人信息管理" aria-expanded={profileOpen} onClick={() => { setProfileOpen(!profileOpen); setCredential(''); setCredentialSaved(false); }}><span className="user-avatar" aria-hidden="true">A</span><span className="sidebar-account-copy"><strong>当前账号</strong><small>{connected ? '运营凭证已设置' : '设置运营凭证'}</small></span><span aria-hidden="true">⌄</span></button>
+                    {profileOpen && <div className="profile-settings">
+                        <div className="profile-settings-heading"><strong>个人信息管理</strong><button aria-label="关闭个人信息管理" onClick={() => setProfileOpen(false)}>×</button></div>
+                        <form onSubmit={e => { e.preventDefault(); setStudioCredential(credential); setConnected(hasStudioCredential()); setCredential(''); setCredentialSaved(true); window.dispatchEvent(new Event('studio-credential-changed')); void loadAds(); }}>
+                            <label htmlFor="operator-credential">运营凭证</label>
+                            <input id="operator-credential" type="password" autoComplete="off" value={credential} onChange={e => { setCredential(e.target.value); setCredentialSaved(false); }} placeholder={hasStudioCredential() ? '已设置，输入新凭证可更换' : '请输入运营凭证'} />
+                            <button type="submit" disabled={!credential.trim()}>保存并连接</button>
+                            {credentialSaved && <p role="status">凭证已保存</p>}
+                        </form>
+                    </div>}
                 </div>
-            </div>
+                <nav className="sidebar-navigation" aria-label="模块导航">
+                    <button className={`sidebar-nav-item ${activeModule === 'list' ? 'active' : ''}`} aria-current={activeModule === 'list' ? 'page' : undefined} onClick={() => navigate('list')}><NavIcon kind="ads" />广告管理</button>
+                    <button className={`sidebar-nav-item ${activeModule === 'materials' || creativeActive ? 'group-active' : ''}`} aria-expanded={materialsExpanded} aria-controls="material-navigation" onClick={() => setMaterialsExpanded(previous => !previous)}><NavIcon kind="materials" />素材管理<span className={`sidebar-chevron ${materialsExpanded ? 'expanded' : ''}`} aria-hidden="true">⌄</span></button>
+                    <div className="sidebar-subnav" id="material-navigation" hidden={!materialsExpanded}>
+                        <button className={`sidebar-nav-item ${activeModule === 'materials' ? 'active' : ''}`} aria-current={activeModule === 'materials' ? 'page' : undefined} onClick={() => navigate('materials')}>已有素材管理</button>
+                        <button className={`sidebar-nav-item ${creativeActive ? 'active' : ''}`} aria-current={creativeActive ? 'page' : undefined} onClick={() => navigate('creatives')}>素材生成工作台</button>
+                    </div>
+                    <button className={`sidebar-nav-item ${activeModule === 'analytics' ? 'active' : ''}`} aria-current={activeModule === 'analytics' ? 'page' : undefined} onClick={() => navigate('analytics')}><NavIcon kind="analytics" />数据分析</button>
+                </nav>
+                <div className="sidebar-bottom"><span className="sidebar-status-dot" />Mini Ad Manager · Beta</div>
+            </aside>
 
+            <main className="app-main">
             <div className="container">
-                <div className="management-heading">
-                    <div className="page-title">广告管理</div>
-                    <span>管理广告与创意素材，查看出价和点击数据</span>
-                </div>
+                <header className="management-heading workspace-heading">
+                    <div><div className="workspace-breadcrumb">工作台 / {activeModule === 'materials' || creativeActive ? '素材管理 / ' : ''}{moduleInfo[activeModule].title}</div>
+                    <h1 className="page-title">{moduleInfo[activeModule].title}</h1>
+                    <p>{moduleInfo[activeModule].description}</p></div>
+                </header>
                 <AdManagement
+                    view={activeModule}
                     ads={ads}
                     loading={loadingPage}
                     error={loadError}
@@ -224,57 +296,9 @@ function App() {
                 />
             </div>
 
-            <footer className="footer">
-                <div className="footer-content">
-                    <div className="footer-section">
-                        <h4>产品</h4>
-                        <ul className="footer-links">
-                            <li><a href="#">广告管理</a></li>
-                            <li><a href="#data-analysis">数据分析</a></li>
-                            <li><a href="#">智能投放</a></li>
-                            <li><a href="#">效果优化</a></li>
-                        </ul>
-                    </div>
-                    <div className="footer-section">
-                        <h4>解决方案</h4>
-                        <ul className="footer-links">
-                            <li><a href="#">企业营销</a></li>
-                            <li><a href="#">品牌推广</a></li>
-                            <li><a href="#">效果广告</a></li>
-                            <li><a href="#">内容营销</a></li>
-                        </ul>
-                    </div>
-                    <div className="footer-section">
-                        <h4>支持</h4>
-                        <ul className="footer-links">
-                            <li><a href="#">帮助中心</a></li>
-                            <li><a href="#">API文档</a></li>
-                            <li><a href="#">开发者指南</a></li>
-                            <li><a href="#">联系我们</a></li>
-                        </ul>
-                    </div>
-                    <div className="footer-section">
-                        <h4>关于</h4>
-                        <ul className="footer-links">
-                            <li><a href="#">公司介绍</a></li>
-                            <li><a href="#">隐私政策</a></li>
-                            <li><a href="#">服务条款</a></li>
-                            <li><a href="#">加入我们</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="footer-bottom">
-                    <div>
-                        © 2025 Mini Ad Manager. All rights reserved.
-                    </div>
-                    <div className="footer-social">
-                        <a href="#" title="微信">W</a>
-                        <a href="#" title="微博">W</a>
-                        <a href="#" title="GitHub">G</a>
-                        <a href="#" title="LinkedIn">L</a>
-                    </div>
-                </div>
-            </footer>
+            <footer className="workspace-footer">Mini Ad Manager · 广告运营工作台</footer>
+            </main>
+            </div>
 
             <AdModal
                 isOpen={adModal.open}
@@ -303,7 +327,7 @@ function App() {
                 onEdit={handleEditClick} onCopy={handleCopyClick} onPreview={handlePreviewClick}
             />}
 
-            <AIAssistantPanel ads={ads} />
+            <div hidden={creativeActive}><AIAssistantPanel ads={ads} /></div>
 
             <div className={`toast ${toast.show ? 'show' : ''}`}>
                 <span className="toast-icon">✓</span>

@@ -1,0 +1,7 @@
+{
+  "http_status": 429,
+  "message": "Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day",
+  "reset_at_ms": 1791849600000,
+  "reset_at_shanghai": "2026-10-13T08:00:00+08:00",
+  "model": "nvidia/nemotron-3.5-lightning:free"
+}

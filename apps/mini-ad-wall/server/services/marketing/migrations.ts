@@ -38,9 +38,9 @@ async function audit(c: PoolConnection, migrations: ReturnType<typeof definition
 }
 // Inspect types, nullability, generated expressions, indexes, FKs and CHECKs.
 // CREATE IF NOT EXISTS alone must not adopt an incompatible pre-existing table.
-async function verify(c: PoolConnection, statements: string[]) {
+export async function verify(c: PoolConnection, statements: string[]) {
     for (const statement of statements) {
-        const match = statement.match(/^CREATE TABLE IF NOT EXISTS (marketing_\w+) \(/);
+        const match = statement.match(/^CREATE TABLE IF NOT EXISTS ((?:marketing|merchant)_\w+) \(/);
         if (!match) throw failure('invalid_marketing_migration_definition');
         const table = match[1], lines = statement.split('\n').slice(1, -1).map(s => s.trim().replace(/,$/, ''));
         const expected = lines.map(s => ({ line: s, match: s.match(/^(\w+) (ENUM\([^)]*\)|(?:VARCHAR|CHAR|DATETIME|DATE|INT|BIGINT|BOOLEAN|JSON|TEXT)(?:\(\d+\))?(?: UNSIGNED)?)(?: |$)/) })).filter(v => v.match);

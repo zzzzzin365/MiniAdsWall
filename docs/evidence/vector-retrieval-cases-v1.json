@@ -1,0 +1,554 @@
+[
+  {
+    "id": "D01-direct",
+    "group": "direct",
+    "question": "广告排序分怎么计算？",
+    "gold_ids": [
+      "7db8cbfa12ca33152d58efcf66e30a89"
+    ]
+  },
+  {
+    "id": "D01-paraphrase",
+    "group": "paraphrase",
+    "question": "为什么别人出价低但是排在我前面？",
+    "gold_ids": [
+      "7db8cbfa12ca33152d58efcf66e30a89"
+    ]
+  },
+  {
+    "id": "D02-direct",
+    "group": "direct",
+    "question": "高点击低出价的广告应该怎么调整？",
+    "gold_ids": [
+      "e1c238e54eb04b18f2ca8517412620da"
+    ]
+  },
+  {
+    "id": "D02-paraphrase",
+    "group": "paraphrase",
+    "question": "花的钱不少却没人点，要继续加钱吗？",
+    "gold_ids": [
+      "e1c238e54eb04b18f2ca8517412620da"
+    ]
+  },
+  {
+    "id": "D03-direct",
+    "group": "direct",
+    "question": "素材A/B测试应该怎样控制变量？",
+    "gold_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012"
+    ]
+  },
+  {
+    "id": "D03-paraphrase",
+    "group": "paraphrase",
+    "question": "想知道封面和开头哪个有效，能一起改吗？",
+    "gold_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012"
+    ]
+  },
+  {
+    "id": "D04-direct",
+    "group": "direct",
+    "question": "广告文案应该突出哪些信息？",
+    "gold_ids": [
+      "7d840169fc8d6972df9566a5a87096c5"
+    ]
+  },
+  {
+    "id": "D04-paraphrase",
+    "group": "paraphrase",
+    "question": "标题怎么写才能让目标人群愿意点？",
+    "gold_ids": [
+      "7d840169fc8d6972df9566a5a87096c5"
+    ]
+  },
+  {
+    "id": "D05-direct",
+    "group": "direct",
+    "question": "广告数据看板应该关注哪些指标？",
+    "gold_ids": [
+      "f02b1e4ba6ae74192e9be872a223c752"
+    ]
+  },
+  {
+    "id": "D05-paraphrase",
+    "group": "paraphrase",
+    "question": "只看总点击量就能知道投放好不好吗？",
+    "gold_ids": [
+      "f02b1e4ba6ae74192e9be872a223c752"
+    ]
+  },
+  {
+    "id": "D06-direct",
+    "group": "direct",
+    "question": "广告运营建议有哪些风险边界？",
+    "gold_ids": [
+      "4f1018ec59af4e254f922736ed816cdd"
+    ]
+  },
+  {
+    "id": "D06-paraphrase",
+    "group": "paraphrase",
+    "question": "你能保证我增加预算以后一定赚钱吗？",
+    "gold_ids": [
+      "4f1018ec59af4e254f922736ed816cdd"
+    ]
+  },
+  {
+    "id": "D07-direct",
+    "group": "direct",
+    "question": "品牌广告和效果广告如何选择评价目标？",
+    "gold_ids": [
+      "b0f408f9c606286235c902c3ed7825bb"
+    ]
+  },
+  {
+    "id": "D07-paraphrase",
+    "group": "paraphrase",
+    "question": "我想提升品牌认知，该拿什么评价广告？",
+    "gold_ids": [
+      "b0f408f9c606286235c902c3ed7825bb"
+    ]
+  },
+  {
+    "id": "D08-direct",
+    "group": "direct",
+    "question": "CTR怎么算？",
+    "gold_ids": [
+      "3dd3079a2d41ca64ceba0b9590124d99"
+    ]
+  },
+  {
+    "id": "D08-paraphrase",
+    "group": "paraphrase",
+    "question": "展示了一万次，有两百人点进去，点击率多少？",
+    "gold_ids": [
+      "3dd3079a2d41ca64ceba0b9590124d99"
+    ]
+  },
+  {
+    "id": "D09-direct",
+    "group": "direct",
+    "question": "落地页到达率怎么计算？",
+    "gold_ids": [
+      "a0849948aa07aef5e0cefc85f02f950c"
+    ]
+  },
+  {
+    "id": "D09-paraphrase",
+    "group": "paraphrase",
+    "question": "广告有人点，但打开页面的人很少，怎么查？",
+    "gold_ids": [
+      "a0849948aa07aef5e0cefc85f02f950c"
+    ]
+  },
+  {
+    "id": "D10-direct",
+    "group": "direct",
+    "question": "CVR转化率的分母是什么？",
+    "gold_ids": [
+      "d2de0fccc4892318b78e1371a54c34aa"
+    ]
+  },
+  {
+    "id": "D10-paraphrase",
+    "group": "paraphrase",
+    "question": "用户进页面后下单的比例怎么算？",
+    "gold_ids": [
+      "d2de0fccc4892318b78e1371a54c34aa"
+    ]
+  },
+  {
+    "id": "D11-direct",
+    "group": "direct",
+    "question": "搜索广告和原生广告有什么区别？",
+    "gold_ids": [
+      "92818ebeefb0094fdc24c1794448e2d8"
+    ]
+  },
+  {
+    "id": "D11-paraphrase",
+    "group": "paraphrase",
+    "question": "搜索结果里的推广和信息流里的推广有什么不同？",
+    "gold_ids": [
+      "92818ebeefb0094fdc24c1794448e2d8"
+    ]
+  },
+  {
+    "id": "D12-direct",
+    "group": "direct",
+    "question": "DSP和SSP分别为谁服务？",
+    "gold_ids": [
+      "9ab6213f4685b42ea848be8ef51953b8"
+    ]
+  },
+  {
+    "id": "D12-paraphrase",
+    "group": "paraphrase",
+    "question": "广告主买量和媒体卖流量分别用什么平台？",
+    "gold_ids": [
+      "9ab6213f4685b42ea848be8ef51953b8"
+    ]
+  },
+  {
+    "id": "D13-direct",
+    "group": "direct",
+    "question": "合约广告怎样做库存预测和流量分配？",
+    "gold_ids": [
+      "a960e21f88534aa3978686a339891911"
+    ]
+  },
+  {
+    "id": "D13-paraphrase",
+    "group": "paraphrase",
+    "question": "已经承诺给客户展示次数，怎么保证交付？",
+    "gold_ids": [
+      "a960e21f88534aa3978686a339891911"
+    ]
+  },
+  {
+    "id": "D14-direct",
+    "group": "direct",
+    "question": "CPM费用怎么算？",
+    "gold_ids": [
+      "bb31781fbacb4164ceb072da54f009cd"
+    ]
+  },
+  {
+    "id": "D14-paraphrase",
+    "group": "paraphrase",
+    "question": "每千次展示收十元，两万次展示付多少钱？",
+    "gold_ids": [
+      "bb31781fbacb4164ceb072da54f009cd"
+    ]
+  },
+  {
+    "id": "D15-direct",
+    "group": "direct",
+    "question": "固定CPC单价下费用怎么算？",
+    "gold_ids": [
+      "d85b97a157ef8c68d6b8ff2244f6a556"
+    ]
+  },
+  {
+    "id": "D15-paraphrase",
+    "group": "paraphrase",
+    "question": "按有效点击收费时，为什么出价不等于实际扣费？",
+    "gold_ids": [
+      "d85b97a157ef8c68d6b8ff2244f6a556"
+    ]
+  },
+  {
+    "id": "D16-direct",
+    "group": "direct",
+    "question": "CPA和CPS的结算区别是什么？",
+    "gold_ids": [
+      "69caf3676702594c9e0296942f26ead7"
+    ]
+  },
+  {
+    "id": "D16-paraphrase",
+    "group": "paraphrase",
+    "question": "按注册收费和按销售收费有什么不同？",
+    "gold_ids": [
+      "69caf3676702594c9e0296942f26ead7"
+    ]
+  },
+  {
+    "id": "D17-direct",
+    "group": "direct",
+    "question": "CPV如何界定有效观看？",
+    "gold_ids": [
+      "e58a7af9d3ace2d3aa5e69ea052baf80"
+    ]
+  },
+  {
+    "id": "D17-paraphrase",
+    "group": "paraphrase",
+    "question": "视频刚开始播放就要收钱吗？",
+    "gold_ids": [
+      "e58a7af9d3ace2d3aa5e69ea052baf80"
+    ]
+  },
+  {
+    "id": "D18-direct",
+    "group": "direct",
+    "question": "媒体方如何选择广告渠道？",
+    "gold_ids": [
+      "248c6f5380e710f18c8fe02f703d8af7"
+    ]
+  },
+  {
+    "id": "D18-paraphrase",
+    "group": "paraphrase",
+    "question": "我的网站接哪家广告联盟比较合适？",
+    "gold_ids": [
+      "248c6f5380e710f18c8fe02f703d8af7"
+    ]
+  },
+  {
+    "id": "D19-direct",
+    "group": "direct",
+    "question": "广告负载如何兼顾收入和用户体验？",
+    "gold_ids": [
+      "529373b729f5e6296343516941938a0f"
+    ]
+  },
+  {
+    "id": "D19-paraphrase",
+    "group": "paraphrase",
+    "question": "页面再多塞几个广告就能一直增加收益吗？",
+    "gold_ids": [
+      "529373b729f5e6296343516941938a0f"
+    ]
+  },
+  {
+    "id": "D20-direct",
+    "group": "direct",
+    "question": "CPC收入下降如何分环节定位？",
+    "gold_ids": [
+      "e3f770b68b05cb25e5e042b013bed981"
+    ]
+  },
+  {
+    "id": "D20-paraphrase",
+    "group": "paraphrase",
+    "question": "网站广告赚的钱变少了，应该查哪些环节？",
+    "gold_ids": [
+      "e3f770b68b05cb25e5e042b013bed981"
+    ]
+  },
+  {
+    "id": "D21-direct",
+    "group": "direct",
+    "question": "广告没有展示应该按什么顺序检查？",
+    "gold_ids": [
+      "217c58ecd9f09ffbfec7fde9b8a543db"
+    ]
+  },
+  {
+    "id": "D21-paraphrase",
+    "group": "paraphrase",
+    "question": "广告建好了却一直没人看到，先查哪里？",
+    "gold_ids": [
+      "217c58ecd9f09ffbfec7fde9b8a543db"
+    ]
+  },
+  {
+    "id": "D22-direct",
+    "group": "direct",
+    "question": "广告配置变更如何同步业务库和索引？",
+    "gold_ids": [
+      "a7be935852eaf24eb2f68cbf7061cd7c"
+    ]
+  },
+  {
+    "id": "D22-paraphrase",
+    "group": "paraphrase",
+    "question": "后台改了广告配置，线上检索却还是旧的怎么办？",
+    "gold_ids": [
+      "a7be935852eaf24eb2f68cbf7061cd7c"
+    ]
+  },
+  {
+    "id": "D23-direct",
+    "group": "direct",
+    "question": "预算耗尽后如何停止投放并处理延迟结算？",
+    "gold_ids": [
+      "c2c75e86e3f0c6cdcef9633369616fca"
+    ]
+  },
+  {
+    "id": "D23-paraphrase",
+    "group": "paraphrase",
+    "question": "钱已经花完了，为何还出现后续扣费？",
+    "gold_ids": [
+      "c2c75e86e3f0c6cdcef9633369616fca"
+    ]
+  },
+  {
+    "id": "D24-direct",
+    "group": "direct",
+    "question": "重复扣费或漏扣怎么核查？",
+    "gold_ids": [
+      "2267253aa3b02b9efe39fe30ed5e8188"
+    ]
+  },
+  {
+    "id": "D24-paraphrase",
+    "group": "paraphrase",
+    "question": "同一笔广告费用扣了两遍，应该查什么？",
+    "gold_ids": [
+      "2267253aa3b02b9efe39fe30ed5e8188"
+    ]
+  },
+  {
+    "id": "D25-direct",
+    "group": "direct",
+    "question": "点击量与消耗不一致怎么解释？",
+    "gold_ids": [
+      "42ba33a6517174d6822e9f37fba03e06"
+    ]
+  },
+  {
+    "id": "D25-paraphrase",
+    "group": "paraphrase",
+    "question": "页面点击很多，账单却对不上，是为什么？",
+    "gold_ids": [
+      "42ba33a6517174d6822e9f37fba03e06"
+    ]
+  },
+  {
+    "id": "D26-direct",
+    "group": "direct",
+    "question": "投放策略调整如何通过灰度实验比较效果？",
+    "gold_ids": [
+      "1b494ecc8c8b161fe74b95b14e4915aa"
+    ]
+  },
+  {
+    "id": "D26-paraphrase",
+    "group": "paraphrase",
+    "question": "怎样证明新投放策略比旧策略更赚钱？",
+    "gold_ids": [
+      "1b494ecc8c8b161fe74b95b14e4915aa"
+    ]
+  },
+  {
+    "id": "D27-direct",
+    "group": "direct",
+    "question": "广告配置、投放和效果模块怎样区分？",
+    "gold_ids": [
+      "a610a79d3d1febef995cca1678fcf6fc"
+    ]
+  },
+  {
+    "id": "D27-paraphrase",
+    "group": "paraphrase",
+    "question": "广告保存成功就说明已经投放并产生效果了吗？",
+    "gold_ids": [
+      "a610a79d3d1febef995cca1678fcf6fc"
+    ]
+  },
+  {
+    "id": "D28-direct",
+    "group": "direct",
+    "question": "投放调整前如何确认报表时效？",
+    "gold_ids": [
+      "60c2f0a39c9428aca0776fa8d622b735"
+    ]
+  },
+  {
+    "id": "D28-paraphrase",
+    "group": "paraphrase",
+    "question": "报表还没更新，我现在就改预算合适吗？",
+    "gold_ids": [
+      "60c2f0a39c9428aca0776fa8d622b735"
+    ]
+  },
+  {
+    "id": "D29-direct",
+    "group": "direct",
+    "question": "广告请求失败的性能与可用性影响是什么？",
+    "gold_ids": [
+      "39ac23d9139254382a251f69d386000e"
+    ]
+  },
+  {
+    "id": "D29-paraphrase",
+    "group": "paraphrase",
+    "question": "接口老是超时会影响广告展示吗？",
+    "gold_ids": [
+      "39ac23d9139254382a251f69d386000e"
+    ]
+  },
+  {
+    "id": "D30-direct",
+    "group": "direct",
+    "question": "分析广告业务数据需要确认什么访问范围？",
+    "gold_ids": [
+      "871e5d36cdbd39b60b72e89371e725a8"
+    ]
+  },
+  {
+    "id": "D30-paraphrase",
+    "group": "paraphrase",
+    "question": "能把别的品牌的广告数据拿来给我分析吗？",
+    "gold_ids": [
+      "871e5d36cdbd39b60b72e89371e725a8"
+    ]
+  },
+  {
+    "id": "M01",
+    "group": "multi_document",
+    "question": "解释CTR和CVR各怎么算，分母有什么区别？",
+    "gold_ids": [
+      "3dd3079a2d41ca64ceba0b9590124d99",
+      "d2de0fccc4892318b78e1371a54c34aa"
+    ]
+  },
+  {
+    "id": "M02",
+    "group": "multi_document",
+    "question": "CPM和固定CPC分别怎样计算费用？",
+    "gold_ids": [
+      "bb31781fbacb4164ceb072da54f009cd",
+      "d85b97a157ef8c68d6b8ff2244f6a556"
+    ]
+  },
+  {
+    "id": "M03",
+    "group": "multi_document",
+    "question": "DSP和SSP各服务谁，网站又该怎么选择广告渠道？",
+    "gold_ids": [
+      "9ab6213f4685b42ea848be8ef51953b8",
+      "248c6f5380e710f18c8fe02f703d8af7"
+    ]
+  },
+  {
+    "id": "M04",
+    "group": "multi_document",
+    "question": "广告配置保存后没有展示，要检查索引同步和投放链路哪些环节？",
+    "gold_ids": [
+      "217c58ecd9f09ffbfec7fde9b8a543db",
+      "a7be935852eaf24eb2f68cbf7061cd7c"
+    ]
+  },
+  {
+    "id": "M05",
+    "group": "multi_document",
+    "question": "预算已经耗尽还有扣费，怎样排查延迟结算与重复扣费？",
+    "gold_ids": [
+      "c2c75e86e3f0c6cdcef9633369616fca",
+      "2267253aa3b02b9efe39fe30ed5e8188"
+    ]
+  },
+  {
+    "id": "M06",
+    "group": "multi_document",
+    "question": "同时介绍演示排序公式和素材A/B测试的变量控制原则。",
+    "gold_ids": [
+      "7db8cbfa12ca33152d58efcf66e30a89",
+      "1524dbb507e0aa2e2e6af07da0c62012"
+    ]
+  },
+  {
+    "id": "M07",
+    "group": "multi_document",
+    "question": "调整策略前如何确认报表时效，再用灰度实验评估效果？",
+    "gold_ids": [
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "60c2f0a39c9428aca0776fa8d622b735"
+    ]
+  },
+  {
+    "id": "M08",
+    "group": "multi_document",
+    "question": "分别解释品牌广告与效果广告的评价目标，以及页面广告负载的权衡。",
+    "gold_ids": [
+      "b0f408f9c606286235c902c3ed7825bb",
+      "529373b729f5e6296343516941938a0f"
+    ]
+  }
+]

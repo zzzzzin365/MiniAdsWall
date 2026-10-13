@@ -9,6 +9,7 @@ from hosting.objects import Objects
 from hosting.pipeline import Pipeline
 from hosting.repository import Repository, LostLease
 from hosting.worker import Worker
+from mcp.tool_manager import MCPToolManager, ToolResult
 
 
 class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
@@ -27,6 +28,11 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
         self.pipeline.kb = SimpleNamespace(search=lambda *args: [
             {"id": "a", "title": "rule", "content": "有用规则"},
             {"id": "b", "title": "noise", "content": "不相关干扰"}])
+        self.pipeline.rag_manager = MCPToolManager(api_key="test", model="test")
+        self.pipeline.rag_manager.rewrite_query = AsyncMock(side_effect=lambda query, n=3: [query, "素材投放规则"])
+        self.pipeline.rag_manager._rerank = AsyncMock(side_effect=lambda query, items, k: items[:k])
+        self.pipeline.rag_manager.call = AsyncMock(return_value=ToolResult(
+            True, self.pipeline.kb.search(), "knowledge_search"))
 
     async def asyncTearDown(self):
         await self.pipeline.close()
@@ -45,7 +51,8 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
             if "chunks" in state:
                 value = {"scores": [{"id": "a", "support": .9}, {"id": "b", "support": .1}]}
             else:
-                self.assertEqual([item["id"] for item in state["retained_chunks"]], ["a"])
+                expected = ["a"] if self.pipeline.rag_manager.call.return_value.success else []
+                self.assertEqual([item["id"] for item in state["retained_chunks"]], expected)
                 value = judgment
             return SimpleNamespace(content=[SimpleNamespace(text=json.dumps(value))])
         patches = []
@@ -87,6 +94,9 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(state["status"], "succeeded")
         self.assertEqual(answer, "依据已检查规则回答")
         self.assertTrue(any(x["stage"] == "model" for x in trace["spans"]))
+        self.pipeline.rag_manager.rewrite_query.assert_awaited_once()
+        self.assertEqual(self.pipeline.rag_manager.call.await_count, 2)
+        self.assertEqual(len(self.pipeline.rag_manager._rerank.call_args.args[1]), 2)
 
     async def test_lost_lease_is_not_swallowed_as_retrieval_failure(self):
         run = self.new_run()
@@ -99,6 +109,17 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
             return await original(name, *args, **kwargs)
         with patch.object(ctx, "tool", tool), self.assertRaises(LostLease):
             await self.pipeline(ctx)
+
+    async def test_all_recall_failures_record_unavailable_and_skip_generation(self):
+        self.pipeline.rag_manager.call.return_value = ToolResult(False, [], "knowledge_search")
+        provider = AsyncMock(side_effect=AssertionError("generation must not start"))
+        state, trace, answer = await self.execute({"status": "insufficient",
+            "missing_information": ["运营知识"], "evidence_ids": []}, provider)
+        provider.assert_not_called()
+        self.assertEqual(state["status"], "succeeded")
+        evidence = next(x for x in trace["spans"] if x["stage"] == "rag_evidence")["evidence"]
+        self.assertEqual(evidence["status"], "unavailable")
+        self.assertEqual(evidence["retrieval_error"], "retrieval_failed")
 
 
 if __name__ == "__main__":

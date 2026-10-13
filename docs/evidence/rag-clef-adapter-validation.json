@@ -1,0 +1,14 @@
+{
+  "scope": "Offline adapter and regression checks; no live Clef requests or model-accuracy measurements",
+  "tests_run": 43,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "cloudflare_preflight": "blocked_missing_account_id_and_token",
+  "clef_live_requests": 0,
+  "source_sha256": {
+    "evaluation/clef_client.py": "789472ecf21180f4e008b4f62755596efdcef0b3108ba9bc9dcf072c5a95e023",
+    "evaluation/run_rag_evidence_ab.py": "3876a191782facc768716e872f8a7d2ebc14fa06be8ce22409ecf670f48086f4",
+    "tests/test_clef_evaluation.py": "f64c78116d892684c6b74d5c6e8a4712396cef04c2945d429c47bd41a6b626c6"
+  }
+}

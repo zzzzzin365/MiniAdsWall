@@ -68,9 +68,9 @@ api.interceptors.response.use(response => response, error => {
     return Promise.reject(error);
 });
 
-async function mutateAd<T>(method: 'post' | 'put' | 'delete', url: string, data?: AdInput): Promise<T> {
+async function mutateAd<T>(method: 'post' | 'put' | 'delete', url: string, data?: unknown): Promise<T> {
     // Keep the same operation ID across retries/reloads; unresolved operations are never assigned a new ID.
-    const bytes = new TextEncoder().encode(JSON.stringify({ method, url, data }));
+    const bytes = new TextEncoder().encode(JSON.stringify({ method, url, data, identity: getOperatorToken() }));
     const digest = await crypto.subtle.digest('SHA-256', bytes);
     const key = 'ad-operation:' + Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
     let id = sessionStorage.getItem(key);
@@ -225,3 +225,31 @@ export async function hostedEvents(id: string, after: number, signal: AbortSigna
         }
     } finally { await reader.cancel().catch(() => undefined); reader.releaseLock(); }
 }
+
+// Studio writes use the same durable operation recovery as advertising writes.
+export function setStudioCredential(token: string) {
+    operatorToken = token.trim();
+    if (operatorToken) localStorage.setItem(operatorTokenKey, operatorToken);
+    else localStorage.removeItem(operatorTokenKey);
+}
+export const studioGet = <T = any>(path: string, signal?: AbortSignal): Promise<T> => api.get('/merchant/v1/studio' + path, {signal}).then(r => r.data);
+export const studioWrite = <T = any>(path: string, body: unknown): Promise<T> => mutateAd<T>('post', '/merchant/v1/studio' + path, body);
+export async function studioUpload(brand: string, file: File) {
+    const bytes = await file.arrayBuffer();
+    const fileHash = await crypto.subtle.digest('SHA-256', bytes);
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(getOperatorToken() + ':' + Array.from(new Uint8Array(fileHash)).join(',')));
+    const key = 'studio-upload:' + brand + ':' + Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2,'0')).join('');
+    let id = sessionStorage.getItem(key);
+    if (id) {
+        try { const record = (await api.get('/operations/' + id)).data; sessionStorage.removeItem(key); return record.body; }
+        catch(e: any) { if(e.response?.status !== 404) throw e; }
+    } else { id = crypto.randomUUID(); sessionStorage.setItem(key,id); }
+    const data=new FormData(); data.append('file',file);
+    try { const r=await api.post('/merchant/v1/studio/assets?brand_id='+encodeURIComponent(brand),data,{headers:{'Idempotency-Key':id},timeout:60000});sessionStorage.removeItem(key);return r.data; }
+    catch(e: any) { if(e.response && e.response.status<500) sessionStorage.removeItem(key);throw e; }
+}
+export async function studioAsset(id: string): Promise<Blob> {
+    return (await api.get('/merchant/v1/studio/assets/'+encodeURIComponent(id)+'/content',{responseType:'blob'})).data;
+}
+
+export const hasStudioCredential = () => !!operatorToken;

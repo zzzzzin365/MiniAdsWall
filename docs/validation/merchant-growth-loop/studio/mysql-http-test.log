@@ -1,0 +1,84 @@
+TAP version 13
+# [2026-10-13 05:26:43] ← cd2fcdd5-5118-4117-8f43-e1a355b6b3e1 | GET /api/merchant/v1/studio/brands | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → cd2fcdd5-5118-4117-8f43-e1a355b6b3e1 | GET /api/merchant/v1/studio/brands | ✓ 200 | 10ms
+# [2026-10-13 05:26:43] ← 8dd1510d-a9b8-444d-a2cf-451aff6c7e8d | POST /api/merchant/v1/studio/briefs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 8dd1510d-a9b8-444d-a2cf-451aff6c7e8d | POST /api/merchant/v1/studio/briefs | ✓ 201 | 13ms
+# [2026-10-13 05:26:43] ← 3120e75c-3974-48f1-9db1-40e643fbec6c | POST /api/merchant/v1/studio/briefs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 3120e75c-3974-48f1-9db1-40e643fbec6c | POST /api/merchant/v1/studio/briefs | ✗ 403 | 8ms
+# [2026-10-13 05:26:43] ← 6987cec9-d850-40dc-b993-323189308f47 | POST /api/merchant/v1/studio/sessions | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 6987cec9-d850-40dc-b993-323189308f47 | POST /api/merchant/v1/studio/sessions | ✓ 201 | 9ms
+# [2026-10-13 05:26:43] ← 10a89192-dcf2-4e7e-af11-2d826f50aa62 | POST /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca/turns | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 10a89192-dcf2-4e7e-af11-2d826f50aa62 | POST /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca/turns | ✓ 202 | 16ms
+# [2026-10-13 05:26:43] ← 731176f6-6e84-48ee-80af-eedd133ddeda | POST /api/merchant/v1/studio/assets | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 731176f6-6e84-48ee-80af-eedd133ddeda | POST /api/merchant/v1/studio/assets | ✓ 201 | 53ms
+# [2026-10-13 05:26:43] ← 6aebeaa2-566a-4746-9678-ae54c3812165 | GET /api/merchant/v1/studio/assets/15ae48d5-0c13-44e7-aedb-21e1389a8c9e/content | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 6aebeaa2-566a-4746-9678-ae54c3812165 | GET /api/merchant/v1/studio/assets/15ae48d5-0c13-44e7-aedb-21e1389a8c9e/content | ✗ 403 | 7ms
+# [2026-10-13 05:26:43] ← c4f9408e-ec9d-4126-8783-1d4c14db38c3 | GET /api/merchant/v1/studio/assets/15ae48d5-0c13-44e7-aedb-21e1389a8c9e/content | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → c4f9408e-ec9d-4126-8783-1d4c14db38c3 | GET /api/merchant/v1/studio/assets/15ae48d5-0c13-44e7-aedb-21e1389a8c9e/content | ✓ 200 | 7ms
+# [2026-10-13 05:26:43] ← 7f2e9b3a-6c48-40a6-b7e0-e4c2eab51a65 | GET /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 7f2e9b3a-6c48-40a6-b7e0-e4c2eab51a65 | GET /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca | ✓ 200 | 9ms
+# [2026-10-13 05:26:43] ← a9961067-e094-433b-b95e-63cabb9a4f39 | GET /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → a9961067-e094-433b-b95e-63cabb9a4f39 | GET /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca | ✗ 403 | 7ms
+# [2026-10-13 05:26:43] ← b9dd43d2-9425-4658-b35b-61449f186eb9 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → b9dd43d2-9425-4658-b35b-61449f186eb9 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | ✗ 422 | 7ms
+# [2026-10-13 05:26:43] ← 55fab750-179f-4a5c-81bf-08648bc784e7 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 55fab750-179f-4a5c-81bf-08648bc784e7 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | ✗ 422 | 12ms
+# [2026-10-13 05:26:43] ← ca4dbff3-e3da-493d-b503-6985b8956f12 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/decisions | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → ca4dbff3-e3da-493d-b503-6985b8956f12 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/decisions | ✓ 200 | 10ms
+# [2026-10-13 05:26:43] ← 2e51f381-a916-4f43-9d2d-1538d3f3be18 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/save-draft | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 2e51f381-a916-4f43-9d2d-1538d3f3be18 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/save-draft | ✓ 201 | 8ms
+# [2026-10-13 05:26:43] ← 24f85eb3-3723-477f-9600-c8053468ca86 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/decisions | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 24f85eb3-3723-477f-9600-c8053468ca86 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/decisions | ✗ 409 | 8ms
+# [2026-10-13 05:26:43] ← cc9d696a-9484-4d92-bda3-504ab7d0b7e8 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → cc9d696a-9484-4d92-bda3-504ab7d0b7e8 | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | ✓ 202 | 9ms
+# [2026-10-13 05:26:43] ← c550d9d2-3e43-4dc9-b44e-2887cdba0ddc | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → c550d9d2-3e43-4dc9-b44e-2887cdba0ddc | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | ✗ 409 | 8ms
+# [2026-10-13 05:26:43] ← ebdcbb6d-d273-45e7-bc6b-017164cab4a6 | GET /api/merchant/v1/studio/jobs/c38727fa-5865-48d0-8da5-cb013ee4f941 | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → ebdcbb6d-d273-45e7-bc6b-017164cab4a6 | GET /api/merchant/v1/studio/jobs/c38727fa-5865-48d0-8da5-cb013ee4f941 | ✓ 200 | 9ms
+# [2026-10-13 05:26:43] ← 3faab9aa-1cd6-4d20-9be8-b5422957e39e | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 3faab9aa-1cd6-4d20-9be8-b5422957e39e | POST /api/merchant/v1/studio/recipes/b7b4ab67-b215-4c46-b358-8d810f6a49b5/jobs | ✗ 409 | 9ms
+# [2026-10-13 05:26:43] ← 3b2c10a0-6ea3-40ba-b11a-b07aae90f8cc | GET /api/merchant/v1/studio/jobs/c38727fa-5865-48d0-8da5-cb013ee4f941 | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 3b2c10a0-6ea3-40ba-b11a-b07aae90f8cc | GET /api/merchant/v1/studio/jobs/c38727fa-5865-48d0-8da5-cb013ee4f941 | ✓ 200 | 9ms
+# [2026-10-13 05:26:43] ← 6ce28ced-2881-4979-9c72-31e3e1c0099e | POST /api/merchant/v1/studio/sessions | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 6ce28ced-2881-4979-9c72-31e3e1c0099e | POST /api/merchant/v1/studio/sessions | ✓ 201 | 9ms
+# [2026-10-13 05:26:43] ← 838652bf-70b2-4181-b162-34c6ae45b716 | POST /api/merchant/v1/studio/sessions/1d99e599-dc03-40e0-b85a-681ced0a6e87/turns | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 838652bf-70b2-4181-b162-34c6ae45b716 | POST /api/merchant/v1/studio/sessions/1d99e599-dc03-40e0-b85a-681ced0a6e87/turns | ✓ 202 | 10ms
+# [2026-10-13 05:26:43] ← 83ab4b21-1c3b-4f08-ab93-9c765e90fab3 | GET /api/merchant/v1/studio/sessions/1d99e599-dc03-40e0-b85a-681ced0a6e87 | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 83ab4b21-1c3b-4f08-ab93-9c765e90fab3 | GET /api/merchant/v1/studio/sessions/1d99e599-dc03-40e0-b85a-681ced0a6e87 | ✓ 200 | 9ms
+# [2026-10-13 05:26:43] ← 6beab045-8f4f-4442-9c2d-82d9dc6619e1 | POST /api/merchant/v1/studio/recipes/4e33592b-e6c1-48d3-8c7a-3dd607da172f/decisions | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 6beab045-8f4f-4442-9c2d-82d9dc6619e1 | POST /api/merchant/v1/studio/recipes/4e33592b-e6c1-48d3-8c7a-3dd607da172f/decisions | ✓ 200 | 14ms
+# [2026-10-13 05:26:43] ← b0013f38-8bbd-40f4-9197-11f8191da259 | POST /api/merchant/v1/studio/recipes/4e33592b-e6c1-48d3-8c7a-3dd607da172f/jobs | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → b0013f38-8bbd-40f4-9197-11f8191da259 | POST /api/merchant/v1/studio/recipes/4e33592b-e6c1-48d3-8c7a-3dd607da172f/jobs | ✓ 202 | 26ms
+# [2026-10-13 05:26:43] ← 9c68c583-dfc7-440f-9e4a-2a3ed2452ed1 | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 9c68c583-dfc7-440f-9e4a-2a3ed2452ed1 | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | ✓ 200 | 11ms
+# [2026-10-13 05:26:43] ← b1946d29-d13e-4a53-a0cd-feb43a8fe5bb | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → b1946d29-d13e-4a53-a0cd-feb43a8fe5bb | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | ✓ 200 | 13ms
+# [2026-10-13 05:26:43] ← 15cd8494-fd2b-48a2-8211-eb6fd00dc073 | POST /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac/retry | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 15cd8494-fd2b-48a2-8211-eb6fd00dc073 | POST /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac/retry | ✓ 200 | 11ms
+# [2026-10-13 05:26:43] ← ac311231-6fb3-4391-bf09-2f810c50828f | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → ac311231-6fb3-4391-bf09-2f810c50828f | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | ✓ 200 | 10ms
+# [2026-10-13 05:26:43] ← 9f809663-3527-40c2-80f8-076d2c0a117a | POST /api/merchant/v1/studio/outputs/947a53f1-d53a-4957-b3e4-ff1d0a60562e/save-draft | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 9f809663-3527-40c2-80f8-076d2c0a117a | POST /api/merchant/v1/studio/outputs/947a53f1-d53a-4957-b3e4-ff1d0a60562e/save-draft | ✗ 422 | 9ms
+# [2026-10-13 05:26:43] ← 1a7669c5-a4a6-4f48-8df6-2aee3c145011 | POST /api/merchant/v1/studio/outputs/947a53f1-d53a-4957-b3e4-ff1d0a60562e/review | IP: 127.0.0.1
+# [2026-10-13 05:26:43] → 1a7669c5-a4a6-4f48-8df6-2aee3c145011 | POST /api/merchant/v1/studio/outputs/947a53f1-d53a-4957-b3e4-ff1d0a60562e/review | ✓ 200 | 10ms
+# [2026-10-13 05:26:44] ← 3497060e-1e7c-4d35-a0ef-bb5f12b0f6b7 | POST /api/merchant/v1/studio/outputs/947a53f1-d53a-4957-b3e4-ff1d0a60562e/save-draft | IP: 127.0.0.1
+# [2026-10-13 05:26:44] → 3497060e-1e7c-4d35-a0ef-bb5f12b0f6b7 | POST /api/merchant/v1/studio/outputs/947a53f1-d53a-4957-b3e4-ff1d0a60562e/save-draft | ✓ 201 | 11ms
+# [2026-10-13 05:26:44] ← d7d8a54c-accf-41f1-9906-7444fba4a350 | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | IP: 127.0.0.1
+# [2026-10-13 05:26:44] → d7d8a54c-accf-41f1-9906-7444fba4a350 | GET /api/merchant/v1/studio/jobs/6d339fe9-6392-494d-9691-22cc1b196fac | ✗ 403 | 9ms
+# [2026-10-13 05:26:44] ← 8ea5b068-233f-40fa-bca6-6c494a55f9b4 | GET /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca | IP: 127.0.0.1
+# [2026-10-13 05:26:44] → 8ea5b068-233f-40fa-bca6-6c494a55f9b4 | GET /api/merchant/v1/studio/sessions/bdaf6fb9-ca69-4679-b825-1d6c00dda8ca | ✗ 403 | 9ms
+# Subtest: studio real MySQL HTTP lifecycle, strict routing, scope, revisions and unknown paid submissions
+ok 1 - studio real MySQL HTTP lifecycle, strict routing, scope, revisions and unknown paid submissions
+  ---
+  duration_ms: 3847.418959
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4264.342

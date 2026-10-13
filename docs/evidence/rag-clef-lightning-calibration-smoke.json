@@ -1,0 +1,803 @@
+{
+  "metadata": {
+    "time": "2026-10-11T19:47:59.078695+08:00",
+    "scope": "Synthetic fixed-candidate business RAG evaluation; not live traffic or retrieval evaluation",
+    "annotation": "Developer-defined references with deterministic arithmetic; not independent human labels",
+    "model": "nvidia/nemotron-3.5-lightning:free",
+    "configured_model": "nex-agi/nex-n2.5-mini:free",
+    "provider": "openrouter",
+    "threshold": 0.7,
+    "gate_version": "runtime-v2",
+    "comparison": "llm-vs-clef",
+    "arm_labels": {
+      "baseline": "LLM passage scoring",
+      "gated": "Clef passage scoring + same LLM sufficiency check"
+    },
+    "clef": {
+      "model": "clef",
+      "deployment": "cloudflare",
+      "threshold": 0.7,
+      "input_rate_usd_per_million": 0.24
+    },
+    "evaluation_split": "calibration",
+    "threshold_calibrated": false,
+    "rounds": 1,
+    "generator_temperature": 0.2,
+    "gate_and_judge_temperature": 0,
+    "seed": 20261010,
+    "minimum_request_interval_seconds": 0.0,
+    "dataset_sha256": "3a2e560ac04b069dec935c70d9ce232b6ca102836a668e143c9ed8e04e591df8",
+    "code_sha256": {
+      "evaluation/run_rag_evidence_ab.py": "3876a191782facc768716e872f8a7d2ebc14fa06be8ce22409ecf670f48086f4",
+      "evaluation/rag_evidence_gate.py": "75a36d548675f045bd0f1ecabab8037c6619efa3260a9391c9e93a2983aa6e95",
+      "api/main.py": "db964dbf8c2f88229cdd6cbade2ac5cb613a558afe08f463730fc26e22c15801",
+      "agents/agent_orchestrator.py": "10f7039b6a02acb22d06c7ed3ecb719e85863e93cb0fd9fd3f81af9f2ca55bc3",
+      "core/rag_evidence.py": "4bb83752aedb59973cf2bd7a5113d82ce9911d3aa5812d938b8b1d24988a971d",
+      "core/model_client.py": "328dfeee56b7bfe67777ae592aa02d67d1cde5cc8757be79581e00cbe80173f1",
+      "evaluation/clef_client.py": "789472ecf21180f4e008b4f62755596efdcef0b3108ba9bc9dcf072c5a95e023"
+    },
+    "skills_sha256": {
+      "skills/README.md": "45f13ebad1c29f647221679f968e3b9c5b1c1169e5f559e17bdeb89d29ea303a",
+      "skills/ads_optimization/SKILL.md": "599b520667f446af32ca755e963aeb5792caa769f139449563ab7c9aaac03123",
+      "skills/general_customer_service/SKILL.md": "b71dea6f744fc6f09f46a60d096525d2b535ac10d3fd5c7d0c3f3aa18c28c57e",
+      "skills/technical_support/SKILL.md": "978ad60a930fac0c6619ebd4fa410eba881c10fe34a26121c931b14662169914"
+    },
+    "limitations": [
+      "Synthetic 2-case selected set, not live traffic or retrieval evaluation",
+      "Same model generates and anonymously grades; independent human validation is absent",
+      "Thresholds are not marked calibrated; use calibration split only to tune and freeze before testing",
+      "Existing AdsAgent and skills used; memory, routing, tool execution and HTTP excluded",
+      "Service durations exclude experimental rate-limit pacing; not a production latency benchmark",
+      "Model override, if supplied, applies only to this experiment",
+      "runtime-v2 includes its 8 second check deadline; experiment pacing can consume that budget",
+      "Only passage scoring is replaced; LLM sufficiency and answer generation are unchanged",
+      "Clef probabilities and LLM support scores have different semantics; equal thresholds are not calibration",
+      "Clef token costs are rate estimates, not provider-reported charges; local compute costs are unknown",
+      "Clef evaluation does not measure Jev performance"
+    ]
+  },
+  "summary": {
+    "attempted_pairs": 2,
+    "graded_pairs": 2,
+    "answerable_graded": 2,
+    "unanswerable_graded": 0,
+    "arms": {
+      "baseline": {
+        "factual_errors": 1,
+        "factual_error_rate": 0.5,
+        "false_refusals": 0,
+        "false_refusal_rate_on_answerable": 0.0,
+        "correct": 1,
+        "correct_rate": 0.5,
+        "pipeline_failures": 0,
+        "median_service_ms_on_graded": 11413.535,
+        "generation_skipped": 0,
+        "usage_all_attempts": {
+          "calls": 6,
+          "failed_calls": 0,
+          "prompt_tokens": 6170,
+          "completion_tokens": 619,
+          "provider_reported_cost_usd": 0,
+          "clef_estimated_cost_usd": 0,
+          "clef_calls_with_unknown_cost": 0
+        }
+      },
+      "gated": {
+        "factual_errors": 0,
+        "factual_error_rate": 0.0,
+        "false_refusals": 1,
+        "false_refusal_rate_on_answerable": 0.5,
+        "correct": 1,
+        "correct_rate": 0.5,
+        "pipeline_failures": 0,
+        "median_service_ms_on_graded": 6730.41,
+        "generation_skipped": 1,
+        "usage_all_attempts": {
+          "calls": 5,
+          "failed_calls": 0,
+          "prompt_tokens": 4907,
+          "completion_tokens": 476,
+          "provider_reported_cost_usd": null,
+          "clef_estimated_cost_usd": 0.0003828,
+          "clef_calls_with_unknown_cost": 0
+        }
+      }
+    },
+    "error_pairs_improved": 1,
+    "error_pairs_worsened": 0,
+    "exact_mcnemar_two_sided_p": 1,
+    "judge_usage": {
+      "calls": 2,
+      "failed_calls": 0,
+      "prompt_tokens": 2389,
+      "completion_tokens": 567,
+      "provider_reported_cost_usd": 0,
+      "clef_estimated_cost_usd": 0,
+      "clef_calls_with_unknown_cost": 0
+    }
+  },
+  "results": [
+    {
+      "case_id": "S01-CTR",
+      "round": 1,
+      "category": "supported_data",
+      "question": "mock-ad-01-01 在 2026-10-01 的 CTR 是多少？",
+      "answerable": true,
+      "reference": "CTR=710/14500，约4.9%；只代表给定广告快照。",
+      "execution_order": [
+        "baseline",
+        "gated"
+      ],
+      "baseline": {
+        "status": "completed",
+        "gate": {
+          "status": "sufficient",
+          "retained_ids": [],
+          "scores": [
+            {
+              "id": "synthetic:ctr",
+              "support": 0.0
+            },
+            {
+              "id": "synthetic:ranking",
+              "support": 0.0
+            },
+            {
+              "id": "synthetic:cpm",
+              "support": 0.0
+            }
+          ],
+          "missing_information": [],
+          "evidence_ids": [
+            "business"
+          ],
+          "candidate_ids": [
+            "synthetic:ctr",
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "rejected_ids": [
+            "synthetic:ctr",
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "error_code": null,
+          "retrieval_error": null,
+          "check_id": "ad157eac-9a36-4381-9678-e44b7a90bdad",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 5249.14,
+          "calls": [
+            {
+              "model": "nvidia/nemotron-3.5-lightning:free",
+              "status": "completed",
+              "input_tokens": 493,
+              "output_tokens": 51,
+              "provider_reported_cost_usd": 0,
+              "latency_ms": 4254.1
+            },
+            {
+              "model": "nvidia/nemotron-3.5-lightning:free",
+              "status": "completed",
+              "input_tokens": 472,
+              "output_tokens": 21,
+              "provider_reported_cost_usd": 0,
+              "latency_ms": 994.75
+            }
+          ]
+        },
+        "response": "CTR 计算公式为：点击量 / 曝光量。\n\n根据提供的数据：\n- 点击量：710\n- 曝光量：14500\n\n计算结果：710 / 14500 ≈ **4.90%**\n\n这是基于当前提供的数据点计算出的 CTR 值。",
+        "generation_skipped": false,
+        "wall_ms_with_pacing": 8260.99,
+        "calls": [
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 493,
+              "completion_tokens": 51,
+              "total_tokens": 544,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 4253.97
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 472,
+              "completion_tokens": 21,
+              "total_tokens": 493,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 994.69
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 1942,
+              "completion_tokens": 88,
+              "total_tokens": 2030,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 3007.36
+          }
+        ],
+        "service_ms": 8256.02
+      },
+      "gated": {
+        "status": "completed",
+        "gate": {
+          "status": "insufficient",
+          "retained_ids": [
+            "synthetic:ctr"
+          ],
+          "scores": [
+            {
+              "id": "synthetic:ctr",
+              "support": 0.9561
+            },
+            {
+              "id": "synthetic:ranking",
+              "support": 0.0296
+            },
+            {
+              "id": "synthetic:cpm",
+              "support": 0.0254
+            }
+          ],
+          "missing_information": [
+            "CTR计算所需的曝光次数数据"
+          ],
+          "evidence_ids": [
+            "synthetic:ctr"
+          ],
+          "candidate_ids": [
+            "synthetic:ctr",
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "rejected_ids": [
+            "synthetic:ranking",
+            "synthetic:cpm"
+          ],
+          "error_code": null,
+          "retrieval_error": null,
+          "check_id": "62da4a14-409c-4d4c-bbb4-ffff2d59dffe",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 3732.81,
+          "calls": [
+            {
+              "model": "clef",
+              "status": "completed",
+              "input_tokens": 794,
+              "output_tokens": 0,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 1380.18,
+              "provider": "cloudflare"
+            },
+            {
+              "model": "nvidia/nemotron-3.5-lightning:free",
+              "status": "completed",
+              "input_tokens": 565,
+              "output_tokens": 39,
+              "provider_reported_cost_usd": 0,
+              "latency_ms": 2352.2
+            }
+          ],
+          "passage_scoring_backend": "clef"
+        },
+        "response": "现有资料不足，无法确定该问题的答案。缺少：CTR计算所需的曝光次数数据。",
+        "generation_skipped": true,
+        "wall_ms_with_pacing": 3733.1,
+        "calls": [
+          {
+            "success": true,
+            "model": "clef",
+            "stage": "passage_scoring",
+            "provider": "cloudflare",
+            "usage": {
+              "prompt_tokens": 794,
+              "completion_tokens": 0,
+              "cost": null
+            },
+            "estimated_cost_usd": 0.00019056,
+            "resolved_model": "clef",
+            "duration_ms": 1379.87
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 565,
+              "completion_tokens": 39,
+              "total_tokens": 604,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 2352.11
+          }
+        ],
+        "service_ms": 3731.98
+      },
+      "judge_calls": [
+        {
+          "success": true,
+          "model": "nvidia/nemotron-3.5-lightning:free",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 189,
+            "total_tokens": 1068,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+          "duration_ms": 16022.26
+        }
+      ],
+      "grading": {
+        "status": "graded",
+        "grades": {
+          "baseline": {
+            "id": "0",
+            "factual_error": false,
+            "false_refusal": false,
+            "correct": true,
+            "reason": "正确使用了CTR公式（点击/曝光），数据来源于提供的业务数据（710/14500），结果约为4.9%，并明确说明仅代表给定快照。"
+          },
+          "gated": {
+            "id": "1",
+            "factual_error": false,
+            "false_refusal": true,
+            "correct": false,
+            "reason": "声称现有资料不足、无法确定答案，属于false_refusal。问题answerable=true，且业务数据中已提供曝光量（14500），可以计算CTR。"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "S01-BID",
+      "round": 1,
+      "category": "supported_data",
+      "question": "mock-ad-01-01 出价增加10%，保持已有点击数不变，演示排序分会从多少变成多少？",
+      "answerable": true,
+      "reference": "使用提供的模拟出价：2.53→2.78元；排序分756.98→831.78。排序分计算接受0.01的浮点舍入差异。这里只是给定公式的模拟，不是排名位置、收益或实际修改。",
+      "execution_order": [
+        "gated",
+        "baseline"
+      ],
+      "gated": {
+        "status": "completed",
+        "gate": {
+          "status": "sufficient",
+          "retained_ids": [
+            "synthetic:ranking"
+          ],
+          "scores": [
+            {
+              "id": "synthetic:ranking",
+              "support": 0.9539
+            },
+            {
+              "id": "synthetic:ctr",
+              "support": 0.0312
+            },
+            {
+              "id": "synthetic:creative",
+              "support": 0.0221
+            }
+          ],
+          "missing_information": [],
+          "evidence_ids": [
+            "synthetic:ranking"
+          ],
+          "candidate_ids": [
+            "synthetic:ranking",
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "rejected_ids": [
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "error_code": null,
+          "retrieval_error": null,
+          "check_id": "d10fce37-746e-4f0a-919d-7827719f20c3",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 5714.88,
+          "calls": [
+            {
+              "model": "clef",
+              "status": "completed",
+              "input_tokens": 801,
+              "output_tokens": 0,
+              "provider_reported_cost_usd": null,
+              "latency_ms": 1114.47,
+              "provider": "cloudflare"
+            },
+            {
+              "model": "nvidia/nemotron-3.5-lightning:free",
+              "status": "completed",
+              "input_tokens": 608,
+              "output_tokens": 98,
+              "provider_reported_cost_usd": 0,
+              "latency_ms": 4600.2
+            }
+          ],
+          "passage_scoring_backend": "clef"
+        },
+        "response": "基于已检查的证据 ID：synthetic:ranking，排序公式为：演示排序分 = price + price × clicks × 0.42。\n\n**计算过程：**\n- 原始出价 price = 2.53\n- 10% 加价后模拟出价 = 2.53 × 1.10 = 2.783（证据中已标注 simulated_price_yuan 为 2.78）\n- 原始点击 clicks = 710\n- 原始排序分 = 2.53 + 2.53 × 710 × 0.42 = 2.53 + 753.51 = 756.04\n- 加价后排序分 = 2.78 + 2.78 × 710 × 0.42 = 2.78 + 829.03 = 831.81\n\n**变化量：**\n- 排序分增加约 75.77 点（约 10% 的增幅，与出价成正比）。\n- 点击数保持不变（710）是本次模拟的前提条件。\n\n**结论：** 在点击数不变的情况下，出价增加 10% 后，演示排序分从 756.04 变为 831.81。",
+        "generation_skipped": false,
+        "wall_ms_with_pacing": 9729.54,
+        "calls": [
+          {
+            "success": true,
+            "model": "clef",
+            "stage": "passage_scoring",
+            "provider": "cloudflare",
+            "usage": {
+              "prompt_tokens": 801,
+              "completion_tokens": 0,
+              "cost": null
+            },
+            "estimated_cost_usd": 0.00019224,
+            "resolved_model": "clef",
+            "duration_ms": 1114.35
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 608,
+              "completion_tokens": 98,
+              "total_tokens": 706,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 4600.12
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 2139,
+              "completion_tokens": 339,
+              "total_tokens": 2478,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 4014.37
+          }
+        ],
+        "service_ms": 9728.84
+      },
+      "baseline": {
+        "status": "completed",
+        "gate": {
+          "status": "sufficient",
+          "retained_ids": [
+            "synthetic:ranking"
+          ],
+          "scores": [
+            {
+              "id": "synthetic:ranking",
+              "support": 1.0
+            },
+            {
+              "id": "synthetic:ctr",
+              "support": 0.0
+            },
+            {
+              "id": "synthetic:creative",
+              "support": 0.0
+            }
+          ],
+          "missing_information": [],
+          "evidence_ids": [
+            "synthetic:ranking"
+          ],
+          "candidate_ids": [
+            "synthetic:ranking",
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "rejected_ids": [
+            "synthetic:ctr",
+            "synthetic:creative"
+          ],
+          "error_code": null,
+          "retrieval_error": null,
+          "check_id": "0bcba139-45a8-4172-9398-4fedf5ae1e5f",
+          "version": "rag-evidence-v2",
+          "threshold": 0.7,
+          "latency_ms": 4621.51,
+          "calls": [
+            {
+              "model": "nvidia/nemotron-3.5-lightning:free",
+              "status": "completed",
+              "input_tokens": 516,
+              "output_tokens": 51,
+              "provider_reported_cost_usd": 0,
+              "latency_ms": 2002.78
+            },
+            {
+              "model": "nvidia/nemotron-3.5-lightning:free",
+              "status": "completed",
+              "input_tokens": 608,
+              "output_tokens": 92,
+              "provider_reported_cost_usd": 0,
+              "latency_ms": 2618.45
+            }
+          ]
+        },
+        "response": "基于已检查的证据 ID：synthetic:ranking，排序公式为：`演示排序分=price+price*clicks*0.42`。\n\n**计算过程：**\n1. 加价 10% 后的价格：`2.53 × 1.10 = 2.783`（证据中提供的 `simulated_price_yuan: 2.78` 为保留两位小数的结果）。\n2. 点击数保持不变：`710`。\n3. 计算新排序分：`2.783 + 2.783 × 710 × 0.42 ≈ 2.783 + 738.09 = 740.87`。\n\n**原始排序分计算（供对比）：**\n`2.53 + 2.53 × 710 × 0.42 ≈ 2.53 + 753.55 = 756.08`\n\n**结论：**\n在点击数不变的情况下，价格上涨 10% 后，演示排序分从约 **756.08** 变为约 **740.87**，排序分下降约 **15.21** 点。",
+        "generation_skipped": false,
+        "wall_ms_with_pacing": 14571.91,
+        "calls": [
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 516,
+              "completion_tokens": 51,
+              "total_tokens": 567,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 2002.7
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 608,
+              "completion_tokens": 92,
+              "total_tokens": 700,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 2618.39
+          },
+          {
+            "success": true,
+            "model": "nvidia/nemotron-3.5-lightning:free",
+            "usage": {
+              "prompt_tokens": 2139,
+              "completion_tokens": 316,
+              "total_tokens": 2455,
+              "cost": 0,
+              "is_byok": false,
+              "prompt_tokens_details": {
+                "cached_tokens": 0,
+                "cache_write_tokens": 0,
+                "audio_tokens": 0,
+                "video_tokens": 0
+              },
+              "cost_details": {
+                "upstream_inference_cost": 0,
+                "upstream_inference_prompt_cost": 0,
+                "upstream_inference_completions_cost": 0
+              },
+              "completion_tokens_details": {
+                "reasoning_tokens": 0,
+                "image_tokens": 0,
+                "audio_tokens": 0
+              }
+            },
+            "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+            "duration_ms": 9949.96
+          }
+        ],
+        "service_ms": 14571.05
+      },
+      "judge_calls": [
+        {
+          "success": true,
+          "model": "nvidia/nemotron-3.5-lightning:free",
+          "usage": {
+            "prompt_tokens": 1510,
+            "completion_tokens": 378,
+            "total_tokens": 1888,
+            "cost": 0,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0,
+              "upstream_inference_prompt_cost": 0,
+              "upstream_inference_completions_cost": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "resolved_model": "nvidia/nemotron-3.5-lightning:free",
+          "duration_ms": 3956.3
+        }
+      ],
+      "grading": {
+        "status": "graded",
+        "grades": {
+          "gated": {
+            "id": "0",
+            "factual_error": false,
+            "false_refusal": false,
+            "correct": true,
+            "reason": "正确应用了证据中提供的排序公式（演示排序分 = price + price × clicks × 0.42）。计算过程清晰：原始出价 2.53 加价 10% 得到 2.78（符合 simulated_price_yuan 标注），在点击数 710 不变的前提下，原始排序分从 756.04 变为 831.78。答案明确指出这是基于给定公式的模拟，非实际排名/收益，符合 reference 中的定义。"
+          },
+          "baseline": {
+            "id": "1",
+            "factual_error": true,
+            "false_refusal": false,
+            "correct": false,
+            "reason": "计算错误。将加价后的 price（2.783）代入公式时，将 2.783 乘以 clicks（710）和 0.42 的结果错误地简化或计算，导致排序分从 ~756 降至 ~740.87，这与公式逻辑（price 增加应使排序分增加，而非下降）相悖。且未使用证据中提供的 simulated_price_yuan（2.78）作为计算基础，而是自行保留了更多小数位并得出错误结果。"
+          }
+        }
+      }
+    }
+  ]
+}

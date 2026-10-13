@@ -1,0 +1,6 @@
+{
+  "model": "nvidia/nemotron-3.5-lightning:free",
+  "success": true,
+  "seconds": 1.647,
+  "text": "```json\n[\n  \"计算CTR的公式是什么？\",\n  \"如何计算点击率？\",\n  \"CTR的计算方法有哪些？\"\n]\n```"
+}

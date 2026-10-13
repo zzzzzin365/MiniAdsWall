@@ -1,0 +1,17 @@
+{
+  "model": "deepseek-v4-1-flash-260910",
+  "success": true,
+  "seconds": 3.014,
+  "text": "[\"CTR的计算公式是什么？\", \"点击率如何计算？\", \"CTR 计算方法有哪些？\"]",
+  "usage": {
+    "completion_tokens": 23,
+    "prompt_tokens": 29,
+    "total_tokens": 52,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

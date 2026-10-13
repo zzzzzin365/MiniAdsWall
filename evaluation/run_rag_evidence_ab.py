@@ -114,8 +114,14 @@ def render_context(chunks, business_data):
     return "\n\n".join(parts)
 
 
-async def run_arm(case, gated, config, pacer, skills, threshold, gate_version="pilot-v1"):
+async def run_arm(case, gated, config, pacer, skills, threshold, gate_version="pilot-v1", clef_config=None):
     client = RecordedClient(config["key"], config["base"], pacer)
+    if clef_config:
+        if not gated or gate_version != "runtime-v2":
+            await client.close()
+            raise ValueError("Clef requires a runtime-v2 gated arm")
+        from evaluation.clef_client import ClefScorer, PassageScoringClient
+        client = PassageScoringClient(client, ClefScorer(clef_config, pacer))
     started = time.monotonic()
     result = {"status": "failed"}
     try:
@@ -132,6 +138,11 @@ async def run_arm(case, gated, config, pacer, skills, threshold, gate_version="p
                 decision = await EvidenceGate(client, config["model"], threshold).check(
                     case["question"], chunks, case["business_data"])
             result["gate"] = decision.to_dict()
+            if clef_config:
+                result["gate"]["passage_scoring_backend"] = clef_config["model"]
+                if chunks and result["gate"]["calls"]:
+                    result["gate"]["calls"][0]["model"] = clef_config["model"]
+                    result["gate"]["calls"][0]["provider"] = clef_config["deployment"]
             if decision.status == "unavailable":
                 result["error"] = {"type": "EvidenceCheckUnavailable", "code": decision.error_code}
                 return result
@@ -212,7 +223,11 @@ def usage_summary(calls):
         return sum(values) if all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in values) else None
     return {"calls": len(calls), "failed_calls": sum(not c["success"] for c in calls),
             "prompt_tokens": total("prompt_tokens"), "completion_tokens": total("completion_tokens"),
-            "provider_reported_cost_usd": total("cost")}
+            "provider_reported_cost_usd": total("cost"),
+            "clef_estimated_cost_usd": sum(c["estimated_cost_usd"] for c in calls
+                if c.get("provider") == "cloudflare" and c.get("estimated_cost_usd") is not None),
+            "clef_calls_with_unknown_cost": sum(c.get("stage") == "passage_scoring"
+                and c.get("estimated_cost_usd") is None for c in calls)}
 
 
 def summarize(rows):
@@ -281,6 +296,16 @@ def select_cases(dataset, split=None, limit=None):
 
 async def main(args):
     os.environ["MODEL_GATE_MODE"] = "local"
+    comparison = getattr(args, "comparison", "baseline-vs-gated")
+    clef_config = None
+    if comparison == "llm-vs-clef":
+        if args.gate_version != "runtime-v2":
+            raise SystemExit("LLM vs Clef requires --gate-version runtime-v2")
+        from evaluation.clef_client import resolve_clef_config
+        try:
+            clef_config = resolve_clef_config(ROOT, args.clef_model)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from None
     config = resolve_config(args.model)
     if config["provider"] == "openrouter" and not config["model"].endswith(":free") and not args.allow_paid:
         raise SystemExit("Paid runs require --allow-paid")
@@ -296,6 +321,12 @@ async def main(args):
                 "model": config["model"], "configured_model": config["configured_model"],
                 "provider": config["provider"], "threshold": args.threshold,
                 "gate_version": args.gate_version,
+                "comparison": comparison,
+                "arm_labels": {"baseline": "LLM passage scoring" if clef_config else "Original generation",
+                               "gated": "Clef passage scoring + same LLM sufficiency check" if clef_config else "LLM evidence gate"},
+                "clef": {"model": clef_config["model"], "deployment": clef_config["deployment"],
+                         "threshold": args.clef_threshold if args.clef_threshold is not None else args.threshold,
+                         "input_rate_usd_per_million": clef_config["input_rate_usd_per_million"]} if clef_config else None,
                 "evaluation_split": args.split or "all",
                 "threshold_calibrated": False, "rounds": args.rounds,
                 "generator_temperature": 0.2, "gate_and_judge_temperature": 0,
@@ -304,16 +335,23 @@ async def main(args):
                 "code_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                                 for p in [Path(__file__), ROOT / "evaluation/rag_evidence_gate.py",
                                           ROOT / "api/main.py", ROOT / "agents/agent_orchestrator.py",
-                                          ROOT / "core/rag_evidence.py", ROOT / "core/model_client.py"]},
+                                          ROOT / "core/rag_evidence.py", ROOT / "core/model_client.py",
+                                          ROOT / "evaluation/clef_client.py"]},
                 "skills_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                                   for p in sorted((ROOT / "skills").rglob("*.md"))},
-                "limitations": ["Synthetic 20-case pilot, not live traffic or retrieval evaluation",
+                "limitations": [f"Synthetic {len(cases)}-case selected set, not live traffic or retrieval evaluation",
                                 "Same model generates and anonymously grades; independent human validation is absent",
-                                "Fixed threshold 0.7 is not calibrated; frozen cases are not used to tune it",
+                                "Thresholds are not marked calibrated; use calibration split only to tune and freeze before testing",
                                 "Existing AdsAgent and skills used; memory, routing, tool execution and HTTP excluded",
                                 "Service durations exclude experimental rate-limit pacing; not a production latency benchmark",
                                 "Model override, if supplied, applies only to this experiment",
                                 "runtime-v2 includes its 8 second check deadline; experiment pacing can consume that budget"]}
+    if clef_config:
+        metadata["limitations"].extend([
+            "Only passage scoring is replaced; LLM sufficiency and answer generation are unchanged",
+            "Clef probabilities and LLM support scores have different semantics; equal thresholds are not calibration",
+            "Clef token costs are rate estimates, not provider-reported charges; local compute costs are unknown",
+            "Clef evaluation does not measure Jev performance"])
     rows = []
     args.output.parent.mkdir(parents=True, exist_ok=True)
     pacer = Pacer(args.interval)
@@ -322,7 +360,9 @@ async def main(args):
             order = ["baseline", "gated"] if (repeat + index) % 2 == 0 else ["gated", "baseline"]
             arms = {}
             for name in order:
-                arms[name] = await run_arm(case, name == "gated", config, pacer, skills, args.threshold, args.gate_version)
+                threshold = args.clef_threshold if clef_config and name == "gated" and args.clef_threshold is not None else args.threshold
+                arms[name] = await run_arm(case, bool(clef_config) or name == "gated", config, pacer, skills,
+                    threshold, args.gate_version, clef_config if name == "gated" else None)
             grading = await grade_pair(case, arms, config, pacer, args.seed + repeat * len(cases) + index)
             row = {"case_id": case["id"], "round": repeat + 1, "category": case["category"],
                    "question": case["question"], "answerable": case["answerable"], "reference": case["reference"],
@@ -346,6 +386,9 @@ if __name__ == "__main__":
     parser.add_argument("--model")
     parser.add_argument("--threshold", type=float, default=0.7)
     parser.add_argument("--gate-version", choices=["pilot-v1", "runtime-v2"], default="runtime-v2")
+    parser.add_argument("--comparison", choices=["baseline-vs-gated", "llm-vs-clef"], default="baseline-vs-gated")
+    parser.add_argument("--clef-model", choices=["clef", "clef-flash"], default="clef")
+    parser.add_argument("--clef-threshold", type=float)
     parser.add_argument("--interval", type=float, default=3.2)
     parser.add_argument("--rounds", type=int, default=1)
     parser.add_argument("--limit", type=int)
@@ -355,6 +398,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.rounds < 1 or args.interval < 0 or (args.limit is not None and args.limit < 1) or not math.isfinite(args.threshold) or not 0 <= args.threshold <= 1:
         parser.error("Invalid run limits")
+    if args.clef_threshold is not None and (not math.isfinite(args.clef_threshold) or not 0 <= args.clef_threshold <= 1):
+        parser.error("Invalid Clef threshold")
     if args.output.exists():
         parser.error("Output exists: use a new file to preserve historical runs")
     asyncio.run(main(args))

@@ -1,0 +1,5149 @@
+{
+  "run_at_utc": "2026-10-12T13:58:05.052889+00:00",
+  "scope": "Current chat search_with_rewrite, real configured model and Chroma, Top3, 3s stage/9.5s overall limits; before evidence filtering; isolated default corpus",
+  "model": "nvidia/nemotron-3.5-lightning:free",
+  "questions": 68,
+  "documents": 30,
+  "chunks": 30,
+  "corpus_sha256": "a600211f42b33df690837d78b50d3cd26a97de79c16108e60192967432944dff",
+  "source_sha256": {
+    "mcp/knowledge_base.py": "db5144f383864810463988059fc9d8ca3cbaec40d87bae5b7041bdacf2fc3a1a",
+    "mcp/tool_manager.py": "8cdc2fea92a93c195db76e460963806acba6203c41f133edddc6dcccb6e1fa74",
+    "api/main.py": "344d44027ab9c7cc11330d7d0cbcc5de5ad2760bb4d739ec2d4d8193cd073d8f"
+  },
+  "limitations": [
+    "Author-written synthetic labels, not independent annotation",
+    "30 small built-in documents; no 10k corpus test",
+    "Related alternative chunks may be unlabelled; precision uses only designated gold chunks",
+    "No live service or user-imported corpus verified",
+    "Synthetic questions, one stochastic model run",
+    "No final answer/evidence-gate accuracy tested",
+    "64 model calls returned 429, 5 rewrite timeouts, 1 rewrite HTTP502; observed metrics include fallback and are not clean full-success model efficacy."
+  ],
+  "elapsed_seconds": 107.87,
+  "summary": {
+    "all": {
+      "questions": 68,
+      "recall": 0.3382,
+      "any_hit": 0.3676,
+      "all_gold_hit": 0.3088,
+      "candidate_recall": 0.4118
+    },
+    "direct": {
+      "questions": 30,
+      "recall": 0.4667,
+      "any_hit": 0.4667,
+      "all_gold_hit": 0.4667,
+      "candidate_recall": 0.5
+    },
+    "paraphrase": {
+      "questions": 30,
+      "recall": 0.2333,
+      "any_hit": 0.2333,
+      "all_gold_hit": 0.2333,
+      "candidate_recall": 0.3333
+    },
+    "multi_document": {
+      "questions": 8,
+      "recall": 0.25,
+      "any_hit": 0.5,
+      "all_gold_hit": 0.0,
+      "candidate_recall": 0.375
+    }
+  },
+  "details": [
+    {
+      "id": "D01-direct",
+      "group": "direct",
+      "question": "广告排序分怎么计算？",
+      "gold_ids": [
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3669,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3181,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3815,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.548,
+      "trace": {
+        "queries": [
+          "广告排序分怎么计算？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "CancelledError",
+            "http_status": null,
+            "elapsed": 3.002
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 4, 1, 0, 3]",
+            "elapsed": 1.452
+          }
+        ]
+      }
+    },
+    {
+      "id": "D01-paraphrase",
+      "group": "paraphrase",
+      "question": "为什么别人出价低但是排在我前面？",
+      "gold_ids": [
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.173,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.1349,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": -0.0095,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.799,
+      "trace": {
+        "queries": [
+          "为什么别人出价低但是排在我前面？",
+          "竞价排名算法与质量度分析",
+          "竞争对手出价策略与预算设置",
+          "广告创意与落地页相关性评估"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a0849948aa07aef5e0cefc85f02f950c",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"竞价排名算法与质量度分析\",\n  \"竞争对手出价策略与预算设置\",\n  \"广告创意与落地页相关性评估\"\n]\n```",
+            "elapsed": 1.917
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 2, 4, 0, 5, 6, 7, 3]",
+            "elapsed": 1.634
+          }
+        ]
+      }
+    },
+    {
+      "id": "D02-direct",
+      "group": "direct",
+      "question": "高点击低出价的广告应该怎么调整？",
+      "gold_ids": [
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.6759,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3002,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3282,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.884,
+      "trace": {
+        "queries": [
+          "高点击低出价的广告应该怎么调整？",
+          "如何分析高点击低出价广告的关键词质量度并优化出价策略",
+          "针对高点击低出价广告的预算分配和展位竞争调整建议",
+          "高点击低出价广告的转化率优化与落地页体验提升方案"
+        ],
+        "candidate_ids": [
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a610a79d3d1febef995cca1678fcf6fc",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a610a79d3d1febef995cca1678fcf6fc",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a610a79d3d1febef995cca1678fcf6fc",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a610a79d3d1febef995cca1678fcf6fc"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"如何分析高点击低出价广告的关键词质量度并优化出价策略\",\n  \"针对高点击低出价广告的预算分配和展位竞争调整建议\",\n  \"高点击低出价广告的转化率优化与落地页体验提升方案\"\n]\n```",
+            "elapsed": 2.618
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 3, 1, 2]",
+            "elapsed": 1.03
+          }
+        ]
+      }
+    },
+    {
+      "id": "D02-paraphrase",
+      "group": "paraphrase",
+      "question": "花的钱不少却没人点，要继续加钱吗？",
+      "gold_ids": [
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1638,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.1236,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "c2c75e86e3f0c6cdcef9633369616fca",
+          "title": "预算耗尽：停止投放与延迟结算",
+          "content": "业务知识：消耗达到预算需停投，并处理余额边界。\nAgent 应用规则（项目补充）：预算、余额、累计消耗必须区分。排查预算超限时核对在途事件、扣费时间与停投生效时间；不要只看后台当前开关，也不要把预算上限当作已经花费。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.1197,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.685,
+      "trace": {
+        "queries": [
+          "花的钱不少却没人点，要继续加钱吗？",
+          "营销数据分析",
+          "用户行为研究",
+          "运营成本效益评估"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "69caf3676702594c9e0296942f26ead7",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "c2c75e86e3f0c6cdcef9633369616fca",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"营销数据分析\",\n  \"用户行为研究\",\n  \"运营成本效益评估\"\n]",
+            "elapsed": 2.139
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 2, 3, 4, 5, 0]",
+            "elapsed": 1.281
+          }
+        ]
+      }
+    },
+    {
+      "id": "D03-direct",
+      "group": "direct",
+      "question": "素材A/B测试应该怎样控制变量？",
+      "gold_ids": [
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": -0.023,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": -0.0353,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1b494ecc8c8b161fe74b95b14e4915aa",
+          "title": "投放策略调整：灰度实验与效果比较",
+          "content": "业务知识：策略可用 A/B 实验观察效果，报表支持多维分析。\nAgent 应用规则（项目补充）：先确定实验组和对照组、观察窗口、目标指标及停止条件；按广告位、计划等维度检查变化，避免只看总平均掩盖局部损失。样本不足时不宣布优化有效。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.1577,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.503,
+      "trace": {
+        "queries": [
+          "素材A/B测试应该怎样控制变量？",
+          "素材A/B测试变量控制的核心原则与方法",
+          "素材A/B测试中常见的变量干扰因素及规避策略",
+          "素材A/B测试变量控制的实施步骤与工具应用"
+        ],
+        "candidate_ids": [
+          "1b494ecc8c8b161fe74b95b14e4915aa",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "1b494ecc8c8b161fe74b95b14e4915aa",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "1b494ecc8c8b161fe74b95b14e4915aa",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1b494ecc8c8b161fe74b95b14e4915aa",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "4f1018ec59af4e254f922736ed816cdd"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"素材A/B测试变量控制的核心原则与方法\",\n  \"素材A/B测试中常见的变量干扰因素及规避策略\",\n  \"素材A/B测试变量控制的实施步骤与工具应用\"\n]\n```",
+            "elapsed": 2.026
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 3, 0, 1, 4, 5, 6, 7, 8]",
+            "elapsed": 1.329
+          }
+        ]
+      }
+    },
+    {
+      "id": "D03-paraphrase",
+      "group": "paraphrase",
+      "question": "想知道封面和开头哪个有效，能一起改吗？",
+      "gold_ids": [
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2687,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.0299,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.0857,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.44,
+      "trace": {
+        "queries": [
+          "想知道封面和开头哪个有效，能一起改吗？",
+          "封面设计原则与开头设计原则的对比分析",
+          "封面与开头在内容逻辑上的协同效应",
+          "如何在单篇作品中同时优化封面与开头的写作技巧"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"封面设计原则与开头设计原则的对比分析\",\n  \"封面与开头在内容逻辑上的协同效应\",\n  \"如何在单篇作品中同时优化封面与开头的写作技巧\"\n]\n```",
+            "elapsed": 1.33
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 4, 2, 1, 3]",
+            "elapsed": 0.963
+          }
+        ]
+      }
+    },
+    {
+      "id": "D04-direct",
+      "group": "direct",
+      "question": "广告文案应该突出哪些信息？",
+      "gold_ids": [
+        "7d840169fc8d6972df9566a5a87096c5"
+      ],
+      "retrieved": [
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.5365,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.4674,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4157,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.636,
+      "trace": {
+        "queries": [
+          "广告文案应该突出哪些信息？",
+          "广告文案核心卖点与价值主张",
+          "目标受众画像与心理触发点",
+          "不同媒介与平台的文案风格适配"
+        ],
+        "candidate_ids": [
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "c2c75e86e3f0c6cdcef9633369616fca",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"广告文案核心卖点与价值主张\",\n  \"目标受众画像与心理触发点\",\n  \"不同媒介与平台的文案风格适配\"\n]\n```",
+            "elapsed": 1.767
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[5, 1, 2, 3, 4, 0]",
+            "elapsed": 1.737
+          }
+        ]
+      }
+    },
+    {
+      "id": "D04-paraphrase",
+      "group": "paraphrase",
+      "question": "标题怎么写才能让目标人群愿意点？",
+      "gold_ids": [
+        "7d840169fc8d6972df9566a5a87096c5"
+      ],
+      "retrieved": [
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.2787,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2856,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.106,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.691,
+      "trace": {
+        "queries": [
+          "标题怎么写才能让目标人群愿意点？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "871e5d36cdbd39b60b72e89371e725a8"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "CancelledError",
+            "http_status": null,
+            "elapsed": 3.002
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 0, 3, 2, 4]",
+            "elapsed": 1.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "D05-direct",
+      "group": "direct",
+      "question": "广告数据看板应该关注哪些指标？",
+      "gold_ids": [
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3665,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3938,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3424,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.477,
+      "trace": {
+        "queries": [
+          "广告数据看板应该关注哪些指标？",
+          "广告数据看板核心指标选择",
+          "广告投放效果评估关键指标",
+          "广告数据可视化展示维度"
+        ],
+        "candidate_ids": [
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "39ac23d9139254382a251f69d386000e",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"广告数据看板核心指标选择\",\n  \"广告投放效果评估关键指标\",\n  \"广告数据可视化展示维度\"\n]\n```",
+            "elapsed": 1.917
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[3, 1, 4, 0, 5, 2, 6]",
+            "elapsed": 1.411
+          }
+        ]
+      }
+    },
+    {
+      "id": "D05-paraphrase",
+      "group": "paraphrase",
+      "question": "只看总点击量就能知道投放好不好吗？",
+      "gold_ids": [
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "retrieved": [
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.0864,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": -0.0103,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.1715,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.683,
+      "trace": {
+        "queries": [
+          "只看总点击量就能知道投放好不好吗？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1b494ecc8c8b161fe74b95b14e4915aa"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 502,
+            "elapsed": 1.118
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 3, 0, 1]",
+            "elapsed": 1.471
+          }
+        ]
+      }
+    },
+    {
+      "id": "D06-direct",
+      "group": "direct",
+      "question": "广告运营建议有哪些风险边界？",
+      "gold_ids": [
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4015,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4433,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3853,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.788,
+      "trace": {
+        "queries": [
+          "广告运营建议有哪些风险边界？",
+          "广告运营风险分类与边界划分",
+          "广告运营合规风险与监管要求",
+          "广告运营技术风险与系统边界"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"广告运营风险分类与边界划分\",\n  \"广告运营合规风险与监管要求\",\n  \"广告运营技术风险与系统边界\"\n]\n```",
+            "elapsed": 1.376
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 0, 3, 2, 4]",
+            "elapsed": 1.273
+          }
+        ]
+      }
+    },
+    {
+      "id": "D06-paraphrase",
+      "group": "paraphrase",
+      "question": "你能保证我增加预算以后一定赚钱吗？",
+      "gold_ids": [
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.0792,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.0871,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": -0.079,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.587,
+      "trace": {
+        "queries": [
+          "你能保证我增加预算以后一定赚钱吗？",
+          "预算增加对利润的直接影响分析",
+          "预算增加的风险与不确定性因素",
+          "预算增加后的投资回报率预测方法"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"预算增加对利润的直接影响分析\",\n  \"预算增加的风险与不确定性因素\",\n  \"预算增加后的投资回报率预测方法\"\n]\n```",
+            "elapsed": 2.099
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 1, 3, 4, 5, 0, 6]",
+            "elapsed": 1.36
+          }
+        ]
+      }
+    },
+    {
+      "id": "D07-direct",
+      "group": "direct",
+      "question": "品牌广告和效果广告如何选择评价目标？",
+      "gold_ids": [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "retrieved": [
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.5897,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "217c58ecd9f09ffbfec7fde9b8a543db",
+          "title": "广告没有展示：投放到召回的检查顺序",
+          "content": "业务知识：投放配置入库、更新索引，再经召回和排序选出广告。\nAgent 应用规则（项目补充）：依次核对启用状态、投放时间和地域、预算余额、索引同步、候选召回及排序结果。只有具备对应日志才能确认在哪一步被过滤；保存成功不等于展示成功。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.2843,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3853,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.148,
+      "trace": {
+        "queries": [
+          "品牌广告和效果广告如何选择评价目标？",
+          "品牌广告评价目标选择的核心指标与策略",
+          "效果广告评价目标选择的关键数据维度",
+          "品牌与效果广告评价目标的差异化对比与选择指南"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "217c58ecd9f09ffbfec7fde9b8a543db",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"品牌广告评价目标选择的核心指标与策略\",\n  \"效果广告评价目标选择的关键数据维度\",\n  \"品牌与效果广告评价目标的差异化对比与选择指南\"\n]",
+            "elapsed": 1.806
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[5, 6, 2, 1, 0, 4, 3]",
+            "elapsed": 1.193
+          }
+        ]
+      }
+    },
+    {
+      "id": "D07-paraphrase",
+      "group": "paraphrase",
+      "question": "我想提升品牌认知，该拿什么评价广告？",
+      "gold_ids": [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "retrieved": [
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.2731,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2501,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2897,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.15,
+      "trace": {
+        "queries": [
+          "我想提升品牌认知，该拿什么评价广告？",
+          "品牌认知度提升的关键指标与评估方法",
+          "不同类型广告在品牌认知中的有效性分析",
+          "评估广告效果的常用模型与框架"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"品牌认知度提升的关键指标与评估方法\",\n  \"不同类型广告在品牌认知中的有效性分析\",\n  \"评估广告效果的常用模型与框架\"\n]",
+            "elapsed": 1.791
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[7, 3, 1, 5, 0, 2, 4, 6]",
+            "elapsed": 1.227
+          }
+        ]
+      }
+    },
+    {
+      "id": "D08-direct",
+      "group": "direct",
+      "question": "CTR怎么算？",
+      "gold_ids": [
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ],
+      "retrieved": [
+        {
+          "id": "69caf3676702594c9e0296942f26ead7",
+          "title": "CPA 与 CPS：按行动或销售结算",
+          "content": "业务知识：CPA 按约定行动，CPS 按销售结算。\nAgent 应用规则（项目补充）：确认有效行动、归因窗口、去重规则及退款处理。平均获客成本=归属消耗/有效获客数；没有有效行动或成交数据时不能计算。CPA 不代表广告主没有成本风险。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.0455,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e3f770b68b05cb25e5e042b013bed981",
+          "title": "CPC 收入下降：分环节定位",
+          "content": "业务知识：CPC 收入与流量、填充、点击率和平均点击价格相关。\nAgent 应用规则（项目补充）：先对齐统计周期，再分别检查请求量、展示量、点击量、消耗和价格。缺少哪段数据就明确说明，不能把全部收入波动归因于文案或出价。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.0281,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1549,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.421,
+      "trace": {
+        "queries": [
+          "CTR怎么算？",
+          "CTR计算公式与数值定义",
+          "CTR在不同广告平台与场景的计算差异",
+          "CTR计算中常见的误区与优化策略"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "a7be935852eaf24eb2f68cbf7061cd7c",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "69caf3676702594c9e0296942f26ead7",
+          "e3f770b68b05cb25e5e042b013bed981"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"CTR计算公式与数值定义\",\n  \"CTR在不同广告平台与场景的计算差异\",\n  \"CTR计算中常见的误区与优化策略\"\n]",
+            "elapsed": 2.178
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[6, 7, 5, 1, 2, 8, 3, 4, 0]",
+            "elapsed": 2.058
+          }
+        ]
+      }
+    },
+    {
+      "id": "D08-paraphrase",
+      "group": "paraphrase",
+      "question": "展示了一万次，有两百人点进去，点击率多少？",
+      "gold_ids": [
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ],
+      "retrieved": [
+        {
+          "id": "7db8cbfa12ca33152d58efcf66e30a89",
+          "title": "广告排序规则",
+          "content": "Mini Ad Manager 使用出价和点击量综合排序。当前示例规则为 Pricing + (Pricing x Clicks x 0.42)。高出价可以提升基础分，但点击量会放大有效广告的排序优势。高出价低点击广告不应盲目继续加价，应优先检查标题、素材和卖点。",
+          "score": 0.0831,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.0716,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "39ac23d9139254382a251f69d386000e",
+          "title": "广告请求失败：性能与可用性影响",
+          "content": "业务知识：投放系统需兼顾响应速度、扩展能力与可靠性。\nAgent 应用规则（项目补充）：广告未展示时区分业务过滤和请求超时；先查请求耗时、错误和降级记录。部署了缓存或队列不等于投放有效，结论仍需展示事件验证。\n外部业务参考；来源：构建高效的广告投放系统：应用架构的设计与实现 https://juejin.cn/post/7342315772303081487",
+          "score": 0.1383,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7342315772303081487",
+          "source_title": "构建高效的广告投放系统：应用架构的设计与实现"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.191,
+      "trace": {
+        "queries": [
+          "展示了一万次，有两百人点进去，点击率多少？",
+          "点击率计算公式与示例",
+          "展示一万次两百人点进去的数据分析",
+          "提高点击率的优化策略与案例"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "39ac23d9139254382a251f69d386000e",
+          "42ba33a6517174d6822e9f37fba03e06",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "39ac23d9139254382a251f69d386000e",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "a610a79d3d1febef995cca1678fcf6fc",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a610a79d3d1febef995cca1678fcf6fc",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "39ac23d9139254382a251f69d386000e",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "1524dbb507e0aa2e2e6af07da0c62012"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"点击率计算公式与示例\",\n  \"展示一万次两百人点进去的数据分析\",\n  \"提高点击率的优化策略与案例\"\n]\n```",
+            "elapsed": 2.325
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[7, 4, 1, 6, 0, 2, 5, 3]",
+            "elapsed": 1.731
+          }
+        ]
+      }
+    },
+    {
+      "id": "D09-direct",
+      "group": "direct",
+      "question": "落地页到达率怎么计算？",
+      "gold_ids": [
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ],
+      "retrieved": [
+        {
+          "id": "a0849948aa07aef5e0cefc85f02f950c",
+          "title": "落地页到达率：点击后流失排查",
+          "content": "业务知识：到达率=落地页打开次数/点击次数。\nAgent 应用规则（项目补充）：有点击但到达少时，先查跳转链接、加载失败和到达埋点，再考虑改出价。确认统计的是次数还是去重人数，不能混用。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": 0.2196,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": -0.0311,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.0777,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.081,
+      "trace": {
+        "queries": [
+          "落地页到达率怎么计算？",
+          "落地页到达率计算公式与步骤",
+          "影响落地页到达率的常见因素与排查方法",
+          "落地页到达率与跳出率、转化率的关系分析"
+        ],
+        "candidate_ids": [
+          "a0849948aa07aef5e0cefc85f02f950c",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "217c58ecd9f09ffbfec7fde9b8a543db",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a0849948aa07aef5e0cefc85f02f950c",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "a0849948aa07aef5e0cefc85f02f950c",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "217c58ecd9f09ffbfec7fde9b8a543db",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "a0849948aa07aef5e0cefc85f02f950c",
+          "217c58ecd9f09ffbfec7fde9b8a543db",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"落地页到达率计算公式与步骤\",\n  \"影响落地页到达率的常见因素与排查方法\",\n  \"落地页到达率与跳出率、转化率的关系分析\"\n]\n```",
+            "elapsed": 1.572
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 4, 1, 2, 3, 5]",
+            "elapsed": 1.365
+          }
+        ]
+      }
+    },
+    {
+      "id": "D09-paraphrase",
+      "group": "paraphrase",
+      "question": "广告有人点，但打开页面的人很少，怎么查？",
+      "gold_ids": [
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.2875,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3797,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2721,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.212,
+      "trace": {
+        "queries": [
+          "广告有人点，但打开页面的人很少，怎么查？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "CancelledError",
+            "http_status": null,
+            "elapsed": 3.002
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 0, 3, 1]",
+            "elapsed": 1.113
+          }
+        ]
+      }
+    },
+    {
+      "id": "D10-direct",
+      "group": "direct",
+      "question": "CVR转化率的分母是什么？",
+      "gold_ids": [
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ],
+      "retrieved": [
+        {
+          "id": "d2de0fccc4892318b78e1371a54c34aa",
+          "title": "CVR 转化率：明确分母和转化事件",
+          "content": "业务知识：原文的 CVR=转化次数/到达次数。\nAgent 应用规则（项目补充）：先问转化指注册、下载、提交线索还是支付，分母是点击还是到达。示例：100 次到达、5 次支付，按到达计算为 5%。不同分母或归因窗口不可直接比较。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": 0.0535,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "title": "CPV：视频观看计费口径",
+          "content": "业务知识：CPV 按视频观看计费。\nAgent 应用规则（项目补充）：先确认平台对有效观看的时长、播放比例及重复观看的规定。不能默认视频开始播放就应计费，也不能把播放量当成点击量或成交量。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1311,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": -0.0857,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.798,
+      "trace": {
+        "queries": [
+          "CVR转化率的分母是什么？",
+          "CVR转化率的计算公式与分母定义",
+          "转化率指标中分母的常见计算方式与排除条件",
+          "CVR转化率数据统计中的分母来源与计算逻辑"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "69caf3676702594c9e0296942f26ead7"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"CVR转化率的计算公式与分母定义\",\n  \"转化率指标中分母的常见计算方式与排除条件\",\n  \"CVR转化率数据统计中的分母来源与计算逻辑\"\n]\n```",
+            "elapsed": 1.432
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 0, 4, 8, 7, 6, 5, 3, 2]",
+            "elapsed": 2.206
+          }
+        ]
+      }
+    },
+    {
+      "id": "D10-paraphrase",
+      "group": "paraphrase",
+      "question": "用户进页面后下单的比例怎么算？",
+      "gold_ids": [
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.0841,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.0567,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.0198,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.954,
+      "trace": {
+        "queries": [
+          "用户进页面后下单的比例怎么算？",
+          "计算页面下单转化率的公式和方法",
+          "影响页面下单转化率的关键因素分析",
+          "不同时段或渠道下单转化率的对比分析"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e3f770b68b05cb25e5e042b013bed981"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"计算页面下单转化率的公式和方法\",\n  \"影响页面下单转化率的关键因素分析\",\n  \"不同时段或渠道下单转化率的对比分析\"\n]",
+            "elapsed": 1.771
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 3, 4, 5, 1]",
+            "elapsed": 1.046
+          }
+        ]
+      }
+    },
+    {
+      "id": "D11-direct",
+      "group": "direct",
+      "question": "搜索广告和原生广告有什么区别？",
+      "gold_ids": [
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ],
+      "retrieved": [
+        {
+          "id": "92818ebeefb0094fdc24c1794448e2d8",
+          "title": "搜索广告、上下文广告与原生广告",
+          "content": "业务知识：搜索广告依据查询词；上下文广告依据页面内容；原生广告融入内容形式。\nAgent 应用规则（项目补充）：用户主动搜索时关注查询意图匹配；内容场景关注主题匹配；信息流关注素材和浏览体验。广告样式不能代替具体计费合同。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": 0.1759,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.2857,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2693,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.903,
+      "trace": {
+        "queries": [
+          "搜索广告和原生广告有什么区别？",
+          "搜索广告与原生广告的定义与展现形式对比",
+          "搜索广告与原生广告的用户意图与点击行为分析",
+          "搜索广告与原生广告的效果衡量与 ROI 计算方法"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "92818ebeefb0094fdc24c1794448e2d8",
+          "529373b729f5e6296343516941938a0f",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"搜索广告与原生广告的定义与展现形式对比\",\n  \"搜索广告与原生广告的用户意图与点击行为分析\",\n  \"搜索广告与原生广告的效果衡量与 ROI 计算方法\"\n]\n```",
+            "elapsed": 2.137
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[5, 1, 3, 4, 0, 2]",
+            "elapsed": 1.629
+          }
+        ]
+      }
+    },
+    {
+      "id": "D11-paraphrase",
+      "group": "paraphrase",
+      "question": "搜索结果里的推广和信息流里的推广有什么不同？",
+      "gold_ids": [
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2557,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1255,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2174,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.367,
+      "trace": {
+        "queries": [
+          "搜索结果里的推广和信息流里的推广有什么不同？",
+          "推广位置与展示形式的区别",
+          "推广目的与目标受众的差异",
+          "推广费用与计费模式的对比"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "39ac23d9139254382a251f69d386000e",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"推广位置与展示形式的区别\",\n  \"推广目的与目标受众的差异\",\n  \"推广费用与计费模式的对比\"\n]",
+            "elapsed": 2.599
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 4, 1, 2, 3, 5, 6]",
+            "elapsed": 1.636
+          }
+        ]
+      }
+    },
+    {
+      "id": "D12-direct",
+      "group": "direct",
+      "question": "DSP和SSP分别为谁服务？",
+      "gold_ids": [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ],
+      "retrieved": [
+        {
+          "id": "9ab6213f4685b42ea848be8ef51953b8",
+          "title": "DSP、SSP、ADX、DMP：谁负责什么",
+          "content": "业务知识：DSP 为买方采买，SSP 为媒体管理供给，ADX 连接交易，DMP 整理受众数据。\nAgent 应用规则（项目补充）：先判断用户是广告主还是媒体，再解释采买或变现链路。解释行业概念时，不声称本项目已经接入这些外部平台。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": 0.1264,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1701,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e3f770b68b05cb25e5e042b013bed981",
+          "title": "CPC 收入下降：分环节定位",
+          "content": "业务知识：CPC 收入与流量、填充、点击率和平均点击价格相关。\nAgent 应用规则（项目补充）：先对齐统计周期，再分别检查请求量、展示量、点击量、消耗和价格。缺少哪段数据就明确说明，不能把全部收入波动归因于文案或出价。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": -0.0146,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.862,
+      "trace": {
+        "queries": [
+          "DSP和SSP分别为谁服务？",
+          "DSP的定义及其主要服务对象（广告主）",
+          "SSP的定义及其主要服务对象（媒体方）",
+          "DSP与SSP在广告交易中的互动与服务关系"
+        ],
+        "candidate_ids": [
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "9ab6213f4685b42ea848be8ef51953b8",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "9ab6213f4685b42ea848be8ef51953b8",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "9ab6213f4685b42ea848be8ef51953b8",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "92818ebeefb0094fdc24c1794448e2d8",
+          "9ab6213f4685b42ea848be8ef51953b8",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "529373b729f5e6296343516941938a0f",
+          "92818ebeefb0094fdc24c1794448e2d8",
+          "e3f770b68b05cb25e5e042b013bed981"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"DSP的定义及其主要服务对象（广告主）\",\n  \"SSP的定义及其主要服务对象（媒体方）\",\n  \"DSP与SSP在广告交易中的互动与服务关系\"\n]",
+            "elapsed": 1.245
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 5, 2, 6, 1, 3, 7, 9, 8, 4]",
+            "elapsed": 1.485
+          }
+        ]
+      }
+    },
+    {
+      "id": "D12-paraphrase",
+      "group": "paraphrase",
+      "question": "广告主买量和媒体卖流量分别用什么平台？",
+      "gold_ids": [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.4838,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3804,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.3851,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.881,
+      "trace": {
+        "queries": [
+          "广告主买量和媒体卖流量分别用什么平台？",
+          "广告主常用的买量推广平台有哪些？",
+          "媒体方主要通过什么平台变现卖流量？",
+          "广告主买量与媒体卖流量的平台选择有何区别？"
+        ],
+        "candidate_ids": [
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f",
+          "e3f770b68b05cb25e5e042b013bed981"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"广告主常用的买量推广平台有哪些？\",\n  \"媒体方主要通过什么平台变现卖流量？\",\n  \"广告主买量与媒体卖流量的平台选择有何区别？\"\n]",
+            "elapsed": 1.656
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 5, 3, 4, 0, 2, 6]",
+            "elapsed": 1.084
+          }
+        ]
+      }
+    },
+    {
+      "id": "D13-direct",
+      "group": "direct",
+      "question": "合约广告怎样做库存预测和流量分配？",
+      "gold_ids": [
+        "a960e21f88534aa3978686a339891911"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3106,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2928,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3449,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.488,
+      "trace": {
+        "queries": [
+          "合约广告怎样做库存预测和流量分配？",
+          "合约广告库存预测算法与模型",
+          "合约广告流量分配策略与规则",
+          "合约广告库存与流量的协同优化方法"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"合约广告库存预测算法与模型\",\n  \"合约广告流量分配策略与规则\",\n  \"合约广告库存与流量的协同优化方法\"\n]",
+            "elapsed": 1.937
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 2, 0, 3, 4]",
+            "elapsed": 1.42
+          }
+        ]
+      }
+    },
+    {
+      "id": "D13-paraphrase",
+      "group": "paraphrase",
+      "question": "已经承诺给客户展示次数，怎么保证交付？",
+      "gold_ids": [
+        "a960e21f88534aa3978686a339891911"
+      ],
+      "retrieved": [
+        {
+          "id": "217c58ecd9f09ffbfec7fde9b8a543db",
+          "title": "广告没有展示：投放到召回的检查顺序",
+          "content": "业务知识：投放配置入库、更新索引，再经召回和排序选出广告。\nAgent 应用规则（项目补充）：依次核对启用状态、投放时间和地域、预算余额、索引同步、候选召回及排序结果。只有具备对应日志才能确认在哪一步被过滤；保存成功不等于展示成功。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.1708,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2173,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.1456,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.411,
+      "trace": {
+        "queries": [
+          "已经承诺给客户展示次数，怎么保证交付？",
+          "交付承诺履行的关键步骤和时间表",
+          "交付失败的常见原因及预防措施",
+          "客户对交付进度的满意度评估方法"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "39ac23d9139254382a251f69d386000e",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "217c58ecd9f09ffbfec7fde9b8a543db",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "69caf3676702594c9e0296942f26ead7",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"交付承诺履行的关键步骤和时间表\",\n  \"交付失败的常见原因及预防措施\",\n  \"客户对交付进度的满意度评估方法\"\n]\n```",
+            "elapsed": 1.84
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[4, 2, 5, 1, 6, 8, 9, 0, 3, 7]",
+            "elapsed": 1.436
+          }
+        ]
+      }
+    },
+    {
+      "id": "D14-direct",
+      "group": "direct",
+      "question": "CPM费用怎么算？",
+      "gold_ids": [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ],
+      "retrieved": [
+        {
+          "id": "7db8cbfa12ca33152d58efcf66e30a89",
+          "title": "广告排序规则",
+          "content": "Mini Ad Manager 使用出价和点击量综合排序。当前示例规则为 Pricing + (Pricing x Clicks x 0.42)。高出价可以提升基础分，但点击量会放大有效广告的排序优势。高出价低点击广告不应盲目继续加价，应优先检查标题、素材和卖点。",
+          "score": -0.0529,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "69caf3676702594c9e0296942f26ead7",
+          "title": "CPA 与 CPS：按行动或销售结算",
+          "content": "业务知识：CPA 按约定行动，CPS 按销售结算。\nAgent 应用规则（项目补充）：确认有效行动、归因窗口、去重规则及退款处理。平均获客成本=归属消耗/有效获客数；没有有效行动或成交数据时不能计算。CPA 不代表广告主没有成本风险。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1746,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "title": "CPV：视频观看计费口径",
+          "content": "业务知识：CPV 按视频观看计费。\nAgent 应用规则（项目补充）：先确认平台对有效观看的时长、播放比例及重复观看的规定。不能默认视频开始播放就应计费，也不能把播放量当成点击量或成交量。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1687,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.087,
+      "trace": {
+        "queries": [
+          "CPM费用怎么算？",
+          "CPM计费模式定义与计费公式",
+          "影响CPM费用的关键因素分析",
+          "CPM与其他计费模式（CPC/CPA）的对比与转化"
+        ],
+        "candidate_ids": [
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"CPM计费模式定义与计费公式\",\n  \"影响CPM费用的关键因素分析\",\n  \"CPM与其他计费模式（CPC/CPA）的对比与转化\"\n]",
+            "elapsed": 1.68
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[5, 0, 1, 2, 3, 4]",
+            "elapsed": 1.273
+          }
+        ]
+      }
+    },
+    {
+      "id": "D14-paraphrase",
+      "group": "paraphrase",
+      "question": "每千次展示收十元，两万次展示付多少钱？",
+      "gold_ids": [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ],
+      "retrieved": [
+        {
+          "id": "bb31781fbacb4164ceb072da54f009cd",
+          "title": "CPM：按千次曝光计费",
+          "content": "业务知识：CPM 按每千次展示计费。\nAgent 应用规则（项目补充）：曝光次数不是独立用户数。固定单价时，费用=曝光次数/1000×CPM；如 20000 次曝光、CPM 为 10 元，费用为 200 元。核算前确认有效曝光和价格口径。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.0501,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "d2de0fccc4892318b78e1371a54c34aa",
+          "title": "CVR 转化率：明确分母和转化事件",
+          "content": "业务知识：原文的 CVR=转化次数/到达次数。\nAgent 应用规则（项目补充）：先问转化指注册、下载、提交线索还是支付，分母是点击还是到达。示例：100 次到达、5 次支付，按到达计算为 5%。不同分母或归因窗口不可直接比较。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": -0.0193,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": -0.0524,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.846,
+      "trace": {
+        "queries": [
+          "每千次展示收十元，两万次展示付多少钱？",
+          "每千次展示收十元的费率计算",
+          "两万次展示的广告费用计算",
+          "千次展示费用与总展示量的成本换算"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "bb31781fbacb4164ceb072da54f009cd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "39ac23d9139254382a251f69d386000e",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "bb31781fbacb4164ceb072da54f009cd",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "39ac23d9139254382a251f69d386000e",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "39ac23d9139254382a251f69d386000e",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "42ba33a6517174d6822e9f37fba03e06",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "bb31781fbacb4164ceb072da54f009cd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"每千次展示收十元的费率计算\",\n  \"两万次展示的广告费用计算\",\n  \"千次展示费用与总展示量的成本换算\"\n]\n```",
+            "elapsed": 1.65
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[1, 4, 5, 7, 2, 6, 0, 3]",
+            "elapsed": 1.025
+          }
+        ]
+      }
+    },
+    {
+      "id": "D15-direct",
+      "group": "direct",
+      "question": "固定CPC单价下费用怎么算？",
+      "gold_ids": [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ],
+      "retrieved": [
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.3328,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.0464,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e3f770b68b05cb25e5e042b013bed981",
+          "title": "CPC 收入下降：分环节定位",
+          "content": "业务知识：CPC 收入与流量、填充、点击率和平均点击价格相关。\nAgent 应用规则（项目补充）：先对齐统计周期，再分别检查请求量、展示量、点击量、消耗和价格。缺少哪段数据就明确说明，不能把全部收入波动归因于文案或出价。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.1598,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.991,
+      "trace": {
+        "queries": [
+          "固定CPC单价下费用怎么算？",
+          "CPC计费模式下费用计算公式",
+          "固定CPC单价与实际花费的关系",
+          "影响CPC费用的关键因素分析"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "69caf3676702594c9e0296942f26ead7",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "1524dbb507e0aa2e2e6af07da0c62012"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"CPC计费模式下费用计算公式\",\n  \"固定CPC单价与实际花费的关系\",\n  \"影响CPC费用的关键因素分析\"\n]",
+            "elapsed": 2.368
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 5, 1, 7, 2, 3, 4, 6]",
+            "elapsed": 1.488
+          }
+        ]
+      }
+    },
+    {
+      "id": "D15-paraphrase",
+      "group": "paraphrase",
+      "question": "按有效点击收费时，为什么出价不等于实际扣费？",
+      "gold_ids": [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2442,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.1953,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1704,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 6.07,
+      "trace": {
+        "queries": [
+          "按有效点击收费时，为什么出价不等于实际扣费？"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "CancelledError",
+            "http_status": null,
+            "elapsed": 3.001
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 1, 2, 3, 4]",
+            "elapsed": 2.976
+          }
+        ]
+      }
+    },
+    {
+      "id": "D16-direct",
+      "group": "direct",
+      "question": "CPA和CPS的结算区别是什么？",
+      "gold_ids": [
+        "69caf3676702594c9e0296942f26ead7"
+      ],
+      "retrieved": [
+        {
+          "id": "69caf3676702594c9e0296942f26ead7",
+          "title": "CPA 与 CPS：按行动或销售结算",
+          "content": "业务知识：CPA 按约定行动，CPS 按销售结算。\nAgent 应用规则（项目补充）：确认有效行动、归因窗口、去重规则及退款处理。平均获客成本=归属消耗/有效获客数；没有有效行动或成交数据时不能计算。CPA 不代表广告主没有成本风险。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1861,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "title": "CPV：视频观看计费口径",
+          "content": "业务知识：CPV 按视频观看计费。\nAgent 应用规则（项目补充）：先确认平台对有效观看的时长、播放比例及重复观看的规定。不能默认视频开始播放就应计费，也不能把播放量当成点击量或成交量。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.0455,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": -0.0065,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.872,
+      "trace": {
+        "queries": [
+          "CPA和CPS的结算区别是什么？",
+          "CPA与CPS结算模式的核心差异",
+          "CPA和CPS结算方式的适用场景与风险",
+          "CPA与CPS结算计费标准与流程对比"
+        ],
+        "candidate_ids": [
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "a610a79d3d1febef995cca1678fcf6fc",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "9ab6213f4685b42ea848be8ef51953b8",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "1524dbb507e0aa2e2e6af07da0c62012"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"CPA与CPS结算模式的核心差异\",\n  \"CPA和CPS结算方式的适用场景与风险\",\n  \"CPA与CPS结算计费标准与流程对比\"\n]",
+            "elapsed": 1.773
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 1, 2, 3, 4, 5, 6, 7, 8]",
+            "elapsed": 1.922
+          }
+        ]
+      }
+    },
+    {
+      "id": "D16-paraphrase",
+      "group": "paraphrase",
+      "question": "按注册收费和按销售收费有什么不同？",
+      "gold_ids": [
+        "69caf3676702594c9e0296942f26ead7"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": -0.0985,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.2322,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "title": "CPV：视频观看计费口径",
+          "content": "业务知识：CPV 按视频观看计费。\nAgent 应用规则（项目补充）：先确认平台对有效观看的时长、播放比例及重复观看的规定。不能默认视频开始播放就应计费，也不能把播放量当成点击量或成交量。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.1155,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.146,
+      "trace": {
+        "queries": [
+          "按注册收费和按销售收费有什么不同？",
+          "按注册收费的定义、计费标准及适用对象",
+          "按销售收费的定义、计费标准及适用对象",
+          "按注册收费与按销售收费的核心差异与对比分析"
+        ],
+        "candidate_ids": [
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e58a7af9d3ace2d3aa5e69ea052baf80"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"按注册收费的定义、计费标准及适用对象\",\n  \"按销售收费的定义、计费标准及适用对象\",\n  \"按注册收费与按销售收费的核心差异与对比分析\"\n]",
+            "elapsed": 1.879
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[4, 5, 6, 1, 2, 3, 0]",
+            "elapsed": 1.095
+          }
+        ]
+      }
+    },
+    {
+      "id": "D17-direct",
+      "group": "direct",
+      "question": "CPV如何界定有效观看？",
+      "gold_ids": [
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ],
+      "retrieved": [
+        {
+          "id": "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "title": "CPV：视频观看计费口径",
+          "content": "业务知识：CPV 按视频观看计费。\nAgent 应用规则（项目补充）：先确认平台对有效观看的时长、播放比例及重复观看的规定。不能默认视频开始播放就应计费，也不能把播放量当成点击量或成交量。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.2073,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "d2de0fccc4892318b78e1371a54c34aa",
+          "title": "CVR 转化率：明确分母和转化事件",
+          "content": "业务知识：原文的 CVR=转化次数/到达次数。\nAgent 应用规则（项目补充）：先问转化指注册、下载、提交线索还是支付，分母是点击还是到达。示例：100 次到达、5 次支付，按到达计算为 5%。不同分母或归因窗口不可直接比较。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": -0.0996,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "69caf3676702594c9e0296942f26ead7",
+          "title": "CPA 与 CPS：按行动或销售结算",
+          "content": "业务知识：CPA 按约定行动，CPS 按销售结算。\nAgent 应用规则（项目补充）：确认有效行动、归因窗口、去重规则及退款处理。平均获客成本=归属消耗/有效获客数；没有有效行动或成交数据时不能计算。CPA 不代表广告主没有成本风险。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.026,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.367,
+      "trace": {
+        "queries": [
+          "CPV如何界定有效观看？",
+          "CPV 计算标准与技术规范",
+          "CPV 对营销效果与转化的影响",
+          "CPV 与其他视频指标的区别与对比"
+        ],
+        "candidate_ids": [
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "69caf3676702594c9e0296942f26ead7",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "69caf3676702594c9e0296942f26ead7",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "69caf3676702594c9e0296942f26ead7",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "69caf3676702594c9e0296942f26ead7",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "d2de0fccc4892318b78e1371a54c34aa"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"CPV 计算标准与技术规范\",\n  \"CPV 对营销效果与转化的影响\",\n  \"CPV 与其他视频指标的区别与对比\"\n]",
+            "elapsed": 1.796
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[0, 5, 2, 3, 1, 4]",
+            "elapsed": 1.375
+          }
+        ]
+      }
+    },
+    {
+      "id": "D17-paraphrase",
+      "group": "paraphrase",
+      "question": "视频刚开始播放就要收钱吗？",
+      "gold_ids": [
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.052,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "title": "CPV：视频观看计费口径",
+          "content": "业务知识：CPV 按视频观看计费。\nAgent 应用规则（项目补充）：先确认平台对有效观看的时长、播放比例及重复观看的规定。不能默认视频开始播放就应计费，也不能把播放量当成点击量或成交量。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.0257,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1921,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.24,
+      "trace": {
+        "queries": [
+          "视频刚开始播放就要收钱吗？",
+          "视频平台播放前付费机制",
+          "视频开播即收费的常见模式",
+          "视频首播付费与免费观看区别"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "a0849948aa07aef5e0cefc85f02f950c",
+          "c2c75e86e3f0c6cdcef9633369616fca",
+          "1524dbb507e0aa2e2e6af07da0c62012"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"视频平台播放前付费机制\",\n  \"视频开播即收费的常见模式\",\n  \"视频首播付费与免费观看区别\"\n]\n```",
+            "elapsed": 1.572
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[4, 5, 1, 2, 3, 6, 7]",
+            "elapsed": 1.533
+          }
+        ]
+      }
+    },
+    {
+      "id": "D18-direct",
+      "group": "direct",
+      "question": "媒体方如何选择广告渠道？",
+      "gold_ids": [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2771,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.4926,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3012,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.451,
+      "trace": {
+        "queries": [
+          "媒体方如何选择广告渠道？",
+          "媒体方选择广告渠道的核心指标与考量因素",
+          "不同类型媒体平台的广告渠道选择策略对比",
+          "媒体方广告渠道选择的案例与最佳实践"
+        ],
+        "candidate_ids": [
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "[\n  \"媒体方选择广告渠道的核心指标与考量因素\",\n  \"不同类型媒体平台的广告渠道选择策略对比\",\n  \"媒体方广告渠道选择的案例与最佳实践\"\n]",
+            "elapsed": 2.114
+          },
+          {
+            "stage": "rerank",
+            "status": "response",
+            "text": "[2, 5, 1, 0, 4, 3]",
+            "elapsed": 1.203
+          }
+        ]
+      }
+    },
+    {
+      "id": "D18-paraphrase",
+      "group": "paraphrase",
+      "question": "我的网站接哪家广告联盟比较合适？",
+      "gold_ids": [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ],
+      "retrieved": [
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.2129,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1901,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1026,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.368,
+      "trace": {
+        "queries": [
+          "我的网站接哪家广告联盟比较合适？",
+          "网站广告联盟选择标准与评估指南",
+          "热门广告联盟平台对比与收益分析",
+          "网站内容定位与广告联盟匹配策略"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "a7be935852eaf24eb2f68cbf7061cd7c",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "response",
+            "text": "```json\n[\n  \"网站广告联盟选择标准与评估指南\",\n  \"热门广告联盟平台对比与收益分析\",\n  \"网站内容定位与广告联盟匹配策略\"\n]\n```",
+            "elapsed": 1.999
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.233
+          }
+        ]
+      }
+    },
+    {
+      "id": "D19-direct",
+      "group": "direct",
+      "question": "广告负载如何兼顾收入和用户体验？",
+      "gold_ids": [
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "retrieved": [
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.4333,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3943,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3845,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.936,
+      "trace": {
+        "queries": [
+          "广告负载如何兼顾收入和用户体验？"
+        ],
+        "candidate_ids": [
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.298
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.547
+          }
+        ]
+      }
+    },
+    {
+      "id": "D19-paraphrase",
+      "group": "paraphrase",
+      "question": "页面再多塞几个广告就能一直增加收益吗？",
+      "gold_ids": [
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4551,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3888,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2969,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 4.405,
+      "trace": {
+        "queries": [
+          "页面再多塞几个广告就能一直增加收益吗？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "CancelledError",
+            "http_status": null,
+            "elapsed": 3.002
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.302
+          }
+        ]
+      }
+    },
+    {
+      "id": "D20-direct",
+      "group": "direct",
+      "question": "CPC收入下降如何分环节定位？",
+      "gold_ids": [
+        "e3f770b68b05cb25e5e042b013bed981"
+      ],
+      "retrieved": [
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.3057,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e3f770b68b05cb25e5e042b013bed981",
+          "title": "CPC 收入下降：分环节定位",
+          "content": "业务知识：CPC 收入与流量、填充、点击率和平均点击价格相关。\nAgent 应用规则（项目补充）：先对齐统计周期，再分别检查请求量、展示量、点击量、消耗和价格。缺少哪段数据就明确说明，不能把全部收入波动归因于文案或出价。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.1374,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "7db8cbfa12ca33152d58efcf66e30a89",
+          "title": "广告排序规则",
+          "content": "Mini Ad Manager 使用出价和点击量综合排序。当前示例规则为 Pricing + (Pricing x Clicks x 0.42)。高出价可以提升基础分，但点击量会放大有效广告的排序优势。高出价低点击广告不应盲目继续加价，应优先检查标题、素材和卖点。",
+          "score": 0.0904,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.78,
+      "trace": {
+        "queries": [
+          "CPC收入下降如何分环节定位？"
+        ],
+        "candidate_ids": [
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "7db8cbfa12ca33152d58efcf66e30a89",
+          "d2de0fccc4892318b78e1371a54c34aa",
+          "4f1018ec59af4e254f922736ed816cdd"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.806
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.855
+          }
+        ]
+      }
+    },
+    {
+      "id": "D20-paraphrase",
+      "group": "paraphrase",
+      "question": "网站广告赚的钱变少了，应该查哪些环节？",
+      "gold_ids": [
+        "e3f770b68b05cb25e5e042b013bed981"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4371,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.4361,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4245,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.67,
+      "trace": {
+        "queries": [
+          "网站广告赚的钱变少了，应该查哪些环节？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.855
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.724
+          }
+        ]
+      }
+    },
+    {
+      "id": "D21-direct",
+      "group": "direct",
+      "question": "广告没有展示应该按什么顺序检查？",
+      "gold_ids": [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3737,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3578,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "39ac23d9139254382a251f69d386000e",
+          "title": "广告请求失败：性能与可用性影响",
+          "content": "业务知识：投放系统需兼顾响应速度、扩展能力与可靠性。\nAgent 应用规则（项目补充）：广告未展示时区分业务过滤和请求超时；先查请求耗时、错误和降级记录。部署了缓存或队列不等于投放有效，结论仍需展示事件验证。\n外部业务参考；来源：构建高效的广告投放系统：应用架构的设计与实现 https://juejin.cn/post/7342315772303081487",
+          "score": 0.3513,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7342315772303081487",
+          "source_title": "构建高效的广告投放系统：应用架构的设计与实现"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.764,
+      "trace": {
+        "queries": [
+          "广告没有展示应该按什么顺序检查？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "39ac23d9139254382a251f69d386000e",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.951
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.715
+          }
+        ]
+      }
+    },
+    {
+      "id": "D21-paraphrase",
+      "group": "paraphrase",
+      "question": "广告建好了却一直没人看到，先查哪里？",
+      "gold_ids": [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4194,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3546,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.2966,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.85,
+      "trace": {
+        "queries": [
+          "广告建好了却一直没人看到，先查哪里？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.123
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.632
+          }
+        ]
+      }
+    },
+    {
+      "id": "D22-direct",
+      "group": "direct",
+      "question": "广告配置变更如何同步业务库和索引？",
+      "gold_ids": [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ],
+      "retrieved": [
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.4641,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4248,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3822,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.87,
+      "trace": {
+        "queries": [
+          "广告配置变更如何同步业务库和索引？"
+        ],
+        "candidate_ids": [
+          "529373b729f5e6296343516941938a0f",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.76
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.005
+          }
+        ]
+      }
+    },
+    {
+      "id": "D22-paraphrase",
+      "group": "paraphrase",
+      "question": "后台改了广告配置，线上检索却还是旧的怎么办？",
+      "gold_ids": [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3929,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3744,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3738,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.142,
+      "trace": {
+        "queries": [
+          "后台改了广告配置，线上检索却还是旧的怎么办？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.066
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.988
+          }
+        ]
+      }
+    },
+    {
+      "id": "D23-direct",
+      "group": "direct",
+      "question": "预算耗尽后如何停止投放并处理延迟结算？",
+      "gold_ids": [
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.248,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.1979,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1539,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.572,
+      "trace": {
+        "queries": [
+          "预算耗尽后如何停止投放并处理延迟结算？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "60c2f0a39c9428aca0776fa8d622b735",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.745
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.738
+          }
+        ]
+      }
+    },
+    {
+      "id": "D23-paraphrase",
+      "group": "paraphrase",
+      "question": "钱已经花完了，为何还出现后续扣费？",
+      "gold_ids": [
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.4024,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3355,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2995,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.383,
+      "trace": {
+        "queries": [
+          "钱已经花完了，为何还出现后续扣费？"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "c2c75e86e3f0c6cdcef9633369616fca"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 2.025
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.268
+          }
+        ]
+      }
+    },
+    {
+      "id": "D24-direct",
+      "group": "direct",
+      "question": "重复扣费或漏扣怎么核查？",
+      "gold_ids": [
+        "2267253aa3b02b9efe39fe30ed5e8188"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2032,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1846,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1499,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.076,
+      "trace": {
+        "queries": [
+          "重复扣费或漏扣怎么核查？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.738
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.241
+          }
+        ]
+      }
+    },
+    {
+      "id": "D24-paraphrase",
+      "group": "paraphrase",
+      "question": "同一笔广告费用扣了两遍，应该查什么？",
+      "gold_ids": [
+        "2267253aa3b02b9efe39fe30ed5e8188"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4306,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3688,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3012,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.649,
+      "trace": {
+        "queries": [
+          "同一笔广告费用扣了两遍，应该查什么？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.529
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 2.027
+          }
+        ]
+      }
+    },
+    {
+      "id": "D25-direct",
+      "group": "direct",
+      "question": "点击量与消耗不一致怎么解释？",
+      "gold_ids": [
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.1116,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.0288,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.0145,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 3.158,
+      "trace": {
+        "queries": [
+          "点击量与消耗不一致怎么解释？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.003
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 2.054
+          }
+        ]
+      }
+    },
+    {
+      "id": "D25-paraphrase",
+      "group": "paraphrase",
+      "question": "页面点击很多，账单却对不上，是为什么？",
+      "gold_ids": [
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2944,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2657,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1481,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.608,
+      "trace": {
+        "queries": [
+          "页面点击很多，账单却对不上，是为什么？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.613
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.905
+          }
+        ]
+      }
+    },
+    {
+      "id": "D26-direct",
+      "group": "direct",
+      "question": "投放策略调整如何通过灰度实验比较效果？",
+      "gold_ids": [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ],
+      "retrieved": [
+        {
+          "id": "7d840169fc8d6972df9566a5a87096c5",
+          "title": "广告文案优化",
+          "content": "广告标题和文案应突出目标人群、核心利益点、差异化卖点和行动引导。文案可以从利益点型、痛点型、场景型三个方向生成候选版本。不要使用无法证明的绝对化承诺，也不要通过误导性标题换取点击。点击率低时，应同时检查标题吸引力、素材开头和目标人群匹配度。",
+          "score": 0.0479,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.0393,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.0283,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.573,
+      "trace": {
+        "queries": [
+          "投放策略调整如何通过灰度实验比较效果？"
+        ],
+        "candidate_ids": [
+          "7d840169fc8d6972df9566a5a87096c5",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.372
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.109
+          }
+        ]
+      }
+    },
+    {
+      "id": "D26-paraphrase",
+      "group": "paraphrase",
+      "question": "怎样证明新投放策略比旧策略更赚钱？",
+      "gold_ids": [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1773,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.1632,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1493,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.4,
+      "trace": {
+        "queries": [
+          "怎样证明新投放策略比旧策略更赚钱？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.599
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.723
+          }
+        ]
+      }
+    },
+    {
+      "id": "D27-direct",
+      "group": "direct",
+      "question": "广告配置、投放和效果模块怎样区分？",
+      "gold_ids": [
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "retrieved": [
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.4393,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4142,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.395,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.389,
+      "trace": {
+        "queries": [
+          "广告配置、投放和效果模块怎样区分？"
+        ],
+        "candidate_ids": [
+          "529373b729f5e6296343516941938a0f",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.368
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.927
+          }
+        ]
+      }
+    },
+    {
+      "id": "D27-paraphrase",
+      "group": "paraphrase",
+      "question": "广告保存成功就说明已经投放并产生效果了吗？",
+      "gold_ids": [
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4589,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4481,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3278,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.027,
+      "trace": {
+        "queries": [
+          "广告保存成功就说明已经投放并产生效果了吗？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "7d840169fc8d6972df9566a5a87096c5",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.218
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.718
+          }
+        ]
+      }
+    },
+    {
+      "id": "D28-direct",
+      "group": "direct",
+      "question": "投放调整前如何确认报表时效？",
+      "gold_ids": [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2903,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2636,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2418,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.855,
+      "trace": {
+        "queries": [
+          "投放调整前如何确认报表时效？"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "60c2f0a39c9428aca0776fa8d622b735"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.067
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.691
+          }
+        ]
+      }
+    },
+    {
+      "id": "D28-paraphrase",
+      "group": "paraphrase",
+      "question": "报表还没更新，我现在就改预算合适吗？",
+      "gold_ids": [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2676,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.1787,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.162,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.098,
+      "trace": {
+        "queries": [
+          "报表还没更新，我现在就改预算合适吗？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "217c58ecd9f09ffbfec7fde9b8a543db",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.296
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.71
+          }
+        ]
+      }
+    },
+    {
+      "id": "D29-direct",
+      "group": "direct",
+      "question": "广告请求失败的性能与可用性影响是什么？",
+      "gold_ids": [
+        "39ac23d9139254382a251f69d386000e"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4055,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.3954,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3755,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.816,
+      "trace": {
+        "queries": [
+          "广告请求失败的性能与可用性影响是什么？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.803
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.784
+          }
+        ]
+      }
+    },
+    {
+      "id": "D29-paraphrase",
+      "group": "paraphrase",
+      "question": "接口老是超时会影响广告展示吗？",
+      "gold_ids": [
+        "39ac23d9139254382a251f69d386000e"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2995,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "39ac23d9139254382a251f69d386000e",
+          "title": "广告请求失败：性能与可用性影响",
+          "content": "业务知识：投放系统需兼顾响应速度、扩展能力与可靠性。\nAgent 应用规则（项目补充）：广告未展示时区分业务过滤和请求超时；先查请求耗时、错误和降级记录。部署了缓存或队列不等于投放有效，结论仍需展示事件验证。\n外部业务参考；来源：构建高效的广告投放系统：应用架构的设计与实现 https://juejin.cn/post/7342315772303081487",
+          "score": 0.2592,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7342315772303081487",
+          "source_title": "构建高效的广告投放系统：应用架构的设计与实现"
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.2125,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.144,
+      "trace": {
+        "queries": [
+          "接口老是超时会影响广告展示吗？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "39ac23d9139254382a251f69d386000e",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.045
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.004
+          }
+        ]
+      }
+    },
+    {
+      "id": "D30-direct",
+      "group": "direct",
+      "question": "分析广告业务数据需要确认什么访问范围？",
+      "gold_ids": [
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.4767,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4603,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.4365,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.669,
+      "trace": {
+        "queries": [
+          "分析广告业务数据需要确认什么访问范围？"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "529373b729f5e6296343516941938a0f"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.602
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.959
+          }
+        ]
+      }
+    },
+    {
+      "id": "D30-paraphrase",
+      "group": "paraphrase",
+      "question": "能把别的品牌的广告数据拿来给我分析吗？",
+      "gold_ids": [
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.2801,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.2195,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.2142,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.807,
+      "trace": {
+        "queries": [
+          "能把别的品牌的广告数据拿来给我分析吗？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "7d840169fc8d6972df9566a5a87096c5"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.039
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.644
+          }
+        ]
+      }
+    },
+    {
+      "id": "M01",
+      "group": "multi_document",
+      "question": "解释CTR和CVR各怎么算，分母有什么区别？",
+      "gold_ids": [
+        "3dd3079a2d41ca64ceba0b9590124d99",
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.186,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.1534,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1417,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.632,
+      "trace": {
+        "queries": [
+          "解释CTR和CVR各怎么算，分母有什么区别？"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "d2de0fccc4892318b78e1371a54c34aa"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.049
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.491
+          }
+        ]
+      }
+    },
+    {
+      "id": "M02",
+      "group": "multi_document",
+      "question": "CPM和固定CPC分别怎样计算费用？",
+      "gold_ids": [
+        "bb31781fbacb4164ceb072da54f009cd",
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ],
+      "retrieved": [
+        {
+          "id": "d85b97a157ef8c68d6b8ff2244f6a556",
+          "title": "CPC：按点击计费",
+          "content": "业务知识：CPC 按点击计费。\nAgent 应用规则（项目补充）：固定单价时费用=有效计费点击数×单价；历史平均 CPC=实际消耗/有效计费点击数。出价是竞价参数，不一定等于实际成交单价；页面点击统计不一定都是计费点击。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.2776,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        },
+        {
+          "id": "e3f770b68b05cb25e5e042b013bed981",
+          "title": "CPC 收入下降：分环节定位",
+          "content": "业务知识：CPC 收入与流量、填充、点击率和平均点击价格相关。\nAgent 应用规则（项目补充）：先对齐统计周期，再分别检查请求量、展示量、点击量、消耗和价格。缺少哪段数据就明确说明，不能把全部收入波动归因于文案或出价。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.0874,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        },
+        {
+          "id": "69caf3676702594c9e0296942f26ead7",
+          "title": "CPA 与 CPS：按行动或销售结算",
+          "content": "业务知识：CPA 按约定行动，CPS 按销售结算。\nAgent 应用规则（项目补充）：确认有效行动、归因窗口、去重规则及退款处理。平均获客成本=归属消耗/有效获客数；没有有效行动或成交数据时不能计算。CPA 不代表广告主没有成本风险。\n外部业务参考；来源：互联网广告系统的那点事情 https://juejin.cn/post/7313822358456172570",
+          "score": 0.0747,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7313822358456172570",
+          "source_title": "互联网广告系统的那点事情"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.368,
+      "trace": {
+        "queries": [
+          "CPM和固定CPC分别怎样计算费用？"
+        ],
+        "candidate_ids": [
+          "d85b97a157ef8c68d6b8ff2244f6a556",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "69caf3676702594c9e0296942f26ead7",
+          "e58a7af9d3ace2d3aa5e69ea052baf80",
+          "7db8cbfa12ca33152d58efcf66e30a89"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.278
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.001
+          }
+        ]
+      }
+    },
+    {
+      "id": "M03",
+      "group": "multi_document",
+      "question": "DSP和SSP各服务谁，网站又该怎么选择广告渠道？",
+      "gold_ids": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ],
+      "retrieved": [
+        {
+          "id": "9ab6213f4685b42ea848be8ef51953b8",
+          "title": "DSP、SSP、ADX、DMP：谁负责什么",
+          "content": "业务知识：DSP 为买方采买，SSP 为媒体管理供给，ADX 连接交易，DMP 整理受众数据。\nAgent 应用规则（项目补充）：先判断用户是广告主还是媒体，再解释采买或变现链路。解释行业概念时，不声称本项目已经接入这些外部平台。\n外部业务参考；来源：计算广告基本概念入门-让广告成为有用的信息 https://juejin.cn/post/6976842782082072584",
+          "score": 0.2538,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6976842782082072584",
+          "source_title": "计算广告基本概念入门-让广告成为有用的信息"
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.0478,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e3f770b68b05cb25e5e042b013bed981",
+          "title": "CPC 收入下降：分环节定位",
+          "content": "业务知识：CPC 收入与流量、填充、点击率和平均点击价格相关。\nAgent 应用规则（项目补充）：先对齐统计周期，再分别检查请求量、展示量、点击量、消耗和价格。缺少哪段数据就明确说明，不能把全部收入波动归因于文案或出价。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.0166,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.073,
+      "trace": {
+        "queries": [
+          "DSP和SSP各服务谁，网站又该怎么选择广告渠道？"
+        ],
+        "candidate_ids": [
+          "9ab6213f4685b42ea848be8ef51953b8",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e3f770b68b05cb25e5e042b013bed981",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "f02b1e4ba6ae74192e9be872a223c752"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.932
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.041
+          }
+        ]
+      }
+    },
+    {
+      "id": "M04",
+      "group": "multi_document",
+      "question": "广告配置保存后没有展示，要检查索引同步和投放链路哪些环节？",
+      "gold_ids": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.4808,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3746,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "39ac23d9139254382a251f69d386000e",
+          "title": "广告请求失败：性能与可用性影响",
+          "content": "业务知识：投放系统需兼顾响应速度、扩展能力与可靠性。\nAgent 应用规则（项目补充）：广告未展示时区分业务过滤和请求超时；先查请求耗时、错误和降级记录。部署了缓存或队列不等于投放有效，结论仍需展示事件验证。\n外部业务参考；来源：构建高效的广告投放系统：应用架构的设计与实现 https://juejin.cn/post/7342315772303081487",
+          "score": 0.3264,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/7342315772303081487",
+          "source_title": "构建高效的广告投放系统：应用架构的设计与实现"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.535,
+      "trace": {
+        "queries": [
+          "广告配置保存后没有展示，要检查索引同步和投放链路哪些环节？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "39ac23d9139254382a251f69d386000e",
+          "529373b729f5e6296343516941938a0f",
+          "42ba33a6517174d6822e9f37fba03e06"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.725
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.72
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05",
+      "group": "multi_document",
+      "question": "预算已经耗尽还有扣费，怎样排查延迟结算与重复扣费？",
+      "gold_ids": [
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "2267253aa3b02b9efe39fe30ed5e8188"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1727,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.157,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.145,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.608,
+      "trace": {
+        "queries": [
+          "预算已经耗尽还有扣费，怎样排查延迟结算与重复扣费？"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "42ba33a6517174d6822e9f37fba03e06"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.894
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.619
+          }
+        ]
+      }
+    },
+    {
+      "id": "M06",
+      "group": "multi_document",
+      "question": "同时介绍演示排序公式和素材A/B测试的变量控制原则。",
+      "gold_ids": [
+        "7db8cbfa12ca33152d58efcf66e30a89",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "retrieved": [
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.1772,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "e1c238e54eb04b18f2ca8517412620da",
+          "title": "出价优化原则",
+          "content": "出价优化需要结合点击表现判断。高点击且出价适中的广告可以小幅加价观察排名变化。低出价但点击高的广告可能具备素材或文案优势，可以作为放量候选。高出价但点击低的广告应先优化素材和标题，再考虑预算调整。",
+          "score": 0.1672,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.1534,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 1.602,
+      "trace": {
+        "queries": [
+          "同时介绍演示排序公式和素材A/B测试的变量控制原则。"
+        ],
+        "candidate_ids": [
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1b494ecc8c8b161fe74b95b14e4915aa",
+          "e3f770b68b05cb25e5e042b013bed981"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.615
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.899
+          }
+        ]
+      }
+    },
+    {
+      "id": "M07",
+      "group": "multi_document",
+      "question": "调整策略前如何确认报表时效，再用灰度实验评估效果？",
+      "gold_ids": [
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ],
+      "retrieved": [
+        {
+          "id": "f02b1e4ba6ae74192e9be872a223c752",
+          "title": "数据看板解读",
+          "content": "广告看板应优先关注出价分布、点击热度、排名与出价关系、素材数量与点击表现。总点击量能反映整体互动规模，但不能单独代表转化效果。平均出价可以帮助判断预算强度，但需要结合点击表现分析是否有效。视频数量和点击表现的关系可以作为素材测试方向。",
+          "score": 0.3424,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.3424,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.3072,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.368,
+      "trace": {
+        "queries": [
+          "调整策略前如何确认报表时效，再用灰度实验评估效果？"
+        ],
+        "candidate_ids": [
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "e1c238e54eb04b18f2ca8517412620da",
+          "60c2f0a39c9428aca0776fa8d622b735"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.725
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.547
+          }
+        ]
+      }
+    },
+    {
+      "id": "M08",
+      "group": "multi_document",
+      "question": "分别解释品牌广告与效果广告的评价目标，以及页面广告负载的权衡。",
+      "gold_ids": [
+        "b0f408f9c606286235c902c3ed7825bb",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "retrieved": [
+        {
+          "id": "4f1018ec59af4e254f922736ed816cdd",
+          "title": "广告运营风险边界",
+          "content": "广告运营建议不能承诺点击率、转化率、收益或排名一定提升。涉及真实预算、批量下线、删除素材或高风险行业广告时，需要人工或权限确认。如果缺少曝光、转化、成本等指标，只能基于出价、点击和素材数据做保守分析。不得建议虚假宣传、误导性标题或违规素材。",
+          "score": 0.5065,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "1524dbb507e0aa2e2e6af07da0c62012",
+          "title": "素材与 A/B 测试",
+          "content": "广告素材测试应一次只改变一个核心变量，例如标题、封面、视频开头或出价。每组测试应保留对照组，避免同时修改多个变量导致无法归因。没有视频素材或素材数量过少的广告，应先补齐素材再判断投放效果。观察点击差异时应设置固定时间窗口或最低样本量。",
+          "score": 0.5007,
+          "chunk": 0,
+          "source_url": "",
+          "source_title": ""
+        },
+        {
+          "id": "529373b729f5e6296343516941938a0f",
+          "title": "广告负载：收入、广告主回报和用户体验",
+          "content": "业务知识：广告主、媒体和用户分别关注回报、收入和体验。\nAgent 应用规则（项目补充）：增加广告位前同时观察收入、用户留存或负反馈、广告主成本；数据未验证时只能提出实验，不能断言广告位越多越赚钱。\n外部业务参考；来源：干货 | 广告系统架构解密 https://juejin.cn/post/6904481406013931533",
+          "score": 0.473,
+          "chunk": 0,
+          "source_url": "https://juejin.cn/post/6904481406013931533",
+          "source_title": "干货 | 广告系统架构解密"
+        }
+      ],
+      "success": true,
+      "error": null,
+      "elapsed": 2.325,
+      "trace": {
+        "queries": [
+          "分别解释品牌广告与效果广告的评价目标，以及页面广告负载的权衡。"
+        ],
+        "candidate_ids": [
+          "4f1018ec59af4e254f922736ed816cdd",
+          "1524dbb507e0aa2e2e6af07da0c62012",
+          "529373b729f5e6296343516941938a0f",
+          "f02b1e4ba6ae74192e9be872a223c752",
+          "e1c238e54eb04b18f2ca8517412620da"
+        ],
+        "model_calls": [
+          {
+            "stage": "rewrite",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 1.292
+          },
+          {
+            "stage": "rerank",
+            "status": "HTTPStatusError",
+            "http_status": 429,
+            "elapsed": 0.941
+          }
+        ]
+      }
+    }
+  ],
+  "provider": "openrouter.ai",
+  "model_call_status_counts": [
+    {
+      "stage": "rewrite",
+      "status": "CancelledError",
+      "http_status": null,
+      "count": 5
+    },
+    {
+      "stage": "rerank",
+      "status": "response",
+      "http_status": null,
+      "count": 35
+    },
+    {
+      "stage": "rewrite",
+      "status": "response",
+      "http_status": null,
+      "count": 31
+    },
+    {
+      "stage": "rewrite",
+      "status": "HTTPStatusError",
+      "http_status": 502,
+      "count": 1
+    },
+    {
+      "stage": "rerank",
+      "status": "HTTPStatusError",
+      "http_status": 429,
+      "count": 33
+    },
+    {
+      "stage": "rewrite",
+      "status": "HTTPStatusError",
+      "http_status": 429,
+      "count": 31
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "editing-strategy-only",
+    "no-editing-upload",
+    "creative-call-count-zero",
+    "nullable-bid",
+    "creative-panel-no-delivery-controls",
+    "mobile-no-overflow"
+  ],
+  "strategy_requests": 1,
+  "creative_requests": 0
+}

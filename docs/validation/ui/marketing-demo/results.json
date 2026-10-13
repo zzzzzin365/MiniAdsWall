@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "Client simulation dashboard; ad list uses an API fixture",
+  "checks": [
+    "empty/error ad list never shows fake ads or zero KPI results",
+    "no marketing API calls for demo",
+    "six KPIs and comparison totals reconcile",
+    "daily sums reconcile with totals",
+    "real ad names and material configuration",
+    "switching ad resets material filter",
+    "load more ads preserves selection",
+    "creative and date filtering",
+    "business query entry removed",
+    "320/390/768/1280/1920 no page overflow"
+  ],
+  "errors": []
+}

@@ -1,9 +1,12 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import VirtualAdGrid from './VirtualAdGrid';
 import DataDashboard from './DataDashboard';
 import { Ad } from '../types';
+const CreativeEditor = lazy(() => import('./merchant/studio/MerchantStudio'));
+export type ManagementView = 'list' | 'materials' | 'creatives' | 'analytics';
 
 interface AdManagementProps {
+    view: ManagementView;
     ads: Ad[];
     loading: boolean;
     error: string;
@@ -34,7 +37,9 @@ function SelectionCheckbox({ partial, ...props }: React.InputHTMLAttributes<HTML
 
 export default function AdManagement(props: AdManagementProps) {
     const { ads, loading, error, query, listRevision, hasMore, toolbar, onRetry, onClearQuery, onLoadMore, onEdit, onCopy, onDelete, onDetail, onPreview } = props;
-    const [view, setView] = useState<'list' | 'creatives'>('list');
+    const view = props.view;
+    const [creativeOpened, setCreativeOpened] = useState(view === 'creatives');
+    useEffect(() => { if (view === 'creatives') setCreativeOpened(true); }, [view]);
     const [material, setMaterial] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const [sort, setSort] = useState<{ key: SortKey; direction: 'asc' | 'desc' }>({ key: 'default', direction: 'desc' });
@@ -99,18 +104,8 @@ export default function AdManagement(props: AdManagementProps) {
     }
 
     return <>
-        <section className="ad-management" aria-label="广告管理列表">
-            <div className="management-tabs" role="tablist" aria-label="广告管理视图" onKeyDown={event => {
-                if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-                event.preventDefault();
-                const next = event.key === 'Home' ? 'list' : event.key === 'End' ? 'creatives' : view === 'list' ? 'creatives' : 'list';
-                setView(next);
-                event.currentTarget.querySelector<HTMLButtonElement>(next === 'list' ? '#ad-list-tab' : '#ad-creatives-tab')?.focus();
-            }}>
-                <button type="button" id="ad-list-tab" role="tab" tabIndex={view === 'list' ? 0 : -1} aria-selected={view === 'list'} aria-controls="ad-management-content" onClick={() => setView('list')}>广告列表</button>
-                <button type="button" id="ad-creatives-tab" role="tab" tabIndex={view === 'creatives' ? 0 : -1} aria-selected={view === 'creatives'} aria-controls="ad-management-content" onClick={() => setView('creatives')}>创意素材</button>
-            </div>
-            <div className="management-toolbar">
+        <section className="ad-management" aria-label={view === 'materials' ? '已有素材管理' : '广告管理列表'} hidden={view === 'analytics'}>
+            <div className="management-toolbar" hidden={view !== 'list' && view !== 'materials'}>
                 {toolbar}
                 <label className="management-filter">素材类型
                     <select value={material} onChange={event => setMaterial(event.target.value)}>
@@ -123,19 +118,22 @@ export default function AdManagement(props: AdManagementProps) {
                 <button type="button" className="management-text-button" onClick={() => { setMaterial('all'); setPriceRange('all'); }}>重置筛选</button>
                 <button type="button" className="btn btn-default management-export" onClick={exportRows} disabled={!rows.length || loading || !!error}>{selectedRows.length ? `导出选中 (${selectedRows.length})` : '导出列表'}</button>
             </div>
-            {selectedRows.length > 0 && <div className="management-selection" role="status">
+            {view === 'list' && selectedRows.length > 0 && <div className="management-selection" role="status">
                 <span>已选中 <strong>{selectedRows.length}</strong> 条广告</span>
                 <button type="button" className="management-text-button" onClick={() => setSelected(new Set())}>取消选择</button>
             </div>}
-            <div role="tabpanel" id="ad-management-content" aria-labelledby={view === 'list' ? 'ad-list-tab' : 'ad-creatives-tab'} aria-busy={loading}>
+            <div id="ad-management-content" aria-busy={view !== 'creatives' && loading}>
+                {creativeOpened && <div className="creative-module" hidden={view !== 'creatives'}>
+                    {creativeOpened && <Suspense fallback={<div className="ad-list-message" role="status">正在加载创意工具…</div>}><CreativeEditor /></Suspense>}
+                </div>}
+                <div hidden={view !== 'list'}>
                 {error ? <div className="ad-list-message" role="alert">{error}<button type="button" className="btn btn-default" onClick={onRetry}>重试</button></div>
                     : !ads.length && loading ? <div className="ad-list-message" role="status">{query ? '正在搜索广告…' : '正在加载广告…'}</div>
                     : !rows.length ? <div className="management-empty">
                         <strong>{filtersActive ? '没有符合筛选条件的广告' : query ? `没有找到与“${query}”匹配的广告` : '暂无广告，请新建第一条广告'}</strong>
                         {filtersActive && <button type="button" className="btn btn-default" onClick={() => { setMaterial('all'); setPriceRange('all'); }}>重置筛选</button>}
                         {query && <button type="button" className="btn btn-default" onClick={onClearQuery}>查看全部广告</button>}
-                    </div> : view === 'creatives' ? <div className="management-creatives"><VirtualAdGrid ads={pageRows} onEdit={onEdit} onCopy={onCopy} onDelete={onDelete} onClick={onDetail} /></div>
-                    : <div className="management-table-scroll" tabIndex={0} role="region" aria-label="广告表格，可横向滚动">
+                    </div> : <div className="management-table-scroll" tabIndex={0} role="region" aria-label="广告表格，可横向滚动">
                         <table className="management-table">
                             <caption className="management-sr-only">已加载广告的名称、素材、出价和累计点击</caption>
                             <thead><tr>
@@ -158,8 +156,16 @@ export default function AdManagement(props: AdManagementProps) {
                             </tbody>
                         </table>
                     </div>}
+                </div>
+                {view === 'materials' && <div className="management-creatives">
+                    {error ? <div className="ad-list-message" role="alert">{error}<button className="btn btn-default" onClick={onRetry}>重试</button></div>
+                        : loading && !ads.length ? <div className="ad-list-message" role="status">正在加载素材…</div>
+                        : !rows.length ? <div className="management-empty">暂无符合条件的已有广告素材</div>
+                        : <VirtualAdGrid ads={pageRows} onEdit={onEdit} onCopy={onCopy} onDelete={onDelete} onClick={onDetail} />}
+                </div>}
+
             </div>
-            <div className="management-list-footer">
+            <div className="management-list-footer" hidden={view !== 'list' && view !== 'materials'}>
                 <span role="status">{error ? '数据读取失败' : loading && !ads.length ? '正在读取数据…' : `${hasMore ? '已加载' : '共'} ${rows.length} 条${query ? '匹配广告' : '广告'} · 每页 ${PAGE_SIZE} 条`}</span>
                 <nav className="management-pagination" aria-label="广告分页">
                     <button type="button" className="btn btn-default" disabled={currentPage === 1 || loading || !!error} onClick={() => setPage(currentPage - 1)}>上一页</button>
@@ -168,7 +174,11 @@ export default function AdManagement(props: AdManagementProps) {
                 </nav>
             </div>
         </section>
-        <p className="management-data-scope">统计范围：{query ? `搜索“${query}”后，` : ''}当前筛选的 {filtered.length} 条已加载广告。出价是配置值，点击为累计值。</p>
-        <DataDashboard ads={filtered} />
+        {view === 'analytics' && <DataDashboard ads={filtered}
+            scope={error ? <div className="ad-list-message" role="alert">{error}<button className="btn btn-default" onClick={onRetry}>重试</button></div>
+                : loading && !ads.length ? <p role="status">正在加载广告数据…</p>
+                : <p className="management-data-scope">统计范围：{query ? `搜索“${query}”后，` : ''}当前筛选的 {filtered.length} 条已加载广告。出价是配置值，点击为累计值。</p>}
+            loadMore={hasMore ? <button className="btn btn-default" disabled={loading} onClick={() => void onLoadMore()}>{loading ? '加载中…' : '加载更多广告数据'}</button> : undefined}
+        />}
     </>;
 }

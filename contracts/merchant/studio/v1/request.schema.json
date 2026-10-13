@@ -1,0 +1,484 @@
+{
+  "Brief": {
+    "type": "object",
+    "properties": {
+      "brand_id": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_-]{1,100}$"
+      },
+      "subject_type": {
+        "enum": [
+          "product",
+          "service",
+          "store",
+          "event",
+          "undecided"
+        ]
+      },
+      "subject_description": {
+        "type": "string",
+        "maxLength": 4000
+      },
+      "objective": {
+        "enum": [
+          "awareness",
+          "traffic",
+          "leads",
+          "appointments",
+          "sales",
+          "undecided"
+        ]
+      },
+      "idea": {
+        "type": "string",
+        "maxLength": 4000
+      },
+      "confirmed_facts": {
+        "type": "array",
+        "maxItems": 20,
+        "items": {
+          "type": "string",
+          "maxLength": 500
+        }
+      },
+      "asset_refs": {
+        "type": "array",
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "properties": {
+            "asset_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{1,100}$"
+            },
+            "role": {
+              "enum": [
+                "subject_photo",
+                "existing_ad",
+                "style_reference"
+              ]
+            }
+          },
+          "required": [
+            "asset_id",
+            "role"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "bid_basis": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "contribution_minor": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000000
+          },
+          "purchase_probability": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "ad_share": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "channel",
+          "contribution_minor",
+          "purchase_probability",
+          "ad_share"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "brand_id",
+      "subject_type",
+      "subject_description",
+      "objective",
+      "idea",
+      "confirmed_facts",
+      "asset_refs"
+    ],
+    "additionalProperties": false
+  },
+  "Revision": {
+    "type": "object",
+    "properties": {
+      "expected_revision": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "brief": {
+        "type": "object",
+        "properties": {
+          "brand_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,100}$"
+          },
+          "subject_type": {
+            "enum": [
+              "product",
+              "service",
+              "store",
+              "event",
+              "undecided"
+            ]
+          },
+          "subject_description": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "objective": {
+            "enum": [
+              "awareness",
+              "traffic",
+              "leads",
+              "appointments",
+              "sales",
+              "undecided"
+            ]
+          },
+          "idea": {
+            "type": "string",
+            "maxLength": 4000
+          },
+          "confirmed_facts": {
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "maxLength": 500
+            }
+          },
+          "asset_refs": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "properties": {
+                "asset_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,100}$"
+                },
+                "role": {
+                  "enum": [
+                    "subject_photo",
+                    "existing_ad",
+                    "style_reference"
+                  ]
+                }
+              },
+              "required": [
+                "asset_id",
+                "role"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "bid_basis": {
+            "type": "object",
+            "properties": {
+              "channel": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "contribution_minor": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100000000
+              },
+              "purchase_probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "ad_share": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "channel",
+              "contribution_minor",
+              "purchase_probability",
+              "ad_share"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "brand_id",
+          "subject_type",
+          "subject_description",
+          "objective",
+          "idea",
+          "confirmed_facts",
+          "asset_refs"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "expected_revision",
+      "brief"
+    ],
+    "additionalProperties": false
+  },
+  "Session": {
+    "type": "object",
+    "properties": {
+      "brief_id": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_-]{1,100}$"
+      },
+      "brief_revision": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "required": [
+      "brief_id",
+      "brief_revision"
+    ],
+    "additionalProperties": false
+  },
+  "Turn": {
+    "type": "object",
+    "properties": {
+      "expected_revision": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "message": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000
+      }
+    },
+    "required": [
+      "expected_revision",
+      "message"
+    ],
+    "additionalProperties": false
+  },
+  "Decision": {
+    "type": "object",
+    "properties": {
+      "expected_revision": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "decision": {
+        "enum": [
+          "accept",
+          "reject",
+          "modify"
+        ]
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 1000
+      },
+      "concept": {
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Title",
+            "type": "string"
+          },
+          "scenario": {
+            "maxLength": 500,
+            "minLength": 1,
+            "title": "Scenario",
+            "type": "string"
+          },
+          "copy": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Copy",
+            "type": "string"
+          },
+          "script": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Script",
+            "type": "string"
+          },
+          "video_prompt": {
+            "maxLength": 3000,
+            "minLength": 1,
+            "title": "Video Prompt",
+            "type": "string"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 8,
+            "title": "Assumptions",
+            "type": "array"
+          }
+        },
+        "required": [
+          "title",
+          "scenario",
+          "copy",
+          "script",
+          "video_prompt"
+        ],
+        "title": "Concept",
+        "type": "object"
+      }
+    },
+    "required": [
+      "expected_revision",
+      "decision",
+      "reason"
+    ],
+    "additionalProperties": false
+  },
+  "Video": {
+    "type": "object",
+    "properties": {
+      "expected_revision": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "output_type": {
+        "enum": [
+          "image",
+          "video"
+        ]
+      },
+      "confirm_generation": {
+        "type": "boolean"
+      },
+      "spec": {
+        "type": "object",
+        "properties": {
+          "duration": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 12
+          },
+          "resolution": {
+            "enum": [
+              "480p",
+              "720p",
+              "1080p"
+            ]
+          },
+          "ratio": {
+            "enum": [
+              "16:9",
+              "9:16",
+              "1:1",
+              "4:3",
+              "3:4",
+              "21:9",
+              "adaptive"
+            ]
+          }
+        },
+        "required": [
+          "duration",
+          "resolution",
+          "ratio"
+        ],
+        "additionalProperties": false
+      },
+      "asset_id": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_-]{1,100}$"
+      }
+    },
+    "required": [
+      "expected_revision",
+      "output_type",
+      "confirm_generation",
+      "spec"
+    ],
+    "additionalProperties": false
+  },
+  "Review": {
+    "type": "object",
+    "properties": {
+      "expected_revision": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "decision": {
+        "enum": [
+          "approve",
+          "reject"
+        ]
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 1000
+      }
+    },
+    "required": [
+      "expected_revision",
+      "decision",
+      "reason"
+    ],
+    "additionalProperties": false
+  },
+  "Draft": {
+    "type": "object",
+    "properties": {
+      "expected_revision": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120
+      }
+    },
+    "required": [
+      "expected_revision",
+      "title"
+    ],
+    "additionalProperties": false
+  },
+  "Cancel": {
+    "type": "object",
+    "properties": {
+      "confirm_cancel": {
+        "const": true
+      }
+    },
+    "required": [
+      "confirm_cancel"
+    ],
+    "additionalProperties": false
+  },
+  "Retry": {
+    "type": "object",
+    "properties": {
+      "confirm_retry": {
+        "const": true
+      }
+    },
+    "required": [
+      "confirm_retry"
+    ],
+    "additionalProperties": false
+  }
+}

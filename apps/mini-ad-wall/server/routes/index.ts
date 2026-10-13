@@ -5,8 +5,11 @@ import formRoutes from './form.routes';
 import aiRoutes from './ai.routes';
 import chunkUploadRoutes from './chunk-upload.routes';
 import marketingRoutes from './marketing.routes';
+import studioRoutes from './studio.routes';
 
 function registerRoutes(app: Koa): void {
+    app.use(studioRoutes.routes() as unknown as Koa.Middleware);
+    app.use(studioRoutes.allowedMethods() as unknown as Koa.Middleware);
     app.use(marketingRoutes.routes() as unknown as Koa.Middleware);
     app.use(marketingRoutes.allowedMethods() as unknown as Koa.Middleware);
     app.use(agentRoutes.routes() as unknown as Koa.Middleware);

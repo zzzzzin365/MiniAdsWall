@@ -1,0 +1,166 @@
+{
+  "scope": "Assistant source/reference review of 7 complete test pairs; not an independent human review",
+  "raw_report": "docs/evidence/rag-clef-lightning-test.json",
+  "raw_report_sha256": "a36bad6472b01e479eb75d1d57875edfa15c8edce87baa2597dee05d0a3ebf1a",
+  "attempted_pairs": 12,
+  "planned_pairs": 56,
+  "complete_pairs": 7,
+  "answerable_complete_pairs": 3,
+  "thresholds_calibrated": false,
+  "stop_reason": "OpenRouter 429: free-models-per-day; account total credits 0. No funds purchased.",
+  "quality_scope": "Failed or ungraded pairs excluded from quality denominators, retained in raw report. Sample too small and nonrandom completion to establish advantage.",
+  "summary": {
+    "baseline": {
+      "factual_errors": 1,
+      "false_refusals": 0,
+      "correct": 5,
+      "median_service_ms_on_complete_pairs": 6163.98,
+      "median_passage_scoring_ms_on_complete_pairs": 2198.66
+    },
+    "gated": {
+      "factual_errors": 1,
+      "false_refusals": 2,
+      "correct": 4,
+      "median_service_ms_on_complete_pairs": 3613.2,
+      "median_passage_scoring_ms_on_complete_pairs": 1116.07
+    }
+  },
+  "reviews": [
+    {
+      "case_id": "S04-CTR",
+      "answerable": true,
+      "grades": {
+        "baseline": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        },
+        "gated": {
+          "factual_error": false,
+          "false_refusal": true,
+          "correct": false
+        }
+      },
+      "notes": [
+        "677/18300约3.70%；LLM正确，Clef组后续充分性LLM误称缺曝光。"
+      ]
+    },
+    {
+      "case_id": "S04-CPC",
+      "answerable": true,
+      "grades": {
+        "baseline": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        },
+        "gated": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        }
+      },
+      "notes": [
+        "548*0.52=284.96，两组正确。"
+      ]
+    },
+    {
+      "case_id": "S04-NO_IMPRESSIONS",
+      "answerable": false,
+      "grades": {
+        "baseline": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        },
+        "gated": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        }
+      },
+      "notes": [
+        "确实缺曝光，两组拒答正确。"
+      ]
+    },
+    {
+      "case_id": "S04-FUTURE_PROFIT",
+      "answerable": false,
+      "grades": {
+        "baseline": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": false
+        },
+        "gated": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        }
+      },
+      "notes": [
+        "问题不可回答。Clef组拒绝估算并要求加价后收入成本变化及增量模型，符合核心参考。自动评审错误将answerable视为true，且把排序分当利润依据。LLM组未指出未来因果或预测依据，维持correct=false。",
+        "两组均未虚构增量利润数字。"
+      ]
+    },
+    {
+      "case_id": "S04-WINDOW_CONFLICT",
+      "answerable": false,
+      "grades": {
+        "baseline": {
+          "factual_error": true,
+          "false_refusal": false,
+          "correct": false
+        },
+        "gated": {
+          "factual_error": true,
+          "false_refusal": false,
+          "correct": false
+        }
+      },
+      "notes": [
+        "两组均把单日点击677除以七日曝光128100，得到0.53%；即使附窗口说明也不能当有效CTR。"
+      ]
+    },
+    {
+      "case_id": "S04-PRICE_CONFLICT",
+      "answerable": false,
+      "grades": {
+        "baseline": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        },
+        "gated": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        }
+      },
+      "notes": [
+        "两组未报确定金额，要求补确定单价；Clef组要求核实合同或流水。两组均未明确解释两条单价冲突，说明质量有限。"
+      ]
+    },
+    {
+      "case_id": "S05-CTR",
+      "answerable": true,
+      "grades": {
+        "baseline": {
+          "factual_error": false,
+          "false_refusal": false,
+          "correct": true
+        },
+        "gated": {
+          "factual_error": false,
+          "false_refusal": true,
+          "correct": false
+        }
+      },
+      "notes": [
+        "数据中已有曝光16400，却称缺曝光，与S04-CTR同类，统一记误拒答；没有给出错误CTR数字，不重复记事实错误。",
+        "1164/16400约7.10%；LLM正确，Clef组后续充分性LLM误称缺曝光。"
+      ]
+    }
+  ],
+  "clef_estimated_cost_usd_all_test_attempts": 0.0023683199999999997
+}

@@ -83,7 +83,8 @@ export interface AdStrategyInput {
 
 export interface AdStrategyOutput {
     targetUsers: string[];
-    bidSuggestion: number;
+    bidSuggestion: number | null;
+    recommendedObjective?: string;
     interests: string[];
     reason: string;
 }

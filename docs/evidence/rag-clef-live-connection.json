@@ -1,0 +1,27 @@
+{
+  "scope": "Live Clef connection smoke check only; not RAG accuracy evaluation",
+  "token_active": true,
+  "status": "completed",
+  "scores": [
+    {
+      "id": "smoke-contract",
+      "support": 0.9912
+    }
+  ],
+  "calls": [
+    {
+      "success": true,
+      "model": "clef",
+      "stage": "passage_scoring",
+      "provider": "cloudflare",
+      "usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 0,
+        "cost": null
+      },
+      "estimated_cost_usd": 6.311999999999999e-05,
+      "resolved_model": "clef",
+      "duration_ms": 831.98
+    }
+  ]
+}

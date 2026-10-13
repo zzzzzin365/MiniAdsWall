@@ -212,6 +212,8 @@ class ChatIntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.env.start()
         self.manager = MCPToolManager.__new__(MCPToolManager)
         self.manager._model = "test"
+        self.manager.rewrite_query = AsyncMock(side_effect=lambda query, n=3: [query, query + " 运营规则"])
+        self.manager._rerank = AsyncMock(side_effect=lambda query, items, k: items[:k])
         self.manager.call = AsyncMock(return_value=ToolResult(True, RuntimeGateTests.chunks, "knowledge_search"))
         self.memory = Memory()
         async def preflight(request):
@@ -244,6 +246,51 @@ class ChatIntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn("计费单价固定", context)
         self.assertNotIn("加价可改变", context)
         self.assertEqual(self.memory.messages[-1]["knowledge_evidence"]["rejected_ids"], ["b"])
+        self.manager.rewrite_query.assert_awaited_once()
+        self.assertEqual(self.manager.call.await_count, 2)
+        self.assertEqual(len(self.manager._rerank.call_args.args[1]), 2)
+        # Exactly the two evidence calls, after retrieval and with business data.
+        self.assertEqual(len(self.manager._client.inputs), 2)
+
+    async def test_creative_request_also_uses_enhanced_retrieval(self):
+        async def preflight(request):
+            request.intent = IntentCategory.CREATIVE_GENERATION
+            return None
+        self.orchestrator.preflight.side_effect = preflight
+        self.manager._client = Client([scores(), sufficient("a")])
+        response = await self.chat()
+        self.assertEqual(response.status_code, 200)
+        self.manager.rewrite_query.assert_awaited_once()
+        self.assertIn("creative_brief", self.manager._client.inputs[-1]["business_data"])
+        self.orchestrator.run.assert_awaited_once()
+
+    async def test_rewrite_timeout_falls_back_to_original_recall(self):
+        async def slow(*args, **kwargs):
+            await asyncio.sleep(1)
+        self.manager.rewrite_query.side_effect = slow
+        result = await self.manager.search_with_rewrite("knowledge_search", "广告", top_k=3,
+            check_retrieved_evidence=False, stage_timeout=.01)
+        self.assertTrue(result.success)
+        self.manager.call.assert_awaited_once_with("knowledge_search", {"query": "广告", "top_k": 5},
+                                                 None, use_cache=True)
+
+    async def test_rerank_timeout_keeps_recalled_evidence(self):
+        async def slow(*args, **kwargs):
+            await asyncio.sleep(1)
+        self.manager._rerank.side_effect = slow
+        result = await self.manager.search_with_rewrite("knowledge_search", "广告", top_k=3,
+            check_retrieved_evidence=False, stage_timeout=.01)
+        self.assertTrue(result.success)
+        self.assertEqual([x["id"] for x in result.data], ["a", "b"])
+        self.assertFalse(result.reranked)
+
+    async def test_one_failed_recall_keeps_other_query_results(self):
+        self.manager.call.side_effect = [RuntimeError("offline"),
+                                        ToolResult(True, RuntimeGateTests.chunks, "knowledge_search")]
+        result = await self.manager.search_with_rewrite("knowledge_search", "广告", top_k=3,
+                                                       check_retrieved_evidence=False)
+        self.assertTrue(result.success)
+        self.assertEqual([x["id"] for x in result.data], ["a", "b"])
 
     async def test_http_insufficient_skips_agent_and_profile_and_reports_missing(self):
         self.manager._client = Client([scores(), insufficient("转化数据", "成本数据")])
@@ -260,6 +307,13 @@ class ChatIntegrationTests(unittest.IsolatedAsyncioTestCase):
         response = await self.chat()
         self.assertEqual(response.json()["knowledge_evidence"]["status"], "unavailable")
         self.assertEqual(response.json()["decision_reason"], "rag_evidence_unavailable")
+        self.orchestrator.run.assert_not_awaited()
+
+    async def test_all_recall_failures_are_visible_and_skip_agent(self):
+        self.manager.call.side_effect = RuntimeError("offline")
+        self.manager._client = Client([insufficient("知识规则")])
+        response = await self.chat()
+        self.assertEqual(response.json()["knowledge_evidence"]["status"], "unavailable")
         self.orchestrator.run.assert_not_awaited()
 
     async def test_successful_empty_retrieval_is_not_a_failure(self):

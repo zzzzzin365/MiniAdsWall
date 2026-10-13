@@ -27,6 +27,8 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Response, UploadFile, File, Request
 from fastapi.responses import JSONResponse
 from api.generation import router as generation_router
+from api.video import router as video_router
+from api.studio import router as studio_router
 from core.faq_cache import configured_cache
 from core.model_gate import close_model_gate, ModelBusy
 from core.rag_evidence import (EvidenceConfig, KnowledgeContext,
@@ -64,6 +66,10 @@ CHAT_TIMEOUT_SECONDS = 28.0
 
 
 def _anthropic_cfg() -> Dict[str, Any]:
+    from core.model_client import business_model_config
+    qwen = business_model_config()
+    if qwen:
+        return qwen
     key = os.getenv("ANTHROPIC_API_KEY", "")
     if not key:
         raise RuntimeError("未设置 ANTHROPIC_API_KEY")
@@ -301,6 +307,8 @@ app = FastAPI(
 )
 
 app.include_router(generation_router)
+app.include_router(video_router)
+app.include_router(studio_router)
 
 
 @app.middleware("http")
@@ -639,7 +647,7 @@ def _compact_tool_data(data: Any, max_chars: int = 1800) -> str:
 async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
                                      business_data: Optional[Dict[str, Any]] = None,
                                      request_id: Optional[str] = None) -> KnowledgeContext:
-    """Single local recall, then bounded evidence checks before generation."""
+    """Rewrite, parallel recall and rerank, then check once with business data."""
     if not _should_use_knowledge(message):
         return KnowledgeContext()
     config = EvidenceConfig.from_env()
@@ -650,8 +658,9 @@ async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
     chunks, retrieval_error = [], None
     try:
         result = await asyncio.wait_for(
-            _tool_manager.call("knowledge_search", {"query": message, "top_k": top_k}),
-            timeout=3.0,
+            _tool_manager.search_with_rewrite("knowledge_search", message, top_k=top_k,
+                                               check_retrieved_evidence=False),
+            timeout=9.5,
         )
         if not result.success or not isinstance(result.data, list) or any(isinstance(x, dict) and x.get("fallback") for x in result.data):
             retrieval_error = "retrieval_failed"

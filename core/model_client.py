@@ -26,9 +26,13 @@ def client_options(api_key: str, base_url=None):
 class OpenRouterClient:
     """Adapter for the text-only messages.create calls used by this project."""
 
-    def __init__(self, api_key, transport=None):
+    def __init__(self, api_key, transport=None, base_url=None):
         self.api_key = api_key
         self.transport = transport
+        self.url = (base_url.rstrip("/") + "/chat/completions") if base_url else "https://openrouter.ai/api/v1/chat/completions"
+        host = urlparse(base_url).hostname or "" if base_url else ""
+        self.is_qwen = "dashscope" in host
+        self.is_seed = host == "ark.cn-beijing.volces.com"
         self.messages = self
 
     async def create(self, *, model, messages, max_tokens, system=None,
@@ -37,11 +41,17 @@ class OpenRouterClient:
         outgoing = ([{"role": "system", "content": system}] if system else []) + messages
         payload = {"model": model, "messages": outgoing, "max_tokens": max_tokens,
                    "temperature": temperature, "reasoning": {"enabled": False}}
+        if self.is_qwen:
+            payload.pop("reasoning")
+            payload["enable_thinking"] = False
+        if self.is_seed:
+            payload.pop("reasoning")
+            payload["thinking"] = {"type": "disabled"}
         # A wall-clock bound also covers slow trickles that reset socket timeouts.
         async with asyncio.timeout(timeout):
             async with httpx.AsyncClient(timeout=timeout, transport=self.transport) as client:
                 response = await client.post(
-                    "https://openrouter.ai/api/v1/chat/completions",
+                    self.url,
                     headers={"Authorization": f"Bearer {self.api_key}"}, json=payload)
                 response.raise_for_status()
                 try:
@@ -75,6 +85,31 @@ class GovernedClient:
 
 
 def create_model_client(api_key, base_url=None):
+    if base_url and ("dashscope" in (urlparse(base_url).hostname or "") or urlparse(base_url).hostname == "ark.cn-beijing.volces.com"):
+        return GovernedClient(OpenRouterClient(api_key, base_url=base_url))
     if base_url and urlparse(base_url).hostname == "openrouter.ai":
         return GovernedClient(OpenRouterClient(api_key))
     return GovernedClient(AsyncAnthropic(**client_options(api_key, base_url)))
+
+
+def qwen_config():
+    """Select Beijing pay-as-you-go Qwen when a local credential is configured."""
+    import os
+    key = os.getenv("DASHSCOPE_API_KEY", "").strip()
+    if not key:
+        return None
+    return {"api_key": key, "base_url": os.getenv("QWEN_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1").rstrip("/"),
+            "model": os.getenv("QWEN_MODEL", "qwen3.7-flash-2026-07-15")}
+
+
+def business_model_config():
+    """Seed credentials take priority; explicit selection fails closed if missing."""
+    import os
+    provider = os.getenv("LLM_PROVIDER", "").strip().lower()
+    key = os.getenv("ARK_API_KEY", "").strip()
+    if provider == "seed" or (not provider and key):
+        if not key:
+            raise RuntimeError("Seed 已选用，但 ARK_API_KEY 未配置")
+        return {"api_key": key, "base_url": os.getenv("ARK_BASE_URL", "https://ark.cn-beijing.volces.com/api/v3").rstrip("/"),
+                "model": os.getenv("ARK_MODEL", "doubao-seed-2-1-lite-260915"), "provider": "seed"}
+    return qwen_config()

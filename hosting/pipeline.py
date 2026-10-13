@@ -12,6 +12,7 @@ from core.skill_loader import SkillManager
 from core.rag_evidence import (EvidenceConfig, blocked_response, check_evidence,
                                prepare_chunks, render_knowledge)
 from mcp.ads_tools import ads_summary_handler, ad_performance_search_handler, bid_simulation_handler
+from mcp.tool_manager import MCPToolManager, Tool
 from .repository import Conflict, dumps
 from .objects import preview
 from .streaming import stream_text
@@ -41,22 +42,33 @@ class Pipeline:
         self.repo,self.sandbox,self.redis=repo,sandbox,redis
         EvidenceConfig.from_env()
         key=os.getenv('ANTHROPIC_API_KEY') or os.getenv('OPENROUTER_API_KEY')
-        if not key: raise RuntimeError('model credential is required for Worker')
+        if not key and not os.getenv('DASHSCOPE_API_KEY') and not os.getenv('ARK_API_KEY'): raise RuntimeError('model credential is required for Worker')
         base=os.getenv('ANTHROPIC_BASE_URL') or ('https://openrouter.ai/api' if os.getenv('OPENROUTER_API_KEY') else None)
         model=os.getenv('ANTHROPIC_MODEL') or os.getenv('OPENROUTER_MODEL','claude-3-5-sonnet-20241022')
+        from core.model_client import business_model_config
+        qwen = business_model_config()
+        if qwen:
+            key, base, model = qwen["api_key"], qwen["base_url"], qwen["model"]
         skills=SkillManager(root_dir=os.getenv('ECHOMIND_SKILLS_DIR','skills'),max_prompt_chars=5000); skills.load()
         self.orchestrator=AgentOrchestrator(api_key=key,base_url=base,model=model,skill_manager=skills)
         self.orchestrator._decision_engine.pending_store=SQLActions(repo)
         self.orchestrator._decision_engine.clarification_store=SQLClarifications(repo,600)
         self.kb=None
+        self.rag_manager=None
         if os.getenv('HOSTING_RAG_ENABLED','false')=='true':
             from mcp.knowledge_base import KnowledgeBase
             # RAG is optional; a broken configured service must fail startup, not silently disappear.
             self.kb=KnowledgeBase(chroma_host=os.getenv('CHROMA_HOST','localhost'), chroma_port=int(os.getenv('CHROMA_PORT','8001')), chroma_path=os.getenv('CHROMA_PERSIST_DIRECTORY','data/chroma'))
+            self.rag_manager=MCPToolManager(api_key=key,base_url=base,model=model)
+            self.rag_manager.register(Tool(name='knowledge_search',description='检索运营知识',
+                handler=self.kb.search_handler,schema={'type':'object','properties':{
+                    'query':{'type':'string'},'top_k':{'type':'integer'}},'required':['query']},
+                cache_ttl=300,timeout_s=3))
 
     async def close(self):
         seen=set()
         clients=[self.orchestrator._intent_recognizer.client]
+        if self.rag_manager: clients.append(self.rag_manager._client)
         for pool in self.orchestrator._pool.values(): clients.extend(a._client for a in pool)
         for client in clients:
             if id(client) not in seen:
@@ -140,11 +152,13 @@ class Pipeline:
         if agent is None: raise RuntimeError('agent_unavailable')
         if self.kb:
             async def search():
-                value=await asyncio.to_thread(self.kb.search,req.message,3)
-                return {'output':dumps(value),'status':'succeeded','exit_code':0}
+                value=await self.rag_manager.search_with_rewrite('knowledge_search',req.message,top_k=3,
+                                                                check_retrieved_evidence=False)
+                if not value.success: raise RuntimeError('retrieval_failed')
+                return {'output':dumps(value.data),'status':'succeeded','exit_code':0}
             chunks, retrieval_error = [], None
             try:
-                result=await ctx.tool('knowledge_search',{'query':req.message},search,3)
+                result=await ctx.tool('knowledge_search',{'query':req.message},search,9.5)
                 values=json.loads(result['output'])
                 if result.get('status') != 'succeeded' or not isinstance(values,list):
                     retrieval_error='retrieval_failed'

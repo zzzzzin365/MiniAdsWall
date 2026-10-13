@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS merchant_studio_objects (
+    id VARCHAR(100) NOT NULL,
+    revision INT NOT NULL,
+    kind ENUM('brief','session','recipe','asset','output','draft') NOT NULL,
+    brand_id VARCHAR(100) NOT NULL,
+    environment ENUM('synthetic','sandbox','production') NOT NULL,
+    created_by VARCHAR(190) NOT NULL,
+    data JSON NOT NULL,
+    created_at DATETIME(3) NOT NULL,
+    PRIMARY KEY(id,revision),
+    INDEX ix_studio_scope(brand_id,environment,kind,created_at,id),
+    FOREIGN KEY (brand_id,environment) REFERENCES marketing_brands(id,environment),
+    CHECK (revision > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_bin;
+CREATE TABLE IF NOT EXISTS merchant_studio_jobs (
+    id VARCHAR(100) NOT NULL PRIMARY KEY,
+    brand_id VARCHAR(100) NOT NULL,
+    environment ENUM('synthetic','sandbox','production') NOT NULL,
+    created_by VARCHAR(190) NOT NULL,
+    session_id VARCHAR(100) NOT NULL,
+    kind ENUM('text','video') NOT NULL,
+    status ENUM('queued','running','submitted','succeeded','failed','submission_unknown','cancelled','blocked') NOT NULL,
+    input JSON NOT NULL,
+    result JSON NULL,
+    error_code VARCHAR(100) NULL,
+    provider_task_id VARCHAR(200) NULL,
+    input_hash CHAR(64) NOT NULL,
+    lease_token CHAR(36) NULL,
+    lease_until DATETIME(3) NULL,
+    attempts INT NOT NULL DEFAULT 0,
+    created_at DATETIME(3) NOT NULL,
+    updated_at DATETIME(3) NOT NULL,
+    UNIQUE KEY uq_studio_provider_task(provider_task_id),
+    INDEX ix_studio_queue(status,lease_until,created_at),
+    INDEX ix_studio_session(session_id,created_at,id),
+    FOREIGN KEY (brand_id,environment) REFERENCES marketing_brands(id,environment),
+    CHECK (attempts >= 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_bin;

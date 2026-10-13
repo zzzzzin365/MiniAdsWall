@@ -1,0 +1,236 @@
+{
+  "$defs": {
+    "Concept": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "scenario": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Scenario",
+          "type": "string"
+        },
+        "copy": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Copy",
+          "type": "string"
+        },
+        "script": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Script",
+          "type": "string"
+        },
+        "video_prompt": {
+          "maxLength": 3000,
+          "minLength": 1,
+          "title": "Video Prompt",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "scenario",
+        "copy",
+        "script",
+        "video_prompt"
+      ],
+      "title": "Concept",
+      "type": "object"
+    },
+    "Delivery": {
+      "additionalProperties": false,
+      "properties": {
+        "objective": {
+          "enum": [
+            "awareness",
+            "traffic",
+            "leads",
+            "appointments",
+            "sales",
+            "undecided"
+          ],
+          "title": "Objective",
+          "type": "string"
+        },
+        "audience_hypotheses": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Audience Hypotheses",
+          "type": "array"
+        },
+        "test_plan": {
+          "maxLength": 1500,
+          "title": "Test Plan",
+          "type": "string"
+        },
+        "rationale": {
+          "maxLength": 1500,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "missing_data": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Missing Data",
+          "type": "array"
+        },
+        "bid": {
+          "type": "object",
+          "properties": {
+            "channel": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 100
+            },
+            "billing_model": {
+              "enum": [
+                "CPC",
+                "unknown"
+              ]
+            },
+            "currency": {
+              "const": "CNY"
+            },
+            "amount_minor": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100000000
+            },
+            "status": {
+              "enum": [
+                "estimate",
+                "insufficient_basis"
+              ]
+            }
+          },
+          "required": [
+            "channel",
+            "billing_model",
+            "currency",
+            "amount_minor",
+            "status"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "objective",
+        "audience_hypotheses",
+        "test_plan",
+        "rationale",
+        "missing_data",
+        "bid"
+      ],
+      "title": "Delivery",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "summary": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Summary",
+      "type": "string"
+    },
+    "questions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Questions",
+      "type": "array"
+    },
+    "concepts": {
+      "items": {
+        "$ref": "#/$defs/Concept"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Concepts",
+      "type": "array"
+    },
+    "delivery": {
+      "$ref": "#/$defs/Delivery"
+    },
+    "model": {
+      "const": "deepseek-v4-1-flash-260910"
+    },
+    "policy": {
+      "enum": [
+        "strict-two-model-v1",
+        "seed-understanding-v2"
+      ]
+    },
+    "status": {
+      "const": "draft"
+    },
+    "understanding": {
+      "type": "object",
+      "required": [
+        "status",
+        "source",
+        "limitations"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "text_only",
+            "capability_unavailable",
+            "seed_understood"
+          ]
+        },
+        "source": {
+          "enum": [
+            "merchant_text",
+            "seed_analysis"
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "summary",
+    "questions",
+    "concepts",
+    "delivery",
+    "model",
+    "policy",
+    "status",
+    "understanding"
+  ],
+  "title": "Result",
+  "type": "object"
+}

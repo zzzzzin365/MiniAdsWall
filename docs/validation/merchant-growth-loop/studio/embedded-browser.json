@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": [
+    "two-existing-tabs",
+    "no-standalone-entry",
+    "retained-unsaved-form-across-tabs",
+    "creative-generation-in-tab",
+    "legacy-url-redirect",
+    "320px-no-overflow"
+  ],
+  "errors": []
+}

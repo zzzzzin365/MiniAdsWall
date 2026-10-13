@@ -1,0 +1,163 @@
+对话(Chat) API
+POST https://ark.cn-beijing.volces.com/api/v3/chat/completions​
+发送包含文本、图片、视频、音频等模态的消息列表，模型将生成对话中的下一条消息。​
+鉴权​
+本接口支持鉴权方式如下，详情请参见 Base URL 及鉴权。​
+【推荐】API Key 鉴权，请在 API Key 管理 页面，获取长效 API Key。​
+【可选】Access Key 鉴权，请在 Access Key 管理 页面，获取 Access Key。​
+​
+​
+请求参数​
+Body 参数​
+messages object[] 必选  |  消息列表​
+​
+model string 必选  |  模型 ID​
+​
+frequency_penalty number 默认值 0.0  |  频率惩罚系数​
+​
+logit_bias object 默认值 null  |  Token 偏差​
+​
+logprobs boolean 默认值 false  |  返回对数概率​
+​
+max_completion_tokens integer  |  最大输出长度​
+​
+max_tokens integer 默认值 4096  |  最大回答长度​
+​
+parallel_tool_calls boolean 默认值 true  |  并行工具调用​
+​
+presence_penalty number 默认值 0.0  |  存在惩罚系数​
+​
+prompt_cache_key string  |  缓存路由标识​
+​
+reasoning_effort string  |  思考深度​
+​
+response_format object  |  回答格式​
+​
+service_tier string 默认值 auto  |  推理模式​
+​
+stop string / string[] 默认值 null  |  停止词​
+​
+stream boolean 默认值 false  |  流式返回​
+​
+stream_options object 默认值 null  |  流式选项​
+​
+temperature number 默认值 1.0  |  采样温度​
+​
+thinking object  |  深度思考开关​
+​
+tool_choice string / object  |  工具调用控制​
+​
+tools object[] 默认值 null  |  工具列表​
+​
+top_logprobs integer 默认值 0  |  返回概率数量​
+​
+top_p number 默认值 0.7  |  核采样阈值​
+​
+​
+响应参数​
+非流式调用响应​
+choices object[]  |  生成结果​
+​
+created integer  |  创建时间​
+​
+id string  |  请求 ID​
+​
+model string  |  模型名称​
+​
+object string  |  对象类型​
+​
+service_status object  |  服务状态​
+​
+service_tier string  |  推理模式​
+​
+usage object  |  Token 用量​
+​
+​
+流式调用响应​
+choices object[]  |  生成结果​
+​
+created integer  |  创建时间​
+​
+id string  |  请求 ID​
+​
+model string  |  模型名称​
+​
+object string  |  对象类型​
+​
+service_status object  |  服务状态​
+​
+service_tier string  |  推理模式​
+​
+usage object  |  Token 用量​
+​
+​
+默认
+流式输出
+续写模式
+图片理解
+视频理解
+音频理解
+深度推理
+发起调试等同于请求真实调用，可能产生云产品费用，请谨慎操作！
+
+Request
+
+cURL
+curl https://ark.cn-beijing.volces.com/api/v3/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $ARK_API_KEY" \
+  -d '{
+    "model": "doubao-seed-2-1-pro-260915",
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant."
+        },
+        {
+            "role": "user",
+            "content": "Hello!"
+        }
+    ]
+  }'
+立即调试
+
+Response
+
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "Hello! How can I help you today?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1742631811,
+  "id": "0217426318107460cfa43dc3f3683b1de1c09624ff49085a456ac",
+  "model": "doubao-seed-2-1-pro-260915",
+  "service_tier": "default",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 9,
+    "prompt_tokens": 19,
+    "total_tokens": 28,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}
+最近更新时间：2026.10.09 18:00:27
+这个页面对您有帮助吗？
+有用
+无用
+上一篇：
+Base URL及鉴权
+创建 Response
+下一篇
+rangeDom

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "viewport": [
+    1280,
+    320
+  ],
+  "scope": "real MySQL + Koa + Worker; provider fixture based on real DeepSeek result, no paid video submitted",
+  "checks": [
+    "create",
+    "dialogue",
+    "approve",
+    "save-copy-draft",
+    "explicit-video-confirmation",
+    "reload-history",
+    "mobile-no-overflow"
+  ],
+  "errors": []
+}

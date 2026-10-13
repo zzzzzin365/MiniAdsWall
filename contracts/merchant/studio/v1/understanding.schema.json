@@ -1,0 +1,117 @@
+{
+  "$defs": {
+    "Observation": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "frame_index": {
+          "maximum": 7,
+          "minimum": 0,
+          "title": "Frame Index",
+          "type": "integer"
+        },
+        "asset_id": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "time_ms": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 60000
+        }
+      },
+      "required": [
+        "description",
+        "frame_index",
+        "asset_id",
+        "time_ms"
+      ],
+      "title": "Observation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "subject": {
+      "maxLength": 500,
+      "minLength": 1,
+      "title": "Subject",
+      "type": "string"
+    },
+    "observations": {
+      "items": {
+        "$ref": "#/$defs/Observation"
+      },
+      "maxItems": 15,
+      "title": "Observations",
+      "type": "array"
+    },
+    "source_claims": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Source Claims",
+      "type": "array"
+    },
+    "marketing_summary": {
+      "maxLength": 1500,
+      "title": "Marketing Summary",
+      "type": "string"
+    },
+    "uncertainties": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Uncertainties",
+      "type": "array"
+    },
+    "asset_id": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "model": {
+      "type": "string",
+      "pattern": "^doubao-seed-"
+    },
+    "status": {
+      "const": "succeeded"
+    },
+    "frame_count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "limitations": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "maxLength": 500
+      }
+    }
+  },
+  "required": [
+    "subject",
+    "observations",
+    "source_claims",
+    "marketing_summary",
+    "uncertainties",
+    "asset_id",
+    "model",
+    "status",
+    "frame_count",
+    "limitations"
+  ],
+  "title": "MediaUnderstanding",
+  "type": "object"
+}

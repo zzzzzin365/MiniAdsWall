@@ -209,10 +209,13 @@ def start(no_open):
     if not healthy(SERVICES['koa'][0], token):
         run('server-build', ['npm', 'run', 'build'], koa, SERVER)
         run('ads-migration', [node, 'dist/scripts/migrate-schema.js', 'up'], koa, SERVER)
-        if koa.get('MARKETING_EVENTS_ENABLED') == 'true':
+        if koa.get('MARKETING_EVENTS_ENABLED') == 'true' or koa.get('MERCHANT_WORKSPACE_ENABLED') == 'true':
             run('marketing-migration', [node, 'dist/scripts/migrate-marketing.js', 'up'], koa, SERVER)
         if koa.get('ADS_RECALL_ENABLED') == 'true':
             raise RuntimeError('演示启动器暂不管理召回进程；请单独启动召回服务，或在演示配置中关闭 ADS_RECALL_ENABLED。')
+    if koa.get('MERCHANT_WORKSPACE_ENABLED') == 'true':
+        run('studio-build', ['npm', 'run', 'build'], koa, SERVER)
+        run('studio-migration', [node, 'dist/scripts/migrate-studio.js', 'up'], koa, SERVER)
     if not healthy(SERVICES['hosting'][0]):
         run('hosting-migration', [PYTHON, '-m', 'hosting.migrate', 'up'], env)
     ensure_http('hosting', [PYTHON, '-m', 'uvicorn', 'hosting.api:app', '--host', '127.0.0.1', '--port', '8002'], env)
@@ -226,6 +229,11 @@ def start(no_open):
             raise RuntimeError(f'Worker 启动失败，查看 {STATE / "worker.log"}')
         say('就绪：hosting Worker（进程存活）')
     ensure_http('koa', [node, 'dist/index.js'], koa, SERVER, token)
+    if koa.get('MERCHANT_WORKSPACE_ENABLED') == 'true':
+        spawn('studio-worker', [node, 'dist/scripts/studio-worker.js'], koa, SERVER)
+        time.sleep(.5)
+        if not alive(records()['studio-worker']):
+            raise RuntimeError('工作台Worker启动失败，检查studio-worker.log')
     ensure_http('web', [node, str(CLIENT / 'node_modules/vite/bin/vite.js'), '--host', '127.0.0.1', '--port', '5173', '--strictPort'], env, CLIENT)
     if not healthy('http://127.0.0.1:5173/api/ads', token):
         raise RuntimeError('前端到 Koa 的转发检查失败，请检查现有前端的 API_PROXY_TARGET。')

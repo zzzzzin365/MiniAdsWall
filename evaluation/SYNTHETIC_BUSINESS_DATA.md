@@ -31,7 +31,7 @@
   --output docs/evidence/rag-business-llm-new-run.json
 ```
 
-真实模型执行会产生提供方调用与费用，需使用有效模型配置。现有脚本尚无 Jev 适配，本次环境也未配置 `TYPESAFE_API_KEY` 或 `JEV_API_KEY`。接通 Jev 后，应先比较“LLM筛片段 vs Jev筛片段”，保留相同检索输入、充分性检查、生成模型与提示。
+真实模型执行会产生提供方调用与费用，需使用有效模型配置。现有脚本尚无 Jev 适配；已加入 Cloudflare Clef 的独立实验入口，比较“LLM筛片段 vs Clef筛片段”，保留相同检索输入、充分性检查、生成模型与提示。配置与命令见 [CLEF_EXPERIMENT.md](CLEF_EXPERIMENT.md)。
 
 目前只完成数据校验与本地广告工具计算对照，没有调用 Jev、没有新模型实验结果。验证记录见 `docs/evidence/rag-business-synthetic-validation.json`。旧 20 题及其历史报告未覆盖。
 

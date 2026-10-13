@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "scope": "UI fixtures; no business writes or paid generation",
+  "widths": [
+    320,
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "checks": [
+    "desktop left/right layout",
+    "unchanged blue gradient",
+    "sidebar account form",
+    "four module views",
+    "refresh restores module",
+    "browser back",
+    "ad pagination",
+    "studio draft survives navigation",
+    "expand/collapse material submodules",
+    "no horizontal page overflow"
+  ],
+  "errors": []
+}

@@ -14,8 +14,8 @@ function getClientIP(ctx: Context): string {
 async function requestLogger(ctx: Context, next: Next): Promise<void> {
     const requestId = ctx.state.requestId;
     const startTime = Date.now();
-    const marketing = ctx.path.startsWith('/api/marketing/');
-    const url = marketing ? ctx.path.replace(/(\/(?:click|media)\/).*/, '$1[redacted]') : ctx.url;
+    const marketing = ctx.path.startsWith('/api/marketing/') || ctx.path.startsWith('/api/merchant/');
+    const url = marketing ? ctx.path.replace(/(\/(?:click|media|public-assets)\/).*/, '$1[redacted]') : ctx.url;
 
     console.log(`[${getTimeString()}] ← ${requestId} | ${ctx.method} ${url} | IP: ${getClientIP(ctx)}`);
 

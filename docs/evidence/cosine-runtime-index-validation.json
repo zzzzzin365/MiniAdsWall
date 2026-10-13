@@ -1,0 +1,12 @@
+{
+  "backend": "local",
+  "collection": "knowledge_base_cosine_v1",
+  "metadata": {
+    "description": "MiniAdsWall Agent RAG 知识库",
+    "hnsw:space": "cosine"
+  },
+  "count": 30,
+  "legacy_preserved": true,
+  "legacy_count": 30,
+  "migration_completed": true
+}

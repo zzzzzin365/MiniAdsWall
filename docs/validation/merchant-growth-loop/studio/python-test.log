@@ -1,0 +1,12 @@
+/Users/admin/MiniAdsWall/.venv/lib/python3.11/site-packages/pydantic/_internal/_fields.py:192: UserWarning: Field name "copy" in "Concept" shadows an attribute in parent "Strict"
+  warnings.warn(
+test_cpc_cap_is_decimal_and_zero_probability_is_not_a_bid (tests.test_studio.StudioTest.test_cpc_cap_is_decimal_and_zero_probability_is_not_a_bid) ... ok
+test_fixed_model_and_no_media_submission (tests.test_studio.StudioTest.test_fixed_model_and_no_media_submission) ... ok
+test_image_not_supported_and_unknown_model_denied (tests.test_studio.StudioTest.test_image_not_supported_and_unknown_model_denied) ... ok
+test_invalid_truncated_and_timeout_do_not_fallback (tests.test_studio.StudioTest.test_invalid_truncated_and_timeout_do_not_fallback) ... ok
+test_visual_analysis_blocked_without_provider_call (tests.test_studio.StudioTest.test_visual_analysis_blocked_without_provider_call) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.022s
+
+OK

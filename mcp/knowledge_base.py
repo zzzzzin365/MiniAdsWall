@@ -32,7 +32,8 @@ class KnowledgeBase:
     不需要额外调用 Anthropic Embeddings API。
     """
 
-    COLLECTION_NAME = "knowledge_base"
+    LEGACY_COLLECTION_NAME = "knowledge_base"
+    COLLECTION_NAME = "knowledge_base_cosine_v1"
 
     def __init__(
         self,
@@ -61,13 +62,52 @@ class KnowledgeBase:
 
         # 使用服务端时不传 embedding_function，让服务端处理
         # 本地模式时也不传，使用 ChromaDB 默认的（会触发模型下载）
-        self._collection = self._client.get_or_create_collection(
-            name=self.COLLECTION_NAME,
-            metadata={"description": "MiniAdsWall Agent RAG 知识库"},
-        )
+        self._open_cosine_collection()
 
         # 启动时幂等写入广告领域默认知识，避免旧客服默认文档污染 AdsAgent RAG。
         self._ensure_default_docs()
+
+    def _open_cosine_collection(self) -> None:
+        """Rebuild the immutable distance index, preserving imported vectors."""
+        self._collection = self._client.get_or_create_collection(
+            name=self.COLLECTION_NAME,
+            metadata={"description": "MiniAdsWall Agent RAG 知识库", "hnsw:space": "cosine"},
+        )
+        metadata = self._collection.metadata or {}
+        if metadata.get("hnsw:space") != "cosine":
+            raise RuntimeError("知识库索引不是 cosine，不能直接修改已有索引距离")
+        # Separate completion record: Chroma 0.5 rejects modifying hnsw:space
+        # metadata even when its value is unchanged. Do not reimport deletions.
+        migrations = self._client.get_or_create_collection("knowledge_base_migration_state")
+        if migrations.get(ids=[self.COLLECTION_NAME], include=[])["ids"]:
+            return
+        from chromadb.errors import InvalidCollectionException
+        try:
+            legacy = self._client.get_collection(self.LEGACY_COLLECTION_NAME)
+        except InvalidCollectionException:
+            migrations.upsert(ids=[self.COLLECTION_NAME], embeddings=[[0.]], documents=["complete: no legacy collection"])
+            return  # No existing knowledge to migrate.
+        # Keep the old collection intact. Interrupted migration resumes by ID.
+        expected = legacy.count()
+        for offset in range(0, expected, 100):
+            rows = legacy.get(limit=100, offset=offset, include=["documents", "metadatas", "embeddings"])
+            existing = set(self._collection.get(ids=rows["ids"], include=[])["ids"])
+            missing = [i for i, doc_id in enumerate(rows["ids"]) if doc_id not in existing]
+            if not missing:
+                continue
+            values = {"ids": [rows["ids"][i] for i in missing],
+                      "embeddings": [rows["embeddings"][i] for i in missing]}
+            if rows["documents"] is not None:
+                values["documents"] = [rows["documents"][i] for i in missing]
+            if rows["metadatas"] is not None:
+                values["metadatas"] = [rows["metadatas"][i] for i in missing]
+            self._collection.upsert(**values)
+            copied = self._collection.get(ids=rows["ids"], include=[])
+            if set(copied["ids"]) != set(rows["ids"]):
+                raise RuntimeError("知识库 cosine 索引迁移不完整")
+        if legacy.count() != expected:
+            raise RuntimeError("迁移过程中旧知识库发生变化，请停止旧版本写入后重试")
+        migrations.upsert(ids=[self.COLLECTION_NAME], embeddings=[[0.]], documents=["complete"])
 
     # ── 文档管理 ──────────────────────────────────────────────────────────────
 
@@ -121,7 +161,7 @@ class KnowledgeBase:
                     "id":       chunk_id,
                     "title":    meta.get("title", ""),
                     "content":  doc,
-                    "score":    round(1.0 - dist, 4),  # ChromaDB 返回距离，转为相似度
+                    "score":    round(1.0 - dist, 4),  # cosine 距离为 1-cos，恢复余弦相似度；不是正确概率
                     "chunk":    meta.get("chunk_index", 0),
                     "source_url": meta.get("source_url", ""),
                     "source_title": meta.get("source_title", ""),

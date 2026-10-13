@@ -1,0 +1,147 @@
+{
+  "method": "Same Top10 candidate retrieval and model ranking; truncate final ranking to K=3,5,10. Not three independently requested recall depths.",
+  "model": "deepseek-v4-1-flash-260910",
+  "corpus_sha256": "a600211f42b33df690837d78b50d3cd26a97de79c16108e60192967432944dff",
+  "summary": {
+    "3": {
+      "all": {
+        "questions": 68,
+        "recall": 0.6617647058823529,
+        "any_hit": 0.7058823529411765,
+        "all_gold_hit": 0.6176470588235294,
+        "hit_count": 48,
+        "complete_count": 42
+      },
+      "direct": {
+        "questions": 30,
+        "recall": 0.7,
+        "any_hit": 0.7,
+        "all_gold_hit": 0.7,
+        "hit_count": 21,
+        "complete_count": 21
+      },
+      "paraphrase": {
+        "questions": 30,
+        "recall": 0.6666666666666666,
+        "any_hit": 0.6666666666666666,
+        "all_gold_hit": 0.6666666666666666,
+        "hit_count": 20,
+        "complete_count": 20
+      },
+      "multi_document": {
+        "questions": 8,
+        "recall": 0.5,
+        "any_hit": 0.875,
+        "all_gold_hit": 0.125,
+        "hit_count": 7,
+        "complete_count": 1
+      }
+    },
+    "5": {
+      "all": {
+        "questions": 68,
+        "recall": 0.6617647058823529,
+        "any_hit": 0.7058823529411765,
+        "all_gold_hit": 0.6176470588235294,
+        "hit_count": 48,
+        "complete_count": 42
+      },
+      "direct": {
+        "questions": 30,
+        "recall": 0.7,
+        "any_hit": 0.7,
+        "all_gold_hit": 0.7,
+        "hit_count": 21,
+        "complete_count": 21
+      },
+      "paraphrase": {
+        "questions": 30,
+        "recall": 0.6666666666666666,
+        "any_hit": 0.6666666666666666,
+        "all_gold_hit": 0.6666666666666666,
+        "hit_count": 20,
+        "complete_count": 20
+      },
+      "multi_document": {
+        "questions": 8,
+        "recall": 0.5,
+        "any_hit": 0.875,
+        "all_gold_hit": 0.125,
+        "hit_count": 7,
+        "complete_count": 1
+      }
+    },
+    "10": {
+      "all": {
+        "questions": 68,
+        "recall": 0.7058823529411765,
+        "any_hit": 0.75,
+        "all_gold_hit": 0.6617647058823529,
+        "hit_count": 51,
+        "complete_count": 45
+      },
+      "direct": {
+        "questions": 30,
+        "recall": 0.7333333333333333,
+        "any_hit": 0.7333333333333333,
+        "all_gold_hit": 0.7333333333333333,
+        "hit_count": 22,
+        "complete_count": 22
+      },
+      "paraphrase": {
+        "questions": 30,
+        "recall": 0.7333333333333333,
+        "any_hit": 0.7333333333333333,
+        "all_gold_hit": 0.7333333333333333,
+        "hit_count": 22,
+        "complete_count": 22
+      },
+      "multi_document": {
+        "questions": 8,
+        "recall": 0.5,
+        "any_hit": 0.875,
+        "all_gold_hit": 0.125,
+        "hit_count": 7,
+        "complete_count": 1
+      }
+    }
+  },
+  "model_status": [
+    {
+      "stage": "rewrite",
+      "status": "response",
+      "http_status": null,
+      "count": 64
+    },
+    {
+      "stage": "rerank",
+      "status": "response",
+      "http_status": null,
+      "count": 59
+    },
+    {
+      "stage": "rewrite",
+      "status": "CancelledError",
+      "http_status": null,
+      "count": 4
+    },
+    {
+      "stage": "rerank",
+      "status": "CancelledError",
+      "http_status": null,
+      "count": 4
+    }
+  ],
+  "returned_lengths": {
+    "10": 68
+  },
+  "limitations": [
+    "Author-written synthetic labels, not independent annotation",
+    "30 small built-in documents; no 10k corpus test",
+    "Related alternative chunks may be unlabelled; precision uses only designated gold chunks",
+    "No live service or user-imported corpus verified",
+    "Synthetic questions, one stochastic model run",
+    "No final answer/evidence-gate accuracy tested",
+    "Fallbacks included; exact runtime independent top_k=3/5 uses recall_k=5, unlike this common recall_k=10 pool."
+  ]
+}
