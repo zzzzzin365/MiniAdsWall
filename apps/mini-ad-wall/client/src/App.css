@@ -171,7 +171,7 @@ body::after {
 .management-tabs { display: flex; gap: 28px; padding: 0 var(--management-gutter); border-bottom: 1px solid var(--border-light); }
 .management-tabs button { min-height: 56px; padding: 0; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--text-body); font: inherit; font-size: 14px; cursor: pointer; }
 .management-tabs button[aria-selected="true"] { color: var(--c-blue-vibrant); border-bottom-color: var(--c-blue-vibrant); font-weight: 600; }
-.management-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 12px var(--management-gutter) 20px; }
+.management-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 20px var(--management-gutter); }
 .management-toolbar .ad-search { flex: 1 1 280px; }
 .management-toolbar .ad-search-input { width: auto; flex: 1; }
 .management-toolbar .btn { padding: 0 14px; }
@@ -249,7 +249,7 @@ body::after {
 .ad-management button:focus-visible, .ad-management select:focus-visible, .ad-management summary:focus-visible, .ad-detail-drawer button:focus-visible { outline: 2px solid var(--c-blue-vibrant); outline-offset: 3px; }
 @media (max-width: 760px) {
   .ad-management { --management-gutter: 16px; }
-  .management-toolbar { padding-top: 12px; padding-bottom: 16px; gap: 10px; }
+  .management-toolbar { padding-top: 16px; padding-bottom: 16px; gap: 10px; }
   .management-toolbar .ad-search { order: 5; flex-basis: 100%; }
   .management-toolbar .btn { min-height: 44px; }
   .management-toolbar input, .management-filter select { font-size: 16px; }
