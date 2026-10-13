@@ -1,4 +1,5 @@
 export interface Ad {
+    material_id?: string;
     attributes?: Record<string, string[]>;
     eligibility?: {enabled?: boolean; starts_at?: string | null; ends_at?: string | null};
     recall_receipt?: import('../recall/contracts').Receipt;
@@ -14,6 +15,7 @@ export interface Ad {
 }
 
 export interface AdInput {
+    material_id?: string;
     attributes?: Record<string, string[]>;
     eligibility?: {enabled?: boolean; starts_at?: string | null; ends_at?: string | null};
     title: string;

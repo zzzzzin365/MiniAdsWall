@@ -47,7 +47,7 @@ function App() {
     const navigate = (view: ManagementView) => {
         setActiveModule(view);
         const url = new URL(window.location.href);
-        url.searchParams.delete('studio'); url.searchParams.delete('marketing');
+        url.searchParams.delete('studio'); url.searchParams.delete('marketing'); url.searchParams.delete('edit_material');
         url.hash = moduleInfo[view].hash;
         if (window.location.href !== url.href) window.history.pushState(null, '', url);
         window.scrollTo({ top: 0, behavior: 'auto' });
@@ -122,6 +122,13 @@ function App() {
         finally { if (id === requestId.current) setLoadingPage(false); }
     };
 
+    useEffect(() => {
+        const refresh = () => { if (!document.hidden && !adModal.open) void loadAds(); };
+        window.addEventListener('focus', refresh);
+        window.addEventListener('ads-changed', refresh);
+        return () => { window.removeEventListener('focus',refresh); window.removeEventListener('ads-changed',refresh); };
+    }, [adModal.open]);
+
     const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const query = searchInput.trim();
@@ -164,7 +171,7 @@ function App() {
                 showToast('广告创建成功');
             } else if (adModal.mode === 'copy') {
                 await createAd(formData);
-                showToast(`广告复制成功：${formData.title}`);
+                showToast(adModal.data?.id ? `广告复制成功：${formData.title}` : '广告创建成功');
             } else if (adModal.mode === 'edit' && adModal.data) {
                 await updateAd(adModal.data.id, { ...formData, version: adModal.data.version });
                 showToast('广告更新成功');
@@ -279,6 +286,7 @@ function App() {
                     onDelete={handleDeleteClick}
                     onDetail={ad => void handleDetailClick(ad)}
                     onPreview={handlePreviewClick}
+                    onReuseMaterial={ad=>setAdModal({open:true,mode:"copy",data:ad})}
                     toolbar={<>
                         <button type="button" className="btn btn-primary" onClick={handleCreateClick}><span>+</span> 新建广告</button>
                         <form className="ad-search" role="search" onSubmit={handleSearch}>

@@ -1,9 +1,11 @@
+import { adProjection } from '../services/ad-projection';
 import { AsyncLocalStorage } from 'async_hooks';
 import { randomUUID } from 'crypto';
 import { PoolConnection, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import * as recall from '../services/recall/repository';
 import { enabled } from '../recall/contracts';
 import { Receipt } from '../recall/contracts';
+import { resolveMaterial, bindMaterial } from '../services/materials.service';
 import { Ad, AdInput } from '../types';
 import { storedPrice } from '../services/ad-value';
 import { withAdsConnection, closeAdsDatabase } from '../services/ads.database';
@@ -16,7 +18,7 @@ const conflict = (message: string) => Object.assign(new Error(message), { status
 const json = (value: any) => typeof value === 'string' ? JSON.parse(value) : value;
 function ad(row: RowDataPacket): Ad {
     return { id: row.id, title: row.title, publisher: row.publisher, content: row.content,
-        url: row.url, price: Number(row.price), clicks: Number(row.clicks), videos: json(row.videos), version: row.version };
+        url: row.url, price: Number(row.price), clicks: Number(row.clicks), videos: json(row.videos), version: row.version, ...(row.material_id ? {material_id:row.material_id} : {}) };
 }
 function operation(row: RowDataPacket): Operation {
     return { fingerprint: row.fingerprint, status: row.status, body: json(row.body), createdAt: row.created_at.toISOString(), ...(row.recall_receipt ? {recall_receipt: json(row.recall_receipt)} : {}) };
@@ -75,7 +77,7 @@ async function getOperation(owner: string, key: string): Promise<Operation | und
 
 async function getAllAds(): Promise<Ad[]> {
     return withAdsConnection(async connection => {
-        const [rows] = await connection.query<RowDataPacket[]>('SELECT id, title, publisher, content, url, price, clicks, videos, version FROM ads_business_ads ORDER BY ranking_score DESC, id ASC');
+        const [rows] = await connection.query<RowDataPacket[]>(adProjection + ' ORDER BY a.ranking_score DESC,a.id ASC');
         return rows.map(ad);
     });
 }
@@ -84,9 +86,12 @@ async function create(data: AdInput): Promise<Ad> {
     const current = transaction();
     const value: Ad = { id: randomUUID(), title: data.title, publisher: data.publisher, content: data.content,
         url: data.url, price: Number(data.price), clicks: 0, videos: data.videos || [], version: 1 };
+    const materialId = await resolveMaterial(current.connection, data);
+    value.material_id = materialId;
     const doc = await recall.lock(current.connection, value.id, true);
     await current.connection.execute('INSERT INTO ads_business_ads (id, title, publisher, content, url, price, videos) VALUES (?, ?, ?, ?, ?, ?, ?)',
         [value.id, value.title, value.publisher, value.content, value.url, storedPrice(data.price), JSON.stringify(value.videos)]);
+    await bindMaterial(current.connection, value.id, materialId);
     current.receipt = await recall.emit(current.connection, doc, data);
     const result = await recall.decorate(current.connection,value,doc);
     if(current.receipt) result.recall_receipt=current.receipt;
@@ -95,7 +100,7 @@ async function create(data: AdInput): Promise<Ad> {
 }
 
 async function lockedAd(connection: PoolConnection, id: string): Promise<Ad | null> {
-    const [rows] = await connection.execute<RowDataPacket[]>('SELECT * FROM ads_business_ads WHERE id = ? FOR UPDATE', [id]);
+    const [rows] = await connection.execute<RowDataPacket[]>('SELECT a.* FROM ads_business_ads a WHERE a.id = ? FOR UPDATE', [id]);
     return rows[0] ? ad(rows[0]) : null;
 }
 
@@ -105,11 +110,13 @@ async function update(id: string, data: AdInput): Promise<Ad | null> {
     const before = await recall.decorate(current.connection, await lockedAd(current.connection, id), doc);
     if (!before) return null;
     if (before.version !== data.version) throw conflict('广告已被其他运营修改，请刷新列表后重新编辑');
-    const after: Ad = { ...before, title: data.title, publisher: data.publisher, content: data.content,
+    const materialId = await resolveMaterial(current.connection, {...data,videos:data.videos ?? before.videos});
+    const after: Ad = { ...before, material_id:materialId, title: data.title, publisher: data.publisher, content: data.content,
         url: data.url, price: Number(data.price), videos: data.videos ?? before.videos, version: before.version + 1 };
     const [updated] = await current.connection.execute<ResultSetHeader>('UPDATE ads_business_ads SET title = ?, publisher = ?, content = ?, url = ?, price = ?, videos = ?, version = version + 1 WHERE id = ? AND version = ?',
         [after.title, after.publisher, after.content, after.url, storedPrice(data.price), JSON.stringify(after.videos), id, before.version]);
     if (updated.affectedRows !== 1) throw conflict('广告版本冲突');
+    await bindMaterial(current.connection,id,materialId);
     current.receipt = await recall.emit(current.connection,doc,data);
     const result = await recall.decorate(current.connection,after,doc);
     if(current.receipt) result.recall_receipt=current.receipt;
@@ -146,6 +153,7 @@ async function incrementClicks(id: string, includeReceipt=false): Promise<any> {
 async function initialize(): Promise<void> {
     await withAdsConnection(async connection => {
         await connection.query('SELECT id, version FROM ads_business_ads LIMIT 0');
+        await connection.query('SELECT material_id FROM ads_business_material_links LIMIT 0');
         await connection.query('SELECT owner FROM ads_business_operations LIMIT 0');
         await connection.query('SELECT id FROM ads_business_audit LIMIT 0');
         if(enabled()) {

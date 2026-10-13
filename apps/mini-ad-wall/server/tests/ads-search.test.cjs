@@ -22,6 +22,7 @@ test('ad text search: real database, ranked pagination, literal input and browse
         await insert('body', '长文广告', '运营', '前'.repeat(850) + '数字化营销', 2);
         await insert('literal', '优惠 %_! 活动', '运营', '普通内容', 1);
 
+        await require('../dist/services/materials.service').backfillMaterials(db.connection);
         server = http.createServer(require('../dist/app').default.callback());
         await new Promise(r => server.listen(0, '127.0.0.1', r));
         const base = `http://127.0.0.1:${server.address().port}`;
@@ -96,9 +97,10 @@ test('ad text search: real database, ranked pagination, literal input and browse
             await page.getByText('第 6 / 6 页', { exact: true }).waitFor();
             assert.equal(await next.isEnabled(), false);
             await previous.click(); await count(10);
-            await page.getByRole('tab', { name: '创意素材', exact: true }).click();
-            assert.equal(await page.locator('.ad-card').count(), 10);
-            await page.getByRole('tab', { name: '广告列表', exact: true }).click();
+            await page.getByRole('button', { name: '已有素材管理', exact: true }).click();
+            await page.locator('.material-card').first().waitFor();
+            assert.equal(await page.locator('.material-card').count(), 3);
+            await page.getByRole('button', { name: '广告管理', exact: true }).click();
             await search('search'); await page.getByText('第 1 / 5 页（可继续加载）', { exact: true }).waitFor();
             assert.deepEqual(await page.locator('.management-ad-name').allTextContents(), firstNames);
             await page.getByRole('combobox', { name: /^素材类型/ }).selectOption('video');
@@ -111,7 +113,10 @@ test('ad text search: real database, ranked pagination, literal input and browse
             await search('没有这种广告'); await page.getByText('没有找到与“没有这种广告”匹配的广告', { exact: true }).waitFor();
             assert.equal(await page.locator('.management-ad-name').count(), 0);
             await page.getByRole('button', { name: '查看全部广告' }).click(); await count(10);
-            await search('   '); await page.locator('.management-data-scope').getByText('统计范围：', { exact: false }).waitFor();
+            await search('   '); await count(10);
+            await page.getByRole('button', {name:'数据分析',exact:true}).click();
+            await page.locator('.management-data-scope').getByText('统计范围：', { exact: false }).waitFor();
+            await page.getByRole('button', {name:'广告管理',exact:true}).click();
 
             const apiRoute = '**/api/ads/page*';
             await page.route(apiRoute, route => new URL(route.request().url()).searchParams.get('q') === '失败'

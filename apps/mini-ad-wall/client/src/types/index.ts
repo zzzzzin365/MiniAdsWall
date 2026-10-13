@@ -1,4 +1,5 @@
 export interface Ad {
+    material_id?: string;
     id: string;
     title: string;
     publisher: string;
@@ -12,6 +13,7 @@ export interface Ad {
 }
 
 export interface AdInput {
+    material_id?: string;
     title: string;
     publisher: string;
     content: string;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import {
+  getMaterial, updateMaterial, createMaterial, uploadPreparedMaterial, Material,
   studioGet,
   studioWrite,
   studioUpload,
@@ -64,6 +65,17 @@ function AssetPreview({
   );
 }
 export default function MerchantStudio() {
+  const editEpoch=useRef(0);
+  const [editingId,setEditingId]=useState(()=>new URLSearchParams(window.location.search).get('edit_material')||'');
+  const [editing,setEditing]=useState<Material|null>(null),[editName,setEditName]=useState(''),[editContent,setEditContent]=useState(''),[editVideos,setEditVideos]=useState(''),[editBusy,setEditBusy]=useState(false),[editError,setEditError]=useState('');
+  const [editImages,setEditImages]=useState<string[]>([]),[editUploading,setEditUploading]=useState(false);
+  useEffect(()=>{const sync=()=>setEditingId(new URLSearchParams(window.location.search).get('edit_material')||'');window.addEventListener('popstate',sync);window.addEventListener('hashchange',sync);return()=>{window.removeEventListener('popstate',sync);window.removeEventListener('hashchange',sync);};},[]);
+  useEffect(()=>{editEpoch.current++;setEditUploading(false);let active=true;setEditing(null);setEditError('');if(!editingId)return;if(editingId==='new'){setEditing({id:'',name:'',content:'',videos:[],images:[],usage_count:0,usage_ads:[]});setEditName('');setEditContent('');setEditVideos('');setEditImages([]);setEditBusy(false);return;}setEditBusy(true);getMaterial(editingId).then(material=>{if(active){setEditing(material);setEditName(material.name);setEditContent(material.content);setEditVideos(material.videos.join('\n'));setEditImages(material.images||[]);}}).catch(e=>{if(active)setEditError(e.message||'素材读取失败');}).finally(()=>{if(active)setEditBusy(false);});return()=>{active=false;};},[editingId]);
+  const returnToLibrary=()=>{const url=new URL(window.location.href);url.searchParams.delete('edit_material');url.hash='materials';window.history.pushState(null,'',url);window.dispatchEvent(new PopStateEvent('popstate'));window.scrollTo(0,0);};
+  const saveMaterial=async(event:React.FormEvent)=>{event.preventDefault();if(!editing||editBusy||editUploading)return;const generation=editEpoch.current;setEditBusy(true);setEditError('');try{const input={name:editName.trim(),content:editContent,videos:editVideos.split('\n').map(v=>v.trim()).filter(Boolean),images:editImages};if(editingId==='new')await createMaterial(input);else await updateMaterial(editing.id,input);if(generation===editEpoch.current)returnToLibrary();}catch(e){setEditError(e instanceof Error?e.message:'素材保存失败');}finally{setEditBusy(false);}};
+
+  const editVideoUrls=editVideos.split('\n').map(v=>v.trim()).filter(Boolean);
+  const uploadReady=async(files:FileList|null)=>{if(!files||!editing||editBusy||editUploading)return;const selected=Array.from(files);if(!selected.length)return;const generation=editEpoch.current;if(selected.length+editImages.length+editVideoUrls.length>20){setEditError('最多保存 20 个图片或视频素材');return;}if(selected.some(file=>file.size>100*1024*1024||!['image/jpeg','image/png','image/webp','video/mp4','video/quicktime','video/webm'].includes(file.type))){setEditError('支持 JPG、PNG、WebP、MP4、MOV、WebM，单个文件不超过 100MB');return;}setEditUploading(true);setEditError('');if(!editName.trim())setEditName(selected[0].name.replace(/\.[^.]+$/,''));try{for(const file of selected){const uploaded=await uploadPreparedMaterial(file);if(generation!==editEpoch.current)return;if(uploaded.mime.startsWith('image/'))setEditImages(old=>[...old,uploaded.url]);else setEditVideos(old=>old?old+'\n'+uploaded.url:uploaded.url);}}catch(e){if(generation===editEpoch.current)setEditError((e instanceof Error?e.message:'上传失败')+'，已上传成功的素材已保留，可重选剩余文件。');}finally{if(generation===editEpoch.current)setEditUploading(false);}};
   const [caps, setCaps] = useState<any>(null),
     [brands, setBrands] = useState<any[]>([]),
     [brand, setBrand] = useState(""),
@@ -277,6 +289,7 @@ export default function MerchantStudio() {
   );
   return (
     <section className="studio-shell" aria-label="创意素材生成">
+      {editingId&&<section className="studio-card material-edit-panel" aria-label="编辑已有素材"><h2>{editingId==='new'?'上传准备好的广告素材':'编辑已有素材'}</h2><p className="studio-muted">{editingId==='new'?'上传商家已准备好的素材，保存到素材库后即可用于新建广告。':'修改保存为素材库的新快照；已使用原素材的广告保留原内容。'}</p>{editError&&<p role="alert">{editError}</p>}{editBusy&&!editing&&<p role="status">正在读取素材…</p>}{editing&&<form onSubmit={saveMaterial}><label>素材名称<input aria-label="素材名称" value={editName} maxLength={500} required onChange={e=>setEditName(e.target.value)}/></label><label>素材文案<textarea aria-label="素材文案" value={editContent} onChange={e=>setEditContent(e.target.value)}/></label><div className="studio-upload-group"><span className="studio-upload-title">上传广告素材</span><div className="studio-upload-options"><label className={`video-upload-btn studio-upload-tile${editUploading||editBusy?' is-disabled':''}`}><span className="upload-icon" aria-hidden="true">+</span><span className="upload-text">{editUploading?'正在上传…':'上传图片或视频'}</span><input type="file" aria-label="上传已准备好的广告素材" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime,video/webm,.mov" multiple disabled={editUploading||editBusy||editImages.length+editVideoUrls.length>=20} onChange={event=>{const files=event.target.files;void uploadReady(files);event.target.value='';}}/></label></div><p className="studio-muted">支持 JPG、PNG、WebP、MP4、MOV、WebM；单个文件不超过 100MB，最多 20 个。</p></div><div className="material-ready-previews">{editImages.map((url,index)=><article key={url+index}><img src={url} alt={`已准备好的图片素材 ${index+1}`}/><button type="button" disabled={editUploading||editBusy} aria-label={`移除图片素材 ${index+1}`} onClick={()=>setEditImages(old=>old.filter((_,i)=>i!==index))}>移除图片</button></article>)}{editVideoUrls.map((url,index)=><article key={url+index}><video src={url} controls preload="metadata"/><button type="button" disabled={editUploading||editBusy} aria-label={`移除视频素材 ${index+1}`} onClick={()=>setEditVideos(editVideoUrls.filter((_,i)=>i!==index).join('\n'))}>移除视频</button></article>)}</div><div className="studio-actions"><button type="submit" disabled={editBusy||editUploading}>{editBusy?'保存中…':'保存素材'}</button><button type="button" disabled={editBusy||editUploading} onClick={returnToLibrary}>返回素材库</button></div></form>}</section>}
       <header className="studio-heading">
         <div>
           <h2>告诉我们要推广什么，一起打磨创意吧✨</h2>
@@ -290,7 +303,7 @@ export default function MerchantStudio() {
       {notice && <p role="status">{notice}</p>}
       <div className="studio-layout">
         <section className="studio-card studio-stack">
-          <h2>1. 营销需求</h2>
+          <h2>营销需求</h2>
           <label>
             品牌
             <select
@@ -451,7 +464,7 @@ export default function MerchantStudio() {
           ))}
         </section>
         <section className="studio-stack studio-workspace">
-          <h2>2. 对话与创意方案</h2>
+          <h2>对话与创意方案</h2>
           {!sessionId && <div className="studio-empty"><span aria-hidden="true">✦</span><h3>从一个推广想法开始</h3><p>填写营销需求，点击「保存需求并讨论创意」。<br />助手会整理卖点和脚本，再由你确认生成视频。</p><ol><li>填写需求</li><li>确认创意</li><li>生成视频</li></ol></div>}
           {snapshot && (
             <p className="studio-muted">

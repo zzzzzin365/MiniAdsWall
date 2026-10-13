@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getFormConfig, generateAdStrategy } from '../api';
+import { getFormConfig, generateAdStrategy, getMaterials, Material } from '../api';
 import {
     Ad,
     AdInput,
@@ -162,6 +162,17 @@ const INDUSTRY_OPTIONS = [
 ];
 
 const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, onSubmit }) => {
+    const [materials, setMaterials] = useState<Material[]>([]);
+    const [materialError, setMaterialError] = useState('');
+    const [materialCursor, setMaterialCursor] = useState<string | null>(null);
+    const [materialLoading, setMaterialLoading] = useState(false);
+    useEffect(() => {
+        if (!isOpen) return;
+        const controller = new AbortController();
+        setMaterialLoading(true); setMaterialError('');
+        getMaterials(undefined,controller.signal).then(p=>{setMaterials(p.items);setMaterialCursor(p.next_cursor);}).catch(()=>{if(!controller.signal.aborted)setMaterialError('素材读取失败，请关闭后重试');}).finally(()=>{if(!controller.signal.aborted)setMaterialLoading(false);});
+        return () => controller.abort();
+    },[isOpen]);
     const [formConfig, setFormConfig] = useState<FormFieldConfig[]>([]);
     const [formData, setFormData] = useState<FormData>({ videos: [] });
     const [errors, setErrors] = useState<Record<string, string>>({});
@@ -209,7 +220,7 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
     }, [isOpen, mode, initialData, formConfig]);
 
     const handleFieldChange = (field: string, value: string) => {
-        setFormData(prev => ({ ...prev, [field]: value }));
+        setFormData(prev => ({ ...prev, [field]: value, ...(field === 'content' ? {material_id:''} : {}) }));
         if (errors[field]) {
             setErrors(prev => {
                 const newErrors = { ...prev };
@@ -268,7 +279,8 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
             content: formData.content as string,
             url: formData.url as string,
             price: parseFloat(String(formData.price)),
-            videos: formData.videos
+            videos: formData.videos,
+            ...(formData.material_id ? {material_id:String(formData.material_id)} : {})
         };
 
         onSubmit(submitData);
@@ -279,7 +291,7 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
     const titleMap: Record<string, string> = {
         create: '新建广告',
         edit: '编辑广告',
-        copy: '复制广告'
+        copy: initialData?.id ? '复制广告' : '使用素材新建广告'
     };
 
 
@@ -305,9 +317,20 @@ const AdModal: React.FC<AdModalProps> = ({ isOpen, mode, initialData, onClose, o
 
                             <div className="ad-material-reference">
                                 <strong>广告素材</strong>
-                                <p>创意生成和素材上传请在“创意素材”中完成。这里保留当前广告已关联的素材。</p>
+                                <p>选择已有素材可供多个广告复用。改写正文会保存为新素材。</p>
+                                <label htmlFor="ad-material">引用素材</label>
+                                <select id="ad-material" className="form-input" value={String(formData.material_id || '')} disabled={materialLoading} onChange={e=>{
+                                    const m=materials.find(x=>x.id===e.target.value);
+                                    setFormData(prev=>({...prev,material_id:m?.id || '',...(m?{content:m.content,videos:m.videos}:{})}));
+                                }}>
+                                    <option value="">使用当前正文和视频（自动去重）</option>
+                                    {formData.material_id && !materials.some(m=>m.id===formData.material_id) && <option value={String(formData.material_id)}>当前素材 · {String(formData.material_id).slice(0,8)}</option>}
+                                    {materials.map(m=><option key={m.id} value={m.id}>{m.name} · {m.usage_count} 条广告使用</option>)}
+                                </select>
+                                {materialError && <p role="alert">{materialError}</p>}
+                                {materialCursor && <button type="button" disabled={materialLoading} onClick={async()=>{setMaterialLoading(true);try{const p=await getMaterials(materialCursor);setMaterials(old=>[...old,...p.items]);setMaterialCursor(p.next_cursor);}catch{setMaterialError('素材读取失败，请重试');}finally{setMaterialLoading(false);}}}>加载更多素材</button>}
                                 {(formData.videos || []).map((url, i) => <video key={url + i} controls preload="metadata" src={url} style={{width:'100%',maxHeight:180,borderRadius:8}} />)}
-                                <button type="button" className="btn btn-default" onClick={() => { onClose(); window.location.hash = 'creatives'; }}>关闭编辑，前往创意素材</button>
+                                <button type="button" className="btn btn-default" onClick={() => { onClose(); window.location.hash = 'creatives'; }}>编辑素材✨</button>
                             </div>
 
                             <div className="ai-assist-section">

@@ -4,6 +4,7 @@ import { createHash } from 'crypto';
 import { RowDataPacket } from 'mysql2/promise';
 import { storedPrice } from '../services/ad-value';
 import { adsPool, closeAdsDatabase } from '../services/ads.database';
+import { backfillMaterials } from '../services/materials.service';
 import { migrateAdsSchema } from '../services/ads.migrations';
 
 function legacyData(source: string) {
@@ -63,6 +64,7 @@ export async function migrateAds(source?: string): Promise<{ imported: boolean; 
                 await connection.execute('INSERT INTO ads_business_ads (id, title, publisher, content, url, price, clicks, videos, version) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
                     [ad.id, ad.title, ad.publisher, ad.content, ad.url, storedPrice(ad.price), ad.clicks, JSON.stringify(ad.videos || []), ad.version || 1]);
             }
+            await backfillMaterials(connection);
             for (const { owner, operationKey, record } of legacy.records) {
                 await connection.execute('INSERT INTO ads_business_operations (owner, operation_key, fingerprint, status, body, created_at) VALUES (?, ?, ?, ?, ?, ?)',
                     [owner, operationKey, record.fingerprint, record.status, JSON.stringify(record.body), new Date(record.createdAt)]);

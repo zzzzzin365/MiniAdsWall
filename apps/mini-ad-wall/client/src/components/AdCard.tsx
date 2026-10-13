@@ -1,3 +1,4 @@
+import { usePerformance } from '../contexts/PerformanceContext';
 import React, { useState, useRef, useEffect } from 'react';
 import { Ad } from '../types';
 
@@ -10,6 +11,7 @@ interface AdCardProps {
 }
 
 const AdCard: React.FC<AdCardProps> = ({ ad, onEdit, onCopy, onDelete, onClick }) => {
+    const {measures}=usePerformance();
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
 
@@ -48,7 +50,7 @@ const AdCard: React.FC<AdCardProps> = ({ ad, onEdit, onCopy, onDelete, onClick }
             <div className="card-footer">
                 <div className="data-item">
                     <span>热度</span>
-                    <span className="data-value">{ad.clicks || 0}</span>
+                    <span className="data-value">{measures(ad).clicks}</span>
                 </div>
                 <div className="data-item" style={{ alignItems: 'flex-end' }}>
                     <span>出价</span>

@@ -17,7 +17,8 @@ async function getSortedAds(): Promise<Ad[]> {
 export function validateAd(data: AdInput): string | undefined {
     if (!enabled() && data && (data.attributes !== undefined || data.eligibility !== undefined)) return '广告属性召回未启用';
     if (!data || ['title', 'publisher', 'content', 'url'].some(key => typeof data[key] !== 'string' || !data[key].trim())) return '广告字段不完整';
-    if (Object.keys(data).some(key => !['title', 'publisher', 'content', 'url', 'price', 'videos', 'version', 'attributes', 'eligibility'].includes(key))) return '不支持的广告字段（当前不支持预算变更）';
+    if (Object.keys(data).some(key => !['title', 'publisher', 'content', 'url', 'price', 'videos', 'version', 'attributes', 'eligibility', 'material_id'].includes(key))) return '不支持的广告字段（当前不支持预算变更）';
+    if (data.material_id !== undefined && (typeof data.material_id !== 'string' || !/^[a-f0-9]{64}$/.test(data.material_id))) return '素材 ID 无效';
     const price = Number(data.price);
     const ceiling = Number(process.env.MAX_AD_BID || 100);
     if (!Number.isFinite(ceiling) || ceiling <= 0) return '服务出价上限配置错误';

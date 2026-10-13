@@ -26,7 +26,7 @@ test('CP02 real MySQL upgrades preserve business data, serialize, resume and rej
     try {
         const [before] = await db.connection.query('SELECT id,title,price,clicks,version FROM ads_business_ads ORDER BY id');
         const initial = await adsMigrationStatus();
-        assert.deepEqual(initial.map(v => v.state), ['applied', 'applied']);
+        assert.deepEqual(initial.map(v => v.state), ['applied', 'applied', 'applied']);
         const [attempts] = await db.connection.query('SELECT * FROM ads_migration_attempts');
         const [lock] = await db.connection.query("SELECT GET_LOCK(CONCAT('ads:', LEFT(SHA2(DATABASE(),256),50)),0) AS acquired");
         assert.equal(Number(lock[0].acquired), 1);
@@ -52,7 +52,7 @@ test('CP02 real MySQL upgrades preserve business data, serialize, resume and rej
         assert.deepEqual(retried.map(r => r.state), ['failed', 'applied']);
 
         const directory = path.join(db.root, 'migrations'); fs.mkdirSync(directory);
-        for (const name of ['001_ads.sql', '004_request_protocol.sql']) fs.copyFileSync(path.join(__dirname, '../migrations', name), path.join(directory, name));
+        for (const name of ['001_ads.sql', '004_request_protocol.sql', '020_ad_materials.sql']) fs.copyFileSync(path.join(__dirname, '../migrations', name), path.join(directory, name));
         fs.appendFileSync(path.join(directory, '004_request_protocol.sql'), '\n-- forbidden drift\n');
         await assert.rejects(migrateAdsSchema({ directory }), /checksum_mismatch/);
         await assert.rejects(migrateAdsSchema({ target: 1 }), /downgrade/);
@@ -77,7 +77,7 @@ test('CP02 adopts legacy business schema and status does not initialize an empty
         await closeAdsDatabase();
         await db.connection.query('CREATE DATABASE ads_empty_status');
         process.env.ADS_MYSQL_URL = 'mysql://root@localhost/ads_empty_status';
-        assert.deepEqual((await adsMigrationStatus()).map(v => v.state), ['pending', 'pending']);
+        assert.deepEqual((await adsMigrationStatus()).map(v => v.state), ['pending', 'pending', 'pending']);
         const [tables] = await db.connection.query("SELECT table_name FROM information_schema.tables WHERE table_schema='ads_empty_status'");
         assert.equal(tables.length, 0);
     } finally { await db.stop(); }

@@ -16,7 +16,7 @@ test('real MySQL: safe legacy import, persistence and rollback', async t => {
     const { migrateAds } = require('../dist/scripts/migrate-ads');
     try {
         await t.test('legacy ads, click counts, historical results and audit are preserved', async () => {
-            assert.deepEqual(await model.getAllAds(), [{ ...legacyAd, version: 1 }]);
+            assert.deepEqual((await model.getAllAds()).map(({material_id,...ad})=>ad), [{ ...legacyAd, version: 1 }]);
             const result = await model.getOperation('owner:with:colon', key);
             assert.deepEqual(result.body, record.body); assert.equal(result.createdAt, record.createdAt);
             const [rows] = await db.connection.query('SELECT before_data, after_data FROM ads_business_audit');

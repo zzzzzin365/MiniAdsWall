@@ -1,3 +1,4 @@
+import { adProjection } from '../ad-projection';
 import { createHmac, createHash, timingSafeEqual } from "crypto";
 import { RowDataPacket } from "mysql2/promise";
 import { withAdsConnection } from "../ads.database";
@@ -206,7 +207,7 @@ export async function listPage(raw: any, principal: string) {
     }
     const where = filters.length ? `WHERE ${filters.join(" AND ")}` : "";
     const [rows] = await c.query<RowDataPacket[]>(
-      `SELECT id,title,publisher,LEFT(content,800) AS content,url,price,clicks,JSON_EXTRACT(videos,'$[0 to 1]') AS videos,JSON_LENGTH(videos) AS video_count,version,ranking_score FROM ads_business_ads ${where} ORDER BY ranking_score DESC,id ASC LIMIT ?`,
+      `SELECT current_ad.*,JSON_LENGTH(videos) AS video_count FROM (${adProjection}) current_ad ${where} ORDER BY ranking_score DESC,id ASC LIMIT ?`,
       [...params, limit + 1],
     );
     const selected: any[] = [];
@@ -214,20 +215,19 @@ export async function listPage(raw: any, principal: string) {
     for (const row of rows.slice(0, limit)) {
       const item = {
         id: row.id,
+        material_id: row.material_id,
         title: row.title,
         publisher: row.publisher,
         content: row.content,
         url: row.url,
         price: Number(row.price),
         clicks: Number(row.clicks),
-        videos: (decode(row.videos) || []).filter(
-          (v: string) => Buffer.byteLength(v) <= 4096,
-        ),
+        videos: decode(row.videos) || [],
         version: row.version,
         video_count: Number(row.video_count),
       };
       const size = Buffer.byteLength(JSON.stringify(item));
-      if (bytes + size > 220 * 1024) break;
+      if (bytes + size > 2 * 1024 * 1024) break;
       selected.push(item);
       bytes += size;
     }
@@ -251,20 +251,9 @@ export async function listPage(raw: any, principal: string) {
         data + "." + createHmac("sha256", key).update(data).digest("base64url");
     }
     return {
-      items: items.map((r) => ({
-        id: r.id,
-        title: r.title,
-        publisher: r.publisher,
-        content: r.content,
-        url: r.url,
-        price: Number(r.price),
-        clicks: Number(r.clicks),
-        videos: decode(r.videos) || [],
-        version: r.version,
-        video_count: Number(r.video_count),
-      })),
+      items,
       next_cursor,
-      omitted_fields: ["content_after_800_chars", "videos_after_2"],
+      omitted_fields: [],
     };
   });
 }

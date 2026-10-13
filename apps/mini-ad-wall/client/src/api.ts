@@ -111,6 +111,13 @@ async function mutateAd<T>(method: 'post' | 'put' | 'delete', url: string, data?
     }
 }
 
+export type Material = {id:string; name:string; content:string; videos:string[]; images?:string[]; usage_count:number; usage_ads:{id:string;video_count:number}[]};
+export const getMaterials = (cursor?:string, signal?:AbortSignal): Promise<{items:Material[];next_cursor:string|null}> => api.get('/materials',{params:{cursor},signal}).then(r=>r.data);
+export const getMaterial = (id:string): Promise<Material> => api.get('/materials/'+encodeURIComponent(id)).then(r=>r.data);
+export const deleteMaterial = (id:string) => mutateAd('delete','/materials/'+encodeURIComponent(id));
+export const updateMaterial = (id:string,input:{name:string;content:string;videos:string[];images?:string[]}) => mutateAd<Material>('put','/materials/'+encodeURIComponent(id),input);
+export const createMaterial = (input:{name:string;content:string;videos:string[];images?:string[]}) => mutateAd<Material>('post','/materials',input);
+export const uploadPreparedMaterial = (file:File):Promise<{url:string;filename:string;mime:string}> => {const data=new FormData();data.append('file',file);return api.post('/materials/upload',data,{timeout:120000}).then(r=>r.data);};
 export const getAdsPage = (cursor?: string, query?: string, signal?: AbortSignal): Promise<{items: Ad[]; next_cursor: string | null}> => api.get('/ads/page', {params: {cursor, q: query || undefined}, signal}).then(res => res.data);
 export const getAds = (): Promise<Ad[]> => getAdsPage().then(res => res.items);
 export const getAd = (id: string): Promise<Ad> => api.get(`/ads/${encodeURIComponent(id)}`).then(res => res.data);

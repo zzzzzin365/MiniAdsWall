@@ -1,0 +1,58 @@
+{
+  "ads": [
+    {
+      "id": "1",
+      "title": "one",
+      "version": 1,
+      "videos": []
+    },
+    {
+      "id": "shared-ad",
+      "title": "shared",
+      "version": 3,
+      "videos": [
+        "/v1",
+        "/v2",
+        "/v3"
+      ]
+    }
+  ],
+  "periods": {
+    "3": [
+      {
+        "id": "1",
+        "impressions": 19859,
+        "clicks": 696,
+        "orders": 26,
+        "spend": 128506,
+        "revenue": 429904
+      },
+      {
+        "id": "shared-ad",
+        "impressions": 56876,
+        "clicks": 1711,
+        "orders": 73,
+        "spend": 375239,
+        "revenue": 1368140
+      }
+    ],
+    "7": [
+      {
+        "id": "1",
+        "impressions": 38935,
+        "clicks": 1362,
+        "orders": 47,
+        "spend": 251970,
+        "revenue": 842945
+      },
+      {
+        "id": "shared-ad",
+        "impressions": 111510,
+        "clicks": 3344,
+        "orders": 133,
+        "spend": 735755,
+        "revenue": 2682615
+      }
+    ]
+  }
+}

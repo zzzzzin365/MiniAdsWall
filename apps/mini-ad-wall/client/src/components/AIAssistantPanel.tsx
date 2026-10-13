@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { usePerformance } from '../contexts/PerformanceContext';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { hostedIdentity, hostedSessions, hostedNewSession, hostedHistory, hostedCreateRun,
     hostedRun, hostedEvents, hostedCancel, hostedResume, hostedApprove, HostedSession, HostedRun } from '../api';
 import { Ad, AssistantMessage } from '../types';
@@ -9,7 +10,58 @@ const LABELS: Record<string, string> = { queued: '等待执行', running: '正�
     stopping: '正在停止并清理任务', succeeded: '已完成', failed: '执行失败', cancelled: '已取消', timed_out: '执行超时', interrupted: '任务中断', waiting_approval: '等待确认' };
 
 function AIAssistantPanel({ ads }: { ads: Ad[] }) {
+    const {measures,range}=usePerformance();
     const [open, setOpen] = useState(false);
+    const shell = useRef<HTMLDivElement>(null);
+    const [position, setPosition] = useState<{ right: number; bottom: number } | null>(null);
+    const drag = useRef<{ id: number; x: number; y: number; right: number; bottom: number; moved: boolean } | null>(null);
+    const suppressClick = useRef(false);
+    const [dragging, setDragging] = useState(false);
+    const clampPosition = (right: number, bottom: number) => {
+        const rect = shell.current?.getBoundingClientRect();
+        if (!rect) return { right, bottom };
+        return { right: Math.max(12, Math.min(right, window.innerWidth - rect.width - 12)),
+            bottom: Math.max(12, Math.min(bottom, window.innerHeight - rect.height - 12)) };
+    };
+    useLayoutEffect(() => {
+        const constrain = () => {
+            const rect = shell.current?.getBoundingClientRect();
+            if (!rect || !rect.width) return;
+            const right = window.innerWidth - rect.right, bottom = window.innerHeight - rect.bottom;
+            const next = clampPosition(right, bottom);
+            if (Math.abs(next.right - right) > .5 || Math.abs(next.bottom - bottom) > .5) setPosition(next);
+        };
+        constrain();
+        const observer = new ResizeObserver(constrain);
+        if (shell.current) observer.observe(shell.current);
+        window.addEventListener('resize', constrain);
+        return () => { observer.disconnect(); window.removeEventListener('resize', constrain); };
+    }, [open]);
+    function startDrag(event: React.PointerEvent<HTMLElement>, header = false) {
+        if (!event.isPrimary || event.button !== 0 || (header && (event.target as Element).closest('button, input, select, textarea, a'))) return;
+        const rect = shell.current?.getBoundingClientRect();
+        if (!rect) return;
+        suppressClick.current = false;
+        drag.current = { id: event.pointerId, x: event.clientX, y: event.clientY,
+            right: window.innerWidth - rect.right, bottom: window.innerHeight - rect.bottom, moved: false };
+        event.currentTarget.setPointerCapture(event.pointerId);
+    }
+    function moveDrag(event: React.PointerEvent<HTMLElement>) {
+        const current = drag.current;
+        if (!current || current.id !== event.pointerId) return;
+        const dx = event.clientX - current.x, dy = event.clientY - current.y;
+        if (!current.moved && Math.hypot(dx, dy) < 6) return;
+        current.moved = true;
+        setDragging(true);
+        setPosition(clampPosition(current.right - dx, current.bottom - dy));
+    }
+    function endDrag(event: React.PointerEvent<HTMLElement>) {
+        if (!drag.current || drag.current.id !== event.pointerId) return;
+        suppressClick.current = drag.current.moved;
+        drag.current = null;
+        setDragging(false);
+        if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    }
     const [input, setInput] = useState('');
     const [sessions, setSessions] = useState<HostedSession[]>([]);
     const [session, setSession] = useState<HostedSession>();
@@ -28,8 +80,8 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
     const submitting = useRef(false);
     const mounted = useRef(true);
     const watching = useRef<string>();
-    const summary = useMemo(() => ({ clicks: ads.reduce((n, ad) => n + Number(ad.clicks || 0), 0),
-        videos: ads.reduce((n, ad) => n + (ad.videos?.length || 0), 0) }), [ads]);
+    const summary = useMemo(() => ({ clicks: ads.reduce((n, ad) => n + measures(ad).clicks, 0),
+        videos: ads.reduce((n, ad) => n + (ad.videos?.length || 0), 0) }), [ads,range]);
 
     useEffect(() => { mounted.current = true; return () => { mounted.current = false; controller.current?.abort(); }; }, []);
     useEffect(() => {
@@ -83,6 +135,7 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
             }
             if (current()) {
                 const state = await hostedRun(initial.id); setRun(state); setStage(state.status);
+                if (state.status === 'succeeded') window.dispatchEvent(new Event('ads-changed'));
                 if (state.status === 'waiting_approval') setApproval(state.approval_id);
                 await loadHistory(initial.session_id); setLiveText('');
                 setSessions(await hostedSessions());
@@ -153,9 +206,9 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
         finally { submitting.current = false; }
     }
     return (
-        <div className={`assistant-shell ${open ? 'open' : ''}`}>
+        <div ref={shell} className={`assistant-shell ${open ? 'open' : ''} ${dragging ? 'dragging' : ''}`} style={position ?? undefined}>
             {open && <section className="assistant-panel" aria-label="广告运营助手">
-                <div className="assistant-header">
+                <div className="assistant-header" title="拖拽移动助手" onPointerDown={event => startDrag(event, true)} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
                     <div><div className="assistant-title">广告运营助手</div>
                         <div className="assistant-meta">{ads.length} 条广告 · {summary.clicks} 次点击 · {summary.videos} 个素材</div></div>
                     <button className="assistant-icon-btn" type="button" onClick={() => setOpen(false)} aria-label="关闭助手">×</button>
@@ -193,7 +246,12 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
                     <button type="submit" disabled={busy || !input.trim() || !identity || !!approval}>发送</button>
                 </form>
             </section>}
-            <button className="assistant-fab" type="button" onClick={toggle} aria-label="打开广告运营助手">AI</button>
+            <button className="assistant-fab" type="button" onPointerDown={event => startDrag(event)} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onClick={() => { if (suppressClick.current) { suppressClick.current = false; return; } toggle(); }} aria-label={open ? '关闭广告运营助手' : '打开广告运营助手'} aria-expanded={open} title="点击打开助手，拖拽移动">
+                <picture>
+                    <source media="(prefers-reduced-motion: reduce)" srcSet="/assets/assistant-rabbit-still.png" />
+                    <img src="/assets/assistant-rabbit.webp" alt="" aria-hidden="true" draggable={false} />
+                </picture>
+            </button>
         </div>
     );
 }

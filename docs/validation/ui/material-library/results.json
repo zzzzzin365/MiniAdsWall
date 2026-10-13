@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "UI with API fixtures; actual MySQL service checks in material-library.test.cjs",
+  "checks": [
+    "aligned card actions",
+    "previews and typography",
+    "editor jump and prefill",
+    "save returns to library",
+    "second edit in mounted studio",
+    "delete confirmation and cancel",
+    "delete updates list",
+    "upload entry with image/video previews",
+    "remove uploaded video",
+    "save prepared image to library",
+    "320–1280 no overflow"
+  ],
+  "errors": []
+}

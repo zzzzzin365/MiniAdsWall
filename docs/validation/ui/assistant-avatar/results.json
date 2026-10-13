@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "97 frames, 1.5x animation and transparent alpha",
+    "pure white character fill",
+    "exterior transparent, character opaque",
+    "button background transparent",
+    "click opens and closes assistant",
+    "reduced motion static image",
+    "enlarged avatar and panel",
+    "avatar and header drag",
+    "drag never toggles panel",
+    "viewport edge clamp",
+    "keyboard opens panel",
+    "resize keeps open panel visible",
+    "mobile width and no overflow"
+  ],
+  "errors": []
+}

@@ -11,7 +11,7 @@ const lockSql = "CONCAT('ads:', LEFT(SHA2(DATABASE(), 256), 50))"; // same lock 
 type Options = { directory?: string; target?: number; lockTimeout?: number; afterStatement?: (version: number, index: number) => Promise<void> | void };
 type Migration = { version: number; name: string; sql: string; checksum: string };
 // Recall 002 and marketing 003 have separate explicit entry points; do not execute them here.
-const files = ['001_ads.sql', '004_request_protocol.sql'];
+const files = ['001_ads.sql', '004_request_protocol.sql', '020_ad_materials.sql', '021_material_library_archive.sql', '022_material_images.sql'];
 
 function definitions(directory = path.join(root, 'migrations')): Migration[] {
     return files.map(name => {
@@ -30,6 +30,18 @@ async function protocolColumn(c: PoolConnection): Promise<boolean> {
     return true;
 }
 async function verify(c: PoolConnection, version: number): Promise<void> {
+    if (version === 22) {
+        if (!await exists(c, "ads_business_material_images")) throw new AdsMigrationError("missing_material_images_table");
+        return;
+    }
+    if (version === 21) {
+        if (!await exists(c, "ads_business_material_archive")) throw new AdsMigrationError("missing_material_archive_table");
+        return;
+    }
+    if (version === 20) {
+        if (!await exists(c, "ads_business_materials") || !await exists(c, "ads_business_material_links")) throw new AdsMigrationError("missing_material_tables");
+        return;
+    }
     if (version === 4) {
         if (!await protocolColumn(c)) throw new AdsMigrationError('missing_request_protocol_column');
         return;

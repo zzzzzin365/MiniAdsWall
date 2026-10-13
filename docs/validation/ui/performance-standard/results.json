@@ -1,0 +1,25 @@
+{
+  "ads": 18,
+  "periods": {
+    "3": {
+      "impressions": 542270,
+      "clicks": 16308,
+      "orders": 718,
+      "spend": 3443494,
+      "revenue": 12437484
+    },
+    "7": {
+      "impressions": 1063167,
+      "clicks": 31876,
+      "orders": 1300,
+      "spend": 6751840,
+      "revenue": 24387112
+    }
+  },
+  "checks": [
+    "range 7: panel, list, detail, overview match original",
+    "range 3: panel, list, detail, overview match original",
+    "shared material totals include every linked ad"
+  ],
+  "pageErrors": []
+}

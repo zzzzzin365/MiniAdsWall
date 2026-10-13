@@ -14,6 +14,7 @@ import {
 } from 'chart.js';
 import { Bar, Scatter, Line } from 'react-chartjs-2';
 import { Ad } from '../types';
+import { usePerformance } from '../contexts/PerformanceContext';
 import AnalystImage from '../../Analyst.png';
 
 const MarketingDashboard = lazy(() => import('./MarketingDashboard'));
@@ -46,7 +47,9 @@ const PRICE_RANGES = [
     { min: 300, max: Infinity, label: '300+' },
 ];
 
-const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) => {
+const DataDashboard: React.FC<DataDashboardProps> = ({ ads:rawAds, scope, loadMore }) => {
+    const {range,measures,period}=usePerformance();
+    const ads=useMemo(()=>rawAds.map(ad=>({...ad,clicks:measures(ad).clicks})),[rawAds,range]);
     const [showMetrics, setShowMetrics] = useState(initialMetricsView);
     const [metricsOpened, setMetricsOpened] = useState(initialMetricsView);
     const [selectedAdId, setSelectedAdId] = useState<string | null>(null);
@@ -305,7 +308,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
             },
             title: {
                 display: true,
-                text: '广告点击热度趋势',
+                text: '各广告有效点击',
                 color: '#1A202C',
                 font: { size: 16, weight: 'bold' },
                 padding: { bottom: 20 },
@@ -378,31 +381,12 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
         },
     };
 
-    const generateVideoDuration = (videoUrl: string, index: number): number => {
-        let hash = 0;
-        const str = videoUrl + index;
-        for (let i = 0; i < str.length; i++) {
-            hash = ((hash << 5) - hash) + str.charCodeAt(i);
-            hash |= 0;
-        }
-        return Math.abs(hash % 56) + 5;
-    };
-
     const videoPerformanceData = useMemo(() => {
         const dataPoints: { x: number; y: number; ad: Ad; videoIndex: number }[] = [];
         
         ads.forEach(ad => {
-            if (ad.videos && ad.videos.length > 0) {
-                ad.videos.forEach((videoUrl, videoIndex) => {
-                    const duration = generateVideoDuration(videoUrl, videoIndex);
-                    dataPoints.push({
-                        x: duration,
-                        y: ad.clicks,
-                        ad: ad,
-                        videoIndex: videoIndex
-                    });
-                });
-            }
+            const count=ad.video_count ?? ad.videos.length;
+            if(count) dataPoints.push({x:count,y:ad.clicks,ad,videoIndex:0});
         });
 
         return {
@@ -434,7 +418,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
             },
             title: {
                 display: true,
-                text: '视频素材表现图',
+                text: '视频数量与广告有效点击',
                 color: '#1A202C',
                 font: { size: 16, weight: 'bold' },
                 padding: { bottom: 20 },
@@ -454,9 +438,8 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
                         const data = item.raw as { x: number; y: number; ad: Ad; videoIndex: number };
                         return [
                             `广告: ${data.ad.title}`,
-                            `视频时长: ${data.x} 秒`,
-                            `点击热度: ${data.y} 次`,
-                            `视频序号: #${data.videoIndex + 1}`,
+                            `视频数量: ${data.x} 个`,
+                            `广告有效点击: ${data.y} 次`,
                             '',
                             '💡 点击选中此广告'
                         ];
@@ -470,11 +453,11 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
                 ticks: { color: '#4A5568' },
                 title: {
                     display: true,
-                    text: '视频时长 (秒)',
+                    text: '视频数量（个）',
                     color: '#718096',
                 },
                 beginAtZero: true,
-                max: 65,
+
             },
             y: {
                 grid: { color: 'rgba(0, 0, 0, 0.06)' },
@@ -538,7 +521,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
                 </div>
                 <div className="dashboard-stat-item">
                     <div className="stat-value">{stats.totalClicks}</div>
-                    <div className="stat-label">总点击数</div>
+                    <div className="stat-label">有效点击 · {period}</div>
                 </div>
                 <div className="dashboard-stat-item">
                     <div className="stat-value">¥{stats.maxPrice}</div>
@@ -573,14 +556,14 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads, scope, loadMore }) =
                     <div className="chart-wrapper">
                         <Scatter data={rankVsBidData} options={rankVsBidOptions} />
                     </div>
-                    <div className="chart-hint">排序：出价 + 出价 × 累计点击 × 0.42；点击数据点选中广告</div>
+                    <div className="chart-hint">排名沿用广告列表；点击数据点选中广告</div>
                 </div>
 
                 <div className="chart-container">
                     <div className="chart-wrapper">
                         <Scatter data={videoPerformanceData} options={videoPerformanceOptions} />
                     </div>
-                    <div className="chart-hint">💡 横轴: 视频时长 | 纵轴: 点击热度</div>
+                    <div className="chart-hint">横轴：视频数量；纵轴：广告有效点击，不代表单个素材点击</div>
                 </div>
 
                 <div className="chart-container add-chart-card">

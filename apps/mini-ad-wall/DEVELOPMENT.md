@@ -659,7 +659,7 @@ API 端点统计
 AI 服务	2 个	POST /ai/creative, POST /ai/strategy
 总计	10 个	
 
-### 广告管理接口
+### 接口
 
 #### 1. 获取广告列表
 
