@@ -1,0 +1,22 @@
+{
+  "call_key": "warm_repeat:H:reader:compare-surfaces",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "32438d6c453cb07d3ae050d4",
+  "input_sha256": "a0a1d3636363640883f16361be647e6c03da3268c0ff15ff0b4084b65e64e613",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 12566.407500067726,
+  "http_status": 200,
+  "provider_id": "021791987270443c2531bd3ff98f8d456851518a83e6729ad412c",
+  "usage": {
+    "completion_tokens": 188,
+    "prompt_tokens": 4160,
+    "total_tokens": 4348,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

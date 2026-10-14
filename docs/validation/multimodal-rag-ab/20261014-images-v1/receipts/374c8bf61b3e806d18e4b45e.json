@@ -1,0 +1,22 @@
+{
+  "call_key": "warm_repeat:R:answer:compare-scenes",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "374c8bf61b3e806d18e4b45e",
+  "input_sha256": "871f76b86c00828b1e09a6346eaff3dcf2531bec17964467506d9d173a35e924",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1691.5253329789266,
+  "http_status": 200,
+  "provider_id": "021791987307665c2531bd3ff98f8d456851518a83e67296fedb5",
+  "usage": {
+    "completion_tokens": 79,
+    "prompt_tokens": 980,
+    "total_tokens": 1059,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "UI fixtures; no business writes or paid inference",
+  "checks": [
+    "citation versus candidate",
+    "unverified claims",
+    "authorized source preview",
+    "video seek 1.5s",
+    "320/390/768 no overflow"
+  ],
+  "errors": []
+}

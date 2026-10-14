@@ -8,6 +8,7 @@ const router = new Router({
 router.post('/creative', aiController.generateCreative);
 
 router.post('/strategy', aiController.generateStrategy);
+router.get('/strategy-context', aiController.strategyContext);
 
 router.post('/assistant/chat', aiController.chatAssistant);
 

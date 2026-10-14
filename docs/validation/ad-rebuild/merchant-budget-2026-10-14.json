@@ -1,0 +1,203 @@
+{
+  "operation": "merchant_demo_20261014_3ed93205-132a-4bc5-bf60-16addcbab982",
+  "backup": "/Users/admin/.codex/backups/MiniAdsWall/merchant_demo_20261014_3ed93205-132a-4bc5-bf60-16addcbab982.json",
+  "updated": 20,
+  "environment": "synthetic",
+  "daily_budget": 100,
+  "week_budget": 700,
+  "fixture_sha256": "b6e1917995d19ff28a1f904c61d05ed498a35e504c34b49977bce1be3f74807d",
+  "ads": [
+    {
+      "id": "30b2cc1a-1cfc-4ba5-bca9-2ef52fe8f678",
+      "title": "阳光下的彩虹手串｜出游搭配",
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "price": 0.7,
+      "clicks": 110,
+      "version": 2
+    },
+    {
+      "id": "ad63a655-c3c5-42a5-ad8e-4d651eb55473",
+      "title": "戴上水果彩虹｜周末出游",
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "price": 0.8,
+      "clicks": 95,
+      "version": 2
+    },
+    {
+      "id": "1069d128-d529-4e3c-b1aa-ec770939b82e",
+      "title": "一颗苹果，一份心意｜好友礼赠",
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "price": 0.7,
+      "clicks": 101,
+      "version": 2
+    },
+    {
+      "id": "451fc56b-607d-4752-8c1a-76661276ad32",
+      "title": "把平安送给朋友｜苹果礼物",
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "price": 0.6,
+      "clicks": 118,
+      "version": 2
+    },
+    {
+      "id": "7b9bb38f-f8ce-434a-a3e9-430c64ed722b",
+      "title": "水果色彩，实物出镜｜日常搭配",
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "price": 0.75,
+      "clicks": 69,
+      "version": 2
+    },
+    {
+      "id": "70ef72c2-e3fa-49b5-a0ca-04bbfa902788",
+      "title": "实拍水果小物｜看到什么收到什么",
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "price": 0.65,
+      "clicks": 78,
+      "version": 2
+    },
+    {
+      "id": "05b780ec-e942-4493-b3f7-7658d1cb3ba6",
+      "title": "红苹果的小心意｜送好朋友",
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "price": 0.85,
+      "clicks": 58,
+      "version": 2
+    },
+    {
+      "id": "192b0dbb-60ff-47a3-a9e9-e16463b2ae3e",
+      "title": "经典红苹果｜送自己一份平安",
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "price": 0.75,
+      "clicks": 66,
+      "version": 2
+    },
+    {
+      "id": "f6e71765-cc88-4eba-8e54-6b4fe666c160",
+      "title": "把好心情戴出门｜彩虹手串",
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "price": 1,
+      "clicks": 41,
+      "version": 2
+    },
+    {
+      "id": "483812c4-206d-4894-9791-9b15fbc1e865",
+      "title": "给朋友的平安礼物｜日常惊喜",
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "price": 0.9,
+      "clicks": 42,
+      "version": 2
+    },
+    {
+      "id": "5056285e-dc89-4f78-ac61-373ac176bc7a",
+      "title": "彩虹倒影藏在腕间｜日常搭配",
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "price": 0.9,
+      "clicks": 37,
+      "version": 2
+    },
+    {
+      "id": "5befae2f-a49c-4b93-9fe7-ca581cfdb3e6",
+      "title": "小小苹果装下祝福｜生日心意",
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "price": 0.8,
+      "clicks": 39,
+      "version": 2
+    },
+    {
+      "id": "e13364bf-1e88-4c8a-a753-8bdec7ac8134",
+      "title": "水果组成的小彩虹｜好友礼物",
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "price": 1.1,
+      "clicks": 26,
+      "version": 2
+    },
+    {
+      "id": "9e517c9a-5387-4481-83db-c3caa2d3ee3f",
+      "title": "没有滤镜的可爱｜水果实拍",
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "price": 0.95,
+      "clicks": 29,
+      "version": 2
+    },
+    {
+      "id": "c56eb361-a884-4682-a27f-a69c9069802f",
+      "title": "一抹苹果红，满满祝福｜平安礼物",
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "price": 1.05,
+      "clicks": 25,
+      "version": 2
+    },
+    {
+      "id": "9c6205f2-be26-493a-8c8d-79560d1d3242",
+      "title": "把祝福带在身边｜苹果礼赠",
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "price": 1,
+      "clicks": 26,
+      "version": 2
+    },
+    {
+      "id": "f28592fd-1098-4be6-8633-d0b6c57bea2f",
+      "title": "喜欢哪颗就选哪颗｜水果小物",
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "price": 0.85,
+      "clicks": 26,
+      "version": 2
+    },
+    {
+      "id": "4956525d-6ac5-43d8-9904-603cfa2639a0",
+      "title": "喜欢经典红色｜日常搭配",
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "price": 0.95,
+      "clicks": 23,
+      "version": 2
+    },
+    {
+      "id": "6c0d3c39-8a1f-4884-93c4-b690f61c0230",
+      "title": "把水果灵感带回家｜实拍精选",
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "price": 1.05,
+      "clicks": 18,
+      "version": 2
+    },
+    {
+      "id": "f01e4ad4-3f31-4dd1-974d-c250c73acbb3",
+      "title": "把平安留在身边｜红苹果精选",
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "price": 1.15,
+      "clicks": 16,
+      "version": 2
+    }
+  ],
+  "verified": true,
+  "verification": {
+    "client_build": "passed",
+    "ledger_tests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "api_projection_consistency": "20/20",
+    "browser_views": [
+      "广告管理",
+      "广告概览",
+      "投放效果7天",
+      "投放效果3天",
+      "素材库3天"
+    ],
+    "simulation_totals": {
+      "impressions": 49990,
+      "clicks": 1043,
+      "paid_orders": 18,
+      "refunded_orders": 1,
+      "spend_minor": 58782,
+      "gross_revenue_minor": 120200,
+      "refund_minor": 5900,
+      "net_revenue_minor": 114300
+    },
+    "material_reuse": [
+      5,
+      5,
+      5,
+      5
+    ]
+  }
+}

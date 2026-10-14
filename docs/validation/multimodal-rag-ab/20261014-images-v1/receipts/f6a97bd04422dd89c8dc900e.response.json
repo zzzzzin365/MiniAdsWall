@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "gift",
+      "observations": [
+        "一只手掌托着一串由红色苹果造型珠子组成的手串"
+      ],
+      "facts": {
+        "适合送朋友的礼物": true
+      }
+    }
+  ],
+  "missing": [
+    "该手串的实际售价"
+  ]
+}

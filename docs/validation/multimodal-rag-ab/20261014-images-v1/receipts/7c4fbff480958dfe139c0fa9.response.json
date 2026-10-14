@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "source_id": "gift",
+      "observations": [
+        "手串被放置在人的手掌上展示"
+      ],
+      "facts": {
+        "display_surface": "人的手掌"
+      }
+    },
+    {
+      "source_id": "two",
+      "observations": [
+        "手串被放置在木质台面上，其中一条手串被放置在黑色方形物体上展示"
+      ],
+      "facts": {
+        "display_surface": "木质台面，黑色方形物体"
+      }
+    },
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "手串被放置在人的手掌上展示"
+      ],
+      "facts": {
+        "display_surface": "人的手掌"
+      }
+    }
+  ],
+  "missing": []
+}

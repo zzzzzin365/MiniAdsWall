@@ -5,6 +5,7 @@ import {
   studioWrite,
   studioUpload,
   studioAsset,
+  studioReferenceImage,
   hasStudioCredential,
 } from "../../../api";
 import StudioConcept, { Recipe, Concept } from "./StudioConcept";
@@ -26,15 +27,19 @@ function errorText(e: any) {
 function AssetPreview({
   id,
   mime = "video/mp4",
+  timeMs,
+  reference,
 }: {
   id: string;
   mime?: string;
+  timeMs?: number | null;
+  reference?: {sourceId: string; label: string};
 }) {
   const [url, setUrl] = useState("");
   useEffect(() => {
     let active = true,
       u = "";
-    studioAsset(id)
+    (reference ? studioReferenceImage(reference.sourceId, reference.label) : studioAsset(id))
       .then((blob) => {
         u = URL.createObjectURL(blob);
         if (active) setUrl(u);
@@ -45,17 +50,19 @@ function AssetPreview({
       active = false;
       if (u) URL.revokeObjectURL(u);
     };
-  }, [id]);
+  }, [id, reference?.sourceId, reference?.label]);
   return url ? (
     <div>
       {mime.startsWith("image/") ? (
         <img src={url} alt="商家上传的参考素材" />
       ) : (
-        <video controls src={url} />
+        <video controls src={url} onLoadedMetadata={e => {
+          if (timeMs != null) e.currentTarget.currentTime = timeMs / 1000;
+        }} />
       )}
       <a
         href={url}
-        download={id + (mime.startsWith("image/") ? ".png" : ".mp4")}
+        download={id + (mime === 'image/webp' ? '.webp' : mime === 'image/jpeg' ? '.jpg' : mime.startsWith("image/") ? ".png" : ".mp4")}
       >
         下载素材
       </a>
@@ -289,7 +296,10 @@ export default function MerchantStudio() {
   );
   return (
     <section className="studio-shell" aria-label="创意素材生成">
-      {editingId&&<section className="studio-card material-edit-panel" aria-label="编辑已有素材"><h2>{editingId==='new'?'上传准备好的广告素材':'编辑已有素材'}</h2><p className="studio-muted">{editingId==='new'?'上传商家已准备好的素材，保存到素材库后即可用于新建广告。':'修改保存为素材库的新快照；已使用原素材的广告保留原内容。'}</p>{editError&&<p role="alert">{editError}</p>}{editBusy&&!editing&&<p role="status">正在读取素材…</p>}{editing&&<form onSubmit={saveMaterial}><label>素材名称<input aria-label="素材名称" value={editName} maxLength={500} required onChange={e=>setEditName(e.target.value)}/></label><label>素材文案<textarea aria-label="素材文案" value={editContent} onChange={e=>setEditContent(e.target.value)}/></label><div className="studio-upload-group"><span className="studio-upload-title">上传广告素材</span><div className="studio-upload-options"><label className={`video-upload-btn studio-upload-tile${editUploading||editBusy?' is-disabled':''}`}><span className="upload-icon" aria-hidden="true">+</span><span className="upload-text">{editUploading?'正在上传…':'上传图片或视频'}</span><input type="file" aria-label="上传已准备好的广告素材" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime,video/webm,.mov" multiple disabled={editUploading||editBusy||editImages.length+editVideoUrls.length>=20} onChange={event=>{const files=event.target.files;void uploadReady(files);event.target.value='';}}/></label></div><p className="studio-muted">支持 JPG、PNG、WebP、MP4、MOV、WebM；单个文件不超过 100MB，最多 20 个。</p></div><div className="material-ready-previews">{editImages.map((url,index)=><article key={url+index}><img src={url} alt={`已准备好的图片素材 ${index+1}`}/><button type="button" disabled={editUploading||editBusy} aria-label={`移除图片素材 ${index+1}`} onClick={()=>setEditImages(old=>old.filter((_,i)=>i!==index))}>移除图片</button></article>)}{editVideoUrls.map((url,index)=><article key={url+index}><video src={url} controls preload="metadata"/><button type="button" disabled={editUploading||editBusy} aria-label={`移除视频素材 ${index+1}`} onClick={()=>setEditVideos(editVideoUrls.filter((_,i)=>i!==index).join('\n'))}>移除视频</button></article>)}</div><div className="studio-actions"><button type="submit" disabled={editBusy||editUploading}>{editBusy?'保存中…':'保存素材'}</button><button type="button" disabled={editBusy||editUploading} onClick={returnToLibrary}>返回素材库</button></div></form>}</section>}
+      {editingId&&<section className="material-edit-section" aria-label="编辑已有素材">
+        <header className="studio-heading"><div><h2>{editingId==='new'?'上传准备好的广告素材':'编辑已有素材'}</h2><p className="studio-muted">{editingId==='new'?'上传商家已准备好的素材，保存到素材库后即可用于新建广告。':'修改保存为素材库的新快照；已使用原素材的广告保留原内容。'}</p></div></header>
+        <div className="studio-card material-edit-panel">{editError&&<p role="alert">{editError}</p>}{editBusy&&!editing&&<p role="status">正在读取素材…</p>}{editing&&<form onSubmit={saveMaterial}><label>素材名称<input aria-label="素材名称" value={editName} maxLength={500} required onChange={e=>setEditName(e.target.value)}/></label><label>素材文案<textarea aria-label="素材文案" value={editContent} onChange={e=>setEditContent(e.target.value)}/></label><div className="studio-upload-group"><span className="studio-upload-title">上传广告素材</span><div className="studio-upload-options"><label className={`video-upload-btn studio-upload-tile${editUploading||editBusy?' is-disabled':''}`}><span className="upload-icon" aria-hidden="true">+</span><span className="upload-text">{editUploading?'正在上传…':'上传图片或视频'}</span><input type="file" aria-label="上传已准备好的广告素材" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime,video/webm,.mov" multiple disabled={editUploading||editBusy||editImages.length+editVideoUrls.length>=20} onChange={event=>{const files=event.target.files;void uploadReady(files);event.target.value='';}}/></label></div><p className="studio-muted">支持 JPG、PNG、WebP、MP4、MOV、WebM；单个文件不超过 100MB，最多 20 个。</p></div><div className="material-ready-previews">{editImages.map((url,index)=><article key={url+index}><img src={url} alt={`已准备好的图片素材 ${index+1}`}/><button type="button" disabled={editUploading||editBusy} aria-label={`移除图片素材 ${index+1}`} onClick={()=>setEditImages(old=>old.filter((_,i)=>i!==index))}>移除图片</button></article>)}{editVideoUrls.map((url,index)=><article key={url+index}><video src={url} controls preload="metadata"/><button type="button" disabled={editUploading||editBusy} aria-label={`移除视频素材 ${index+1}`} onClick={()=>setEditVideos(editVideoUrls.filter((_,i)=>i!==index).join('\n'))}>移除视频</button></article>)}</div><div className="studio-actions"><button type="submit" disabled={editBusy||editUploading}>{editBusy?'保存中…':'保存素材'}</button><button type="button" disabled={editBusy||editUploading} onClick={returnToLibrary}>返回素材库</button></div></form>}</div>
+      </section>}
       <header className="studio-heading">
         <div>
           <h2>告诉我们要推广什么，一起打磨创意吧✨</h2>
@@ -430,7 +440,15 @@ export default function MerchantStudio() {
               <div className="studio-analysis" role="status">
                 <strong>{a.analysis_status==='not_started'?'已上传，提交需求后开始理解':a.analysis_status==='succeeded'?'素材理解完成':a.analysis_status==='failed'?(a.analysis_error==='seed_model_not_open'?'Seed模型尚未开通，请配置已开通的理解模型':'素材理解失败'):a.analysis_status==='blocked'?'无权读取素材':'正在理解素材…'}</strong>
                 {a.analysis&&<><p>{a.analysis.subject}</p><p>{a.analysis.marketing_summary}</p><details><summary>查看识别依据与不确定信息</summary>{a.analysis.observations?.map((o:any,i:number)=><p key={i}>{o.time_ms!==null?'['+(o.time_ms/1000).toFixed(1)+'秒] ':''}{o.description}</p>)}{a.analysis.source_claims?.length>0&&<p>素材宣称（未核验）：{a.analysis.source_claims.join('；')}</p>}{a.analysis.uncertainties?.length>0&&<p>不确定：{a.analysis.uncertainties.join('；')}</p>}{a.analysis.limitations?.map((l:string)=><p key={l}>{l}</p>)}</details></>}
-                {a.analysis_status==='failed'&&<button onClick={()=>void work(async()=>{await studioWrite('/jobs/'+a.data.analysis_job_id+'/retry',{confirm_retry:true});setAssets(old=>old.map(x=>x.id===a.id?{...x,analysis_status:'queued',analysis:null}:x));})}>重试素材理解</button>}
+                {a.analysis_status==='failed'&&<button onClick={()=>void work(async()=>{
+                  const job = await studioGet('/jobs/' + a.data.analysis_job_id);
+                  if (job.status === 'failed') {
+                    await studioWrite('/jobs/'+a.data.analysis_job_id+'/retry',{confirm_retry:true});
+                    setAssets(old=>old.map(x=>x.id===a.id?{...x,analysis_status:'queued',analysis:null,analysis_error:null}:x));
+                  } else {
+                    setAssets(old=>old.map(x=>x.id===a.id?{...x,analysis_status:job.status,analysis:job.result,analysis_error:job.error_code}:x));
+                  }
+                })}>重试素材理解</button>}
               </div>
             </div>
           ))}
@@ -484,13 +502,49 @@ export default function MerchantStudio() {
                   <>
                     <p role="status">
                       {messages[j?.status] || "待处理"}
-                      {j?.error_code ? " · " + j.error_code : ""}
+                      {j?.error_code ? " · " + (j.error_code === 'media_rag_unavailable' ? '素材知识检索失败，请稍后重试' : j.error_code) : ""}
                     </p>
                     {j?.result?.summary && (
                       <>
                         <p>{j.result.summary}</p>
                         {j.result.questions?.length > 0 && (
                           <p>需要补充：{j.result.questions.join("；")}</p>
+                        )}
+                        {j.result.media_rag && (
+                          <details className="studio-stack">
+                            <summary>查看素材依据（引用 {j.result.media_rag.citations.length} 条，检索到 {j.result.media_rag.retrieved.length} 条）</summary>
+                            {j.result.media_rag.status === 'empty' && <p>该品牌暂无已理解的素材，请上传并理解图片或视频。</p>}
+                            {j.result.media_rag.status === 'no_match' && <p>未检索到相关素材，本轮没有引用历史素材。</p>}
+                            {j.result.media_rag.corpus_truncated && <p>本轮检索范围为最近 100 个已理解素材，优先包含当前附件。</p>}
+                            {j.result.media_rag.retrieved.map((s: any) => (
+                              <article key={s.id} className="studio-card studio-stack">
+                                <strong>{j.result.source_ids?.includes(s.id) ? '已引用' : '检索候选，未引用'}：{s.subject}</strong>
+                                <p>{s.kind === 'video' ? '视频' : '图片'}{s.time_ms != null ? ` · ${(s.time_ms / 1000).toFixed(1)} 秒` : ''} · 素材 {s.asset_id}</p>
+                                <p>{s.excerpt}</p>
+                                {s.source_claims.length > 0 && <p>素材宣称（未核验）：{s.source_claims.join('；')}</p>}
+                                {s.uncertainties.length > 0 && <p>不确定：{s.uncertainties.join('；')}</p>}
+                                {s.limitations.map((l: string) => <p key={l}>{l}</p>)}
+                                <AssetPreview id={s.asset_id} mime={s.kind === 'video' ? 'video/mp4' : 'image/png'} timeMs={s.time_ms} />
+                              </article>
+                            ))}
+                          </details>
+                        )}
+                        {j.result.reference_knowledge?.retrieved.length > 0 && (
+                          <details className="studio-stack">
+                            <summary>查看外部营销参考（引用 {j.result.reference_knowledge.citations.length} 条）</summary>
+                            {j.result.reference_knowledge.retrieved.map((r: any) => (
+                              <article key={r.id} className="studio-card studio-stack">
+                                <a href={r.url} target="_blank" rel="noreferrer">{r.title}</a>
+                                <p>{r.platform} · {r.author} · {j.result.reference_ids?.includes(r.id) ? '已引用' : '候选，未引用'}{r.coverage === 'preview_only' ? ' · 仅公开预览' : ''}</p>
+                                <p>{r.content}</p>
+                                <p>外部作者观点与历史案例，不作为商品事实或效果保证。</p>
+                                {r.images.map((i: any) => <div key={i.label}>
+                                  <p>{i.caption}</p>
+                                  <AssetPreview id={i.label} mime={i.mime} reference={{sourceId:r.source_id, label:i.label}} />
+                                </div>)}
+                              </article>
+                            ))}
+                          </details>
                         )}
                       </>
                     )}

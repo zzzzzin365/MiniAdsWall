@@ -1,6 +1,7 @@
 import { usePerformance } from '../contexts/PerformanceContext';
 import React, { useState, useRef, useEffect } from 'react';
 import { Ad } from '../types';
+import { publisherLabel } from '../utils/performance';
 
 interface AdCardProps {
     ad: Ad;
@@ -44,7 +45,8 @@ const AdCard: React.FC<AdCardProps> = ({ ad, onEdit, onCopy, onDelete, onClick }
                 <div className="card-header">
                     <h3 className="ad-title" title={ad.title}>{ad.title}</h3>
                 </div>
-                <div className="ad-publisher">{ad.publisher}</div>
+                <div className="ad-publisher">{publisherLabel(ad.publisher)}</div>
+                {ad.images?.[0] && <img src={ad.images[0]} alt={ad.title} loading="lazy" style={{ width: '100%', height: 160, objectFit: 'contain', borderRadius: 8 }} />}
                 <div className="ad-content-preview">{ad.content}</div>
             </div>
             <div className="card-footer">

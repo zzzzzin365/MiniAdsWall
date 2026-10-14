@@ -646,11 +646,15 @@ def _compact_tool_data(data: Any, max_chars: int = 1800) -> str:
 
 async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
                                      business_data: Optional[Dict[str, Any]] = None,
-                                     request_id: Optional[str] = None) -> KnowledgeContext:
+                                     request_id: Optional[str] = None,
+                                     retrieval_query: Optional[str] = None,
+                                     evidence_config: Optional[EvidenceConfig] = None,
+                                     retrieval_stage_timeout: float = 3.0,
+                                     retrieval_queries: Optional[List[str]] = None) -> KnowledgeContext:
     """Rewrite, parallel recall and rerank, then check once with business data."""
     if not _should_use_knowledge(message):
         return KnowledgeContext()
-    config = EvidenceConfig.from_env()
+    config = evidence_config or EvidenceConfig.from_env()
     if _tool_manager is None:
         decision = await check_evidence(None, "", message, [], retrieval_error="retrieval_unavailable",
                                         request_id=request_id, config=config)
@@ -658,9 +662,10 @@ async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
     chunks, retrieval_error = [], None
     try:
         result = await asyncio.wait_for(
-            _tool_manager.search_with_rewrite("knowledge_search", message, top_k=top_k,
-                                               check_retrieved_evidence=False),
-            timeout=9.5,
+            _tool_manager.search_with_rewrite("knowledge_search", retrieval_query or message, top_k=top_k,
+                                               check_retrieved_evidence=False, stage_timeout=retrieval_stage_timeout,
+                                               **({'additional_queries': retrieval_queries} if retrieval_queries else {})),
+            timeout=3 * retrieval_stage_timeout + .5,
         )
         if not result.success or not isinstance(result.data, list) or any(isinstance(x, dict) and x.get("fallback") for x in result.data):
             retrieval_error = "retrieval_failed"
@@ -673,7 +678,7 @@ async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
     if decision.status in {"insufficient", "unavailable"}:
         return KnowledgeContext(evidence=decision)
     retained = [x for x in chunks if x["id"] in decision.retained_ids]
-    return KnowledgeContext(render_knowledge(retained, checked=decision.status != "disabled"), bool(retained), decision)
+    return KnowledgeContext(render_knowledge(retained, checked=decision.status != "disabled"), bool(retained), decision, retained)
 
 
 def _should_use_knowledge(message: str) -> bool:

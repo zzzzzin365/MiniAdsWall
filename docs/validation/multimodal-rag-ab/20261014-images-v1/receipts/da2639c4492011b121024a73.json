@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:reader:detail-gift-hole",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "da2639c4492011b121024a73",
+  "input_sha256": "7d32eea5a7773661eb1a55243ef8f93258dffbb493905867b56e19252143ab56",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 10484.919416951016,
+  "http_status": 200,
+  "provider_id": "021791987148906c2531bd3ff98f8d456851518a83e672995eef2",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 4151,
+    "total_tokens": 4199,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

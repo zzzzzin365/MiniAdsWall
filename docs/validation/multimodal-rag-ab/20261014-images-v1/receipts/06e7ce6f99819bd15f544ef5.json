@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:F:answer:missing-certification",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "06e7ce6f99819bd15f544ef5",
+  "input_sha256": "5f156bac1efcf773b7799b97720ef14bc93b82b01dc7fc2440073011042e23ba",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2320.9731669630855,
+  "http_status": 200,
+  "provider_id": "021791986611176c2531bd3ff98f8d456851518a83e6729ad00aa",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 903,
+    "total_tokens": 961,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

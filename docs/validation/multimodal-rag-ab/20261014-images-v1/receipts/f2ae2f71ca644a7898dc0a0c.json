@@ -1,0 +1,22 @@
+{
+  "call_key": "dev:A1:answer:dev-car",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "f2ae2f71ca644a7898dc0a0c",
+  "input_sha256": "fdee8574262d90b4e3a777f332f5dc824fb0c18459aa2f8955e3cf91e953ef8b",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2038.557416992262,
+  "http_status": 200,
+  "provider_id": "021791986544566c2531bd3ff98f8d456851518a83e67296c3389",
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 862,
+    "total_tokens": 906,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

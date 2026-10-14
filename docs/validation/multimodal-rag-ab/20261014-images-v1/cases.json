@@ -1,0 +1,472 @@
+{
+  "annotation_method": "assistant inspected all four original images before answer generation; single annotator, not independent human blind grading",
+  "cases": [
+    {
+      "id": "dev-gift",
+      "question": "“一个适合送朋友的礼物”素材的手串主要是什么颜色？",
+      "required_fields": [
+        "color"
+      ],
+      "gold_source_ids": [
+        "gift"
+      ],
+      "expected": {
+        "color": [
+          "红",
+          "red"
+        ]
+      },
+      "group": "visual",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "id": "dev-two",
+      "question": "“看到啥收到就是啥”素材展示的是单色还是多色手串？",
+      "required_fields": [
+        "color_style"
+      ],
+      "gold_source_ids": [
+        "two"
+      ],
+      "expected": {
+        "color_style": [
+          "多色",
+          "彩色",
+          "multicolor"
+        ]
+      },
+      "group": "visual",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "id": "dev-rainbow",
+      "question": "“是彩虹色手串”素材的主要物品是什么？",
+      "required_fields": [
+        "subject"
+      ],
+      "gold_source_ids": [
+        "rainbow"
+      ],
+      "expected": {
+        "subject": [
+          "手串",
+          "手链",
+          "bracelet"
+        ]
+      },
+      "group": "visual",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "id": "dev-car",
+      "question": "“红苹果果然是最经典的”素材主要展示哪个水果造型？",
+      "required_fields": [
+        "fruit"
+      ],
+      "gold_source_ids": [
+        "car"
+      ],
+      "expected": {
+        "fruit": [
+          "苹果",
+          "apple"
+        ]
+      },
+      "group": "visual",
+      "split": "dev",
+      "answerable": true
+    },
+    {
+      "id": "simple-gift",
+      "question": "“一个适合送朋友的礼物”素材主要展示何种饰品？",
+      "required_fields": [
+        "subject"
+      ],
+      "gold_source_ids": [
+        "gift"
+      ],
+      "expected": {
+        "subject": [
+          "手串",
+          "手链",
+          "bracelet"
+        ]
+      },
+      "group": "simple",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "simple-two",
+      "question": "“看到啥收到就是啥”素材主要展示何种饰品？",
+      "required_fields": [
+        "subject"
+      ],
+      "gold_source_ids": [
+        "two"
+      ],
+      "expected": {
+        "subject": [
+          "手串",
+          "手链",
+          "bracelet"
+        ]
+      },
+      "group": "simple",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "simple-rainbow",
+      "question": "“是彩虹色手串”素材展示何种饰品？",
+      "required_fields": [
+        "subject"
+      ],
+      "gold_source_ids": [
+        "rainbow"
+      ],
+      "expected": {
+        "subject": [
+          "手串",
+          "手链",
+          "bracelet"
+        ]
+      },
+      "group": "simple",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "simple-car",
+      "question": "“红苹果果然是最经典的”素材主体是什么水果造型？",
+      "required_fields": [
+        "fruit"
+      ],
+      "gold_source_ids": [
+        "car"
+      ],
+      "expected": {
+        "fruit": [
+          "苹果",
+          "apple"
+        ]
+      },
+      "group": "simple",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-gift-surface",
+      "question": "“一个适合送朋友的礼物”图中手串是放在哪里展示的？",
+      "required_fields": [
+        "display_surface"
+      ],
+      "gold_source_ids": [
+        "gift"
+      ],
+      "expected": {
+        "display_surface": [
+          "手掌",
+          "掌心",
+          "手心",
+          "手上",
+          "手中",
+          "hand"
+        ]
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-gift-hole",
+      "question": "“一个适合送朋友的礼物”图中部分红珠孔洞附近是否出现浅黄色区域？只判断可见颜色。",
+      "required_fields": [
+        "yellow_near_holes"
+      ],
+      "gold_source_ids": [
+        "gift"
+      ],
+      "expected": {
+        "yellow_near_holes": true
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-two-stand",
+      "question": "“看到啥收到就是啥”图中右侧手串放置的台座是什么颜色？",
+      "required_fields": [
+        "stand_color"
+      ],
+      "gold_source_ids": [
+        "two"
+      ],
+      "expected": {
+        "stand_color": [
+          "黑",
+          "black"
+        ]
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-two-blue",
+      "question": "“看到啥收到就是啥”图中黑色台座上的手串是否含浅蓝色珠子？",
+      "required_fields": [
+        "blue_on_stand"
+      ],
+      "gold_source_ids": [
+        "two"
+      ],
+      "expected": {
+        "blue_on_stand": true
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-rainbow-leaf",
+      "question": "“是彩虹色手串”图中上方橙黄珠子是否有绿色叶冠？",
+      "required_fields": [
+        "green_leaf_crown"
+      ],
+      "gold_source_ids": [
+        "rainbow"
+      ],
+      "expected": {
+        "green_leaf_crown": true
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-rainbow-texture",
+      "question": "“是彩虹色手串”图中左下方粉红珠子表面是平滑还是有明显凹凸纹理？",
+      "required_fields": [
+        "pink_surface"
+      ],
+      "gold_source_ids": [
+        "rainbow"
+      ],
+      "expected": {
+        "pink_surface": [
+          "凹凸",
+          "凸起",
+          "粗糙",
+          "颗粒",
+          "纹理",
+          "荔枝",
+          "bumpy"
+        ]
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-car-ribbon",
+      "question": "“红苹果果然是最经典的”图中包装蝴蝶结是纯色还是格纹？",
+      "required_fields": [
+        "ribbon_pattern"
+      ],
+      "gold_source_ids": [
+        "car"
+      ],
+      "expected": {
+        "ribbon_pattern": [
+          "格",
+          "plaid",
+          "check"
+        ]
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "detail-car-tag",
+      "question": "“红苹果果然是最经典的”图中挂绳标牌上方的英文单词是什么？",
+      "required_fields": [
+        "tag_word"
+      ],
+      "gold_source_ids": [
+        "car"
+      ],
+      "expected": {
+        "tag_word": [
+          "apple"
+        ]
+      },
+      "group": "visual",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "compare-surfaces",
+      "question": "对比“一个适合送朋友的礼物”和“看到啥收到就是啥”，前者的承托方式和后者台座颜色分别是什么？",
+      "required_fields": [
+        "first_surface",
+        "second_stand"
+      ],
+      "gold_source_ids": [
+        "gift",
+        "two"
+      ],
+      "expected": {
+        "first_surface": [
+          "手掌",
+          "掌心",
+          "手心",
+          "手上",
+          "hand"
+        ],
+        "second_stand": [
+          "黑",
+          "black"
+        ]
+      },
+      "group": "cross",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "compare-colors",
+      "question": "对比“一个适合送朋友的礼物”和“是彩虹色手串”，两者分别以单一红色还是多色水果造型为主？",
+      "required_fields": [
+        "first_style",
+        "second_style"
+      ],
+      "gold_source_ids": [
+        "gift",
+        "rainbow"
+      ],
+      "expected": {
+        "first_style": [
+          "红",
+          "red"
+        ],
+        "second_style": [
+          "多色",
+          "彩",
+          "multicolor"
+        ]
+      },
+      "group": "cross",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "compare-scenes",
+      "question": "对比“是彩虹色手串”和“红苹果果然是最经典的”，前者承托位置与后者拍摄场景分别是什么？",
+      "required_fields": [
+        "first_surface",
+        "second_scene"
+      ],
+      "gold_source_ids": [
+        "rainbow",
+        "car"
+      ],
+      "expected": {
+        "first_surface": [
+          "手掌",
+          "掌心",
+          "手心",
+          "手上",
+          "hand"
+        ],
+        "second_scene": [
+          "车内",
+          "汽车",
+          "车厢",
+          "车中",
+          "car"
+        ]
+      },
+      "group": "cross",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "compare-package",
+      "question": "对比“一个适合送朋友的礼物”和“红苹果果然是最经典的”，哪份素材有透明袋和格纹蝴蝶结包装？",
+      "required_fields": [
+        "packaged_source"
+      ],
+      "gold_source_ids": [
+        "gift",
+        "car"
+      ],
+      "expected": {
+        "packaged_source": [
+          "红苹果果然是最经典",
+          "car"
+        ]
+      },
+      "group": "cross",
+      "split": "test",
+      "answerable": true
+    },
+    {
+      "id": "missing-price",
+      "question": "“一个适合送朋友的礼物”这条手串的实际售价是多少？",
+      "required_fields": [],
+      "gold_source_ids": [
+        "gift"
+      ],
+      "expected": {},
+      "group": "missing",
+      "split": "test",
+      "answerable": false
+    },
+    {
+      "id": "missing-material",
+      "question": "“是彩虹色手串”的珠子具体使用什么材质？不要根据外观猜测。",
+      "required_fields": [],
+      "gold_source_ids": [
+        "rainbow"
+      ],
+      "expected": {},
+      "group": "missing",
+      "split": "test",
+      "answerable": false
+    },
+    {
+      "id": "missing-sales",
+      "question": "“看到啥收到就是啥”商品本月的真实销量是多少？",
+      "required_fields": [],
+      "gold_source_ids": [
+        "two"
+      ],
+      "expected": {},
+      "group": "missing",
+      "split": "test",
+      "answerable": false
+    },
+    {
+      "id": "missing-certification",
+      "question": "“红苹果果然是最经典的”饰品有什么已核验的功效认证？",
+      "required_fields": [],
+      "gold_source_ids": [
+        "car"
+      ],
+      "expected": {},
+      "group": "missing",
+      "split": "test",
+      "answerable": false
+    }
+  ],
+  "limits": [
+    "Four related fruit-accessory images, convenience sample.",
+    "No video/audio/PDF, no large-scale retrieval-quality proof.",
+    "Substring equivalences and booleans grade structured answers; independent review still needed."
+  ]
+}

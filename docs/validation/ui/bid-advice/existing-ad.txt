@@ -1,0 +1,416 @@
+- complementary "工作台侧边栏":
+  - text: Mini Ad Manager
+  - generic: Beta
+  - button "个人信息管理":
+    - generic: A
+    - strong: 当前账号
+    - generic: 运营凭证已设置
+    - generic: ⌄
+  - navigation "模块导航":
+    - button "广告管理":
+      - text: 广告管理
+    - button "素材管理" [expanded]:
+      - text: 素材管理
+      - generic: ⌄
+    - button "已有素材管理"
+    - button "素材生成工作台"
+    - button "数据分析":
+      - text: 数据分析
+  - generic: Mini Ad Manager · Beta
+- main:
+  - generic: 工作台 / 广告管理
+  - heading "广告管理" [level=1]
+  - paragraph: 管理广告、投放配置与素材
+  - region "广告管理列表":
+    - button "+ 新建广告":
+      - generic: +
+      - text: 新建广告
+    - search:
+      - searchbox "搜索广告"
+      - button "搜索"
+    - text: 素材类型
+    - combobox "素材类型":
+      - option "全部素材" [selected]
+      - option "含视频"
+      - option "图文 / 链接"
+    - text: 出价区间
+    - combobox "出价区间":
+      - option "不限" [selected]
+      - option "低于 ¥1"
+      - option "¥1 及以上"
+    - button "重置筛选"
+    - button "导出列表"
+    - paragraph: 个人手作商户 · 10 月 8–14 日 · 全店日预算 ¥100，7 天上限 ¥700。出价为单次点击费用上限；未投放广告尚无效果记录。
+    - region "广告表格，可横向滚动":
+      - table "已加载广告的名称、素材、出价和有效点击":
+        - caption: 已加载广告的名称、素材、出价和有效点击
+        - rowgroup:
+          - row "选择本页全部广告 广告名称 操作 素材配置 最高点击出价（元） 有效点击 有效曝光 归因订单 广告花费 归因净收入":
+            - columnheader "选择本页全部广告":
+              - checkbox "选择本页全部广告"
+            - columnheader "广告名称"
+            - columnheader "操作"
+            - columnheader "素材配置"
+            - columnheader "最高点击出价（元）":
+              - button "最高点击出价（元）": 最高点击出价（元） ↕
+            - columnheader "有效点击":
+              - button "有效点击": 有效点击 ↕
+            - columnheader "有效曝光"
+            - columnheader "归因订单"
+            - columnheader "广告花费"
+            - columnheader "归因净收入"
+        - rowgroup:
+          - row "当前列表 · 20 条 0 个视频素材 均价 ¥0.87 1,043 49,990 18 ¥587.82 ¥1,143.00":
+            - cell
+            - cell "当前列表 · 20 条"
+            - cell
+            - cell "0 个视频素材"
+            - cell "均价 ¥0.87"
+            - cell "1,043"
+            - cell "49,990"
+            - cell "18"
+            - cell "¥587.82"
+            - cell "¥1,143.00"
+          - row "选择广告：阳光下的彩虹手串｜出游搭配 阳光下的彩虹手串｜出游搭配 momo 手作 ID：30b2cc1a-1cfc-4ba5-bca9-2ef52fe8f678 已投放 编辑广告：阳光下的彩虹手串｜出游搭配 复制广告：阳光下的彩虹手串｜出游搭配 图文 / 链接 文案素材 素材：eef6cd85a7d9 ¥0.70 110 3,793 0 ¥47.30 ¥0.00":
+            - cell "选择广告：阳光下的彩虹手串｜出游搭配":
+              - checkbox "选择广告：阳光下的彩虹手串｜出游搭配"
+            - cell "阳光下的彩虹手串｜出游搭配 momo 手作 ID：30b2cc1a-1cfc-4ba5-bca9-2ef52fe8f678 已投放":
+              - button "阳光下的彩虹手串｜出游搭配"
+              - generic: momo 手作
+              - generic: ID：30b2cc1a-1cfc-4ba5-bca9-2ef52fe8f678
+              - generic: 已投放
+            - cell "编辑广告：阳光下的彩虹手串｜出游搭配 复制广告：阳光下的彩虹手串｜出游搭配":
+              - button "编辑广告：阳光下的彩虹手串｜出游搭配": 编辑
+              - button "复制广告：阳光下的彩虹手串｜出游搭配": 复制
+              - generic "更多操作：阳光下的彩虹手串｜出游搭配": ···
+            - cell "图文 / 链接 文案素材 素材：eef6cd85a7d9":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：eef6cd85a7d9
+            - cell "¥0.70"
+            - cell "110"
+            - cell "3,793"
+            - cell "0"
+            - cell "¥47.30"
+            - cell "¥0.00"
+          - row "选择广告：戴上水果彩虹｜周末出游 戴上水果彩虹｜周末出游 momo 手作 ID：ad63a655-c3c5-42a5-ad8e-4d651eb55473 已投放 编辑广告：戴上水果彩虹｜周末出游 复制广告：戴上水果彩虹｜周末出游 图文 / 链接 文案素材 素材：eef6cd85a7d9 ¥0.80 95 3,276 0 ¥47.50 ¥0.00":
+            - cell "选择广告：戴上水果彩虹｜周末出游":
+              - checkbox "选择广告：戴上水果彩虹｜周末出游"
+            - cell "戴上水果彩虹｜周末出游 momo 手作 ID：ad63a655-c3c5-42a5-ad8e-4d651eb55473 已投放":
+              - button "戴上水果彩虹｜周末出游"
+              - generic: momo 手作
+              - generic: ID：ad63a655-c3c5-42a5-ad8e-4d651eb55473
+              - generic: 已投放
+            - cell "编辑广告：戴上水果彩虹｜周末出游 复制广告：戴上水果彩虹｜周末出游":
+              - button "编辑广告：戴上水果彩虹｜周末出游": 编辑
+              - button "复制广告：戴上水果彩虹｜周末出游": 复制
+              - generic "更多操作：戴上水果彩虹｜周末出游": ···
+            - cell "图文 / 链接 文案素材 素材：eef6cd85a7d9":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：eef6cd85a7d9
+            - cell "¥0.80"
+            - cell "95"
+            - cell "3,276"
+            - cell "0"
+            - cell "¥47.50"
+            - cell "¥0.00"
+          - row "选择广告：一颗苹果，一份心意｜好友礼赠 一颗苹果，一份心意｜好友礼赠 momo 手作 ID：1069d128-d529-4e3c-b1aa-ec770939b82e 已投放 编辑广告：一颗苹果，一份心意｜好友礼赠 复制广告：一颗苹果，一份心意｜好友礼赠 图文 / 链接 文案素材 素材：17cb215430b6 ¥0.70 101 4,209 2 ¥49.49 ¥118.00":
+            - cell "选择广告：一颗苹果，一份心意｜好友礼赠":
+              - checkbox "选择广告：一颗苹果，一份心意｜好友礼赠"
+            - cell "一颗苹果，一份心意｜好友礼赠 momo 手作 ID：1069d128-d529-4e3c-b1aa-ec770939b82e 已投放":
+              - button "一颗苹果，一份心意｜好友礼赠"
+              - generic: momo 手作
+              - generic: ID：1069d128-d529-4e3c-b1aa-ec770939b82e
+              - generic: 已投放
+            - cell "编辑广告：一颗苹果，一份心意｜好友礼赠 复制广告：一颗苹果，一份心意｜好友礼赠":
+              - button "编辑广告：一颗苹果，一份心意｜好友礼赠": 编辑
+              - button "复制广告：一颗苹果，一份心意｜好友礼赠": 复制
+              - generic "更多操作：一颗苹果，一份心意｜好友礼赠": ···
+            - cell "图文 / 链接 文案素材 素材：17cb215430b6":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：17cb215430b6
+            - cell "¥0.70"
+            - cell "101"
+            - cell "4,209"
+            - cell "2"
+            - cell "¥49.49"
+            - cell "¥118.00"
+          - row "选择广告：把平安送给朋友｜苹果礼物 把平安送给朋友｜苹果礼物 momo 手作 ID：451fc56b-607d-4752-8c1a-76661276ad32 已投放 编辑广告：把平安送给朋友｜苹果礼物 复制广告：把平安送给朋友｜苹果礼物 图文 / 链接 文案素材 素材：17cb215430b6 ¥0.60 118 4,916 4 ¥49.56 ¥177.00":
+            - cell "选择广告：把平安送给朋友｜苹果礼物":
+              - checkbox "选择广告：把平安送给朋友｜苹果礼物"
+            - cell "把平安送给朋友｜苹果礼物 momo 手作 ID：451fc56b-607d-4752-8c1a-76661276ad32 已投放":
+              - button "把平安送给朋友｜苹果礼物"
+              - generic: momo 手作
+              - generic: ID：451fc56b-607d-4752-8c1a-76661276ad32
+              - generic: 已投放
+            - cell "编辑广告：把平安送给朋友｜苹果礼物 复制广告：把平安送给朋友｜苹果礼物":
+              - button "编辑广告：把平安送给朋友｜苹果礼物": 编辑
+              - button "复制广告：把平安送给朋友｜苹果礼物": 复制
+              - generic "更多操作：把平安送给朋友｜苹果礼物": ···
+            - cell "图文 / 链接 文案素材 素材：17cb215430b6":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：17cb215430b6
+            - cell "¥0.60"
+            - cell "118"
+            - cell "4,916"
+            - cell "4"
+            - cell "¥49.56"
+            - cell "¥177.00"
+          - row "选择广告：水果色彩，实物出镜｜日常搭配 水果色彩，实物出镜｜日常搭配 momo 手作 ID：7b9bb38f-f8ce-434a-a3e9-430c64ed722b 已投放 编辑广告：水果色彩，实物出镜｜日常搭配 复制广告：水果色彩，实物出镜｜日常搭配 图文 / 链接 文案素材 素材：3a81067a511b ¥0.75 69 4,312 0 ¥38.64 ¥0.00":
+            - cell "选择广告：水果色彩，实物出镜｜日常搭配":
+              - checkbox "选择广告：水果色彩，实物出镜｜日常搭配"
+            - cell "水果色彩，实物出镜｜日常搭配 momo 手作 ID：7b9bb38f-f8ce-434a-a3e9-430c64ed722b 已投放":
+              - button "水果色彩，实物出镜｜日常搭配"
+              - generic: momo 手作
+              - generic: ID：7b9bb38f-f8ce-434a-a3e9-430c64ed722b
+              - generic: 已投放
+            - cell "编辑广告：水果色彩，实物出镜｜日常搭配 复制广告：水果色彩，实物出镜｜日常搭配":
+              - button "编辑广告：水果色彩，实物出镜｜日常搭配": 编辑
+              - button "复制广告：水果色彩，实物出镜｜日常搭配": 复制
+              - generic "更多操作：水果色彩，实物出镜｜日常搭配": ···
+            - cell "图文 / 链接 文案素材 素材：3a81067a511b":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：3a81067a511b
+            - cell "¥0.75"
+            - cell "69"
+            - cell "4,312"
+            - cell "0"
+            - cell "¥38.64"
+            - cell "¥0.00"
+          - row "选择广告：实拍水果小物｜看到什么收到什么 实拍水果小物｜看到什么收到什么 momo 手作 ID：70ef72c2-e3fa-49b5-a0ca-04bbfa902788 已投放 编辑广告：实拍水果小物｜看到什么收到什么 复制广告：实拍水果小物｜看到什么收到什么 图文 / 链接 文案素材 素材：3a81067a511b ¥0.65 78 4,874 2 ¥38.22 ¥78.00":
+            - cell "选择广告：实拍水果小物｜看到什么收到什么":
+              - checkbox "选择广告：实拍水果小物｜看到什么收到什么"
+            - cell "实拍水果小物｜看到什么收到什么 momo 手作 ID：70ef72c2-e3fa-49b5-a0ca-04bbfa902788 已投放":
+              - button "实拍水果小物｜看到什么收到什么"
+              - generic: momo 手作
+              - generic: ID：70ef72c2-e3fa-49b5-a0ca-04bbfa902788
+              - generic: 已投放
+            - cell "编辑广告：实拍水果小物｜看到什么收到什么 复制广告：实拍水果小物｜看到什么收到什么":
+              - button "编辑广告：实拍水果小物｜看到什么收到什么": 编辑
+              - button "复制广告：实拍水果小物｜看到什么收到什么": 复制
+              - generic "更多操作：实拍水果小物｜看到什么收到什么": ···
+            - cell "图文 / 链接 文案素材 素材：3a81067a511b":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：3a81067a511b
+            - cell "¥0.65"
+            - cell "78"
+            - cell "4,874"
+            - cell "2"
+            - cell "¥38.22"
+            - cell "¥78.00"
+          - row "选择广告：红苹果的小心意｜送好朋友 红苹果的小心意｜送好朋友 momo 手作 ID：05b780ec-e942-4493-b3f7-7658d1cb3ba6 已投放 编辑广告：红苹果的小心意｜送好朋友 复制广告：红苹果的小心意｜送好朋友 图文 / 链接 文案素材 素材：f4c0a90ebe61 ¥0.85 58 2,900 4 ¥40.60 ¥316.00":
+            - cell "选择广告：红苹果的小心意｜送好朋友":
+              - checkbox "选择广告：红苹果的小心意｜送好朋友"
+            - cell "红苹果的小心意｜送好朋友 momo 手作 ID：05b780ec-e942-4493-b3f7-7658d1cb3ba6 已投放":
+              - button "红苹果的小心意｜送好朋友"
+              - generic: momo 手作
+              - generic: ID：05b780ec-e942-4493-b3f7-7658d1cb3ba6
+              - generic: 已投放
+            - cell "编辑广告：红苹果的小心意｜送好朋友 复制广告：红苹果的小心意｜送好朋友":
+              - button "编辑广告：红苹果的小心意｜送好朋友": 编辑
+              - button "复制广告：红苹果的小心意｜送好朋友": 复制
+              - generic "更多操作：红苹果的小心意｜送好朋友": ···
+            - cell "图文 / 链接 文案素材 素材：f4c0a90ebe61":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：f4c0a90ebe61
+            - cell "¥0.85"
+            - cell "58"
+            - cell "2,900"
+            - cell "4"
+            - cell "¥40.60"
+            - cell "¥316.00"
+          - row "选择广告：经典红苹果｜送自己一份平安 经典红苹果｜送自己一份平安 momo 手作 ID：192b0dbb-60ff-47a3-a9e9-e16463b2ae3e 已投放 编辑广告：经典红苹果｜送自己一份平安 复制广告：经典红苹果｜送自己一份平安 图文 / 链接 文案素材 素材：f4c0a90ebe61 ¥0.75 66 3,300 0 ¥40.26 ¥0.00":
+            - cell "选择广告：经典红苹果｜送自己一份平安":
+              - checkbox "选择广告：经典红苹果｜送自己一份平安"
+            - cell "经典红苹果｜送自己一份平安 momo 手作 ID：192b0dbb-60ff-47a3-a9e9-e16463b2ae3e 已投放":
+              - button "经典红苹果｜送自己一份平安"
+              - generic: momo 手作
+              - generic: ID：192b0dbb-60ff-47a3-a9e9-e16463b2ae3e
+              - generic: 已投放
+            - cell "编辑广告：经典红苹果｜送自己一份平安 复制广告：经典红苹果｜送自己一份平安":
+              - button "编辑广告：经典红苹果｜送自己一份平安": 编辑
+              - button "复制广告：经典红苹果｜送自己一份平安": 复制
+              - generic "更多操作：经典红苹果｜送自己一份平安": ···
+            - cell "图文 / 链接 文案素材 素材：f4c0a90ebe61":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：f4c0a90ebe61
+            - cell "¥0.75"
+            - cell "66"
+            - cell "3,300"
+            - cell "0"
+            - cell "¥40.26"
+            - cell "¥0.00"
+          - row "选择广告：把好心情戴出门｜彩虹手串 把好心情戴出门｜彩虹手串 momo 手作 ID：f6e71765-cc88-4eba-8e54-6b4fe666c160 已投放 编辑广告：把好心情戴出门｜彩虹手串 复制广告：把好心情戴出门｜彩虹手串 图文 / 链接 文案素材 素材：eef6cd85a7d9 ¥1.00 41 1,414 1 ¥25.42 ¥99.00":
+            - cell "选择广告：把好心情戴出门｜彩虹手串":
+              - checkbox "选择广告：把好心情戴出门｜彩虹手串"
+            - cell "把好心情戴出门｜彩虹手串 momo 手作 ID：f6e71765-cc88-4eba-8e54-6b4fe666c160 已投放":
+              - button "把好心情戴出门｜彩虹手串"
+              - generic: momo 手作
+              - generic: ID：f6e71765-cc88-4eba-8e54-6b4fe666c160
+              - generic: 已投放
+            - cell "编辑广告：把好心情戴出门｜彩虹手串 复制广告：把好心情戴出门｜彩虹手串":
+              - button "编辑广告：把好心情戴出门｜彩虹手串": 编辑
+              - button "复制广告：把好心情戴出门｜彩虹手串": 复制
+              - generic "更多操作：把好心情戴出门｜彩虹手串": ···
+            - cell "图文 / 链接 文案素材 素材：eef6cd85a7d9":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：eef6cd85a7d9
+            - cell "¥1.00"
+            - cell "41"
+            - cell "1,414"
+            - cell "1"
+            - cell "¥25.42"
+            - cell "¥99.00"
+          - row "选择广告：给朋友的平安礼物｜日常惊喜 给朋友的平安礼物｜日常惊喜 momo 手作 ID：483812c4-206d-4894-9791-9b15fbc1e865 已投放 编辑广告：给朋友的平安礼物｜日常惊喜 复制广告：给朋友的平安礼物｜日常惊喜 图文 / 链接 文案素材 素材：17cb215430b6 ¥0.90 42 1,750 0 ¥26.46 ¥0.00":
+            - cell "选择广告：给朋友的平安礼物｜日常惊喜":
+              - checkbox "选择广告：给朋友的平安礼物｜日常惊喜"
+            - cell "给朋友的平安礼物｜日常惊喜 momo 手作 ID：483812c4-206d-4894-9791-9b15fbc1e865 已投放":
+              - button "给朋友的平安礼物｜日常惊喜"
+              - generic: momo 手作
+              - generic: ID：483812c4-206d-4894-9791-9b15fbc1e865
+              - generic: 已投放
+            - cell "编辑广告：给朋友的平安礼物｜日常惊喜 复制广告：给朋友的平安礼物｜日常惊喜":
+              - button "编辑广告：给朋友的平安礼物｜日常惊喜": 编辑
+              - button "复制广告：给朋友的平安礼物｜日常惊喜": 复制
+              - generic "更多操作：给朋友的平安礼物｜日常惊喜": ···
+            - cell "图文 / 链接 文案素材 素材：17cb215430b6":
+              - generic: 图文 / 链接
+              - generic: 文案素材
+              - generic: 素材：17cb215430b6
+            - cell "¥0.90"
+            - cell "42"
+            - cell "1,750"
+            - cell "0"
+            - cell "¥26.46"
+            - cell "¥0.00"
+    - status: 共 20 条广告 · 每页 10 条
+    - navigation "广告分页":
+      - button "上一页" [disabled]
+      - generic: 第 1 / 2 页
+      - button "下一页"
+  - generic: Mini Ad Manager · 广告运营工作台
+- dialog "编辑广告":
+  - heading "编辑广告" [level=2]
+  - button "关闭广告编辑框": ×
+  - generic: 广告标题*
+  - textbox "广告标题*":
+    - /placeholder: 请输入广告标题
+    - text: 阳光下的彩虹手串｜出游搭配
+  - generic: 发布人*
+  - textbox "发布人*":
+    - /placeholder: 例如：市场部-张三
+    - text: momo 手作 · 模拟投放
+  - generic: 内容文案*
+  - textbox "内容文案*":
+    - /placeholder: 请输入简短的广告描述...
+    - text: 阳光下折射出彩虹的倒影 是由各种各样水果组成的 太有意思啦，出去玩带着刚刚好！！
+  - generic: 落地页链接*
+  - textbox "落地页链接*":
+    - /placeholder: https://...
+    - text: http://localhost:3001/1791983020966-212908078.JPG
+  - generic: 竞价出价 (RMB)*
+  - spinbutton "竞价出价 (RMB)*": "0.7"
+  - strong: 广告素材
+  - paragraph: 选择已有素材可供多个广告复用。改写正文会保存为新素材。
+  - text: 引用素材
+  - combobox "引用素材":
+    - option "使用当前正文和视频（自动去重）"
+    - option "一个适合送朋友的礼物🎁🍎 · 5 条广告使用"
+    - option "看到啥收到就是啥🍎🍏🍐🫐🍅 · 5 条广告使用"
+    - option "红苹果手串001 · 0 条广告使用"
+    - option "是彩虹色手串🌈 · 5 条广告使用" [selected]
+    - option "红苹果果然是最经典的🍎 · 5 条广告使用"
+  - button "编辑素材✨"
+  - button "✨ AI 投放助手 收起" [expanded]:
+    - generic: ✨
+    - text: AI 投放助手
+    - generic: 收起
+  - region "出价建议数据":
+    - strong: 已投放 · 已自动读取数据
+    - generic: 按点击计费（CPC）
+    - paragraph: 统计周期：2026-10-08 至 2026-10-14
+    - term: 当前出价
+    - definition: ¥0.70
+    - term: 有效曝光
+    - definition: 3,793
+    - term: 有效点击
+    - definition: "110"
+    - term: 广告花费
+    - definition: ¥47.30
+    - term: 支付订单
+    - definition: "0"
+    - term: 平均点击成本
+    - definition: ¥0.43
+  - group "本次优化目标与限制":
+    - generic: 本次优化目标与限制
+    - text: 推广目标
+    - combobox "推广目标":
+      - option "获取商品点击" [selected]
+      - option "获取成交订单"
+      - option "获取咨询线索"
+    - text: 行业分类
+    - combobox "行业分类":
+      - option "食品饮料"
+      - option "美妆护肤"
+      - option "服装配饰" [selected]
+      - option "数码3C"
+      - option "家居生活"
+      - option "教育培训"
+      - option "金融理财"
+      - option "游戏娱乐"
+      - option "医疗健康"
+      - option "汽车出行"
+      - option "旅游酒店"
+      - option "本地生活"
+      - option "电商零售"
+      - option "其他"
+    - text: 日预算（元）
+    - spinbutton "日预算（元）": "35"
+    - text: 投放天数
+    - spinbutton "投放天数": "7"
+    - text: 最高点击出价（元）
+    - spinbutton "最高点击出价（元）": "0.7"
+    - paragraph: 计划预算：¥245.00，分 7 天观察。 已有预算和出价限制已带入，可按本次目标修改。
+  - button "获取投放建议":
+    - text: 获取投放建议
+  - generic: AI 将结合投放数据、预算限制和营销知识给出具体出价。建议应用到表单后，仍需点击“确定”保存。
+  - region "投放策略建议":
+    - heading "投放策略建议" [level=3]
+    - generic: 尚未执行
+    - heading "推广目标" [level=4]
+    - paragraph: 建议目标：点击量（CPC 计费，引导用户点击进入商品页）。当前计划目标即为点击，沿用不变。
+    - heading "建议出价" [level=4]
+    - strong: ¥0.70
+    - paragraph: 当前 ¥0.70 → 建议 ¥0.70 · 元/点击
+    - button "应用到出价"
+    - heading "出价与调整建议" [level=4]
+    - paragraph: 当前¥0.70/点击，建议¥0.70/点击，保持不变。没有充分的调价依据，先沿用当前出价，并受本次成本上限约束。日预算¥35.00，计划7天，总预算¥245.00；最高点击出价¥0.70。下一轮先保持出价与素材，使用同等观察窗口比较商品点击、点击成本与消耗，再决定是否调整。
+    - heading "目标用户" [level=4]
+    - list:
+      - listitem: 日常通勤与周末出游的年轻女性
+      - listitem: 喜欢趣味设计感配饰的潮流人群
+      - listitem: 有拍照分享习惯的社交平台活跃用户
+      - listitem: 关注性价比的轻配饰购买者
+    - heading "兴趣标签" [level=4]
+    - generic: 穿搭与配饰
+    - generic: 旅行出游好物
+    - generic: 拍照与生活方式
+    - generic: 趣味设计小物
+    - generic: 轻时尚潮流
+    - heading "策略说明" [level=4]
+    - paragraph: 统计窗口内有3793次曝光、110次点击、¥47.30消耗、0笔支付订单。平均点击成本¥0.43。实际点击均价不等于最高竞价出价，不能单凭两者差额判断原价过高。本轮金额用于小步验证，不预测点击或成交一定提升。
+    - heading "广告营销知识库依据" [level=4]
+    - generic "出价优化原则"
+    - generic "素材与 A/B 测试"
+    - generic "广告文案优化"
+  - button "取消"
+  - button "确定"
+- button "打开广告运营助手":

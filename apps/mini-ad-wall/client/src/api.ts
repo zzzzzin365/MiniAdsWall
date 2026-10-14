@@ -149,7 +149,15 @@ export const generateAdCreative = (
 export const generateAdStrategy = (
     data: AdStrategyInput
 ): Promise<AdStrategyOutput | AIErrorResponse> => 
-    api.post('/ai/strategy', data).then(res => res.data);
+    api.post('/ai/strategy', data).then(res => res.data).catch(error => {
+        const result = error.response?.data;
+        if (result?.error === true && typeof result.message === 'string') return result as AIErrorResponse;
+        if (typeof result?.error === 'string') return {error:true,message:result.error} as AIErrorResponse;
+        throw error;
+    });
+
+export const getAdStrategyContext = (adId?:string, range:'7'|'3'='7', signal?:AbortSignal):Promise<import('./types').DeliveryContext> =>
+    api.get('/ai/strategy-context',{params:{ad_id:adId,range},signal}).then(res=>res.data);
 
 export const chatWithAssistant = (
     data: AssistantChatInput
@@ -195,12 +203,20 @@ export interface HostedRun {
     id: string; session_id: string; status: string; error_code?: string; approval_id?: string;
 }
 export interface HostedSession { id: string; title: string; active_run_id?: string; }
-export interface HostedRecord { id: string; seq: number; record_type: string; role?: 'user' | 'assistant'; content_preview?: string; }
+export interface HostedRecord { id: string; seq: number; record_type: string; role?: 'user' | 'assistant'; content_preview?: string; run_id?: string; content_ref?: string; content_bytes?: number; }
 export const hostedIdentity = () => api.get<{ user_id: string; workspace_id: string }>('/agent/identity').then(r => r.data);
 export const hostedSessions = () => api.get<{ items: HostedSession[] }>('/agent/sessions', { params: { limit: 100 } }).then(r => r.data.items);
 export const hostedNewSession = (workspace_id: string, title: string) => api.post<HostedSession>('/agent/sessions', { workspace_id, title }).then(r => r.data);
 export const hostedHistory = (id: string, cursor?: string) => api.get<{ items: HostedRecord[]; next_cursor?: string }>(`/agent/sessions/${id}/history`, { params: { limit: 50, cursor } }).then(r => r.data);
-export const hostedCreateRun = (id: string, message: string, key: string) => api.post<HostedRun>(`/agent/sessions/${id}/runs`, { message }, { headers: { 'Idempotency-Key': key } }).then(r => r.data);
+export async function hostedRecordText(item: HostedRecord): Promise<string> {
+    const text = item.content_preview || '';
+    if (item.run_id && item.content_ref && (item.content_bytes || 0) > new TextEncoder().encode(text).length) {
+        return api.get<string>(`/agent/runs/${item.run_id}/objects/${item.content_ref}`,
+            { responseType: 'text', transformResponse: value => value }).then(r => r.data);
+    }
+    return text;
+}
+export const hostedCreateRun = (id: string, message: string, key: string, performanceRange: '3' | '7' = '7') => api.post<HostedRun>(`/agent/sessions/${id}/runs`, { message, performance_range: performanceRange }, { headers: { 'Idempotency-Key': key } }).then(r => r.data);
 export const hostedRun = (id: string) => api.get<HostedRun>(`/agent/runs/${id}`).then(r => r.data);
 export const hostedCancel = (id: string) => api.post<HostedRun>(`/agent/runs/${id}/cancel`).then(r => r.data);
 export const hostedResume = (id: string, key: string) => api.post<HostedRun>(`/agent/runs/${id}/resume`, {}, { headers: { 'Idempotency-Key': key } }).then(r => r.data);
@@ -240,6 +256,7 @@ export function setStudioCredential(token: string) {
     else localStorage.removeItem(operatorTokenKey);
 }
 export const studioGet = <T = any>(path: string, signal?: AbortSignal): Promise<T> => api.get('/merchant/v1/studio' + path, {signal}).then(r => r.data);
+export const studioReferenceImage = (source: string, label: string): Promise<Blob> => api.get('/merchant/v1/studio/reference-images/' + encodeURIComponent(source) + '/' + encodeURIComponent(label), {responseType:'blob'}).then(r => r.data);
 export const studioWrite = <T = any>(path: string, body: unknown): Promise<T> => mutateAd<T>('post', '/merchant/v1/studio' + path, body);
 export async function studioUpload(brand: string, file: File) {
     const bytes = await file.arrayBuffer();

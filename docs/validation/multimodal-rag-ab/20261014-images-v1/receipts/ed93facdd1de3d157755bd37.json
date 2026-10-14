@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:answer:compare-colors",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "ed93facdd1de3d157755bd37",
+  "input_sha256": "b4f1700e7c51e12c53f3df34818973262ed77d28fc8815f328493e8d21a39a46",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1569.5638749748468,
+  "http_status": 200,
+  "provider_id": "021791986938036c2531bd3ff98f8d456851518a83e6729b83980",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 741,
+    "total_tokens": 808,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

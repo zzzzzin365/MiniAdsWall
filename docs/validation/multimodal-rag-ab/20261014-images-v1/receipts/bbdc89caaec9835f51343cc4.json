@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:answer:compare-package",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "bbdc89caaec9835f51343cc4",
+  "input_sha256": "96557e4f04c86d3786669bc23450ec53054381ed71f72c6e78c853965d50961f",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2343.902457971126,
+  "http_status": 200,
+  "provider_id": "021791987103771c2531bd3ff98f8d456851518a83e67295a48ed",
+  "usage": {
+    "completion_tokens": 118,
+    "prompt_tokens": 1034,
+    "total_tokens": 1152,
+    "prompt_tokens_details": {
+      "cached_tokens": 768
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

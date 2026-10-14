@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:F:answer:compare-colors",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "0f1ea2006473a6e87e445d95",
+  "input_sha256": "7c608c76cc6b102553484d5b12a716d863c0e876448c27cbb5318ac6d74facce",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1815.8019999973476,
+  "http_status": 200,
+  "provider_id": "021791986886936c2531bd3ff98f8d456851518a83e672981b61b",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 657,
+    "total_tokens": 724,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

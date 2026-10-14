@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:F:answer:detail-gift-hole",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "87170f7c913862746c630a7d",
+  "input_sha256": "5e6d89947da8351df5cd31597b25f173863a77130db290465c544141a6eeab3b",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 3857.627374934964,
+  "http_status": 200,
+  "provider_id": "021791987165037c2531bd3ff98f8d456851518a83e672995aaf0",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 904,
+    "total_tokens": 961,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

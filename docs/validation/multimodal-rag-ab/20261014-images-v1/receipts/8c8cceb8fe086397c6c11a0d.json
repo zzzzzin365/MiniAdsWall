@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:F:answer:detail-rainbow-texture",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "8c8cceb8fe086397c6c11a0d",
+  "input_sha256": "5584f2f3e0a183b0b434a05a76334a85aa67a58a8c62458714c815cd84866ad9",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1603.6067499080673,
+  "http_status": 200,
+  "provider_id": "021791986630004c2531bd3ff98f8d456851518a83e67292d5b85",
+  "usage": {
+    "completion_tokens": 49,
+    "prompt_tokens": 899,
+    "total_tokens": 948,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

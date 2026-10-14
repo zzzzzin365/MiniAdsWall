@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "UI fixtures; real archived reference image; no writes or paid requests",
+  "checks": [
+    "source URL",
+    "author attribution",
+    "reference disclaimer",
+    "local archived image preview",
+    "320px no overflow"
+  ],
+  "errors": []
+}

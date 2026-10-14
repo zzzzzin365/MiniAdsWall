@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:answer:missing-price",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "445d7be4719f61ecfbaf4df6",
+  "input_sha256": "d09c36651d55d6a61681136aeae94be9dad39f8373c5f091ffcbbd7cd64ce534",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2627.3653329117224,
+  "http_status": 200,
+  "provider_id": "021791987001583c2531bd3ff98f8d456851518a83e672953f74c",
+  "usage": {
+    "completion_tokens": 37,
+    "prompt_tokens": 687,
+    "total_tokens": 724,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

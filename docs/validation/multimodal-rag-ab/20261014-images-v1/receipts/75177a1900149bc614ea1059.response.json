@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "source_id": "two",
+      "observations": [
+        "图中右侧手串放置在一个方形台座上"
+      ],
+      "facts": {
+        "stand_color": "黑色"
+      }
+    }
+  ],
+  "missing": []
+}

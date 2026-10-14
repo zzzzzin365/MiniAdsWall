@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "scope": "actual four merchant images, isolated QA end-to-end",
+  "input_sha256": {
+    "assets.json": "8d5357270ff7e0644fa49e04d1877df2f1e3d62463945469c245b610505182c1",
+    "cases.json": "0b530b67790df1c70e6a29325cbbfc4892ab42a24138b822ead9d5d65bc50e5c",
+    "protocol.json": "0955699acb06e29a722db6748848bfb06513be32196b84e37caa8fcb5f861a72"
+  },
+  "vision_model": "doubao-seed-2-0-mini-260428",
+  "text_model": "deepseek-v4-1-flash-260910",
+  "production_mutated": false,
+  "seed": 20261014,
+  "source_sha256": "efe8f4b8b9d7fd4cf0e3d8cc0b215db2c150d54db9558991df7d0dbf8c3bbea1",
+  "trace_rows": 102,
+  "corpus_sha256": "da1a848f3c4da68a78d22db330dfc8d407a17abda32692329104d4e8c61d2fb0",
+  "limitations": [
+    "Only four related images and one model run per case/arm; no independent human blind review.",
+    "Explicit named-material lookup shared by all arms; source coverage is not vector-only recall.",
+    "Shared initial captions/index setup excluded from online timing and recorded separately.",
+    "Warm repeat is six preselected repeated questions, not new-query or online traffic distribution.",
+    "No video/audio/PDF test, no service auth/queue/concurrent API benchmark."
+  ],
+  "report_completed": true,
+  "provider_source_sha256": "41bfc3f3b4614e270d1c35ccd5ea5d281d1f3b822f5a55d6aac23062eef8c26f",
+  "report_source_sha256": "71701deb757654d594b86ebbd32151782c9bffe6421d3a85a83ec5c71ad88afe",
+  "current_runner_sha256": "086e7e3c5c51c1f9517552d4a3d9a1336115b01fb8801c7ea6da15e8a72c669a",
+  "binding_repair_separate_from_primary": true
+}

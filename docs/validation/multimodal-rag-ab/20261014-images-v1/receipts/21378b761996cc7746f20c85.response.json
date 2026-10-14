@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "source_id": "car",
+      "observations": [
+        "该素材展示了一个挂在车内后视镜上的挂件，挂件为装在透明袋中的红色苹果造型物品，透明袋上系有格纹蝴蝶结"
+      ],
+      "facts": {
+        "packaged_source": true
+      }
+    },
+    {
+      "source_id": "gift",
+      "observations": [
+        "该素材展示了一只手掌托着的红色苹果造型手串，无透明袋和格纹蝴蝶结包装"
+      ],
+      "facts": {
+        "packaged_source": false
+      }
+    },
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "该素材展示了一只手掌托着的多色水果造型手串，无透明袋和格纹蝴蝶结包装"
+      ],
+      "facts": {
+        "packaged_source": false
+      }
+    }
+  ],
+  "missing": [
+    "无法判断“一个适合送朋友的礼物”和“红苹果果然是最经典的”对应的素材内容"
+  ]
+}

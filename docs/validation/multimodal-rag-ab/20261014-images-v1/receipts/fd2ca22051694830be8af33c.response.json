@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "可见为一串造型为多种水果样式的彩色珠子组成的手串，珠子颜色丰富，包含红、蓝、浅蓝、黄、绿、粉等多种色彩"
+      ],
+      "facts": {
+        "is_rainbow_color_bead": true
+      }
+    }
+  ],
+  "missing": [
+    "该彩虹色手串的珠子具体使用的材质"
+  ]
+}

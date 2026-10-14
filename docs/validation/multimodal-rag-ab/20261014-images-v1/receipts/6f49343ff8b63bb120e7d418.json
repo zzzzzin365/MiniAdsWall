@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:reader:simple-rainbow",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "6f49343ff8b63bb120e7d418",
+  "input_sha256": "dcdc71f5d458e072d13a4814ce51c703112130d226962583cc301f591106d61d",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 18993.971916963346,
+  "http_status": 200,
+  "provider_id": "021791986765014c2531bd3ff98f8d456851518a83e672935e36b",
+  "usage": {
+    "completion_tokens": 197,
+    "prompt_tokens": 4133,
+    "total_tokens": 4330,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

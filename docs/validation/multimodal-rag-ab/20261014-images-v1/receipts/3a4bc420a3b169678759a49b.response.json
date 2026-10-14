@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "图中右侧手串放置在黑色方形台座上。",
+  "facts": {
+    "stand_color": "黑色"
+  },
+  "source_ids": [
+    "two"
+  ]
+}

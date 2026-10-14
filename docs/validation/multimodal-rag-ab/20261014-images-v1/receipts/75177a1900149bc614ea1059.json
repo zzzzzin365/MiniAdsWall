@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:reader:detail-two-stand",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "75177a1900149bc614ea1059",
+  "input_sha256": "1bafecc44a7755b5e35a128df8f8394c74670c01a8ac59167201b6e0d180efbf",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 9581.024207989685,
+  "http_status": 200,
+  "provider_id": "021791986706348c2531bd3ff98f8d456851518a83e672917bae4",
+  "usage": {
+    "completion_tokens": 37,
+    "prompt_tokens": 2863,
+    "total_tokens": 2900,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

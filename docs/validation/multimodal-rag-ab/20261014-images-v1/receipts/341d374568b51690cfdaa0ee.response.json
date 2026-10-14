@@ -1,0 +1,12 @@
+{
+  "status": "answered",
+  "answer": "“是彩虹色手串”的承托位置是人的手掌；“红苹果果然是最经典的”的拍摄场景是汽车内。",
+  "facts": {
+    "first_surface": "人的手掌",
+    "second_scene": "汽车内"
+  },
+  "source_ids": [
+    "rainbow",
+    "car"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "synthetic": true,
+  "backend": "sharded-float32-exact-scan",
+  "target": 36000000,
+  "dimension": 384,
+  "dtype": "float32",
+  "seed": 20261014,
+  "shard_size": 1000000,
+  "status": "passed",
+  "actual_vectors": 36000000,
+  "scanned_vectors": 36000000,
+  "logical_bytes": 55296000000,
+  "allocated_bytes": 55296000000,
+  "write_seconds_this_run": 140.422,
+  "search_batch_seconds": 110.345,
+  "query_ids": [
+    0,
+    12000000,
+    18000000,
+    35999999
+  ],
+  "top1_ids": [
+    0,
+    12000000,
+    18000000,
+    35999999
+  ],
+  "top1_scores": [
+    0.9999997019767761,
+    1.0000003576278687,
+    0.9999999403953552,
+    1.0
+  ],
+  "peak_rss_bytes": 1791868928,
+  "total_seconds_this_run": 250.815,
+  "limitations": [
+    "Synthetic vectors only; no real article count or RAG-quality claim",
+    "Exact disk scan; not a Chroma/HNSW capacity or production QPS test",
+    "One query batch; no percentile latency or concurrency claim"
+  ]
+}

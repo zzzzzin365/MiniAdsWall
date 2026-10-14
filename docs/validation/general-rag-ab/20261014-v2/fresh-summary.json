@@ -1,0 +1,48 @@
+{
+  "cases": 38,
+  "positive_cases": 30,
+  "negative_cases": 8,
+  "weight": 0.75,
+  "quality": {
+    "baseline": {
+      "all": {
+        "n": 30,
+        "recall_at5": 0.5166666666666667,
+        "complete_at5": 0.4666666666666667
+      },
+      "general": {
+        "n": 12,
+        "recall_at5": 0.5,
+        "complete_at5": 0.5
+      },
+      "external": {
+        "n": 18,
+        "recall_at5": 0.5277777777777778,
+        "complete_at5": 0.4444444444444444
+      }
+    },
+    "optimized": {
+      "all": {
+        "n": 30,
+        "recall_at5": 0.7666666666666667,
+        "complete_at5": 0.7666666666666667
+      },
+      "general": {
+        "n": 12,
+        "recall_at5": 0.5833333333333334,
+        "complete_at5": 0.5833333333333334
+      },
+      "external": {
+        "n": 18,
+        "recall_at5": 0.8888888888888888,
+        "complete_at5": 0.8888888888888888
+      }
+    }
+  },
+  "recall_delta": 0.25,
+  "limits": [
+    "Same sources as development data, new author-labelled query formulations only.",
+    "No independent human blind annotation, no answer generation or negative-question refusal scoring.",
+    "External gold allows same-source image/article alternatives; not fine-grained image-region correctness."
+  ]
+}

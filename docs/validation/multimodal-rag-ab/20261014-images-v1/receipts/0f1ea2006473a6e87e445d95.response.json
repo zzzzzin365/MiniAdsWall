@@ -1,0 +1,12 @@
+{
+  "status": "answered",
+  "answer": "“一个适合送朋友的礼物”以单一红色苹果造型为主；“是彩虹色手串”以多色水果造型为主。",
+  "facts": {
+    "first_style": "单一红色苹果造型",
+    "second_style": "多色水果造型"
+  },
+  "source_ids": [
+    "gift",
+    "rainbow"
+  ]
+}

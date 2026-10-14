@@ -3,6 +3,7 @@ import { adContext } from '../services/recall/search';
 import config from '../config';
 import aiService from '../services/ai.service';
 import adsAgentService from '../services/adsAgent.service';
+import { loadDeliveryContext, validateSettings } from '../services/delivery-context';
 import { AdCreativeInput, AdStrategyInput, AssistantChatInput } from '../types';
 
 async function generateCreative(ctx: RouterContext): Promise<void> {
@@ -39,6 +40,7 @@ async function generateCreative(ctx: RouterContext): Promise<void> {
 }
 
 async function generateStrategy(ctx: RouterContext): Promise<void> {
+    if (!ctx.state.principal) ctx.throw(401, '请先设置运营凭证');
     const body = ctx.request.body as AdStrategyInput;
 
     if (!body.adDescription || typeof body.adDescription !== 'string') {
@@ -53,9 +55,11 @@ async function generateStrategy(ctx: RouterContext): Promise<void> {
         return;
     }
 
+    const delivery = await loadDeliveryContext(body.adId,body.range,body.materialId);
+    const settings = validateSettings(body.settings || delivery.defaults);
     const input: AdStrategyInput = {
         adDescription: body.adDescription.trim(),
-        industry: body.industry.trim()
+        industry: body.industry.trim(), settings, delivery
     };
 
     const result = await aiService.generateAdStrategy(input, ctx.state.requestId);
@@ -68,6 +72,11 @@ async function generateStrategy(ctx: RouterContext): Promise<void> {
 
     ctx.status = 200;
     ctx.body = result;
+}
+
+async function strategyContext(ctx: RouterContext): Promise<void> {
+    if (!ctx.state.principal) ctx.throw(401, '请先设置运营凭证');
+    ctx.body = await loadDeliveryContext(ctx.query.ad_id,ctx.query.range);
 }
 
 
@@ -104,6 +113,7 @@ async function assistantStatus(ctx: RouterContext): Promise<void> {
 export default {
     generateCreative,
     generateStrategy,
+    strategyContext,
     chatAssistant,
     assistantStatus
 };

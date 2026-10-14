@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "图中是一串造型为多种水果的手串，包含橙黄色的菠萝造型珠子，该珠子顶部有绿色的叶状装饰"
+      ],
+      "facts": {
+        "green_leaf_crown": true
+      }
+    }
+  ],
+  "missing": [
+    "是否存在其他图中的橙黄珠子是否有绿色叶冠的相关信息"
+  ]
+}

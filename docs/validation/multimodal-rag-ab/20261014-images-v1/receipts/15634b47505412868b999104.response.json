@@ -1,0 +1,8 @@
+{
+  "status": "insufficient",
+  "answer": "现有素材无法确定该彩虹色手串珠子的具体材质；caption明确标注“无法确定手串珠子的具体材质”，visual_evidence的missing项也列出该材质信息缺失，因此不能根据外观猜测。",
+  "facts": {},
+  "source_ids": [
+    "rainbow"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:A1:answer:compare-surfaces",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "090d7dd999b20f82424226a1",
+  "input_sha256": "9d6788a23a44a27dcb2a8b2f98344fa1ca9020f0565baef53d721b66e730f9c7",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1867.04683303833,
+  "http_status": 200,
+  "provider_id": "021791986788077c2531bd3ff98f8d456851518a83e6729c2346c",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 910,
+    "total_tokens": 986,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

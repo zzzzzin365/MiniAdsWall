@@ -1,0 +1,20 @@
+{
+  "status": "succeeded",
+  "request_id": "b8fd8c12f25ec278397997ee57000c76bece8941dbe6db2c50c2ab39cf3b3d94",
+  "input_sha256": "45e9b5d9d1864acf800d1b310c99d1694ccfb3d1961e0e5264cc9a46219dffc3",
+  "elapsed_ms": 6830.804375000298,
+  "http_status": 200,
+  "usage": {
+    "completion_tokens": 872,
+    "prompt_tokens": 798,
+    "total_tokens": 1670,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "provider_id": "0217919795208247164478304be6f526c07985a2f4e4a975ca666",
+  "money": null
+}

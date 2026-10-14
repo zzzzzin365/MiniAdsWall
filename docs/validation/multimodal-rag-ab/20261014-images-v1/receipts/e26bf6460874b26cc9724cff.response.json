@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "图中左下方粉红珠子表面有明显凹凸纹理。",
+  "facts": {
+    "pink_surface": "有明显凹凸纹理"
+  },
+  "source_ids": [
+    "rainbow"
+  ]
+}

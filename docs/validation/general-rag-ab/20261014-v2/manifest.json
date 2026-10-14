@@ -1,0 +1,25 @@
+{
+  "status": "completed",
+  "seed": 20261014,
+  "platform": "macOS-26.0.1-arm64-arm-64bit",
+  "script_sha256": "223a81b54963f1b7c99c8a1074967879c42d12718014dbaa8eb49fd98b3411b2",
+  "git_head": "b2e1485fd027c9d97da9fda4d4494b0b2255b9b4",
+  "scope": "public/default snapshot and isolated synthetic subset only",
+  "private_db_read": false,
+  "report_completed": true,
+  "chroma_version": "0.5.23",
+  "numpy_version": "2.4.6",
+  "source_files": {
+    "evaluation/run_public_rag_tradeoff.py": "223a81b54963f1b7c99c8a1074967879c42d12718014dbaa8eb49fd98b3411b2",
+    "evaluation/verify_public_rag_queries.py": "6f5eb524aba7f8da7687a9032bd12d73724f832fde77e51041109a8c2a4ebbcc",
+    "/Users/admin/MiniAdsWall/evaluation/report_public_rag_tradeoff.py": "76183f6d8ab9b9c010b2943b964e668c0b1df091c294a7978b980a545ea101de"
+  },
+  "artifact_sha256": {
+    "corpus.json": "5406df5763382c8add176d8089104cc5b4998729f3a3e165d6456fb9dd6054c9",
+    "cases.json": "fdc7ea5e3603a5fd9f1fb1aca6717782e07d272606ab9690562a4f791e157ec8",
+    "fresh-cases.json": "872ca6b8f3edcbf25196ad0b0896a06e63149832705f900c81de33f50dd47561",
+    "query-vectors.npz": "b37ff9f940b7be02ccb36c0371df75300932d617b69efe2fa81679555146a541",
+    "frozen-selection.json": "3f065aa313b05e02e874235d9129c7d5e5d9960c5096023b7d2c97c976f4975e",
+    "full-36m-manifest.json": "d5a3d28acbc8b6e98aa8d708e7fd0a99a259b86b749bf7ded826d3eb32e3d2b1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:F:answer:detail-two-stand",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "1beb03c04e6dfbea2a5f1612",
+  "input_sha256": "80a9d558a79b650ea0d47a7fd019112c2f5e8311bd5de3d5ac26140932ad610f",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1478.1065410934389,
+  "http_status": 200,
+  "provider_id": "021791986718348c2531bd3ff98f8d456851518a83e6729a0b2e7",
+  "usage": {
+    "completion_tokens": 24,
+    "prompt_tokens": 683,
+    "total_tokens": 707,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

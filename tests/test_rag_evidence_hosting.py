@@ -92,11 +92,40 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
         state, trace, answer = await self.execute({"status": "sufficient", "missing_information": [],
                                                   "evidence_ids": ["a"]}, provider)
         self.assertEqual(state["status"], "succeeded")
-        self.assertEqual(answer, "依据已检查规则回答")
+        self.assertIn("依据已检查规则回答", answer)
+        self.assertIn("本轮检索依据", answer)
+        self.assertIn("ID: a", answer)
+        self.assertNotIn("ID: b", answer)
         self.assertTrue(any(x["stage"] == "model" for x in trace["spans"]))
         self.pipeline.rag_manager.rewrite_query.assert_awaited_once()
-        self.assertEqual(self.pipeline.rag_manager.call.await_count, 2)
+        self.assertLessEqual(self.pipeline.rag_manager.call.await_count, 4)
         self.assertEqual(len(self.pipeline.rag_manager._rerank.call_args.args[1]), 2)
+
+    async def test_full_window_snapshot_and_metric_boundaries_reach_checker_and_model(self):
+        original = self.new_run
+        def new_run():
+            run = original()
+            # The payload is frozen before execution, like the authenticated gateway.
+            payload = json.loads(self.repo.objects.get(run['input_ref']))
+            payload['performance_context'] = {'version':1, 'source':'ad_performance_ledger',
+                'window':['2026-10-12','2026-10-13','2026-10-14'], 'scope':'selected_authorized_ads',
+                'measured_count':1, 'items':[{'ad_id':'1','spend_minor':42}],
+                'padding':'完整快照' * 3000}
+            ref = self.repo.objects.put(json.dumps(payload))
+            run['input_ref'] = ref
+            return run
+        self.new_run = new_run
+        async def provider(*args, **kwargs):
+            text = kwargs['messages'][-1]['content']
+            self.assertIn('2026-10-12', text)
+            self.assertIn('"spend_minor":42', text)
+            self.assertIn('完整快照' * 3000, text)
+            self.assertIn('金额单位 fen', kwargs['system'])
+            self.assertIn('广告实际投放数据进行完整分析', kwargs['system'])
+            yield '模拟数据建议'
+        state, trace, answer = await self.execute({'status':'sufficient', 'missing_information':[], 'evidence_ids':['a']}, provider)
+        self.assertEqual(state['status'], 'succeeded')
+        self.assertEqual(next(s for s in trace['spans'] if s['stage']=='performance_context')['measured_count'],1)
 
     async def test_lost_lease_is_not_swallowed_as_retrieval_failure(self):
         run = self.new_run()

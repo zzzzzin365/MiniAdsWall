@@ -40,7 +40,7 @@ test('hosted gateway authenticates identity, trusts server snapshot and forwards
         assert.deepEqual(await identity.json(), { user_id: '11', workspace_id: '22' });
         assert.equal(seen[0].body.subject, 'alice');
         assert.equal(seen[0].headers.authorization, 'Bearer service-test');
-        const created = await fetch(url + '/api/agent/sessions/1/runs', { method: 'POST', headers: { ...headers, 'Idempotency-Key': 'repeat-request-1234' }, body: JSON.stringify({ message: 'hello', user_id: 'bob', ads: [{ id: 'forged' }], ad_context: { version:99, items:[{id:'forged'}] } }) });
+        const created = await fetch(url + '/api/agent/sessions/1/runs', { method: 'POST', headers: { ...headers, 'Idempotency-Key': 'repeat-request-1234' }, body: JSON.stringify({ message: 'hello', user_id: 'bob', ads: [{ id: 'forged' }], ad_context: { version:99, items:[{id:'forged'}] }, performance_range:'3', performance_context:{items:[{ad_id:'forged',net_roas:999}]} }) });
         assert.equal(created.status, 200);
         const submitted = seen.find(item => item.url === '/sessions/1/runs');
         assert.equal(submitted.headers['x-agent-session'], 'opaque-session');
@@ -49,6 +49,13 @@ test('hosted gateway authenticates identity, trusts server snapshot and forwards
         // CP01's initial 1,001-ad reproduction is preserved in its baseline log.
         // The recall integration now selects a bounded ranking sample even with the new writer off.
         assert.equal(submitted.body.ads.length, 50);
+        assert.equal(submitted.body.performance_context.source, 'ad_performance_ledger');
+        assert.equal(submitted.body.performance_context.range, '3');
+        assert.equal(submitted.body.performance_context.measured_count, 0);
+        assert.deepEqual(submitted.body.performance_context.items, []);
+        assert.equal(submitted.body.performance_range, undefined);
+        const invalid = await fetch(url + '/api/agent/sessions/1/runs', { method:'POST', headers, body:JSON.stringify({message:'hello',performance_range:'30'}) });
+        assert.equal(invalid.status, 400);
         assert.deepEqual(new Set(submitted.body.ads.map(item => item.id)), new Set(fixtures.map(item => item.id).sort().slice(0, 50)));
         // Backend above is a capture fixture; FastAPI's raw-input quantity rejection is tested separately.
         const response = await fetch(url + '/api/agent/runs/1/events', { headers: { ...headers, 'Last-Event-ID': '0' } });

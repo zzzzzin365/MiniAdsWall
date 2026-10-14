@@ -1,0 +1,40 @@
+{
+  "synthetic": true,
+  "vectors": 100000,
+  "full_parent_vectors": 36000000,
+  "backend": "hnswlib direct; not Chroma API",
+  "document_vectors_sha256": "c9624c95891bf4dc2b9d280bfb08a3c780b1e6abfd01e5900ace7a6a69b8eb31",
+  "query_vectors_sha256": "72c0daf5c5206c9f5191932d3b30214dd5ea30779f03c548482d26c3c5066b26",
+  "queries": 200,
+  "query_types": [
+    "100 noisy source-vector queries",
+    "100 independent random queries"
+  ],
+  "build_seconds": 132.02591004106216,
+  "hnsw_index_bytes": 168849916,
+  "exact_p50_ms": 5.335999943781644,
+  "exact_p95_ms": 11.070557794300838,
+  "arms": {
+    "10": {
+      "neighbor_recall_at5": 0.045,
+      "p50_ms": 0.3676250344142318,
+      "p95_ms": 0.5688519915565846
+    },
+    "64": {
+      "neighbor_recall_at5": 0.16,
+      "p50_ms": 1.7682709731161594,
+      "p95_ms": 2.6790670468471944
+    },
+    "256": {
+      "neighbor_recall_at5": 0.33699999999999997,
+      "p50_ms": 5.553979484830052,
+      "p95_ms": 7.29853508528322
+    }
+  },
+  "limitations": [
+    "100k-prefix capacity pilot, not 36M HNSW benchmark",
+    "random-vector neighbor recall, not semantic recall",
+    "single process, no service concurrency test; warm RAM index",
+    "ef arms run in fixed order; speed differences exploratory"
+  ]
+}

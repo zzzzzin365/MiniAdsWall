@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "图中为一只手托着的手串，手串由多种造型为水果的珠子组成，包含橙黄色的珠子，该橙黄色珠子的顶部有绿色的叶状结构"
+      ],
+      "facts": {
+        "green_leaf_crown": true
+      }
+    }
+  ],
+  "missing": [
+    "是否存在其他图中的橙黄珠子是否有绿色叶冠的情况"
+  ]
+}

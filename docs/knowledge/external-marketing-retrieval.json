@@ -1,0 +1,86 @@
+{
+  "scope": "real Chroma, real curated source summaries/captions; no online generation or recall-quality benchmark",
+  "checks": [
+    {
+      "query": "广告投放目标、预算和落地页怎么准备",
+      "status": "retrieved",
+      "matches": [
+        {
+          "id": "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+          "title": "广告系统解析与实战(4) -多种多样的广告创意",
+          "kind": "image",
+          "url": "https://zhuanlan.zhihu.com/p/1932929206834140237",
+          "score": 0.8359
+        },
+        {
+          "id": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+          "title": "广告系统解析与实战(4) -多种多样的广告创意",
+          "kind": "article",
+          "url": "https://zhuanlan.zhihu.com/p/1932929206834140237",
+          "score": 0.7551
+        },
+        {
+          "id": "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+          "title": "广告创意方案的六项评估维度",
+          "kind": "image",
+          "url": "https://x.com/spect3ral/status/2087282914728046825",
+          "score": 0.7218
+        }
+      ]
+    },
+    {
+      "query": "Semrush 展示广告 CTA 高对比按钮",
+      "status": "retrieved",
+      "matches": [
+        {
+          "id": "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+          "title": "2024 年13 个领先广告创意",
+          "kind": "image",
+          "url": "https://zhuanlan.zhihu.com/p/703076279",
+          "score": 0.7741
+        },
+        {
+          "id": "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+          "title": "广告系统解析与实战(4) -多种多样的广告创意",
+          "kind": "image",
+          "url": "https://zhuanlan.zhihu.com/p/1932929206834140237",
+          "score": 0.628
+        },
+        {
+          "id": "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+          "title": "2024 年13 个领先广告创意",
+          "kind": "article",
+          "url": "https://zhuanlan.zhihu.com/p/703076279",
+          "score": 0.5732
+        }
+      ]
+    },
+    {
+      "query": "多邻国 品牌IP 小绿鸟 情绪与用户传播",
+      "status": "retrieved",
+      "matches": [
+        {
+          "id": "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+          "title": "疯狂的小绿鸟，多邻国才是教育界营销天花板！",
+          "kind": "image",
+          "url": "https://www.xiaohongshu.com/explore/69d858be000000001a0323a1",
+          "score": 0.8955
+        },
+        {
+          "id": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+          "title": "疯狂的小绿鸟，多邻国才是教育界营销天花板！",
+          "kind": "article",
+          "url": "https://www.xiaohongshu.com/explore/69d858be000000001a0323a1",
+          "score": 0.8259
+        },
+        {
+          "id": "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+          "title": "疯狂的小绿鸟，多邻国才是教育界营销天花板！",
+          "kind": "image",
+          "url": "https://www.xiaohongshu.com/explore/69d858be000000001a0323a1",
+          "score": 0.8049
+        }
+      ]
+    }
+  ]
+}

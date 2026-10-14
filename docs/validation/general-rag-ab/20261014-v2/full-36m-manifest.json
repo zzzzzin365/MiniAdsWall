@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "synthetic": true,
+  "source": "data/benchmarks/synthetic-36m-384-f32",
+  "vectors": 36000000,
+  "dimension": 384,
+  "query_count": 8,
+  "seed": 20261014,
+  "source_manifest_sha256": "53dfc3697f9020b009c9241633ab7443b068d517a6eef0d49c5ada80511735e0",
+  "query_sha256": "089889468563dd35665b0376cf5b2231c74ffa85f393af222bb3201719e98735",
+  "batch_size": 50000,
+  "query_types": [
+    "four perturbed source anchors",
+    "four independent random queries"
+  ],
+  "limits": [
+    "batch scan only, not single-query P95 or concurrency",
+    "synthetic random vectors, not semantic recall"
+  ]
+}

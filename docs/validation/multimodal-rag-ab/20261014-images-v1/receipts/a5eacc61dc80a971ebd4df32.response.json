@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "彩虹色手串被放置在人的手掌上"
+      ],
+      "facts": {
+        "first_surface": "人的手掌"
+      }
+    },
+    {
+      "source_id": "car",
+      "observations": [
+        "红苹果造型的挂饰悬挂在汽车内，背景可见汽车内饰、车窗外的夜景"
+      ],
+      "facts": {
+        "second_scene": "汽车内，车窗外为夜晚的户外场景"
+      }
+    }
+  ],
+  "missing": []
+}

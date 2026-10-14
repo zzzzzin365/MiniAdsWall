@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "是，图中黑色台座上的手串包含浅蓝色珠子。",
+  "facts": {
+    "blue_on_stand": true
+  },
+  "source_ids": [
+    "two"
+  ]
+}

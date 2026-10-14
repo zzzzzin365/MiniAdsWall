@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "根据caption描述，图中挂饰的蝴蝶结为红棕格子图案，属于格纹而非纯色。",
+  "facts": {
+    "ribbon_pattern": "格纹"
+  },
+  "source_ids": [
+    "car"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "图中右侧手串放置的台座是黑色。",
+  "facts": {
+    "stand_color": "黑色"
+  },
+  "source_ids": [
+    "two"
+  ]
+}

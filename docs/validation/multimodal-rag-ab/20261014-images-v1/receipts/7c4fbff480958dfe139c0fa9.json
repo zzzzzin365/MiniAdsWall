@@ -1,0 +1,22 @@
+{
+  "call_key": "binding-fix:R:reader:detail-gift-surface",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "7c4fbff480958dfe139c0fa9",
+  "input_sha256": "38ba40ac6c17cbf8d6c5c8c223034df0873b329c52785a3e2b972841dd6ce166",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 5517.145833000541,
+  "http_status": 200,
+  "provider_id": "0217919875514654ca67e9480bca887386e68bd4f0aad8616e7a1",
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 4235,
+    "total_tokens": 4345,
+    "prompt_tokens_details": {
+      "cached_tokens": 4235
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

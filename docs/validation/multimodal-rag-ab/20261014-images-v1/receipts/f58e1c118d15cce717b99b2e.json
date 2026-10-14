@@ -1,0 +1,22 @@
+{
+  "call_key": "warm_repeat:H:reader:detail-rainbow-leaf",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "f58e1c118d15cce717b99b2e",
+  "input_sha256": "eff4656146bea11f5f62a70e665cb4d81bc42a09efbbb43e46034889e122cc68",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 11014.49600001797,
+  "http_status": 200,
+  "provider_id": "021791987253980c2531bd3ff98f8d456851518a83e67293558e5",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 4144,
+    "total_tokens": 4207,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

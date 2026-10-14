@@ -1,0 +1,6 @@
+{
+  "status": "insufficient",
+  "answer": "提供的素材中未包含可核验的图片视觉证据（visual_evidence为空），仅凭caption文字无法判断红珠孔洞附近是否出现浅黄色区域，因此不足以回答。",
+  "facts": {},
+  "source_ids": []
+}

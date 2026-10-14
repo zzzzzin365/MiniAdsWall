@@ -1,0 +1,32 @@
+{
+  "0": {
+    "p95_ratio": 0.9370729153855516,
+    "relative_reduction": 0.0629270846144484,
+    "p95_ratio_ci95": [
+      0.7480571283747398,
+      1.3258723928343448
+    ],
+    "actual_hit_ratio": 0.0,
+    "note": "paired case-cluster bootstrap, two repeats, warm local index, no online distribution claim"
+  },
+  "0.5": {
+    "p95_ratio": 0.5985624910783406,
+    "relative_reduction": 0.4014375089216594,
+    "p95_ratio_ci95": [
+      0.4250758795485415,
+      0.8932674338915151
+    ],
+    "actual_hit_ratio": 0.5,
+    "note": "paired case-cluster bootstrap, two repeats, warm local index, no online distribution claim"
+  },
+  "1": {
+    "p95_ratio": 0.020949567541981802,
+    "relative_reduction": 0.9790504324580181,
+    "p95_ratio_ci95": [
+      0.0176661293676534,
+      0.0243903028926428
+    ],
+    "actual_hit_ratio": 1.0,
+    "note": "paired case-cluster bootstrap, two repeats, warm local index, no online distribution claim"
+  }
+}

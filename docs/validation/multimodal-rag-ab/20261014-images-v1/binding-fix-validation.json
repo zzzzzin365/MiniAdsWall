@@ -1,0 +1,122 @@
+[
+  {
+    "arm": "H",
+    "case_id": "detail-gift-surface",
+    "answer": {
+      "status": "answered",
+      "answer": "图中手串放在人的手掌上展示。",
+      "facts": {
+        "display_surface": "人的手掌"
+      },
+      "source_ids": [
+        "gift"
+      ]
+    },
+    "visual": {
+      "sources": [
+        {
+          "source_id": "gift",
+          "observations": [
+            "手串被放置在人的手掌上展示"
+          ],
+          "facts": {
+            "display_surface": "人的手掌"
+          }
+        },
+        {
+          "source_id": "two",
+          "observations": [
+            "手串被放置在木质台面上的黑色方形托盘上展示，另有一串手串放置在该木质台面上"
+          ],
+          "facts": {
+            "display_surface": "黑色方形托盘、木质台面"
+          }
+        },
+        {
+          "source_id": "rainbow",
+          "observations": [
+            "手串被放置在人的手掌上展示"
+          ],
+          "facts": {
+            "display_surface": "人的手掌"
+          }
+        }
+      ],
+      "missing": [
+        "无法确定“一个适合送朋友的礼物”图中手串的展示表面，因该图仅显示手串被放在手掌上，未显示其他展示表面信息"
+      ]
+    },
+    "score": {
+      "grounded_correct": true,
+      "fields_correct": {
+        "display_surface": true
+      },
+      "gold_citations_complete": true,
+      "needs_semantic_review": true
+    },
+    "receipt_ids": [
+      "869b3bb2b278605343650de0",
+      "014b543d0665804a5ed9e7e7"
+    ],
+    "scope": "post-hoc source-binding repair validation; NOT replacing primary results"
+  },
+  {
+    "arm": "R",
+    "case_id": "detail-gift-surface",
+    "answer": {
+      "status": "answered",
+      "answer": "图中手串是放在人的手掌上展示的。",
+      "facts": {
+        "display_surface": "人的手掌"
+      },
+      "source_ids": [
+        "gift"
+      ]
+    },
+    "visual": {
+      "sources": [
+        {
+          "source_id": "gift",
+          "observations": [
+            "手串被放置在人的手掌上展示"
+          ],
+          "facts": {
+            "display_surface": "人的手掌"
+          }
+        },
+        {
+          "source_id": "two",
+          "observations": [
+            "手串被放置在木质台面上，其中一条手串被放置在黑色方形物体上展示"
+          ],
+          "facts": {
+            "display_surface": "木质台面，黑色方形物体"
+          }
+        },
+        {
+          "source_id": "rainbow",
+          "observations": [
+            "手串被放置在人的手掌上展示"
+          ],
+          "facts": {
+            "display_surface": "人的手掌"
+          }
+        }
+      ],
+      "missing": []
+    },
+    "score": {
+      "grounded_correct": true,
+      "fields_correct": {
+        "display_surface": true
+      },
+      "gold_citations_complete": true,
+      "needs_semantic_review": true
+    },
+    "receipt_ids": [
+      "7c4fbff480958dfe139c0fa9",
+      "fef914ee581c6bd87f2f36d6"
+    ],
+    "scope": "post-hoc source-binding repair validation; NOT replacing primary results"
+  }
+]

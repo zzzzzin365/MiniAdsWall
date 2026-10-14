@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "synthetic": false,
+  "retrieved_at": "2026-10-14",
+  "sources": [
+    {
+      "id": "zhihu-650576876",
+      "platform": "zhihu",
+      "title": "如何用好创意撬动投放增长？来看看他们是怎么做的",
+      "author": "深响／何文",
+      "url": "https://zhuanlan.zhihu.com/p/650576876",
+      "coverage": "visible_article",
+      "method": "agent-reach Jina Reader",
+      "summary": "文章通过保险、服饰和本地服务案例讨论创意素材、原生内容、自动化投放与后续经营的配合。可参考从用户场景与顾虑设计多种素材，匹配达人表达，再由落地页、账号内容或私信承接。文章描述的预算、跑量与增长数字属于历史案例，不能当成本项目效果；平台产品现状需另行核验。",
+      "tags": [
+        "广告创意",
+        "投放优化",
+        "原生内容",
+        "转化承接"
+      ],
+      "images": [],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    },
+    {
+      "id": "zhihu-703076279",
+      "platform": "zhihu",
+      "title": "2024 年13 个领先广告创意",
+      "author": "外贸GEO 大师兄（搜索署名）",
+      "url": "https://zhuanlan.zhihu.com/p/703076279",
+      "coverage": "visible_article",
+      "method": "agent-reach Jina Reader",
+      "summary": "文章列举搜索广告、展示广告、社交广告、户外与交通广告等形式。整理创意时可分别记录受众问题、解决方案、产品画面和行动入口，再检查渠道与目标是否匹配。展示广告例图体现利益点、界面截图和高对比按钮的组合。作者对关键词竞争、渠道选择和案例有效性的判断不是通用投放结论，需要预算与实验数据验证。",
+      "tags": [
+        "广告创意",
+        "展示广告",
+        "CTA",
+        "关键词"
+      ],
+      "images": [
+        {
+          "label": "zhihu-display",
+          "url": "https://pic1.zhimg.com/v2-4d8a864189755b4ef1261ab18e12f142_1440w.jpg",
+          "source_url": "https://zhuanlan.zhihu.com/p/703076279",
+          "local_path": "data/external-marketing/images/zhihu-display.jpg",
+          "sha256": "e0b803e1336f1f8f055871febf21c36f0ddd857a8437c9cd0f2f535bd28ddae4",
+          "bytes": 67065,
+          "width": 995,
+          "height": 560,
+          "status": "downloaded",
+          "caption": "两条 Semrush 展示广告：深紫色背景、浅绿或白色利益点文字、橙色试用按钮，右侧是产品界面的图表截图。可参考信息层级与按钮对比，不证明转化效果。",
+          "rights": "reference_only_rights_unverified"
+        }
+      ],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    },
+    {
+      "id": "zhihu-1932929206834140237",
+      "platform": "zhihu",
+      "title": "广告系统解析与实战(4) -多种多样的广告创意",
+      "author": "伊可Echo的AI笔记",
+      "url": "https://zhuanlan.zhihu.com/p/1932929206834140237",
+      "coverage": "preview_only",
+      "method": "agent-reach OpenCLI browser DOM",
+      "summary": "公开预览将广告创意分成图片、视频、文案、品牌形象、营销组件和落地页，并以汽车广告解释组合。可将素材整理为这些字段，检查广告承诺与落地页是否一致。作者提示详细讨论需要到公众号阅读，本次未取得隐藏全文，不能补写未公开结论。",
+      "tags": [
+        "广告创意",
+        "创意组件",
+        "落地页"
+      ],
+      "images": [
+        {
+          "label": "zhihu-components",
+          "url": "https://picx.zhimg.com/v2-4c04db7eb86e581102654a06e0bc14cf_1440w.jpg",
+          "source_url": "https://zhuanlan.zhihu.com/p/1932929206834140237",
+          "local_path": "data/external-marketing/images/zhihu-components.png",
+          "sha256": "71f76b747f9a57e0eedf4d9783be5230e6087fdbdab35b4bd4c481fc5fd9aaa5",
+          "bytes": 330834,
+          "width": 1440,
+          "height": 659,
+          "status": "downloaded",
+          "caption": "汽车广告组件示意图：左侧为蔚来汽车广告，右侧拆分图片、视频、文案、品牌形象、营销按钮与落地页。广告中的优惠属于历史素材宣称，不是当前价格。",
+          "rights": "reference_only_rights_unverified"
+        }
+      ],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    },
+    {
+      "id": "xhs-69d858be000000001a0323a1",
+      "platform": "xiaohongshu",
+      "title": "疯狂的小绿鸟，多邻国才是教育界营销天花板！",
+      "author": "有好Case",
+      "url": "https://www.xiaohongshu.com/explore/69d858be000000001a0323a1",
+      "published_at": "2026-04-10",
+      "coverage": "visible_note_and_two_images",
+      "method": "agent-reach OpenCLI note and browser DOM",
+      "summary": "笔记用多邻国猫头鹰的表情、玩梗与系列故事讨论品牌IP。可参考如何把角色与用户的使用行为、情绪和持续内容关联，再设计可参与的传播活动。作者认为教育内容可以换一种沟通方式；传播效率和中小预算最优等判断未经本次核验，不能直接承诺增长。只分析了本次归档的两张图片，不代表读完十张图。",
+      "tags": [
+        "营销案例",
+        "品牌IP",
+        "情绪",
+        "用户参与"
+      ],
+      "images": [
+        {
+          "label": "xhs-duo-1",
+          "url": "https://sns-webpic-qc.xhscdn.com/202610141140/499d69b7a9abd912e8aa19ae8b624202/notes_pre_post/1040g3k031uouta3j3qpg5ps0dcs232cou7pv04o!nd_dft_wlteh_webp_3",
+          "source_url": "https://www.xiaohongshu.com/explore/69d858be000000001a0323a1",
+          "local_path": "data/external-marketing/images/xhs-duo-1.webp",
+          "sha256": "7b200ad6c1cc0f693a394747ea910386e02388ec3d8c1407764f521d9cf7cf5d",
+          "bytes": 253128,
+          "width": 1080,
+          "height": 1443,
+          "status": "downloaded",
+          "caption": "多邻国案例总结页：红色章节标题与三段黑色分析，谈情绪切入、IP与用户行为关联、用户参与传播。中小预算最优等判断属于作者观点。",
+          "rights": "reference_only_rights_unverified"
+        },
+        {
+          "label": "xhs-duo-2",
+          "url": "https://sns-webpic-qc.xhscdn.com/202610141140/e2928c6d9823e23ae448664738a9b37d/notes_pre_post/1040g3k031uouta3j3ql05ps0dcs232col7mjo50!nd_dft_wlteh_webp_3",
+          "source_url": "https://www.xiaohongshu.com/explore/69d858be000000001a0323a1",
+          "local_path": "data/external-marketing/images/xhs-duo-2.webp",
+          "sha256": "dd1d9fe14029467e0e29a9a0b191bcce8ca3df2b37a412c52af9b0fe9f6e27d6",
+          "bytes": 186626,
+          "width": 1080,
+          "height": 1443,
+          "status": "downloaded",
+          "caption": "多邻国营销案例封面：红色大标题、两只绿色猫头鹰、浅色背景配红粉渐变，强调品牌IP与系列内容辨识度。",
+          "rights": "reference_only_rights_unverified"
+        }
+      ],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    },
+    {
+      "id": "xhs-693992bb000000001e030480",
+      "platform": "xiaohongshu",
+      "title": "广告投放全流程（广告主视角版）！",
+      "author": "CC里＿",
+      "url": "https://www.xiaohongshu.com/explore/693992bb000000001e030480",
+      "published_at": "2025-12-10",
+      "coverage": "visible_note",
+      "method": "agent-reach OpenCLI note",
+      "summary": "笔记描述投放准备、平台选择和广告计划搭建：明确营销目标与预算，整理用户画像，准备素材与一致的落地页，再设置时间、地域和竞价参数。其中奶茶门店预算与成本是教学示例，不是行业基准；渠道画像与计费解释也需按平台当前规则核验。正文未完整展开数据优化和复盘步骤，本条不替作者补齐。",
+      "tags": [
+        "广告投放",
+        "预算",
+        "人群",
+        "落地页",
+        "计划搭建"
+      ],
+      "images": [],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    },
+    {
+      "id": "x-2098850243760808268",
+      "platform": "twitter",
+      "title": "营销知识库如何组织品牌资料、历史案例与视觉参考",
+      "author": "shannholmberg",
+      "url": "https://x.com/shannholmberg/status/2098850243760808268",
+      "published_at": "2026-09-12",
+      "coverage": "visible_post_and_image",
+      "method": "agent-reach OpenCLI search and visual inspection",
+      "summary": "作者建议把企业、用户问题、产品承诺、定位、语气与证据分成共享资料，再按营销职能和活动组织流程、范例与反馈。视觉参考连接到品牌手册，历史报告标明时间与指标口径；方案、数据和人工审阅相互关联。此为作者的组织方法，不代表项目已接入其工具或数据仓库。 Marketing knowledge base, brand voice, evidence, campaign feedback.",
+      "tags": [
+        "营销知识库",
+        "品牌资料",
+        "视觉参考",
+        "反馈"
+      ],
+      "images": [
+        {
+          "label": "x-marketing-kb",
+          "url": "https://pbs.twimg.com/media/HSCdLEhboAAPZPO.jpg",
+          "source_url": "https://x.com/i/status/2098850243760808268",
+          "local_path": "data/external-marketing/images/x-marketing-kb.jpg",
+          "sha256": "0457964fc827c379035e1316b30ef2523ff55c630a1d3123466dc3e163a0ea1d",
+          "bytes": 120043,
+          "width": 879,
+          "height": 1200,
+          "status": "downloaded",
+          "caption": "黑底营销知识库流程图，分为文件组织、参考链接、任务执行、人工审阅与反馈回写，连接品牌资料、历史效果数据和视觉参考。",
+          "rights": "reference_only_rights_unverified"
+        }
+      ],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    },
+    {
+      "id": "x-2087282914728046825",
+      "platform": "twitter",
+      "title": "广告创意方案的六项评估维度",
+      "author": "spect3ral",
+      "url": "https://x.com/spect3ral/status/2087282914728046825",
+      "coverage": "visible_post_and_image",
+      "method": "agent-reach OpenCLI search and visual inspection",
+      "summary": "作者提出评估创意的开头吸引力、痛点表达、受众匹配、竞争差异、形式选择和变体潜力，再输出可测试的创意简报。可用于给文案和素材建立检查表。效率与效果属于作者宣传，私有课程未取得；不能认为这些维度或图片证明转化提升。 Ad creative: hook, pain point, audience fit, differentiation, format, variation.",
+      "tags": [
+        "广告创意",
+        "创意评估",
+        "开头",
+        "测试变体"
+      ],
+      "images": [
+        {
+          "label": "x-creative-framework",
+          "url": "https://pbs.twimg.com/media/HPd3LG4W4AAOUoI.jpg",
+          "source_url": "https://x.com/i/status/2087282914728046825",
+          "local_path": "data/external-marketing/images/x-creative-framework.jpg",
+          "sha256": "980215e689bfcdbb0d727b11c02b0433f4036c7b460607d4c570135a69b7fb53",
+          "bytes": 63384,
+          "width": 1080,
+          "height": 1080,
+          "status": "downloaded",
+          "caption": "米白橙色创意策略课程宣传图，四列卡片呈现策略、开头模板、广告结构和创意测试。没有取得其私有课程，宣传图不证明效果。",
+          "rights": "reference_only_rights_unverified"
+        }
+      ],
+      "retrieved_at": "2026-10-14",
+      "trust": "external_author_view",
+      "knowledge_use": "参考方法与可见图像，不作为商品事实、当前平台规则或收益证明"
+    }
+  ]
+}

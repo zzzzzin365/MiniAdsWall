@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:reader:detail-car-ribbon",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "e43c4adf1cbf9ad66a1fef39",
+  "input_sha256": "93c25644cba70f8a716c74c6cdc4170b0f409533349870a2d21a3a0f65d56d57",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 20751.071167062037,
+  "http_status": 200,
+  "provider_id": "021791987004309c2531bd3ff98f8d456851518a83e67293eebcc",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 4142,
+    "total_tokens": 4210,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

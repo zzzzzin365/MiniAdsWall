@@ -4,8 +4,9 @@ import { AdCreativeInput, AdStrategyInput, AdCreativeOutput, AdStrategyOutput, A
 async function generate<T>(path: string, input: unknown, requestId?: string): Promise<T | AIErrorResponse> {
     try {
         return await agentRequest(path, input, requestId) as T;
-    } catch {
-        return { error: true, message: 'AI 服务不可用或生成超时，请稍后重试' };
+    } catch (error) {
+        const message = (error as { userMessage?: string }).userMessage;
+        return { error: true, message: message || 'AI 服务不可用或生成超时，请稍后重试' };
     }
 }
 

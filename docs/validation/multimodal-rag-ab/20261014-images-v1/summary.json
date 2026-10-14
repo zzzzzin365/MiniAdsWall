@@ -1,0 +1,203 @@
+{
+  "scope": "real-image understanding, caption retrieval, question-conditioned vision, same DeepSeek generator",
+  "images": 4,
+  "test_cases": 20,
+  "groups": {
+    "cold_unique": {
+      "A1": {
+        "requests": 20,
+        "positive_cases": 16,
+        "negative_cases": 4,
+        "required_fields_only_rate": 0.8125,
+        "positive_field_and_gold_coverage_rate": 0.75,
+        "strict_fields_and_exact_sources_rate": 0.6875,
+        "negative_safe_abstention_rate": 1.0,
+        "false_abstention_rate": 0.1875,
+        "extra_citation_cases": 1,
+        "failure_count": 0,
+        "vision_calls": 0,
+        "vision_cache_hits": 0,
+        "embedding_cache_hits": 0,
+        "evidence_ready": {
+          "p50_ms": 102.70056244917214,
+          "p95_ms": 320.03751849988487
+        },
+        "end_to_end": {
+          "p50_ms": 1880.9462704812177,
+          "p95_ms": 2850.060492008925
+        },
+        "mean_total_ms": 2034.79361050413
+      },
+      "F": {
+        "requests": 20,
+        "positive_cases": 16,
+        "negative_cases": 4,
+        "required_fields_only_rate": 0.8125,
+        "positive_field_and_gold_coverage_rate": 0.8125,
+        "strict_fields_and_exact_sources_rate": 0.75,
+        "negative_safe_abstention_rate": 1.0,
+        "false_abstention_rate": 0.1875,
+        "extra_citation_cases": 1,
+        "failure_count": 0,
+        "vision_calls": 0,
+        "vision_cache_hits": 0,
+        "embedding_cache_hits": 0,
+        "evidence_ready": {
+          "p50_ms": 105.74650048511103,
+          "p95_ms": 612.1262663567904
+        },
+        "end_to_end": {
+          "p50_ms": 2082.477541989647,
+          "p95_ms": 4192.662282666424
+        },
+        "mean_total_ms": 2365.6354206905235
+      },
+      "H": {
+        "requests": 20,
+        "positive_cases": 16,
+        "negative_cases": 4,
+        "required_fields_only_rate": 0.9375,
+        "positive_field_and_gold_coverage_rate": 0.9375,
+        "strict_fields_and_exact_sources_rate": 0.875,
+        "negative_safe_abstention_rate": 1.0,
+        "false_abstention_rate": 0.0625,
+        "extra_citation_cases": 4,
+        "failure_count": 0,
+        "vision_calls": 20,
+        "vision_cache_hits": 0,
+        "embedding_cache_hits": 0,
+        "evidence_ready": {
+          "p50_ms": 13229.473166982643,
+          "p95_ms": 24653.35485588294
+        },
+        "end_to_end": {
+          "p50_ms": 15599.495542002842,
+          "p95_ms": 26235.419616935545
+        },
+        "mean_total_ms": 16176.136420993134
+      },
+      "R": {
+        "requests": 20,
+        "positive_cases": 16,
+        "negative_cases": 4,
+        "required_fields_only_rate": 0.9375,
+        "positive_field_and_gold_coverage_rate": 0.9375,
+        "strict_fields_and_exact_sources_rate": 0.875,
+        "negative_safe_abstention_rate": 1.0,
+        "false_abstention_rate": 0.0625,
+        "extra_citation_cases": 2,
+        "failure_count": 0,
+        "vision_calls": 12,
+        "vision_cache_hits": 0,
+        "embedding_cache_hits": 0,
+        "evidence_ready": {
+          "p50_ms": 10102.177749969997,
+          "p95_ms": 27006.574229220863
+        },
+        "end_to_end": {
+          "p50_ms": 11780.70895851124,
+          "p95_ms": 29572.55658183713
+        },
+        "mean_total_ms": 11638.16808538395
+      }
+    },
+    "warm_repeat": {
+      "A1": {
+        "requests": 6,
+        "positive_cases": 6,
+        "negative_cases": 0,
+        "required_fields_only_rate": 0.8333333333333334,
+        "positive_field_and_gold_coverage_rate": 0.8333333333333334,
+        "strict_fields_and_exact_sources_rate": 0.6666666666666666,
+        "negative_safe_abstention_rate": null,
+        "false_abstention_rate": 0.16666666666666666,
+        "extra_citation_cases": 1,
+        "failure_count": 0,
+        "vision_calls": 0,
+        "vision_cache_hits": 0,
+        "embedding_cache_hits": 0,
+        "evidence_ready": {
+          "p50_ms": 101.9396249903366,
+          "p95_ms": 275.9341977071017
+        },
+        "end_to_end": {
+          "p50_ms": 1976.221416494809,
+          "p95_ms": 3586.1072922998574
+        },
+        "mean_total_ms": 2311.441180684293
+      },
+      "H": {
+        "requests": 6,
+        "positive_cases": 6,
+        "negative_cases": 0,
+        "required_fields_only_rate": 1.0,
+        "positive_field_and_gold_coverage_rate": 1.0,
+        "strict_fields_and_exact_sources_rate": 0.8333333333333334,
+        "negative_safe_abstention_rate": null,
+        "false_abstention_rate": 0.0,
+        "extra_citation_cases": 1,
+        "failure_count": 0,
+        "vision_calls": 6,
+        "vision_cache_hits": 0,
+        "embedding_cache_hits": 6,
+        "evidence_ready": {
+          "p50_ms": 12364.110270456877,
+          "p95_ms": 15573.102499969536
+        },
+        "end_to_end": {
+          "p50_ms": 15465.926458011381,
+          "p95_ms": 18563.510968757328
+        },
+        "mean_total_ms": 15808.40711099639
+      },
+      "R": {
+        "requests": 6,
+        "positive_cases": 6,
+        "negative_cases": 0,
+        "required_fields_only_rate": 1.0,
+        "positive_field_and_gold_coverage_rate": 1.0,
+        "strict_fields_and_exact_sources_rate": 0.8333333333333334,
+        "negative_safe_abstention_rate": null,
+        "false_abstention_rate": 0.0,
+        "extra_citation_cases": 1,
+        "failure_count": 0,
+        "vision_calls": 0,
+        "vision_cache_hits": 4,
+        "embedding_cache_hits": 6,
+        "evidence_ready": {
+          "p50_ms": 4.082437488250434,
+          "p95_ms": 33.4762601996772
+        },
+        "end_to_end": {
+          "p50_ms": 2099.420270533301,
+          "p95_ms": 2546.0980099160224
+        },
+        "mean_total_ms": 2064.1913608027003
+      }
+    }
+  },
+  "model_calls": {
+    "deepseek-v4-1-flash-260910": {
+      "requests": 104,
+      "prompt_tokens": 94731,
+      "completion_tokens": 5468
+    },
+    "doubao-seed-2-0-mini-260428": {
+      "requests": 44,
+      "prompt_tokens": 163109,
+      "completion_tokens": 4953
+    }
+  },
+  "caption_setup_ms": 21339.120124699548,
+  "money": null,
+  "independent_human_grade": false,
+  "overall_joint_goal_proven": false,
+  "limits": [
+    "Field/citation coverage score checks required facts, not every natural-language sentence.",
+    "Strict exact-source metric is a separate diagnostic; alternative-source relevance needs independent review.",
+    "Only four related sources; explicit material names make coverage near-trivial; no vector-recall improvement claim.",
+    "Cold unique requests have no embedding-cache hits. Warm six-query profile has actual visual-evidence reuse.",
+    "Model calls and raw image reads included in online latency; initial caption/index setup separately amortized.",
+    "One run per case/arm; provider variability; not browser/API/SQL authorization/queue/concurrency benchmark."
+  ]
+}

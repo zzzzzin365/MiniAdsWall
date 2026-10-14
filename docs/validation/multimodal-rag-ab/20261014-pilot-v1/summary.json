@@ -1,0 +1,44 @@
+{
+  "quality": {
+    "baseline": {
+      "semantic_source_recall_at3": 0.7708333333333334,
+      "complete_sources_at3": 0.75,
+      "positive_cases": 24,
+      "negative_cases": 7,
+      "unanswerable_candidate_return_rate": 1.0
+    },
+    "fused": {
+      "semantic_source_recall_at3": 0.7291666666666666,
+      "complete_sources_at3": 0.7083333333333334,
+      "positive_cases": 24,
+      "negative_cases": 7,
+      "unanswerable_candidate_return_rate": 1.0
+    }
+  },
+  "latency": {
+    "uncached_embedding": {
+      "n": 155,
+      "p50_ms": 103.60379202757031,
+      "p95_ms": 136.65997510543087
+    },
+    "cached_embedding": {
+      "n": 155,
+      "p50_ms": 2.757625072263181,
+      "p95_ms": 3.6765124532394107
+    }
+  },
+  "cache_workload": "100% hit upper bound versus no query embedding cache; not online traffic prediction",
+  "rewrite_note": "one batch call, offline frozen rewrites; not measured per-question end-to-end routing latency",
+  "money": null,
+  "final_answer_quality": null,
+  "planned_joint_goal_proven": false,
+  "functional_tests": {
+    "suite": [
+      "tests.test_multimodal_rag",
+      "tests.test_external_marketing"
+    ],
+    "passed": 8
+  },
+  "mixed_cache_summary_file": "mixed-cache-summary.json",
+  "statistics_file": "statistics.json"
+}

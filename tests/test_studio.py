@@ -59,10 +59,11 @@ class StudioTest(unittest.IsolatedAsyncioTestCase):
    with self.assertRaises(HTTPException):await understand(UnderstandingInput(asset_id='a1',kind='image',frames=[{'data_url':'https://127.0.0.1'}]),'test')
    wrong={'subject':'商品','observations':[{'description':'画面','frame_index':7}],'source_claims':[],'marketing_summary':'','uncertainties':[]}
    with self.assertRaises(HTTPException):await understand(UnderstandingInput(asset_id='a1',kind='video',frames=[{'data_url':'data:image/png;base64,aW1hZ2U='}]),'test',httpx.MockTransport(lambda r:httpx.Response(200,json={'choices':[{'message':{'content':json.dumps(wrong)}}]})))
- def test_image_not_supported_and_unknown_model_denied(self):
+ def test_image_route_and_unknown_model_denied(self):
   self.assertEqual(route('video'),VIDEO_MODEL)
   self.assertEqual(route('text'),TEXT_MODEL)
-  for value in ['image','seedream','publish']:
+  self.assertEqual(route('image'),'doubao-seedream-5-0-flash-260915')
+  for value in ['seedream','publish']:
    with self.assertRaises(HTTPException): route(value)
 
 if __name__=='__main__':unittest.main()

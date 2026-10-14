@@ -1,0 +1,22 @@
+{
+  "call_key": "warm_repeat:R:answer:simple-car",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "ae8aa652e2f67557225361c0",
+  "input_sha256": "7d7f92c763686f38d1a4c6d889c62ee1ecd7c36ab3f07b1fd6361cd49ca937a4",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1482.3494160082191,
+  "http_status": 200,
+  "provider_id": "021791987213382c2531bd3ff98f8d456851518a83e67295d8b59",
+  "usage": {
+    "completion_tokens": 46,
+    "prompt_tokens": 945,
+    "total_tokens": 991,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

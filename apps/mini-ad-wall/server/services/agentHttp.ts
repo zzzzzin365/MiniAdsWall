@@ -13,6 +13,11 @@ export async function agentRequest(path: string, body?: unknown, requestId: stri
         body: body === undefined ? undefined : JSON.stringify(body),
         signal: AbortSignal.timeout(path === '/health' ? 3000 : path === '/chat' ? 32000 : 55000)
     });
-    if (!response.ok) throw new Error(`Agent HTTP ${response.status}`);
+    if (!response.ok) {
+        const data = await response.json().catch(() => ({})) as { detail?: unknown };
+        const message = path === '/generate/strategy' && typeof data.detail === 'string'
+            ? data.detail : `Agent HTTP ${response.status}`;
+        throw Object.assign(new Error(message), { userMessage: path === '/generate/strategy' && typeof data.detail === 'string' ? message : undefined });
+    }
     return response.json();
 }

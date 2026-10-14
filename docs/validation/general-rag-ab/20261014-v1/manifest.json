@@ -1,0 +1,15 @@
+{
+  "scope": "general and public references only",
+  "corpus_sha256": "a14626f0cdc31a74403d14537b0cbba5d677ad41deb47f85d91d2ff384c4da7c",
+  "script_sha256": "5fc1e6aa5ffb10cc1b06635fb4e666e1e92c93d2ab34fa38b693433ec1163fd2",
+  "vectors_sha256": "48ee306109f087643ad799ccf13fe24901ed1e78e9bb1a2d27581cb27c0145e5",
+  "case_sha256": "fdc7ea5e3603a5fd9f1fb1aca6717782e07d272606ab9690562a4f791e157ec8",
+  "git_head": "b2e1485fd027c9d97da9fda4d4494b0b2255b9b4",
+  "seed": 20261014,
+  "platform": "macOS-26.0.1-arm64-arm-64bit",
+  "chunks": 43,
+  "embedding": "Chroma default ONNX all-MiniLM-L6-v2",
+  "model_calls": 0,
+  "status": "completed",
+  "business_index_mutated": false
+}

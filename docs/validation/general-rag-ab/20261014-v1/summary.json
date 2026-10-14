@@ -1,0 +1,71 @@
+{
+  "quality": {
+    "baseline": {
+      "all": {
+        "n": 65,
+        "recall_at5": 0.33076923076923076,
+        "complete_at5": 0.3076923076923077
+      },
+      "general": {
+        "n": 51,
+        "recall_at5": 0.21568627450980393,
+        "complete_at5": 0.19607843137254902
+      },
+      "external": {
+        "n": 14,
+        "recall_at5": 0.75,
+        "complete_at5": 0.7142857142857143
+      }
+    },
+    "optimized": {
+      "all": {
+        "n": 65,
+        "recall_at5": 0.8538461538461538,
+        "complete_at5": 0.8461538461538461
+      },
+      "general": {
+        "n": 51,
+        "recall_at5": 0.8235294117647058,
+        "complete_at5": 0.8235294117647058
+      },
+      "external": {
+        "n": 14,
+        "recall_at5": 0.9642857142857143,
+        "complete_at5": 0.9285714285714286
+      }
+    }
+  },
+  "speed": {
+    "baseline_uncached": {
+      "n": 325,
+      "p50_ms": 190.28691702988,
+      "p95_ms": 279.99429162591696
+    },
+    "execution_cached": {
+      "n": 325,
+      "p50_ms": 2.9180829878896475,
+      "p95_ms": 5.4831589804962295
+    },
+    "optimized_cached": {
+      "n": 325,
+      "p50_ms": 3.377250046469271,
+      "p95_ms": 5.931858578696849
+    }
+  },
+  "selected_weight": 0.75,
+  "dev_cases": 27,
+  "test_cases": 72,
+  "test_positive_families": 20,
+  "recall_delta_ci95": [
+    0.37735075781008354,
+    0.6818181818181818
+  ],
+  "recall_delta": 0.523076923076923,
+  "limits": [
+    "Frozen existing author-labeled questions; not independent blind annotations, previously used general questions.",
+    "General gold exact IDs; external gold equivalent source IDs; each reported separately.",
+    "Character bigram title/body ranking, not trained STAIR or visual embedding.",
+    "100% embedding-cache hit workload; no online traffic hit-rate claim or generation/authorization/model rewrite latency.",
+    "No private merchant data, no model answer scoring; quality means retrieval relevance only."
+  ]
+}

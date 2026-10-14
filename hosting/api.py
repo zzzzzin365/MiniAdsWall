@@ -25,6 +25,7 @@ class RunInput(BaseModel):
     message: str = Field(min_length=1,max_length=65536)
     ads: list[dict] = Field(default_factory=list,max_length=1000)
     ad_context: dict | None = None
+    performance_context: dict | None = None
     conditions: list[dict] = Field(default_factory=list,max_length=16)
 
     @field_validator('ad_context')
@@ -32,6 +33,16 @@ class RunInput(BaseModel):
     def bounded_context(cls,value):
         if value is not None and (len(json.dumps(value,ensure_ascii=False).encode()) > 65536 or value.get('version') != 1 or not isinstance(value.get('items'),list) or len(value['items']) > 100):
             raise ValueError('invalid_ad_context')
+        return value
+
+    @field_validator('performance_context')
+    @classmethod
+    def bounded_performance(cls,value):
+        if value is not None and (len(json.dumps(value,ensure_ascii=False).encode()) > 65536
+                or value.get('version') != 1 or not isinstance(value.get('items'),list)
+                or len(value['items']) > 100
+                or value.get('source') not in {'ad_performance_ledger','synthetic_merchant_demo_ledger','metrics_unavailable'}):
+            raise ValueError('invalid_performance_context')
         return value
 
     tool: str | None = None

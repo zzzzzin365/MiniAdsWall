@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "图中展示了一串由多种水果造型珠子组成的手串，左下方有一颗粉红色的荔枝造型珠子，该珠子表面有明显凹凸纹理"
+      ],
+      "facts": {
+        "pink_surface": "有明显凹凸纹理"
+      }
+    }
+  ],
+  "missing": [
+    "无"
+  ]
+}

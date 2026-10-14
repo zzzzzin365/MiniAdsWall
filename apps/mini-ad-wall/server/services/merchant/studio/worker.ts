@@ -10,6 +10,8 @@ import { object, put, authorize, decode } from "./store";
 import { validateResult } from "./contracts";
 import { analysisInput } from "./understanding";
 import { validateUnderstanding } from "./contracts";
+import { validateMediaRag } from "./contracts";
+import { mediaCorpus } from "./knowledge";
 import { studioDir, signedAsset, probe } from "./assets";
 export type Provider = (url: string, body?: any) => Promise<any>;
 export async function studioRequest(url: string, body?: any) {
@@ -25,7 +27,10 @@ export async function studioRequest(url: string, body?: any) {
   });
   if (!r.ok) {
     const data:any=await r.json().catch(()=>({}));
-    throw Object.assign(Error("studio_provider_error"), {status:r.status,code:String(data.detail||'').startsWith('seed_model_not_open')?'seed_model_not_open':'studio_provider_error'});
+    const detail = String(data.detail || '');
+    const code = detail.startsWith('seed_model_not_open') ? 'seed_model_not_open'
+      : detail.startsWith('media_rag_unavailable') ? 'media_rag_unavailable' : 'studio_provider_error';
+    throw Object.assign(Error("studio_provider_error"), {status:r.status,code});
   }
   return r.json();
 }
@@ -232,8 +237,31 @@ export async function tick(
   if (job.kind === "text") {
     try {
       const { brief_ref, ...input } = job.input;
+      const corpus = await withAdsConnection(async c => {
+        const session = await object(c, job.session_id, 'session', environment);
+        const brief = await object(c, session.data.brief_id, 'brief', environment);
+        if (session.brand_id !== job.brand_id || brief.brand_id !== job.brand_id ||
+            brief.id !== brief_ref.id || brief.revision !== brief_ref.revision) throw Error('brief_changed');
+        return mediaCorpus(c, job.created_by, job.brand_id, environment,
+          (brief.data.asset_refs || []).map((r: any) => r.asset_id));
+      });
+      input.media_knowledge = corpus;
       const result = await provider("/studio/generate", input);
       if (!validateResult(result)) throw Error("invalid_result_schema");
+      if (corpus.sources.length && !validateMediaRag(result.media_rag)) throw Error('missing_media_rag');
+      if (result.media_rag) {
+        const rag = result.media_rag;
+        if (rag.corpus_assets !== corpus.sources.length || rag.corpus_truncated !== corpus.truncated ||
+            (corpus.sources.length && !['retrieved', 'no_match'].includes(rag.status))) throw Error('invalid_media_scope');
+        for (const source of rag.retrieved) {
+          if (!corpus.sources.some(s => s.asset_id === source.asset_id &&
+            s.asset_revision === source.asset_revision && s.analysis_job_id === source.analysis_job_id))
+            throw Error('invalid_media_source');
+        }
+        if (JSON.stringify(rag.citations.map((s: any) => s.id)) !== JSON.stringify(result.source_ids || []) ||
+            rag.citations.some((s: any) => !rag.retrieved.some((r: any) => JSON.stringify(r) === JSON.stringify(s))))
+          throw Error('invalid_media_citation');
+      }
       await transaction(async (c) => {
         const [r] = await c.execute<RowDataPacket[]>(
           "SELECT id FROM merchant_studio_jobs WHERE id=? AND lease_token=? AND lease_until>UTC_TIMESTAMP(3) FOR UPDATE",
@@ -241,6 +269,11 @@ export async function tick(
         );
         if (!r.length) return;
         await authorize(c, job.created_by, job.brand_id, environment, true);
+        for (const source of result.media_rag?.citations || []) {
+          const asset = await object(c, source.asset_id, 'asset', environment);
+          if (asset.brand_id !== job.brand_id || asset.revision !== source.asset_revision ||
+              asset.data.analysis_job_id !== source.analysis_job_id) throw Error('media_source_changed');
+        }
         const ids = [];
         for (const concept of result.concepts) {
           const recipe = await put(
@@ -256,6 +289,8 @@ export async function tick(
               concept,
               decision: "pending",
               model: result.model,
+              media_sources: result.media_rag?.citations || [],
+              external_references: result.reference_knowledge?.citations || [],
             },
           );
           ids.push(recipe.id);
@@ -273,7 +308,7 @@ export async function tick(
         null,
         (e as any).status === 403
           ? "permission_revoked"
-          : "text_generation_failed",
+          : (e as any).code === 'media_rag_unavailable' ? 'media_rag_unavailable' : "text_generation_failed",
       );
     }
     return true;

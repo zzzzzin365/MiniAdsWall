@@ -1,4 +1,5 @@
 export interface Ad {
+    images?: string[];
     material_id?: string;
     attributes?: Record<string, string[]>;
     eligibility?: {enabled?: boolean; starts_at?: string | null; ends_at?: string | null};
@@ -101,13 +102,23 @@ export interface AdCreativeOutput {
 export interface AdStrategyInput {
     adDescription: string;
     industry: string;
+    adId?: string;
+    materialId?: string;
+    range?: '7' | '3';
+    settings?: {goal:'clicks'|'orders'|'leads';dailyBudget:number;days:number;maxCpc:number;unitProfit?:number};
+    delivery?: unknown;
 }
 
 export interface AdStrategyOutput {
     targetUsers: string[];
-    bidSuggestion: number;
+    bidSuggestion: number | null;
+    recommendedObjective: string;
     interests: string[];
     reason: string;
+    biddingAdvice: string;
+    missingInformation: string[];
+    knowledgeUsed: boolean;
+    knowledgeSources: { id: string; title: string; content: string; source_url?: string }[];
 }
 
 export interface AIErrorResponse {

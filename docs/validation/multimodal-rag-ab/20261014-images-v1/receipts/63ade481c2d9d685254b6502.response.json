@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "是，图中部分红珠孔洞附近可见浅黄色区域。",
+  "facts": {
+    "yellow_near_holes": true
+  },
+  "source_ids": [
+    "gift"
+  ]
+}

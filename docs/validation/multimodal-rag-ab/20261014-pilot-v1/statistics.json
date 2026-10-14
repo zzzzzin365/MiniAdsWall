@@ -1,0 +1,9 @@
+{
+  "semantic_recall_delta": -0.041666666666666664,
+  "family_cluster_bootstrap_ci95": [
+    -0.1875,
+    0.0
+  ],
+  "connected_family_clusters": 4,
+  "limits": "Only four independent source-family components; CI exploratory, not robust significance evidence."
+}

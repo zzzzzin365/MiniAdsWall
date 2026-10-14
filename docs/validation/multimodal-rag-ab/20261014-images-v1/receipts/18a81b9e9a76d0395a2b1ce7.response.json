@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "source_id": "two",
+      "observations": [
+        "可见两个由苹果造型珠子串成的手串，放置在木质台面上，其中一个手串放在黑色方形底座上"
+      ],
+      "facts": {
+        "subject": "苹果造型的手串"
+      }
+    },
+    {
+      "source_id": "gift",
+      "observations": [
+        "可见一只手掌托着一个由红色苹果造型珠子串成的手串"
+      ],
+      "facts": {
+        "subject": "苹果造型的手串"
+      }
+    },
+    {
+      "source_id": "car",
+      "observations": [
+        "可见一个悬挂在车内后视镜处的、被透明袋包装的红色苹果造型挂饰"
+      ],
+      "facts": {
+        "subject": "苹果造型的挂饰"
+      },
+      "missing": [
+        "无"
+      ]
+    }
+  ]
+}

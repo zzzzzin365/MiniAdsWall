@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "黑色",
+  "facts": {
+    "stand_color": "黑色"
+  },
+  "source_ids": [
+    "two"
+  ]
+}

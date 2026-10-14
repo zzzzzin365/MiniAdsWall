@@ -287,6 +287,7 @@ class MCPToolManager:
         *,
         check_retrieved_evidence: bool = True,
         stage_timeout: float = 3.0,
+        additional_queries: Optional[List[str]] = None,
     ) -> ToolResult:
         """
         完整的检索优化链路：查询改写 → 并行召回 → 去重 → 重排 → Top-K
@@ -298,10 +299,10 @@ class MCPToolManager:
             sub_queries = await asyncio.wait_for(self.rewrite_query(query, n=3), stage_timeout)
             if not isinstance(sub_queries, list):
                 sub_queries = []
-            sub_queries = list(dict.fromkeys([query] + [q.strip() for q in sub_queries
+            sub_queries = list(dict.fromkeys([query] + (additional_queries or []) + [q.strip() for q in sub_queries
                                                        if isinstance(q, str) and q.strip()]))[:4]
         except Exception:
-            sub_queries = [query]
+            sub_queries = list(dict.fromkeys([query] + (additional_queries or [])))[:4]
         logger.info(f"查询改写: {query!r} → {sub_queries}")
 
         # 2. 并行召回：所有子查询同时检索
@@ -372,7 +373,7 @@ class MCPToolManager:
             return items
 
         # 将结果序列化为文本供 LLM 评分
-        items_text = "\n".join(f"{i}. {json.dumps(item, ensure_ascii=False)[:200]}"
+        items_text = "\n".join(f"{i}. {json.dumps({'title': item.get('title', ''), 'content': str(item.get('content', ''))[:600]}, ensure_ascii=False) if isinstance(item, dict) else str(item)[:600]}"
                                for i, item in enumerate(items))
         prompt = f"""根据用户查询，对以下检索结果按相关性打分（0-10），返回 JSON 数组。
 用户查询: "{query}"

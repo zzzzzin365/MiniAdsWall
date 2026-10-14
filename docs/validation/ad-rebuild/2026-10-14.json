@@ -1,0 +1,641 @@
+{
+  "created_at": "2026-10-14T13:21:54.723Z",
+  "operation": "rebuild_ads_20261014_40a2257e-fbf2-48fa-b723-be0165e98bd3",
+  "deleted": 19,
+  "created": 20,
+  "usage": [
+    {
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "ads": "5"
+    },
+    {
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "ads": "5"
+    },
+    {
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "ads": "5"
+    },
+    {
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "ads": "5"
+    }
+  ],
+  "totals": {
+    "impressions": 746265,
+    "clicks": 21967,
+    "orders": 1008,
+    "spend": 4345822,
+    "revenue": 19035252
+  },
+  "ads": [
+    {
+      "id": "451fc56b-607d-4752-8c1a-76661276ad32",
+      "url": "http://localhost:3001/1791983231824-259072802.JPG",
+      "price": 1.2,
+      "title": "把平安送给朋友｜苹果礼物",
+      "clicks": 713,
+      "images": [
+        "http://localhost:3001/1791983231824-259072802.JPG"
+      ],
+      "videos": [],
+      "content": "苹果！不会出错的礼物🎁\n希望收到礼物的人都平平安安🥰\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 150443,
+        "clicks": 713,
+        "orders": 29,
+        "revenue": 549869,
+        "impressions": 33961
+      },
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "simulation_last_three_days": {
+        "spend": 76727,
+        "clicks": 366,
+        "orders": 17,
+        "revenue": 280436,
+        "impressions": 17322
+      }
+    },
+    {
+      "id": "1069d128-d529-4e3c-b1aa-ec770939b82e",
+      "url": "http://localhost:3001/1791983231824-259072802.JPG",
+      "price": 1.4,
+      "title": "一颗苹果，一份心意｜好友礼赠",
+      "clicks": 1321,
+      "images": [
+        "http://localhost:3001/1791983231824-259072802.JPG"
+      ],
+      "videos": [],
+      "content": "苹果！不会出错的礼物🎁\n希望收到礼物的人都平平安安🥰\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 270805,
+        "clicks": 1321,
+        "orders": 72,
+        "revenue": 1350360,
+        "impressions": 37755
+      },
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "simulation_last_three_days": {
+        "spend": 138113,
+        "clicks": 676,
+        "orders": 38,
+        "revenue": 688685,
+        "impressions": 19257
+      }
+    },
+    {
+      "id": "5befae2f-a49c-4b93-9fe7-ca581cfdb3e6",
+      "url": "http://localhost:3001/1791983231824-259072802.JPG",
+      "price": 1.6,
+      "title": "小小苹果装下祝福｜生日心意",
+      "clicks": 1521,
+      "images": [
+        "http://localhost:3001/1791983231824-259072802.JPG"
+      ],
+      "videos": [],
+      "content": "苹果！不会出错的礼物🎁\n希望收到礼物的人都平平安安🥰\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 257049,
+        "clicks": 1521,
+        "orders": 89,
+        "revenue": 1603691,
+        "impressions": 39019
+      },
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "simulation_last_three_days": {
+        "spend": 131098,
+        "clicks": 778,
+        "orders": 48,
+        "revenue": 817885,
+        "impressions": 19902
+      }
+    },
+    {
+      "id": "483812c4-206d-4894-9791-9b15fbc1e865",
+      "url": "http://localhost:3001/1791983231824-259072802.JPG",
+      "price": 1.8,
+      "title": "给朋友的平安礼物｜日常惊喜",
+      "clicks": 996,
+      "images": [
+        "http://localhost:3001/1791983231824-259072802.JPG"
+      ],
+      "videos": [],
+      "content": "苹果！不会出错的礼物🎁\n希望收到礼物的人都平平安安🥰\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 208164,
+        "clicks": 996,
+        "orders": 38,
+        "revenue": 705242,
+        "impressions": 25559
+      },
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "simulation_last_three_days": {
+        "spend": 106166,
+        "clicks": 510,
+        "orders": 22,
+        "revenue": 359675,
+        "impressions": 13037
+      }
+    },
+    {
+      "id": "9c6205f2-be26-493a-8c8d-79560d1d3242",
+      "url": "http://localhost:3001/1791983231824-259072802.JPG",
+      "price": 2,
+      "title": "把祝福带在身边｜苹果礼赠",
+      "clicks": 1118,
+      "images": [
+        "http://localhost:3001/1791983231824-259072802.JPG"
+      ],
+      "videos": [],
+      "content": "苹果！不会出错的礼物🎁\n希望收到礼物的人都平平安安🥰\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 244842,
+        "clicks": 1118,
+        "orders": 65,
+        "revenue": 1271985,
+        "impressions": 38569
+      },
+      "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+      "simulation_last_three_days": {
+        "spend": 124871,
+        "clicks": 572,
+        "orders": 35,
+        "revenue": 648714,
+        "impressions": 19673
+      }
+    },
+    {
+      "id": "70ef72c2-e3fa-49b5-a0ca-04bbfa902788",
+      "url": "http://localhost:3001/1791983160632-305492817.JPG",
+      "price": 1.55,
+      "title": "实拍水果小物｜看到什么收到什么",
+      "clicks": 1704,
+      "images": [
+        "http://localhost:3001/1791983160632-305492817.JPG"
+      ],
+      "videos": [],
+      "content": "买的和图片不一样的就是盗版！！\n都别给我买错了啊！！\nmomo出品必属精品！\n没有滤镜，全是实拍\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 417480,
+        "clicks": 1704,
+        "orders": 76,
+        "revenue": 1344820,
+        "impressions": 48695
+      },
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "simulation_last_three_days": {
+        "spend": 212916,
+        "clicks": 871,
+        "orders": 41,
+        "revenue": 685860,
+        "impressions": 24836
+      }
+    },
+    {
+      "id": "7b9bb38f-f8ce-434a-a3e9-430c64ed722b",
+      "url": "http://localhost:3001/1791983160632-305492817.JPG",
+      "price": 1.75,
+      "title": "水果色彩，实物出镜｜日常搭配",
+      "clicks": 885,
+      "images": [
+        "http://localhost:3001/1791983160632-305492817.JPG"
+      ],
+      "videos": [],
+      "content": "买的和图片不一样的就是盗版！！\n都别给我买错了啊！！\nmomo出品必属精品！\n没有滤镜，全是实拍\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 176115,
+        "clicks": 885,
+        "orders": 43,
+        "revenue": 840607,
+        "impressions": 30549
+      },
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "simulation_last_three_days": {
+        "spend": 89821,
+        "clicks": 453,
+        "orders": 23,
+        "revenue": 428713,
+        "impressions": 15583
+      }
+    },
+    {
+      "id": "f28592fd-1098-4be6-8633-d0b6c57bea2f",
+      "url": "http://localhost:3001/1791983160632-305492817.JPG",
+      "price": 1.95,
+      "title": "喜欢哪颗就选哪颗｜水果小物",
+      "clicks": 870,
+      "images": [
+        "http://localhost:3001/1791983160632-305492817.JPG"
+      ],
+      "videos": [],
+      "content": "买的和图片不一样的就是盗版！！\n都别给我买错了啊！！\nmomo出品必属精品！\n没有滤镜，全是实拍\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 156600,
+        "clicks": 870,
+        "orders": 26,
+        "revenue": 468780,
+        "impressions": 29030
+      },
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "simulation_last_three_days": {
+        "spend": 79866,
+        "clicks": 445,
+        "orders": 15,
+        "revenue": 239079,
+        "impressions": 14807
+      }
+    },
+    {
+      "id": "9e517c9a-5387-4481-83db-c3caa2d3ee3f",
+      "url": "http://localhost:3001/1791983160632-305492817.JPG",
+      "price": 2.15,
+      "title": "没有滤镜的可爱｜水果实拍",
+      "clicks": 986,
+      "images": [
+        "http://localhost:3001/1791983160632-305492817.JPG"
+      ],
+      "videos": [],
+      "content": "买的和图片不一样的就是盗版！！\n都别给我买错了啊！！\nmomo出品必属精品！\n没有滤镜，全是实拍\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 216920,
+        "clicks": 986,
+        "orders": 29,
+        "revenue": 576230,
+        "impressions": 32870
+      },
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "simulation_last_three_days": {
+        "spend": 110631,
+        "clicks": 504,
+        "orders": 17,
+        "revenue": 293879,
+        "impressions": 16765
+      }
+    },
+    {
+      "id": "6c0d3c39-8a1f-4884-93c4-b690f61c0230",
+      "url": "http://localhost:3001/1791983160632-305492817.JPG",
+      "price": 2.35,
+      "title": "把水果灵感带回家｜实拍精选",
+      "clicks": 1411,
+      "images": [
+        "http://localhost:3001/1791983160632-305492817.JPG"
+      ],
+      "videos": [],
+      "content": "买的和图片不一样的就是盗版！！\n都别给我买错了啊！！\nmomo出品必属精品！\n没有滤镜，全是实拍\n",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 228582,
+        "clicks": 1411,
+        "orders": 73,
+        "revenue": 1249176,
+        "impressions": 44112
+      },
+      "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+      "simulation_last_three_days": {
+        "spend": 116579,
+        "clicks": 721,
+        "orders": 39,
+        "revenue": 637082,
+        "impressions": 22499
+      }
+    },
+    {
+      "id": "30b2cc1a-1cfc-4ba5-bca9-2ef52fe8f678",
+      "url": "http://localhost:3001/1791983020966-212908078.JPG",
+      "price": 1.9,
+      "title": "阳光下的彩虹手串｜出游搭配",
+      "clicks": 1315,
+      "images": [
+        "http://localhost:3001/1791983020966-212908078.JPG"
+      ],
+      "videos": [],
+      "content": "阳光下折射出彩虹的倒影\n是由各种各样水果组成的\n太有意思啦，出去玩带着刚刚好！！",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 232755,
+        "clicks": 1315,
+        "orders": 61,
+        "revenue": 1203347,
+        "impressions": 48727
+      },
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "simulation_last_three_days": {
+        "spend": 118707,
+        "clicks": 673,
+        "orders": 33,
+        "revenue": 613709,
+        "impressions": 24853
+      }
+    },
+    {
+      "id": "ad63a655-c3c5-42a5-ad8e-4d651eb55473",
+      "url": "http://localhost:3001/1791983020966-212908078.JPG",
+      "price": 2.1,
+      "title": "戴上水果彩虹｜周末出游",
+      "clicks": 782,
+      "images": [
+        "http://localhost:3001/1791983020966-212908078.JPG"
+      ],
+      "videos": [],
+      "content": "阳光下折射出彩虹的倒影\n是由各种各样水果组成的\n太有意思啦，出去玩带着刚刚好！！",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 154836,
+        "clicks": 782,
+        "orders": 45,
+        "revenue": 852660,
+        "impressions": 27948
+      },
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "simulation_last_three_days": {
+        "spend": 78968,
+        "clicks": 401,
+        "orders": 25,
+        "revenue": 434858,
+        "impressions": 14256
+      }
+    },
+    {
+      "id": "5056285e-dc89-4f78-ac61-373ac176bc7a",
+      "url": "http://localhost:3001/1791983020966-212908078.JPG",
+      "price": 2.3,
+      "title": "彩虹倒影藏在腕间｜日常搭配",
+      "clicks": 984,
+      "images": [
+        "http://localhost:3001/1791983020966-212908078.JPG"
+      ],
+      "videos": [],
+      "content": "阳光下折射出彩虹的倒影\n是由各种各样水果组成的\n太有意思啦，出去玩带着刚刚好！！",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 186960,
+        "clicks": 984,
+        "orders": 49,
+        "revenue": 991760,
+        "impressions": 49240
+      },
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "simulation_last_three_days": {
+        "spend": 95351,
+        "clicks": 504,
+        "orders": 28,
+        "revenue": 505799,
+        "impressions": 25114
+      }
+    },
+    {
+      "id": "f6e71765-cc88-4eba-8e54-6b4fe666c160",
+      "url": "http://localhost:3001/1791983020966-212908078.JPG",
+      "price": 2.5,
+      "title": "把好心情戴出门｜彩虹手串",
+      "clicks": 421,
+      "images": [
+        "http://localhost:3001/1791983020966-212908078.JPG"
+      ],
+      "videos": [],
+      "content": "阳光下折射出彩虹的倒影\n是由各种各样水果组成的\n太有意思啦，出去玩带着刚刚好！！",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 96830,
+        "clicks": 421,
+        "orders": 12,
+        "revenue": 216960,
+        "impressions": 21080
+      },
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "simulation_last_three_days": {
+        "spend": 49385,
+        "clicks": 217,
+        "orders": 8,
+        "revenue": 110651,
+        "impressions": 10752
+      }
+    },
+    {
+      "id": "e13364bf-1e88-4c8a-a753-8bdec7ac8134",
+      "url": "http://localhost:3001/1791983020966-212908078.JPG",
+      "price": 2.7,
+      "title": "水果组成的小彩虹｜好友礼物",
+      "clicks": 1546,
+      "images": [
+        "http://localhost:3001/1791983020966-212908078.JPG"
+      ],
+      "videos": [],
+      "content": "阳光下折射出彩虹的倒影\n是由各种各样水果组成的\n太有意思啦，出去玩带着刚刚好！！",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 341666,
+        "clicks": 1546,
+        "orders": 78,
+        "revenue": 1471938,
+        "impressions": 49871
+      },
+      "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+      "simulation_last_three_days": {
+        "spend": 174252,
+        "clicks": 791,
+        "orders": 42,
+        "revenue": 750691,
+        "impressions": 25436
+      }
+    },
+    {
+      "id": "192b0dbb-60ff-47a3-a9e9-e16463b2ae3e",
+      "url": "http://localhost:3001/1791983103234-135493189.JPG",
+      "price": 2.25,
+      "title": "经典红苹果｜送自己一份平安",
+      "clicks": 1433,
+      "images": [
+        "http://localhost:3001/1791983103234-135493189.JPG"
+      ],
+      "videos": [],
+      "content": "各种各样的苹果都抵不过经典的红色苹果\n红色果然是最经典的颜色～\n平平安安！\n送自己和好朋友一份平安叭～",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 343920,
+        "clicks": 1433,
+        "orders": 57,
+        "revenue": 1071030,
+        "impressions": 47790
+      },
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "simulation_last_three_days": {
+        "spend": 175401,
+        "clicks": 733,
+        "orders": 32,
+        "revenue": 546227,
+        "impressions": 24375
+      }
+    },
+    {
+      "id": "05b780ec-e942-4493-b3f7-7658d1cb3ba6",
+      "url": "http://localhost:3001/1791983103234-135493189.JPG",
+      "price": 2.45,
+      "title": "红苹果的小心意｜送好朋友",
+      "clicks": 1014,
+      "images": [
+        "http://localhost:3001/1791983103234-135493189.JPG"
+      ],
+      "videos": [],
+      "content": "各种各样的苹果都抵不过经典的红色苹果\n红色果然是最经典的颜色～\n平平安安！\n送自己和好朋友一份平安叭～",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 158184,
+        "clicks": 1014,
+        "orders": 46,
+        "revenue": 920276,
+        "impressions": 39006
+      },
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "simulation_last_three_days": {
+        "spend": 80676,
+        "clicks": 520,
+        "orders": 26,
+        "revenue": 469343,
+        "impressions": 19896
+      }
+    },
+    {
+      "id": "4956525d-6ac5-43d8-9904-603cfa2639a0",
+      "url": "http://localhost:3001/1791983103234-135493189.JPG",
+      "price": 2.65,
+      "title": "喜欢经典红色｜日常搭配",
+      "clicks": 818,
+      "images": [
+        "http://localhost:3001/1791983103234-135493189.JPG"
+      ],
+      "videos": [],
+      "content": "各种各样的苹果都抵不过经典的红色苹果\n红色果然是最经典的颜色～\n平平安安！\n送自己和好朋友一份平安叭～",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 125972,
+        "clicks": 818,
+        "orders": 27,
+        "revenue": 515808,
+        "impressions": 34104
+      },
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "simulation_last_three_days": {
+        "spend": 64247,
+        "clicks": 419,
+        "orders": 16,
+        "revenue": 263064,
+        "impressions": 17395
+      }
+    },
+    {
+      "id": "c56eb361-a884-4682-a27f-a69c9069802f",
+      "url": "http://localhost:3001/1791983103234-135493189.JPG",
+      "price": 2.85,
+      "title": "一抹苹果红，满满祝福｜平安礼物",
+      "clicks": 1561,
+      "images": [
+        "http://localhost:3001/1791983103234-135493189.JPG"
+      ],
+      "videos": [],
+      "content": "各种各样的苹果都抵不过经典的红色苹果\n红色果然是最经典的颜色～\n平平安安！\n送自己和好朋友一份平安叭～",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 254443,
+        "clicks": 1561,
+        "orders": 67,
+        "revenue": 1360971,
+        "impressions": 47313
+      },
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "simulation_last_three_days": {
+        "spend": 129767,
+        "clicks": 798,
+        "orders": 36,
+        "revenue": 694097,
+        "impressions": 24132
+      }
+    },
+    {
+      "id": "f01e4ad4-3f31-4dd1-974d-c250c73acbb3",
+      "url": "http://localhost:3001/1791983103234-135493189.JPG",
+      "price": 3.05,
+      "title": "把平安留在身边｜红苹果精选",
+      "clicks": 568,
+      "images": [
+        "http://localhost:3001/1791983103234-135493189.JPG"
+      ],
+      "videos": [],
+      "content": "各种各样的苹果都抵不过经典的红色苹果\n红色果然是最经典的颜色～\n平平安安！\n送自己和好朋友一份平安叭～",
+      "version": 1,
+      "publisher": "momo 手作 · 模拟投放",
+      "simulation": {
+        "spend": 123256,
+        "clicks": 568,
+        "orders": 26,
+        "revenue": 469742,
+        "impressions": 21067
+      },
+      "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+      "simulation_last_three_days": {
+        "spend": 62863,
+        "clicks": 292,
+        "orders": 15,
+        "revenue": 239570,
+        "impressions": 10746
+      }
+    }
+  ],
+  "backup": "/Users/admin/.codex/backups/MiniAdsWall/rebuild_ads_20261014_40a2257e-fbf2-48fa-b723-be0165e98bd3.json",
+  "verification": {
+    "public_list_count": 20,
+    "management_list_count": 20,
+    "detail_projection_matches": "20/20",
+    "image_projection_count": 20,
+    "material_usage_counts": [
+      5,
+      5,
+      5,
+      5
+    ],
+    "browser_modules": [
+      "广告管理",
+      "广告详情",
+      "广告概览",
+      "投放效果",
+      "已有素材管理"
+    ],
+    "consistent_simulation_totals": true,
+    "server_build": "passed",
+    "client_build": "passed",
+    "focused_mysql_tests": {
+      "passed": 2,
+      "failed": 0
+    },
+    "simulation_period": "2026-10-01/2026-10-07"
+  }
+}

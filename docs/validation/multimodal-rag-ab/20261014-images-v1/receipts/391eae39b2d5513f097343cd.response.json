@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "是，图中上方橙黄色珠子（菠萝造型）顶部有绿色叶状装饰，可视为绿色叶冠。",
+  "facts": {
+    "green_leaf_crown": true
+  },
+  "source_ids": [
+    "rainbow"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "source_id": "gift",
+      "observations": [
+        "该手串由多个红色的水果造型珠子组成，整体为红色系，被放置在手掌上"
+      ],
+      "facts": {
+        "first_style": "单一红色"
+      }
+    },
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "该手串由多种不同颜色的水果造型珠子组成，包含红色、蓝色、浅蓝色、黄色、绿色、橙色、粉色等多种色彩，被放置在手掌上"
+      ],
+      "facts": {
+        "second_style": "多色"
+      }
+    }
+  ],
+  "missing": []
+}

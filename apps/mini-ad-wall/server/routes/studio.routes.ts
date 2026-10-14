@@ -20,12 +20,19 @@ import {
   studioDir,
 } from "../services/merchant/studio/assets";
 import { resourceError as fail } from "../services/marketing/resource.service";
+import { studioRequest } from '../services/merchant/studio/worker';
 const router = new Router({ prefix: "/api/merchant/v1/studio" });
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: 100 * 1024 * 1024, files: 1, fields: 2 },
 });
 const env = () => config.MARKETING.environment;
+let knowledgeRoot = __dirname;
+while (!require('fs').existsSync(path.join(knowledgeRoot, 'mcp/external_marketing.py'))) {
+  const parent = path.dirname(knowledgeRoot);
+  if (parent === knowledgeRoot) throw Error('knowledge_root_missing');
+  knowledgeRoot = parent;
+}
 router.use(async (ctx, next) => {
   try {
     const publicAsset = ctx.path.includes("/public-assets/");
@@ -59,7 +66,8 @@ router.get("/capabilities", (ctx) => {
     video: process.env.STUDIO_VIDEO_ENABLED === "true",
     image: true,
     visual_understanding: true,
-      understanding_model: process.env.STUDIO_UNDERSTANDING_MODEL||"doubao-seed-2-1-lite-260915",
+    multimodal_rag: "caption-vector-v1",
+      understanding_model: process.env.STUDIO_UNDERSTANDING_MODEL||"doubao-seed-2-0-mini-260428",
     text_model: "deepseek-v4-1-flash-260910",
     video_model: "doubao-seedance-1-0-pro-fast-251015",
     policy: "seed-understanding-v2",
@@ -73,6 +81,24 @@ router.get("/brands", async (ctx) => {
     );
     return r;
   });
+});
+router.get('/reference-images/:sourceId/:label', async ctx => {
+  const catalog = JSON.parse(await fs.readFile(path.join(knowledgeRoot, 'data/external-marketing/catalog.json'), 'utf8'));
+  const source = catalog.sources.find((s: any) => s.id === ctx.params.sourceId);
+  const image = source?.images.find((i: any) => i.label === ctx.params.label);
+  if (!image) throw fail('not_found', 404, '参考图片不存在');
+  const base = path.join(knowledgeRoot, 'data/external-marketing/images');
+  const file = path.resolve(knowledgeRoot, image.local_path);
+  if (!file.startsWith(base + path.sep) || !/\.(png|jpg|webp)$/.test(file))
+    throw fail('invalid_reference_image', 422, '参考图片路径不合法');
+  ctx.type = path.extname(file);
+  ctx.body = await fs.readFile(file);
+});
+router.get('/reference-search', async ctx => {
+  const query = ctx.query.q;
+  if (typeof query !== 'string' || !query.trim() || query.length > 2000)
+    throw fail('invalid_query', 422, '请输入不超过2000字的检索问题');
+  ctx.body = await studioRequest('/studio/reference-search', {query:query.trim()});
 });
 router.get("/sessions", async (ctx) => {
   ctx.body = await withAdsConnection(async (c) => {
@@ -135,7 +161,7 @@ router.post("/assets/:id/analyze", async (ctx) => {
     const asset = await store.object(c, ctx.params.id, "asset", env(), true);
     await store.authorize(c, ctx.state.principal, asset.brand_id, env(), true);
     if (asset.data.analysis_job_id) return {status:200, body:asset};
-    const job = await store.queue(c, ctx.state.principal, {id:asset.id,brand_id:asset.brand_id,environment:env()}, "text", {kind:"asset_analysis",asset_id:asset.id,model:process.env.STUDIO_UNDERSTANDING_MODEL||"doubao-seed-2-1-lite-260915"});
+    const job = await store.queue(c, ctx.state.principal, {id:asset.id,brand_id:asset.brand_id,environment:env()}, "text", {kind:"asset_analysis",asset_id:asset.id,model:process.env.STUDIO_UNDERSTANDING_MODEL||"doubao-seed-2-0-mini-260428"});
     const updated = await store.revise(c, ctx.state.principal, asset, {...asset.data,analysis_job_id:job.id});
     return {status:202,body:updated};
   });
@@ -344,6 +370,11 @@ write("/jobs/:id/retry", "Retry", 200, async (ctx) => {
       "没有已确认的供应商任务，需重新确认方案",
     );
   const next = r.kind === "video" ? "submitted" : "queued";
+  const input = store.decode(r.input);
+  if (input.kind === "asset_analysis") {
+    input.model = process.env.STUDIO_UNDERSTANDING_MODEL || "doubao-seed-2-0-mini-260428";
+    await c.execute("UPDATE merchant_studio_jobs SET input=? WHERE id=?", [JSON.stringify(input), r.id]);
+  }
   await c.execute(
     "UPDATE merchant_studio_jobs SET status=?,lease_token=NULL,lease_until=NULL,attempts=0,error_code=NULL,updated_at=UTC_TIMESTAMP(3) WHERE id=?",
     [next, r.id],

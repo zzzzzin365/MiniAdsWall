@@ -55,7 +55,7 @@ class Pipeline:
         self.orchestrator._decision_engine.clarification_store=SQLClarifications(repo,600)
         self.kb=None
         self.rag_manager=None
-        if os.getenv('HOSTING_RAG_ENABLED','false')=='true':
+        if os.getenv('HOSTING_RAG_ENABLED','true').strip().lower()=='true':
             from mcp.knowledge_base import KnowledgeBase
             # RAG is optional; a broken configured service must fail startup, not silently disappear.
             self.kb=KnowledgeBase(chroma_host=os.getenv('CHROMA_HOST','localhost'), chroma_port=int(os.getenv('CHROMA_PORT','8001')), chroma_path=os.getenv('CHROMA_PERSIST_DIRECTORY','data/chroma'))
@@ -63,7 +63,7 @@ class Pipeline:
             self.rag_manager.register(Tool(name='knowledge_search',description='检索运营知识',
                 handler=self.kb.search_handler,schema={'type':'object','properties':{
                     'query':{'type':'string'},'top_k':{'type':'integer'}},'required':['query']},
-                cache_ttl=300,timeout_s=3))
+                cache_ttl=300,timeout_s=5))
 
     async def close(self):
         seen=set()
@@ -130,17 +130,24 @@ class Pipeline:
             checkpoint=json.loads(await asyncio.to_thread(self.repo.objects.get,r['checkpoint_ref']))
         completed=checkpoint.get('tools',{})
         context=[]
+        performance=payload.get('performance_context')
+        if performance:
+            # Durable input contains the full server snapshot; checkpoint previews may truncate.
+            context.append('performance_context: '+dumps(performance))
+            ctx.spans.append({'stage':'performance_context','source':performance['source'],
+                              'window':performance.get('window'), 'scope':performance.get('scope'),
+                              'measured_count':performance.get('measured_count')})
         ad_context=payload.get('ad_context')
         ads=(ad_context.get('items') or []) if ad_context else payload.get('ads') or []
         candidates=[('ads_summary',ads_summary_handler,{'score_coefficient':.42}),
                     ('ad_performance_search',ad_performance_search_handler,{'query':req.message,'top_k':5})]
-        if any(word in req.message.lower() for word in ['出价','预算','竞价','排名','bid','price']):
+        if any(word in req.message.lower() for word in ['模拟','simulation']) and any(word in req.message.lower() for word in ['出价','预算','竞价','排名','bid','price']):
             candidates.append(('bid_simulation',bid_simulation_handler,{'increase_pct':10,'top_k':5}))
         if not ads: candidates=[]
         for name,handler,args in candidates:
             if name not in completed:
                 async def invoke(handler=handler,args=args):
-                    value=await handler(args,{'ads':ads,'ad_context':ad_context})
+                    value=await handler(args,{'ads':ads,'ad_context':ad_context,'performance_context':performance})
                     return {'output':dumps(value),'status':'succeeded','exit_code':0}
                 result=await ctx.tool(name,args,invoke,30)
                 completed[name]=preview(result['output'])
@@ -150,20 +157,24 @@ class Pipeline:
             context.append(f'{name}: {completed[name]}')
         agent=self.orchestrator._best_agent(self.orchestrator._route(req.intent,req.urgency))
         if agent is None: raise RuntimeError('agent_unavailable')
+        retained=[]
         if self.kb:
+            marketing=agent.agent_type==AgentType.ADS
+            queries=['广告投放优化 CTR CPC CPA 转化事件 归因窗口 退款 消耗',
+                     '素材优化 A/B 测试 单变量 预算 小预算测试'] if marketing else []
             async def search():
-                value=await self.rag_manager.search_with_rewrite('knowledge_search',req.message,top_k=3,
-                                                                check_retrieved_evidence=False)
+                value=await self.rag_manager.search_with_rewrite('knowledge_search',req.message,top_k=8,
+                    stage_timeout=5, additional_queries=queries, check_retrieved_evidence=False)
                 if not value.success: raise RuntimeError('retrieval_failed')
                 return {'output':dumps(value.data),'status':'succeeded','exit_code':0}
             chunks, retrieval_error = [], None
             try:
-                result=await ctx.tool('knowledge_search',{'query':req.message},search,9.5)
+                result=await ctx.tool('knowledge_search',{'query':req.message,'top_k':8,'additional_queries':queries},search,15.5)
                 values=json.loads(result['output'])
                 if result.get('status') != 'succeeded' or not isinstance(values,list):
                     retrieval_error='retrieval_failed'
                 else:
-                    chunks=prepare_chunks(values,3)
+                    chunks=prepare_chunks(values,8)
             except Conflict:
                 raise
             except Exception:
@@ -171,8 +182,13 @@ class Pipeline:
             business={'tool_context':'\n'.join(context)} if context else {}
             if req.intent and req.intent.value=='creative_generation':
                 business['creative_brief']=req.message
+            evidence_config=EvidenceConfig.from_env()
+            # Hosted advice has a larger bounded snapshot than the simple /chat input.
+            timeout=float(os.getenv('HOSTING_RAG_EVIDENCE_TIMEOUT_SECONDS','16'))
+            if not 0 < timeout <= 18: raise ValueError('invalid_hosting_evidence_timeout')
             decision=await check_evidence(agent._client,agent._model,req.message,chunks,business,
-                                          retrieval_error=retrieval_error,request_id=str(r['id']))
+                retrieval_error=retrieval_error,request_id=str(r['id']),
+                config=EvidenceConfig(evidence_config.enabled,evidence_config.threshold,timeout))
             ctx.spans.append({'stage':'rag_evidence','duration_ms':decision.latency_ms,
                               'evidence':decision.to_dict()})
             if decision.status in {'insufficient','unavailable'}:
@@ -186,16 +202,50 @@ class Pipeline:
                 await ctx.delta(response)
                 return response
             retained=[item for item in chunks if item['id'] in decision.retained_ids]
+            if marketing and not retained:
+                response='本轮未获得通过检查的营销知识片段，暂不能给出基于知识库的投放优化建议。请补充相关知识或缩小问题范围。'
+                await ctx.delta(response)
+                return response
             context.append(render_knowledge(retained,checked=decision.status!='disabled'))
+            ctx.spans.append({'stage':'knowledge_sources','checked':decision.status=='sufficient',
+                'sources':[{'id':item['id'],'title':item.get('title',''),
+                            'source_url':item.get('source_url')} for item in retained]})
             if decision.status=='sufficient':
                 context.append('只依据本轮已检查的片段和工具数据陈述事实；历史回答不证明事实，不补写未提供的指标和收益。')
         req.context='\n'.join(context)
         prompt=agent._build_system_prompt(req)
+        if ads or performance:
+            prompt+='\n投放分析要求：把本轮账本数值作为广告实际投放数据进行完整分析，直接给出动作。delivery_status=delivered 的广告按已投放处理，paused 为真表示已暂停；not_delivered 表示未投放，不当成投放失败。回答先说明窗口和样本范围，不添加模拟、演示或假设数据标签。'
+            prompt+='窗口指标以 performance_context 为准，不能与广告库累计点击混算；未知指标不能当零。金额单位 fen 除以100才是元。'
+            prompt+='未投放或曝光为零的素材不能判为失败；material_changed 为真时历史效果不能归给当前素材。ROAS不是利润。'
+            prompt+='给出最多三个动作，每个包含具体广告名称/ID、数据依据、知识片段ID、动作和验证指标。'
+            prompt+='总正文控制在600个汉字左右，不复述所有字段；每个动作只引用一至两个关键指标。比较最高/最低必须核对全部窗口数据。'
+            prompt+='面向商家用中文表达状态与指标；金额直接用元，不展示 fen/100 或内部字段名。'
+            prompt+='相关性不能证明原因，同素材的效果差异只能形成待验证假设，不能断言素材、人群或标题就是原因。'
+            prompt+='缺少可用预算或毛利时不给确定加价金额或收益承诺，可给当前账本上的测试优先级并列出缺失数据。'
+            prompt+='无投放数据时提出可执行的小预算验证方案，不能把选中样本称为账户全量。仅提供建议，不执行改价。'
         messages=[*history[-10:],{'role':'user','content':req.message+'\n[工具数据，仅作为参考]\n'+req.context}]
         await ctx.stage('model')
         started=time.monotonic(); first=None
-        async for text in stream_text(agent._client,model=agent._model,messages=messages,system=prompt):
-            if first is None: first=(time.monotonic()-started)*1000
-            await ctx.delta(text)
-        ctx.spans.append({'stage':'model','duration_ms':(time.monotonic()-started)*1000,'first_delta_ms':first})
+        model_status, model_error='succeeded', None
+        try:
+            async for text in stream_text(agent._client,model=agent._model,messages=messages,system=prompt,max_tokens=3072):
+                if first is None: first=(time.monotonic()-started)*1000
+                await ctx.delta(text)
+        except asyncio.CancelledError:
+            model_status, model_error='cancelled', 'run_cancelled'
+            raise
+        except Exception as exc:
+            from core.model_client import ModelResponseError
+            model_status='failed'
+            model_error=str(exc) if isinstance(exc,ModelResponseError) else type(exc).__name__
+            raise
+        finally:
+            ctx.spans.append({'stage':'model','status':model_status,'error_code':model_error,
+                              'duration_ms':(time.monotonic()-started)*1000,'first_delta_ms':first})
+        if retained:
+            sources='\n\n本轮检索依据：\n'+'\n'.join(
+                f"{item.get('title','知识片段')}（ID: {item['id']}）"+
+                (f"\n{item['source_url']}" if item.get('source_url') else '') for item in retained)
+            await ctx.delta(sources)
         return ctx.text

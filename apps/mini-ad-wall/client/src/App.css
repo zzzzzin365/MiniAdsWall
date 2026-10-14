@@ -1958,3 +1958,50 @@ button.user-avatar{border:0;font:inherit;cursor:pointer}
   .app-main .management-creatives { padding: 16px; }
   .app-main .ad-grid { grid-template-columns: minmax(0,1fr); }
 }
+
+/* Ad editing: one scroll surface and readable advice sections. */
+.ad-editor-modal{width:760px;max-width:calc(100vw - 32px);max-height:min(960px,calc(100dvh - 48px));overflow:hidden}
+.ad-editor-modal>.modal-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px}
+.ad-editor-modal .modal-header h2{margin:0;font-size:20px;line-height:1.4;font-weight:650}
+.ad-editor-close{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;background:#f5f7fb;border:1px solid var(--border-light);border-radius:8px;color:var(--text-muted);font-size:24px;cursor:pointer}
+.ad-editor-modal>.modal-body{padding:24px;min-height:0;overscroll-behavior:contain}
+.ad-editor-modal>.modal-footer{padding:16px 24px}
+.ad-editor-modal .modal-footer .btn{min-width:96px;min-height:44px}
+.ad-form-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-bottom:24px}
+.ad-form-fields .form-group{margin:0;grid-column:1 / -1;min-width:0}.ad-form-fields .ad-field-title,.ad-form-fields .ad-field-publisher{grid-column:auto}
+.ad-editor-modal .ai-assist-header{width:100%;border:0;background:transparent;font:inherit;text-align:left}
+.ad-editor-modal .ai-assist-body{padding:20px;border-top:1px solid var(--border-light)}
+.ad-editor-modal .ad-material-reference{padding:16px;margin-bottom:20px}
+.ad-editor-modal .ai-hint{font-size:12px;line-height:1.7}
+.ad-editor-modal .ad-strategy-result{padding:0;background:none;border:0;margin-top:24px}
+.ad-strategy-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--border-light);margin-bottom:16px}
+.ad-strategy-heading h3{margin:0;font-size:17px;font-weight:650;color:var(--c-blue-vibrant)}
+.ad-strategy-heading>span{flex-shrink:0;padding:3px 9px;border-radius:6px;background:#eef3ff;color:#526078;font-size:12px}
+.ad-strategy-overview{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.ad-strategy-overview>section{min-width:0;padding:16px;background:#f6f9ff;border-radius:8px}
+.ad-strategy-result h4{margin:0 0 10px;font-size:13px;font-weight:600;color:#526078}
+.ad-strategy-result p{margin:0;font-size:14px;line-height:1.8;color:var(--text-main);white-space:pre-wrap;overflow-wrap:anywhere}
+.ad-strategy-price{display:block;font-size:18px;line-height:1.6;color:var(--c-blue-vibrant);overflow-wrap:anywhere}
+.ad-strategy-overview .ai-apply-btn{margin-top:12px;min-height:36px}
+.ad-strategy-block{margin-top:20px;padding-top:20px;border-top:1px solid var(--border-light)}
+.ad-strategy-missing ul{padding-left:20px;margin:0;display:grid;gap:8px;font-size:13px;line-height:1.7;color:var(--text-body)}
+.ad-strategy-users{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.ad-strategy-users li{padding:10px 12px;background:#f8fafc;border-radius:6px;font-size:14px;line-height:1.7;overflow-wrap:anywhere}
+.ad-strategy-result .ai-tag.interest{background:#eef5ff;border:0;color:#4263b0;font-size:13px;line-height:1.6;padding:5px 10px}
+.ad-strategy-sources details{padding:12px 0;border-bottom:1px solid var(--border-light);font-size:13px;line-height:1.7}.ad-strategy-sources summary{cursor:pointer;color:var(--c-blue-deep)}.ad-strategy-sources details p{margin-top:10px;font-size:13px}.ad-strategy-sources a{display:inline-block;margin-top:8px;color:var(--c-blue-vibrant)}
+@media(max-width:640px){.ad-editor-modal{max-height:calc(100dvh - 24px)}.ad-editor-modal>.modal-header,.ad-editor-modal>.modal-body,.ad-editor-modal>.modal-footer{padding:16px}.ad-form-fields,.ad-strategy-overview{grid-template-columns:minmax(0,1fr)}.ad-form-fields .ad-field-title,.ad-form-fields .ad-field-publisher{grid-column:1}.ad-editor-modal .ai-assist-body{padding:16px}.ad-strategy-price{font-size:16px}.ad-editor-modal .form-input,.ad-editor-modal .form-textarea{font-size:16px}}
+
+.ad-material-select-row { display:flex; align-items:center; gap:12px; margin-top:8px; }
+.ad-material-select-row select { flex:1; min-width:0; height:44px; }
+.ad-material-select-row>.btn { flex-shrink:0; height:44px; white-space:nowrap; }
+@media(max-width:480px){.ad-material-select-row{gap:8px}.ad-material-select-row>.btn{padding:0 10px;font-size:13px}}
+
+/* Bid advice: observed metrics first, merchant limits second. */
+.ad-bid-context{padding:14px 16px;background:#f5f8ff;border:1px solid #dfe8fa;border-radius:10px;margin-bottom:18px;min-width:0}
+.ad-bid-context-title{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:#35558a}.ad-bid-context-title span{font-size:12px;color:var(--text-muted)}
+.ad-bid-context>p{font-size:12px;line-height:1.7;margin:8px 0 0;color:var(--text-muted)}
+.ad-bid-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 16px;margin:14px 0 0}.ad-bid-metrics dt{font-size:12px;color:var(--text-muted);margin-bottom:4px}.ad-bid-metrics dd{margin:0;font-size:16px;font-weight:600;color:var(--text-main);overflow-wrap:anywhere}
+.ad-bid-settings{border:0;padding:0;margin:0 0 18px;min-width:0}.ad-bid-settings legend{padding:0;margin-bottom:14px;font-size:14px;font-weight:600;color:var(--text-main)}
+.ad-bid-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}.ad-bid-fields label{display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--text-body);min-width:0}.ad-bid-fields .ai-select,.ad-bid-fields .form-input{width:100%;min-width:0;box-sizing:border-box;min-height:42px;margin:0;font-size:14px}
+.ad-bid-fields input[aria-invalid=true]{border-color:#dc5050}.ad-bid-plan{font-size:12px;line-height:1.8;color:var(--text-muted);margin:12px 0 0}.ad-editor-modal .ai-input-row{justify-content:flex-end;margin-top:14px}.ad-bid-comparison{font-size:12px!important;margin-top:6px!important;color:var(--text-muted)!important}
+@media(max-width:640px){.ad-bid-fields{grid-template-columns:minmax(0,1fr)}.ad-bid-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ad-bid-fields .ai-select,.ad-bid-fields .form-input{font-size:16px}.ad-editor-modal .ai-input-row .btn-ai{width:100%}}

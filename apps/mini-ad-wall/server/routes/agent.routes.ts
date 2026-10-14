@@ -1,8 +1,8 @@
 import Router from 'koa-router';
 import { Readable, Transform } from 'stream';
 import { adContext } from '../services/recall/search';
-import adsModel from '../models/ads.model';
 import config from '../config';
+import { assistantPerformance } from '../services/assistant-data';
 
 const router = new Router({ prefix: '/api/agent' });
 const logins = new Map<string, { token: string; user_id: string; workspace_id: string; expires: number }>();
@@ -44,18 +44,26 @@ router.all('(.*)', async ctx => {
     let session = await login(ctx.state.principal);
     let body = ctx.request.body;
     if (/^\/sessions\/\d+\/runs$/.test(path) && ctx.method === 'POST') {
+        if (!body || typeof body !== 'object' || Array.isArray(body)) ctx.throw(400, 'invalid_run_input');
+        const range = body.performance_range ?? '7';
+        if (range !== '7' && range !== '3') ctx.throw(400, 'invalid_performance_range');
+        let snapshot: any;
         // The Agent sees the authenticated server snapshot, never browser-forged ad facts.
         if (config.RELIABILITY.features.AD_CONTEXT_V1_ENABLED) {
             const context = await adContext(body.conditions,ctx.state.principal);
+            snapshot = context;
             body = { ...body, conditions:body.conditions||[], ads:context.items };
-        delete body.ad_context;
-        if(['true','1'].includes(process.env.AD_CONTEXT_V1_ENABLED||'')) body.ad_context=context;
+            delete body.ad_context;
+            if(['true','1'].includes(process.env.AD_CONTEXT_V1_ENABLED||'')) body.ad_context=context;
         } else {
             if(body.conditions?.length) ctx.throw(503,'feature_disabled');
             const context = await adContext([],ctx.state.principal);
+            snapshot = context;
             body = { ...body, ads:context.items };
             delete body.ad_context;
         }
+        body.performance_context = assistantPerformance(snapshot, range);
+        delete body.performance_range;
         delete body.user_id; delete body.userId;
     }
     const stream = path.endsWith('/events');

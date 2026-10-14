@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "图中手串是放在摊开的手掌上展示的。",
+  "facts": {
+    "display_surface": "手掌"
+  },
+  "source_ids": [
+    "gift"
+  ]
+}

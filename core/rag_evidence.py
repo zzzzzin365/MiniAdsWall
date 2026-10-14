@@ -87,6 +87,7 @@ class KnowledgeContext:
     text: str = ""
     used: bool = False
     evidence: EvidenceDecision | None = None
+    chunks: list[dict] = field(default_factory=list)
 
 
 class EvidenceGate:

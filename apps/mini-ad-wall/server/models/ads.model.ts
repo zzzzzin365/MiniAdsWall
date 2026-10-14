@@ -18,7 +18,7 @@ const conflict = (message: string) => Object.assign(new Error(message), { status
 const json = (value: any) => typeof value === 'string' ? JSON.parse(value) : value;
 function ad(row: RowDataPacket): Ad {
     return { id: row.id, title: row.title, publisher: row.publisher, content: row.content,
-        url: row.url, price: Number(row.price), clicks: Number(row.clicks), videos: json(row.videos), version: row.version, ...(row.material_id ? {material_id:row.material_id} : {}) };
+        url: row.url, price: Number(row.price), clicks: Number(row.clicks), videos: json(row.videos), images: json(row.images) || [], version: row.version, ...(row.material_id ? {material_id:row.material_id} : {}) };
 }
 function operation(row: RowDataPacket): Operation {
     return { fingerprint: row.fingerprint, status: row.status, body: json(row.body), createdAt: row.created_at.toISOString(), ...(row.recall_receipt ? {recall_receipt: json(row.recall_receipt)} : {}) };

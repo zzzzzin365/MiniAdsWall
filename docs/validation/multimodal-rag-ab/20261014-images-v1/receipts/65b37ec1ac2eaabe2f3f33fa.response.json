@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "source_id": "gift",
+      "observations": [
+        "一只手掌托着一串由红色苹果造型珠子串成的手串"
+      ],
+      "facts": {
+        "subject": "苹果造型的手串"
+      }
+    },
+    {
+      "source_id": "two",
+      "observations": [
+        "木质台面上摆放着两串苹果造型的手串，一串为红、黄、绿渐变色彩，另一串包含红、黄、蓝、绿等多种色彩"
+      ],
+      "facts": {
+        "subject": "苹果造型的手串"
+      }
+    },
+    {
+      "source_id": "car",
+      "observations": [
+        "汽车内后视镜上挂着一个包装在透明袋中的红色苹果造型挂饰"
+      ],
+      "facts": {
+        "subject": "苹果造型的挂饰"
+      }
+    }
+  ],
+  "missing": []
+}

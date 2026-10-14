@@ -1,0 +1,1417 @@
+[
+  {
+    "id": "D01-direct",
+    "query": "广告排序分怎么计算？",
+    "gold": [
+      [
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "1524dbb507e0aa2e2e6af07da0c62012",
+    "split": "dev"
+  },
+  {
+    "id": "D01-paraphrase",
+    "query": "为什么别人出价低但是排在我前面？",
+    "gold": [
+      [
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "1524dbb507e0aa2e2e6af07da0c62012",
+    "split": "dev"
+  },
+  {
+    "id": "D02-direct",
+    "query": "高点击低出价的广告应该怎么调整？",
+    "gold": [
+      [
+        "e1c238e54eb04b18f2ca8517412620da"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "e1c238e54eb04b18f2ca8517412620da",
+    "split": "test"
+  },
+  {
+    "id": "D02-paraphrase",
+    "query": "花的钱不少却没人点，要继续加钱吗？",
+    "gold": [
+      [
+        "e1c238e54eb04b18f2ca8517412620da"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "e1c238e54eb04b18f2ca8517412620da",
+    "split": "test"
+  },
+  {
+    "id": "D03-direct",
+    "query": "素材A/B测试应该怎样控制变量？",
+    "gold": [
+      [
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "1524dbb507e0aa2e2e6af07da0c62012",
+    "split": "dev"
+  },
+  {
+    "id": "D03-paraphrase",
+    "query": "想知道封面和开头哪个有效，能一起改吗？",
+    "gold": [
+      [
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "1524dbb507e0aa2e2e6af07da0c62012",
+    "split": "dev"
+  },
+  {
+    "id": "D04-direct",
+    "query": "广告文案应该突出哪些信息？",
+    "gold": [
+      [
+        "7d840169fc8d6972df9566a5a87096c5"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "7d840169fc8d6972df9566a5a87096c5",
+    "split": "dev"
+  },
+  {
+    "id": "D04-paraphrase",
+    "query": "标题怎么写才能让目标人群愿意点？",
+    "gold": [
+      [
+        "7d840169fc8d6972df9566a5a87096c5"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "7d840169fc8d6972df9566a5a87096c5",
+    "split": "dev"
+  },
+  {
+    "id": "D05-direct",
+    "query": "广告数据看板应该关注哪些指标？",
+    "gold": [
+      [
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "f02b1e4ba6ae74192e9be872a223c752",
+    "split": "test"
+  },
+  {
+    "id": "D05-paraphrase",
+    "query": "只看总点击量就能知道投放好不好吗？",
+    "gold": [
+      [
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "f02b1e4ba6ae74192e9be872a223c752",
+    "split": "test"
+  },
+  {
+    "id": "D06-direct",
+    "query": "广告运营建议有哪些风险边界？",
+    "gold": [
+      [
+        "4f1018ec59af4e254f922736ed816cdd"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "4f1018ec59af4e254f922736ed816cdd",
+    "split": "test"
+  },
+  {
+    "id": "D06-paraphrase",
+    "query": "你能保证我增加预算以后一定赚钱吗？",
+    "gold": [
+      [
+        "4f1018ec59af4e254f922736ed816cdd"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "4f1018ec59af4e254f922736ed816cdd",
+    "split": "test"
+  },
+  {
+    "id": "D07-direct",
+    "query": "品牌广告和效果广告如何选择评价目标？",
+    "gold": [
+      [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test"
+  },
+  {
+    "id": "D07-paraphrase",
+    "query": "我想提升品牌认知，该拿什么评价广告？",
+    "gold": [
+      [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test"
+  },
+  {
+    "id": "D08-direct",
+    "query": "CTR怎么算？",
+    "gold": [
+      [
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "3dd3079a2d41ca64ceba0b9590124d99",
+    "split": "dev"
+  },
+  {
+    "id": "D08-paraphrase",
+    "query": "展示了一万次，有两百人点进去，点击率多少？",
+    "gold": [
+      [
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "3dd3079a2d41ca64ceba0b9590124d99",
+    "split": "dev"
+  },
+  {
+    "id": "D09-direct",
+    "query": "落地页到达率怎么计算？",
+    "gold": [
+      [
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "a0849948aa07aef5e0cefc85f02f950c",
+    "split": "test"
+  },
+  {
+    "id": "D09-paraphrase",
+    "query": "广告有人点，但打开页面的人很少，怎么查？",
+    "gold": [
+      [
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "a0849948aa07aef5e0cefc85f02f950c",
+    "split": "test"
+  },
+  {
+    "id": "D10-direct",
+    "query": "CVR转化率的分母是什么？",
+    "gold": [
+      [
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "3dd3079a2d41ca64ceba0b9590124d99",
+    "split": "dev"
+  },
+  {
+    "id": "D10-paraphrase",
+    "query": "用户进页面后下单的比例怎么算？",
+    "gold": [
+      [
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "3dd3079a2d41ca64ceba0b9590124d99",
+    "split": "dev"
+  },
+  {
+    "id": "D11-direct",
+    "query": "搜索广告和原生广告有什么区别？",
+    "gold": [
+      [
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "92818ebeefb0094fdc24c1794448e2d8",
+    "split": "test"
+  },
+  {
+    "id": "D11-paraphrase",
+    "query": "搜索结果里的推广和信息流里的推广有什么不同？",
+    "gold": [
+      [
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "92818ebeefb0094fdc24c1794448e2d8",
+    "split": "test"
+  },
+  {
+    "id": "D12-direct",
+    "query": "DSP和SSP分别为谁服务？",
+    "gold": [
+      [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test"
+  },
+  {
+    "id": "D12-paraphrase",
+    "query": "广告主买量和媒体卖流量分别用什么平台？",
+    "gold": [
+      [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test"
+  },
+  {
+    "id": "D13-direct",
+    "query": "合约广告怎样做库存预测和流量分配？",
+    "gold": [
+      [
+        "a960e21f88534aa3978686a339891911"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "a960e21f88534aa3978686a339891911",
+    "split": "test"
+  },
+  {
+    "id": "D13-paraphrase",
+    "query": "已经承诺给客户展示次数，怎么保证交付？",
+    "gold": [
+      [
+        "a960e21f88534aa3978686a339891911"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "a960e21f88534aa3978686a339891911",
+    "split": "test"
+  },
+  {
+    "id": "D14-direct",
+    "query": "CPM费用怎么算？",
+    "gold": [
+      [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test"
+  },
+  {
+    "id": "D14-paraphrase",
+    "query": "每千次展示收十元，两万次展示付多少钱？",
+    "gold": [
+      [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test"
+  },
+  {
+    "id": "D15-direct",
+    "query": "固定CPC单价下费用怎么算？",
+    "gold": [
+      [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test"
+  },
+  {
+    "id": "D15-paraphrase",
+    "query": "按有效点击收费时，为什么出价不等于实际扣费？",
+    "gold": [
+      [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test"
+  },
+  {
+    "id": "D16-direct",
+    "query": "CPA和CPS的结算区别是什么？",
+    "gold": [
+      [
+        "69caf3676702594c9e0296942f26ead7"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "69caf3676702594c9e0296942f26ead7",
+    "split": "test"
+  },
+  {
+    "id": "D16-paraphrase",
+    "query": "按注册收费和按销售收费有什么不同？",
+    "gold": [
+      [
+        "69caf3676702594c9e0296942f26ead7"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "69caf3676702594c9e0296942f26ead7",
+    "split": "test"
+  },
+  {
+    "id": "D17-direct",
+    "query": "CPV如何界定有效观看？",
+    "gold": [
+      [
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "e58a7af9d3ace2d3aa5e69ea052baf80",
+    "split": "test"
+  },
+  {
+    "id": "D17-paraphrase",
+    "query": "视频刚开始播放就要收钱吗？",
+    "gold": [
+      [
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "e58a7af9d3ace2d3aa5e69ea052baf80",
+    "split": "test"
+  },
+  {
+    "id": "D18-direct",
+    "query": "媒体方如何选择广告渠道？",
+    "gold": [
+      [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test"
+  },
+  {
+    "id": "D18-paraphrase",
+    "query": "我的网站接哪家广告联盟比较合适？",
+    "gold": [
+      [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test"
+  },
+  {
+    "id": "D19-direct",
+    "query": "广告负载如何兼顾收入和用户体验？",
+    "gold": [
+      [
+        "529373b729f5e6296343516941938a0f"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test"
+  },
+  {
+    "id": "D19-paraphrase",
+    "query": "页面再多塞几个广告就能一直增加收益吗？",
+    "gold": [
+      [
+        "529373b729f5e6296343516941938a0f"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test"
+  },
+  {
+    "id": "D20-direct",
+    "query": "CPC收入下降如何分环节定位？",
+    "gold": [
+      [
+        "e3f770b68b05cb25e5e042b013bed981"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "e3f770b68b05cb25e5e042b013bed981",
+    "split": "test"
+  },
+  {
+    "id": "D20-paraphrase",
+    "query": "网站广告赚的钱变少了，应该查哪些环节？",
+    "gold": [
+      [
+        "e3f770b68b05cb25e5e042b013bed981"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "e3f770b68b05cb25e5e042b013bed981",
+    "split": "test"
+  },
+  {
+    "id": "D21-direct",
+    "query": "广告没有展示应该按什么顺序检查？",
+    "gold": [
+      [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test"
+  },
+  {
+    "id": "D21-paraphrase",
+    "query": "广告建好了却一直没人看到，先查哪里？",
+    "gold": [
+      [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test"
+  },
+  {
+    "id": "D22-direct",
+    "query": "广告配置变更如何同步业务库和索引？",
+    "gold": [
+      [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test"
+  },
+  {
+    "id": "D22-paraphrase",
+    "query": "后台改了广告配置，线上检索却还是旧的怎么办？",
+    "gold": [
+      [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test"
+  },
+  {
+    "id": "D23-direct",
+    "query": "预算耗尽后如何停止投放并处理延迟结算？",
+    "gold": [
+      [
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "2267253aa3b02b9efe39fe30ed5e8188",
+    "split": "dev"
+  },
+  {
+    "id": "D23-paraphrase",
+    "query": "钱已经花完了，为何还出现后续扣费？",
+    "gold": [
+      [
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "2267253aa3b02b9efe39fe30ed5e8188",
+    "split": "dev"
+  },
+  {
+    "id": "D24-direct",
+    "query": "重复扣费或漏扣怎么核查？",
+    "gold": [
+      [
+        "2267253aa3b02b9efe39fe30ed5e8188"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "2267253aa3b02b9efe39fe30ed5e8188",
+    "split": "dev"
+  },
+  {
+    "id": "D24-paraphrase",
+    "query": "同一笔广告费用扣了两遍，应该查什么？",
+    "gold": [
+      [
+        "2267253aa3b02b9efe39fe30ed5e8188"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "2267253aa3b02b9efe39fe30ed5e8188",
+    "split": "dev"
+  },
+  {
+    "id": "D25-direct",
+    "query": "点击量与消耗不一致怎么解释？",
+    "gold": [
+      [
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "42ba33a6517174d6822e9f37fba03e06",
+    "split": "test"
+  },
+  {
+    "id": "D25-paraphrase",
+    "query": "页面点击很多，账单却对不上，是为什么？",
+    "gold": [
+      [
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "42ba33a6517174d6822e9f37fba03e06",
+    "split": "test"
+  },
+  {
+    "id": "D26-direct",
+    "query": "投放策略调整如何通过灰度实验比较效果？",
+    "gold": [
+      [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test"
+  },
+  {
+    "id": "D26-paraphrase",
+    "query": "怎样证明新投放策略比旧策略更赚钱？",
+    "gold": [
+      [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test"
+  },
+  {
+    "id": "D27-direct",
+    "query": "广告配置、投放和效果模块怎样区分？",
+    "gold": [
+      [
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "a610a79d3d1febef995cca1678fcf6fc",
+    "split": "test"
+  },
+  {
+    "id": "D27-paraphrase",
+    "query": "广告保存成功就说明已经投放并产生效果了吗？",
+    "gold": [
+      [
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "a610a79d3d1febef995cca1678fcf6fc",
+    "split": "test"
+  },
+  {
+    "id": "D28-direct",
+    "query": "投放调整前如何确认报表时效？",
+    "gold": [
+      [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test"
+  },
+  {
+    "id": "D28-paraphrase",
+    "query": "报表还没更新，我现在就改预算合适吗？",
+    "gold": [
+      [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test"
+  },
+  {
+    "id": "D29-direct",
+    "query": "广告请求失败的性能与可用性影响是什么？",
+    "gold": [
+      [
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "39ac23d9139254382a251f69d386000e",
+    "split": "test"
+  },
+  {
+    "id": "D29-paraphrase",
+    "query": "接口老是超时会影响广告展示吗？",
+    "gold": [
+      [
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "39ac23d9139254382a251f69d386000e",
+    "split": "test"
+  },
+  {
+    "id": "D30-direct",
+    "query": "分析广告业务数据需要确认什么访问范围？",
+    "gold": [
+      [
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "871e5d36cdbd39b60b72e89371e725a8",
+    "split": "test"
+  },
+  {
+    "id": "D30-paraphrase",
+    "query": "能把别的品牌的广告数据拿来给我分析吗？",
+    "gold": [
+      [
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "871e5d36cdbd39b60b72e89371e725a8",
+    "split": "test"
+  },
+  {
+    "id": "M01",
+    "query": "解释CTR和CVR各怎么算，分母有什么区别？",
+    "gold": [
+      [
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ],
+      [
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "3dd3079a2d41ca64ceba0b9590124d99",
+    "split": "dev"
+  },
+  {
+    "id": "M02",
+    "query": "CPM和固定CPC分别怎样计算费用？",
+    "gold": [
+      [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ],
+      [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test"
+  },
+  {
+    "id": "M03",
+    "query": "DSP和SSP各服务谁，网站又该怎么选择广告渠道？",
+    "gold": [
+      [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ],
+      [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test"
+  },
+  {
+    "id": "M04",
+    "query": "广告配置保存后没有展示，要检查索引同步和投放链路哪些环节？",
+    "gold": [
+      [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test"
+  },
+  {
+    "id": "M05",
+    "query": "预算已经耗尽还有扣费，怎样排查延迟结算与重复扣费？",
+    "gold": [
+      [
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ],
+      [
+        "2267253aa3b02b9efe39fe30ed5e8188"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "2267253aa3b02b9efe39fe30ed5e8188",
+    "split": "dev"
+  },
+  {
+    "id": "M06",
+    "query": "同时介绍演示排序公式和素材A/B测试的变量控制原则。",
+    "gold": [
+      [
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ],
+      [
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "1524dbb507e0aa2e2e6af07da0c62012",
+    "split": "dev"
+  },
+  {
+    "id": "M07",
+    "query": "调整策略前如何确认报表时效，再用灰度实验评估效果？",
+    "gold": [
+      [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ],
+      [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test"
+  },
+  {
+    "id": "M08",
+    "query": "分别解释品牌广告与效果广告的评价目标，以及页面广告负载的权衡。",
+    "gold": [
+      [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      [
+        "529373b729f5e6296343516941938a0f"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test"
+  },
+  {
+    "id": "external-q00",
+    "query": "如何让达人内容与后续客户承接配合？",
+    "gold": [
+      [
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+    "split": "dev"
+  },
+  {
+    "id": "external-q01",
+    "query": "有没有从保险服饰和本地服务总结创意的方法？",
+    "gold": [
+      [
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+    "split": "dev"
+  },
+  {
+    "id": "external-q02",
+    "query": "用户看完广告后怎么通过私信和账号内容承接？",
+    "gold": [
+      [
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+    "split": "dev"
+  },
+  {
+    "id": "external-q03",
+    "query": "展示广告如何安排利益点、界面截图和按钮？",
+    "gold": [
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q04",
+    "query": "哪份资料同时介绍搜索、户外和交通广告？",
+    "gold": [
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q05",
+    "query": "找深紫背景配橙色试用按钮的展示广告参考",
+    "gold": [
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q06",
+    "query": "广告可以拆成哪些素材组件？",
+    "gold": [
+      [
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q07",
+    "query": "找用汽车案例讲图片视频文案和落地页组合的资料",
+    "gold": [
+      [
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q08",
+    "query": "哪张图左边是蔚来广告右边是广告组件拆解？",
+    "gold": [
+      [
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q09",
+    "query": "多邻国怎样把猫头鹰角色与用户情绪关联？",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q10",
+    "query": "找两只绿色猫头鹰配红色大标题的封面",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q11",
+    "query": "品牌IP如何通过玩梗和系列故事鼓励用户参与？",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q12",
+    "query": "广告主建计划之前如何准备预算和用户画像？",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q13",
+    "query": "哪里介绍投放时间地域以及竞价参数的准备？",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q14",
+    "query": "奶茶门店预算教学例子在哪份投放资料里？",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q15",
+    "query": "营销知识库怎样连接品牌语气、证据和反馈？",
+    "gold": [
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q16",
+    "query": "找黑底的文件组织人工审阅反馈回写流程图",
+    "gold": [
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q17",
+    "query": "历史营销报告怎么与视觉参考和品牌手册关联？",
+    "gold": [
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q18",
+    "query": "如何从开头痛点受众差异形式变体检查广告创意？",
+    "gold": [
+      [
+        "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q19",
+    "query": "找米白橙色四列课程卡片宣传图",
+    "gold": [
+      [
+        "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q20",
+    "query": "给创意简报建立六项评估检查表用什么资料？",
+    "gold": [
+      [
+        "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q21",
+    "query": "同时找绿色猫头鹰封面和紫色橙按钮展示广告",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ],
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-multi",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test"
+  },
+  {
+    "id": "external-q22",
+    "query": "给我广告组件拆解与创意六维检查表两份资料",
+    "gold": [
+      [
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      [
+        "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ]
+    ],
+    "group": "external-multi",
+    "scope": "external",
+    "answerable": true,
+    "family": "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+    "split": "dev"
+  },
+  {
+    "id": "external-q23",
+    "query": "同时参考广告主投放准备和品牌知识库反馈组织",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ],
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-multi",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test"
+  },
+  {
+    "id": "external-q24",
+    "query": "当前商品真实销量是多少？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  },
+  {
+    "id": "external-q25",
+    "query": "这条视频的口播逐字稿是什么？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  },
+  {
+    "id": "external-q26",
+    "query": "本项目2026年十月真实ROAS是多少？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  },
+  {
+    "id": "external-q27",
+    "query": "汽车广告里的优惠今天是否还有效？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  },
+  {
+    "id": "external-q28",
+    "query": "私有课程完整教学正文是什么？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  },
+  {
+    "id": "external-q29",
+    "query": "这款牙刷抗菌率检测报告是什么？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  },
+  {
+    "id": "external-q30",
+    "query": "我们的广告预算最优出价精确是多少？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test"
+  }
+]

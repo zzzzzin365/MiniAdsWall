@@ -1,0 +1,22 @@
+{
+  "call_key": "warm_repeat:R:answer:detail-car-tag",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "d7f4d701092356d879e006b8",
+  "input_sha256": "323f6ee9d6d3c86df24e5dfcaf779e9084b4501c10e344a9e449b8b3a60fc554",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2089.8744590813294,
+  "http_status": 200,
+  "provider_id": "021791987247373c2531bd3ff98f8d456851518a83e67296f2522",
+  "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 953,
+    "total_tokens": 989,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

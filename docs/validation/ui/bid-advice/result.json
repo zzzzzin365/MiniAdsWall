@@ -1,0 +1,118 @@
+{
+  "http_status": 200,
+  "existing_ad": {
+    "id": "30b2cc1a-1cfc-4ba5-bca9-2ef52fe8f678",
+    "current_bid": 0.7,
+    "suggested_bid": 0.7,
+    "applied_to_form": 0.7,
+    "impressions": 3793,
+    "clicks": 110,
+    "spend_yuan": 47.3,
+    "orders": 0
+  },
+  "new_ad": {
+    "daily_budget": 30,
+    "days": 3,
+    "max_cpc": 0.8,
+    "suggested_bid": 0.4,
+    "applied_to_form": 0.4
+  },
+  "request_id": "40042c75-391d-45b5-9d51-2e82fcf9dbb1",
+  "evidence": {
+    "status": "sufficient",
+    "retained_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012",
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "e1c238e54eb04b18f2ca8517412620da",
+      "7d840169fc8d6972df9566a5a87096c5",
+      "4f1018ec59af4e254f922736ed816cdd"
+    ],
+    "scores": [
+      {
+        "id": "1524dbb507e0aa2e2e6af07da0c62012",
+        "support": 0.9
+      },
+      {
+        "id": "1b494ecc8c8b161fe74b95b14e4915aa",
+        "support": 0.85
+      },
+      {
+        "id": "e1c238e54eb04b18f2ca8517412620da",
+        "support": 0.7
+      },
+      {
+        "id": "f02b1e4ba6ae74192e9be872a223c752",
+        "support": 0.6
+      },
+      {
+        "id": "7d840169fc8d6972df9566a5a87096c5",
+        "support": 0.75
+      },
+      {
+        "id": "e3f770b68b05cb25e5e042b013bed981",
+        "support": 0.65
+      },
+      {
+        "id": "60c2f0a39c9428aca0776fa8d622b735",
+        "support": 0.55
+      },
+      {
+        "id": "4f1018ec59af4e254f922736ed816cdd",
+        "support": 0.8
+      }
+    ],
+    "missing_information": [],
+    "evidence_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012",
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "4f1018ec59af4e254f922736ed816cdd"
+    ],
+    "candidate_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012",
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "e1c238e54eb04b18f2ca8517412620da",
+      "f02b1e4ba6ae74192e9be872a223c752",
+      "7d840169fc8d6972df9566a5a87096c5",
+      "e3f770b68b05cb25e5e042b013bed981",
+      "60c2f0a39c9428aca0776fa8d622b735",
+      "4f1018ec59af4e254f922736ed816cdd"
+    ],
+    "rejected_ids": [
+      "f02b1e4ba6ae74192e9be872a223c752",
+      "e3f770b68b05cb25e5e042b013bed981",
+      "60c2f0a39c9428aca0776fa8d622b735"
+    ],
+    "error_code": null,
+    "retrieval_error": null,
+    "check_id": "5c9bac6d-bd99-4690-bf3a-5756d1fe8e10",
+    "version": "rag-evidence-v2",
+    "threshold": 0.7,
+    "latency_ms": 7997.26,
+    "calls": [
+      {
+        "model": "deepseek-v4-1-flash-260910",
+        "status": "completed",
+        "input_tokens": 1379,
+        "output_tokens": 228,
+        "provider_reported_cost_usd": null,
+        "latency_ms": 4173.18
+      },
+      {
+        "model": "deepseek-v4-1-flash-260910",
+        "status": "completed",
+        "input_tokens": 1043,
+        "output_tokens": 77,
+        "provider_reported_cost_usd": null,
+        "latency_ms": 3821.47
+      }
+    ],
+    "request_id": "40042c75-391d-45b5-9d51-2e82fcf9dbb1",
+    "question_hash": "d542b5bd2de444e366e63983e3925ae730ce08f8a33167830af54a8469df3cb4"
+  },
+  "tests": {
+    "python": 53,
+    "node": 5
+  },
+  "validation": "desktop browser -> authenticated Koa -> ledger data and RAG -> numeric bid -> editable form",
+  "advertisement_changes_saved": false
+}

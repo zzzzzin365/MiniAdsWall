@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:answer:missing-sales",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "c9c29d80aa2f3ad314c436bc",
+  "input_sha256": "8dbb55496bc515a85617f37ee056d6e935ba1f04ff6fe40df0e1eb41b9271b71",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1787.0005830191076,
+  "http_status": 200,
+  "provider_id": "021791986967910c2531bd3ff98f8d456851518a83e6729e6c67b",
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 1081,
+    "total_tokens": 1124,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

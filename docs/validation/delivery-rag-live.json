@@ -1,0 +1,105 @@
+{
+  "http_status": 200,
+  "verification": "real browser -> Koa -> RAG -> AdsAgent -> rendered suggestions and source passages",
+  "request_id": "d7d9172a-fd6d-4b6b-b738-c2450c39eb6b",
+  "knowledge_used": true,
+  "visible_sources": [
+    "出价优化原则",
+    "素材与 A/B 测试",
+    "广告文案优化"
+  ],
+  "evidence": {
+    "status": "sufficient",
+    "retained_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012",
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "e1c238e54eb04b18f2ca8517412620da",
+      "7d840169fc8d6972df9566a5a87096c5",
+      "f02b1e4ba6ae74192e9be872a223c752",
+      "4f1018ec59af4e254f922736ed816cdd"
+    ],
+    "scores": [
+      {
+        "id": "1524dbb507e0aa2e2e6af07da0c62012",
+        "support": 0.95
+      },
+      {
+        "id": "1b494ecc8c8b161fe74b95b14e4915aa",
+        "support": 0.9
+      },
+      {
+        "id": "e1c238e54eb04b18f2ca8517412620da",
+        "support": 0.75
+      },
+      {
+        "id": "7d840169fc8d6972df9566a5a87096c5",
+        "support": 0.7
+      },
+      {
+        "id": "f02b1e4ba6ae74192e9be872a223c752",
+        "support": 0.8
+      },
+      {
+        "id": "e3f770b68b05cb25e5e042b013bed981",
+        "support": 0.65
+      },
+      {
+        "id": "4f1018ec59af4e254f922736ed816cdd",
+        "support": 0.85
+      },
+      {
+        "id": "60c2f0a39c9428aca0776fa8d622b735",
+        "support": 0.6
+      }
+    ],
+    "missing_information": [],
+    "evidence_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012",
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "4f1018ec59af4e254f922736ed816cdd"
+    ],
+    "candidate_ids": [
+      "1524dbb507e0aa2e2e6af07da0c62012",
+      "1b494ecc8c8b161fe74b95b14e4915aa",
+      "e1c238e54eb04b18f2ca8517412620da",
+      "7d840169fc8d6972df9566a5a87096c5",
+      "f02b1e4ba6ae74192e9be872a223c752",
+      "e3f770b68b05cb25e5e042b013bed981",
+      "4f1018ec59af4e254f922736ed816cdd",
+      "60c2f0a39c9428aca0776fa8d622b735"
+    ],
+    "rejected_ids": [
+      "e3f770b68b05cb25e5e042b013bed981",
+      "60c2f0a39c9428aca0776fa8d622b735"
+    ],
+    "error_code": null,
+    "retrieval_error": null,
+    "check_id": "eda4cc04-6c0b-4d84-bb5b-ea35c253a52c",
+    "version": "rag-evidence-v2",
+    "threshold": 0.7,
+    "latency_ms": 6396.75,
+    "calls": [
+      {
+        "model": "deepseek-v4-1-flash-260910",
+        "status": "completed",
+        "input_tokens": 1380,
+        "output_tokens": 228,
+        "provider_reported_cost_usd": null,
+        "latency_ms": 4253.22
+      },
+      {
+        "model": "deepseek-v4-1-flash-260910",
+        "status": "completed",
+        "input_tokens": 1176,
+        "output_tokens": 77,
+        "provider_reported_cost_usd": null,
+        "latency_ms": 2143.22
+      }
+    ],
+    "request_id": "d7d9172a-fd6d-4b6b-b738-c2450c39eb6b",
+    "question_hash": "d542b5bd2de444e366e63983e3925ae730ce08f8a33167830af54a8469df3cb4"
+  },
+  "request_log": "2026-10-14 22:48:06,085 [INFO] api.main: request_id=d7d9172a-fd6d-4b6b-b738-c2450c39eb6b method=POST path=/generate/strategy status=200",
+  "tests_passed": 49,
+  "screenshot": "docs/validation/delivery-rag-ui.png"
+}

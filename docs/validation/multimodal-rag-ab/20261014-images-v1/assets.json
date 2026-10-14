@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gift",
+    "material_id": "17cb215430b650da31daa87b29c7045c2d964fef3dd11ac2e305268e50ceef92",
+    "name": "一个适合送朋友的礼物🎁🍎",
+    "content": "苹果！不会出错的礼物🎁\n希望收到礼物的人都平平安安🥰\n",
+    "path": "/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/uploads/1791983231824-259072802.JPG",
+    "sha256": "82a569cc5d3e8d4e99b4992c56d7a83ce022c3b22db61675c19bc7c991470359",
+    "bytes": 257983,
+    "mime": "image/jpeg"
+  },
+  {
+    "id": "two",
+    "material_id": "3a81067a511b84be76dc0e23da3adb2aab3d2b5e826ffb23b2c3357c63a3d7d9",
+    "name": "看到啥收到就是啥🍎🍏🍐🫐🍅",
+    "content": "买的和图片不一样的就是盗版！！\n都别给我买错了啊！！\nmomo出品必属精品！\n没有滤镜，全是实拍\n",
+    "path": "/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/uploads/1791983160632-305492817.JPG",
+    "sha256": "785362f21ea292e45f2ff786a17c6df6c503f5616b4507c95add167b669c76de",
+    "bytes": 375855,
+    "mime": "image/jpeg"
+  },
+  {
+    "id": "rainbow",
+    "material_id": "eef6cd85a7d96c2357077ca7c6c45ba2f554696c8df0c2d9e9262115c021bd07",
+    "name": "是彩虹色手串🌈",
+    "content": "阳光下折射出彩虹的倒影\n是由各种各样水果组成的\n太有意思啦，出去玩带着刚刚好！！",
+    "path": "/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/uploads/1791983020966-212908078.JPG",
+    "sha256": "eb2fc3fb06c6d7bbd39a51d3b700d8f302b624abc3be2e7b8762f6a971d9ef8d",
+    "bytes": 301254,
+    "mime": "image/jpeg"
+  },
+  {
+    "id": "car",
+    "material_id": "f4c0a90ebe612c99674ebc312770a8721258473cedc370c0f08e6adce504038a",
+    "name": "红苹果果然是最经典的🍎",
+    "content": "各种各样的苹果都抵不过经典的红色苹果\n红色果然是最经典的颜色～\n平平安安！\n送自己和好朋友一份平安叭～",
+    "path": "/Users/admin/MiniAdsWall/apps/mini-ad-wall/server/uploads/1791983103234-135493189.JPG",
+    "sha256": "c28213f28eb83e70123808a1437862b92b570c71eb2834c7912db76d91068ce9",
+    "bytes": 250431,
+    "mime": "image/jpeg"
+  }
+]

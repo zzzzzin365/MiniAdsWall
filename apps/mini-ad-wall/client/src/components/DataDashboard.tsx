@@ -15,6 +15,7 @@ import {
 import { Bar, Scatter, Line } from 'react-chartjs-2';
 import { Ad } from '../types';
 import { usePerformance } from '../contexts/PerformanceContext';
+import { publisherLabel } from '../utils/performance';
 import AnalystImage from '../../Analyst.png';
 
 const MarketingDashboard = lazy(() => import('./MarketingDashboard'));
@@ -39,12 +40,11 @@ interface DataDashboardProps {
 }
 
 const PRICE_RANGES = [
-    { min: 0, max: 50, label: '0-50' },
-    { min: 50, max: 100, label: '50-100' },
-    { min: 100, max: 150, label: '100-150' },
-    { min: 150, max: 200, label: '150-200' },
-    { min: 200, max: 300, label: '200-300' },
-    { min: 300, max: Infinity, label: '300+' },
+    { min: 0, max: .5, label: '0–0.5' },
+    { min: .5, max: .8, label: '0.5–0.8' },
+    { min: .8, max: 1, label: '0.8–1' },
+    { min: 1, max: 1.2, label: '1–1.2' },
+    { min: 1.2, max: Infinity, label: '1.2+' },
 ];
 
 const DataDashboard: React.FC<DataDashboardProps> = ({ ads:rawAds, scope, loadMore }) => {
@@ -333,7 +333,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads:rawAds, scope, loadMo
                         return [
                             `点击次数: ${item.raw} 次`,
                             `出价: ¥${ad?.price || 0}`,
-                            `发布者: ${ad?.publisher || ''}`,
+                            `发布者: ${publisherLabel(ad?.publisher || '')}`,
                             '',
                             '💡 点击选中此广告'
                         ];
@@ -516,7 +516,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads:rawAds, scope, loadMo
                     <div className="stat-label">广告总数</div>
                 </div>
                 <div className="dashboard-stat-item">
-                    <div className="stat-value">¥{stats.avgPrice.toFixed(0)}</div>
+                    <div className="stat-value">¥{stats.avgPrice.toFixed(2)}</div>
                     <div className="stat-label">平均出价</div>
                 </div>
                 <div className="dashboard-stat-item">
@@ -537,7 +537,7 @@ const DataDashboard: React.FC<DataDashboardProps> = ({ ads:rawAds, scope, loadMo
                     <div className="selected-ad-info">
                         <span>出价: ¥{selectedAd.price}</span>
                         <span>点击: {selectedAd.clicks} 次</span>
-                        <span>发布者: {selectedAd.publisher}</span>
+                        <span>发布者: {publisherLabel(selectedAd.publisher)}</span>
                     </div>
                     
                     <button className="selected-ad-close" onClick={() => setSelectedAdId(null)}>×</button>

@@ -1,0 +1,77 @@
+{
+  "scope": "real cached Chroma default embedding; fixed caption fixtures; no external model requests",
+  "query": "寻找白色牙刷桌面特写素材",
+  "result": {
+    "status": "retrieved",
+    "method": "caption-vector-v1",
+    "corpus_assets": 2,
+    "corpus_truncated": false,
+    "retrieved": [
+      {
+        "asset_id": "toothbrush",
+        "analysis_job_id": "analysis-toothbrush",
+        "asset_revision": 1,
+        "kind": "image",
+        "subject": "白色牙刷，桌面商品特写",
+        "marketing_summary": "白色牙刷，桌面商品特写",
+        "source_claims": [],
+        "uncertainties": [],
+        "limitations": [],
+        "frame_index": null,
+        "time_ms": null,
+        "excerpt": "白色牙刷，桌面商品特写\n白色牙刷，桌面商品特写",
+        "id": "66cf317c08a1b9a142eec8ac4aaa720bcb21979a90eaa4ad9d4e646b5cf0dd14",
+        "score": 0.9142
+      },
+      {
+        "asset_id": "toothbrush",
+        "analysis_job_id": "analysis-toothbrush",
+        "asset_revision": 1,
+        "kind": "image",
+        "subject": "白色牙刷，桌面商品特写",
+        "marketing_summary": "白色牙刷，桌面商品特写",
+        "source_claims": [],
+        "uncertainties": [],
+        "limitations": [],
+        "frame_index": 0,
+        "time_ms": null,
+        "excerpt": "白色牙刷，桌面商品特写\n白色牙刷，桌面商品特写",
+        "id": "90caeb0db2bb1ce9abc5a27a1321cd12444f17257c376f7e5602e9a85b987520",
+        "score": 0.9142
+      },
+      {
+        "asset_id": "coffee",
+        "analysis_job_id": "analysis-coffee",
+        "asset_revision": 1,
+        "kind": "video",
+        "subject": "咖啡杯，早晨冲泡咖啡",
+        "marketing_summary": "咖啡杯，早晨冲泡咖啡",
+        "source_claims": [],
+        "uncertainties": [],
+        "limitations": [],
+        "frame_index": 0,
+        "time_ms": 1500,
+        "excerpt": "咖啡杯，早晨冲泡咖啡\n咖啡杯，早晨冲泡咖啡",
+        "id": "a704b661119b5fbaa3bb24d218f4cc9a42217bda62d10192b6ab008c9cbfd455",
+        "score": 0.5219
+      },
+      {
+        "asset_id": "coffee",
+        "analysis_job_id": "analysis-coffee",
+        "asset_revision": 1,
+        "kind": "video",
+        "subject": "咖啡杯，早晨冲泡咖啡",
+        "marketing_summary": "咖啡杯，早晨冲泡咖啡",
+        "source_claims": [],
+        "uncertainties": [],
+        "limitations": [],
+        "frame_index": null,
+        "time_ms": null,
+        "excerpt": "咖啡杯，早晨冲泡咖啡\n咖啡杯，早晨冲泡咖啡",
+        "id": "9a00699504328cef10a5e09545391f700288ef43fa265fd9581f31c4f3fecba4",
+        "score": 0.5219
+      }
+    ],
+    "citations": []
+  }
+}

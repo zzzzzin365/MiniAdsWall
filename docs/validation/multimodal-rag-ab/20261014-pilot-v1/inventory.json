@@ -1,0 +1,21 @@
+{
+  "verified_on": "2026-10-14",
+  "scope": "local MySQL: merchant studio objects AND legacy material library; data/chroma",
+  "asset_rows": 0,
+  "successful_understanding_jobs": 0,
+  "current_usable_asset_rows": 0,
+  "private_media_chunks": 0,
+  "general_cosine_chunks": 43,
+  "external_catalog_chunks": 13,
+  "external_sources": 7,
+  "legacy_material_library": {
+    "active_materials": 16,
+    "materials_with_videos": 10,
+    "text_only_materials": 6,
+    "materials_with_images": 0,
+    "video_references": 19,
+    "matched_local_video_files": 2,
+    "note": "Other video references may be remote; local basename matching does not establish remote availability."
+  },
+  "correction": "Zero studio asset rows does not imply no existing business materials. Existing legacy materials are not indexed into studio_media_caption_cosine_v1."
+}

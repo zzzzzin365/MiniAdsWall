@@ -1,0 +1,20 @@
+dataset,arm,cache_hit_ratio,p95_ms,recall_at5,recall_kind
+public,A1,0,447.4357858183793,0.33076923076923076,author-labelled semantic
+public,F,0,455.0711314019281,0.33076923076923076,author-labelled semantic
+public,H,0,397.76731879683206,0.8538461538461538,author-labelled semantic
+public,R,0,419.27995626465395,0.8538461538461538,author-labelled semantic
+public,A1,0.5,458.29831238952437,0.33076923076923076,author-labelled semantic
+public,F,0.5,338.38428742601525,0.33076923076923076,author-labelled semantic
+public,H,0.5,334.4145526818465,0.8538461538461538,author-labelled semantic
+public,R,0.5,274.32017952087324,0.8538461538461538,author-labelled semantic
+public,A1,1,336.9457169610541,0.33076923076923076,author-labelled semantic
+public,F,1,5.879226792603729,0.33076923076923076,author-labelled semantic
+public,H,1,371.5189580281731,0.8538461538461538,author-labelled semantic
+public,R,1,7.058867055457085,0.8538461538461538,author-labelled semantic
+synthetic100k,exact,,14.416786853689697,1.0,exact neighbor agreement
+synthetic100k,10,,0.9967087360564606,0.045,exact neighbor agreement
+synthetic100k,64,,4.199222917668518,0.16,exact neighbor agreement
+synthetic100k,256,,13.412889861501741,0.337,exact neighbor agreement
+synthetic100k,1024,,42.913643468636856,0.6439999999999999,exact neighbor agreement
+synthetic100k,4096,,112.16862973524258,0.9390000000000001,exact neighbor agreement
+synthetic100k,16384,,199.0218413528055,1.0,exact neighbor agreement

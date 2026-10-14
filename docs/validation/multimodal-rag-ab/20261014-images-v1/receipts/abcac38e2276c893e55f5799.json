@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:R:answer:detail-car-ribbon",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "abcac38e2276c893e55f5799",
+  "input_sha256": "3a961a32c0ace6f47e57ecfc4648a737fa7081f191201e653535d9ededb3f5cc",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2094.450666103512,
+  "http_status": 200,
+  "provider_id": "021791987045052c2531bd3ff98f8d456851518a83e6729519d49",
+  "usage": {
+    "completion_tokens": 37,
+    "prompt_tokens": 984,
+    "total_tokens": 1021,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

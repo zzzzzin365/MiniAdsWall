@@ -1,0 +1,11 @@
+{
+  "sources": 7,
+  "images": 6,
+  "vectors": 13,
+  "inserted": 13,
+  "synthetic": false,
+  "collection": "knowledge_base_cosine_v1",
+  "before": 30,
+  "after": 43,
+  "verification": "real Chroma upsert/count; no paid model request"
+}

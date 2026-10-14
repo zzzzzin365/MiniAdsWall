@@ -80,7 +80,7 @@ Python Agent注册了studio router，沿用内部服务认证。浏览器只请�
 
 ### 上传自动Seed理解（2026-10-13更新）
 
-用户上传后同事务创建素材理解任务。Worker自动调用Seed（STUDIO_UNDERSTANDING_MODEL，默认doubao-seed-2-1-lite-260915）；图片直接输入，视频本地提取最多8帧带时间点的画面，音频不处理。结果显示主体/画面观察/素材宣称/不确定信息，并交给DeepSeek生成后续创意。新规则覆盖此前双模型限制，Seedance仍只用于明确授权的视频生成。无需新增数据库迁移，分析任务复用text队列并通过asset_analysis类型区分。
+用户上传后同事务创建素材理解任务。Worker自动调用Seed（STUDIO_UNDERSTANDING_MODEL，默认doubao-seed-2-0-mini-260428）；图片直接输入，视频本地提取最多8帧带时间点的画面，音频不处理。结果显示主体/画面观察/素材宣称/不确定信息，并交给DeepSeek生成后续创意。新规则覆盖此前双模型限制，Seedance仍只用于明确授权的视频生成。无需新增数据库迁移，分析任务复用text队列并通过asset_analysis类型区分。
 
 代码构建、7项Python协议测试和真实MySQL流程通过。Seed真实图片调用返回ModelNotOpen，当前账号需开通所配置的Seed模型，或配置一个已开通且支持图片理解的Seed模型；没有声称实调成功。
 

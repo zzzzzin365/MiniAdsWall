@@ -21,6 +21,14 @@ test('material edits and deletions preserve published ad snapshots, authenticate
  const create=await call('/api/materials','POST',{name:'商家准备好的图片',content:'',videos:[],images:[uploaded.url]});assert.equal(create.status,201);const created=await create.json();assert.deepEqual((await library.getMaterial(created.id)).images,[uploaded.url]);await call('/api/materials/'+created.id,'DELETE');
  assert.equal((await call('/api/materials/'+saved.id,'DELETE')).status,200);assert.equal((await library.listMaterials()).items.length,0);
  assert.equal((await model.getAllAds()).length,1);assert.equal((await call('/api/materials/'+saved.id)).status,404);
+ const picture=await op(()=>library.createMaterial({name:'复用图片',content:'同一图片文案',videos:[],images:[uploaded.url]}));
+ const make=title=>op(()=>model.create({title,publisher:'test',content:picture.content,url:'https://example.com',price:1,videos:[],material_id:picture.id}));
+ const first=await make('图片广告 A'),second=await make('图片广告 B');
+ for(const route of ['/api/ads','/api/ads/page']){const body=await(await call(route)).json();const ads=Array.isArray(body)?body:body.items;for(const id of [first.id,second.id])assert.deepEqual(ads.find(ad=>ad.id===id).images,[uploaded.url]);}
+ assert.deepEqual((await(await call('/api/ads/'+first.id)).json()).images,[uploaded.url]);
+ assert.equal((await library.listMaterials()).items.find(m=>m.id===picture.id).usage_count,2);
+ await op(()=>model.remove(first.id));assert.equal((await library.listMaterials()).items.find(m=>m.id===picture.id).usage_count,1);
+ await op(()=>model.remove(second.id));await op(()=>library.changeMaterial(picture.id));
  await model.close();await model.initialize();assert.equal((await library.listMaterials()).items.length,0);
  }finally{if(server)await new Promise(r=>server.close(r));await db.stop();}
 });

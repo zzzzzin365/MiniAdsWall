@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:A1:answer:detail-rainbow-leaf",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "8388200bf1387596e00f5e73",
+  "input_sha256": "d55677dbdd14b41a538a084d50fa83c8b892787b04bb4022fc55c438588bcea2",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1341.9213340384886,
+  "http_status": 200,
+  "provider_id": "021791986885382c2531bd3ff98f8d456851518a83e672963b0f8",
+  "usage": {
+    "completion_tokens": 47,
+    "prompt_tokens": 896,
+    "total_tokens": 943,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

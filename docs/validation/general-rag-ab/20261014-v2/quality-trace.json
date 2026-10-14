@@ -1,0 +1,4475 @@
+[
+  {
+    "id": "D02-direct",
+    "query": "高点击低出价的广告应该怎么调整？",
+    "gold": [
+      [
+        "e1c238e54eb04b18f2ca8517412620da"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "e1c238e54eb04b18f2ca8517412620da",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ],
+      "R": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D02-paraphrase",
+    "query": "花的钱不少却没人点，要继续加钱吗？",
+    "gold": [
+      [
+        "e1c238e54eb04b18f2ca8517412620da"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "e1c238e54eb04b18f2ca8517412620da",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ],
+      "F": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ],
+      "H": [
+        "7db8cbfa12ca33152d58efcf66e30a89",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5"
+      ],
+      "R": [
+        "7db8cbfa12ca33152d58efcf66e30a89",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D05-direct",
+    "query": "广告数据看板应该关注哪些指标？",
+    "gold": [
+      [
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "f02b1e4ba6ae74192e9be872a223c752",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "529373b729f5e6296343516941938a0f",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "R": [
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "529373b729f5e6296343516941938a0f",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D05-paraphrase",
+    "query": "只看总点击量就能知道投放好不好吗？",
+    "gold": [
+      [
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "f02b1e4ba6ae74192e9be872a223c752",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "7d840169fc8d6972df9566a5a87096c5"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "7d840169fc8d6972df9566a5a87096c5"
+      ],
+      "H": [
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ],
+      "R": [
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D06-direct",
+    "query": "广告运营建议有哪些风险边界？",
+    "gold": [
+      [
+        "4f1018ec59af4e254f922736ed816cdd"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "4f1018ec59af4e254f922736ed816cdd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "69caf3676702594c9e0296942f26ead7"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "69caf3676702594c9e0296942f26ead7"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D06-paraphrase",
+    "query": "你能保证我增加预算以后一定赚钱吗？",
+    "gold": [
+      [
+        "4f1018ec59af4e254f922736ed816cdd"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "4f1018ec59af4e254f922736ed816cdd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "529373b729f5e6296343516941938a0f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D07-direct",
+    "query": "品牌广告和效果广告如何选择评价目标？",
+    "gold": [
+      [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "529373b729f5e6296343516941938a0f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "529373b729f5e6296343516941938a0f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D07-paraphrase",
+    "query": "我想提升品牌认知，该拿什么评价广告？",
+    "gold": [
+      [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D09-direct",
+    "query": "落地页到达率怎么计算？",
+    "gold": [
+      [
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "a0849948aa07aef5e0cefc85f02f950c",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "a0849948aa07aef5e0cefc85f02f950c",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "a0849948aa07aef5e0cefc85f02f950c",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "a0849948aa07aef5e0cefc85f02f950c",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ],
+      "R": [
+        "a0849948aa07aef5e0cefc85f02f950c",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D09-paraphrase",
+    "query": "广告有人点，但打开页面的人很少，怎么查？",
+    "gold": [
+      [
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "a0849948aa07aef5e0cefc85f02f950c",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ],
+      "R": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D11-direct",
+    "query": "搜索广告和原生广告有什么区别？",
+    "gold": [
+      [
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "92818ebeefb0094fdc24c1794448e2d8",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D11-paraphrase",
+    "query": "搜索结果里的推广和信息流里的推广有什么不同？",
+    "gold": [
+      [
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "92818ebeefb0094fdc24c1794448e2d8",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "92818ebeefb0094fdc24c1794448e2d8",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "92818ebeefb0094fdc24c1794448e2d8",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "d2de0fccc4892318b78e1371a54c34aa"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D12-direct",
+    "query": "DSP和SSP分别为谁服务？",
+    "gold": [
+      [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "529373b729f5e6296343516941938a0f",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "R": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "529373b729f5e6296343516941938a0f",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D12-paraphrase",
+    "query": "广告主买量和媒体卖流量分别用什么平台？",
+    "gold": [
+      [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "529373b729f5e6296343516941938a0f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "R": [
+        "529373b729f5e6296343516941938a0f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D13-direct",
+    "query": "合约广告怎样做库存预测和流量分配？",
+    "gold": [
+      [
+        "a960e21f88534aa3978686a339891911"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "a960e21f88534aa3978686a339891911",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a960e21f88534aa3978686a339891911"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "a960e21f88534aa3978686a339891911"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D13-paraphrase",
+    "query": "已经承诺给客户展示次数，怎么保证交付？",
+    "gold": [
+      [
+        "a960e21f88534aa3978686a339891911"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "a960e21f88534aa3978686a339891911",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "39ac23d9139254382a251f69d386000e",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "39ac23d9139254382a251f69d386000e",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a960e21f88534aa3978686a339891911",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "bb31781fbacb4164ceb072da54f009cd",
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ],
+      "R": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a960e21f88534aa3978686a339891911",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "bb31781fbacb4164ceb072da54f009cd",
+        "a0849948aa07aef5e0cefc85f02f950c"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D14-direct",
+    "query": "CPM费用怎么算？",
+    "gold": [
+      [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "69caf3676702594c9e0296942f26ead7",
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "F": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "69caf3676702594c9e0296942f26ead7",
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "H": [
+        "bb31781fbacb4164ceb072da54f009cd",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "R": [
+        "bb31781fbacb4164ceb072da54f009cd",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D14-paraphrase",
+    "query": "每千次展示收十元，两万次展示付多少钱？",
+    "gold": [
+      [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "F": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "H": [
+        "bb31781fbacb4164ceb072da54f009cd",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "39ac23d9139254382a251f69d386000e",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "R": [
+        "bb31781fbacb4164ceb072da54f009cd",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "39ac23d9139254382a251f69d386000e",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D15-direct",
+    "query": "固定CPC单价下费用怎么算？",
+    "gold": [
+      [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bb31781fbacb4164ceb072da54f009cd",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ],
+      "R": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bb31781fbacb4164ceb072da54f009cd",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D15-paraphrase",
+    "query": "按有效点击收费时，为什么出价不等于实际扣费？",
+    "gold": [
+      [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2267253aa3b02b9efe39fe30ed5e8188",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "R": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2267253aa3b02b9efe39fe30ed5e8188",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D16-direct",
+    "query": "CPA和CPS的结算区别是什么？",
+    "gold": [
+      [
+        "69caf3676702594c9e0296942f26ead7"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "69caf3676702594c9e0296942f26ead7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "69caf3676702594c9e0296942f26ead7",
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "e3f770b68b05cb25e5e042b013bed981"
+      ],
+      "F": [
+        "69caf3676702594c9e0296942f26ead7",
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "e3f770b68b05cb25e5e042b013bed981"
+      ],
+      "H": [
+        "69caf3676702594c9e0296942f26ead7",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ],
+      "R": [
+        "69caf3676702594c9e0296942f26ead7",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D16-paraphrase",
+    "query": "按注册收费和按销售收费有什么不同？",
+    "gold": [
+      [
+        "69caf3676702594c9e0296942f26ead7"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "69caf3676702594c9e0296942f26ead7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "69caf3676702594c9e0296942f26ead7",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "d2de0fccc4892318b78e1371a54c34aa",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "R": [
+        "69caf3676702594c9e0296942f26ead7",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "d2de0fccc4892318b78e1371a54c34aa",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D17-direct",
+    "query": "CPV如何界定有效观看？",
+    "gold": [
+      [
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "e58a7af9d3ace2d3aa5e69ea052baf80",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "69caf3676702594c9e0296942f26ead7",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "69caf3676702594c9e0296942f26ead7",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "69caf3676702594c9e0296942f26ead7",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "69caf3676702594c9e0296942f26ead7",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D17-paraphrase",
+    "query": "视频刚开始播放就要收钱吗？",
+    "gold": [
+      [
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "e58a7af9d3ace2d3aa5e69ea052baf80",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "H": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "R": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e58a7af9d3ace2d3aa5e69ea052baf80",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D18-direct",
+    "query": "媒体方如何选择广告渠道？",
+    "gold": [
+      [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "529373b729f5e6296343516941938a0f",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "529373b729f5e6296343516941938a0f",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D18-paraphrase",
+    "query": "我的网站接哪家广告联盟比较合适？",
+    "gold": [
+      [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D19-direct",
+    "query": "广告负载如何兼顾收入和用户体验？",
+    "gold": [
+      [
+        "529373b729f5e6296343516941938a0f"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "H": [
+        "529373b729f5e6296343516941938a0f",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "92818ebeefb0094fdc24c1794448e2d8",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "529373b729f5e6296343516941938a0f",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "92818ebeefb0094fdc24c1794448e2d8",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D19-paraphrase",
+    "query": "页面再多塞几个广告就能一直增加收益吗？",
+    "gold": [
+      [
+        "529373b729f5e6296343516941938a0f"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D20-direct",
+    "query": "CPC收入下降如何分环节定位？",
+    "gold": [
+      [
+        "e3f770b68b05cb25e5e042b013bed981"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "e3f770b68b05cb25e5e042b013bed981",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7db8cbfa12ca33152d58efcf66e30a89",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7db8cbfa12ca33152d58efcf66e30a89",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "e3f770b68b05cb25e5e042b013bed981",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "529373b729f5e6296343516941938a0f",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "e3f770b68b05cb25e5e042b013bed981",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "529373b729f5e6296343516941938a0f",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D20-paraphrase",
+    "query": "网站广告赚的钱变少了，应该查哪些环节？",
+    "gold": [
+      [
+        "e3f770b68b05cb25e5e042b013bed981"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "e3f770b68b05cb25e5e042b013bed981",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D21-direct",
+    "query": "广告没有展示应该按什么顺序检查？",
+    "gold": [
+      [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "39ac23d9139254382a251f69d386000e"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D21-paraphrase",
+    "query": "广告建好了却一直没人看到，先查哪里？",
+    "gold": [
+      [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "39ac23d9139254382a251f69d386000e"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D22-direct",
+    "query": "广告配置变更如何同步业务库和索引？",
+    "gold": [
+      [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "529373b729f5e6296343516941938a0f",
+        "a7be935852eaf24eb2f68cbf7061cd7c",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "529373b729f5e6296343516941938a0f",
+        "a7be935852eaf24eb2f68cbf7061cd7c",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D22-paraphrase",
+    "query": "后台改了广告配置，线上检索却还是旧的怎么办？",
+    "gold": [
+      [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "H": [
+        "a7be935852eaf24eb2f68cbf7061cd7c",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "d2de0fccc4892318b78e1371a54c34aa",
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ],
+      "R": [
+        "a7be935852eaf24eb2f68cbf7061cd7c",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "d2de0fccc4892318b78e1371a54c34aa",
+        "c2c75e86e3f0c6cdcef9633369616fca"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D25-direct",
+    "query": "点击量与消耗不一致怎么解释？",
+    "gold": [
+      [
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "42ba33a6517174d6822e9f37fba03e06",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+      ],
+      "H": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "R": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D25-paraphrase",
+    "query": "页面点击很多，账单却对不上，是为什么？",
+    "gold": [
+      [
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "42ba33a6517174d6822e9f37fba03e06",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "F": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ],
+      "H": [
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ],
+      "R": [
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "3dd3079a2d41ca64ceba0b9590124d99"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.0,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "D26-direct",
+    "query": "投放策略调整如何通过灰度实验比较效果？",
+    "gold": [
+      [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "F": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "H": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ],
+      "R": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D26-paraphrase",
+    "query": "怎样证明新投放策略比旧策略更赚钱？",
+    "gold": [
+      [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "F": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "H": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "R": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D27-direct",
+    "query": "广告配置、投放和效果模块怎样区分？",
+    "gold": [
+      [
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "a610a79d3d1febef995cca1678fcf6fc",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "529373b729f5e6296343516941938a0f",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "529373b729f5e6296343516941938a0f",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "a7be935852eaf24eb2f68cbf7061cd7c",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "R": [
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "a7be935852eaf24eb2f68cbf7061cd7c",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D27-paraphrase",
+    "query": "广告保存成功就说明已经投放并产生效果了吗？",
+    "gold": [
+      [
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "a610a79d3d1febef995cca1678fcf6fc",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "H": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "c2c75e86e3f0c6cdcef9633369616fca",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D28-direct",
+    "query": "投放调整前如何确认报表时效？",
+    "gold": [
+      [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "H": [
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "R": [
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D28-paraphrase",
+    "query": "报表还没更新，我现在就改预算合适吗？",
+    "gold": [
+      [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "F": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "H": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "R": [
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D29-direct",
+    "query": "广告请求失败的性能与可用性影响是什么？",
+    "gold": [
+      [
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "39ac23d9139254382a251f69d386000e",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "39ac23d9139254382a251f69d386000e",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "2267253aa3b02b9efe39fe30ed5e8188",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "39ac23d9139254382a251f69d386000e",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "2267253aa3b02b9efe39fe30ed5e8188",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D29-paraphrase",
+    "query": "接口老是超时会影响广告展示吗？",
+    "gold": [
+      [
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "39ac23d9139254382a251f69d386000e",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "39ac23d9139254382a251f69d386000e",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      "R": [
+        "39ac23d9139254382a251f69d386000e",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D30-direct",
+    "query": "分析广告业务数据需要确认什么访问范围？",
+    "gold": [
+      [
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ]
+    ],
+    "group": "direct",
+    "scope": "general",
+    "answerable": true,
+    "family": "871e5d36cdbd39b60b72e89371e725a8",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "D30-paraphrase",
+    "query": "能把别的品牌的广告数据拿来给我分析吗？",
+    "gold": [
+      [
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ]
+    ],
+    "group": "paraphrase",
+    "scope": "general",
+    "answerable": true,
+    "family": "871e5d36cdbd39b60b72e89371e725a8",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "e1c238e54eb04b18f2ca8517412620da",
+        "871e5d36cdbd39b60b72e89371e725a8"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "M02",
+    "query": "CPM和固定CPC分别怎样计算费用？",
+    "gold": [
+      [
+        "bb31781fbacb4164ceb072da54f009cd"
+      ],
+      [
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "bb31781fbacb4164ceb072da54f009cd",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "69caf3676702594c9e0296942f26ead7",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "F": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "69caf3676702594c9e0296942f26ead7",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "H": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "bb31781fbacb4164ceb072da54f009cd",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "R": [
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "e3f770b68b05cb25e5e042b013bed981",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "bb31781fbacb4164ceb072da54f009cd",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "M03",
+    "query": "DSP和SSP各服务谁，网站又该怎么选择广告渠道？",
+    "gold": [
+      [
+        "9ab6213f4685b42ea848be8ef51953b8"
+      ],
+      [
+        "248c6f5380e710f18c8fe02f703d8af7"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "248c6f5380e710f18c8fe02f703d8af7",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ],
+      "R": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "248c6f5380e710f18c8fe02f703d8af7",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "a610a79d3d1febef995cca1678fcf6fc"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "M04",
+    "query": "广告配置保存后没有展示，要检查索引同步和投放链路哪些环节？",
+    "gold": [
+      [
+        "217c58ecd9f09ffbfec7fde9b8a543db"
+      ],
+      [
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "217c58ecd9f09ffbfec7fde9b8a543db",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "39ac23d9139254382a251f69d386000e",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "39ac23d9139254382a251f69d386000e",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "M07",
+    "query": "调整策略前如何确认报表时效，再用灰度实验评估效果？",
+    "gold": [
+      [
+        "1b494ecc8c8b161fe74b95b14e4915aa"
+      ],
+      [
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "1b494ecc8c8b161fe74b95b14e4915aa",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "H": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "1b494ecc8c8b161fe74b95b14e4915aa",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "M08",
+    "query": "分别解释品牌广告与效果广告的评价目标，以及页面广告负载的权衡。",
+    "gold": [
+      [
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      [
+        "529373b729f5e6296343516941938a0f"
+      ]
+    ],
+    "group": "multi_document",
+    "scope": "general",
+    "answerable": true,
+    "family": "529373b729f5e6296343516941938a0f",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "529373b729f5e6296343516941938a0f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ],
+      "R": [
+        "529373b729f5e6296343516941938a0f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q03",
+    "query": "展示广告如何安排利益点、界面截图和按钮？",
+    "gold": [
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q04",
+    "query": "哪份资料同时介绍搜索、户外和交通广告？",
+    "gold": [
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "H": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "529373b729f5e6296343516941938a0f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5"
+      ],
+      "R": [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "529373b729f5e6296343516941938a0f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q05",
+    "query": "找深紫背景配橙色试用按钮的展示广告参考",
+    "gold": [
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "39ac23d9139254382a251f69d386000e",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "39ac23d9139254382a251f69d386000e",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "H": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "39ac23d9139254382a251f69d386000e"
+      ],
+      "R": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "39ac23d9139254382a251f69d386000e"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q09",
+    "query": "多邻国怎样把猫头鹰角色与用户情绪关联？",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "F": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "H": [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "529373b729f5e6296343516941938a0f",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "529373b729f5e6296343516941938a0f",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q10",
+    "query": "找两只绿色猫头鹰配红色大标题的封面",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+      ],
+      "F": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+      ],
+      "H": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "R": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q11",
+    "query": "品牌IP如何通过玩梗和系列故事鼓励用户参与？",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "F": [
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "H": [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ],
+      "R": [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q12",
+    "query": "广告主建计划之前如何准备预算和用户画像？",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+      ],
+      "H": [
+        "529373b729f5e6296343516941938a0f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "529373b729f5e6296343516941938a0f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "b0f408f9c606286235c902c3ed7825bb",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q13",
+    "query": "哪里介绍投放时间地域以及竞价参数的准备？",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ],
+      "F": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+      ],
+      "H": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ],
+      "R": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q14",
+    "query": "奶茶门店预算教学例子在哪份投放资料里？",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "F": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+      ],
+      "H": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "217c58ecd9f09ffbfec7fde9b8a543db",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q15",
+    "query": "营销知识库怎样连接品牌语气、证据和反馈？",
+    "gold": [
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "42ba33a6517174d6822e9f37fba03e06",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ],
+      "R": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "b0f408f9c606286235c902c3ed7825bb"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q16",
+    "query": "找黑底的文件组织人工审阅反馈回写流程图",
+    "gold": [
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ],
+      "F": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ],
+      "H": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ],
+      "R": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "a7be935852eaf24eb2f68cbf7061cd7c"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q17",
+    "query": "历史营销报告怎么与视觉参考和品牌手册关联？",
+    "gold": [
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ],
+      "F": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "d85b97a157ef8c68d6b8ff2244f6a556",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ],
+      "H": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ],
+      "R": [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "F": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q21",
+    "query": "同时找绿色猫头鹰封面和紫色橙按钮展示广告",
+    "gold": [
+      [
+        "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+        "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+        "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+      ],
+      [
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+      ]
+    ],
+    "group": "external-multi",
+    "scope": "external",
+    "answerable": true,
+    "family": "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "F": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "H": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f"
+      ],
+      "R": [
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "529373b729f5e6296343516941938a0f"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "H": {
+        "recall": 0.5,
+        "complete": 0
+      },
+      "R": {
+        "recall": 0.5,
+        "complete": 0
+      }
+    }
+  },
+  {
+    "id": "external-q23",
+    "query": "同时参考广告主投放准备和品牌知识库反馈组织",
+    "gold": [
+      [
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ],
+      [
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f"
+      ]
+    ],
+    "group": "external-multi",
+    "scope": "external",
+    "answerable": true,
+    "family": "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ],
+      "F": [
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "92818ebeefb0094fdc24c1794448e2d8"
+      ],
+      "H": [
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ],
+      "R": [
+        "529373b729f5e6296343516941938a0f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "F": {
+        "recall": 0.0,
+        "complete": 0
+      },
+      "H": {
+        "recall": 1.0,
+        "complete": 1
+      },
+      "R": {
+        "recall": 1.0,
+        "complete": 1
+      }
+    }
+  },
+  {
+    "id": "external-q24",
+    "query": "当前商品真实销量是多少？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "F": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "7d840169fc8d6972df9566a5a87096c5",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "60c2f0a39c9428aca0776fa8d622b735",
+        "871e5d36cdbd39b60b72e89371e725a8",
+        "7db8cbfa12ca33152d58efcf66e30a89"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  },
+  {
+    "id": "external-q25",
+    "query": "这条视频的口播逐字稿是什么？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "F": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "H": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ],
+      "R": [
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "e58a7af9d3ace2d3aa5e69ea052baf80"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  },
+  {
+    "id": "external-q26",
+    "query": "本项目2026年十月真实ROAS是多少？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012"
+      ],
+      "H": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ],
+      "R": [
+        "4f1018ec59af4e254f922736ed816cdd",
+        "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "a610a79d3d1febef995cca1678fcf6fc",
+        "d85b97a157ef8c68d6b8ff2244f6a556"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  },
+  {
+    "id": "external-q27",
+    "query": "汽车广告里的优惠今天是否还有效？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "e1c238e54eb04b18f2ca8517412620da"
+      ],
+      "H": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ],
+      "R": [
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+        "42ba33a6517174d6822e9f37fba03e06"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  },
+  {
+    "id": "external-q28",
+    "query": "私有课程完整教学正文是什么？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "H": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ],
+      "R": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+        "60c2f0a39c9428aca0776fa8d622b735"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  },
+  {
+    "id": "external-q29",
+    "query": "这款牙刷抗菌率检测报告是什么？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "F": [
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "f02b1e4ba6ae74192e9be872a223c752"
+      ],
+      "H": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "R": [
+        "9ab6213f4685b42ea848be8ef51953b8",
+        "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  },
+  {
+    "id": "external-q30",
+    "query": "我们的广告预算最优出价精确是多少？",
+    "gold": [],
+    "group": "external-single",
+    "scope": "external",
+    "answerable": false,
+    "family": "negative",
+    "split": "test",
+    "rankings": {
+      "A1": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "F": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+        "4f1018ec59af4e254f922736ed816cdd"
+      ],
+      "H": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ],
+      "R": [
+        "e1c238e54eb04b18f2ca8517412620da",
+        "f02b1e4ba6ae74192e9be872a223c752",
+        "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+        "1524dbb507e0aa2e2e6af07da0c62012",
+        "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+      ]
+    },
+    "metrics": {
+      "A1": {
+        "recall": null,
+        "complete": null
+      },
+      "F": {
+        "recall": null,
+        "complete": null
+      },
+      "H": {
+        "recall": null,
+        "complete": null
+      },
+      "R": {
+        "recall": null,
+        "complete": null
+      }
+    }
+  }
+]

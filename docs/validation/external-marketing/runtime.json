@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "scope": "running Koa -> authenticated Python -> real Chroma; image bytes verified against archive; no model generation request",
+  "search_status": "retrieved",
+  "matches": [
+    {
+      "title": "2024 年13 个领先广告创意",
+      "url": "https://zhuanlan.zhihu.com/p/703076279",
+      "kind": "image"
+    }
+  ],
+  "image_mime": "image/jpeg",
+  "image_sha256": "e0b803e1336f1f8f055871febf21c36f0ddd857a8437c9cd0f2f535bd28ddae4",
+  "unauthorized_status": 401
+}

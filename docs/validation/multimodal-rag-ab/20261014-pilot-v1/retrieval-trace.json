@@ -1,0 +1,734 @@
+[
+  {
+    "id": "q00",
+    "query": "如何让达人内容与后续客户承接配合？",
+    "gold_sources": [
+      "zhihu-650576876"
+    ],
+    "family": "zhihu-650576876",
+    "answerable": true,
+    "baseline": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "fused": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ]
+  },
+  {
+    "id": "q01",
+    "query": "有没有从保险服饰和本地服务总结创意的方法？",
+    "gold_sources": [
+      "zhihu-650576876"
+    ],
+    "family": "zhihu-650576876",
+    "answerable": true,
+    "baseline": [
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "expanded": [
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+    ],
+    "fused": [
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+    ]
+  },
+  {
+    "id": "q02",
+    "query": "用户看完广告后怎么通过私信和账号内容承接？",
+    "gold_sources": [
+      "zhihu-650576876"
+    ],
+    "family": "zhihu-650576876",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ]
+  },
+  {
+    "id": "q03",
+    "query": "展示广告如何安排利益点、界面截图和按钮？",
+    "gold_sources": [
+      "zhihu-703076279"
+    ],
+    "family": "zhihu-703076279",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ]
+  },
+  {
+    "id": "q04",
+    "query": "哪份资料同时介绍搜索、户外和交通广告？",
+    "gold_sources": [
+      "zhihu-703076279"
+    ],
+    "family": "zhihu-703076279",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ]
+  },
+  {
+    "id": "q05",
+    "query": "找深紫背景配橙色试用按钮的展示广告参考",
+    "gold_sources": [
+      "zhihu-703076279"
+    ],
+    "family": "zhihu-703076279",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ]
+  },
+  {
+    "id": "q06",
+    "query": "广告可以拆成哪些素材组件？",
+    "gold_sources": [
+      "zhihu-1932929206834140237"
+    ],
+    "family": "zhihu-1932929206834140237",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ]
+  },
+  {
+    "id": "q07",
+    "query": "找用汽车案例讲图片视频文案和落地页组合的资料",
+    "gold_sources": [
+      "zhihu-1932929206834140237"
+    ],
+    "family": "zhihu-1932929206834140237",
+    "answerable": true,
+    "baseline": [
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ],
+    "expanded": [
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+    ],
+    "fused": [
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ]
+  },
+  {
+    "id": "q08",
+    "query": "哪张图左边是蔚来广告右边是广告组件拆解？",
+    "gold_sources": [
+      "zhihu-1932929206834140237"
+    ],
+    "family": "zhihu-1932929206834140237",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ]
+  },
+  {
+    "id": "q09",
+    "query": "多邻国怎样把猫头鹰角色与用户情绪关联？",
+    "gold_sources": [
+      "xhs-69d858be000000001a0323a1"
+    ],
+    "family": "xhs-69d858be000000001a0323a1",
+    "answerable": true,
+    "baseline": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "expanded": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+      "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485"
+    ],
+    "fused": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ]
+  },
+  {
+    "id": "q10",
+    "query": "找两只绿色猫头鹰配红色大标题的封面",
+    "gold_sources": [
+      "xhs-69d858be000000001a0323a1"
+    ],
+    "family": "xhs-69d858be000000001a0323a1",
+    "answerable": true,
+    "baseline": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "fused": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ]
+  },
+  {
+    "id": "q11",
+    "query": "品牌IP如何通过玩梗和系列故事鼓励用户参与？",
+    "gold_sources": [
+      "xhs-69d858be000000001a0323a1"
+    ],
+    "family": "xhs-69d858be000000001a0323a1",
+    "answerable": true,
+    "baseline": [
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "expanded": [
+      "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "fused": [
+      "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ]
+  },
+  {
+    "id": "q12",
+    "query": "广告主建计划之前如何准备预算和用户画像？",
+    "gold_sources": [
+      "xhs-693992bb000000001e030480"
+    ],
+    "family": "xhs-693992bb000000001e030480",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ]
+  },
+  {
+    "id": "q13",
+    "query": "哪里介绍投放时间地域以及竞价参数的准备？",
+    "gold_sources": [
+      "xhs-693992bb000000001e030480"
+    ],
+    "family": "xhs-693992bb000000001e030480",
+    "answerable": true,
+    "baseline": [
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "expanded": [
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "fused": [
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ]
+  },
+  {
+    "id": "q14",
+    "query": "奶茶门店预算教学例子在哪份投放资料里？",
+    "gold_sources": [
+      "xhs-693992bb000000001e030480"
+    ],
+    "family": "xhs-693992bb000000001e030480",
+    "answerable": true,
+    "baseline": [
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+    ],
+    "fused": [
+      "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+    ]
+  },
+  {
+    "id": "q15",
+    "query": "营销知识库怎样连接品牌语气、证据和反馈？",
+    "gold_sources": [
+      "x-2098850243760808268"
+    ],
+    "family": "x-2098850243760808268",
+    "answerable": true,
+    "baseline": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "fused": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ]
+  },
+  {
+    "id": "q16",
+    "query": "找黑底的文件组织人工审阅反馈回写流程图",
+    "gold_sources": [
+      "x-2098850243760808268"
+    ],
+    "family": "x-2098850243760808268",
+    "answerable": true,
+    "baseline": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+      "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ],
+    "fused": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ]
+  },
+  {
+    "id": "q17",
+    "query": "历史营销报告怎么与视觉参考和品牌手册关联？",
+    "gold_sources": [
+      "x-2098850243760808268"
+    ],
+    "family": "x-2098850243760808268",
+    "answerable": true,
+    "baseline": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "fused": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ]
+  },
+  {
+    "id": "q18",
+    "query": "如何从开头痛点受众差异形式变体检查广告创意？",
+    "gold_sources": [
+      "x-2087282914728046825"
+    ],
+    "family": "x-2087282914728046825",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ]
+  },
+  {
+    "id": "q19",
+    "query": "找米白橙色四列课程卡片宣传图",
+    "gold_sources": [
+      "x-2087282914728046825"
+    ],
+    "family": "x-2087282914728046825",
+    "answerable": true,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ],
+    "expanded": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ]
+  },
+  {
+    "id": "q20",
+    "query": "给创意简报建立六项评估检查表用什么资料？",
+    "gold_sources": [
+      "x-2087282914728046825"
+    ],
+    "family": "x-2087282914728046825",
+    "answerable": true,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "fused": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ]
+  },
+  {
+    "id": "q21",
+    "query": "同时找绿色猫头鹰封面和紫色橙按钮展示广告",
+    "gold_sources": [
+      "xhs-69d858be000000001a0323a1",
+      "zhihu-703076279"
+    ],
+    "family": "cross-source",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ]
+  },
+  {
+    "id": "q22",
+    "query": "给我广告组件拆解与创意六维检查表两份资料",
+    "gold_sources": [
+      "zhihu-1932929206834140237",
+      "x-2087282914728046825"
+    ],
+    "family": "cross-source",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ]
+  },
+  {
+    "id": "q23",
+    "query": "同时参考广告主投放准备和品牌知识库反馈组织",
+    "gold_sources": [
+      "xhs-693992bb000000001e030480",
+      "x-2098850243760808268"
+    ],
+    "family": "cross-source",
+    "answerable": true,
+    "baseline": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "expanded": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "fused": [
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ]
+  },
+  {
+    "id": "q24",
+    "query": "当前商品真实销量是多少？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ]
+  },
+  {
+    "id": "q25",
+    "query": "这条视频的口播逐字稿是什么？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9"
+    ],
+    "expanded": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ]
+  },
+  {
+    "id": "q26",
+    "query": "本项目2026年十月真实ROAS是多少？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ]
+  },
+  {
+    "id": "q27",
+    "query": "汽车广告里的优惠今天是否还有效？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5"
+    ]
+  },
+  {
+    "id": "q28",
+    "query": "私有课程完整教学正文是什么？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "fused": [
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ]
+  },
+  {
+    "id": "q29",
+    "query": "这款牙刷抗菌率检测报告是什么？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ],
+    "expanded": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4",
+      "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee"
+    ]
+  },
+  {
+    "id": "q30",
+    "query": "我们的广告预算最优出价精确是多少？",
+    "gold_sources": [],
+    "family": "missing",
+    "answerable": false,
+    "baseline": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "expanded": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ],
+    "fused": [
+      "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce",
+      "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6",
+      "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+    ]
+  }
+]

@@ -223,6 +223,7 @@ export async function listPage(raw: any, principal: string) {
         price: Number(row.price),
         clicks: Number(row.clicks),
         videos: decode(row.videos) || [],
+        images: decode(row.images) || [],
         version: row.version,
         video_count: Number(row.video_count),
       };

@@ -1,0 +1,58 @@
+{
+  "vectors": 100000,
+  "parent_vectors": 36000000,
+  "queries": 200,
+  "repeats": 2,
+  "backend": "hnswlib direct, fixed existing index, warm RAM, one query at a time",
+  "arms": {
+    "exact": {
+      "n": 400,
+      "p50_ms": 6.034750549588352,
+      "p95_ms": 14.416786853689697,
+      "neighbor_recall_at5": 1.0
+    },
+    "10": {
+      "n": 400,
+      "p50_ms": 0.404083461035043,
+      "p95_ms": 0.9967087360564606,
+      "neighbor_recall_at5": 0.045
+    },
+    "64": {
+      "n": 400,
+      "p50_ms": 1.9236039952374995,
+      "p95_ms": 4.199222917668518,
+      "neighbor_recall_at5": 0.16
+    },
+    "256": {
+      "n": 400,
+      "p50_ms": 6.535958498716354,
+      "p95_ms": 13.412889861501741,
+      "neighbor_recall_at5": 0.337
+    },
+    "1024": {
+      "n": 400,
+      "p50_ms": 21.351104020141065,
+      "p95_ms": 42.913643468636856,
+      "neighbor_recall_at5": 0.6439999999999999
+    },
+    "4096": {
+      "n": 400,
+      "p50_ms": 57.353520940523595,
+      "p95_ms": 112.16862973524258,
+      "neighbor_recall_at5": 0.9390000000000001
+    },
+    "16384": {
+      "n": 400,
+      "p50_ms": 101.513082976453,
+      "p95_ms": 199.0218413528055,
+      "neighbor_recall_at5": 1.0
+    }
+  },
+  "vector_sha256": "c9624c95891bf4dc2b9d280bfb08a3c780b1e6abfd01e5900ace7a6a69b8eb31",
+  "query_sha256": "72c0daf5c5206c9f5191932d3b30214dd5ea30779f03c548482d26c3c5066b26",
+  "limits": [
+    "100k subset of 36M, not full 36M ANN performance.",
+    "Nearest-neighbor agreement, not semantic or multimodal recall.",
+    "Frozen index build reused; ef/query/order randomized, but no server or concurrent-user benchmark."
+  ]
+}

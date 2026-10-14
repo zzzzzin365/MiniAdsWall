@@ -1,0 +1,10 @@
+{
+  "status": "answered",
+  "answer": "是，图中上方橙黄珠子顶部有绿色叶状结构（叶冠）。",
+  "facts": {
+    "green_leaf_crown": true
+  },
+  "source_ids": [
+    "rainbow"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "source_id": "two",
+      "observations": [
+        "黑色方形台座上放置着一串由苹果造型珠子组成的手串，手串包含浅蓝色、黄色、红色、粉色等多种颜色的珠子"
+      ],
+      "facts": {
+        "blue_on_stand": true
+      }
+    }
+  ],
+  "missing": []
+}

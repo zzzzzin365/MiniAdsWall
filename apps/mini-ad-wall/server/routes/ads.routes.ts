@@ -23,7 +23,7 @@ router.get('/api/ads/:id', async ctx => {
     if(!ctx.state.principal) ctx.throw(401);
     const rows = await withAdsConnection(async c => (await c.execute<RowDataPacket[]>(adProjection+' WHERE a.id=?',[ctx.params.id]))[0]);
     if(!rows.length) ctx.throw(404);
-    const row=rows[0]; ctx.body={...row,price:Number(row.price),clicks:Number(row.clicks),videos:typeof row.videos==='string'?JSON.parse(row.videos):row.videos};
+    const row=rows[0]; ctx.body={...row,price:Number(row.price),clicks:Number(row.clicks),videos:typeof row.videos==='string'?JSON.parse(row.videos):row.videos,images:typeof row.images==='string'?JSON.parse(row.images):row.images};
 });
 router.get('/api/ads', adsController.getAds);
 router.post('/api/ads', adsController.createAd);

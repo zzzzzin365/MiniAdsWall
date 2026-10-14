@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "source_id": "gift",
+      "observations": [
+        "手串被放置在人的手掌上展示"
+      ],
+      "facts": {
+        "display_surface": "手掌"
+      }
+    },
+    {
+      "source_id": "two",
+      "observations": [
+        "手串被放置在木质台面上，其中一个手串被放置在黑色方形底座上展示"
+      ],
+      "facts": {
+        "display_surface": "木质台面，黑色方形底座"
+      }
+    },
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "手串被放置在人的手掌上展示"
+      ],
+      "facts": {
+        "display_surface": "手掌"
+      }
+    }
+  ],
+  "missing": [
+    "无法确定“一个适合送朋友的礼物”对应的具体是哪张图中的手串，无法确定该手串的展示表面"
+  ]
+}

@@ -55,3 +55,6 @@ docker-compose(1).yml
 
 # Rebuildable advertising index snapshots
 recall-snapshots/
+
+# Oversized generated HNSW index (exceeds GitHub 100MB limit)
+docs/validation/multimodal-rag-ab/20261014-pilot-v1/synthetic-hnsw.bin

@@ -1,0 +1,463 @@
+{
+  "cases": [
+    {
+      "id": "fresh-00",
+      "query": "两条广告报价相同，哪条可能排在更前面？",
+      "gold": [
+        [
+          "7db8cbfa12ca33152d58efcf66e30a89"
+        ]
+      ],
+      "scope": "general",
+      "family": "广告排序规则",
+      "answerable": true
+    },
+    {
+      "id": "fresh-01",
+      "query": "为什么仅仅提高报价不一定能解决广告位置问题？",
+      "gold": [
+        [
+          "7db8cbfa12ca33152d58efcf66e30a89"
+        ]
+      ],
+      "scope": "general",
+      "family": "广告排序规则",
+      "answerable": true
+    },
+    {
+      "id": "fresh-02",
+      "query": "点击已经不错，调整价格时应怎样避免一下子加得太多？",
+      "gold": [
+        [
+          "e1c238e54eb04b18f2ca8517412620da"
+        ]
+      ],
+      "scope": "general",
+      "family": "出价优化原则",
+      "answerable": true
+    },
+    {
+      "id": "fresh-03",
+      "query": "报价很贵却没人点，下一步应该检查什么？",
+      "gold": [
+        [
+          "e1c238e54eb04b18f2ca8517412620da"
+        ]
+      ],
+      "scope": "general",
+      "family": "出价优化原则",
+      "answerable": true
+    },
+    {
+      "id": "fresh-04",
+      "query": "同时换封面、标题和预算之后，怎样判断是哪项改动起作用？",
+      "gold": [
+        [
+          "1524dbb507e0aa2e2e6af07da0c62012"
+        ]
+      ],
+      "scope": "general",
+      "family": "素材与 A/B 测试",
+      "answerable": true
+    },
+    {
+      "id": "fresh-05",
+      "query": "只有一条视频时能否立即判定哪种创意更有效？",
+      "gold": [
+        [
+          "1524dbb507e0aa2e2e6af07da0c62012"
+        ]
+      ],
+      "scope": "general",
+      "family": "素材与 A/B 测试",
+      "answerable": true
+    },
+    {
+      "id": "fresh-06",
+      "query": "标题除了提产品名字，还应该交代哪些信息？",
+      "gold": [
+        [
+          "7d840169fc8d6972df9566a5a87096c5"
+        ]
+      ],
+      "scope": "general",
+      "family": "广告文案优化",
+      "answerable": true
+    },
+    {
+      "id": "fresh-07",
+      "query": "怎样从购买者的烦恼和使用场景组织不同文案？",
+      "gold": [
+        [
+          "7d840169fc8d6972df9566a5a87096c5"
+        ]
+      ],
+      "scope": "general",
+      "family": "广告文案优化",
+      "answerable": true
+    },
+    {
+      "id": "fresh-08",
+      "query": "互动总数很高能否证明购买转化也很好？",
+      "gold": [
+        [
+          "f02b1e4ba6ae74192e9be872a223c752"
+        ]
+      ],
+      "scope": "general",
+      "family": "数据看板解读",
+      "answerable": true
+    },
+    {
+      "id": "fresh-09",
+      "query": "看广告报价和名次时还应联合观察什么数据？",
+      "gold": [
+        [
+          "f02b1e4ba6ae74192e9be872a223c752"
+        ]
+      ],
+      "scope": "general",
+      "family": "数据看板解读",
+      "answerable": true
+    },
+    {
+      "id": "fresh-10",
+      "query": "没有曝光和购买成本，能否保证这次投放赚钱？",
+      "gold": [
+        [
+          "4f1018ec59af4e254f922736ed816cdd"
+        ]
+      ],
+      "scope": "general",
+      "family": "广告运营风险边界",
+      "answerable": true
+    },
+    {
+      "id": "fresh-11",
+      "query": "制作推广文案时能否为了点击率加入没有依据的承诺？",
+      "gold": [
+        [
+          "4f1018ec59af4e254f922736ed816cdd"
+        ]
+      ],
+      "scope": "general",
+      "family": "广告运营风险边界",
+      "answerable": true
+    },
+    {
+      "id": "fresh-12",
+      "query": "吸引人看完达人视频后，客户接下来应由哪些入口承接？",
+      "gold": [
+        [
+          "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+        ]
+      ],
+      "scope": "external",
+      "family": "zhihu-650576876",
+      "answerable": true
+    },
+    {
+      "id": "fresh-13",
+      "query": "保险或门店的广告内容如何与后续账号运营配合？",
+      "gold": [
+        [
+          "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+        ]
+      ],
+      "scope": "external",
+      "family": "zhihu-650576876",
+      "answerable": true
+    },
+    {
+      "id": "fresh-14",
+      "query": "哪份案例讨论把试用入口做成明显的橙色按钮？",
+      "gold": [
+        [
+          "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+          "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+        ]
+      ],
+      "scope": "external",
+      "family": "zhihu-703076279",
+      "answerable": true
+    },
+    {
+      "id": "fresh-15",
+      "query": "我想比较车站或车身上的广告与线上展示广告，参考哪份资料？",
+      "gold": [
+        [
+          "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+          "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+        ]
+      ],
+      "scope": "external",
+      "family": "zhihu-703076279",
+      "answerable": true
+    },
+    {
+      "id": "fresh-16",
+      "query": "一条完整推广广告，除了图片还包括哪些组成部分？",
+      "gold": [
+        [
+          "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+          "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+        ]
+      ],
+      "scope": "external",
+      "family": "zhihu-1932929206834140237",
+      "answerable": true
+    },
+    {
+      "id": "fresh-17",
+      "query": "找汽车广告旁边配有组成要素说明的示意图出处",
+      "gold": [
+        [
+          "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+          "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+        ]
+      ],
+      "scope": "external",
+      "family": "zhihu-1932929206834140237",
+      "answerable": true
+    },
+    {
+      "id": "fresh-18",
+      "query": "哪个案例把语言学习吉祥物做成绿色角色的故事？",
+      "gold": [
+        [
+          "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+          "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+          "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+        ]
+      ],
+      "scope": "external",
+      "family": "xhs-69d858be000000001a0323a1",
+      "answerable": true
+    },
+    {
+      "id": "fresh-19",
+      "query": "用品牌角色讲故事并引导大家玩梗，哪份资料能作参考？",
+      "gold": [
+        [
+          "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+          "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+          "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+        ]
+      ],
+      "scope": "external",
+      "family": "xhs-69d858be000000001a0323a1",
+      "answerable": true
+    },
+    {
+      "id": "fresh-20",
+      "query": "创建投放前，需要提前确定受众和花钱范围，参考什么教程？",
+      "gold": [
+        [
+          "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+        ]
+      ],
+      "scope": "external",
+      "family": "xhs-693992bb000000001e030480",
+      "answerable": true
+    },
+    {
+      "id": "fresh-21",
+      "query": "哪份资料使用饮品店来解释投放计划准备？",
+      "gold": [
+        [
+          "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+        ]
+      ],
+      "scope": "external",
+      "family": "xhs-693992bb000000001e030480",
+      "answerable": true
+    },
+    {
+      "id": "fresh-22",
+      "query": "找把人工审核意见再写回品牌营销资料的组织方案",
+      "gold": [
+        [
+          "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+          "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+        ]
+      ],
+      "scope": "external",
+      "family": "x-2098850243760808268",
+      "answerable": true
+    },
+    {
+      "id": "fresh-23",
+      "query": "过去的营销报告和品牌表达风格怎样放进同一套资料流程？",
+      "gold": [
+        [
+          "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+          "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+        ]
+      ],
+      "scope": "external",
+      "family": "x-2098850243760808268",
+      "answerable": true
+    },
+    {
+      "id": "fresh-24",
+      "query": "找能够逐项检查广告受众和形式变化的简报方法",
+      "gold": [
+        [
+          "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+          "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+        ]
+      ],
+      "scope": "external",
+      "family": "x-2087282914728046825",
+      "answerable": true
+    },
+    {
+      "id": "fresh-25",
+      "query": "哪份参考有浅色底搭配暖橙色的四列课程展示？",
+      "gold": [
+        [
+          "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+          "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+        ]
+      ],
+      "scope": "external",
+      "family": "x-2087282914728046825",
+      "answerable": true
+    },
+    {
+      "id": "fresh-26",
+      "query": "同时需要吉祥物系列故事和客户看完内容后的承接方法",
+      "gold": [
+        [
+          "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+          "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+          "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+        ],
+        [
+          "d46192870b920a20f5195ecdfe5328b4b49a14277ae0cbb04665a90a26ac1b51"
+        ]
+      ],
+      "scope": "external",
+      "family": "cross-source",
+      "answerable": true
+    },
+    {
+      "id": "fresh-27",
+      "query": "想对照广告组成要素示意图和创意简报检查表",
+      "gold": [
+        [
+          "158f6db32b09c93e5d5f93f9d1481553bfdab6be48ddce61853156f113ce2bd5",
+          "a9c1356a76e4064d9b1f725cdf983eacf453c1ed318c595780310cb19b5efeb6"
+        ],
+        [
+          "92a4d5cc90ef5958935a359d75acc07e46149ea8aa8727f8b14e5b6030e97d8b",
+          "bc051d138aa7b0f856441da1390d3ad21fbf862ea42c7b2a73ee10ae1a0e1dce"
+        ]
+      ],
+      "scope": "external",
+      "family": "cross-source",
+      "answerable": true
+    },
+    {
+      "id": "fresh-28",
+      "query": "找投放前预算准备与人工审核反馈回写两方面的资料",
+      "gold": [
+        [
+          "72d7ef1a21ca0497b93953ded109e804286342e0ba8422d3fe14d4d995d4f3b3"
+        ],
+        [
+          "5a7a86358d27ca5d2e9b26770eb893766b1783ba9b6c4815d434ff3c3e11b28f",
+          "2f99a1d8881664000f2564b76726256a4795f021b622f42bcc60c106ae6a12b4"
+        ]
+      ],
+      "scope": "external",
+      "family": "cross-source",
+      "answerable": true
+    },
+    {
+      "id": "fresh-29",
+      "query": "需要线上展示广告按钮布局和绿色品牌角色封面两种案例",
+      "gold": [
+        [
+          "735fc5b77a9269ed8bdea1f298ed0a8183847ac5c1edf482dad621f61000a3a9",
+          "7e72f9f59d1c2b61226094ebdf1e5f48d02fe541ef91dbf26c1e7a26db72108f"
+        ],
+        [
+          "538fa1f7be7c636503ce0c222051387e9e0a601af59dea6a3458698d2bea5485",
+          "9f12e73aa9d4a3ea6109b7275f98276a4c36ae98003d5adbc95fa4177bb057ee",
+          "d78b895ef30c77dbbff993407ffc974b399ca5755e22ad7641345383042a882f"
+        ]
+      ],
+      "scope": "external",
+      "family": "cross-source",
+      "answerable": true
+    },
+    {
+      "id": "fresh-30",
+      "query": "我家商品今天真实售出了多少件？",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-31",
+      "query": "把没有收录的短视频声音转成逐字稿",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-32",
+      "query": "给出品牌后台今天的成交收入",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-33",
+      "query": "公开预览里没有显示的课程付费正文是什么？",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-34",
+      "query": "广告案例里的促销现在仍在执行吗？",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-35",
+      "query": "告诉我这个月实际投放投入产出比",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-36",
+      "query": "证明这款商品具备某项未提供报告的功效",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    },
+    {
+      "id": "fresh-37",
+      "query": "算出本店当前保证盈利的最优广告报价",
+      "gold": [],
+      "scope": "negative",
+      "family": "missing",
+      "answerable": false
+    }
+  ],
+  "label_method": "single author derives gold from archived public summaries, no model judge",
+  "scope": "new query wording on existing sources; weight previously frozen, no new tuning",
+  "corpus_sha256": "5406df5763382c8add176d8089104cc5b4998729f3a3e165d6456fb9dd6054c9"
+}

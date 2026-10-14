@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "source_id": "rainbow",
+      "observations": [
+        "该手串由多种不同造型、不同颜色的水果造型珠子串成，被放置在人的手掌上"
+      ],
+      "facts": {
+        "first_surface": "人的手掌"
+      }
+    },
+    {
+      "source_id": "car",
+      "observations": [
+        "该红色苹果造型挂饰悬挂在汽车内，背景可见汽车内饰、车外的夜景环境"
+      ],
+      "facts": {
+        "second_scene": "汽车内"
+      }
+    }
+  ],
+  "missing": []
+}

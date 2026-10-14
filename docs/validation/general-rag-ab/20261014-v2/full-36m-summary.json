@@ -1,0 +1,246 @@
+{
+  "status": "completed",
+  "synthetic": true,
+  "actual_vectors_scanned_per_pass": 36000000,
+  "queries": 8,
+  "source_float32_bytes": 55296000000,
+  "binary_bytes": 1728000000,
+  "binary_build_seconds": 131.7486442090012,
+  "exact_batch_seconds": 114.63971670798492,
+  "binary_coarse_batch_seconds": 52.74515312502626,
+  "arms": {
+    "100": {
+      "refine_candidates": 100,
+      "refine_batch_seconds": 0.2710086660226807,
+      "total_batch_seconds": 53.016161791048944,
+      "neighbor_recall_at5": 0.22500000000000003,
+      "per_query_recall": [
+        0.4,
+        0.2,
+        0.2,
+        0.4,
+        0.2,
+        0.2,
+        0.2,
+        0.0
+      ],
+      "top5_ids": [
+        [
+          0,
+          31241524,
+          1356699,
+          15376790,
+          18361606
+        ],
+        [
+          11999999,
+          32377991,
+          6256721,
+          9188601,
+          11486069
+        ],
+        [
+          23999999,
+          34565105,
+          23278543,
+          2561733,
+          30129536
+        ],
+        [
+          35999999,
+          7914970,
+          8807696,
+          25018326,
+          34767299
+        ],
+        [
+          812509,
+          31041568,
+          23155250,
+          13955650,
+          25857680
+        ],
+        [
+          13038793,
+          34451696,
+          10068846,
+          677387,
+          33816384
+        ],
+        [
+          31259612,
+          27537234,
+          32257192,
+          14155521,
+          8884992
+        ],
+        [
+          4650536,
+          15962783,
+          8554920,
+          26803273,
+          30291140
+        ]
+      ],
+      "exact_vs_binary_batch_speedup": 2.162354135703205
+    },
+    "1000": {
+      "refine_candidates": 1000,
+      "refine_batch_seconds": 1.792366125038825,
+      "total_batch_seconds": 54.53751925006509,
+      "neighbor_recall_at5": 0.475,
+      "per_query_recall": [
+        0.6,
+        1.0,
+        0.6,
+        0.6,
+        0.4,
+        0.2,
+        0.4,
+        0.0
+      ],
+      "top5_ids": [
+        [
+          0,
+          23743602,
+          31241524,
+          368033,
+          1356699
+        ],
+        [
+          11999999,
+          32195104,
+          10241207,
+          8325046,
+          23685502
+        ],
+        [
+          23999999,
+          29063636,
+          35392496,
+          26981188,
+          4313686
+        ],
+        [
+          35999999,
+          7914970,
+          13126632,
+          625729,
+          896871
+        ],
+        [
+          18793278,
+          812509,
+          31041568,
+          35743035,
+          4167027
+        ],
+        [
+          13038793,
+          28629648,
+          33512606,
+          8319412,
+          34451696
+        ],
+        [
+          31259612,
+          14027470,
+          27537234,
+          19756546,
+          32257192
+        ],
+        [
+          202817,
+          26418395,
+          3327032,
+          1521662,
+          30332648
+        ]
+      ],
+      "exact_vs_binary_batch_speedup": 2.1020339444179634
+    },
+    "10000": {
+      "refine_candidates": 10000,
+      "refine_batch_seconds": 13.287763833999634,
+      "total_batch_seconds": 66.0329169590259,
+      "neighbor_recall_at5": 0.625,
+      "per_query_recall": [
+        1.0,
+        1.0,
+        0.8,
+        0.6,
+        0.4,
+        0.2,
+        0.8,
+        0.2
+      ],
+      "top5_ids": [
+        [
+          0,
+          23743602,
+          31241524,
+          346730,
+          31046909
+        ],
+        [
+          11999999,
+          32195104,
+          10241207,
+          8325046,
+          23685502
+        ],
+        [
+          23999999,
+          29063636,
+          10226971,
+          35392496,
+          29050270
+        ],
+        [
+          35999999,
+          7914970,
+          13126632,
+          16161604,
+          22167390
+        ],
+        [
+          18793278,
+          812509,
+          16448080,
+          12771643,
+          31041568
+        ],
+        [
+          13038793,
+          28629648,
+          33512606,
+          8319412,
+          31621192
+        ],
+        [
+          1623040,
+          24756237,
+          31259612,
+          14027470,
+          27537234
+        ],
+        [
+          11339489,
+          202817,
+          26418395,
+          3327032,
+          32043564
+        ]
+      ],
+      "exact_vs_binary_batch_speedup": 1.7360995392513106
+    }
+  },
+  "limits": [
+    "Eight queries in shared full-scan batch: no per-request P95, QPS or concurrency proof.",
+    "Coarse scan shared among refinement cutoffs; these are budget ablations, not three independent scans.",
+    "Float32 source retained; bit storage shrinks vector values 32x, not entire RAG footprint.",
+    "Index-building cost and warm/cold OS page-cache differences matter; one run in fixed order.",
+    "Binary Hamming ties within block use argpartition; not an exact cosine-preserving representation.",
+    "No business knowledge or private material touched; random-vector neighbors only."
+  ]
+}

@@ -147,6 +147,117 @@
       ],
       "title": "Delivery",
       "type": "object"
+    },
+    "ExternalReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "author",
+        "platform",
+        "url",
+        "content",
+        "coverage",
+        "images",
+        "trust",
+        "retrieved_at",
+        "score",
+        "source_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "kind": {
+          "enum": [
+            "article",
+            "image"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "author": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "platform": {
+          "enum": [
+            "zhihu",
+            "xiaohongshu",
+            "twitter"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://",
+          "maxLength": 2000
+        },
+        "content": {
+          "type": "string",
+          "maxLength": 4000
+        },
+        "coverage": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "caption",
+              "original_url",
+              "mime"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "caption": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "original_url": {
+                "type": "string",
+                "maxLength": 2000,
+                "pattern": "^https://"
+              },
+              "mime": {
+                "enum": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ]
+              }
+            }
+          }
+        },
+        "trust": {
+          "const": "external_author_view"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "score": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        }
+      }
     }
   },
   "additionalProperties": false,
@@ -219,6 +330,303 @@
         }
       },
       "additionalProperties": false
+    },
+    "media_rag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "method",
+        "corpus_assets",
+        "corpus_truncated",
+        "retrieved",
+        "citations"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not_requested",
+            "empty",
+            "no_match",
+            "retrieved"
+          ]
+        },
+        "method": {
+          "const": "caption-vector-v1"
+        },
+        "corpus_assets": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "corpus_truncated": {
+          "type": "boolean"
+        },
+        "retrieved": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "asset_id",
+              "asset_revision",
+              "analysis_job_id",
+              "kind",
+              "subject",
+              "marketing_summary",
+              "frame_index",
+              "time_ms",
+              "excerpt",
+              "source_claims",
+              "uncertainties",
+              "limitations",
+              "score"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "asset_id": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "analysis_job_id": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "asset_revision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "kind": {
+                "enum": [
+                  "image",
+                  "video"
+                ]
+              },
+              "subject": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "marketing_summary": {
+                "type": "string",
+                "maxLength": 1500
+              },
+              "frame_index": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 7
+              },
+              "time_ms": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 60000
+              },
+              "excerpt": {
+                "type": "string",
+                "maxLength": 2001
+              },
+              "score": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "source_claims": {
+                "type": "array",
+                "maxItems": 10,
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              },
+              "uncertainties": {
+                "type": "array",
+                "maxItems": 10,
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              },
+              "limitations": {
+                "type": "array",
+                "maxItems": 5,
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              }
+            }
+          }
+        },
+        "citations": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "asset_id",
+              "asset_revision",
+              "analysis_job_id",
+              "kind",
+              "subject",
+              "marketing_summary",
+              "frame_index",
+              "time_ms",
+              "excerpt",
+              "source_claims",
+              "uncertainties",
+              "limitations",
+              "score"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "asset_id": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "analysis_job_id": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1
+              },
+              "asset_revision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "kind": {
+                "enum": [
+                  "image",
+                  "video"
+                ]
+              },
+              "subject": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "marketing_summary": {
+                "type": "string",
+                "maxLength": 1500
+              },
+              "frame_index": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 7
+              },
+              "time_ms": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 60000
+              },
+              "excerpt": {
+                "type": "string",
+                "maxLength": 2001
+              },
+              "score": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "source_claims": {
+                "type": "array",
+                "maxItems": 10,
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              },
+              "uncertainties": {
+                "type": "array",
+                "maxItems": 10,
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              },
+              "limitations": {
+                "type": "array",
+                "maxItems": 5,
+                "items": {
+                  "type": "string",
+                  "maxLength": 500
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "reference_ids": {
+      "type": "array",
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "reference_knowledge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "retrieved",
+        "citations"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "empty",
+            "no_match",
+            "retrieved"
+          ]
+        },
+        "retrieved": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/ExternalReference"
+          }
+        },
+        "citations": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/ExternalReference"
+          }
+        }
+      }
     }
   },
   "required": [

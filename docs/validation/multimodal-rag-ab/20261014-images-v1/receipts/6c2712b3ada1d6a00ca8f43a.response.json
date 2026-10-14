@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "gift",
+      "observations": [
+        "图中展示了一串由红色苹果造型珠子组成的手串，被放置在手掌上"
+      ],
+      "facts": {
+        "yellow_near_holes": true
+      }
+    }
+  ],
+  "missing": [
+    "是否为适合送朋友的礼物无法判断"
+  ]
+}

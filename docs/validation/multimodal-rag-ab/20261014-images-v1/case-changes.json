@@ -1,0 +1,162 @@
+[
+  {
+    "case_id": "simple-gift",
+    "group": "simple",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "simple-two",
+    "group": "simple",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "simple-rainbow",
+    "group": "simple",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "simple-car",
+    "group": "simple",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "detail-gift-surface",
+    "group": "visual",
+    "A1_pass": true,
+    "R_pass": false,
+    "H_pass": false,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-gift-hole",
+    "group": "visual",
+    "A1_pass": false,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-two-stand",
+    "group": "visual",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-two-blue",
+    "group": "visual",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-rainbow-leaf",
+    "group": "visual",
+    "A1_pass": false,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-rainbow-texture",
+    "group": "visual",
+    "A1_pass": false,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-car-ribbon",
+    "group": "visual",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "detail-car-tag",
+    "group": "visual",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "compare-surfaces",
+    "group": "cross",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "compare-colors",
+    "group": "cross",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "compare-scenes",
+    "group": "cross",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "compare-package",
+    "group": "cross",
+    "A1_pass": false,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": true
+  },
+  {
+    "case_id": "missing-price",
+    "group": "missing",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "missing-material",
+    "group": "missing",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "missing-sales",
+    "group": "missing",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  },
+  {
+    "case_id": "missing-certification",
+    "group": "missing",
+    "A1_pass": true,
+    "R_pass": true,
+    "H_pass": true,
+    "R_vision_called": false
+  }
+]

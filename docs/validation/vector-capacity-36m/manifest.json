@@ -1,0 +1,265 @@
+{
+  "synthetic": true,
+  "backend": "sharded-float32-exact-scan",
+  "target": 36000000,
+  "dimension": 384,
+  "dtype": "float32",
+  "seed": 20261014,
+  "shard_size": 1000000,
+  "shards": [
+    {
+      "file": "shard-0000.f32",
+      "start": 0,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "c95b62e8d2e2e8160b9f720ea20bf697062503eae31f15281035b205cde8da28"
+    },
+    {
+      "file": "shard-0001.f32",
+      "start": 1000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "dc7dc924f5a865253837d58ee0a4a5dc7dcd3a1b93750293302d27d0e9a0e3a5"
+    },
+    {
+      "file": "shard-0002.f32",
+      "start": 2000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "5a8d251450ee3b5f23fe452c7debdb251e33c26ddd090eed174c07fe90df44c5"
+    },
+    {
+      "file": "shard-0003.f32",
+      "start": 3000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "b2930c32275910708edd993195ec58bb1f5a6c2e329194025e13148b00d73181"
+    },
+    {
+      "file": "shard-0004.f32",
+      "start": 4000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "af921be7df48fc322a4e428a3dab4b9a8625fdc123d817b9d5e0b3d064bf315c"
+    },
+    {
+      "file": "shard-0005.f32",
+      "start": 5000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "0aa7eb8a6dc17d3036cfbcb9892dd75b8fad9ee4a48f667c57af419cfb3f137a"
+    },
+    {
+      "file": "shard-0006.f32",
+      "start": 6000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "ca7327a3f3bed3d3788a8832fa47680d0b28fa35b429f6b939d2a734f0674f27"
+    },
+    {
+      "file": "shard-0007.f32",
+      "start": 7000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "a23bebf7641308fc345a08362f58865a6ffcb5342c36c46ecef935e914e85de3"
+    },
+    {
+      "file": "shard-0008.f32",
+      "start": 8000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "79785c444565c24711b6b5ae760a91d54f09be45c2fca3836fda4ce9057bc14b"
+    },
+    {
+      "file": "shard-0009.f32",
+      "start": 9000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "eb6bc3e40670b02a4475d171474dd334202c96efdef2e2a2ce593e87e83e355c"
+    },
+    {
+      "file": "shard-0010.f32",
+      "start": 10000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "66d66cf87aef30c5a6ac4c0ae5e9663c76693c17fd3b55aa027bc977eff3e1ef"
+    },
+    {
+      "file": "shard-0011.f32",
+      "start": 11000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "321603c78fb13986d08ce5c912d76a6a4450f580a7630228e76fce07ce268662"
+    },
+    {
+      "file": "shard-0012.f32",
+      "start": 12000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "3b95fcfd57aeafb718f31bbf2b5f3819efc456e30d4da6e464aa6199c42edb79"
+    },
+    {
+      "file": "shard-0013.f32",
+      "start": 13000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "244773cd9bc2d5a1412ac931a3b080e084b1d8a1073457e947af0e11f9847b6f"
+    },
+    {
+      "file": "shard-0014.f32",
+      "start": 14000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "f7e2b3eda7b23b210b67419c54ba2b6667381c6698082cb89259cdeffd1aa706"
+    },
+    {
+      "file": "shard-0015.f32",
+      "start": 15000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "c699ea987431843bff522788a362beb654836cde85f691fd37db4c1dc82797f4"
+    },
+    {
+      "file": "shard-0016.f32",
+      "start": 16000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "4ef5121312fe34693e0f2edd62ddf3ffb4dd80f620d77dc3e5dad8320228c589"
+    },
+    {
+      "file": "shard-0017.f32",
+      "start": 17000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "2ced0da86643d364b97f113ec63c9f4f9bece7cae3866fd24671036e7234c2e7"
+    },
+    {
+      "file": "shard-0018.f32",
+      "start": 18000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "905954bcdaecb66543231c7d296fea8ef78f25cc953ddac8660ab1fb866388cd"
+    },
+    {
+      "file": "shard-0019.f32",
+      "start": 19000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "05bc50d595f1a4be08e6fa50095ce86e99815cf6efb09aab6ceddc4899af3b3b"
+    },
+    {
+      "file": "shard-0020.f32",
+      "start": 20000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "4c48e2d584a76c6e5553cd6132afad6076cba723c6841cd4122e36aed747053d"
+    },
+    {
+      "file": "shard-0021.f32",
+      "start": 21000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "ddd61d19502d734933b36ee77207eb57c9ea87872bfa55d460054b7b9dfde86e"
+    },
+    {
+      "file": "shard-0022.f32",
+      "start": 22000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "b766f7a8ee0ff69c3816247d6d9e7dc3d4844fd6e36ae26c1454685ad5cafea1"
+    },
+    {
+      "file": "shard-0023.f32",
+      "start": 23000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "4cbb1e8b17e66bf7462350ffe95f3738b0294333b0bfbc80207b973528424959"
+    },
+    {
+      "file": "shard-0024.f32",
+      "start": 24000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "11cd1da36ee89b075517cae9b0b0d6faa4053b089a5ffb9e1928998dea0547c8"
+    },
+    {
+      "file": "shard-0025.f32",
+      "start": 25000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "9354cca22c83301627657182e5244f063d602124cea69be318ec2131bc541ed3"
+    },
+    {
+      "file": "shard-0026.f32",
+      "start": 26000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "e7b535dba7eeb17d744d1fa10a61869513009cfe8ab4de4a4ed3aca5b5e5310b"
+    },
+    {
+      "file": "shard-0027.f32",
+      "start": 27000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "81295dd3dcd773d93a8c5d7378f6f61c1e7c447302bfd2c8aa60b7674d8b1981"
+    },
+    {
+      "file": "shard-0028.f32",
+      "start": 28000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "04144979354ebae7034b2c2e5ee4be9ecb7be539f5dde79384f27a0be9295093"
+    },
+    {
+      "file": "shard-0029.f32",
+      "start": 29000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "fa4afef8eb655d9373aea63b2154a14a4090203feba88e007a97b10469675abc"
+    },
+    {
+      "file": "shard-0030.f32",
+      "start": 30000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "5b5d83fa2643c94b4ecde718e2e7cacedf4b614ce3b618fdc2ce0310fbfaedd2"
+    },
+    {
+      "file": "shard-0031.f32",
+      "start": 31000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "e49e0dac498d41c676a9bdd28dacff3c52a4eda6b9d9a62b0b2a25d5962cc8c4"
+    },
+    {
+      "file": "shard-0032.f32",
+      "start": 32000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "b7370db15284f63b712a253490eabb57908d468c2e0b9164318892b7fd89de6c"
+    },
+    {
+      "file": "shard-0033.f32",
+      "start": 33000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "5f3bf282b265c2c7f7efc86a128324b58a43cbe6eef994fb833e6c6234def403"
+    },
+    {
+      "file": "shard-0034.f32",
+      "start": 34000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "0a99c2ae6392901d665c5f4a51556b3b0fef060ba8d6305e05220b67a235b6f3"
+    },
+    {
+      "file": "shard-0035.f32",
+      "start": 35000000,
+      "count": 1000000,
+      "bytes": 1536000000,
+      "sha256": "9114dd7c810193a0f52221b72065257ac86ebe171b33030af07e8f9586d922e3"
+    }
+  ],
+  "completed_vectors": 36000000,
+  "status": "complete"
+}

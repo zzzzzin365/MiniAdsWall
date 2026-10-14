@@ -1,0 +1,22 @@
+{
+  "call_key": "warm_repeat:H:answer:simple-gift",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "8d4281d2877845a3a4b6dbd5",
+  "input_sha256": "4fac55ae637b4effa75393f8cfbe999e0ab1326801212a5c3c0cb22da25e92e5",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2490.9469169797376,
+  "http_status": 200,
+  "provider_id": "021791987205276c2531bd3ff98f8d456851518a83e672978e976",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 1077,
+    "total_tokens": 1145,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

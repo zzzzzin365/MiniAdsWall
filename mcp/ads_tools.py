@@ -58,6 +58,10 @@ def _shape_ad(ad: Dict[str, Any], coefficient: float = SCORE_COEFFICIENT) -> Dic
 
 
 async def ads_summary_handler(params: Dict[str, Any], context: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    performance = (context or {}).get('performance_context')
+    if performance:
+        return {key: performance.get(key) for key in ('source','scope','window','summary','selected_count',
+                'measured_count','missing_ad_ids','account_daily_budget_minor','money_unit')}
     bounded = (context or {}).get("ad_context")
     if bounded is not None:
         return {"scope": bounded.get("scope"), "summary": bounded.get("summary"), "summary_status": bounded.get("summary_status"), "selected_count": len(bounded.get("items", [])), "selection": bounded.get("selection"), "captured_at": bounded.get("captured_at")}
@@ -87,6 +91,24 @@ async def ads_summary_handler(params: Dict[str, Any], context: Optional[Dict[str
 async def ad_performance_search_handler(params: Dict[str, Any], context: Optional[Dict[str, Any]]) -> List[Dict[str, Any]]:
     query = str(params.get("query", "")).lower()
     top_k = int(_num(params.get("top_k"), 5))
+    performance = (context or {}).get('performance_context')
+    if performance:
+        rows = performance.get('items') or []
+        ranked = []
+        for item in rows:
+            if item.get('impressions', 0) <= 0:
+                continue  # No delivery in this window is not a failed creative.
+            reasons = []
+            if item.get('spend_minor', 0) > 0 and item.get('orders', 0) == 0:
+                reasons.append('有花费但窗口内没有支付订单，排查素材、落地页及转化链路')
+            if item.get('net_roas') is not None and item['net_roas'] < 1:
+                reasons.append('净收入低于广告花费，优先评估投入')
+            if item.get('orders', 0) > 0 and item.get('net_roas', 0) >= 1:
+                reasons.append('已有成交，结合商品成本与预算评估是否继续测试')
+            ranked.append({**item, 'reasons': reasons, 'scope':performance.get('scope'),
+                           'window':performance.get('window'), 'money_unit':'fen'})
+        ranked.sort(key=lambda item: (item.get('orders', 0) != 0, -item.get('spend_minor', 0)))
+        return ranked[:min(max(top_k, 0), 100)]
     coefficient = _num(params.get("score_coefficient"), SCORE_COEFFICIENT)
     shaped = [_shape_ad(ad, coefficient) for ad in _ads(context)]
     if not shaped:

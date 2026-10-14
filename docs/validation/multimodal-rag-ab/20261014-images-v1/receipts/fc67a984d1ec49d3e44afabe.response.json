@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "source_id": "car",
+      "observations": [
+        "车内后视镜挂有一个红色苹果造型的挂饰，挂饰的挂绳上有一个标牌，标牌上有英文单词 'apple' 和 'momo'"
+      ],
+      "facts": {
+        "tag_word": "apple"
+      }
+    }
+  ],
+  "missing": []
+}

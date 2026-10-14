@@ -162,7 +162,7 @@ class RuntimeGateTests(unittest.IsolatedAsyncioTestCase):
     def test_chroma_id_preserved(self):
         from mcp.knowledge_base import KnowledgeBase
         kb = KnowledgeBase.__new__(KnowledgeBase)
-        kb._collection = SimpleNamespace(query=lambda **kwargs: {
+        kb._collection = SimpleNamespace(count=lambda: 1, query=lambda **kwargs: {
             "ids": [["stable-chroma-id"]], "documents": [["text"]],
             "metadatas": [[{"title": "rule"}]], "distances": [[.2]]})
         self.assertEqual(kb.search("q")[0]["id"], "stable-chroma-id")

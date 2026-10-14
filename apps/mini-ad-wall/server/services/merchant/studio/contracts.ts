@@ -27,3 +27,4 @@ export function requireInput(name: string, value: any) {
     throw resourceError("invalid_input", 422, "请求字段或长度不合法");
 }
 export const validateUnderstanding=ajv.compile<Record<string,any>>(JSON.parse(fs.readFileSync(path.join(dir,'understanding.schema.json'),'utf8')));
+export const validateMediaRag=ajv.compile<Record<string,any>>(JSON.parse(fs.readFileSync(path.join(dir,'media-rag.schema.json'),'utf8')));

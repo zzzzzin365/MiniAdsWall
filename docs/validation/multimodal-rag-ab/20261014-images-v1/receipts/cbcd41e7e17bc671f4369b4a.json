@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:A1:answer:missing-material",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "cbcd41e7e17bc671f4369b4a",
+  "input_sha256": "e2720afb5fff9dd3dffd3358e16815e27860d986ecec59b6caaef42bc6a580e7",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1854.9981249962002,
+  "http_status": 200,
+  "provider_id": "021791987168957c2531bd3ff98f8d456851518a83e6729d954da",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 892,
+    "total_tokens": 930,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

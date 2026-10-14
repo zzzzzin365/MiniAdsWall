@@ -1,4 +1,5 @@
 export interface Ad {
+    images?: string[];
     material_id?: string;
     id: string;
     title: string;
@@ -81,6 +82,17 @@ export interface AdCreativeOutput {
 export interface AdStrategyInput {
     adDescription: string;
     industry: string;
+    adId?: string;
+    materialId?: string;
+    range?: '7'|'3';
+    settings?: {goal:'clicks'|'orders'|'leads';dailyBudget:number;days:number;maxCpc:number;unitProfit?:number};
+}
+
+export interface DeliveryContext {
+    status:'launched'|'new'; billing:'CPC'; currentBid:number|null; window:string[];
+    performance: {impressions:number;clicks:number;orders:number;spend_minor:number;material_changed:boolean;average_cpc_minor:number|null}|null;
+    material:{video_count:number;image_count:number};
+    defaults:{goal:'clicks'|'orders'|'leads';dailyBudget:number|null;days:number;maxCpc:number|null;unitProfit:number|null};
 }
 
 export interface AdStrategyOutput {
@@ -89,6 +101,11 @@ export interface AdStrategyOutput {
     recommendedObjective?: string;
     interests: string[];
     reason: string;
+    biddingAdvice?: string;
+    missingInformation?: string[];
+    knowledgeUsed?: boolean;
+    knowledgeSources?: { id: string; title: string; content: string; source_url?: string }[];
+    bidBasis?: {status:'launched'|'new';current_bid:number|null;max_bid:number;total_budget:number};
 }
 
 export interface AIErrorResponse {

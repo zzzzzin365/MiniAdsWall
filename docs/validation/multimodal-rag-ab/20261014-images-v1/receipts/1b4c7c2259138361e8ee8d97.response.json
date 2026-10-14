@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "source_id": "car",
+      "observations": [
+        "图中挂绳标牌上方的英文单词是apple"
+      ],
+      "facts": {
+        "tag_word": "apple"
+      }
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,12 @@
+{
+  "status": "answered",
+  "answer": "素材主体是苹果造型。",
+  "facts": {
+    "fruit": "苹果"
+  },
+  "source_ids": [
+    "car",
+    "rainbow",
+    "two"
+  ]
+}

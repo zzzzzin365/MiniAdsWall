@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "scope": "UI API fixtures; no business writes or model calls",
+  "checks": [
+    "readable grouped advice",
+    "missing data list",
+    "null bid cannot apply",
+    "numeric bid applies to form only",
+    "modal scrolls with footer visible",
+    "320/390/768/1280 responsive",
+    "close button"
+  ],
+  "errors": []
+}

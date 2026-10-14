@@ -1,7 +1,7 @@
 import { usePerformance } from '../contexts/PerformanceContext';
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { hostedIdentity, hostedSessions, hostedNewSession, hostedHistory, hostedCreateRun,
-    hostedRun, hostedEvents, hostedCancel, hostedResume, hostedApprove, HostedSession, HostedRun } from '../api';
+    hostedRun, hostedEvents, hostedCancel, hostedResume, hostedApprove, hostedRecordText, HostedSession, HostedRun } from '../api';
 import { Ad, AssistantMessage } from '../types';
 
 const QUICK_PROMPTS = ['分析当前广告表现，给出三个优化动作', '哪些广告应该提高出价，哪些应该先改素材？', '帮我生成下一轮 A/B 测试计划'];
@@ -93,8 +93,8 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
 
     async function loadHistory(id: string, cursor?: string) {
         const page = await hostedHistory(id, cursor);
-        const items = page.items.filter(item => item.record_type === 'message').reverse()
-            .map(item => ({ role: item.role!, content: item.content_preview || '' }));
+        const items = await Promise.all(page.items.filter(item => item.record_type === 'message').reverse()
+            .map(async item => ({ role: item.role!, content: await hostedRecordText(item) })));
         if (!mounted.current) return;
         setMessages(previous => cursor ? [...items, ...previous] : items);
         setHistoryCursor(page.next_cursor);
@@ -174,10 +174,10 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
             }
             const storageKey = `agent:pending:${identity.user_id}:${target.id}`;
             const previous = sessionStorage.getItem(storageKey);
-            const pending = previous ? JSON.parse(previous) : { text, key: crypto.randomUUID() };
+            const pending = previous ? JSON.parse(previous) : { text, range, key: crypto.randomUUID() };
             if (pending.text !== text) throw new Error('上一次提交结果待确认，请先重试原消息。');
             sessionStorage.setItem(storageKey, JSON.stringify(pending));
-            const created = await hostedCreateRun(target.id, text, pending.key);
+            const created = await hostedCreateRun(target.id, text, pending.key, pending.range ?? '7');
             sessionStorage.removeItem(storageKey); setInput('');
             await loadHistory(target.id); void watch(created);
         } catch (exception) {
@@ -210,7 +210,7 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
             {open && <section className="assistant-panel" aria-label="广告运营助手">
                 <div className="assistant-header" title="拖拽移动助手" onPointerDown={event => startDrag(event, true)} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
                     <div><div className="assistant-title">广告运营助手</div>
-                        <div className="assistant-meta">{ads.length} 条广告 · {summary.clicks} 次点击 · {summary.videos} 个素材</div></div>
+                        <div className="assistant-meta">{ads.length} 条广告 · 最近 {range} 天投放指标 · {summary.clicks} 次点击</div></div>
                     <button className="assistant-icon-btn" type="button" onClick={() => setOpen(false)} aria-label="关闭助手">×</button>
                 </div>
                 <div className={`assistant-status ${identity ? 'online' : 'offline'}`}>
@@ -226,7 +226,7 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
                 <div className="assistant-prompts">{QUICK_PROMPTS.map(prompt => <button key={prompt} type="button" onClick={() => void sendMessage(prompt)} disabled={busy || !identity || !!approval}>{prompt}</button>)}</div>
                 <div className="assistant-messages" aria-live="polite">
                     {historyCursor && session && <button type="button" onClick={() => void loadHistory(session.id, historyCursor)}>加载更早记录</button>}
-                    {!messages.length && <div className="assistant-message assistant"><div className="assistant-bubble">我是广告运营助手，可以结合当前广告数据给出投放、素材和出价建议。</div></div>}
+                    {!messages.length && <div className="assistant-message assistant"><div className="assistant-bubble">结合当前广告、看板所选周期的投放指标和营销知识库，给出有数据与来源依据的优化建议。</div></div>}
                     {messages.map((message, index) => <div key={index} className={`assistant-message ${message.role}`}><div className="assistant-bubble" style={{ whiteSpace: 'pre-wrap' }}>{message.content}</div></div>)}
                     {liveText && <div className="assistant-message assistant"><div className="assistant-bubble" style={{ whiteSpace: 'pre-wrap' }}>{liveText}</div></div>}
                     {error && <div role="alert">{error}</div>}

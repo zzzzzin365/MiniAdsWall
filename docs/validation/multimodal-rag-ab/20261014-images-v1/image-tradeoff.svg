@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580" viewBox="0 0 1000 580">
+<rect width="1000" height="580" fill="white"/>
+<text x="90" y="35" font-family="sans-serif" font-size="22" fill="#343943">Actual image RAG: quality and full-flow latency</text>
+<text x="90" y="61" font-family="sans-serif" font-size="13" fill="#343943">Cold unique queries: 20 per arm. Repeat profile: same six selected queries.</text>
+<path d="M 90 470.0 H 880" stroke="#e3e7ed"/>
+<text x="55" y="474.0" font-family="sans-serif" font-size="12" fill="#343943">0</text>
+<path d="M 90 400.0 H 880" stroke="#e3e7ed"/>
+<text x="55" y="404.0" font-family="sans-serif" font-size="12" fill="#343943">20</text>
+<path d="M 90 330.0 H 880" stroke="#e3e7ed"/>
+<text x="55" y="334.0" font-family="sans-serif" font-size="12" fill="#343943">40</text>
+<path d="M 90 260.0 H 880" stroke="#e3e7ed"/>
+<text x="55" y="264.0" font-family="sans-serif" font-size="12" fill="#343943">60</text>
+<path d="M 90 190.0 H 880" stroke="#e3e7ed"/>
+<text x="55" y="194.0" font-family="sans-serif" font-size="12" fill="#343943">80</text>
+<path d="M 90 120.0 H 880" stroke="#e3e7ed"/>
+<text x="55" y="124.0" font-family="sans-serif" font-size="12" fill="#343943">100</text>
+<path d="M 90.0 100 V 470" stroke="#e3e7ed"/>
+<text x="80.0" y="494" font-family="sans-serif" font-size="12" fill="#343943">0</text>
+<path d="M 248.0 100 V 470" stroke="#e3e7ed"/>
+<text x="238.0" y="494" font-family="sans-serif" font-size="12" fill="#343943">6</text>
+<path d="M 406.0 100 V 470" stroke="#e3e7ed"/>
+<text x="396.0" y="494" font-family="sans-serif" font-size="12" fill="#343943">12</text>
+<path d="M 564.0 100 V 470" stroke="#e3e7ed"/>
+<text x="554.0" y="494" font-family="sans-serif" font-size="12" fill="#343943">18</text>
+<path d="M 722.0 100 V 470" stroke="#e3e7ed"/>
+<text x="712.0" y="494" font-family="sans-serif" font-size="12" fill="#343943">24</text>
+<path d="M 880.0 100 V 470" stroke="#e3e7ed"/>
+<text x="870.0" y="494" font-family="sans-serif" font-size="12" fill="#343943">30</text>
+<text x="90" y="94" font-family="sans-serif" font-size="13" fill="#343943">Required-field + necessary-source pass rate (%)</text>
+<text x="370" y="528" font-family="sans-serif" font-size="14" fill="#343943">P95 end-to-end latency (seconds)</text>
+<circle cx="165.05159295623503" cy="207.5" r="6" fill="#707070"/>
+<text x="174.05159295623503" y="225.5" font-family="sans-serif" font-size="11" fill="#707070">A1 cold</text>
+<circle cx="200.40677344354918" cy="185.625" r="6" fill="#2679ab"/>
+<text x="209.40677344354918" y="203.625" font-family="sans-serif" font-size="11" fill="#2679ab">F cold</text>
+<circle cx="780.8660499126361" cy="141.875" r="6" fill="#db872a"/>
+<text x="789.8660499126361" y="131.875" font-family="sans-serif" font-size="11" fill="#db872a">H cold</text>
+<circle cx="868.7439899883777" cy="141.875" r="6" fill="#198464"/>
+<text x="877.7439899883777" y="131.875" font-family="sans-serif" font-size="11" fill="#198464">R cold</text>
+<rect x="179.43415869722958" y="173.33333333333331" width="10" height="10" fill="white" stroke="#707070" stroke-width="2"/>
+<text x="193.43415869722958" y="196.33333333333331" font-family="sans-serif" font-size="11" fill="#707070">A1 repeat</text>
+<rect x="573.8391221772763" y="115.0" width="10" height="10" fill="white" stroke="#db872a" stroke-width="2"/>
+<text x="587.8391221772763" y="110.0" font-family="sans-serif" font-size="11" fill="#db872a">H repeat</text>
+<rect x="152.04724759445526" y="115.0" width="10" height="10" fill="white" stroke="#198464" stroke-width="2"/>
+<text x="166.04724759445526" y="110.0" font-family="sans-serif" font-size="11" fill="#198464">R repeat</text>
+<path d="M 90 100 V 470 H 880" stroke="#647080" fill="none"/>
+<text x="90" y="558" font-family="sans-serif" font-size="12" fill="#343943">Four related images; single run per question/arm; not independent blind grading or a production latency claim.</text>
+</svg>

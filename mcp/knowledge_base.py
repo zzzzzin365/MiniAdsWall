@@ -41,6 +41,10 @@ class KnowledgeBase:
         chroma_port: int = 8000,
         chroma_path: str = "./data/chroma",
     ):
+        from chromadb.utils.embedding_functions import ONNXMiniLM_L6_V2
+        # CoreML's provider can stall parallel query embeddings on macOS.
+        # CPU uses the same MiniLM model/vectors without compiling CoreML graphs.
+        self._embedding_function = ONNXMiniLM_L6_V2(preferred_providers=['CPUExecutionProvider'])
         # 优先连接独立 ChromaDB 服务（服务端内置 embedding 模型，客户端无需下载）
         self._use_server = False
         try:
@@ -72,6 +76,7 @@ class KnowledgeBase:
         self._collection = self._client.get_or_create_collection(
             name=self.COLLECTION_NAME,
             metadata={"description": "MiniAdsWall Agent RAG 知识库", "hnsw:space": "cosine"},
+            **({'embedding_function': self._embedding_function} if hasattr(self, '_embedding_function') else {}),
         )
         metadata = self._collection.metadata or {}
         if metadata.get("hnsw:space") != "cosine":
@@ -144,10 +149,21 @@ class KnowledgeBase:
 
         ChromaDB 内部自动将 query 转为向量，与存储的文档向量做余弦相似度匹配。
         """
-        results = self._collection.query(
-            query_texts=[query],
-            n_results=top_k,
-        )
+        count = self._collection.count()
+        if not count:
+            return []
+        top_k = min(top_k, count)
+        try:
+            results = self._collection.query(query_texts=[query], n_results=top_k)
+        except RuntimeError as exc:
+            # Chroma/HNSW can fail to assemble k neighbours after updates/deletes.
+            # For a bounded corpus, search the actual stored vectors exactly.
+            if 'contigious 2D array' not in str(exc) and 'contiguous 2D array' not in str(exc):
+                raise
+            if count > 10000:
+                raise  # Do not perform an unbounded full scan in the request path.
+            logger.warning('HNSW query failed; using exact cosine search over %s knowledge chunks', count)
+            results = self._exact_cosine_query(query, top_k, count)
 
         items = []
         if results["documents"] and results["documents"][0]:
@@ -168,6 +184,31 @@ class KnowledgeBase:
                 })
 
         return items
+
+    def _exact_cosine_query(self, query: str, top_k: int, count: int) -> dict:
+        import numpy as np
+        from chromadb.utils.embedding_functions import DefaultEmbeddingFunction
+        # This collection is created with Chroma's default embedding function.
+        embed = getattr(self, '_embedding_function', None) or DefaultEmbeddingFunction()
+        vector = np.asarray(embed([query])[0], dtype=float)
+        norm = np.linalg.norm(vector)
+        if not norm or not np.isfinite(vector).all():
+            raise ValueError('invalid_query_vector')
+        candidates = []
+        for offset in range(0, count, 500):
+            rows = self._collection.get(limit=min(500, count-offset), offset=offset,
+                                        include=['documents', 'metadatas', 'embeddings'])
+            for i, chunk_id in enumerate(rows['ids']):
+                stored = np.asarray(rows['embeddings'][i], dtype=float)
+                denominator = norm * np.linalg.norm(stored)
+                if stored.shape != vector.shape or not denominator or not np.isfinite(stored).all():
+                    raise ValueError('invalid_knowledge_vector')
+                score = float(np.clip(np.dot(vector, stored) / denominator, -1, 1))
+                candidates.append((score, chunk_id, rows['documents'][i], rows['metadatas'][i] or {}))
+        candidates.sort(key=lambda item: (-item[0], item[1]))
+        selected = candidates[:top_k]
+        return {'ids': [[x[1] for x in selected]], 'documents': [[x[2] for x in selected]],
+                'metadatas': [[x[3] for x in selected]], 'distances': [[1-x[0] for x in selected]]}
 
     @property
     def doc_count(self) -> int:

@@ -1,0 +1,22 @@
+{
+  "call_key": "cold_unique:H:reader:simple-car",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "88aa562a611511136c2bf2b3",
+  "input_sha256": "15a5858409122ce7beccc7a1ec74fd953932ce2153ce7d2b59785c157ff8c139",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 9156.873208004981,
+  "http_status": 200,
+  "provider_id": "021791986613618c2531bd3ff98f8d456851518a83e67291fe41e",
+  "usage": {
+    "completion_tokens": 196,
+    "prompt_tokens": 4137,
+    "total_tokens": 4333,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

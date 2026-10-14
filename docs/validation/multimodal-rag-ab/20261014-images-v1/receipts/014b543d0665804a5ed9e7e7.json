@@ -1,0 +1,22 @@
+{
+  "call_key": "binding-fix:H:answer:detail-gift-surface",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "014b543d0665804a5ed9e7e7",
+  "input_sha256": "b43c206690370b9b9cf617dfa8a1868fa89d554a371497c694b775efb22183ea",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2969.8002920486033,
+  "http_status": 200,
+  "provider_id": "0217919875484744ca67e9480bca887386e68bd4f0aad86e46c28",
+  "usage": {
+    "completion_tokens": 35,
+    "prompt_tokens": 1061,
+    "total_tokens": 1096,
+    "prompt_tokens_details": {
+      "cached_tokens": 768
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}
