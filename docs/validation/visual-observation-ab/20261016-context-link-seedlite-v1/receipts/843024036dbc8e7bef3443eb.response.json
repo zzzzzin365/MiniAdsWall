@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": true,
+  "publisher": null,
+  "quote": null,
+  "answer": "无法确定本图对应的来源快照，无符合要求的可摘录正文内容。",
+  "image_citations": [
+    "image-012"
+  ],
+  "text_citations": []
+}

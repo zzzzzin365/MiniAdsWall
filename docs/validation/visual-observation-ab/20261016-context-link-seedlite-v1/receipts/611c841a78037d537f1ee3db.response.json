@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "现有关联表无对应关联，无法确定本图对应来源的采集记录署名。",
+  "image_citations": [
+    "image-006"
+  ],
+  "text_citations": []
+}

@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "c91acd1629f17b695199"
+  ],
+  "missing": [],
+  "reason": "已观察到画面中存在人类手腕，可支持问题的判断"
+}

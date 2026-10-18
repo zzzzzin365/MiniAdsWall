@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "ad_position",
+      "value": "蔚来汽车广告展示区域",
+      "region": "画面左侧",
+      "state": "observed"
+    },
+    {
+      "key": "diagram_position",
+      "value": "创意组件拆解示意区域",
+      "region": "画面右侧",
+      "state": "observed"
+    },
+    {
+      "key": "arrow_direction",
+      "value": "蓝色箭头从左侧广告指向右侧拆解示意",
+      "region": "广告与拆解示意之间",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

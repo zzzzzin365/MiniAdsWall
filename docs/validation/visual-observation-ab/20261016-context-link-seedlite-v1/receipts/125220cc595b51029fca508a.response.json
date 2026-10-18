@@ -1,0 +1,82 @@
+{
+  "observations": [
+    {
+      "key": "object_type",
+      "value": "串珠手链",
+      "region": "画面中心",
+      "state": "observed"
+    },
+    {
+      "key": "arrangement_shape",
+      "value": "呈环形排列",
+      "region": "画面整体",
+      "state": "observed"
+    },
+    {
+      "key": "total_bead_count",
+      "value": "串珠总数量为24颗",
+      "region": "手链整体",
+      "state": "observed"
+    },
+    {
+      "key": "copper_bead_top",
+      "value": "顶部有1颗亮面铜色圆珠",
+      "region": "手链顶部",
+      "state": "observed"
+    },
+    {
+      "key": "lava_bead_count",
+      "value": "黑色多孔火山岩圆珠共4颗",
+      "region": "手链不同位置",
+      "state": "observed"
+    },
+    {
+      "key": "peach_round_bead_count",
+      "value": "浅桃色哑光圆珠共4颗",
+      "region": "手链不同位置",
+      "state": "observed"
+    },
+    {
+      "key": "brown_cat_eye_bead_count",
+      "value": "棕调猫眼效果圆珠共2颗",
+      "region": "手链不同位置",
+      "state": "observed"
+    },
+    {
+      "key": "banded_agate_bead_count",
+      "value": "带白纹的棕黑条纹圆珠共6颗",
+      "region": "手链不同位置",
+      "state": "observed"
+    },
+    {
+      "key": "faceted_black_bead_count",
+      "value": "多切面黑色异形珠共4颗",
+      "region": "手链不同位置",
+      "state": "observed"
+    },
+    {
+      "key": "clear_bead_count",
+      "value": "透明圆珠共2颗",
+      "region": "手链底部",
+      "state": "observed"
+    },
+    {
+      "key": "copper_spacer",
+      "value": "底部透明珠之间有1颗铜色隔珠",
+      "region": "手链底部",
+      "state": "observed"
+    },
+    {
+      "key": "spacer_text",
+      "value": "铜色隔珠上刻有清晰的MUSE字样",
+      "region": "手链底部隔珠表面",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "纯白色无其他元素",
+      "region": "画面全部背景区域",
+      "state": "observed"
+    }
+  ]
+}

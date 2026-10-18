@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "site_health_percentage",
+      "value": "78%",
+      "region": "上方广告的Site Audit: Overview模块",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

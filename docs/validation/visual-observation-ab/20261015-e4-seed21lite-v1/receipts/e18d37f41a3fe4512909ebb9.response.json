@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "price_info",
+      "value": "未在图中任何区域找到与课程实际售价相关的文字或数字信息",
+      "region": "整张海报全区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该私有课程的实际售价信息"
+  ]
+}

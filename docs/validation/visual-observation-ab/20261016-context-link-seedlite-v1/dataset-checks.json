@@ -1,0 +1,20 @@
+{
+  "images": 21,
+  "unique_families": 21,
+  "questions": 84,
+  "planned_rows": 252,
+  "each_pool_has_three_unique_contexts": true,
+  "target_in_every_pool": true,
+  "link_matches_source_manifest": true,
+  "all_images_hash_match": true,
+  "tasks": [
+    "cross",
+    "publisher",
+    "quote",
+    "visual"
+  ],
+  "body_present_sources": 21,
+  "human_gold": false,
+  "source_context_retrieval_is_oracle": true,
+  "B_C_same_pool_and_order_by_construction": true
+}

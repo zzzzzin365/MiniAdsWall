@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "suggestion_count",
+      "value": "正文用数字编号列出了3条建议",
+      "region": "中部文字区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

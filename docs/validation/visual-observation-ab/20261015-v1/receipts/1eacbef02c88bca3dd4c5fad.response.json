@@ -1,0 +1,29 @@
+{
+  "observations": [
+    {
+      "key": "component_diagram_position",
+      "value": "组件拆解示意位于汽车广告的右侧",
+      "region": "图片中间偏右区域",
+      "state": "explicitly_absent"
+    },
+    {
+      "key": "car_advertisement_content",
+      "value": "蔚来汽车广告，含0首付、0购置税等营销信息，展示蔚来EC6车型",
+      "region": "图片左侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "component_list",
+      "value": "创意组件包含图片组件、视频组件、文案组件、品牌形象组件、营销组件、浮层卡片组件、行动按钮组件、标签组件、落地页组件",
+      "region": "图片右侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "creative_material_content",
+      "value": "创意素材对应图片、视频+图片（封面图）、图片+文案等内容",
+      "region": "图片最右侧区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

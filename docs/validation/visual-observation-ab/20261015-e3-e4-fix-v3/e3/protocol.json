@@ -1,0 +1,28 @@
+{
+  "version": "e3-e4-fix-v3",
+  "experiment": "e3",
+  "model": "doubao-seed-2-0-mini-260428",
+  "seed": 20261015,
+  "repeats": 3,
+  "arms": [
+    "H",
+    "R"
+  ],
+  "max_calls": 179,
+  "online_concurrency": 1,
+  "independent_human_review": false,
+  "scope": "public_external_images_only",
+  "private_materials_allowed": false,
+  "repeats_are_new_model_calls_not_more_independent_images": true,
+  "initial_cost": "inherited_same_model_observations_charged_in_each_reuse_arm_total",
+  "answer_repair_calls": 0,
+  "final_answer_cache": false,
+  "max_supplemental_reads": 1,
+  "reset_state_between_repeats": true,
+  "interpretation": "known-image regression; not independent confirmation",
+  "timing_groups": [
+    "requires_visual_detail",
+    "caption_or_business_fact"
+  ],
+  "initial_source": "/Users/admin/MiniAdsWall/docs/validation/visual-observation-ab/20261015-seedmini-v2/initial-observations.json"
+}

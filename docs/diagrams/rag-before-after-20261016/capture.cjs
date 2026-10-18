@@ -1,0 +1,2 @@
+const {chromium}=require('/Users/admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{let b=await chromium.launch({channel:'chrome',headless:true});let p=await b.newPage({viewport:{width:1440,height:1100},deviceScaleFactor:1});await p.goto('http://127.0.0.1:8772/rag-before-after.svg');await p.evaluate(()=>document.fonts.ready);await p.locator('svg').screenshot({path:__dirname+'/pass'+(process.argv[2]||1)+'.png'});await b.close()})().catch(e=>{console.error(e);process.exit(1)});

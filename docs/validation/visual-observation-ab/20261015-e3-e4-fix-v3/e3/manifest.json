@@ -1,0 +1,29 @@
+{
+  "status": "prepared_not_run",
+  "version": "e3-e4-fix-v3",
+  "models": {
+    "vision": "doubao-seed-2-0-mini-260428",
+    "router": "doubao-seed-2-0-mini-260428",
+    "answer": "doubao-seed-2-0-mini-260428"
+  },
+  "source_hashes": {
+    "evaluation/visual_observation_v3.py": "b8a8a868a4cdf09c726d153b16c4283a8dcfc50b29a5d6de07d7fd2e357573f3",
+    "evaluation/image_rag_provider.py": "41bfc3f3b4614e270d1c35ccd5ea5d281d1f3b822f5a55d6aac23062eef8c26f",
+    "evaluation/run_visual_observation.py": "b23b753574f1d7484b75a7d8fd61c2b1661b87ea0e1d9118a78e25025eed6d2b",
+    "evaluation/report_visual_observation_v3.py": "ba9fedae51f62eb6d13b518a49a5ca76614fd4fdce4b04901e83d1e2e1797a1b"
+  },
+  "input_hashes": {
+    "protocol.json": "6b5e442f3770d1daa6df1fa669fdea49256033d3a82815bafb06c43f4ecf7196",
+    "requests.json": "29a3c935dd9ddcba25d18a904fddcd26f9e6119071816b0cb7dbcd0608d6367e",
+    "assets.json": "dc8139172564ada0fb8a727fa976875cc1e07fdbc1ae5a906096a2c73b48fc5f",
+    "cases-gold.json": "a3a82173b54abe9bac92fe60bad16205232f825253ffa1aca85dce00412fc86d",
+    "initial-observations.json": "a2b29b361ad286a8a5e65131222c9a85ed4192cdf99a2fc6816799ec1a9a5eaf"
+  },
+  "prompts": {
+    "answer": "9348a6086a4a7f68d63c23ade363133c2d72b28c69009af928342a38224559b4",
+    "reader": "c336f17f27c1f7ad68a5030ed7ceb5d5386a8f5f9cb082f2021ea36450b84d43",
+    "router": "b320aa9c0fdd653e380cd358d181a37bc1361136a4f88bef99f864887c6192a7"
+  },
+  "production_mutated": false,
+  "gold_sent_to_model": false
+}

@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product_image",
+      "value": "展示了一款编织手链，带有橙、粉、浅米色编织绳，挂有带字母p的圆形金属吊牌，绳结为橙色，末端有浅米色绳头",
+      "region": "整个画面",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未在图中发现任何关于商品真实销量的相关信息",
+      "region": "整个画面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息，无法从图中获取该数据"
+  ]
+}

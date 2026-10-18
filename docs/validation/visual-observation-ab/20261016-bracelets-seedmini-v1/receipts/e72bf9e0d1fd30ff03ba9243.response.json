@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "hand_present",
+      "value": "画面中出现了一只真人的手掌及部分手指，属于真人的手/手腕区域",
+      "region": "画面左侧至中间区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_details",
+      "value": "手掌上放置着一条由银色珠子串成、带有五朵蓝黄配色小花装饰的手链，手链配有银色龙虾扣和延长链",
+      "region": "画面中心区域",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "背景为汽车内饰的黑色皮质表面",
+      "region": "画面上方及右侧区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

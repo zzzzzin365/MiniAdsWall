@@ -1,0 +1,46 @@
+{
+  "model": "doubao-seed-2-0-lite-260428",
+  "arms": [
+    "A_full_pool",
+    "B_assembled",
+    "C_selected",
+    "D_supplement",
+    "E_validated"
+  ],
+  "primary_cases": 84,
+  "stress_cases": 6,
+  "planned_rows": 450,
+  "source_families": 21,
+  "scope": "known-case regression, fixed candidate images; no retrieval recall or creative-quality test",
+  "seed": 20261016,
+  "E_is_postprocess_of_D_same_receipt": true,
+  "max_calls": 650,
+  "estimated_cost_cap_cny": 5,
+  "no_mutation_of_previous_scores": true,
+  "human_gold": false,
+  "source_manifest_sha256": "f79a93c08e2089b10e62bef44173294c66d3e862f40da876aa27c36930e0a058",
+  "input_hashes": {
+    "assets.json": "e2cce6f6821c9b181dd350c599abe2fb98a21eac0bee0d5480546aa929a9947c",
+    "requests.json": "dcdd1fd66de9d3fdf55080aa7ef5634484ee9fddd57f69e9822f420ef163cb7e",
+    "labels.json": "c3db82a49ae4cb42e28a05342ef2ecf1d4287da753d5b9fc37c2e1424276672f",
+    "registry.json": "aff4936292f87d4b41d7aa8c18d97733f2b8ca23c17447069acf2ac60af49080"
+  },
+  "source_hashes": {
+    "evaluation/run_evidence_pipeline.py": "fcda3b627bf0fee0bad27326865e11571c180976f5e72b5cf3f574a521347287",
+    "evaluation/evidence_pipeline.py": "11f10abc85026f7a932387ef64d5a3ef1705520eb376db88989cc05a17ac44a4",
+    "evaluation/image_rag_provider.py": "41bfc3f3b4614e270d1c35ccd5ea5d281d1f3b822f5a55d6aac23062eef8c26f",
+    "evaluation/run_context_link_seedlite.py": "896796784aaf73e05aebabcba511428a56cd6617c841228935dd9f523cb8e715"
+  },
+  "prompt_hashes": {
+    "answer": "b510d875ef528c0c92431a801592a630a188857e615e07f2fcf8efadd85ef27e",
+    "reader": "e8bd02e8a49e9c074a638138c4dfe0c9b89451c59b37a58260cf22df7b775c64"
+  },
+  "fallback": "on confirmed quota error stop; inspect user console for remaining free quota before mini; restart complete blocks under one model and report separately",
+  "initial_policy": "same-model prior observations reused with receipt, preparation cost charged to every counterfactual arm; new model requires fresh initial observations",
+  "main_goals": {
+    "E_cross_complete": 0.95,
+    "E_strict_supported": 0.95,
+    "E_wrong_source_citations": 0,
+    "quality_non_regression_vs_A": true
+  }
+}

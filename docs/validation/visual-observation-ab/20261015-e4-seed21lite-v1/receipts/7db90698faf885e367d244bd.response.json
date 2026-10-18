@@ -1,0 +1,10 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "974620bf3390f43f2eb7",
+    "8f0fc652340ca4c7b6f1",
+    "cfc4747ed0d2a4101e01"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录了封面底部品牌角色的主体颜色与动物种类，可直接回答问题。"
+}

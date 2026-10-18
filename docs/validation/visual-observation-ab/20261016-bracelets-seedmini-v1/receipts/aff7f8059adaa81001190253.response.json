@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product_type",
+      "value": "wooden beaded bracelet worn on wrist",
+      "region": "central image area",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "no visible information about the product's real sales volume",
+      "region": "entire image",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "the real sales volume data of the product"
+  ]
+}

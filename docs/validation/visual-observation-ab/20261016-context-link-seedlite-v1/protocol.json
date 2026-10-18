@@ -1,0 +1,41 @@
+{
+  "model": "doubao-seed-2-0-lite-260428",
+  "arms": [
+    "A_visual",
+    "B_context_pool",
+    "C_context_links"
+  ],
+  "images": 21,
+  "source_families": 21,
+  "cases": 84,
+  "planned_rows": 252,
+  "seed": 20261016,
+  "max_calls": 400,
+  "estimated_cost_cap_cny": 5,
+  "price_source": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh&redirect=1",
+  "repeats": 1,
+  "concurrency": 1,
+  "scope": "fixed reference images; context assembly and attribution; not retrieval recall or creative-writing quality",
+  "context_is_real_archived_data": true,
+  "context_snapshot_date": "2026-10-15",
+  "context_note": "website excerpts may contain navigation, no invented page body or inferred audience/style labels",
+  "same_context_pool_B_C": true,
+  "same_vision_observations_all_arms": true,
+  "human_visual_gold_reviewed": false,
+  "source_manifest_sha256": "f79a93c08e2089b10e62bef44173294c66d3e862f40da876aa27c36930e0a058",
+  "source_hashes": {
+    "evaluation/run_context_link_seedlite.py": "896796784aaf73e05aebabcba511428a56cd6617c841228935dd9f523cb8e715",
+    "evaluation/image_rag_provider.py": "41bfc3f3b4614e270d1c35ccd5ea5d281d1f3b822f5a55d6aac23062eef8c26f",
+    "evaluation/run_visual_observation.py": "b23b753574f1d7484b75a7d8fd61c2b1661b87ea0e1d9118a78e25025eed6d2b"
+  },
+  "input_hashes": {
+    "assets.json": "e2cce6f6821c9b181dd350c599abe2fb98a21eac0bee0d5480546aa929a9947c",
+    "contexts.json": "96487993c3f00f10798a9d76357b7bc346ef16fd0c8a27b3a92afbff6ca4ffa9",
+    "requests.json": "7acc20799010ec1d2f160df83016e28d806b47bbfe21caa17d08555f3856220f",
+    "gold.json": "c3db82a49ae4cb42e28a05342ef2ecf1d4287da753d5b9fc37c2e1424276672f"
+  },
+  "prompt_sha256": "b510d875ef528c0c92431a801592a630a188857e615e07f2fcf8efadd85ef27e",
+  "production_mutated": false,
+  "no_online_prompt_or_gold_changes": true,
+  "quality_metrics": "exact typed hand; normalized publisher-record match; literal quote substring from correct body and correct context citation; no LLM judge"
+}

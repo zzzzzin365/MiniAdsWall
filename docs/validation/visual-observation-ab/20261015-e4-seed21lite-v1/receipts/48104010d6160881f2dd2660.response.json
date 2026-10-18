@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "深黑色（深灰色）",
+      "region": "整张流程图全区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

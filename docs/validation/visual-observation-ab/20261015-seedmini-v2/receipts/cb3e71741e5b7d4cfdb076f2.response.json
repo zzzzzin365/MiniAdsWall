@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "1cedc8c642ccc6142880"
+  ],
+  "missing": [],
+  "reason": "已存观察明确记录了上方界面截图中Site Health的百分比为78%"
+}

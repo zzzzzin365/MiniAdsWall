@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "background",
+      "value": "纯白色平整平面背景",
+      "region": "整个画面背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "central_raw_stone",
+      "value": "1块不规则形状的原石，主体浅蓝绿色，表面带有棕褐色斑块",
+      "region": "画面中心靠上位置",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_type",
+      "value": "圆珠串成的弹力手链，环绕在原石外围呈环形摆放",
+      "region": "画面中下部环绕原石的区域",
+      "state": "observed"
+    },
+    {
+      "key": "bead_total_count",
+      "value": "手链圆珠总数为21颗",
+      "region": "手链全部区域",
+      "state": "observed"
+    },
+    {
+      "key": "light_green_bead_count",
+      "value": "浅黄绿色圆珠共5颗，排列在原石顶部",
+      "region": "原石顶部区域",
+      "state": "observed"
+    },
+    {
+      "key": "dark_blue_bead_count",
+      "value": "深蓝色圆珠共2颗，分别位于原石左右两侧",
+      "region": "原石左右两侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "left_side_light_bead_sequence",
+      "value": "手链左侧从深蓝珠往下依次排列浅绿、浅青、浅白圆珠",
+      "region": "手链左侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "left_side_purple_bead",
+      "value": "手链左侧有1颗深紫色圆珠",
+      "region": "手链左侧偏下区域",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bead_sequence",
+      "value": "手链底部从左到右依次排列浅青、带纹浅蓝、浅蓝绿、带纹白、浅白圆珠",
+      "region": "手链底部区域",
+      "state": "observed"
+    },
+    {
+      "key": "right_side_dark_bead",
+      "value": "手链右侧有1颗深灰近黑色圆珠",
+      "region": "手链右侧偏下区域",
+      "state": "observed"
+    },
+    {
+      "key": "right_side_purple_bead",
+      "value": "手链右侧有1颗深紫色圆珠",
+      "region": "手链右侧中部区域",
+      "state": "observed"
+    },
+    {
+      "key": "right_side_brown_streak_bead",
+      "value": "手链右侧有1颗带棕红色斑块的圆珠",
+      "region": "手链右侧中上部区域",
+      "state": "observed"
+    },
+    {
+      "key": "right_side_light_bead_sequence",
+      "value": "手链右侧从棕斑珠往上依次排列浅白、褐灰圆珠",
+      "region": "手链右侧上部区域",
+      "state": "observed"
+    },
+    {
+      "key": "bead_surface_feature",
+      "value": "所有圆珠表面均经过抛光处理，带有光泽反光",
+      "region": "全部手链圆珠区域",
+      "state": "observed"
+    },
+    {
+      "key": "shadow_presence",
+      "value": "圆珠和原石在白色背景上投下柔和的浅灰色阴影",
+      "region": "背景平面上的投影区域",
+      "state": "observed"
+    },
+    {
+      "key": "text_presence",
+      "value": "画面内无任何清晰可识别的文字内容",
+      "region": "整个画面",
+      "state": "explicitly_absent"
+    }
+  ]
+}

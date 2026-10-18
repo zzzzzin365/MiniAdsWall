@@ -1,0 +1,33 @@
+{
+  "model": "doubao-seed-2-1-lite-260915",
+  "repeats": 3,
+  "cases": 12,
+  "arms": [
+    "H",
+    "R"
+  ],
+  "seed": 20261016,
+  "max_calls": 181,
+  "budget_conservative_cny": 8,
+  "only_variable": "visual read policy",
+  "concurrency": 1,
+  "source_hashes": {
+    "evaluation/run_e3_seed21lite.py": "875a97cc6664fbca14da4811568ce42a86bd0440df2dafd532b61a32d6a3f3c3",
+    "evaluation/image_rag_provider.py": "41bfc3f3b4614e270d1c35ccd5ea5d281d1f3b822f5a55d6aac23062eef8c26f",
+    "evaluation/run_visual_observation.py": "b23b753574f1d7484b75a7d8fd61c2b1661b87ea0e1d9118a78e25025eed6d2b",
+    "evaluation/visual_observation_v3.py": "b8a8a868a4cdf09c726d153b16c4283a8dcfc50b29a5d6de07d7fd2e357573f3"
+  },
+  "prompts": {
+    "reader": "c336f17f27c1f7ad68a5030ed7ceb5d5386a8f5f9cb082f2021ea36450b84d43",
+    "answer": "9348a6086a4a7f68d63c23ade363133c2d72b28c69009af928342a38224559b4"
+  },
+  "images": {
+    "zhihu-display": "e0b803e1336f1f8f055871febf21c36f0ddd857a8437c9cd0f2f535bd28ddae4",
+    "zhihu-components": "71f76b747f9a57e0eedf4d9783be5230e6087fdbdab35b4bd4c481fc5fd9aaa5",
+    "xhs-duo-1": "7b200ad6c1cc0f693a394747ea910386e02388ec3d8c1407764f521d9cf7cf5d",
+    "xhs-duo-2": "dd1d9fe14029467e0e29a9a0b191bcce8ca3df2b37a412c52af9b0fe9f6e27d6",
+    "x-marketing-kb": "0457964fc827c379035e1316b30ef2523ff55c630a1d3123466dc3e163a0ea1d",
+    "x-creative-framework": "980215e689bfcdbb0d727b11c02b0433f4036c7b460607d4c570135a69b7fb53"
+  },
+  "no_production_changes": true
+}

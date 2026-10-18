@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "jewelry_total_count",
+      "value": "2件串珠手链",
+      "region": "画面主体区域",
+      "state": "observed"
+    },
+    {
+      "key": "bead_material_appearance",
+      "value": "串珠为透明不规则碎晶状",
+      "region": "两条手链的串珠部分",
+      "state": "observed"
+    },
+    {
+      "key": "charm_shape",
+      "value": "每条手链挂有1个银色雪花造型吊饰",
+      "region": "两条手链的下部位置",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_style",
+      "value": "手链搭配带镂空纹样的银色金属扣",
+      "region": "每条手链靠近吊饰的位置",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_arrangement",
+      "value": "两条手链呈环形摆放",
+      "region": "画面中部偏右及左上区域",
+      "state": "observed"
+    },
+    {
+      "key": "supporting_surface_main",
+      "value": "手链放置在带浅色斑块的灰裂纹岩石上",
+      "region": "画面中右侧承载手链的岩石",
+      "state": "observed"
+    },
+    {
+      "key": "supporting_surface_top_left",
+      "value": "画面左上角有浅米色带纹理的石块",
+      "region": "画面左上角区域",
+      "state": "observed"
+    },
+    {
+      "key": "supporting_surface_bottom",
+      "value": "画面底部岩石带有棕褐色锈迹斑块",
+      "region": "画面底部区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_partial",
+      "value": "画面最顶部露出浅木色纹理背景",
+      "region": "画面顶部边缘区域",
+      "state": "observed"
+    },
+    {
+      "key": "text_presence",
+      "value": "画面中无清晰可读的文字",
+      "region": "全画面",
+      "state": "explicitly_absent"
+    }
+  ]
+}

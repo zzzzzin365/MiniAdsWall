@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "Energy Muse",
+  "quote": null,
+  "answer": "因缺乏原图是否出现真人手或手腕的有效证据，hand_present字段为null，来源记录署名为Energy Muse。",
+  "image_citations": [
+    "image-004"
+  ],
+  "text_citations": [
+    "ctx-1c1af78540f4c179"
+  ]
+}

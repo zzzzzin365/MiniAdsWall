@@ -1,0 +1,1662 @@
+[
+  {
+    "review_id": "00aaad08803dcf8c",
+    "case_id": "zhihu-components-2",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "answer": {
+      "status": "answered",
+      "value": "组件拆解示意位于汽车广告的右边。",
+      "answer": "组件拆解示意位于汽车广告的右边。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "00cfb8d174ea38b4",
+    "case_id": "x-marketing-kb-2",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "answer": {
+      "status": "answered",
+      "value": "流程示意图",
+      "answer": "这张图主要是流程示意图。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0185e4b6215f63d4",
+    "case_id": "zhihu-components-3",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件的箭头指向的素材说明完整写了“视频+图片〔封面图〕”。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0638cd88bb1c089a",
+    "case_id": "xhs-duo-2-4",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了“营销分析”。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0b5dcd309e8697ff",
+    "case_id": "zhihu-components-2",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "answer": {
+      "status": "answered",
+      "value": "组件拆解示意位于汽车广告的右边。",
+      "answer": "组件拆解示意位于汽车广告的右边。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0ca7cb67c2c8ace6",
+    "case_id": "zhihu-components-2",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "answer": {
+      "status": "answered",
+      "value": "右边",
+      "answer": "组件拆解示意位于汽车广告的右边。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0d5254901b6489de",
+    "case_id": "xhs-duo-1-6",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及多邻国采用这些方法后的真实年度销量数据，无法回答该问题。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0f31624b454667ea",
+    "case_id": "zhihu-components-6",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅说明广告中的优惠属于历史素材宣称，未提供这款汽车今天的实际成交价相关信息，无法确定。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "1ba4974dc4229c64",
+    "case_id": "xhs-duo-2-6",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅展示了多邻国营销案例封面的视觉元素，未提及该活动的真实ROAS相关信息，无法得知其具体数值。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "1d71108358536b89",
+    "case_id": "xhs-duo-1-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要为红色。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "2227f99ebab1766f",
+    "case_id": "xhs-duo-1-2",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": "3条",
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "227d7d5801b70020",
+    "case_id": "xhs-duo-2-4",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了“营销分析”。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "276a3523f11b760b",
+    "case_id": "xhs-duo-1-4",
+    "question": "右下角的作者署名写的是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名写的是@有好CASE。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "29a16f5e53671a9e",
+    "case_id": "xhs-duo-1-2",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": "3条",
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "2ade4aed1c8dc321",
+    "case_id": "zhihu-components-5",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "2e917bb27f7a80a3",
+    "case_id": "x-marketing-kb-2",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "answer": {
+      "status": "answered",
+      "value": "这张图主要是流程示意图，并非实物产品摄影。",
+      "answer": "这张图主要是流程示意图，并非实物产品摄影。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "2fb42279231bfbe4",
+    "case_id": "xhs-duo-2-6",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及该活动的真实ROAS数值，无法确定。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "337455a0c0654b2f",
+    "case_id": "xhs-duo-1-2",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": "3条",
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "3385adee177df9d1",
+    "case_id": "xhs-duo-2-6",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅描述了多邻国营销案例封面的视觉元素，未提及该活动的真实ROAS数值，无法回答该问题。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "356cf13f3c316ebd",
+    "case_id": "zhihu-components-2",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "answer": {
+      "status": "answered",
+      "value": "组件拆解示意位于汽车广告的右边。",
+      "answer": "组件拆解示意位于汽车广告的右边。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "40828b1b9e529d5e",
+    "case_id": "zhihu-components-6",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未标注该款汽车的实际成交价格，无法得知其今天的实际成交价。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "416afed9f41ec3b9",
+    "case_id": "xhs-duo-1-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要为红色。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4caa03e5c6fc041f",
+    "case_id": "x-marketing-kb-2",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "answer": {
+      "status": "answered",
+      "value": "这张图主要是流程示意图，图中未出现任何实物产品摄影内容。",
+      "answer": "这张图主要是流程示意图，图中未出现任何实物产品摄影内容。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "538a210e8173b4ac",
+    "case_id": "xhs-duo-1-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要为红色。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "55228541b694fc5a",
+    "case_id": "zhihu-components-2",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "answer": {
+      "status": "answered",
+      "value": "组件拆解示意位于汽车广告的右边。",
+      "answer": "组件拆解示意位于汽车广告的右边。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "55fb1166b81f972d",
+    "case_id": "xhs-duo-1-4",
+    "question": "右下角的作者署名写的是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名写的是@有好CASE。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "5a02f5e9344440b4",
+    "case_id": "xhs-duo-1-4",
+    "question": "右下角的作者署名写的是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名写的是@有好CASE。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "5f86335f49949cba",
+    "case_id": "zhihu-components-6",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中仅展示了蔚来汽车的广告示意图，未提供该汽车今日实际成交价的相关信息，无法得知具体金额。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6190e9bfc73d5c1a",
+    "case_id": "xhs-duo-1-6",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅提及多邻国的情绪切入、IP关联、用户传播等分析内容，未披露采用这些方法后的真实年度销量数据，无法回答该问题。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "643eddcd4245304f",
+    "case_id": "xhs-duo-2-6",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅为多邻国营销案例封面，未提供该活动真实ROAS的相关信息，无法确定其数值。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "647e4389f304ca56",
+    "case_id": "xhs-duo-1-6",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及多邻国采用这些方法后的真实年度销量数据，无法回答该问题。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6c9deec081bd34e6",
+    "case_id": "zhihu-components-6",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未展示这款汽车今日的实际成交价格相关信息，无法得知其今天的实际成交价。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7234d0c506ae7631",
+    "case_id": "xhs-duo-1-4",
+    "question": "右下角的作者署名写的是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名写的是@有好CASE。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "75f554d81fa8249a",
+    "case_id": "xhs-duo-2-6",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及该活动的真实ROAS数值，无法回答。",
+      "source_ids": []
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "770a21e823042cfb",
+    "case_id": "zhihu-components-3",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件的箭头指向的素材说明完整写了“视频+图片〔封面图〕”。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7c42f73e8585322f",
+    "case_id": "xhs-duo-1-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要为红色。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7dc0cb860f6fbd23",
+    "case_id": "xhs-duo-2-4",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了“营销分析”。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "83f5cac4c852daab",
+    "case_id": "xhs-duo-1-2",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": "3条",
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "886e3bc2779db050",
+    "case_id": "zhihu-components-5",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "89aecaed0af443e1",
+    "case_id": "x-marketing-kb-2",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "answer": {
+      "status": "answered",
+      "value": "这张图主要是流程示意图，不是实物产品摄影。",
+      "answer": "这张图主要是流程示意图，不是实物产品摄影。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "8c0e5497a47a77bb",
+    "case_id": "zhihu-components-2",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "answer": {
+      "status": "answered",
+      "value": "组件拆解示意位于汽车广告的右边。",
+      "answer": "组件拆解示意位于汽车广告的右边。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "8ebda9389375ad08",
+    "case_id": "x-marketing-kb-1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "整张流程图的背景主要为黑色。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "900623787c77f639",
+    "case_id": "zhihu-components-5",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "90699500a68dce1a",
+    "case_id": "zhihu-components-5",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9118e3848ef3229b",
+    "case_id": "x-marketing-kb-1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "整张流程图的背景主要为黑色。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "96f67f807afa4c13",
+    "case_id": "xhs-duo-1-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要为红色。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9964af12fa67c1a4",
+    "case_id": "x-marketing-kb-1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "整张流程图的背景主要为黑色。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9bd3b1d0a74e5af8",
+    "case_id": "xhs-duo-1-6",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及多邻国采用这些方法后的真实年度销量数据，无法回答该问题。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a19b7db09bb749d4",
+    "case_id": "xhs-duo-1-2",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": "3条",
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a740366517a538d7",
+    "case_id": "zhihu-components-6",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未提供这款汽车今天的实际成交价相关信息，无法得知具体金额。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a83d5ed96df750cb",
+    "case_id": "zhihu-components-5",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ab14d0f5433b43ac",
+    "case_id": "xhs-duo-1-2",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": "3条",
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ad5d28974331ce36",
+    "case_id": "xhs-duo-1-6",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅提及多邻国的情绪切入、IP与用户行为关联、用户参与传播等分析，未提供其采用这些方法后的真实年度销量数据，无法回答。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b328734659868c66",
+    "case_id": "xhs-duo-1-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要为红色。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b69d4893355a51ae",
+    "case_id": "zhihu-components-3",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件的箭头指向的素材说明完整写了“视频+图片〔封面图〕”。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b95edb499109e855",
+    "case_id": "x-marketing-kb-2",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "answer": {
+      "status": "answered",
+      "value": "流程示意图",
+      "answer": "这张图主要是流程示意图。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c50a36e89063b1a4",
+    "case_id": "zhihu-components-5",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c58abcb46347dc07",
+    "case_id": "x-marketing-kb-1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "深黑色（深炭灰色）",
+      "answer": "整张流程图的背景主要为深黑色（深炭灰色）。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c93662fd7380033a",
+    "case_id": "x-marketing-kb-1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "深黑色（深灰色）",
+      "answer": "整张流程图的背景主要为深黑色（深灰色）。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "cacf8d490ce5e6ef",
+    "case_id": "x-marketing-kb-1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "深黑色（深炭灰色）",
+      "answer": "整张流程图的背景主要为深黑色（深炭灰色）。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "cc4a478c693cdf63",
+    "case_id": "x-marketing-kb-2",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "answer": {
+      "status": "answered",
+      "value": "流程示意图",
+      "answer": "这张图主要是流程示意图。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "d02e345742dede22",
+    "case_id": "xhs-duo-2-4",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了“营销分析”。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "dbcf1560d310619c",
+    "case_id": "xhs-duo-2-4",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了“营销分析”。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e26da54db33c167e",
+    "case_id": "zhihu-components-3",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件箭头指向的素材说明完整写了“视频+图片〔封面图〕”。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e3225e37a5433261",
+    "case_id": "xhs-duo-2-4",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了“营销分析”。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e790b14db39b6f24",
+    "case_id": "xhs-duo-1-6",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据仅提及多邻国的营销分析内容，未提供其采用这些方法后的真实年度销量数据，无法回答该问题。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e8d7e2f83f28a00e",
+    "case_id": "zhihu-components-3",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件箭头指向的素材说明完整写了“视频+图片〔封面图〕”。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "f0177d84d57d473f",
+    "case_id": "xhs-duo-1-4",
+    "question": "右下角的作者署名写的是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名写的是@有好CASE。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "f4a0dae9ba2d6b48",
+    "case_id": "zhihu-components-6",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未展示该款汽车今日的实际成交价格相关信息，无法得知其今天的实际成交价。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fb5b6e392902fbe0",
+    "case_id": "xhs-duo-2-6",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及该案例封面对应活动的真实ROAS数值，无法确认。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fbe1f844868cadaa",
+    "case_id": "xhs-duo-1-4",
+    "question": "右下角的作者署名写的是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名写的是@有好CASE。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fcb20116740a3245",
+    "case_id": "zhihu-components-3",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "answer": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件的箭头指向的素材说明完整写了“视频+图片〔封面图〕”。",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "body_correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  }
+]

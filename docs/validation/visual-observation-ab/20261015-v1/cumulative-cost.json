@@ -1,0 +1,354 @@
+[
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 1,
+    "setup_plus_online_seconds": 1.2275093749631196,
+    "total_tokens": 270,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 2,
+    "setup_plus_online_seconds": 2.7016687078867108,
+    "total_tokens": 553,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 3,
+    "setup_plus_online_seconds": 4.005131207872182,
+    "total_tokens": 822,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 4,
+    "setup_plus_online_seconds": 6.3460114158224314,
+    "total_tokens": 1103,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 5,
+    "setup_plus_online_seconds": 8.206387082813308,
+    "total_tokens": 1374,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 6,
+    "setup_plus_online_seconds": 9.605173249845393,
+    "total_tokens": 1655,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 1,
+    "setup_plus_online_seconds": 5.615936332964338,
+    "total_tokens": 2444,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 2,
+    "setup_plus_online_seconds": 16.49175520800054,
+    "total_tokens": 2444,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 3,
+    "setup_plus_online_seconds": 20.921260457951576,
+    "total_tokens": 4395,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 4,
+    "setup_plus_online_seconds": 25.31967433297541,
+    "total_tokens": 6364,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 5,
+    "setup_plus_online_seconds": 30.671438916004263,
+    "total_tokens": 8344,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 6,
+    "setup_plus_online_seconds": 43.12530583201442,
+    "total_tokens": 10328,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 1,
+    "setup_plus_online_seconds": 11.898031374905258,
+    "total_tokens": 4286,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 2,
+    "setup_plus_online_seconds": 14.04877245798707,
+    "total_tokens": 6249,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 3,
+    "setup_plus_online_seconds": 15.889881958020851,
+    "total_tokens": 8190,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 4,
+    "setup_plus_online_seconds": 17.25866737391334,
+    "total_tokens": 10137,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 5,
+    "setup_plus_online_seconds": 19.101941457018256,
+    "total_tokens": 12080,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 6,
+    "setup_plus_online_seconds": 21.15334408194758,
+    "total_tokens": 14045,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 1,
+    "setup_plus_online_seconds": 14.003754415898584,
+    "total_tokens": 6271,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 2,
+    "setup_plus_online_seconds": 19.529626999865286,
+    "total_tokens": 10171,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 3,
+    "setup_plus_online_seconds": 22.889540457865223,
+    "total_tokens": 14096,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 4,
+    "setup_plus_online_seconds": 27.133256998844445,
+    "total_tokens": 18002,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 5,
+    "setup_plus_online_seconds": 31.02822012384422,
+    "total_tokens": 21901,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 6,
+    "setup_plus_online_seconds": 39.80660316592548,
+    "total_tokens": 27533,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 1,
+    "setup_plus_online_seconds": 1.5044061249354854,
+    "total_tokens": 284,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 2,
+    "setup_plus_online_seconds": 3.9317778339609504,
+    "total_tokens": 580,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 3,
+    "setup_plus_online_seconds": 5.440137000870891,
+    "total_tokens": 868,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 4,
+    "setup_plus_online_seconds": 6.954144709859975,
+    "total_tokens": 1166,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 5,
+    "setup_plus_online_seconds": 8.351560751791112,
+    "total_tokens": 1441,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 1,
+    "setup_plus_online_seconds": 6.407862500054762,
+    "total_tokens": 2623,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 2,
+    "setup_plus_online_seconds": 12.200384084135294,
+    "total_tokens": 4619,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 3,
+    "setup_plus_online_seconds": 17.307511250139214,
+    "total_tokens": 6594,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 4,
+    "setup_plus_online_seconds": 26.264726083143614,
+    "total_tokens": 9466,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 5,
+    "setup_plus_online_seconds": 30.004793083062395,
+    "total_tokens": 11078,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 1,
+    "setup_plus_online_seconds": 8.430282082990743,
+    "total_tokens": 3373,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 2,
+    "setup_plus_online_seconds": 10.012140374979936,
+    "total_tokens": 4693,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 3,
+    "setup_plus_online_seconds": 11.439441082882695,
+    "total_tokens": 6004,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 4,
+    "setup_plus_online_seconds": 13.318180540809408,
+    "total_tokens": 7319,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 5,
+    "setup_plus_online_seconds": 15.064995457767509,
+    "total_tokens": 8626,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 1,
+    "setup_plus_online_seconds": 11.546915750019252,
+    "total_tokens": 4726,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 2,
+    "setup_plus_online_seconds": 14.994698249967769,
+    "total_tokens": 7352,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 3,
+    "setup_plus_online_seconds": 18.866487374994904,
+    "total_tokens": 9976,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 4,
+    "setup_plus_online_seconds": 21.781118208076805,
+    "total_tokens": 12625,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 5,
+    "setup_plus_online_seconds": 24.864817375084385,
+    "total_tokens": 15242,
+    "money": null
+  }
+]

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="Codex" version="26.0.9">
+  <diagram id="rag-compare" name="优化前后">
+    <mxGraphModel page="1" pageWidth="1440" pageHeight="1135" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="多模态 RAG：优化前 → 优化后" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=32;fontColor=#172B4D;align=left;verticalAlign=middle;spacing=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="24" width="1300" height="50" />
+        </mxCell>
+        <mxCell id="sub" value="新增算法／方法已标在节点内：原生图像匹配、同源关联、字段选择、按需补读、确定性校验。" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=20;fontColor=#475569;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="80" width="1340" height="34" />
+        </mxCell>
+        <mxCell id="oldtitle" value="优化前｜图片主要靠描述检索，证据直接交给模型" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=23;fontColor=#475569;align=left;verticalAlign=middle;spacing=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="48" y="151" width="1320" height="36" />
+        </mxCell>
+        <mxCell id="o1" value="图片 → 文字描述&lt;br&gt;文档 → 文本" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="48" y="212" width="230" height="76" />
+        </mxCell>
+        <mxCell id="o2" value="文本向量索引&lt;br&gt;按描述找图片" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="318" y="212" width="230" height="76" />
+        </mxCell>
+        <mxCell id="o3" value="问题 → 检索&lt;br&gt;取回候选" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="588" y="212" width="230" height="76" />
+        </mxCell>
+        <mxCell id="o4" value="描述＋来源上下文&lt;br&gt;直接交给 LLM" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="858" y="212" width="230" height="76" />
+        </mxCell>
+        <mxCell id="o5" value="生成回答&lt;br&gt;返回引用" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1158" y="212" width="210" height="76" />
+        </mxCell>
+        <mxCell id="oe1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="o1" target="o2">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="o2" target="o3">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="o3" target="o4">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oe4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="o4" target="o5">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="oldnote" value="主要问题：描述可能漏细节；上下文冗余；已有证据不足时，答案和引用仍容易不合规。" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=18;fontColor=#475569;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="48" y="305" width="1300" height="30" />
+        </mxCell>
+        <mxCell id="newtitle" value="优化后｜原生图像检索已实现；绿色虚线为实验方案，尚未接入业务" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=23;fontColor=#245894;align=left;verticalAlign=middle;spacing=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="48" y="389" width="1330" height="38" />
+        </mxCell>
+        <mxCell id="index" value="算法：Chinese-CLIP 图文双编码器（512维）＋归一化向量的余弦近邻匹配&lt;br&gt;离线：原图 → 图像向量；文档 → 文本向量（独立索引）｜保留视觉观察、原图哈希与来源 ID" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93B4DC;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="48" y="439" width="1320" height="64" />
+        </mxCell>
+        <mxCell id="q" value="用户问题" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93B4DC;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=20;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="48" y="547" width="120" height="90" />
+        </mxCell>
+        <mxCell id="retr" value="图像／文本检索&lt;br&gt;余弦匹配&lt;br&gt;按排名交替合并" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93B4DC;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="207" y="547" width="170" height="90" />
+        </mxCell>
+        <mxCell id="exp" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#4F9D81;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;dashed=1;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="401" y="516" width="780" height="280" />
+        </mxCell>
+        <mxCell id="assemble" value="① 同源证据组装&lt;br&gt;SHA-256 哈希校验&lt;br&gt;按清单关联来源" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF6EF;strokeColor=#4F9D81;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="421" y="547" width="210" height="90" />
+        </mxCell>
+        <mxCell id="cover" value="② 字段选择＋覆盖规则&lt;br&gt;按题型选择字段&lt;br&gt;缺项才触发补读" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF6EF;strokeColor=#4F9D81;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="547" width="220" height="90" />
+        </mxCell>
+        <mxCell id="answer" value="③ LLM 生成&lt;br&gt;④ 字段类型／引用校验&lt;br&gt;原文片段确定性截取" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EAF6EF;strokeColor=#4F9D81;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="929" y="547" width="232" height="90" />
+        </mxCell>
+        <mxCell id="out" value="带引用回答" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#93B4DC;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=20;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1220" y="547" width="148" height="90" />
+        </mxCell>
+        <mxCell id="ne1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="q" target="retr">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ne2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="retr" target="assemble">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ne3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="assemble" target="cover">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ne4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="cover" target="answer">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="covered" value="已覆盖" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=16;fontColor=#297456;align=center;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="885" y="519" width="78" height="25" />
+        </mxCell>
+        <mxCell id="ne5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="answer" target="out">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="read" value="规则触发视觉补读&lt;br&gt;最多一次&lt;br&gt;仍无证据则拒答" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF4E5;strokeColor=#C99037;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="670" y="700" width="220" height="75" />
+        </mxCell>
+        <mxCell id="need" value="缺视觉细节" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="cover" target="read">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="back" value="补充证据" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=1.8;strokeColor=#64748B;fontFamily=PingFang SC;fontSize=16;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="read" target="answer">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1045" y="738" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="retrieve-note" value="召回收益待独立验证" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=17;fontColor=#245894;align=center;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="182" y="667" width="220" height="36" />
+        </mxCell>
+        <mxCell id="assembly-note" value="Token −18.2%&lt;br&gt;质量未证实提升" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=17;fontColor=#297456;align=center;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="419" y="670" width="215" height="58" />
+        </mxCell>
+        <mxCell id="results-title" value="实验实际带来了什么" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=23;fontColor=#172B4D;align=left;verticalAlign=middle;spacing=0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="815" width="1300" height="35" />
+        </mxCell>
+        <mxCell id="res1" value="已有字段不足 → 按需补读&lt;br&gt;字段完成 37/84 → 66/84&lt;br&gt;代价：P95 3.60 → 7.39 秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="865" width="425" height="108" />
+        </mxCell>
+        <mxCell id="res2" value="程序校验＋原文截取&lt;br&gt;字段完成且合规 66/84 → 84/84&lt;br&gt;新增 18 题均来自确定性摘录" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="505" y="865" width="425" height="108" />
+        </mxCell>
+        <mxCell id="res3" value="整套方案 vs 完整上下文基线&lt;br&gt;在线费用估算 −43.1%&lt;br&gt;P95 ＋75.8%：没有质量／速度双赢" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF4E5;strokeColor=#C99037;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#172B4D;spacing=10;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="970" y="865" width="430" height="108" />
+        </mxCell>
+        <mxCell id="foot" value="口径：21 张已知公开图、84 道封闭字段题；固定候选，未测检索召回。84/84 不代表通用问答准确率。" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=16;fontColor=#475569;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="989" width="1360" height="28" />
+        </mxCell>
+        <mxCell id="scope" value="费用为在线估算；P95 为证据准备＋回答耗时，不含真实检索。上方前后架构与下方实验对照分别展示。" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=16;fontColor=#475569;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1027" width="1360" height="28" />
+        </mxCell>
+        <mxCell id="method-note" value="说明：这些是模型接入、检索策略和工程规则；没有训练新模型，也没有复现 GraphRAG。" style="text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=PingFang SC;fontSize=16;fontColor=#475569;align=left;verticalAlign=middle;spacing=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1065" width="1360" height="28" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

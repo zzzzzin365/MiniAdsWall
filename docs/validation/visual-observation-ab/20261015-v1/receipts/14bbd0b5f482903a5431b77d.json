@@ -1,0 +1,22 @@
+{
+  "call_key": "main:xhs-duo-1:xhs-duo-1-6:A:answer",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "14bbd0b5f482903a5431b77d",
+  "input_sha256": "5e0a92578401910819e9601cc816df9c43f43020f30a29a7301c545219f5b4b6",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1512.1774170547724,
+  "http_status": 200,
+  "provider_id": "02179204236768278a74243d99c3298b2ec93aa83bab7a084625f",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 248,
+    "total_tokens": 298,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

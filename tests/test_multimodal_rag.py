@@ -33,6 +33,9 @@ def corpus(brand='brand-a', environment='synthetic', asset='image-a', revision=1
 
 class MediaRagTest(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
+        mode = patch.dict(os.environ, {'STUDIO_MEDIA_RAG_MODE': 'caption'})
+        mode.start()
+        self.addCleanup(mode.stop)
         self.public = patch('api.studio.retrieve_references', return_value={'status':'empty', 'retrieved':[], 'citations':[]})
         self.public.start()
         self.addCleanup(self.public.stop)

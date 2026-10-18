@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "left_owl_bandage",
+      "value": "左侧绿色猫头鹰头部无任何创可贴，整体外观完整无破损",
+      "region": "画面左下方",
+      "state": "explicitly_absent"
+    },
+    {
+      "key": "right_owl_bandage",
+      "value": "右侧绿色猫头鹰的额头和手部各贴有1块浅米色带浅棕边缘的创可贴",
+      "region": "画面右下方",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

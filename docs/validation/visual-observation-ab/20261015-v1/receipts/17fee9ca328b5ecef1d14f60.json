@@ -1,0 +1,22 @@
+{
+  "call_key": "main:zhihu-components:zhihu-components-2:C0:answer",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "17fee9ca328b5ecef1d14f60",
+  "input_sha256": "57d7c8965beb41e86b35a36b53fe276b2cab5f7592d949af1a133002c8a3faab",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1564.9605420185253,
+  "http_status": 200,
+  "provider_id": "02179204218864076e706cca72a7c4abc35179fe35310d8f56dc7",
+  "usage": {
+    "completion_tokens": 31,
+    "prompt_tokens": 1911,
+    "total_tokens": 1942,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

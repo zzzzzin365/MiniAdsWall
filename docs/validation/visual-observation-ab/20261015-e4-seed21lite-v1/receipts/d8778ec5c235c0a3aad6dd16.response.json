@@ -1,0 +1,10 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [
+    "ca91b28afe509e6d1732"
+  ],
+  "missing": [
+    "课程实际售价"
+  ],
+  "reason": "图中仅展示课程包含的内容和获取方式，未提及任何价格信息，无法得知实际售价。"
+}

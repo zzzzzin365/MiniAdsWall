@@ -1,0 +1,10 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "8f0fc652340ca4c7b6f1",
+    "95f6f60fe09d5e5a3339",
+    "eb62b436fd9b84616cf5"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录右侧猫头鹰额头贴有创可贴，左侧猫头鹰头部无创可贴，可直接回答问题。"
+}

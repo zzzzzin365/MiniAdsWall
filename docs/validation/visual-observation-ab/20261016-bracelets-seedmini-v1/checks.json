@@ -1,0 +1,11 @@
+{
+  "rows": 168,
+  "unique_case_arm": 168,
+  "paired_cases": 84,
+  "expected_rows": 168,
+  "all_input_hashes_unchanged": true,
+  "all_source_hashes_unchanged": true,
+  "no_runtime_retries": true,
+  "all_receipts_succeeded": true,
+  "gold_is_human_reviewed": false
+}

@@ -1,0 +1,43 @@
+{
+  "observations": [
+    {
+      "key": "ad_platform",
+      "value": "Semrush",
+      "region": "广告区域",
+      "state": "observed"
+    },
+    {
+      "key": "ad_text_top",
+      "value": "Find the right keywords & beat competitors",
+      "region": "上方广告左侧",
+      "state": "observed"
+    },
+    {
+      "key": "ad_text_bottom",
+      "value": "Analyze rival marketing strategies",
+      "region": "下方广告左侧",
+      "state": "observed"
+    },
+    {
+      "key": "site_audit_data",
+      "value": "Site Health 78%, Crawled Pages 23,777, Errors 539, Warnings 8,072, Notice 86,053",
+      "region": "上方广告右侧",
+      "state": "observed"
+    },
+    {
+      "key": "traffic_data",
+      "value": "Traffic Generation Strategy相关流量来源分类及Market、Shein.com的流量占比图表",
+      "region": "下方广告右侧",
+      "state": "observed"
+    },
+    {
+      "key": "free_trial_button",
+      "value": "Try It Free",
+      "region": "两个广告的橙色按钮",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "使用该Semrush广告后真实转化率提升的百分比数据"
+  ]
+}

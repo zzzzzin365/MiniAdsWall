@@ -1,0 +1,8 @@
+{
+  "decision": "read",
+  "evidence_ids": [],
+  "missing": [
+    "手腕后方的衣物颜色"
+  ],
+  "reason": "现有观察未记录手腕后方衣物的颜色，无法确定该细节"
+}

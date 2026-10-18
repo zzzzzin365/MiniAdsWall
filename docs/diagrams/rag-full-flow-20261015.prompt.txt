@@ -1,0 +1,80 @@
+Use case: infographic-diagram; EDIT the supplied RAG flowchart into a source-grounded Chinese project architecture + experiment annotation poster.
+Input image: edit target / reference layout. Keep its white background, thin rounded blue outline for offline indexing, rounded green outline for online Retrieval + Generation, small softly colored rectangular nodes and clear black arrows. Expand and redraw to fit; do not merely overlay dense notes. Produce ONE very high resolution landscape/slightly square technical infographic, ideally 2800x2400 or larger, crisp readable Simplified Chinese typography. All texts below must be readable, no gibberish, generous spacing, no decorative art.
+
+TITLE: “MiniAdsWall：当前 RAG 全流程与实验位置”
+SUBTITLE: “截至 2026-10-15｜实线＝已接入代码；橙色虚线＝隔离实验，未接入业务”
+Very important: there are TWO DISTINCT online routes, never draw one universal pipeline that incorrectly puts rewrite or rerank in the studio path. Use literal Chroma, NOT Milvus/Pinecone. Current embeddings are TEXT embeddings, NOT native image vectors. Current studio is caption retrieval, NOT query-time automatic vision rereading.
+
+SECTION 1 blue rounded container, label “① 入库与索引（首次使用也可补建索引）”
+Draw two aligned left-to-right rows:
+Row public: “通用营销知识\n外部文章与案例图” → “提取正文／归档图片描述\n保留原始来源” → “按文档或描述分块” → “文本 Embedding\nMiniLM · 384 维” → “Chroma 公共知识索引\nknowledge_base_cosine_v1”
+Row brand: “本品牌图片／视频” → “Seed 理解图片\n视频最多抽 8 帧，不含音频” → “MySQL 保存理解结果\n描述／帧时间／素材版本” → “描述分块＋文本向量化” → “Chroma 素材描述索引\nstudio_media_caption_cosine_v1”
+Small annotation below: “品牌、环境和当前版本决定可检索范围；图片／视频原文件保留供预览与实验补读。”
+Attach orange badge E2 near text embedding/index end, label “E2 索引搜索与量化实验”.
+
+SECTION 2 green rounded container, label “② 在线检索与回答（两条独立链路）”
+Route A labeled “公共助手／投放分析”:
+“用户问题” → “查询改写\n最多 4 路并行” → “向量召回\n合并去重” → “LLM 重排\nTop-K” → “证据检查\n不足则澄清” → “Agent 生成建议\n附知识来源”
+Connect public Chroma index down to route A vector retrieval with thin amber dashed line labeled “读取索引”.
+Attach orange badge E1 near query and vector retrieval: “E1 改写／混合检索／查询向量缓存”.
+Note near this route, small but readable: “业务已有查询改写；实验新增的词法融合与向量缓存尚未接入。”
+
+Route B labeled “商家创意工作台”:
+“问题＋商品信息” → “校验品牌与版本” → “检索相关描述\n外部 Top3＋本品牌 Top5” → “组装视觉证据\n当前使用已保存的描述” → “DeepSeek 生成草稿” → “校验引用 ID\n原图／视频时间点”
+Connect BOTH Chroma indices into route B retrieval. Use clean routed edges and no overlaps.
+Under “组装视觉证据” add a prominent orange dashed experiment branch, marked “E3 / E4 实验插入点”:
+“复用已保存观察” → diamond “信息够吗？”
+YES arrow to “交给回答模型”
+NO arrow to “Seed 补读原图一次” → “更新观察” → “交给回答模型”.
+Show this entire branch as orange dashed and label “仅实验；固定参考图，不测检索召回”. It should be visually obvious THIS is the latest experiment location, between retrieving descriptions and final answer generation. Do not imply code automatically executes this branch.
+
+SECTION 3 label “③ 已做的主要对照实验（各实验口径不同，不能拼成一次整体提升）”
+Four compact cards in 2x2 grid, numbered E1–E4. Use short lines and a visible conclusion for each.
+E1 title “E1 公开文本／图片描述检索｜已完成”
+Text:
+“43 片段；新增措辞中 30 道可回答题”
+“向量 → 向量＋标题／正文词法融合”
+“语义 Recall@5：51.67% → 76.67%”
+“50% 受控缓存命中：检索 P95 458 → 274 ms”
+“全新查询未证明稳定提速；不含答案生成”
+Small final line: “另有改写小试：Recall@3 77.08% → 72.92%，未见收益”
+
+E2 title “E2 合成库搜索／量化｜已完成”
+Text:
+“10 万随机向量：HNSW 调搜索宽度”
+“高召回配置在本机比精确扫描更慢”
+“3600 万：float32 vs 二值粗筛＋浮点精排”
+“8 查询整批：114.64 → 66.03 秒”
+“最近邻 Recall@5：100% → 62.5%”
+Conclusion highlighted: “提速但漏召回，不替换业务检索”
+Small label: “批耗时 ≠ 单请求 P95；不是语义召回”
+
+E3 title “E3 早期原图补读｜4 张商家图，已完成”
+Text:
+“每题读图 vs 按关键词决定是否读图”
+“字段＋必要来源通过率：两组均 93.75%”
+“读图 20 → 12 次；P95 26.24 → 29.57 秒”
+Conclusion: “调用少了，尾延迟没有下降”
+Small label: “20 题小样本；与后续外部图实验分开”
+
+E4 title “E4 观察复用＋缺项补读｜本轮，部分完成”
+Text:
+“6 张外部图；计划 240 题次，完成 121”
+“主比较：24 题四组配对，全部使用 Seed mini”
+Use mini table with four rows and three columns after label:
+“方案｜字段＋来源通过率｜回答 P95”
+“A 仅描述｜40%｜1.90 s”
+“B 每题读图｜90%｜10.29 s”
+“C0 仅复用观察｜75%｜3.09 s”
+“C1 缺项才补读｜75%｜6.39 s”
+“C1 vs B：读图 24 → 2 次；质量下降 15 个百分点”
+Conclusion highlighted: “更快，但质量未达标；用量上限中止”
+Small label: “固定正确图片；自动字段诊断，未人工盲审”
+
+BOTTOM small status strip with neutral gray background:
+“待执行：SQ8＋浮点精排（只有方案）｜56 张外部手串图已校验，尚未跑实验”
+“边界：检索召回、最近邻召回、回答字段通过率是不同指标；实验收益不代表线上全流程收益。”
+Tiny source footer:
+“依据：当前源码 + docs/validation/general-rag-ab/20261014-v2 + multimodal-rag-ab/20261014-images-v1 + visual-observation-ab/20261015-seedmini-v2”
+
+Important constraints: All baseline production boxes solid; experimental branch dashed orange; do NOT claim deployed hybrid retrieval, SQ8, native visual embeddings, audio processing, or improved complete RAG. Do not visually promote speed as overall success when quality fell. All arrows logical. Keep card labels and numbers exact. Do not use the old generic diagram's Milvus/Pinecone label. No external logos.

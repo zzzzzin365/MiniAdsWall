@@ -1,0 +1,94 @@
+{
+  "observations": [
+    {
+      "key": "product_type",
+      "value": "bracelet set",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_count",
+      "value": "2",
+      "region": "upper section",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_count",
+      "value": "1",
+      "region": "lower section",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_pattern",
+      "value": "black and white diagonal stripes",
+      "region": "upper bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "bead_color",
+      "value": "light metallic (silver-toned)",
+      "region": "upper bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "bead_arrangement",
+      "value": "evenly spaced along upper bracelets",
+      "region": "upper bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_closure",
+      "value": "black knotted band at top center",
+      "region": "upper section",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_material",
+      "value": "black cord-like material",
+      "region": "lower section",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_knot",
+      "value": "large decorative knot at center of lower bracelet",
+      "region": "lower section",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "plain white",
+      "region": "entire image",
+      "state": "observed"
+    },
+    {
+      "key": "reflection",
+      "value": "faint reflection of lower bracelet on white surface below",
+      "region": "lower section",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_structure",
+      "value": "two layered striped bands with beads",
+      "region": "upper section",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_structure",
+      "value": "single double-stranded cord with knot",
+      "region": "lower section",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "small round beads",
+      "region": "upper bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "knot_type",
+      "value": "decorative interwoven knot on lower bracelet",
+      "region": "lower section",
+      "state": "observed"
+    }
+  ]
+}

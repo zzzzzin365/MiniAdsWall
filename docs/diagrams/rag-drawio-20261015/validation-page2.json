@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "strict": true,
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "file": "/Users/admin/MiniAdsWall/docs/diagrams/rag-drawio-20261015/page2.drawio",
+    "pages": 1,
+    "cells": 59,
+    "vertices": 57,
+    "edges": 0,
+    "embedded_raster": false,
+    "external_image_count": 0,
+    "base64_payload_count": 0,
+    "largest_base64_payload_chars": 0,
+    "caption_like_text": false,
+    "duplicate_id_count": 0,
+    "missing_id_count": 0,
+    "empty_vertex_labels": 5,
+    "empty_edge_labels": 0,
+    "placeholder_label_count": 0,
+    "page_width": 1800.0,
+    "page_height": 1300.0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "call_key": "20261015-seedmini-v2:main:x-marketing-kb:x-marketing-kb-5:C1:route",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "c47ce0fce7af43d77e8c029d",
+  "input_sha256": "69bc0ca6315c10a56d5381385aab9281ecb58ff5e1ed15f3d8477da0587e4756",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2097.3689580569044,
+  "http_status": 200,
+  "provider_id": "021792045315911f513ed7fef0849b399d81a53a0705617687ca2",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 2391,
+    "total_tokens": 2456,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "upper_ad_background_color",
+      "value": "紫色",
+      "region": "上方广告区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

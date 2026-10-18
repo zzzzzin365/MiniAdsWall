@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "has_human_hand_or_wrist",
+      "value": "画面中未出现真人的手或手腕",
+      "region": "整个画面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,52 @@
+{
+  "observations": [
+    {
+      "key": "main_object",
+      "value": "串珠弹力手链",
+      "region": "画面中心区域",
+      "state": "observed"
+    },
+    {
+      "key": "bead_arrangement",
+      "value": "手链由多颗彩色小珠子串成闭合环形",
+      "region": "画面中心",
+      "state": "observed"
+    },
+    {
+      "key": "text_bead_count",
+      "value": "带有字符的白色扁珠共4颗",
+      "region": "手链底部段",
+      "state": "observed"
+    },
+    {
+      "key": "printed_text",
+      "value": "4颗白珠上的字符依次为5、S、O、S，组成文字5SOS",
+      "region": "手链底部的4颗白色扁珠上",
+      "state": "observed"
+    },
+    {
+      "key": "bead_colors",
+      "value": "普通串珠包含红、橙、浅蓝、宝蓝、深蓝、紫、浅粉、白多种颜色",
+      "region": "手链除文字珠外的区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_type",
+      "value": "带镂空网格纹理的灰色毛绒织物",
+      "region": "画面全部背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_shape",
+      "value": "手链整体呈正圆形摆放",
+      "region": "画面中心",
+      "state": "observed"
+    },
+    {
+      "key": "text_readability",
+      "value": "手链上的5SOS字符清晰可辨",
+      "region": "手链底部白色扁珠",
+      "state": "observed"
+    }
+  ]
+}

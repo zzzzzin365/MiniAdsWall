@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "purple_circle_arrow_direction",
+      "value": "白色箭头指向左下方",
+      "region": "页面顶部右侧紫色圆形图标内",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

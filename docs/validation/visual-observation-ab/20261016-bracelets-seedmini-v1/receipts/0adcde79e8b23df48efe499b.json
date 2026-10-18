@@ -1,0 +1,22 @@
+{
+  "call_key": "20261016-bracelets-seedmini-v1:xhs-6acf752d000000001500a9c6-6f28bc97ccf9-1:B:read",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "0adcde79e8b23df48efe499b",
+  "input_sha256": "d3933f95faa8f429507f73f77ee884a90a51841d6553dcce781bfe5b10e007bc",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 4624.524208018556,
+  "http_status": 200,
+  "provider_id": "021792082679517f5a6be93c8798a26ceedbf38a44bb89c536939",
+  "usage": {
+    "completion_tokens": 152,
+    "prompt_tokens": 1653,
+    "total_tokens": 1805,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

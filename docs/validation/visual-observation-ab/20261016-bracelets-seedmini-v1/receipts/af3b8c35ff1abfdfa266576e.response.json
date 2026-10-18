@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "hand_wrist_presence",
+      "value": "画面右下角区域出现了人的手腕，未出现完整的手",
+      "region": "右下角子图",
+      "state": "observed"
+    },
+    {
+      "key": "other_hands_wrists",
+      "value": "画面其他区域未出现真人的手或手腕",
+      "region": "左上、左下子图及背景区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

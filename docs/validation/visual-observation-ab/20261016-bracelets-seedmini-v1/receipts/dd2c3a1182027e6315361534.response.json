@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "product_type",
+      "value": "braided adjustable bracelet",
+      "region": "central",
+      "state": "observed"
+    },
+    {
+      "key": "cord_colors",
+      "value": "coral orange, light pink, pale peach",
+      "region": "braided band",
+      "state": "observed"
+    },
+    {
+      "key": "adjustment_cord_color",
+      "value": "pale peach",
+      "region": "upper adjustment cords",
+      "state": "observed"
+    },
+    {
+      "key": "adjustment_knot_color",
+      "value": "coral orange",
+      "region": "center adjustment knot",
+      "state": "observed"
+    },
+    {
+      "key": "cord_tip_count",
+      "value": "2",
+      "region": "upper ends",
+      "state": "observed"
+    },
+    {
+      "key": "charm_shape",
+      "value": "circular",
+      "region": "right side charm",
+      "state": "observed"
+    },
+    {
+      "key": "charm_text",
+      "value": "black lowercase 'p' on white background",
+      "region": "charm center",
+      "state": "observed"
+    },
+    {
+      "key": "charm_border",
+      "value": "black outer border",
+      "region": "charm edge",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "plain light gray",
+      "region": "entire image background",
+      "state": "observed"
+    },
+    {
+      "key": "band_structure",
+      "value": "three-strand braid of three colors",
+      "region": "lower circular band",
+      "state": "observed"
+    },
+    {
+      "key": "adjustment_cord_length",
+      "value": "two loose ends extending upward from knot",
+      "region": "upper adjustment cords",
+      "state": "observed"
+    },
+    {
+      "key": "cord_tip_appearance",
+      "value": "small knotted tips on adjustment cords",
+      "region": "upper cord ends",
+      "state": "observed"
+    },
+    {
+      "key": "charm_attachment",
+      "value": "attached to right side of bracelet band via small ring",
+      "region": "right side",
+      "state": "observed"
+    },
+    {
+      "key": "band_shape",
+      "value": "circular loop when adjusted",
+      "region": "lower portion",
+      "state": "observed"
+    },
+    {
+      "key": "knot_position",
+      "value": "centered on upper adjustment cords",
+      "region": "upper center",
+      "state": "observed"
+    },
+    {
+      "key": "cord_junction",
+      "value": "coral orange knots at band and adjustment cord junctions",
+      "region": "band ends",
+      "state": "observed"
+    }
+  ]
+}

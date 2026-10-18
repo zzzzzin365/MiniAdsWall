@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "hand_present",
+      "value": "画面中出现了一只真人的手掌（包含手腕部分），手掌上托着一条串珠手链",
+      "region": "画面左侧至中间区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

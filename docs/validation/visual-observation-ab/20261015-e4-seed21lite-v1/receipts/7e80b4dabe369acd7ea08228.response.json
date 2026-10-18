@@ -1,0 +1,9 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "8f0fc652340ca4c7b6f1",
+    "25c787ce7a93a781df70"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录右侧角色额头贴有创可贴，左侧角色头部无创可贴，可直接回答问题。"
+}

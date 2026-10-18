@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "main object",
+      "value": "串珠手链",
+      "region": "画面整体",
+      "state": "observed"
+    },
+    {
+      "key": "bead color",
+      "value": "珠子为亮面纯黑色",
+      "region": "手链主体部分",
+      "state": "observed"
+    },
+    {
+      "key": "bead shape",
+      "value": "珠子为正圆形",
+      "region": "手链主体部分",
+      "state": "observed"
+    },
+    {
+      "key": "bead count",
+      "value": "可见黑色圆珠共26颗",
+      "region": "手链主体部分",
+      "state": "observed"
+    },
+    {
+      "key": "clasp type",
+      "value": "搭扣为银色龙虾扣样式",
+      "region": "手链顶部",
+      "state": "observed"
+    },
+    {
+      "key": "clasp color",
+      "value": "搭扣为金属银色",
+      "region": "手链顶部",
+      "state": "observed"
+    },
+    {
+      "key": "charm shape",
+      "value": "挂坠为蝎子造型",
+      "region": "手链右下侧",
+      "state": "observed"
+    },
+    {
+      "key": "charm color",
+      "value": "蝎子挂坠为金属银色",
+      "region": "手链右下侧",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "背景为纯白色",
+      "region": "画面全部非手链区域",
+      "state": "observed"
+    },
+    {
+      "key": "layout",
+      "value": "手链呈松散环形摆放",
+      "region": "画面中心区域",
+      "state": "observed"
+    },
+    {
+      "key": "connecting rings",
+      "value": "珠子与金属部件间有银色连接环",
+      "region": "搭扣两端、挂坠连接处",
+      "state": "observed"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "无有效同源证据，无法确定本图对应来源的采集记录署名publisher_record",
+  "image_citations": [
+    "image-002"
+  ],
+  "text_citations": []
+}

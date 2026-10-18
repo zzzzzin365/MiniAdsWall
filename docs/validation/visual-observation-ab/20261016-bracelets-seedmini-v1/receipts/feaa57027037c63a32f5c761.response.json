@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "visible_content",
+      "value": "画面仅展示一款由不同材质、颜色珠子串成的手链，未出现真人的手或手腕",
+      "region": "整个画面",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

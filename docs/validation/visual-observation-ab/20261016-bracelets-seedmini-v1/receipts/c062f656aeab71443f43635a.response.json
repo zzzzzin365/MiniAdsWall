@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "画面主要背景为深青绿色（偏暗的蓝绿色）",
+      "region": "画面背景区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

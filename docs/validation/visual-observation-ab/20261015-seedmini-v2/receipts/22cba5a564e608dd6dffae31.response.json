@@ -1,0 +1,25 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "09ae78b4bb0046ed3391",
+    "db1320a9ab0ad2ebad92",
+    "fd80dc746ff578fb4e11",
+    "02893540cba8976ed6fb",
+    "90a67c18004edd5ea848",
+    "6cb9a124989b76975882",
+    "f36258efbc4f5b1bc404",
+    "780ad62f99721fb0294a",
+    "3fceb32cbe4f929f6e14",
+    "01f17165241f8c3a9b11",
+    "6934bdc09be9abeca74f",
+    "98ee17c98b865a7b910b",
+    "ff2ad9aa22b9b9822e45",
+    "b6600c2c0594d0f372cf",
+    "e58f2499c1a1735ccd61",
+    "2693eafda45dbb4a1307",
+    "5544300c47992660ca9f",
+    "eb8848f58c587cbca46a"
+  ],
+  "missing": [],
+  "reason": "图中包含organize、connect、use等流程步骤的文字说明，属于流程示意图的内容，可明确判断该图为流程示意图"
+}

@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "ad_brand",
+      "value": "左侧汽车广告的品牌为蔚来，英文标识为NIO",
+      "region": "左侧广告区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

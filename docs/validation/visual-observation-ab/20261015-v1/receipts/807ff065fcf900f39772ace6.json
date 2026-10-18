@@ -1,0 +1,22 @@
+{
+  "call_key": "main:zhihu-display:zhihu-display-5:B:read",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "807ff065fcf900f39772ace6",
+  "input_sha256": "89a65abf6ba9990ec12964d9bf120c995ac31959b68ed0ce222de321b46b3a6b",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 3087.186000077054,
+  "http_status": 200,
+  "provider_id": "021792042035818ccb5cb80d056078148fd97ed4662bb35cdfd0d",
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 1587,
+    "total_tokens": 1648,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

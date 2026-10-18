@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "实际成交价"
+  ],
+  "reason": "广告中仅含0首付等促销文案，未出现任何价格数字，且实际成交价无法从原图证明。"
+}

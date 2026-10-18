@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "object_type",
+      "value": "beaded bracelet",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "main_bead_type",
+      "value": "black porous lava rock beads",
+      "region": "outer loop of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "chakra_bead_count",
+      "value": "7 colored beads arranged in a horizontal line",
+      "region": "lower front of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "chakra_bead_colors",
+      "value": "dark blue, turquoise, green, dark brown, yellow, red, black",
+      "region": "lower front of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "metal_spacers",
+      "value": "small gold-colored metal ring spacers between beads",
+      "region": "between chakra beads and clasp area",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_type",
+      "value": "gold-colored lobster claw clasp",
+      "region": "top center of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "plain light white surface",
+      "region": "entire background",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "all beads are spherical in shape",
+      "region": "all beads of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "chakra_bead_finish",
+      "value": "most chakra beads have a faceted cut surface",
+      "region": "lower front chakra beads",
+      "state": "observed"
+    },
+    {
+      "key": "lava_bead_finish",
+      "value": "lava beads have a rough porous surface",
+      "region": "outer loop beads",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_position",
+      "value": "clasp is located at the top of the bracelet's loop",
+      "region": "top center",
+      "state": "observed"
+    },
+    {
+      "key": "small_black_beads",
+      "value": "tiny black beads adjacent to the clasp on both sides",
+      "region": "near clasp",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_layout",
+      "value": "circular loop with a straight horizontal section of colored beads at the bottom",
+      "region": "overall structure",
+      "state": "observed"
+    },
+    {
+      "key": "metal_color",
+      "value": "all metal components (spacers, clasp) are gold-colored",
+      "region": "metal parts",
+      "state": "observed"
+    },
+    {
+      "key": "red_chakra_bead",
+      "value": "red faceted spherical bead at the right end of the chakra line",
+      "region": "right lower front",
+      "state": "observed"
+    },
+    {
+      "key": "yellow_chakra_bead",
+      "value": "yellow smooth spherical bead next to the red bead",
+      "region": "right lower front",
+      "state": "observed"
+    },
+    {
+      "key": "green_chakra_bead",
+      "value": "green faceted spherical bead in the middle of the chakra line",
+      "region": "lower front center",
+      "state": "observed"
+    },
+    {
+      "key": "blue_chakra_bead",
+      "value": "dark blue smooth spherical bead at the left end of the chakra line",
+      "region": "left lower front",
+      "state": "observed"
+    }
+  ]
+}

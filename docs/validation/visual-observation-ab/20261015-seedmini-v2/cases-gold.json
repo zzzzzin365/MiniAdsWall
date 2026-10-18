@@ -1,0 +1,508 @@
+[
+  {
+    "case_id": "zhihu-display-1",
+    "asset_id": "zhihu-display",
+    "question": "上方广告的主要背景是什么颜色？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "紫",
+        "purple"
+      ],
+      "support_region": "上半幅大面积背景",
+      "answerable": true
+    },
+    "split": "development"
+  },
+  {
+    "case_id": "zhihu-display-2",
+    "asset_id": "zhihu-display",
+    "question": "产品界面的图表截图总体在广告左边还是右边？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "上下两幅右侧白色界面",
+      "answerable": true
+    },
+    "split": "development"
+  },
+  {
+    "case_id": "zhihu-display-3",
+    "asset_id": "zhihu-display",
+    "question": "上方橙色按钮里写的完整英文是什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "try it free"
+      ],
+      "support_region": "上半幅中下部橙色按钮",
+      "answerable": true
+    },
+    "split": "development"
+  },
+  {
+    "case_id": "zhihu-display-4",
+    "asset_id": "zhihu-display",
+    "question": "上方界面截图中的Site Health百分比是多少？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "78"
+      ],
+      "support_region": "上半幅右侧圆环数值",
+      "answerable": true
+    },
+    "split": "development"
+  },
+  {
+    "case_id": "zhihu-display-5",
+    "asset_id": "zhihu-display",
+    "question": "上方广告左侧品牌区域是否出现绿色猫头鹰形象？",
+    "category": "presence",
+    "gold": {
+      "expected": false,
+      "support_region": "上半幅左侧SEMRUSH品牌区域",
+      "answerable": true
+    },
+    "split": "development"
+  },
+  {
+    "case_id": "zhihu-display-6",
+    "asset_id": "zhihu-display",
+    "question": "使用这张Semrush广告后真实转化率提升了百分之多少？",
+    "category": "not_provable",
+    "gold": {
+      "expected": null,
+      "support_region": "原图不提供真实投放实验结果",
+      "answerable": false
+    },
+    "split": "development"
+  },
+  {
+    "case_id": "zhihu-components-1",
+    "asset_id": "zhihu-components",
+    "question": "左侧汽车广告的品牌叫什么？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "蔚来",
+        "nio"
+      ],
+      "support_region": "左侧顶部品牌标识",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右半幅组件示意",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "视频+图片",
+        "视频＋图片",
+        "视频和图片"
+      ],
+      "support_region": "右上第二行箭头终点",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "zhihu-components-4",
+    "asset_id": "zhihu-components",
+    "question": "左侧最前方汽车的车身主要是什么颜色？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "绿",
+        "green",
+        "薄荷"
+      ],
+      "support_region": "左侧照片最前车身",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "category": "presence",
+    "gold": {
+      "expected": true,
+      "support_region": "右侧营销组件下的子条目",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "category": "not_provable",
+    "gold": {
+      "expected": null,
+      "support_region": "历史宣传不是当前成交价",
+      "answerable": false
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "红",
+        "red"
+      ],
+      "support_region": "页顶大字",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "3",
+        "三"
+      ],
+      "support_region": "正文编号1、2、3",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-1-3",
+    "asset_id": "xhs-duo-1",
+    "question": "顶部紫色圆圈里的白色箭头朝哪个方向？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "左下",
+        "下左",
+        "southwest"
+      ],
+      "support_region": "页顶右侧紫圆箭头",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "有好case"
+      ],
+      "support_region": "右下角白色署名",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-1-5",
+    "asset_id": "xhs-duo-1",
+    "question": "这张建议总结页里是否有彩色汽车照片？",
+    "category": "presence",
+    "gold": {
+      "expected": false,
+      "support_region": "整页是标题与文字段落",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "category": "not_provable",
+    "gold": {
+      "expected": null,
+      "support_region": "作者观点页无真实销量数据",
+      "answerable": false
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-2-1",
+    "asset_id": "xhs-duo-2",
+    "question": "封面底部的品牌角色是什么颜色的什么动物？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "绿",
+        "green"
+      ],
+      "support_region": "下半幅绿色猫头鹰",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-2-2",
+    "asset_id": "xhs-duo-2",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "2",
+        "两",
+        "二"
+      ],
+      "support_region": "底部左右两只角色",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-2-3",
+    "asset_id": "xhs-duo-2",
+    "question": "头上贴着创可贴的是左边还是右边的角色？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "右侧角色头部",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "营销分析"
+      ],
+      "support_region": "页顶正中标签",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-2-5",
+    "asset_id": "xhs-duo-2",
+    "question": "左边那只猫头鹰的头上是否贴着创可贴？",
+    "category": "presence",
+    "gold": {
+      "expected": false,
+      "support_region": "左侧角色头部",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "category": "not_provable",
+    "gold": {
+      "expected": null,
+      "support_region": "封面无活动消耗与营收",
+      "answerable": false
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "黑",
+        "深灰",
+        "black"
+      ],
+      "support_region": "整页深色底",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "流程",
+        "示意",
+        "flow"
+      ],
+      "support_region": "整页节点与连线",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-marketing-kb-3",
+    "asset_id": "x-marketing-kb",
+    "question": "左上角最顶部的英文标题是什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "second brain for marketing"
+      ],
+      "support_region": "左上角第一行英文",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-marketing-kb-4",
+    "asset_id": "x-marketing-kb",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "右",
+        "right"
+      ],
+      "support_region": "下半幅右侧人工审阅区",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-marketing-kb-5",
+    "asset_id": "x-marketing-kb",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "category": "presence",
+    "gold": {
+      "expected": true,
+      "support_region": "中部数据仓库框",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-marketing-kb-6",
+    "asset_id": "x-marketing-kb",
+    "question": "搭建作者这套系统实际花了多少钱？",
+    "category": "not_provable",
+    "gold": {
+      "expected": null,
+      "support_region": "流程图不提供采购账单",
+      "answerable": false
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-creative-framework-1",
+    "asset_id": "x-creative-framework",
+    "question": "这张课程宣传图的底色主要是什么颜色？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "米白",
+        "浅",
+        "白",
+        "beige",
+        "cream"
+      ],
+      "support_region": "整页底色",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-creative-framework-2",
+    "asset_id": "x-creative-framework",
+    "question": "INCLUDING下面并排有几张介绍卡片？",
+    "category": "basic",
+    "gold": {
+      "expected": [
+        "4",
+        "四"
+      ],
+      "support_region": "中部四列卡片",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-creative-framework-3",
+    "asset_id": "x-creative-framework",
+    "question": "最下面Comment后橙色块里要求留言的完整英文词是什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "claudeads"
+      ],
+      "support_region": "底部留言关键词",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-creative-framework-4",
+    "asset_id": "x-creative-framework",
+    "question": "最左边介绍卡片里的完整英文标题是什么？",
+    "category": "detail",
+    "gold": {
+      "expected": [
+        "ad creative strategist system prompt"
+      ],
+      "support_region": "中下部第一张卡片",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-creative-framework-5",
+    "asset_id": "x-creative-framework",
+    "question": "最顶部图标是否是一只绿色猫头鹰？",
+    "category": "presence",
+    "gold": {
+      "expected": false,
+      "support_region": "顶部橙色方形与白色放射图案",
+      "answerable": true
+    },
+    "split": "test"
+  },
+  {
+    "case_id": "x-creative-framework-6",
+    "asset_id": "x-creative-framework",
+    "question": "这套私有课程实际售价是多少？",
+    "category": "not_provable",
+    "gold": {
+      "expected": null,
+      "support_region": "宣传图没有课程售价",
+      "answerable": false
+    },
+    "split": "test"
+  }
+]

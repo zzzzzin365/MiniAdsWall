@@ -1,0 +1,61 @@
+{
+  "file": "docs/diagrams/rag-drawio-20261015/page2.drawio",
+  "summary": {
+    "total_findings": 5,
+    "fail": 0,
+    "warn": 5,
+    "passed": true,
+    "clean": false
+  },
+  "fails": [],
+  "warns": [
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "c1",
+      "message": "Box 'c1' (850×420) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "c1",
+        "size": "850×420"
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "c2",
+      "message": "Box 'c2' (850×420) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "c2",
+        "size": "850×420"
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "c3",
+      "message": "Box 'c3' (850×420) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "c3",
+        "size": "850×420"
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "c4",
+      "message": "Box 'c4' (850×420) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "c4",
+        "size": "850×420"
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "pending",
+      "message": "Box 'pending' (1740×180) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "pending",
+        "size": "1740×180"
+      }
+    }
+  ],
+  "vertex_count": 57,
+  "edge_count": 0,
+  "canvas": "1800x1300"
+}

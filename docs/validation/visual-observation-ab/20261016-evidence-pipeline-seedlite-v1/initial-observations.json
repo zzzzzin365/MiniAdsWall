@@ -1,0 +1,3199 @@
+{
+  "image-001": {
+    "observations": [
+      {
+        "key": "background_color",
+        "value": "背景为深青绿色纯色",
+        "region": "画面全部背景区域",
+        "state": "observed",
+        "observation_id": "4d1dfb1cea85eac8bb58",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "display_subject",
+        "value": "展示佩戴着手串的人手及部分小臂",
+        "region": "画面中下部至右侧区域",
+        "state": "observed",
+        "observation_id": "9addfe7b61faf0f1948c",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_wearing_position",
+        "value": "手串佩戴在人的手腕部位",
+        "region": "手腕区域",
+        "state": "observed",
+        "observation_id": "40bb2c088fa03009aec7",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_coil_count",
+        "value": "手串共缠绕手腕4圈",
+        "region": "手腕佩戴区域",
+        "state": "observed",
+        "observation_id": "f0ec9b916fbf4417fca9",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_color",
+        "value": "手串主珠为棕黄至深棕的木色",
+        "region": "手串主体区域",
+        "state": "observed",
+        "observation_id": "5f82772b3baf19ead14d",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_shape",
+        "value": "主珠为正圆形圆珠",
+        "region": "手串主体区域",
+        "state": "observed",
+        "observation_id": "1ee4f6507ab58beb3477",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "accent_bead_color",
+        "value": "手串点缀有少量深红色圆珠",
+        "region": "手串各圈间隔位置",
+        "state": "observed",
+        "observation_id": "b353524c602b0ae62f36",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "carved_pendant",
+        "value": "手串带有1枚浅棕色雕刻饰件，饰件上有祥云纹样",
+        "region": "手串靠近手腕内侧位置",
+        "state": "observed",
+        "observation_id": "9a96d1dd67f619fde921",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_skin_tone",
+        "value": "人手肤色为浅自然肤色",
+        "region": "手部及小臂区域",
+        "state": "observed",
+        "observation_id": "676a0cbb07ec4c0932f4",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_posture",
+        "value": "手部呈放松微曲姿态，手指自然舒展",
+        "region": "画面左侧手部区域",
+        "state": "observed",
+        "observation_id": "a60cd2e7e05d14c02c78",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      },
+      {
+        "key": "extra_text_presence",
+        "value": "画面无清晰可读的额外文字",
+        "region": "全画面",
+        "state": "explicitly_absent",
+        "observation_id": "838f49b41dcb8b630e0c",
+        "source_id": "image-001",
+        "request_id": "f8e35ce5aaedaf8d31a0c5da",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-001",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "f8e35ce5aaedaf8d31a0c5da",
+      "input_sha256": "2c39b1145f24b09c71ccfe738d4de0c09d4af2397a0814b652635f67ef9c4e5e",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 11602.010459057055,
+      "http_status": 200,
+      "provider_id": "02179208333023537fa1e35c84c0d2e78e1e6ee6f349cd96dd238",
+      "usage": {
+        "completion_tokens": 419,
+        "prompt_tokens": 1596,
+        "total_tokens": 2015,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-002": {
+    "observations": [
+      {
+        "key": "main_bead_color",
+        "value": "深近黑的红棕色圆珠",
+        "region": "手串主体部分",
+        "state": "observed",
+        "observation_id": "93f8e4bc670e29d782f5",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_quantity",
+        "value": "多颗，串成三圈样式",
+        "region": "手串整体",
+        "state": "observed",
+        "observation_id": "43558a9969e4f5030ebb",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_spacer_quantity",
+        "value": "共8颗金色隔珠",
+        "region": "手串串珠间隔处",
+        "state": "observed",
+        "observation_id": "2f8d369951923f00dc2a",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_spacer_shape",
+        "value": "带纹饰的金色圆珠",
+        "region": "手串串珠间隔处",
+        "state": "observed",
+        "observation_id": "0179870892cd256b300d",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "pink_bead_quantity",
+        "value": "共2颗浅红粉色圆珠",
+        "region": "手串左侧串段",
+        "state": "observed",
+        "observation_id": "2234814555c21bccee71",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "square_pendant",
+        "value": "半透奶白色方形坠饰，顶部金饰嵌小红珠",
+        "region": "手串左下末端",
+        "state": "observed",
+        "observation_id": "5df664f1285e1694be40",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "round_enamel_pendant",
+        "value": "金色圆牌坠，表面有彩色珐琅装饰",
+        "region": "手串右下末端",
+        "state": "observed",
+        "observation_id": "0d5157aa25edb0d71625",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "wooden_support",
+        "value": "浅棕黄色长条形木质托板",
+        "region": "手串后方斜向区域",
+        "state": "observed",
+        "observation_id": "4ae022196d099671ec3b",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "background_surface",
+        "value": "下方为纯白色平面",
+        "region": "画面底部及右侧",
+        "state": "observed",
+        "observation_id": "dbf00e91e916d37ee468",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "mat_surface",
+        "value": "上方为浅米色带细微纹理的垫面",
+        "region": "画面左上区域",
+        "state": "observed",
+        "observation_id": "0df3fe328338b7a21956",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "blur_green_leaf",
+        "value": "画面左上角有模糊绿色叶片",
+        "region": "画面左上角",
+        "state": "observed",
+        "observation_id": "72edf4f7f7032789d466",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      },
+      {
+        "key": "pendant_text",
+        "value": "圆牌坠上的文字细节无法清晰辨认",
+        "region": "右下圆形珐琅坠",
+        "state": "unclear",
+        "observation_id": "988904b64a08de55b5a5",
+        "source_id": "image-002",
+        "request_id": "5f0715f4d4eb350a7e44d6dc",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-002",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "5f0715f4d4eb350a7e44d6dc",
+      "input_sha256": "63f053c1f9b47bd32732820b9c65efe687d417fa9c1edffb5c5e4e9f9ed340be",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 12261.480709072202,
+      "http_status": 200,
+      "provider_id": "02179208334075137fa1e35c84c0d2e78e1e6ee6f349cd9fcd93a",
+      "usage": {
+        "completion_tokens": 446,
+        "prompt_tokens": 1602,
+        "total_tokens": 2048,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-003": {
+    "observations": [
+      {
+        "key": "MainSubject",
+        "value": "A single beaded bracelet",
+        "region": "Central lower part of the image",
+        "state": "observed",
+        "observation_id": "69ba9b6ec51b141b52e3",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "Background",
+        "value": "Uniform plain light off-white background",
+        "region": "Full image area",
+        "state": "observed",
+        "observation_id": "9f960d8e467707fdcb15",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "MainBeadColor",
+        "value": "Most beads are solid black",
+        "region": "Bracelet body except the accent section",
+        "state": "observed",
+        "observation_id": "c081553ac3eb5a334e54",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "MainBeadShape",
+        "value": "Short cylindrical flat-sided beads",
+        "region": "Bracelet body except the accent section",
+        "state": "observed",
+        "observation_id": "b4d3f635aec0b84a14fc",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "AccentBeadCount",
+        "value": "Total 2 accent beads",
+        "region": "Left side near the clasp of the bracelet",
+        "state": "observed",
+        "observation_id": "fd50291ea1a1f66fd2d4",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "AccentBead1Color",
+        "value": "Light turquoise green accent bead",
+        "region": "Left accent section of the bracelet",
+        "state": "observed",
+        "observation_id": "d3b42ff1866ebeb544d7",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "AccentBead2Color",
+        "value": "Pale off-white accent bead",
+        "region": "Adjacent to the green accent bead on the right",
+        "state": "observed",
+        "observation_id": "7349fc056373eee85f2c",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "ClaspType",
+        "value": "Toggle-style slider clasp",
+        "region": "Bottom center of the bracelet",
+        "state": "observed",
+        "observation_id": "92dc197816eaf9eb7bd2",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "ClaspColor",
+        "value": "Silver-toned metallic clasp",
+        "region": "Bottom center of the bracelet",
+        "state": "observed",
+        "observation_id": "12c281662b7aab20eaa8",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "CordColor",
+        "value": "Black braided adjustment cords",
+        "region": "Between beads and the clasp on both sides",
+        "state": "observed",
+        "observation_id": "cb2f7d4efab35977d224",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "Layout",
+        "value": "Bracelet laid out in a loose circular shape",
+        "region": "Central part of the image",
+        "state": "observed",
+        "observation_id": "dff084ec17c2f0bcc12c",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      },
+      {
+        "key": "VisibleText",
+        "value": "No legible text present on the bracelet or background",
+        "region": "Full image area",
+        "state": "explicitly_absent",
+        "observation_id": "1a8258de4d0896cb8543",
+        "source_id": "image-003",
+        "request_id": "2b417428cb7ad93fc83a735c",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-003",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "2b417428cb7ad93fc83a735c",
+      "input_sha256": "3104bf93d292c056c247334149555a57f4fc7949ba795e897b0146faa97eb1f5",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 10546.812541899271,
+      "http_status": 200,
+      "provider_id": "02179208335299137fa1e35c84c0d2e78e1e6ee6f349cd9eeedf5",
+      "usage": {
+        "completion_tokens": 449,
+        "prompt_tokens": 1618,
+        "total_tokens": 2067,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-004": {
+    "observations": [
+      {
+        "key": "object_type",
+        "value": "串珠手链",
+        "region": "画面中心",
+        "state": "observed",
+        "observation_id": "960a287f833eabc920a1",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "arrangement_shape",
+        "value": "呈环形排列",
+        "region": "画面整体",
+        "state": "observed",
+        "observation_id": "5e0bb89a5a9f2ff17126",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "total_bead_count",
+        "value": "串珠总数量为24颗",
+        "region": "手链整体",
+        "state": "observed",
+        "observation_id": "e7e64d35854abf54caa3",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "copper_bead_top",
+        "value": "顶部有1颗亮面铜色圆珠",
+        "region": "手链顶部",
+        "state": "observed",
+        "observation_id": "b65a720571298844c827",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "lava_bead_count",
+        "value": "黑色多孔火山岩圆珠共4颗",
+        "region": "手链不同位置",
+        "state": "observed",
+        "observation_id": "fd21e8406d575c3217f6",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "peach_round_bead_count",
+        "value": "浅桃色哑光圆珠共4颗",
+        "region": "手链不同位置",
+        "state": "observed",
+        "observation_id": "d9fe8df56681a774e618",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "brown_cat_eye_bead_count",
+        "value": "棕调猫眼效果圆珠共2颗",
+        "region": "手链不同位置",
+        "state": "observed",
+        "observation_id": "14bd4c8510dc164e13b6",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "banded_agate_bead_count",
+        "value": "带白纹的棕黑条纹圆珠共6颗",
+        "region": "手链不同位置",
+        "state": "observed",
+        "observation_id": "769a0d86e99cae91fa25",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "faceted_black_bead_count",
+        "value": "多切面黑色异形珠共4颗",
+        "region": "手链不同位置",
+        "state": "observed",
+        "observation_id": "57a0fe3286a204f0904b",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "clear_bead_count",
+        "value": "透明圆珠共2颗",
+        "region": "手链底部",
+        "state": "observed",
+        "observation_id": "16814a6193ce1e48010a",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "copper_spacer",
+        "value": "底部透明珠之间有1颗铜色隔珠",
+        "region": "手链底部",
+        "state": "observed",
+        "observation_id": "17f9b3c8c6410cc20208",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "spacer_text",
+        "value": "铜色隔珠上刻有清晰的MUSE字样",
+        "region": "手链底部隔珠表面",
+        "state": "observed",
+        "observation_id": "d89ec42420534f217f49",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "纯白色无其他元素",
+        "region": "画面全部背景区域",
+        "state": "observed",
+        "observation_id": "10f367e40a76b017a296",
+        "source_id": "image-004",
+        "request_id": "125220cc595b51029fca508a",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-004",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "125220cc595b51029fca508a",
+      "input_sha256": "4b17c747de719934c412b882d103da3a8d6f00d18e927f9ba40f5bb2f0f1e81d",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 8928.90516598709,
+      "http_status": 200,
+      "provider_id": "02179208336352937fa1e35c84c0d2e78e1e6ee6f349cd9801334",
+      "usage": {
+        "completion_tokens": 471,
+        "prompt_tokens": 1602,
+        "total_tokens": 2073,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-005": {
+    "observations": [
+      {
+        "key": "object_type",
+        "value": "编织手绳手链",
+        "region": "画面整体",
+        "state": "observed",
+        "observation_id": "17db562f50e2c5f27b35",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "main_braid_color",
+        "value": "由亮橙色、浅粉色、浅裸色三种色线编织而成",
+        "region": "手链环形主体部分",
+        "state": "observed",
+        "observation_id": "4b2aa4e0ef860a51c6ba",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "adjustment_cord_color",
+        "value": "调节绳主体为浅裸色",
+        "region": "手链上部调节结构",
+        "state": "observed",
+        "observation_id": "127929410a7d1887600d",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "center_knot_color",
+        "value": "调节绳中心的固定结为亮橙色",
+        "region": "手链上部调节绳交汇处",
+        "state": "observed",
+        "observation_id": "37088b74e4f63a4d9965",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "adjustment_tip_count",
+        "value": "调节绳末端共有2个绳头",
+        "region": "画面上方左右两侧",
+        "state": "observed",
+        "observation_id": "1704343ec88d483b46a4",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "adjustment_tip_color",
+        "value": "调节绳末端绳头为浅裸色",
+        "region": "画面上方左右绳头位置",
+        "state": "observed",
+        "observation_id": "b2fc0d1d14f3794d3fc3",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_shape",
+        "value": "挂饰为圆形金属吊牌",
+        "region": "手链右侧靠近编织段位置",
+        "state": "observed",
+        "observation_id": "39cd2783f34d1ff128be",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_text",
+        "value": "吊牌上印有黑色小写字母p",
+        "region": "圆形吊牌表面",
+        "state": "observed",
+        "observation_id": "17ebf15564008338e88f",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_border",
+        "value": "吊牌带有黑色外圈",
+        "region": "圆形吊牌边缘",
+        "state": "observed",
+        "observation_id": "d5ec2b20e5e07465d860",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_background",
+        "value": "吊牌底色为银色",
+        "region": "圆形吊牌内部区域",
+        "state": "observed",
+        "observation_id": "7b41c140d78a8f79d6f5",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_connection",
+        "value": "吊牌通过黑色小挂环连接在手绳上",
+        "region": "吊牌与手绳衔接处",
+        "state": "observed",
+        "observation_id": "ac82f74f8492624a4f46",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "背景为纯白色",
+        "region": "画面全部空白区域",
+        "state": "observed",
+        "observation_id": "7fa5107d3b7349eb5a11",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      },
+      {
+        "key": "layout",
+        "value": "手链呈开口向下的近似环形摆放在画面中央",
+        "region": "画面整体",
+        "state": "observed",
+        "observation_id": "4daab9b8e93e386fd8ee",
+        "source_id": "image-005",
+        "request_id": "85a3448558771fda80d82d74",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-005",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "85a3448558771fda80d82d74",
+      "input_sha256": "b5f2d491298176b73c271ef4dfb78562bd2597afe5bb2a2c8e745281cc20a223",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 9954.703915980645,
+      "http_status": 200,
+      "provider_id": "02179208337248037fa1e35c84c0d2e78e1e6ee6f349cd9a91cdb",
+      "usage": {
+        "completion_tokens": 481,
+        "prompt_tokens": 1602,
+        "total_tokens": 2083,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-006": {
+    "observations": [
+      {
+        "key": "backing_plate_shape",
+        "value": "六边形",
+        "region": "画面中部承载饰品的白色板体",
+        "state": "observed",
+        "observation_id": "1c29edb68178afe632c5",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "backing_plate_color",
+        "value": "白色，表面带有做旧纹理",
+        "region": "画面中部承载饰品的板体",
+        "state": "observed",
+        "observation_id": "0ce0079af78bb7a36dc5",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_main_color",
+        "value": "主体为白色",
+        "region": "画面中心的环形饰品",
+        "state": "observed",
+        "observation_id": "f0f965f4d16fa4910ff3",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_type",
+        "value": "由大量白色薄圆片状串珠串联而成",
+        "region": "画面中心环形饰品的绝大部分区域",
+        "state": "observed",
+        "observation_id": "976d8feb44ee2c37116c",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_decoration_1",
+        "value": "顶部有一组多枚堆叠的金色圆片串饰",
+        "region": "环形饰品的上部位置",
+        "state": "observed",
+        "observation_id": "87aebe9350e58cd9eab5",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_decoration_2",
+        "value": "底部有1枚金色圆珠状饰件",
+        "region": "环形饰品的下部位置",
+        "state": "observed",
+        "observation_id": "9898c06dad6d525085a7",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_shape",
+        "value": "整体呈闭合圆环形态",
+        "region": "画面中心",
+        "state": "observed",
+        "observation_id": "d3d804a2a035de8a03c9",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "背景为纯白色",
+        "region": "六边形背板以外的区域",
+        "state": "observed",
+        "observation_id": "e3137f84fa9883719790",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_quantity",
+        "value": "画面中仅存在1条手链",
+        "region": "整幅画面",
+        "state": "observed",
+        "observation_id": "e025490c924bfcd6a586",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      },
+      {
+        "key": "text_presence",
+        "value": "画面中无清晰可识别的文字内容",
+        "region": "全画面",
+        "state": "explicitly_absent",
+        "observation_id": "eb49c30d420fef0c0107",
+        "source_id": "image-006",
+        "request_id": "75cb1191ccb160e98c3e4ed3",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-006",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "75cb1191ccb160e98c3e4ed3",
+      "input_sha256": "5ef707ba0fca2f31c592fd5a525a79157a23fead7f10609dde3b3b96f1cc1bcd",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 9660.842624958605,
+      "http_status": 200,
+      "provider_id": "02179208338244637fa1e35c84c0d2e78e1e6ee6f349cd9f5578a",
+      "usage": {
+        "completion_tokens": 381,
+        "prompt_tokens": 1566,
+        "total_tokens": 1947,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-007": {
+    "observations": [
+      {
+        "key": "bracelet_present",
+        "value": "手腕处佩戴有串珠手链",
+        "region": "画面右侧人物手腕位置",
+        "state": "observed",
+        "observation_id": "56dd76e34cad642bed84",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_color_pattern",
+        "value": "手链由红、白两色串珠搭配黑色包边组成，带有可调节的黑色绳结与黑色珠饰",
+        "region": "画面右侧人物手腕位置",
+        "state": "observed",
+        "observation_id": "2419d83a3f1809bb2b91",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "ring_present",
+        "value": "手指上佩戴有一枚金色戒指",
+        "region": "画面左侧人物手部位置",
+        "state": "observed",
+        "observation_id": "81d3b990a2f5e82bca47",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "tattoo_present",
+        "value": "上臂处有蝴蝶造型的深色纹身",
+        "region": "画面右上方人物上臂位置",
+        "state": "observed",
+        "observation_id": "2776e3511ffb1b4940ef",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "nail_polish",
+        "value": "可见的手指甲涂有深红色指甲油",
+        "region": "画面左侧人物手部位置",
+        "state": "observed",
+        "observation_id": "052fdbb3234875e2793d",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "clothing_color",
+        "value": "人物穿着黑色的贴身衣物",
+        "region": "画面中人物躯干位置",
+        "state": "observed",
+        "observation_id": "4b764d38eb3f91f6a115",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_position",
+        "value": "人物双手交叠放置在自身胸部前方",
+        "region": "画面左侧区域",
+        "state": "observed",
+        "observation_id": "5731fcdbdb8b9eca68f4",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "tattoo_shape",
+        "value": "纹身图案为蝴蝶轮廓造型",
+        "region": "画面右上方人物上臂位置",
+        "state": "observed",
+        "observation_id": "04231148bb1cf80a8c65",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_arrangement",
+        "value": "手链串珠呈红、白相间的条纹状排列",
+        "region": "画面右侧人物手腕位置",
+        "state": "observed",
+        "observation_id": "d5e91ba19b656a3f6ee8",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      },
+      {
+        "key": "background_state",
+        "value": "画面背景为模糊的浅色调区域，无清晰可辨物体",
+        "region": "画面右侧边缘区域",
+        "state": "observed",
+        "observation_id": "0e60b3639d10fa73b2c1",
+        "source_id": "image-007",
+        "request_id": "63fa271a91c9d4d9700635f9",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-007",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "63fa271a91c9d4d9700635f9",
+      "input_sha256": "daececb1c46d4f19c1722d398d0274beb7e026aab4615489b007e976a79fcd95",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 11596.424040966667,
+      "http_status": 200,
+      "provider_id": "02179208339210537fa1e35c84c0d2e78e1e6ee6f349cd95095ef",
+      "usage": {
+        "completion_tokens": 402,
+        "prompt_tokens": 1582,
+        "total_tokens": 1984,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-008": {
+    "observations": [
+      {
+        "key": "product_type",
+        "value": "图中展示的是两款装饰手链",
+        "region": "画面中央区域",
+        "state": "observed",
+        "observation_id": "716eadd1c3257566237e",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_pattern",
+        "value": "上方手链主体为黑白斜向条纹缠绕样式",
+        "region": "画面上部",
+        "state": "observed",
+        "observation_id": "fd1f215a685503604b9f",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_decoration",
+        "value": "上方手链的条纹层间嵌有一排银色圆形金属饰钉",
+        "region": "画面上部",
+        "state": "observed",
+        "observation_id": "ee6fe661e049f37375b3",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_fastener",
+        "value": "上方手链的闭合结构为黑色编织绳结",
+        "region": "画面上部手链的顶部",
+        "state": "observed",
+        "observation_id": "fa5797d670e4a8ad57bb",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_material",
+        "value": "下方手链由纯黑色编织绳制成",
+        "region": "画面下部",
+        "state": "observed",
+        "observation_id": "475f1406d0c6cda74d44",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_structure",
+        "value": "下方手链的绳身呈双股环绕形态",
+        "region": "画面下部",
+        "state": "observed",
+        "observation_id": "84df5489f7a7743ea630",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_decoration",
+        "value": "下方手链正面中央有一个8字形的黑色绳结装饰",
+        "region": "画面下部手链的中心位置",
+        "state": "observed",
+        "observation_id": "fe00bda1c54a76e70e98",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "整体背景为纯白色",
+        "region": "画面全部背景区域",
+        "state": "observed",
+        "observation_id": "74aea24a68fa7d3ca2d3",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "reflection",
+        "value": "手链下方的白色平面上带有手链的浅淡倒影",
+        "region": "画面底部手链下方区域",
+        "state": "observed",
+        "observation_id": "ec60f2f5cd8bb968b52c",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      },
+      {
+        "key": "text_presence",
+        "value": "画面中无清晰可识别的文字内容",
+        "region": "全画面",
+        "state": "explicitly_absent",
+        "observation_id": "544af86674443ce3dbc4",
+        "source_id": "image-008",
+        "request_id": "ed3b4846b55a6fff4ef8d33b",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-008",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "ed3b4846b55a6fff4ef8d33b",
+      "input_sha256": "2375294e8332e1ca8423d98c7e918abafc723b861cb6d5dec2d35f727e7a2f27",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 9887.583834002726,
+      "http_status": 200,
+      "provider_id": "02179208340371237fa1e35c84c0d2e78e1e6ee6f349cd98f5fd8",
+      "usage": {
+        "completion_tokens": 396,
+        "prompt_tokens": 1586,
+        "total_tokens": 1982,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-009": {
+    "observations": [
+      {
+        "key": "main_subject",
+        "value": "一只佩戴着手串的人手",
+        "region": "画面中右侧及下方区域",
+        "state": "observed",
+        "observation_id": "97e624ef1f925a6aaa64",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_type",
+        "value": "串珠编织宽手链",
+        "region": "手腕位置",
+        "state": "observed",
+        "observation_id": "1f567513be4caac54213",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_base_color",
+        "value": "手链基底由黑色串珠构成",
+        "region": "手链整体边缘区域",
+        "state": "observed",
+        "observation_id": "56bb7d9300f5913e4b04",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "silver_bead_pattern",
+        "value": "手链左侧区域有银色串珠组成的字符图案",
+        "region": "手链左侧部分",
+        "state": "observed",
+        "observation_id": "1931c55a47f2cf1db4d0",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "yellow_bead_pattern",
+        "value": "手链中部有黄色串珠组成的横向色块区域",
+        "region": "手链中间偏左部分",
+        "state": "observed",
+        "observation_id": "37a85adc1152e29a353d",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "blue_bead_pattern",
+        "value": "手链右侧有蓝色串珠组成的横向色块区域",
+        "region": "手链中间偏右部分",
+        "state": "observed",
+        "observation_id": "89b943e429a16c19650f",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_skin_feature",
+        "value": "人手手背皮肤纹理清晰，露出四根手指",
+        "region": "画面上方手部区域",
+        "state": "observed",
+        "observation_id": "19f5335886db10c93ebc",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "forearm_hair",
+        "value": "手腕下方的前臂分布有浅色汗毛",
+        "region": "画面左下方前臂区域",
+        "state": "observed",
+        "observation_id": "7a0a48898ad2f2fd4a04",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "forearm_moles",
+        "value": "前臂皮肤上可见三颗小型褐色痣点",
+        "region": "画面左下方前臂区域",
+        "state": "observed",
+        "observation_id": "42f0c2d6600c24b9a966",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "背景为灰色",
+        "region": "画面左侧及右下角区域",
+        "state": "observed",
+        "observation_id": "924b30dad94ab5a980d5",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "background_texture",
+        "value": "背景带有模糊的斑驳纹理",
+        "region": "画面全部背景区域",
+        "state": "observed",
+        "observation_id": "0978d73d99da85d4a194",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_position",
+        "value": "手链环绕在人体手腕部位",
+        "region": "手腕处",
+        "state": "observed",
+        "observation_id": "1e8c304aaca98553cb4a",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_arrangement",
+        "value": "串珠排列整齐，呈横向多行排布",
+        "region": "手链整体",
+        "state": "observed",
+        "observation_id": "3eb94bb9d4bcc06183d0",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      },
+      {
+        "key": "finger_status",
+        "value": "画面中未显示完整的全部五根手指",
+        "region": "画面上方手部区域",
+        "state": "observed",
+        "observation_id": "35e2ee31449947ab9c39",
+        "source_id": "image-009",
+        "request_id": "441a79761bf2233a6561f42d",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-009",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "441a79761bf2233a6561f42d",
+      "input_sha256": "d8f23b6629983fc6fad7e008e93c0415c95340ce0dca7b8e71992b3396339e67",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 13446.535625029355,
+      "http_status": 200,
+      "provider_id": "02179208341401637fa1e35c84c0d2e78e1e6ee6f349cd94c0d5b",
+      "usage": {
+        "completion_tokens": 520,
+        "prompt_tokens": 1577,
+        "total_tokens": 2097,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-010": {
+    "observations": [
+      {
+        "key": "total_bracelet_count",
+        "value": "2",
+        "region": "full image",
+        "state": "observed",
+        "observation_id": "edd85c62f72fcd9846cd",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_position",
+        "value": "located in upper half of the image",
+        "region": "upper area",
+        "state": "observed",
+        "observation_id": "5e0637fb3641fdc8f0d8",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_position",
+        "value": "located in lower half of the image",
+        "region": "lower area",
+        "state": "observed",
+        "observation_id": "5bb044f7220a98ccf114",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_bead_types",
+        "value": "two types of round beads: silvery light gray beads and bright turquoise blue beads",
+        "region": "upper bracelet",
+        "state": "observed",
+        "observation_id": "f9c702118d11cabc3853",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_silvery_bead_feature",
+        "value": "most silvery light gray beads have a small dark dot on the surface",
+        "region": "upper bracelet",
+        "state": "observed",
+        "observation_id": "2416f1ce2942a62d9a7a",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_blue_bead_feature",
+        "value": "turquoise blue beads are smooth and round, some have a tiny dark dot",
+        "region": "upper bracelet",
+        "state": "observed",
+        "observation_id": "d2ec4d74139a5288ff55",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_structure",
+        "value": "beads are clustered and connected by hidden metal components",
+        "region": "upper bracelet",
+        "state": "observed",
+        "observation_id": "96d49aaa102ee1eae7ee",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_clasp_position",
+        "value": "silver-toned clasp is located at the left end of the top bracelet",
+        "region": "left end of upper bracelet",
+        "state": "observed",
+        "observation_id": "14ccf1e2d0f557c5334e",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_central_metal_part",
+        "value": "no exposed geometric metal chain in the central area of the top bracelet",
+        "region": "middle of upper bracelet",
+        "state": "explicitly_absent",
+        "observation_id": "5da284acbe97ad410cd5",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_central_component",
+        "value": "central part has a continuous silver-toned geometric metal chain with linked rectangular hollow units",
+        "region": "middle of lower bracelet",
+        "state": "observed",
+        "observation_id": "3076d7dffffa5eb8501a",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_bead_arrangement",
+        "value": "round silvery light gray beads and turquoise blue beads are arranged on both sides of the central metal chain",
+        "region": "lower bracelet",
+        "state": "observed",
+        "observation_id": "aef2dabf5401a112ee57",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_silvery_bead_feature",
+        "value": "partial silvery light gray beads have visible surface wear or dark patina",
+        "region": "lower bracelet",
+        "state": "observed",
+        "observation_id": "020c4eaac203bbc50afb",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_blue_bead_feature",
+        "value": "turquoise blue beads are smooth and round, no obvious dark dots on visible surfaces",
+        "region": "lower bracelet",
+        "state": "observed",
+        "observation_id": "496a11be0d1bfbc3b064",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_clasp_position",
+        "value": "silver-toned clasp is located at the left end of the bottom bracelet",
+        "region": "left end of lower bracelet",
+        "state": "observed",
+        "observation_id": "6edb64d6921a232a66cf",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "pure solid white background, no other patterns or objects",
+        "region": "full image background",
+        "state": "observed",
+        "observation_id": "5ea5044650c59854d475",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      },
+      {
+        "key": "text_presence",
+        "value": "no clearly readable text on the two bracelets",
+        "region": "full image",
+        "state": "explicitly_absent",
+        "observation_id": "457725bd5004fa1200e0",
+        "source_id": "image-010",
+        "request_id": "3e378d3bbf731bd5853958c1",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-010",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "3e378d3bbf731bd5853958c1",
+      "input_sha256": "dcdc57f8e7d38f07c8faa7d82069bb4f445ec0746963cab8888022a494a3c901",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 13276.418292080052,
+      "http_status": 200,
+      "provider_id": "02179208342706637fa1e35c84c0d2e78e1e6ee6f349cd98db8a1",
+      "usage": {
+        "completion_tokens": 700,
+        "prompt_tokens": 1602,
+        "total_tokens": 2302,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-011": {
+    "observations": [
+      {
+        "key": "main_object",
+        "value": "串珠弹力手链",
+        "region": "画面中心区域",
+        "state": "observed",
+        "observation_id": "34b8b17a62b8ee7d1630",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_arrangement",
+        "value": "手链由多颗彩色小珠子串成闭合环形",
+        "region": "画面中心",
+        "state": "observed",
+        "observation_id": "c052210d84bac90ad23d",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "text_bead_count",
+        "value": "带有字符的白色扁珠共4颗",
+        "region": "手链底部段",
+        "state": "observed",
+        "observation_id": "1b6d16109ef388b4ecbf",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "printed_text",
+        "value": "4颗白珠上的字符依次为5、S、O、S，组成文字5SOS",
+        "region": "手链底部的4颗白色扁珠上",
+        "state": "observed",
+        "observation_id": "07d0a919d3475a542784",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_colors",
+        "value": "普通串珠包含红、橙、浅蓝、宝蓝、深蓝、紫、浅粉、白多种颜色",
+        "region": "手链除文字珠外的区域",
+        "state": "observed",
+        "observation_id": "d38200496c056bc076f0",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "background_type",
+        "value": "带镂空网格纹理的灰色毛绒织物",
+        "region": "画面全部背景区域",
+        "state": "observed",
+        "observation_id": "9055bb60b087d52d9d8d",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_shape",
+        "value": "手链整体呈正圆形摆放",
+        "region": "画面中心",
+        "state": "observed",
+        "observation_id": "e5fd586bd39a0726faa8",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      },
+      {
+        "key": "text_readability",
+        "value": "手链上的5SOS字符清晰可辨",
+        "region": "手链底部白色扁珠",
+        "state": "observed",
+        "observation_id": "25a693aa29f25a0a50fe",
+        "source_id": "image-011",
+        "request_id": "339e7a7ef3a68879e9c93577",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-011",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "339e7a7ef3a68879e9c93577",
+      "input_sha256": "e3ff8faa7e6aa02e8ad86d8a056da9fcf1b12fca0052affe1e7f24bcccae266d",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 8415.066541987471,
+      "http_status": 200,
+      "provider_id": "02179208344035737fa1e35c84c0d2e78e1e6ee6f349cd9399a3e",
+      "usage": {
+        "completion_tokens": 327,
+        "prompt_tokens": 1602,
+        "total_tokens": 1929,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-012": {
+    "observations": [
+      {
+        "key": "main_subject",
+        "value": "一只手掌托着一条串珠手链",
+        "region": "画面中心",
+        "state": "observed",
+        "observation_id": "74ca124e29f8de43de2f",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_base_color",
+        "value": "手链主体串珠为银色",
+        "region": "手链主体部分",
+        "state": "observed",
+        "observation_id": "31c86fc46d3d34fb8165",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "flower_decoration_count",
+        "value": "手链上共有5个串珠花朵装饰",
+        "region": "手链整体",
+        "state": "observed",
+        "observation_id": "9b3cc6eb7b70384d679a",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "flower_petal_color",
+        "value": "花朵的花瓣部分由蓝色串珠构成",
+        "region": "所有花朵装饰",
+        "state": "observed",
+        "observation_id": "c18ca5942ba07a723afb",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "flower_center_color",
+        "value": "花朵的花心部分由黄色串珠构成",
+        "region": "所有花朵装饰",
+        "state": "observed",
+        "observation_id": "4c653e2b9d1fc013c15a",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "flower_shape",
+        "value": "所有串珠花朵均为五瓣造型",
+        "region": "所有花朵装饰",
+        "state": "observed",
+        "observation_id": "63841506c9a2627e3507",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "small_yellow_bead_count",
+        "value": "银色串珠段之间点缀有黄色小串珠",
+        "region": "手链串珠衔接处",
+        "state": "observed",
+        "observation_id": "cc98a501707d52df959a",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_type",
+        "value": "手链的扣具为银色龙虾扣",
+        "region": "手链中段位置",
+        "state": "observed",
+        "observation_id": "b8a7e2596d21af95d391",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "extension_chain_exist",
+        "value": "手链末端配有银色延长链",
+        "region": "手链右侧末端",
+        "state": "observed",
+        "observation_id": "a00d8bacdff77af46b96",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "holding_hand",
+        "value": "托着手链的是人的左手手掌",
+        "region": "画面左侧至中心",
+        "state": "observed",
+        "observation_id": "79ea4157dda2e58dd11a",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "background_main",
+        "value": "背景为黑色带纹理的汽车内饰部件",
+        "region": "画面上半部分",
+        "state": "observed",
+        "observation_id": "221af0e197aac56292f1",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "background_top_strip",
+        "value": "背景最上方有一条浅灰色区域",
+        "region": "画面顶部",
+        "state": "observed",
+        "observation_id": "0bbd8210aaec6a39cdfd",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "background_bottom_component",
+        "value": "画面右下角可见汽车的黑色按键部件",
+        "region": "画面右下角",
+        "state": "observed",
+        "observation_id": "2fef74b6219b2015a74c",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      },
+      {
+        "key": "text_presence",
+        "value": "画面中无清晰可识别的文字内容",
+        "region": "全画面",
+        "state": "explicitly_absent",
+        "observation_id": "b37dc5433d98a1f54b9a",
+        "source_id": "image-012",
+        "request_id": "124f3e199373789bfa283c4a",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-012",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "124f3e199373789bfa283c4a",
+      "input_sha256": "7afa8c8a05678c35bf687d08341a314c9b490e2a377b54f37b30662e6f0d66fe",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 13100.648332969286,
+      "http_status": 200,
+      "provider_id": "02179208344876637fa1e35c84c0d2e78e1e6ee6f349cd966ade0",
+      "usage": {
+        "completion_tokens": 514,
+        "prompt_tokens": 1602,
+        "total_tokens": 2116,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-013": {
+    "observations": [
+      {
+        "key": "image_layout",
+        "value": "整体为三图拼接布局，顶部1张大图，底部左右各1张小图",
+        "region": "整张图片",
+        "state": "observed",
+        "observation_id": "8520c0b4c889f6e4c2c8",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "top_background",
+        "value": "顶部大图背景为深蓝色纯色平面",
+        "region": "顶部大图区域",
+        "state": "observed",
+        "observation_id": "ad513d3ad7f85d90a5e3",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_top_view",
+        "value": "顶部大图展示串珠手链平铺状态，横向放置",
+        "region": "顶部大图区域",
+        "state": "observed",
+        "observation_id": "813dc4f19512658a6aa3",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_material_appearance",
+        "value": "手链由大量小串珠拼接构成像素图案",
+        "region": "所有展示手链的区域",
+        "state": "observed",
+        "observation_id": "dab185077f4abb9765b9",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_top_pattern_sky",
+        "value": "手链上部串珠为浅蓝色底，搭配白色串珠组成的云朵图案",
+        "region": "顶部大图的手链上部区域",
+        "state": "observed",
+        "observation_id": "62132fbf43bf6fbdcbc7",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_top_pattern_buildings",
+        "value": "手链下部串珠排列成一排多栋色彩各异的卡通房屋图案",
+        "region": "顶部大图的手链下部区域",
+        "state": "observed",
+        "observation_id": "c3ac8f0f04a6c3e6cc73",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_edge_color",
+        "value": "手链下边缘由一圈红棕色串珠包边",
+        "region": "所有展示手链的区域",
+        "state": "observed",
+        "observation_id": "84517f56628024025b99",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_clasp_type",
+        "value": "手链两端配有金属磁吸扣，扣体为黄铜色金属质感",
+        "region": "顶部大图的手链左右两端",
+        "state": "observed",
+        "observation_id": "55d8e6dbacf2a94d1079",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_left_background",
+        "value": "底部左图背景为深蓝色纯色平面",
+        "region": "底部左侧小图区域",
+        "state": "observed",
+        "observation_id": "06ca5c135c15d156e003",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_curved_view",
+        "value": "底部左图展示手链弯曲成环形的状态，露出内侧部分图案",
+        "region": "底部左侧小图区域",
+        "state": "observed",
+        "observation_id": "ff6bc20cd0b79beda4de",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_inner_pattern",
+        "value": "手链内侧串珠同样印有蓝天、云朵和卡通房屋的像素图案",
+        "region": "底部左侧小图的手链内侧区域",
+        "state": "observed",
+        "observation_id": "cfd594ed531cd5082dbd",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_clasp_connection",
+        "value": "弯曲状态下金属磁吸扣位于环形开口处，连接手链两端",
+        "region": "底部左侧小图的手链开口位置",
+        "state": "observed",
+        "observation_id": "7f5681224e8143e4ee8f",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_right_background",
+        "value": "底部右图背景为深蓝色纯色平面",
+        "region": "底部右侧小图区域",
+        "state": "observed",
+        "observation_id": "0d5ad67acc463276211a",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_worn_state",
+        "value": "底部右图展示手链佩戴在人手手腕上的状态",
+        "region": "底部右侧小图区域",
+        "state": "observed",
+        "observation_id": "25173c7b4288509ebf70",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "wrist_appearance",
+        "value": "佩戴手链的人手为浅肤色，仅露出手腕及部分小臂",
+        "region": "底部右侧小图的人体部分",
+        "state": "observed",
+        "observation_id": "6464a70b1bcb74dddf12",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_worn_pattern_display",
+        "value": "佩戴状态下手链外侧的串珠像素图案完整展示在手腕外侧",
+        "region": "底部右侧小图的手链区域",
+        "state": "observed",
+        "observation_id": "e43218984d531083e0b1",
+        "source_id": "image-013",
+        "request_id": "1562e870d5fcd3fa6d5d1de5",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-013",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "1562e870d5fcd3fa6d5d1de5",
+      "input_sha256": "ba9f12d485b8de1c216bc280a03565b367e57003923e5802273c343c25a992c7",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 15419.76145899389,
+      "http_status": 200,
+      "provider_id": "02179208346188637fa1e35c84c0d2e78e1e6ee6f349cd964e253",
+      "usage": {
+        "completion_tokens": 714,
+        "prompt_tokens": 1602,
+        "total_tokens": 2316,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-014": {
+    "observations": [
+      {
+        "key": "jewelry_total_count",
+        "value": "2件串珠手链",
+        "region": "画面主体区域",
+        "state": "observed",
+        "observation_id": "40ca779b7b27af935c8c",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_material_appearance",
+        "value": "串珠为透明不规则碎晶状",
+        "region": "两条手链的串珠部分",
+        "state": "observed",
+        "observation_id": "f29899a185c92f15ca42",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_shape",
+        "value": "每条手链挂有1个银色雪花造型吊饰",
+        "region": "两条手链的下部位置",
+        "state": "observed",
+        "observation_id": "9bb23fa3e36acaa34af3",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_style",
+        "value": "手链搭配带镂空纹样的银色金属扣",
+        "region": "每条手链靠近吊饰的位置",
+        "state": "observed",
+        "observation_id": "897f95c7d7e19ccb7f1e",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_arrangement",
+        "value": "两条手链呈环形摆放",
+        "region": "画面中部偏右及左上区域",
+        "state": "observed",
+        "observation_id": "a95e6dae8f1261bcfa64",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "supporting_surface_main",
+        "value": "手链放置在带浅色斑块的灰裂纹岩石上",
+        "region": "画面中右侧承载手链的岩石",
+        "state": "observed",
+        "observation_id": "4966dba304c2e126ef03",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "supporting_surface_top_left",
+        "value": "画面左上角有浅米色带纹理的石块",
+        "region": "画面左上角区域",
+        "state": "observed",
+        "observation_id": "0d06289b552322801363",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "supporting_surface_bottom",
+        "value": "画面底部岩石带有棕褐色锈迹斑块",
+        "region": "画面底部区域",
+        "state": "observed",
+        "observation_id": "534a1077021590df0770",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "background_partial",
+        "value": "画面最顶部露出浅木色纹理背景",
+        "region": "画面顶部边缘区域",
+        "state": "observed",
+        "observation_id": "5cc5c86dbe85d3ee86dc",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      },
+      {
+        "key": "text_presence",
+        "value": "画面中无清晰可读的文字",
+        "region": "全画面",
+        "state": "explicitly_absent",
+        "observation_id": "1b77549cdffdde27a478",
+        "source_id": "image-014",
+        "request_id": "1c3710bc617ed408020c904c",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-014",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "1c3710bc617ed408020c904c",
+      "input_sha256": "d85dc863f83385fbedb816fb660daa2f07703502986e58ba349dca36a9b1f6ac",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 11279.241999960504,
+      "http_status": 200,
+      "provider_id": "02179208347730937fa1e35c84c0d2e78e1e6ee6f349cd9c107b0",
+      "usage": {
+        "completion_tokens": 394,
+        "prompt_tokens": 1586,
+        "total_tokens": 1980,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-015": {
+    "observations": [
+      {
+        "key": "background",
+        "value": "纯白色平整平面背景",
+        "region": "整个画面背景区域",
+        "state": "observed",
+        "observation_id": "9991ebb0126cd136a4cc",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "central_raw_stone",
+        "value": "1块不规则形状的原石，主体浅蓝绿色，表面带有棕褐色斑块",
+        "region": "画面中心靠上位置",
+        "state": "observed",
+        "observation_id": "a0c8f0392a82afce2aec",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_type",
+        "value": "圆珠串成的弹力手链，环绕在原石外围呈环形摆放",
+        "region": "画面中下部环绕原石的区域",
+        "state": "observed",
+        "observation_id": "6fe6fed179e8670d3777",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_total_count",
+        "value": "手链圆珠总数为21颗",
+        "region": "手链全部区域",
+        "state": "observed",
+        "observation_id": "9f7345a5fc491959e950",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "light_green_bead_count",
+        "value": "浅黄绿色圆珠共5颗，排列在原石顶部",
+        "region": "原石顶部区域",
+        "state": "observed",
+        "observation_id": "8c275ba9e18c70f983ae",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "dark_blue_bead_count",
+        "value": "深蓝色圆珠共2颗，分别位于原石左右两侧",
+        "region": "原石左右两侧区域",
+        "state": "observed",
+        "observation_id": "60e2c5dcc3ec98f4bd0b",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "left_side_light_bead_sequence",
+        "value": "手链左侧从深蓝珠往下依次排列浅绿、浅青、浅白圆珠",
+        "region": "手链左侧区域",
+        "state": "observed",
+        "observation_id": "39194148a108bdb8d44b",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "left_side_purple_bead",
+        "value": "手链左侧有1颗深紫色圆珠",
+        "region": "手链左侧偏下区域",
+        "state": "observed",
+        "observation_id": "d5cbb24c94ca17f6284c",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bead_sequence",
+        "value": "手链底部从左到右依次排列浅青、带纹浅蓝、浅蓝绿、带纹白、浅白圆珠",
+        "region": "手链底部区域",
+        "state": "observed",
+        "observation_id": "d295b0aa4b965156cd6c",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "right_side_dark_bead",
+        "value": "手链右侧有1颗深灰近黑色圆珠",
+        "region": "手链右侧偏下区域",
+        "state": "observed",
+        "observation_id": "278180b5dd2b918d3e3a",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "right_side_purple_bead",
+        "value": "手链右侧有1颗深紫色圆珠",
+        "region": "手链右侧中部区域",
+        "state": "observed",
+        "observation_id": "e0cf724f33a0d773e0ae",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "right_side_brown_streak_bead",
+        "value": "手链右侧有1颗带棕红色斑块的圆珠",
+        "region": "手链右侧中上部区域",
+        "state": "observed",
+        "observation_id": "b53b08a08d38177ebff0",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "right_side_light_bead_sequence",
+        "value": "手链右侧从棕斑珠往上依次排列浅白、褐灰圆珠",
+        "region": "手链右侧上部区域",
+        "state": "observed",
+        "observation_id": "3be25e1d371062a5c89d",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_surface_feature",
+        "value": "所有圆珠表面均经过抛光处理，带有光泽反光",
+        "region": "全部手链圆珠区域",
+        "state": "observed",
+        "observation_id": "5daf5ba49a359fea91ed",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "shadow_presence",
+        "value": "圆珠和原石在白色背景上投下柔和的浅灰色阴影",
+        "region": "背景平面上的投影区域",
+        "state": "observed",
+        "observation_id": "e8c83bc934e2faf8ddbc",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      },
+      {
+        "key": "text_presence",
+        "value": "画面内无任何清晰可识别的文字内容",
+        "region": "整个画面",
+        "state": "explicitly_absent",
+        "observation_id": "5069da14d686f8274339",
+        "source_id": "image-015",
+        "request_id": "b5920ef9c38478e6f02b8563",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-015",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "b5920ef9c38478e6f02b8563",
+      "input_sha256": "6ac183e83918850fd5ed6d4c72d09630944c5ef09335840e9f6bd76bae623de7",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 17789.906415971927,
+      "http_status": 200,
+      "provider_id": "02179208348860437fa1e35c84c0d2e78e1e6ee6f349cd9102ddd",
+      "usage": {
+        "completion_tokens": 695,
+        "prompt_tokens": 1577,
+        "total_tokens": 2272,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-016": {
+    "observations": [
+      {
+        "key": "MainObject",
+        "value": "A single beaded bracelet is the only subject in the frame",
+        "region": "full image",
+        "state": "observed",
+        "observation_id": "8f53ad55dfc95ffc6f74",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "Background",
+        "value": "Plain uniform light off-white smooth background, no extra patterns or objects",
+        "region": "entire surrounding area of the bracelet",
+        "state": "observed",
+        "observation_id": "61b0cedfd54d548228da",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "ClaspType",
+        "value": "Gold-colored spring ring style toggle clasp at the top of the bracelet",
+        "region": "upper central part of the bracelet",
+        "state": "observed",
+        "observation_id": "df91bab4d888a2720765",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "ClaspCount",
+        "value": "1 gold-colored metal clasp",
+        "region": "upper section of the bracelet",
+        "state": "observed",
+        "observation_id": "b59ab3273aafc5af5256",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "LavaBeadColor",
+        "value": "Black, with porous rough surface with visible small pits",
+        "region": "left and right segments of the bracelet excluding the colored bead section",
+        "state": "observed",
+        "observation_id": "ef678e8f979dfcaee2b6",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "LavaBeadCount",
+        "value": "Total 14 black porous lava beads",
+        "region": "two side segments of the bracelet",
+        "state": "observed",
+        "observation_id": "3ab7f041b5a23d37f558",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "SmallBlackBeadCount",
+        "value": "2 tiny faceted black beads, one on each side adjacent to the clasp",
+        "region": "near the two connection points of the clasp",
+        "state": "observed",
+        "observation_id": "1a3a1fd91eb2fdde04ba",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "ColoredBeadSequence",
+        "value": "From left to right: black faceted bead, blue bead, turquoise bead, green bead, dark brown bead, yellow bead, red bead",
+        "region": "lower front segment of the bracelet",
+        "state": "observed",
+        "observation_id": "b06c210898d10012ae13",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "ColoredBeadSurface",
+        "value": "All colored beads have faceted polished glossy surface with light reflection marks",
+        "region": "front colored bead section",
+        "state": "observed",
+        "observation_id": "98cb287d0608de79a39b",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "GoldSpacerCount",
+        "value": "Total 6 thin gold-colored metal spacer rings between colored beads",
+        "region": "between every adjacent colored bead in the front section",
+        "state": "observed",
+        "observation_id": "351ff13ac0f8f3a3e0d0",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "BraceletShape",
+        "value": "Arranged in a closed circular loop shape",
+        "region": "full bracelet",
+        "state": "observed",
+        "observation_id": "c6584ccb4a33f7ec6b52",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      },
+      {
+        "key": "TextPresence",
+        "value": "No legible text or characters visible anywhere in the image",
+        "region": "full image",
+        "state": "explicitly_absent",
+        "observation_id": "20a976db60351f405e65",
+        "source_id": "image-016",
+        "request_id": "fc295057191dc145133cb871",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-016",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "fc295057191dc145133cb871",
+      "input_sha256": "b34af89483c755533fb6dd6a8475191b434cde21601f48797aca2adc80a97312",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 14656.466874992475,
+      "http_status": 200,
+      "provider_id": "02179208350642337fa1e35c84c0d2e78e1e6ee6f349cd99494c3",
+      "usage": {
+        "completion_tokens": 523,
+        "prompt_tokens": 1577,
+        "total_tokens": 2100,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-017": {
+    "observations": [
+      {
+        "key": "main object",
+        "value": "串珠手链",
+        "region": "画面整体",
+        "state": "observed",
+        "observation_id": "67393d62ff74b4b53416",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "bead color",
+        "value": "珠子为亮面纯黑色",
+        "region": "手链主体部分",
+        "state": "observed",
+        "observation_id": "a896f50468fe0594a863",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "bead shape",
+        "value": "珠子为正圆形",
+        "region": "手链主体部分",
+        "state": "observed",
+        "observation_id": "95505f1c41702ba5e7e2",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "bead count",
+        "value": "可见黑色圆珠共26颗",
+        "region": "手链主体部分",
+        "state": "observed",
+        "observation_id": "989c2a64365723e4baf2",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp type",
+        "value": "搭扣为银色龙虾扣样式",
+        "region": "手链顶部",
+        "state": "observed",
+        "observation_id": "661b015c4c6509115c21",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp color",
+        "value": "搭扣为金属银色",
+        "region": "手链顶部",
+        "state": "observed",
+        "observation_id": "787e9f690068a3cd9ba1",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "charm shape",
+        "value": "挂坠为蝎子造型",
+        "region": "手链右下侧",
+        "state": "observed",
+        "observation_id": "e733d1641878b82cfd51",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "charm color",
+        "value": "蝎子挂坠为金属银色",
+        "region": "手链右下侧",
+        "state": "observed",
+        "observation_id": "385484b9836ac361d46f",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "背景为纯白色",
+        "region": "画面全部非手链区域",
+        "state": "observed",
+        "observation_id": "2e8548cd52b9164431f4",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "layout",
+        "value": "手链呈松散环形摆放",
+        "region": "画面中心区域",
+        "state": "observed",
+        "observation_id": "7e9ab03b26dfa207e8c9",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      },
+      {
+        "key": "connecting rings",
+        "value": "珠子与金属部件间有银色连接环",
+        "region": "搭扣两端、挂坠连接处",
+        "state": "observed",
+        "observation_id": "e8040b631ea0911103ac",
+        "source_id": "image-017",
+        "request_id": "17562bf6ddfb623c332204c2",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-017",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "17562bf6ddfb623c332204c2",
+      "input_sha256": "efbbfe404a61406626727d56c3ed061b431c932160d0e083f4c919069b85d236",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 8381.693999981508,
+      "http_status": 200,
+      "provider_id": "02179208352108037fa1e35c84c0d2e78e1e6ee6f349cd9f6ac22",
+      "usage": {
+        "completion_tokens": 360,
+        "prompt_tokens": 1602,
+        "total_tokens": 1962,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-018": {
+    "observations": [
+      {
+        "key": "main_subject",
+        "value": "一只手托举展示的串珠手链",
+        "region": "画面中心",
+        "state": "observed",
+        "observation_id": "e77212181ca3def0ac54",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "large_blue_bead_count",
+        "value": "手链共有6颗大尺寸浅蓝透圆珠",
+        "region": "手链主体区域",
+        "state": "observed",
+        "observation_id": "84550aefc808c55a9f3e",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "small_clear_bead_count",
+        "value": "大蓝珠之间搭配多颗小型透明白圆珠",
+        "region": "大蓝珠的间隙位置",
+        "state": "observed",
+        "observation_id": "240a87f0ec99b7ef5578",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "carved_clear_ornament",
+        "value": "手链上有1枚透明雕刻造型的装饰件",
+        "region": "手链右侧中部",
+        "state": "observed",
+        "observation_id": "2d6651da19b352c20ebb",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "crown_style_decor_count",
+        "value": "手链配有2枚银色皇冠造型装饰",
+        "region": "透明雕刻件两侧的大蓝珠旁",
+        "state": "observed",
+        "observation_id": "8abae06cac05a9de227b",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "cross_pendant",
+        "value": "银色镶钻十字造型吊坠悬挂在其中一枚皇冠装饰下方",
+        "region": "手链左下侧",
+        "state": "observed",
+        "observation_id": "f822ff70c3c5596ecc26",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "gem_embedded_bead",
+        "value": "手链有1颗银色包边内嵌蓝色小宝石的装饰珠",
+        "region": "手链右上侧",
+        "state": "observed",
+        "observation_id": "a3b384aba2feed52e5c1",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_nail_style",
+        "value": "托举手链的手做了长款浅裸色美甲，其中一根指甲带有白色立体装饰",
+        "region": "画面左侧的手部区域",
+        "state": "observed",
+        "observation_id": "720171583ce6ed62fc07",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "background_curtain",
+        "value": "背景是浅米色带竖条纹的垂坠帘布",
+        "region": "画面上半部分及中后区域",
+        "state": "observed",
+        "observation_id": "d84c282a4bb395ccfb0e",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_blur_decoration",
+        "value": "画面底部有模糊的橙黄色装饰物件",
+        "region": "画面最下方区域",
+        "state": "observed",
+        "observation_id": "ac51feab288b53a8eb69",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      },
+      {
+        "key": "watermark_text",
+        "value": "画面右下角有模糊小字水印，内容无法清晰辨认",
+        "region": "画面右下角",
+        "state": "unclear",
+        "observation_id": "f697e1985f14286ca668",
+        "source_id": "image-018",
+        "request_id": "25ec74c8af201177491b6713",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-018",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "25ec74c8af201177491b6713",
+      "input_sha256": "371821736a6261a667e98a954807a9dbc5c4dd6e9c151872f10894992a9891a0",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 14364.001584006473,
+      "http_status": 200,
+      "provider_id": "02179208352986837fa1e35c84c0d2e78e1e6ee6f349cd9b4ca86",
+      "usage": {
+        "completion_tokens": 462,
+        "prompt_tokens": 1577,
+        "total_tokens": 2039,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-019": {
+    "observations": [
+      {
+        "key": "bracelet_count",
+        "value": "画面内共有2条串珠手链",
+        "region": "画面整体",
+        "state": "observed",
+        "observation_id": "4068c114c4e9b342e760",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_color",
+        "value": "手链主串珠为蓝绿色扁圆珠",
+        "region": "两条手链的主体串珠部分",
+        "state": "observed",
+        "observation_id": "507f870b54a54bc08cda",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "wooden_bead_count_top",
+        "value": "上方手链配有3颗小型棕色木质隔珠、1颗大颗棕色木质随形珠",
+        "region": "上方手链的装饰段",
+        "state": "observed",
+        "observation_id": "2d9e03881699fc43ede2",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "white_bead_top",
+        "value": "上方手链配有1颗圆形半透明白色珠",
+        "region": "上方手链的装饰段",
+        "state": "observed",
+        "observation_id": "ce1908ef206eafb1dd7b",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "silver_decoration_top",
+        "value": "上方手链配有2枚银色花形金属装饰件",
+        "region": "上方手链的装饰段",
+        "state": "observed",
+        "observation_id": "df8eb09d413cb0632d01",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "silver_end_top",
+        "value": "上方手链的一端配有银色金属收尾件",
+        "region": "上方手链的顶端",
+        "state": "observed",
+        "observation_id": "d43a5aef2e7c9d951420",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "wooden_bead_count_bottom",
+        "value": "下方手链配有2颗小型棕色木质隔珠、1颗大颗棕色木质随形珠",
+        "region": "下方手链的装饰段",
+        "state": "observed",
+        "observation_id": "06d1b2475798a0675720",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "white_bead_bottom",
+        "value": "下方手链配有1颗圆形半透明白色珠",
+        "region": "下方手链的装饰段",
+        "state": "observed",
+        "observation_id": "9d5d6f1a488dd9af90ae",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "silver_decoration_bottom",
+        "value": "下方手链配有1枚银色花形金属装饰件、1个银色隔珠串饰",
+        "region": "下方手链的装饰段",
+        "state": "observed",
+        "observation_id": "b404c5b2c74b2592bc83",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "silver_end_bottom",
+        "value": "下方手链的一端配有做旧质感银色金属收尾件",
+        "region": "下方手链的顶端",
+        "state": "observed",
+        "observation_id": "1679e60f5e9cdaa8ff62",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "white_spacer_bead",
+        "value": "下方手链蓝绿色串珠段中可见1颗小型白色隔珠",
+        "region": "下方手链右侧串珠段",
+        "state": "observed",
+        "observation_id": "6fa656591cff928724e8",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "supporting_ring",
+        "value": "两条手链分别放置在透明C形塑料支撑环上",
+        "region": "两条手链的内侧",
+        "state": "observed",
+        "observation_id": "2ddd4b8cf20e7e22249c",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "background_surface",
+        "value": "承载背景为带有立体压花的浅白色板材",
+        "region": "画面全部背景区域",
+        "state": "observed",
+        "observation_id": "4a4cfa83fc9af784c05a",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "embossed_pattern_top",
+        "value": "背景板材上方区域压印花卉回纹类浮雕图案",
+        "region": "画面右上角区域",
+        "state": "observed",
+        "observation_id": "36e9e0b814dfa57431a5",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "embossed_pattern_bottom",
+        "value": "背景板材下方区域压印回字几何类浮雕图案",
+        "region": "画面中下部区域",
+        "state": "observed",
+        "observation_id": "d8d08dca86a511118afa",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "watermark_text",
+        "value": "画面中部可见白色文字“旧九手作”",
+        "region": "两条手链之间的区域",
+        "state": "observed",
+        "observation_id": "20526562240c7894e503",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "corner_watermark",
+        "value": "画面右下角有小字水印，内容unclear",
+        "region": "画面右下角",
+        "state": "unclear",
+        "observation_id": "049744228c6a6f1a519f",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      },
+      {
+        "key": "frame_edge",
+        "value": "画面上下边缘可见浅木色边框",
+        "region": "画面顶部和底部边缘",
+        "state": "observed",
+        "observation_id": "6ec30854ac11a90120bf",
+        "source_id": "image-019",
+        "request_id": "e7a795894a789f322e386992",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-019",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "e7a795894a789f322e386992",
+      "input_sha256": "1a4bb583c751ceff06a7e718d486591485116cdbc7b0f4a08706053247ed4e1c",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 15727.064959006384,
+      "http_status": 200,
+      "provider_id": "02179208354386137fa1e35c84c0d2e78e1e6ee6f349cd9c35f76",
+      "usage": {
+        "completion_tokens": 760,
+        "prompt_tokens": 1577,
+        "total_tokens": 2337,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-020": {
+    "observations": [
+      {
+        "key": "main_subject",
+        "value": "一只佩戴在手腕上的腕表与一条串珠手链",
+        "region": "画面中心的手腕区域",
+        "state": "observed",
+        "observation_id": "0b391965dc2f0b16a0e4",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "watch_strap_color",
+        "value": "黑色",
+        "region": "手腕左侧的表带部分",
+        "state": "observed",
+        "observation_id": "18c17cf489ff84e93c8e",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "watch_strap_material_appearance",
+        "value": "带有纹理的皮革质感表带，设有多个调节孔与表带环",
+        "region": "手腕左侧的表带部分",
+        "state": "observed",
+        "observation_id": "f0ec682be2b5c8f4769a",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "watch_buckle_material",
+        "value": "银色金属材质",
+        "region": "表带的扣具位置",
+        "state": "observed",
+        "observation_id": "eaed87a7854f174fd6aa",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "watch_buckle_text",
+        "value": "刻有“IWC”字样",
+        "region": "银色表扣表面",
+        "state": "observed",
+        "observation_id": "10525000e3e5166a1bba",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_types",
+        "value": "由透明圆珠与银色金属圆珠交替串接组成",
+        "region": "手腕右侧的手链区域",
+        "state": "observed",
+        "observation_id": "9e8a63e8ee3fa1da39b2",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_pendants_count",
+        "value": "共2个吊坠",
+        "region": "手链的中下部位置",
+        "state": "observed",
+        "observation_id": "f7e56294b65a69deeb5e",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_pendant1_shape",
+        "value": "不规则方形金属吊牌",
+        "region": "手链左侧吊坠",
+        "state": "observed",
+        "observation_id": "5f4b112bcaadc5fc2f10",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_pendant1_text",
+        "value": "吊牌上的文字为反向显示，内容为“You deserve be loved”",
+        "region": "不规则方形金属吊牌表面",
+        "state": "observed",
+        "observation_id": "f96d340ab71116e8767d",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_pendant2_shape",
+        "value": "光面银色小圆球",
+        "region": "手链右侧吊坠",
+        "state": "observed",
+        "observation_id": "f92920c38b8cbdb09305",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "wrist_skin",
+        "value": "露出的手腕皮肤呈自然肤色",
+        "region": "承载饰品的手腕部位",
+        "state": "observed",
+        "observation_id": "4673171633cbe7e5eccb",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "surrounding_fabric_color",
+        "value": "浅绿色",
+        "region": "画面边缘的衣物区域",
+        "state": "observed",
+        "observation_id": "0b8c91f5036b17e59e30",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "surrounding_fabric_texture",
+        "value": "带有自然褶皱的轻薄面料",
+        "region": "画面边缘的衣物区域",
+        "state": "observed",
+        "observation_id": "fa9f9688678758755c7e",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "浅米色模糊的平整表面",
+        "region": "画面右上角区域",
+        "state": "observed",
+        "observation_id": "917253f68605f8baf8ec",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      },
+      {
+        "key": "watch_dial",
+        "value": "未在画面中呈现",
+        "region": "画面范围内",
+        "state": "explicitly_absent",
+        "observation_id": "272343bb03c5f016b6c9",
+        "source_id": "image-020",
+        "request_id": "ab8cc3c93be54044568d3e55",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-020",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "ab8cc3c93be54044568d3e55",
+      "input_sha256": "254d73e29e533fb603c282aaa9b640314e86db85e9bba7ed87d06120a1ca528c",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 12585.576332989149,
+      "http_status": 200,
+      "provider_id": "02179208355960137fa1e35c84c0d2e78e1e6ee6f349cd9a497a0",
+      "usage": {
+        "completion_tokens": 570,
+        "prompt_tokens": 1602,
+        "total_tokens": 2172,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "image-021": {
+    "observations": [
+      {
+        "key": "total_bracelet_sets",
+        "value": "2组手链套装",
+        "region": "画面中下部",
+        "state": "observed",
+        "observation_id": "475827401c8232de7f1b",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_set_1_components",
+        "value": "1串黑色圆珠手串、1串浅粉透圆珠手串、1个闭合透明C形环",
+        "region": "画面左侧",
+        "state": "observed",
+        "observation_id": "50080ecfbd1b60c17be7",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_set_2_components",
+        "value": "1串黑色圆珠手串、1串浅粉透圆珠手串、1个开口透明C形环",
+        "region": "画面右侧",
+        "state": "observed",
+        "observation_id": "b2ef707cae8e3c34db1c",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "black_bead_feature",
+        "value": "圆珠为亮面纯黑色，部分珠子间配有银色镶钻装饰环",
+        "region": "两组手串的黑色珠串部分",
+        "state": "observed",
+        "observation_id": "50b4195fd4575113300f",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "pink_bead_feature",
+        "value": "圆珠为浅粉半透明质感，表面光滑",
+        "region": "两组手串的浅粉珠串部分",
+        "state": "observed",
+        "observation_id": "d0067c469289d2918dd4",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "transparent_ring_1_shape",
+        "value": "为完整闭合的透明环形",
+        "region": "画面左侧套装",
+        "state": "observed",
+        "observation_id": "f50bee33105bebdc3c4b",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "transparent_ring_2_shape",
+        "value": "为带有缺口的开口透明环形",
+        "region": "画面右侧套装",
+        "state": "observed",
+        "observation_id": "0cd9dbd7ba46bac0ad9a",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "placement_surface",
+        "value": "放置在米白色带纹理的毛绒织物表面，织物边缘有流苏毛边",
+        "region": "画面中下部承载物品的区域",
+        "state": "observed",
+        "observation_id": "2de639bd5fa67e75ca92",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "background_pouch",
+        "value": "浅棕色麻布抽绳束口袋，袋身右下角印有黑色荷花简笔画图案",
+        "region": "画面上部背景处",
+        "state": "observed",
+        "observation_id": "14af0a4f9768620258c9",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "pouch_drawstring_detail",
+        "value": "抽绳为白色，末端带有流苏，抽绳上可见一颗棕色圆珠",
+        "region": "画面上部束口袋右侧",
+        "state": "observed",
+        "observation_id": "5a48a24667ba7cb00f40",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      },
+      {
+        "key": "far_background",
+        "value": "为深棕色木质平面",
+        "region": "画面最顶部背景",
+        "state": "observed",
+        "observation_id": "d70c729a399e21b79c01",
+        "source_id": "image-021",
+        "request_id": "9ce1eb0675628887e548f359",
+        "stage": "initial"
+      }
+    ],
+    "validation_error": null,
+    "receipt": {
+      "call_key": "20261016-context-link-seedlite-v1:initial:image-021",
+      "model": "doubao-seed-2-0-lite-260428",
+      "request_id": "9ce1eb0675628887e548f359",
+      "input_sha256": "f7df66483c906276f61d7ea5552be6c658d9e2af6b0ba92ef713d05e69ab8b73",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 12390.984207973816,
+      "http_status": 200,
+      "provider_id": "02179208357219237fa1e35c84c0d2e78e1e6ee6f349cd99c274e",
+      "usage": {
+        "completion_tokens": 478,
+        "prompt_tokens": 1577,
+        "total_tokens": 2055,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  }
+}

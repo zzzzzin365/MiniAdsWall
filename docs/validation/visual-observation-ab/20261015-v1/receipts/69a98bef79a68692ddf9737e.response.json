@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "彩色汽车照片"
+  ],
+  "reason": "已有观察仅描述文字、图标和背景颜色，未提及任何汽车照片，无法证明存在或不存在。"
+}

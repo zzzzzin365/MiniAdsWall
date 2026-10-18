@@ -1,0 +1,11 @@
+{
+  "http_status": 429,
+  "code": "SetLimitExceeded",
+  "type": "TooManyRequests",
+  "message": "Your account [2111707534] has reached the set usage limit for the [doubao-seed-2-0-mini] model, and the model service has been paused. To continue using this model, please visit the Model Activation page to adjust or close the \"Safe Experience Mode\". Request id: 021792079667458b0479337ddee81756514a17e7255424e8a3d9d",
+  "model": "doubao-seed-2-0-mini-260428",
+  "env_override_used": false,
+  "root_and_server_key_match": false,
+  "purpose": "diagnostic_error_detail_only",
+  "formal_experiment_rows": 0
+}

@@ -1,0 +1,12 @@
+{
+  "call_key": "main:xhs-duo-1:xhs-duo-1-1:B:answer",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "5abd0553f21f1710462b7b16",
+  "input_sha256": "9ec86eb972fe7281dba37c2ee60633f1a8c8b410337ae3909cf02826558873b9",
+  "status": "failed_or_submission_unknown",
+  "money": null,
+  "elapsed_ms": 390.7009579706937,
+  "http_status": 429,
+  "provider_error_code": "SetLimitExceeded",
+  "error_type": "RuntimeError"
+}

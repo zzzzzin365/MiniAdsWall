@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "chart_position",
+      "value": "产品界面的图表截图在广告的右边",
+      "region": "整个广告区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

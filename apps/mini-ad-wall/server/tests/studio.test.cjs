@@ -14,7 +14,7 @@ const {verifyAsset}=require('../dist/services/merchant/studio/assets');
 const app=require('../dist/app').default;
 const {materialize}=require('../dist/services/merchant/studio/worker');
 const fixture={summary:'文字描述：白色牙刷。',questions:['价格是多少？'],concepts:[{title:'通勤牙刷',scenario:'通勤',copy:'通勤携带',script:'5秒白色牙刷特写',video_prompt:'白色牙刷静置桌面，缓慢推进，无文字',assumptions:['场景假设']}],delivery:{objective:'traffic',audience_hypotheses:['通勤人群'],test_plan:'先试投',rationale:'验证场景',missing_data:['预算'],bid:{channel:null,billing_model:'unknown',currency:'CNY',amount_minor:null,status:'insufficient_basis'}},model:'deepseek-v4-1-flash-260910',policy:'strict-two-model-v1',status:'draft',understanding:{status:'text_only',source:'merchant_text',limitations:[]}};
-const textFixture = body => ({...structuredClone(fixture), source_ids:[], media_rag:{status:body.media_knowledge.sources.length?'no_match':'empty',method:'caption-vector-v1',corpus_assets:body.media_knowledge.sources.length,corpus_truncated:body.media_knowledge.truncated,retrieved:[],citations:[]}});
+const textFixture = body => ({...structuredClone(fixture), source_ids:[], media_rag:{status:body.media_knowledge.sources.length?'no_match':'empty',method:'chinese-clip-image-v1',corpus_assets:body.media_knowledge.sources.length,corpus_truncated:body.media_knowledge.truncated,retrieved:[],citations:[]}});
 test('studio real MySQL HTTP lifecycle, strict routing, scope, revisions and unknown paid submissions',async t=>{
  const db=await database(t);if(!db)return;const server=app.listen(0,'127.0.0.1');await new Promise(r=>server.once('listening',r));const base='http://127.0.0.1:'+server.address().port;
  const child=fork(path.join(__dirname,'helpers/studio-http.cjs'),[],{env:{...process.env,...db.env},stdio:['ignore','ignore','ignore','ipc']});
@@ -37,8 +37,26 @@ test('studio real MySQL HTTP lifecycle, strict routing, scope, revisions and unk
  const form=new FormData();form.append('file',new Blob([fs.readFileSync(imageFile)],{type:'image/png'}),'toothbrush.png');
  const upload=await fetch(base+'/api/merchant/v1/studio/assets?brand_id=studio-brand',{method:'POST',headers:{Authorization:'Bearer studio-test-only','Idempotency-Key':randomUUID()},body:form});assert.equal(upload.status,201);const a=await upload.json();
  assert.equal(a.data.analysis_job_id,undefined);const analyzed=await call('/assets/'+a.id+'/analyze',{});assert.equal(analyzed.status,202);a.data=analyzed.data.data;assert.ok(a.data.analysis_job_id);
- await tick('synthetic',async(path,body)=>{assert.equal(path,'/studio/understand');assert.equal(body.kind,'image');assert.equal(body.model,'doubao-seed-2-0-mini-260428');assert.ok(body.frames[0].data_url.startsWith('data:image/png;base64,'));return {asset_id:a.id,model:body.model,status:'succeeded',frame_count:1,subject:'测试白色图片',observations:[{description:'白色画面',frame_index:0,asset_id:a.id,time_ms:null}],source_claims:[],marketing_summary:'无法从纯色图确定商品',uncertainties:['主体不明'],limitations:[]};});
+ await tick('synthetic',async(path,body)=>{if(path==='/studio/embed')return {asset_id:body.asset_id,visual_embeddings:[{model:'OFA-Sys/chinese-clip-vit-base-patch16',revision:'36e679e65c2a2fead755ae21162091293ad37834',image_sha256:require('node:crypto').createHash('sha256').update(Buffer.from(body.frames[0].data_url.split(',')[1],'base64')).digest('hex'),frame_index:0,time_ms:null,vector:[1,...Array(511).fill(0)]}]};assert.equal(path,'/studio/understand');assert.equal(body.kind,'image');assert.equal(body.model,'doubao-seed-2-0-mini-260428');assert.ok(body.frames[0].data_url.startsWith('data:image/png;base64,'));return {asset_id:a.id,model:body.model,status:'succeeded',frame_count:1,subject:'测试白色图片',observations:[{description:'白色画面',frame_index:0,asset_id:a.id,time_ms:null}],source_claims:[],marketing_summary:'无法从纯色图确定商品',uncertainties:['主体不明'],limitations:[]};});
  assert.equal((await call('/jobs/'+a.data.analysis_job_id)).data.status,'succeeded');
+ // Raw image vectors survive a failed paid-understanding request and remain scoped/searchable.
+ const form2=new FormData();form2.append('file',new Blob([fs.readFileSync(imageFile)],{type:'image/png'}),'reference.png');
+ const secondUpload=await fetch(base+'/api/merchant/v1/studio/assets?brand_id=studio-brand',{method:'POST',headers:{Authorization:'Bearer studio-test-only','Idempotency-Key':randomUUID()},body:form2});
+ const nativeAsset=await secondUpload.json();const nativeAnalysis=await call('/assets/'+nativeAsset.id+'/analyze',{});
+ const embeddingResult=body=>({asset_id:body.asset_id,visual_embeddings:body.frames.map((f,i)=>({model:'OFA-Sys/chinese-clip-vit-base-patch16',revision:'36e679e65c2a2fead755ae21162091293ad37834',image_sha256:require('node:crypto').createHash('sha256').update(Buffer.from(f.data_url.split(',')[1],'base64')).digest('hex'),frame_index:i,time_ms:f.time_ms,vector:[1,...Array(511).fill(0)]}))});
+ const nativeCalls=[];
+ await tick('synthetic',async(p,body)=>{nativeCalls.push(p);if(p==='/studio/embed')return embeddingResult(body);throw Error('provider usage limit');});
+ assert.deepEqual(nativeCalls,['/studio/embed','/studio/understand']);
+ const nativeJob=(await call('/jobs/'+nativeAnalysis.data.data.analysis_job_id)).data;
+ assert.equal(nativeJob.status,'failed');assert.equal(nativeJob.result.visual_embeddings.length,1);
+ const nativeCorpus=await require('../dist/services/ads.database').withAdsConnection(c=>require('../dist/services/merchant/studio/knowledge').mediaCorpus(c,'operator','studio-brand','synthetic'));
+ const pixelOnly=nativeCorpus.sources.find(x=>x.asset_id===nativeAsset.id);
+ assert.equal(pixelOnly.understanding_available,false);assert.deepEqual(pixelOnly.observations,[]);
+ const reindexCalls=[];
+ const rebuilt=await require('../dist/services/merchant/studio/reindex').reindexBrandImages('studio-brand','synthetic','operator',async(p,b)=>{reindexCalls.push(p);return embeddingResult(b);});
+ assert.equal(rebuilt.paid_model_requests,0);assert.equal(rebuilt.updated.length,2);assert.ok(reindexCalls.every(p=>p==='/studio/embed'));
+ await assert.rejects(require('../dist/services/merchant/studio/reindex').reindexBrandImages('studio-brand','synthetic','outsider',async()=>{throw Error('must not call');}),/权限/);
+
  const ab=await call('/briefs',{brand_id:'studio-brand',subject_type:'product',subject_description:'白色牙刷',objective:'traffic',idea:'通勤',confirmed_facts:['白色'],asset_refs:[{asset_id:a.id,role:'subject_photo'}]});const ass=await call('/sessions',{brief_id:ab.data.id,brief_revision:1});await call('/sessions/'+ass.data.id+'/turns',{expected_revision:1,message:'结合识别结果给出创意'});await tick('synthetic',async(path,body)=>{assert.equal(path,'/studio/generate');assert.equal(body.asset_understandings[0].asset_id,a.id);return textFixture(body);});
 
  assert.equal((await fetch(base+'/api/merchant/v1/studio/assets/'+a.id+'/content',{headers:{Authorization:'Bearer outside-test-only'}})).status,403);

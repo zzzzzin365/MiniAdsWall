@@ -1,0 +1,76 @@
+{
+  "observations": [
+    {
+      "key": "MainSubject",
+      "value": "A single beaded bracelet",
+      "region": "Central lower part of the image",
+      "state": "observed"
+    },
+    {
+      "key": "Background",
+      "value": "Uniform plain light off-white background",
+      "region": "Full image area",
+      "state": "observed"
+    },
+    {
+      "key": "MainBeadColor",
+      "value": "Most beads are solid black",
+      "region": "Bracelet body except the accent section",
+      "state": "observed"
+    },
+    {
+      "key": "MainBeadShape",
+      "value": "Short cylindrical flat-sided beads",
+      "region": "Bracelet body except the accent section",
+      "state": "observed"
+    },
+    {
+      "key": "AccentBeadCount",
+      "value": "Total 2 accent beads",
+      "region": "Left side near the clasp of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "AccentBead1Color",
+      "value": "Light turquoise green accent bead",
+      "region": "Left accent section of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "AccentBead2Color",
+      "value": "Pale off-white accent bead",
+      "region": "Adjacent to the green accent bead on the right",
+      "state": "observed"
+    },
+    {
+      "key": "ClaspType",
+      "value": "Toggle-style slider clasp",
+      "region": "Bottom center of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "ClaspColor",
+      "value": "Silver-toned metallic clasp",
+      "region": "Bottom center of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "CordColor",
+      "value": "Black braided adjustment cords",
+      "region": "Between beads and the clasp on both sides",
+      "state": "observed"
+    },
+    {
+      "key": "Layout",
+      "value": "Bracelet laid out in a loose circular shape",
+      "region": "Central part of the image",
+      "state": "observed"
+    },
+    {
+      "key": "VisibleText",
+      "value": "No legible text present on the bracelet or background",
+      "region": "Full image area",
+      "state": "explicitly_absent"
+    }
+  ]
+}

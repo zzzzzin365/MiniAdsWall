@@ -1,0 +1,94 @@
+{
+  "observations": [
+    {
+      "key": "top_logo",
+      "value": "A rounded square icon with terracotta background and white starburst-style graphic, located at top center",
+      "region": "top",
+      "state": "observed"
+    },
+    {
+      "key": "main_title",
+      "value": "Text 'The Claude Ad' in dark brown serif font, below the logo",
+      "region": "top",
+      "state": "observed"
+    },
+    {
+      "key": "subtitle_title",
+      "value": "Text 'Creative Strategist' in terracotta serif font, below main title",
+      "region": "top",
+      "state": "observed"
+    },
+    {
+      "key": "tagline",
+      "value": "Text 'Have Claude tell you exactly what ads to make next.' in dark gray serif font, below subtitle",
+      "region": "top",
+      "state": "observed"
+    },
+    {
+      "key": "including_label",
+      "value": "Terracotta rounded rectangle button with white text 'INCLUDING:', centered below tagline",
+      "region": "middle",
+      "state": "observed"
+    },
+    {
+      "key": "item1_card",
+      "value": "Light peach folder-style card with terracotta icon and text 'Ad Creative Strategist System Prompt', leftmost of four cards",
+      "region": "middle",
+      "state": "observed"
+    },
+    {
+      "key": "item2_card",
+      "value": "Light peach folder-style card with terracotta checkmark icon and text 'Winning Ad Hook Templates', second from left",
+      "region": "middle",
+      "state": "observed"
+    },
+    {
+      "key": "item3_card",
+      "value": "Light peach folder-style card with terracotta dropdown icon and text 'Structure Of The Perfect Ad', third from left",
+      "region": "middle",
+      "state": "observed"
+    },
+    {
+      "key": "item4_card",
+      "value": "Light peach folder-style card with terracotta shield icon and text 'Creative Testing Framework', rightmost of four cards",
+      "region": "middle",
+      "state": "observed"
+    },
+    {
+      "key": "call_to_action",
+      "value": "Text 'Comment' in dark brown, terracotta button with white text 'claudeads', text 'to get the access' in dark brown, at bottom center",
+      "region": "bottom",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "Light off-white (cream) background across the entire image",
+      "region": "full",
+      "state": "observed"
+    },
+    {
+      "key": "card_count",
+      "value": "Four folder-style cards arranged horizontally in a row",
+      "region": "middle",
+      "state": "observed"
+    },
+    {
+      "key": "text_font_style",
+      "value": "All text uses serif font style",
+      "region": "full",
+      "state": "observed"
+    },
+    {
+      "key": "color_palette",
+      "value": "Color palette includes cream, dark brown, terracotta, and white",
+      "region": "full",
+      "state": "observed"
+    },
+    {
+      "key": "horizontal_lines",
+      "value": "Two thin terracotta horizontal lines: one above 'INCLUDING:', one below the four cards",
+      "region": "middle",
+      "state": "observed"
+    }
+  ]
+}

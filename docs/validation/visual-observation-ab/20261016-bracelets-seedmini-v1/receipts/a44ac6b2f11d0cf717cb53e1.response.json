@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "has_human_hand_wrist",
+      "value": "画面中出现了真人的手和手腕",
+      "region": "画面左侧及中间区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

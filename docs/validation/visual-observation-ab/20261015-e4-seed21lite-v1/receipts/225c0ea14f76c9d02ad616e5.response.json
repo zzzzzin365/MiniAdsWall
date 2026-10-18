@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "left_owl_head_bandage",
+      "value": "左侧绿色猫头鹰头部无任何创可贴类物品，整体外观完整干净",
+      "region": "画面左下方",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "无"
+  ]
+}

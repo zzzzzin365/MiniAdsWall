@@ -1,0 +1,144 @@
+{
+  "status": "blocked_provider_usage_limit",
+  "test": {
+    "A": {
+      "n": 11,
+      "answerable_n": 9,
+      "field_and_source_pass": 0.4444444444444444,
+      "all_tasks_pass": 0.5454545454545454,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.5044061249354854,
+      "p95_seconds": 2.384125958487857,
+      "evidence_p95_seconds": 4.116696072742343e-05,
+      "router_total_seconds": 0.0
+    },
+    "B": {
+      "n": 11,
+      "answerable_n": 9,
+      "field_and_source_pass": 0.8888888888888888,
+      "all_tasks_pass": 0.8181818181818182,
+      "not_provable_correct": 0.5,
+      "vision_calls": 11,
+      "failures": 2,
+      "p50_seconds": 5.615936332964338,
+      "p95_seconds": 11.66484289552318,
+      "evidence_p95_seconds": 10.101980937528424,
+      "router_total_seconds": 0.0
+    },
+    "C0": {
+      "n": 11,
+      "answerable_n": 9,
+      "field_and_source_pass": 1.0,
+      "all_tasks_pass": 1.0,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.746814916958101,
+      "p95_seconds": 2.1010718540055677,
+      "evidence_p95_seconds": 0.00026812503347173333,
+      "router_total_seconds": 0.0
+    },
+    "C1": {
+      "n": 11,
+      "answerable_n": 9,
+      "field_and_source_pass": 0.8888888888888888,
+      "all_tasks_pass": 0.9090909090909091,
+      "not_provable_correct": 1.0,
+      "vision_calls": 1,
+      "failures": 0,
+      "p50_seconds": 3.871789125027135,
+      "p95_seconds": 7.152127813023981,
+      "evidence_p95_seconds": 5.0394600839936174,
+      "router_total_seconds": 22.334446126013063
+    }
+  },
+  "development": {
+    "A": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 0.4,
+      "all_tasks_pass": 0.5,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.4629410000052303,
+      "p95_seconds": 1.912425562448334,
+      "evidence_p95_seconds": 3.923973417840898e-05,
+      "router_total_seconds": 0.0
+    },
+    "B": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 1.0,
+      "all_tasks_pass": 1.0,
+      "not_provable_correct": 1.0,
+      "vision_calls": 6,
+      "failures": 0,
+      "p50_seconds": 4.585541229462251,
+      "p95_seconds": 4.914979270688491,
+      "evidence_p95_seconds": 3.3516229376837146,
+      "router_total_seconds": 0.0
+    },
+    "C0": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 0.6,
+      "all_tasks_pass": 0.6666666666666666,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.6478400829946622,
+      "p95_seconds": 1.9052007706777658,
+      "evidence_p95_seconds": 0.000211968959774822,
+      "router_total_seconds": 0.0
+    },
+    "C1": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 0.6,
+      "all_tasks_pass": 0.6666666666666666,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 4.22408922953764,
+      "p95_seconds": 5.312315687246155,
+      "evidence_p95_seconds": 2.6182653337309603,
+      "router_total_seconds": 12.798840916948393
+    }
+  },
+  "repeated": {},
+  "grading": "automated field + source diagnostics; independent semantic review not completed",
+  "scope": "external public images only",
+  "money": null,
+  "paired": {
+    "families": 2,
+    "C1_minus_B_quality_ci95": [
+      -0.19999999999999996,
+      0.25
+    ],
+    "C1_over_B_p95_ci95": [
+      0.5412409398948784,
+      0.7048720771856127
+    ],
+    "limits": "2 small families; exploratory intervals"
+  },
+  "model_usage": {
+    "deepseek-v4-1-flash-260910": {
+      "requests": 84,
+      "prompt_tokens": 99654,
+      "completion_tokens": 3695,
+      "failed": 1
+    },
+    "doubao-seed-2-0-mini-260428": {
+      "requests": 24,
+      "prompt_tokens": 37890,
+      "completion_tokens": 5638,
+      "failed": 0
+    }
+  },
+  "completed_rows": 68,
+  "planned_rows": 240,
+  "repeat_not_executed": true
+}

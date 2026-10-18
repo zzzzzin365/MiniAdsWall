@@ -1,0 +1,9 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "不存在对应关联的来源快照，无法完成指定的正文摘录操作。",
+  "image_citations": [],
+  "text_citations": []
+}

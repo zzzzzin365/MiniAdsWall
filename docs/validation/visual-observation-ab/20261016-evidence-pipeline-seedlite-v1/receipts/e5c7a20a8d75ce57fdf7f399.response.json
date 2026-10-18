@@ -1,0 +1,9 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "现有关联表中不存在image-003与有效上下文的对应关联，无法确定该来源的采集记录署名。",
+  "image_citations": [],
+  "text_citations": []
+}

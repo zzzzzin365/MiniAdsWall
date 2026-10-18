@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "left_ad_top_brand",
+      "value": "左侧广告卡片左上角为青绿色方形蔚来品牌logo，右侧紧邻灰色“蔚来”文字，右上角为带下拉箭头的“广告”标识。",
+      "region": "左侧广告卡片顶部",
+      "state": "observed"
+    },
+    {
+      "key": "left_ad_car_image",
+      "value": "广告卡片上部的实拍图内，前景为浅绿色蔚来EC6汽车，后方停放另一辆浅色蔚来汽车，背景为蔚来门店室内场景，图左上角带有白色NIO品牌标识。",
+      "region": "左侧广告卡片上部",
+      "state": "observed"
+    },
+    {
+      "key": "left_ad_headline",
+      "value": "实拍图下方为黑色大号标题文字“‘0首付’，开蔚来回家”。",
+      "region": "左侧广告卡片中部",
+      "state": "observed"
+    },
+    {
+      "key": "left_ad_body_copy",
+      "value": "标题下方为黑色正文文字“0购置税，0元终身质保，限时享购车‘0首付’”。",
+      "region": "左侧广告卡片中部",
+      "state": "observed"
+    },
+    {
+      "key": "left_ad_tag_buttons",
+      "value": "正文下方横向排列三个浅灰色圆角标签按钮，文字分别为“0元质保”“0元换电”“超长续航”。",
+      "region": "左侧广告卡片中下部",
+      "state": "observed"
+    },
+    {
+      "key": "left_ad_entry",
+      "value": "标签按钮下方为带小程序图标的“小程序”入口栏。",
+      "region": "左侧广告卡片下部",
+      "state": "observed"
+    },
+    {
+      "key": "left_ad_footer",
+      "value": "广告卡片最底部为浅灰色文字“2分钟前 最近有70人预约”，右下角为带两个圆点的更多操作按钮。",
+      "region": "左侧广告卡片底部",
+      "state": "observed"
+    },
+    {
+      "key": "middle_arrow",
+      "value": "左侧广告卡片右侧有蓝色粗箭头，箭头上方标注蓝色“创意”文字，箭头指向右侧的组件分类区域。",
+      "region": "画面中部",
+      "state": "observed"
+    },
+    {
+      "key": "right_column_headers",
+      "value": "画面右上角并列两个蓝色标题，左侧为“创意组件”，右侧为“创意素材”。",
+      "region": "画面右上角",
+      "state": "observed"
+    },
+    {
+      "key": "image_component_mapping",
+      "value": "创意组件列的“图片组件”通过蓝色箭头指向创意素材列的“图片”。",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "video_component_mapping",
+      "value": "创意组件列的“视频组件”通过蓝色箭头指向创意素材列的“视频+图片〔封面图〕”。",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "brand_component_mapping",
+      "value": "创意组件列的“品牌形象组件”通过蓝色箭头指向创意素材列的“图片+文案”，下方配有青绿色蔚来logo和“蔚来”文字。",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "marketing_component_subitems",
+      "value": "创意组件列的“营销组件”下方缩进排列三个灰色子项，分别为“浮层卡片组件”“行动按钮组件”“标签组件”。",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "landing_page_subitems",
+      "value": "创意组件列的“落地页组件”下方缩进排列三个灰色子项，分别为“蹊径落地页”“原生推广页”“微信小程序落地页”，末尾带有省略号。",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "unmapped_components",
+      "value": "创意组件列的“文案组件”未绘制指向创意素材列的箭头。",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "right_brand_material",
+      "value": "创意素材列品牌形象组件对应位置展示青绿色方形蔚来logo，右侧紧邻灰色“蔚来”文字。",
+      "region": "右侧创意素材区域",
+      "state": "observed"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "observations": [
+    {
+      "key": "cover_title",
+      "value": "疯狂的小绿鸟 多邻国营销大盘点",
+      "region": "封面中部",
+      "state": "observed"
+    },
+    {
+      "key": "brand_logo",
+      "value": "duolingo",
+      "region": "封面底部",
+      "state": "observed"
+    },
+    {
+      "key": "roas_info",
+      "value": "无任何与ROAS相关的文字或数值",
+      "region": "整张封面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "活动真实ROAS数值"
+  ]
+}

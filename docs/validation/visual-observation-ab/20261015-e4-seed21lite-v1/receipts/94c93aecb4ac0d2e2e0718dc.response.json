@@ -1,0 +1,11 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "716c739bc2c23a639228",
+    "06fc3aa52943916cddcc",
+    "0d135a649f75a1ff6ed4",
+    "c0d3ba02e2ea8deaca0e"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录页面内共有3条带数字编号的营销广告人启示要点，完全覆盖问题所问的建议数量。"
+}

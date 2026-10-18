@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "main_background_color",
+      "value": "浅米白色（奶油米白色）",
+      "region": "整张宣传图的全域背景区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

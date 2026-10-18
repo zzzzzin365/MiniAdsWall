@@ -1,0 +1,13 @@
+{
+  "status": "answered",
+  "hand_present": null,
+  "publisher": null,
+  "quote": "For orders over $100.00, GET 20%Off. Taxes, discounts and shipping calculated at checkout.",
+  "answer": "已从对应来源快照body中逐字摘录符合长度要求的内容",
+  "image_citations": [
+    "image-001"
+  ],
+  "text_citations": [
+    "ctx-67371c2d74c5270a"
+  ]
+}

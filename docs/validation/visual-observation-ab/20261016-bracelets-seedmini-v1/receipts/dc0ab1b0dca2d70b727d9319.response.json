@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product_image",
+      "value": "展示了一款带有房屋图案的串珠手链，包含手链平铺、展开、佩戴在手腕的三种呈现形式",
+      "region": "全图",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未在图中发现任何与商品真实销量相关的可见文字或数据",
+      "region": "全图",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息，无法从图中获取该数据"
+  ]
+}

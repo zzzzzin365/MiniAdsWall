@@ -1,0 +1,1058 @@
+{
+  "zhihu-display": {
+    "observations": [
+      {
+        "key": "ad_label",
+        "value": "顶部有文字'Advertisement'，表明这是广告内容",
+        "region": "顶部区域",
+        "state": "observed",
+        "observation_id": "51601bfb26368293586b",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "top_ad_title",
+        "value": "文字为'Find the right keywords & beat competitors'，字体颜色为青绿色和白色",
+        "region": "上方广告左侧区域",
+        "state": "observed",
+        "observation_id": "f0ff7a3b5d84db1c5b66",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "top_ad_logo",
+        "value": "有SEMRUSH品牌logo，为白色图案加文字，位于上方广告左下方",
+        "region": "上方广告左下方",
+        "state": "observed",
+        "observation_id": "d135921c7a2394b6f55a",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "top_ad_button",
+        "value": "橙色按钮，文字为'Try It Free'，位于上方广告中间偏右",
+        "region": "上方广告中间偏右",
+        "state": "observed",
+        "observation_id": "5ee801c67c9eca2c93cf",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "top_ad_audit_title",
+        "value": "右侧面板标题为'Site Audit: Overview'，白色背景面板",
+        "region": "上方广告右侧",
+        "state": "observed",
+        "observation_id": "97549d209c2c85e2dc18",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "site_health_metric",
+        "value": "Site Health数值为78%，搭配环形图，位于上方右侧面板",
+        "region": "上方右侧面板",
+        "state": "observed",
+        "observation_id": "1cedc8c642ccc6142880",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "crawled_pages_metric",
+        "value": "Crawled Pages数值为23,777，搭配条形图，位于上方右侧面板",
+        "region": "上方右侧面板",
+        "state": "observed",
+        "observation_id": "e844c225a876a8a46716",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "errors_metric",
+        "value": "Errors数值为539，红色文字，搭配折线图，位于上方右侧面板",
+        "region": "上方右侧面板",
+        "state": "observed",
+        "observation_id": "33f5b67d0e080fcab54c",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "warnings_metric",
+        "value": "Warnings数值为8,072，橙色文字，搭配折线图，位于上方右侧面板",
+        "region": "上方右侧面板",
+        "state": "observed",
+        "observation_id": "1236484bfcd998145c25",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "notice_metric",
+        "value": "Notice数值为86,053，蓝色文字，搭配折线图，位于上方右侧面板",
+        "region": "上方右侧面板",
+        "state": "observed",
+        "observation_id": "7043a64a66ac6b707267",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_ad_title",
+        "value": "文字为'Analyze rival marketing strategies'，字体颜色为蓝色和白色",
+        "region": "下方广告左侧区域",
+        "state": "observed",
+        "observation_id": "55fc512712496fbc4111",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_ad_logo",
+        "value": "有SEMRUSH品牌logo，为白色图案加文字，位于下方广告左下方",
+        "region": "下方广告左下方",
+        "state": "observed",
+        "observation_id": "53c431cc1eabb4d56330",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_ad_button",
+        "value": "橙色按钮，文字为'Try It Free'，位于下方广告中间偏右",
+        "region": "下方广告中间偏右",
+        "state": "observed",
+        "observation_id": "4a3ed732d2420f2f3098",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_ad_traffic_title",
+        "value": "右侧面板标题为'Traffic Generation Strategy'，白色背景面板",
+        "region": "下方广告右侧",
+        "state": "observed",
+        "observation_id": "8972d289de1d2d3c493c",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "traffic_legend",
+        "value": "流量来源图例，包含Direct、Referral等8种类型，位于下方右侧面板",
+        "region": "下方右侧面板",
+        "state": "observed",
+        "observation_id": "0b8d5e596486ca22e056",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "market_traffic_bar",
+        "value": "名为'Market'的流量条形图，位于下方右侧面板",
+        "region": "下方右侧面板",
+        "state": "observed",
+        "observation_id": "b104a809c81a734ffe5a",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "shein_traffic_bar",
+        "value": "名为'Shein.com'的流量条形图，位于下方右侧面板",
+        "region": "下方右侧面板",
+        "state": "observed",
+        "observation_id": "33fd4f8414f834addda6",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      },
+      {
+        "key": "watermark_text",
+        "value": "右下角有文字'知乎@谷歌大师兄'，位于下方广告右下角",
+        "region": "右下角区域",
+        "state": "observed",
+        "observation_id": "e4fdda7092f3d47a7752",
+        "source_id": "zhihu-display",
+        "request_id": "930ea97b5ad98674cb0cde21",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "initial:zhihu-display",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "930ea97b5ad98674cb0cde21",
+      "input_sha256": "2b4a760afb7269183d8af6cb6bb90c819c3196b3442feefa31d203c44502d7c4",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 13770.977082895115,
+      "http_status": 200,
+      "provider_id": "021792041997937ccb5cb80d056078148fd97ed4662bb35a984a5",
+      "usage": {
+        "completion_tokens": 811,
+        "prompt_tokens": 1608,
+        "total_tokens": 2419,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "zhihu-components": {
+    "observations": [
+      {
+        "key": "ad_platform",
+        "value": "左侧为蔚来的广告卡片，标注有「广告」标识",
+        "region": "左侧区域",
+        "state": "observed",
+        "observation_id": "fcc38d3b5fed7c19c57f",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "car_image",
+        "value": "广告图片内有两辆蔚来汽车，近处为浅绿色EC6，远处为浅色车辆",
+        "region": "左侧广告图片内",
+        "state": "observed",
+        "observation_id": "b758de4c51f8f31232c2",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "ad_text",
+        "value": "广告文案含「0首付，开蔚来回家」「0购置税，0元终身质保，限时享购车0首付」",
+        "region": "左侧广告文案区",
+        "state": "observed",
+        "observation_id": "0d5a4c36f13f336287a5",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "ad_tags",
+        "value": "广告内有三个标签：0元质保、0元换电、超长续航",
+        "region": "左侧广告文案下方",
+        "state": "observed",
+        "observation_id": "17f0aba52ce47a70b600",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "ad_footer",
+        "value": "广告底部标注「2分钟前 最近有70人预约」，含小程序标识",
+        "region": "左侧广告底部",
+        "state": "observed",
+        "observation_id": "41999ab7c21c1bb8e251",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "creative_label",
+        "value": "中间有蓝色文字「创意」，箭头指向右侧内容",
+        "region": "中间区域",
+        "state": "observed",
+        "observation_id": "5969031b5706509bedda",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "creative_component_title",
+        "value": "右侧上方有蓝色文字「创意组件」「创意素材」",
+        "region": "右侧上方区域",
+        "state": "observed",
+        "observation_id": "d736073e336e79494bd3",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "image_component",
+        "value": "创意组件含图片组件，对应创意素材为图片",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "f525fb7262ca947c4088",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "video_component",
+        "value": "创意组件含视频组件，对应创意素材为视频+图片（封面图）",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "e80e478f951ae6a81ac1",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "copy_component",
+        "value": "创意组件含文案组件，未标注对应素材",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "db46fc4461c95f367b4a",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "brand_component",
+        "value": "创意组件含品牌形象组件，对应创意素材为图片+蔚来文案",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "c653e1ab87fe4a80c379",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "marketing_component",
+        "value": "创意组件含营销组件，未标注对应素材",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "d4b152abd02fd015891f",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "float_card_component",
+        "value": "创意组件含浮层卡片组件，未标注对应素材",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "b8347e7345e44fef81b5",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "action_button_component",
+        "value": "创意组件含行动按钮组件，未标注对应素材",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "ed4f951bcdd9fabee91c",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "tag_component",
+        "value": "创意组件含标签组件，未标注对应素材",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "13e8d339702b36550b5f",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "landing_page_component",
+        "value": "创意组件含落地页组件，包含蹊径落地页、原生推广页、微信小程序落地页等",
+        "region": "右侧创意组件区",
+        "state": "observed",
+        "observation_id": "1ec88836d2156dbd9904",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "brand_logo",
+        "value": "蔚来品牌标识为青绿色方形图标，内有白色图案，搭配「蔚来」文字",
+        "region": "左侧左上角、右侧创意素材区",
+        "state": "observed",
+        "observation_id": "d35db68c097031f70a30",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      },
+      {
+        "key": "car_brand_mark",
+        "value": "广告图片内有NIO品牌标识",
+        "region": "左侧广告图片内上方",
+        "state": "observed",
+        "observation_id": "5f325067a203865e0e7d",
+        "source_id": "zhihu-components",
+        "request_id": "b4987aace368a0c6ed0cab48",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "initial:zhihu-components",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "b4987aace368a0c6ed0cab48",
+      "input_sha256": "e4a842f330c4e98d62405e1c810446d2d9f0aef46dc3ce61ad4ee3d0d945a5da",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 10330.216249916703,
+      "http_status": 200,
+      "provider_id": "02179204214469176e706cca72a7c4abc35179fe35310d8f3c39d",
+      "usage": {
+        "completion_tokens": 760,
+        "prompt_tokens": 1584,
+        "total_tokens": 2344,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "xhs-duo-1": {
+    "observations": [
+      {
+        "key": "title_text",
+        "value": "(四)给营销/广告人的启示",
+        "region": "顶部区域",
+        "state": "observed",
+        "observation_id": "a636a4bd4fc605b16c4d",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "icon",
+        "value": "紫色圆形内含白色向左下箭头的图标",
+        "region": "标题右侧",
+        "state": "observed",
+        "observation_id": "9f348d9949da97b789fe",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "point1_title",
+        "value": "1.品类破局的关键是反常识内卷",
+        "region": "内容第一部分标题",
+        "state": "observed",
+        "observation_id": "ed34b74a6f17bf0d5cd8",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "point1_content",
+        "value": "不要跟着赛道内卷，教育不一定要卖焦虑，美妆不一定要吹功效，找到用户的情绪痛点，用全新的沟通方式切入，才能形成差异化。",
+        "region": "内容第一部分正文",
+        "state": "observed",
+        "observation_id": "56298a3c28e2571ec4bf",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "point2_title",
+        "value": "2.IP设计要绑定行为，而非单纯颜值",
+        "region": "内容第二部分标题",
+        "state": "observed",
+        "observation_id": "b6b0cb9b768e0f171ee4",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "point2_content",
+        "value": "IP设计的核心是服务品牌目标，要么促活、要么转化、要么传播，脱离用户行为的IP，只是无用的视觉符号。",
+        "region": "内容第二部分正文",
+        "state": "observed",
+        "observation_id": "fe7580ed7f455b356c65",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "point3_title",
+        "value": "3.自传播＞硬投放，梗资产是中小预算品牌的最优解",
+        "region": "内容第三部分标题",
+        "state": "observed",
+        "observation_id": "f53baa7dd4b614fc109a",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "point3_content",
+        "value": "放弃大额投放思维，打造可玩梗、可共情、可二创的内容资产，让用户成为传播主体，才是长效低成本的增长路径。",
+        "region": "内容第三部分正文",
+        "state": "observed",
+        "observation_id": "9bae52de72edcf373cbf",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_text",
+        "value": "@有好CASE",
+        "region": "底部右下角",
+        "state": "observed",
+        "observation_id": "42c2a6b5c526105c9325",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "背景为浅灰色，内容区域背景为浅粉渐变，底部为红色",
+        "region": "整体背景",
+        "state": "observed",
+        "observation_id": "34d1986bc235adbc69ef",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      },
+      {
+        "key": "text_color",
+        "value": "标题文字为红色，正文文字为黑色",
+        "region": "文字区域",
+        "state": "observed",
+        "observation_id": "2754ad6a43bdecff4565",
+        "source_id": "xhs-duo-1",
+        "request_id": "77a47187a05520b1e7a143bf",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "initial:xhs-duo-1",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "77a47187a05520b1e7a143bf",
+      "input_sha256": "73f218bb715daeb09b20df0d4323424aff4084e7f06ba793336589346658b20f",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 6698.904374963604,
+      "http_status": 200,
+      "provider_id": "02179204215317576e706cca72a7c4abc35179fe35310d8c328a2",
+      "usage": {
+        "completion_tokens": 480,
+        "prompt_tokens": 1585,
+        "total_tokens": 2065,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "xhs-duo-2": {
+    "observations": [
+      {
+        "key": "top_left_label",
+        "value": "红色边框白色背景的标签，内有红色文字“品牌洞察”",
+        "region": "左上角",
+        "state": "observed",
+        "observation_id": "e51260296de549b7cb57",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "top_mid_label",
+        "value": "红色边框白色背景的标签，内有红色文字“营销分析”",
+        "region": "顶部中间",
+        "state": "observed",
+        "observation_id": "379751043a872d97295e",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "top_right_label",
+        "value": "红色边框白色背景的标签，内有红色文字“广告创意”",
+        "region": "右上角",
+        "state": "observed",
+        "observation_id": "73c2430daac5db24e5d8",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "title_text",
+        "value": "红色大号文字，分为两行，第一行是“疯狂的”，第二行是“小绿鸟”",
+        "region": "顶部中央",
+        "state": "observed",
+        "observation_id": "afa9784fae82caf5af52",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "subtitle_text",
+        "value": "白色矩形背景上的红色文字“多邻国营销大盘点”",
+        "region": "中部",
+        "state": "observed",
+        "observation_id": "950a3b5af0652f708186",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "left_duolingo_bird",
+        "value": "绿色卡通猫头鹰形象，双眼圆睁，无受伤表现",
+        "region": "左下方",
+        "state": "observed",
+        "observation_id": "7b94c28ea7ecf7a90f0b",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "right_duolingo_bird",
+        "value": "绿色卡通猫头鹰形象，额头和身体贴有创可贴，表情痛苦",
+        "region": "右下方",
+        "state": "observed",
+        "observation_id": "a19727be4fa1023d7bda",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "brand_name",
+        "value": "绿色英文文字“duolingo”，位于左下角",
+        "region": "左下角",
+        "state": "observed",
+        "observation_id": "ef56a8f09296d348e850",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "creator_text",
+        "value": "白色文字“@有好CASE”，位于右下角",
+        "region": "右下角",
+        "state": "observed",
+        "observation_id": "5ad81d87e7ed5aa73f3e",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "渐变背景，上方为浅灰白，中部过渡为粉紫，下方为红色",
+        "region": "整体背景",
+        "state": "observed",
+        "observation_id": "379ab7197540967f9a39",
+        "source_id": "xhs-duo-2",
+        "request_id": "164a35216091ef4e82ec8faf",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "initial:xhs-duo-2",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "164a35216091ef4e82ec8faf",
+      "input_sha256": "1cafcb7862bd82849d0e23558563988299b1ac954ec7d0f9a373e5e28efe77a9",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5057.40883294493,
+      "http_status": 200,
+      "provider_id": "02179204215988176e706cca72a7c4abc35179fe35310d853e5bc",
+      "usage": {
+        "completion_tokens": 413,
+        "prompt_tokens": 1585,
+        "total_tokens": 1998,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "x-marketing-kb": {
+    "observations": [
+      {
+        "key": "title_text",
+        "value": "SECOND BRAIN FOR MARKETING",
+        "region": "top left",
+        "state": "observed",
+        "observation_id": "09ae78b4bb0046ed3391",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "author_handle",
+        "value": "@shannholmberg",
+        "region": "top right",
+        "state": "observed",
+        "observation_id": "db1320a9ab0ad2ebad92",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "organize_text",
+        "value": "organize the files → connect the references → give agents what they need to complete the work",
+        "region": "top below title",
+        "state": "observed",
+        "observation_id": "fd80dc746ff578fb4e11",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "section_01_title",
+        "value": "01 / ORGANIZE",
+        "region": "upper left section header",
+        "state": "observed",
+        "observation_id": "02893540cba8976ed6fb",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "marketing_folder_structure",
+        "value": "marketing/ has subfolders shared/, seo/, campaigns/product-launch/; shared/ has content/ with .md files like voice-dna.md, hooks.md",
+        "region": "left upper area",
+        "state": "observed",
+        "observation_id": "90a67c18004edd5ea848",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "shared_files_list",
+        "value": "shared files include company.md, customer.md, offer.md, positioning.md, voice.md, proof.md",
+        "region": "upper right area",
+        "state": "observed",
+        "observation_id": "6cb9a124989b76975882",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "agents_md_text",
+        "value": "AGENTS .md, description: where to read / save / ask for sign-off",
+        "region": "upper right below shared files",
+        "state": "observed",
+        "observation_id": "f36258efbc4f5b1bc404",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "section_02_title",
+        "value": "02 / CONNECT",
+        "region": "middle section header",
+        "state": "observed",
+        "observation_id": "780ad62f99721fb0294a",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "brain_knowledge_base",
+        "value": "BRAIN / KNOWLEDGE BASE holds customer, offer, campaign brief, voice-dna.md, hooks.md, approved work",
+        "region": "middle left",
+        "state": "observed",
+        "observation_id": "3fceb32cbe4f929f6e14",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "data_warehouse_content",
+        "value": "DATA WAREHOUSE holds campaign/asset/date, spend, clicks, leads, conversions, results; function: query previous performance",
+        "region": "middle center",
+        "state": "observed",
+        "observation_id": "01f17165241f8c3a9b11",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "moodboard_brand_book",
+        "value": "MOODBOARD / BRAND BOOK is Figma/Paper with Aa type, icons; function: open designs + your feedback",
+        "region": "middle right",
+        "state": "observed",
+        "observation_id": "6934bdc09be9abeca74f",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "section_03_title",
+        "value": "03 / USE",
+        "region": "lower middle section header",
+        "state": "observed",
+        "observation_id": "98ee17c98b865a7b910b",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "your_task_text",
+        "value": "YOUR TASK: launch page + social posts, approved offer / audience / goal",
+        "region": "lower left",
+        "state": "observed",
+        "observation_id": "ff2ad9aa22b9b9822e45",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "agent_gathers_text",
+        "value": "AGENT GATHERS: brief + customer evidence, voice + hooks + performance, brand book + visual references",
+        "region": "lower right",
+        "state": "observed",
+        "observation_id": "b6600c2c0594d0f372cf",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "create_check_content",
+        "value": "CREATE / CHECK: launch page with headline, hero visual, enquiry form; social post with hook from hooks.md, campaign visual",
+        "region": "lower left",
+        "state": "observed",
+        "observation_id": "e58f2499c1a1735ccd61",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "you_review_text",
+        "value": "YOU / REVIEW: items to approve: claims + offer, voice + design, links + form; action: approve or give feedback",
+        "region": "lower right",
+        "state": "observed",
+        "observation_id": "2693eafda45dbb4a1307",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "after_sign_off_text",
+        "value": "AFTER SIGN-OFF: publish approved work → check live page + posts → collect results",
+        "region": "bottom left",
+        "state": "observed",
+        "observation_id": "5544300c47992660ca9f",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      },
+      {
+        "key": "save_back_text",
+        "value": "SAVE BACK: copy edits to voice-dna.md/hooks.md/examples, results to warehouse, design feedback to moodboard",
+        "region": "bottom below after sign-off",
+        "state": "observed",
+        "observation_id": "eb8848f58c587cbca46a",
+        "source_id": "x-marketing-kb",
+        "request_id": "2051ec8449495c9e91d5c5cd",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "initial:x-marketing-kb",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "2051ec8449495c9e91d5c5cd",
+      "input_sha256": "0ee96d1eabd2bddf65916ff95439e8680cbb507adb8be55af374e0458a8d833a",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 7706.3677499536425,
+      "http_status": 200,
+      "provider_id": "02179204216495476e706cca72a7c4abc35179fe35310d8d46df5",
+      "usage": {
+        "completion_tokens": 832,
+        "prompt_tokens": 1615,
+        "total_tokens": 2447,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "x-creative-framework": {
+    "observations": [
+      {
+        "key": "top_logo",
+        "value": "A rounded square icon with terracotta background and white starburst-style graphic, located at top center",
+        "region": "top",
+        "state": "observed",
+        "observation_id": "25a5af52a8846a399e2f",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "main_title",
+        "value": "Text 'The Claude Ad' in dark brown serif font, below the logo",
+        "region": "top",
+        "state": "observed",
+        "observation_id": "274ada71f1d650f26a68",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "subtitle_title",
+        "value": "Text 'Creative Strategist' in terracotta serif font, below main title",
+        "region": "top",
+        "state": "observed",
+        "observation_id": "1013a05301fd205b9c0d",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "tagline",
+        "value": "Text 'Have Claude tell you exactly what ads to make next.' in dark gray serif font, below subtitle",
+        "region": "top",
+        "state": "observed",
+        "observation_id": "9b52f839f8d13596b17b",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "including_label",
+        "value": "Terracotta rounded rectangle button with white text 'INCLUDING:', centered below tagline",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "fbef90c8d863d081017a",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "item1_card",
+        "value": "Light peach folder-style card with terracotta icon and text 'Ad Creative Strategist System Prompt', leftmost of four cards",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "7168e263cc64610d8b54",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "item2_card",
+        "value": "Light peach folder-style card with terracotta checkmark icon and text 'Winning Ad Hook Templates', second from left",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "83ba1b9d59c187f694a1",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "item3_card",
+        "value": "Light peach folder-style card with terracotta dropdown icon and text 'Structure Of The Perfect Ad', third from left",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "fca83861c557ffe675a0",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "item4_card",
+        "value": "Light peach folder-style card with terracotta shield icon and text 'Creative Testing Framework', rightmost of four cards",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "0f69a3df3d0773b7023d",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "call_to_action",
+        "value": "Text 'Comment' in dark brown, terracotta button with white text 'claudeads', text 'to get the access' in dark brown, at bottom center",
+        "region": "bottom",
+        "state": "observed",
+        "observation_id": "09863a691cc291b10386",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "Light off-white (cream) background across the entire image",
+        "region": "full",
+        "state": "observed",
+        "observation_id": "69d5ac7c028d9d46d4bb",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "card_count",
+        "value": "Four folder-style cards arranged horizontally in a row",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "3813f8a2ab3c5bc19721",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "text_font_style",
+        "value": "All text uses serif font style",
+        "region": "full",
+        "state": "observed",
+        "observation_id": "30d4e1d59aeee0724ab1",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "color_palette",
+        "value": "Color palette includes cream, dark brown, terracotta, and white",
+        "region": "full",
+        "state": "observed",
+        "observation_id": "461f06e20c15c44bacbe",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      },
+      {
+        "key": "horizontal_lines",
+        "value": "Two thin terracotta horizontal lines: one above 'INCLUDING:', one below the four cards",
+        "region": "middle",
+        "state": "observed",
+        "observation_id": "e28c9087342fd4b88038",
+        "source_id": "x-creative-framework",
+        "request_id": "b69792d22b671492d450e491",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "initial:x-creative-framework",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "b69792d22b671492d450e491",
+      "input_sha256": "eb59763f56b6201506b91500998c0536bcfb49dcc3425f05fa92d71f94f2610e",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 6510.414416901767,
+      "http_status": 200,
+      "provider_id": "02179204217264776e706cca72a7c4abc35179fe35310d8c15a1c",
+      "usage": {
+        "completion_tokens": 664,
+        "prompt_tokens": 1610,
+        "total_tokens": 2274,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  }
+}

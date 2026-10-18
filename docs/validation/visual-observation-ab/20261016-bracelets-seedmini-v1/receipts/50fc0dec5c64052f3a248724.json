@@ -1,0 +1,22 @@
+{
+  "call_key": "20261016-bracelets-seedmini-v1:fahari-c0618befdc51-4:B:read",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "50fc0dec5c64052f3a248724",
+  "input_sha256": "07ee0315e8e1cf73e91b7a38f597410519f26f91e6e01ec2d969c856ab400bc1",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 3617.8549580508843,
+  "http_status": 200,
+  "provider_id": "021792082626224f5a6be93c8798a26ceedbf38a44bb89c86631b",
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 1641,
+    "total_tokens": 1760,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

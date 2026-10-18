@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "bracelet_type",
+      "value": "stretch beaded bracelet",
+      "region": "full image",
+      "state": "observed"
+    },
+    {
+      "key": "bead_count",
+      "value": "multiple beads of various types arranged in a circular loop",
+      "region": "full image",
+      "state": "observed"
+    },
+    {
+      "key": "lava_beads",
+      "value": "black porous round lava beads, 4 in number",
+      "region": "top left, top right, bottom left, bottom right",
+      "state": "observed"
+    },
+    {
+      "key": "copper_beads",
+      "value": "3 copper-colored metal beads: 1 at top center, 1 at bottom center with embossed text",
+      "region": "top center, bottom center",
+      "state": "observed"
+    },
+    {
+      "key": "peach_beads",
+      "value": "4 matte peach round beads, evenly spaced on left and right sides",
+      "region": "left upper, left lower, right upper, right lower",
+      "state": "observed"
+    },
+    {
+      "key": "black_onyx_faceted_beads",
+      "value": "4 dark black faceted angular beads, positioned on left and right sides",
+      "region": "left, right",
+      "state": "observed"
+    },
+    {
+      "key": "banded_agate_beads",
+      "value": "multiple black and brown banded round beads with white or light brown stripes",
+      "region": "various positions",
+      "state": "observed"
+    },
+    {
+      "key": "clear_quartz_beads",
+      "value": "2 clear translucent round beads at bottom center flanking copper bead",
+      "region": "bottom center",
+      "state": "observed"
+    },
+    {
+      "key": "embossed_text",
+      "value": "embossed text on copper spacer bead appears as 'MUSE' (reversed in image)",
+      "region": "bottom center copper bead",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "solid plain white background",
+      "region": "full image background",
+      "state": "observed"
+    }
+  ]
+}

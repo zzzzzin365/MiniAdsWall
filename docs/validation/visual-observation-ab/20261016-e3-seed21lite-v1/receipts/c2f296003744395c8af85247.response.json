@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "video_component_material_desc",
+      "value": "视频+图片〔封面图〕",
+      "region": "右侧创意素材列，视频组件箭头指向位置",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

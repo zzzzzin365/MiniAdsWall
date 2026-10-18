@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "brand_name",
+      "value": "蔚来",
+      "region": "左侧广告卡片左上角、广告主图左上角、右侧创意素材品牌形象组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "brand_logo",
+      "value": "青绿色方形底搭配白色弧形标识",
+      "region": "左侧广告卡片左上角、右侧创意素材品牌形象组件区域",
+      "state": "observed"
+    },
+    {
+      "key": "english_brand_name",
+      "value": "NIO",
+      "region": "左侧广告主图左上角",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

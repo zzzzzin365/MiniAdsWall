@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "image_background",
+      "value": "solid white background",
+      "region": "entire image",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_type",
+      "value": "beaded cluster bracelet with silver-toned metal fastener on left end",
+      "region": "upper half of image",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_beads",
+      "value": "round beads in two colors: light gray (pearl-like) and turquoise blue, clustered together",
+      "region": "upper half of image",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_bead_count",
+      "value": "numerous beads, mix of light gray and turquoise blue beads",
+      "region": "upper half of image",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_bead_marks",
+      "value": "some light gray beads have small dark dots on their surface",
+      "region": "upper half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_type",
+      "value": "beaded cluster bracelet with silver-toned metal link chain structure at center",
+      "region": "lower half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_beads",
+      "value": "round beads in two colors: light gray (pearl-like) and turquoise blue, arranged around central metal chain",
+      "region": "lower half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_bead_condition",
+      "value": "some light gray beads show discoloration or tarnish spots",
+      "region": "lower half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_closure",
+      "value": "silver-toned metal clasp on left end of bottom bracelet",
+      "region": "lower half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_comparison",
+      "value": "two bracelets displayed vertically, top has no central metal chain, bottom has central metal link chain structure",
+      "region": "entire image",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "all beads on both bracelets are perfectly round",
+      "region": "both bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "metal_color",
+      "value": "metal components (fasteners, links) of both bracelets are silver-toned",
+      "region": "both bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_layout",
+      "value": "beads arranged in a single clustered row across the top bracelet",
+      "region": "upper half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_layout",
+      "value": "beads arranged in two layers (top and bottom) around the central metal chain of the bottom bracelet",
+      "region": "lower half of image",
+      "state": "observed"
+    },
+    {
+      "key": "bead_size",
+      "value": "all beads on both bracelets are of similar diameter, no large size variation",
+      "region": "both bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "metal_link_pattern",
+      "value": "central metal chain of bottom bracelet has repeating rectangular link pattern with small horizontal ridges",
+      "region": "lower half of image",
+      "state": "observed"
+    }
+  ]
+}

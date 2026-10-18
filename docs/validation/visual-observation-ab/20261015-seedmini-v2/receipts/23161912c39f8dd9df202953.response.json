@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "advertisement_label",
+      "value": "顶部区域有文字'Advertisement'标识广告区域",
+      "region": "顶部",
+      "state": "observed"
+    },
+    {
+      "key": "top_chart_position",
+      "value": "顶部广告内的图表截图位于该广告的右侧",
+      "region": "顶部广告区",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_chart_position",
+      "value": "底部广告内的图表截图位于该广告的右侧",
+      "region": "底部广告区",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

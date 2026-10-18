@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "central_objects",
+      "value": "画面中心主要展示的是两串放置在透明展示架上的珠串，珠串由黑色圆珠和浅粉色圆珠组成，其中右侧珠串带有银色装饰隔珠",
+      "region": "画面中心区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_item",
+      "value": "背景中有一个带有黑色莲花图案的麻布抽绳袋",
+      "region": "画面上方背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "placement_surface",
+      "value": "所有物品放置在米白色的编织纹理织物表面上",
+      "region": "画面下方区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

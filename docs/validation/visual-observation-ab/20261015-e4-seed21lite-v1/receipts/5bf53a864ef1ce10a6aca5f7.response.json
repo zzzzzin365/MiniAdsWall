@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "32d38c45bf6ac9e5e5d4"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录顶部居中的中间标签印有红色文字“营销分析”，可直接回答问题。"
+}

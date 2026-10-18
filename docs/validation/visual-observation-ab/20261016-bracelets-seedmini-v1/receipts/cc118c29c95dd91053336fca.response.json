@@ -1,0 +1,106 @@
+{
+  "observations": [
+    {
+      "key": "layout",
+      "value": "3-panel collage: top panel shows flat beaded bracelet, bottom left shows bracelet open, bottom right shows bracelet on wrist",
+      "region": "overall",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_material",
+      "value": "made of small beads, pixelated design style",
+      "region": "all panels",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_clasp",
+      "value": "metal slide clasp with brass-colored finish, on both ends of flat bracelet",
+      "region": "top, bottom left panels",
+      "state": "observed"
+    },
+    {
+      "key": "bead_design_front",
+      "value": "front design has blue sky with white clouds, multiple colorful houses, a figure, pink pig-like shapes",
+      "region": "top, bottom right panels",
+      "state": "observed"
+    },
+    {
+      "key": "bead_design_back",
+      "value": "back design (visible on open bracelet) has blue sky, white clouds, pink pig-like shapes, light blue building with windows",
+      "region": "bottom left panel",
+      "state": "observed"
+    },
+    {
+      "key": "wrist_wear",
+      "value": "bottom right panel shows bracelet worn on a person's wrist, fits around the wrist",
+      "region": "bottom right panel",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "solid dark blue background in all panels",
+      "region": "all panels",
+      "state": "observed"
+    },
+    {
+      "key": "house_colors",
+      "value": "houses in design have colors: white, red, orange, turquoise, yellow, brown",
+      "region": "top, bottom right panels",
+      "state": "observed"
+    },
+    {
+      "key": "figure_design",
+      "value": "pixelated figure with orange hair, red clothing, positioned among houses on front design",
+      "region": "top, bottom right panels",
+      "state": "observed"
+    },
+    {
+      "key": "pig_like_shapes",
+      "value": "pink pig-like pixelated shapes on right side of front design, also on back design of open bracelet",
+      "region": "top, bottom left panels",
+      "state": "observed"
+    },
+    {
+      "key": "sky_details",
+      "value": "blue beaded sky with small white cloud beads in front and back designs",
+      "region": "all panels showing design",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_width",
+      "value": "wide beaded bracelet, covers a portion of the wrist when worn",
+      "region": "bottom right panel",
+      "state": "observed"
+    },
+    {
+      "key": "open_bracelet_structure",
+      "value": "bottom left panel shows open bracelet with metal clasp in center, two ends connected by clasp",
+      "region": "bottom left panel",
+      "state": "observed"
+    },
+    {
+      "key": "bead_edge_color",
+      "value": "lower edge of beaded design has brown beads as border in front design",
+      "region": "top, bottom right panels",
+      "state": "observed"
+    },
+    {
+      "key": "window_details",
+      "value": "houses have black window details, some with yellow accents on windows",
+      "region": "top, bottom right panels",
+      "state": "observed"
+    },
+    {
+      "key": "panel_borders",
+      "value": "each panel has a rounded corner border",
+      "region": "overall",
+      "state": "observed"
+    },
+    {
+      "key": "skin_tone",
+      "value": "person's wrist in bottom right panel has light skin tone",
+      "region": "bottom right panel",
+      "state": "observed"
+    }
+  ]
+}

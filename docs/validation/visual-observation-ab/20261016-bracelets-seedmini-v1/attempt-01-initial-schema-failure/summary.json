@@ -1,0 +1,44 @@
+{
+  "paired_cases": 0,
+  "attempted_rows": 0,
+  "groups": {
+    "B": {
+      "n": 0,
+      "answerable_n": 0,
+      "answerable_pass": 0,
+      "field_source_rate": null,
+      "unprovable_n": 0,
+      "unprovable_pass": 0,
+      "format_pass": 0,
+      "reads": 0,
+      "route_calls": 0,
+      "p95_s": null,
+      "reader_p95_s": null,
+      "answer_p95_s": null,
+      "online_cost_estimate_cny": 0
+    },
+    "C1": {
+      "n": 0,
+      "answerable_n": 0,
+      "answerable_pass": 0,
+      "field_source_rate": null,
+      "unprovable_n": 0,
+      "unprovable_pass": 0,
+      "format_pass": 0,
+      "reads": 0,
+      "route_calls": 0,
+      "p95_s": null,
+      "reader_p95_s": null,
+      "answer_p95_s": null,
+      "online_cost_estimate_cny": 0
+    }
+  },
+  "requests": 13,
+  "estimated_total_cost_cny": 0.013559600000000002,
+  "actual_bill": null,
+  "quality_delta_ci95": null,
+  "p95_delta_ci95_s": null,
+  "independent_images": 0,
+  "human_review_completed": false,
+  "gold_is_assistant_preannotation": true
+}

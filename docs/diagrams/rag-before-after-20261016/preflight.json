@@ -1,0 +1,46 @@
+{
+  "file": "docs/diagrams/rag-before-after-20261016/rag-before-after.drawio",
+  "summary": {
+    "total_findings": 2,
+    "fail": 0,
+    "warn": 2,
+    "passed": true,
+    "clean": false
+  },
+  "fails": [],
+  "warns": [
+    {
+      "rule": "spacing-inconsistent-v",
+      "element_id": "o1",
+      "message": "Column at x≈48: vertical gaps vary (gaps=['151', '44', '228'], mean=141, cv=0.54). Use uniform spacing.",
+      "detail": {
+        "col_x": 48,
+        "gaps": [
+          151.0,
+          44.0,
+          228.0
+        ],
+        "mean": 141.0,
+        "cv": 0.54,
+        "element_ids": [
+          "o1",
+          "index",
+          "q",
+          "res1"
+        ]
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "exp",
+      "message": "Box 'exp' (780×280) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "exp",
+        "size": "780×280"
+      }
+    }
+  ],
+  "vertex_count": 29,
+  "edge_count": 11,
+  "canvas": "1440x1135"
+}

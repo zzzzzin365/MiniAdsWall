@@ -1,0 +1,25 @@
+{"status": "prepared", "e3_cases": 12, "e3_repeats": 3, "e4_cases": 36, "expanded_images": 56}
+e4 0 x-marketing-kb-1 C1 format_failed 0.0
+e4 1 x-marketing-kb-1 C1 format_failed 0.0
+test_actual_business_facts_remain_unverifiable (tests.test_visual_observation_v3.VisualObservationV3Tests.test_actual_business_facts_remain_unverifiable) ... ok
+test_boolean_false_is_valid_but_string_false_is_not (tests.test_visual_observation_v3.VisualObservationV3Tests.test_boolean_false_is_valid_but_string_false_is_not) ... ok
+test_correct_prose_does_not_hide_wrong_value_type (tests.test_visual_observation_v3.VisualObservationV3Tests.test_correct_prose_does_not_hide_wrong_value_type) ... ok
+test_inputs_are_frozen_instead_of_overwritten (tests.test_visual_observation_v3.VisualObservationV3Tests.test_inputs_are_frozen_instead_of_overwritten) ... ok
+test_insufficient_requires_null_and_sources_are_scoped (tests.test_visual_observation_v3.VisualObservationV3Tests.test_insufficient_requires_null_and_sources_are_scoped) ... ok
+test_invalid_objects_are_rejected (tests.test_visual_observation_v3.VisualObservationV3Tests.test_invalid_objects_are_rejected) ... ok
+test_missing_background_must_read_not_abstain (tests.test_visual_observation_v3.VisualObservationV3Tests.test_missing_background_must_read_not_abstain) ... ok
+test_missing_visible_words_must_read (tests.test_visual_observation_v3.VisualObservationV3Tests.test_missing_visible_words_must_read) ... ok
+test_reuse_requires_valid_evidence_and_no_missing_items (tests.test_visual_observation_v3.VisualObservationV3Tests.test_reuse_requires_valid_evidence_and_no_missing_items) ... ok
+test_runner_counts_format_failure_and_resets_observations_between_repeats (tests.test_visual_observation_v3.VisualObservationV3Tests.test_runner_counts_format_failure_and_resets_observations_between_repeats) ... ok
+test_timing_rule_is_question_only (tests.test_visual_observation_v3.VisualObservationV3Tests.test_timing_rule_is_question_only) ... ok
+test_visible_price_text_is_not_actual_price_verification (tests.test_visual_observation_v3.VisualObservationV3Tests.test_visible_price_text_is_not_actual_price_verification) ... ok
+test_changed_image_is_rejected (tests.test_image_rag_experiment.TestImageRagExperiment.test_changed_image_is_rejected) ... ok
+test_reader_receives_source_name_binding (tests.test_image_rag_experiment.TestImageRagExperiment.test_reader_receives_source_name_binding) ... ok
+test_success_replay_and_call_budget (tests.test_image_rag_experiment.TestImageRagExperiment.test_success_replay_and_call_budget) ... ok
+test_timeout_is_not_resubmitted (tests.test_image_rag_experiment.TestImageRagExperiment.test_timeout_is_not_resubmitted) ... ok
+test_unknown_reference_and_boolean_guess_not_accepted (tests.test_image_rag_experiment.TestImageRagExperiment.test_unknown_reference_and_boolean_guess_not_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.071s
+
+OK

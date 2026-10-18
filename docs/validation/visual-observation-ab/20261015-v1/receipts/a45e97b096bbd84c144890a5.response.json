@@ -1,0 +1,8 @@
+{
+  "status": "insufficient",
+  "value": null,
+  "answer": "提供的证据仅为广告组件示意图的文字说明，未包含可判断左侧最前方汽车车身颜色的图片内容。",
+  "source_ids": [
+    "zhihu-components"
+  ]
+}

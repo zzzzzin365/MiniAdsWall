@@ -1,0 +1,26 @@
+{
+  "decision": "read",
+  "evidence_ids": [
+    "e79d7e6c1e9dd122563b",
+    "27c759f260475f1ee369",
+    "f78bdcb6ef820e068bc0",
+    "85d18ef3072306365379",
+    "8be8b5f17aa8e0d32ef9",
+    "c7d8fd007cfbfacc11f6",
+    "bfb5685d55c1a3e71449",
+    "18259bd78398cafdc77a",
+    "04b53b67f7387405ab72",
+    "a1dc2e6613d90cbe777b",
+    "c01b598db6a913ebb1ea",
+    "786aa07031567c002de5",
+    "812ba4e39234f494de5",
+    "a385a3a9eb54f19f1569",
+    "7c9ced72a9b7f57b6be7",
+    "e5695acd5b99548b13af",
+    "a49e68433e6546afed6d"
+  ],
+  "missing": [
+    "画面中是否出现真人的手或手腕的相关观察"
+  ],
+  "reason": "现有观察未提及画面中是否存在真人的手或手腕，需查看画面可见内容确认"
+}

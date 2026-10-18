@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "现有关联表无有效对应关系，无法确定本图匹配的来源快照及对应正文摘录。",
+  "image_citations": [
+    "image-005"
+  ],
+  "text_citations": []
+}

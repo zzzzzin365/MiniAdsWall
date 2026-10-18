@@ -1,0 +1,22 @@
+{
+  "call_key": "20261015-seedmini-v2:main:zhihu-display:zhihu-display-1:C1:answer",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "23b824e3651ae3cdbde64022",
+  "input_sha256": "9daeed9bbc9670395349ce3375676bf8a1efbc92fa9130884c68ed2b01950028",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1769.3870840594172,
+  "http_status": 200,
+  "provider_id": "021792044933386cf23db4d38572816d86b7975cf989d612662bb",
+  "usage": {
+    "completion_tokens": 30,
+    "prompt_tokens": 2392,
+    "total_tokens": 2422,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

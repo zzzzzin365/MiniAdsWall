@@ -1,0 +1,52 @@
+{
+  "observations": [
+    {
+      "key": "main_bead_color",
+      "value": "dark brown (near-black) round beads, strung in three loops",
+      "region": "central area of image",
+      "state": "observed"
+    },
+    {
+      "key": "accent_beads_red",
+      "value": "two light red (coral-like) round beads, interspersed among dark beads",
+      "region": "left-middle area of the beaded strand",
+      "state": "observed"
+    },
+    {
+      "key": "gold_beads",
+      "value": "multiple small gold-colored decorative beads with patterned surfaces, spaced along the strand",
+      "region": "left and lower parts of the beaded strand",
+      "state": "observed"
+    },
+    {
+      "key": "pendant_white",
+      "value": "square-shaped white translucent pendant with a gold decorative element holding a small red stone, at lower left of the strand",
+      "region": "lower left of the beaded strand",
+      "state": "observed"
+    },
+    {
+      "key": "pendant_gold_circular",
+      "value": "circular gold pendant with colorful enamel inscriptions/symbols, at right end of the strand",
+      "region": "right end of the beaded strand",
+      "state": "observed"
+    },
+    {
+      "key": "background_surface",
+      "value": "light off-white smooth surface, with a wooden frame-like object partially visible behind the beaded strand",
+      "region": "background of the image",
+      "state": "observed"
+    },
+    {
+      "key": "bead_count_approx",
+      "value": "approx 70+ dark brown beads, plus smaller accent beads and decorative elements",
+      "region": "entire beaded strand",
+      "state": "observed"
+    },
+    {
+      "key": "strand_layout",
+      "value": "beaded strand arranged in three overlapping loops, forming a layered bracelet-like structure",
+      "region": "central image area",
+      "state": "observed"
+    }
+  ]
+}

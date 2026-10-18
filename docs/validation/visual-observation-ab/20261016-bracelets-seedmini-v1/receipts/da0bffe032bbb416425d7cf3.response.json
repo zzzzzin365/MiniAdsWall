@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "plain light white or light gray surface",
+      "region": "entire background",
+      "state": "observed"
+    },
+    {
+      "key": "central_rock",
+      "value": "rough light blue-green mineral rock with brownish patches on upper part",
+      "region": "center top",
+      "state": "observed"
+    },
+    {
+      "key": "beaded_bracelet",
+      "value": "circular arrangement of round polished beads, placed around the central rock",
+      "region": "foreground",
+      "state": "observed"
+    },
+    {
+      "key": "bead_count",
+      "value": "total 21 round beads in the bracelet",
+      "region": "bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bead_colors",
+      "value": "includes dark blue, light green, dark purple, light blue-green, gray, white, brownish-red, black beads",
+      "region": "bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "top_green_beads",
+      "value": "four light green round beads arranged above the central rock",
+      "region": "top of central rock",
+      "state": "observed"
+    },
+    {
+      "key": "dark_blue_beads",
+      "value": "two dark blue round beads, one on left, one on right of central rock",
+      "region": "upper left and right of central rock",
+      "state": "observed"
+    },
+    {
+      "key": "left_light_green_beads",
+      "value": "three light green beads on left side of bracelet, varying in shade",
+      "region": "left side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "left_purple_bead",
+      "value": "one dark purple bead on lower left of bracelet",
+      "region": "lower left of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "lower_left_blue_bead",
+      "value": "one light blue-gray bead on lower left of bracelet",
+      "region": "lower left of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "center_lower_blue_bead",
+      "value": "one light turquoise blue bead at bottom center of bracelet",
+      "region": "bottom center of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "lower_right_gray_bead",
+      "value": "one light gray bead with dark spots on lower right of bracelet",
+      "region": "lower right of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "right_white_gray_bead",
+      "value": "one white-gray bead with dark spots on right side of bracelet",
+      "region": "right side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "right_black_bead",
+      "value": "one dark black bead on right side of bracelet, above the white-gray bead",
+      "region": "right side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "right_purple_bead",
+      "value": "one dark purple bead on right side of bracelet, above the black bead",
+      "region": "right side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "right_bicolor_bead",
+      "value": "one bead with light green and reddish-brown sections on right side of bracelet, above the purple bead",
+      "region": "right side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "right_light_white_bead",
+      "value": "one light white bead on right side of bracelet, above the bicolor bead",
+      "region": "right side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "right_brown_bead",
+      "value": "one brownish-gray bead on right side of bracelet, above the light white bead",
+      "region": "right side of bracelet",
+      "state": "observed"
+    }
+  ]
+}

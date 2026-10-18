@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "Fahari",
+  "quote": "Welcome To Fahari! Free Shipping on Orders Above $99.",
+  "answer": "已根据关联来源完成对应字段填写，其余无对应证据字段为null。",
+  "image_citations": [
+    "image-007"
+  ],
+  "text_citations": [
+    "ctx-556bccbad69742e2"
+  ]
+}

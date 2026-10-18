@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "d3bdc25c65e6be3a5610"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录了最左侧介绍卡片内的完整英文标题文字，可直接复用回答。"
+}

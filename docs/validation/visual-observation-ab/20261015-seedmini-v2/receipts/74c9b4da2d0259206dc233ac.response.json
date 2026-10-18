@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "该案例封面对应活动的真实ROAS数据"
+  ],
+  "reason": "现有观察内容未提及任何与该活动真实ROAS相关的信息，无法获取该数据"
+}

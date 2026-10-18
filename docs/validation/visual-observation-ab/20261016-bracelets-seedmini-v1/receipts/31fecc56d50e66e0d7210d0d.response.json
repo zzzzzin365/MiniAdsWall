@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "商品真实销量"
+  ],
+  "reason": "提供的观察内容仅涉及商品外观特征，未包含商品真实销量的相关信息，无法验证该商业事实"
+}

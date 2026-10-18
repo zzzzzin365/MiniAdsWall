@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "wearing_arm",
+      "value": "A human arm with visible skin and fine hair, wearing a beaded bracelet",
+      "region": "left lower arm and wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_type",
+      "value": "Wide beaded bracelet worn on a human wrist",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_base_color",
+      "value": "Bracelet has a black base made of small black beads",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_pattern",
+      "value": "Bracelet features a pattern with blue, yellow, silver beads on black base",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "pattern_blue_section",
+      "value": "Pattern includes a solid blue section made of small blue beads",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "pattern_yellow_section",
+      "value": "Pattern includes a solid yellow section made of small yellow beads",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "pattern_silver_section",
+      "value": "Pattern includes a silver-colored section made of small silver beads",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "Gray textured surface, likely a wall or fabric, behind the arm",
+      "region": "background area",
+      "state": "observed"
+    },
+    {
+      "key": "hand_part",
+      "value": "Part of a human hand with fingers visible above the wrist",
+      "region": "upper right of image",
+      "state": "observed"
+    },
+    {
+      "key": "arm_hair",
+      "value": "Fine dark hair visible on the forearm",
+      "region": "lower left of image",
+      "state": "observed"
+    },
+    {
+      "key": "skin_marks",
+      "value": "Small brown moles visible on the forearm skin",
+      "region": "lower left of image",
+      "state": "observed"
+    }
+  ]
+}

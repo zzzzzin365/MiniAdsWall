@@ -1,0 +1,9 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "7a3230f963362da1d50c",
+    "525006a0a10bdfe023c7"
+  ],
+  "missing": [],
+  "reason": "已观察到画面中存在真人的手腕（7a3230f963362da1d50c）以及部分真人的手（525006a0a10bdfe023c7），可确认问题所问内容。"
+}

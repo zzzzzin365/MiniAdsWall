@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "image_content",
+      "value": "图中展示的是一只手掌托着的串珠手链，手链由银色串珠、黄色小隔珠和五枚蓝黄配色的花朵造型串珠组成，带有龙虾扣和延长链，背景为汽车内饰",
+      "region": "full_image",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未在图中发现任何关于商品真实销量的相关信息",
+      "region": "full_image",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息，无法从图中获取该数据"
+  ]
+}

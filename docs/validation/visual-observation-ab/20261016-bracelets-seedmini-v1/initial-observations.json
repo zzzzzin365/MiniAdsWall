@@ -1,0 +1,3078 @@
+{
+  "tanmujiang-90ba0ac20704": {
+    "observations": [
+      {
+        "key": "body_part",
+        "value": "human left hand and forearm",
+        "region": "left side of image",
+        "state": "observed",
+        "observation_id": "e8755b422833d49d3440",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_count",
+        "value": "three strands of beaded bracelets",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "e4bfccf48f63364c08f9",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_color",
+        "value": "beads in shades of brown, light brown, and reddish-brown",
+        "region": "bracelet beads",
+        "state": "observed",
+        "observation_id": "a3cc2c7905345eef53af",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "carved_element",
+        "value": "one carved cloud-shaped wooden ornament on the bracelet",
+        "region": "wrist bracelet",
+        "state": "observed",
+        "observation_id": "3cae4fbacdab88078979",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "dark teal solid background",
+        "region": "entire background",
+        "state": "observed",
+        "observation_id": "6e61b96398c5e9469f5a",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_position",
+        "value": "hand positioned with fingers slightly curved, resting near bottom left",
+        "region": "lower left of image",
+        "state": "observed",
+        "observation_id": "875fabbcf49662f9374b",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_position",
+        "value": "bracelets wrapped around the wrist multiple times",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "f73fa560987953656e37",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "all beads are round and spherical",
+        "region": "bracelet beads",
+        "state": "observed",
+        "observation_id": "6b7f50821903853bf275",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "skin_tone",
+        "value": "light skin tone on the hand and forearm",
+        "region": "hand and forearm",
+        "state": "observed",
+        "observation_id": "f0f0feb8112d460264f0",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      },
+      {
+        "key": "decorative_bead",
+        "value": "small reddish-brown beads interspersed among larger light brown beads",
+        "region": "bracelet strands",
+        "state": "observed",
+        "observation_id": "3df8790ff6698d80b995",
+        "source_id": "tanmujiang-90ba0ac20704",
+        "request_id": "e53cc96d195d06f27bf5a2ad",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:tanmujiang-90ba0ac20704",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "e53cc96d195d06f27bf5a2ad",
+      "input_sha256": "7335a6878e2996619870306054f1109df3abc7ec611890a6baf410001486f95f",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5961.484125000425,
+      "http_status": 200,
+      "provider_id": "021792081976363a8a665f6a6beb22eee245e41a4a7ede1b091b4",
+      "usage": {
+        "completion_tokens": 367,
+        "prompt_tokens": 1605,
+        "total_tokens": 1972,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "qi-flow-e1afb7538267": {
+    "observations": [
+      {
+        "key": "main_bead_color",
+        "value": "dark brown (near-black) round beads, strung in three loops",
+        "region": "central area of image",
+        "state": "observed",
+        "observation_id": "b8e26005d0f7929ba163",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "accent_beads_red",
+        "value": "two light red (coral-like) round beads, interspersed among dark beads",
+        "region": "left-middle area of the beaded strand",
+        "state": "observed",
+        "observation_id": "e17066815ca95d478517",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_beads",
+        "value": "multiple small gold-colored decorative beads with patterned surfaces, spaced along the strand",
+        "region": "left and lower parts of the beaded strand",
+        "state": "observed",
+        "observation_id": "3f92cd1aedd97b7b4987",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "pendant_white",
+        "value": "square-shaped white translucent pendant with a gold decorative element holding a small red stone, at lower left of the strand",
+        "region": "lower left of the beaded strand",
+        "state": "observed",
+        "observation_id": "e80c8b269717142e5aac",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "pendant_gold_circular",
+        "value": "circular gold pendant with colorful enamel inscriptions/symbols, at right end of the strand",
+        "region": "right end of the beaded strand",
+        "state": "observed",
+        "observation_id": "1c2c992c4ea7d797d942",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "background_surface",
+        "value": "light off-white smooth surface, with a wooden frame-like object partially visible behind the beaded strand",
+        "region": "background of the image",
+        "state": "observed",
+        "observation_id": "78a86a9456c6dacb7138",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_count_approx",
+        "value": "approx 70+ dark brown beads, plus smaller accent beads and decorative elements",
+        "region": "entire beaded strand",
+        "state": "observed",
+        "observation_id": "af8a23c7cc8a301c579a",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      },
+      {
+        "key": "strand_layout",
+        "value": "beaded strand arranged in three overlapping loops, forming a layered bracelet-like structure",
+        "region": "central image area",
+        "state": "observed",
+        "observation_id": "23c37a71c46863a83229",
+        "source_id": "qi-flow-e1afb7538267",
+        "request_id": "9ec64fc0d8bd7c97fb34f997",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:qi-flow-e1afb7538267",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "9ec64fc0d8bd7c97fb34f997",
+      "input_sha256": "efcc250c6cd3d9be079b58566181c20ca5d5eea1e2832a984f713503b880495c",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5227.727166959085,
+      "http_status": 200,
+      "provider_id": "021792081981041a8a665f6a6beb22eee245e41a4a7ede1b742c9",
+      "usage": {
+        "completion_tokens": 387,
+        "prompt_tokens": 1610,
+        "total_tokens": 1997,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "miansai-9b0418515350": {
+    "observations": [
+      {
+        "key": "product_type",
+        "value": "beaded bracelet",
+        "region": "central lower area",
+        "state": "observed",
+        "observation_id": "40798e364c37f63cc284",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_color",
+        "value": "black",
+        "region": "main body of bracelet",
+        "state": "observed",
+        "observation_id": "b28b87b3f656e8eeaf1e",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "accent_beads",
+        "value": "one turquoise bead, one light pink bead",
+        "region": "left side of bracelet near clasp",
+        "state": "observed",
+        "observation_id": "73f1a65a693a3afc3a65",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_type",
+        "value": "silver-toned toggle clasp",
+        "region": "center bottom of bracelet",
+        "state": "observed",
+        "observation_id": "ebc824694bd3ac8cfd3e",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_material",
+        "value": "shiny silver-colored metal",
+        "region": "clasp area",
+        "state": "observed",
+        "observation_id": "e33c05ce7944f11ac832",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "cord_color",
+        "value": "black braided cord",
+        "region": "clasp connection area",
+        "state": "observed",
+        "observation_id": "3a7f0ca8380968329940",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_shape",
+        "value": "circular loop shape",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "5997c3fc6f3efaf96f07",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "plain light white or light gray",
+        "region": "entire background",
+        "state": "observed",
+        "observation_id": "6866d0a239f531c5e745",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "small cylindrical disc-shaped beads",
+        "region": "main body of bracelet",
+        "state": "observed",
+        "observation_id": "bbade3a50c578f073e7a",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_position",
+        "value": "centered at bottom of the bracelet loop",
+        "region": "center bottom",
+        "state": "observed",
+        "observation_id": "119f304cc5c7340ea855",
+        "source_id": "miansai-9b0418515350",
+        "request_id": "6b6485ee605a95fe26957dd0",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:miansai-9b0418515350",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "6b6485ee605a95fe26957dd0",
+      "input_sha256": "50afc3ef786492d01e0e9163cb04e4e4de01db23429647cee47fc6d6def684d2",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4416.953834006563,
+      "http_status": 200,
+      "provider_id": "021792081986270a8a665f6a6beb22eee245e41a4a7ede1a9a4ce",
+      "usage": {
+        "completion_tokens": 330,
+        "prompt_tokens": 1629,
+        "total_tokens": 1959,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "energymuse-f965a98f6102": {
+    "observations": [
+      {
+        "key": "bracelet_type",
+        "value": "stretch beaded bracelet",
+        "region": "full image",
+        "state": "observed",
+        "observation_id": "70b8015789e78873c485",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_count",
+        "value": "multiple beads of various types arranged in a circular loop",
+        "region": "full image",
+        "state": "observed",
+        "observation_id": "4399a1699ed15f8c75e8",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "lava_beads",
+        "value": "black porous round lava beads, 4 in number",
+        "region": "top left, top right, bottom left, bottom right",
+        "state": "observed",
+        "observation_id": "444901b6f49660d37e46",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "copper_beads",
+        "value": "3 copper-colored metal beads: 1 at top center, 1 at bottom center with embossed text",
+        "region": "top center, bottom center",
+        "state": "observed",
+        "observation_id": "22e0f5bf521457fdcfe8",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "peach_beads",
+        "value": "4 matte peach round beads, evenly spaced on left and right sides",
+        "region": "left upper, left lower, right upper, right lower",
+        "state": "observed",
+        "observation_id": "ff5b3e620fe140311bf7",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "black_onyx_faceted_beads",
+        "value": "4 dark black faceted angular beads, positioned on left and right sides",
+        "region": "left, right",
+        "state": "observed",
+        "observation_id": "bcfaeba8f32f05a65195",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "banded_agate_beads",
+        "value": "multiple black and brown banded round beads with white or light brown stripes",
+        "region": "various positions",
+        "state": "observed",
+        "observation_id": "b7f3a9c5b8279e8e8398",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "clear_quartz_beads",
+        "value": "2 clear translucent round beads at bottom center flanking copper bead",
+        "region": "bottom center",
+        "state": "observed",
+        "observation_id": "5059a69eac9accbba5e9",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "embossed_text",
+        "value": "embossed text on copper spacer bead appears as 'MUSE' (reversed in image)",
+        "region": "bottom center copper bead",
+        "state": "observed",
+        "observation_id": "b9dd06d45105bb16f880",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "solid plain white background",
+        "region": "full image background",
+        "state": "observed",
+        "observation_id": "a3d3ea9c4408ab20b7d3",
+        "source_id": "energymuse-f965a98f6102",
+        "request_id": "f4290cfb32a020443434d137",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:energymuse-f965a98f6102",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "f4290cfb32a020443434d137",
+      "input_sha256": "be8f137901f5a7afe7571e057a928f00067ab562c4166a6864e037d6836355f5",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5015.480583999306,
+      "http_status": 200,
+      "provider_id": "021792081990684a8a665f6a6beb22eee245e41a4a7ede11fb7b9",
+      "usage": {
+        "completion_tokens": 424,
+        "prompt_tokens": 1612,
+        "total_tokens": 2036,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "puravida-65102caa4412": {
+    "observations": [
+      {
+        "key": "product_type",
+        "value": "braided adjustable bracelet",
+        "region": "central",
+        "state": "observed",
+        "observation_id": "eb424214be8f0aa614aa",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "cord_colors",
+        "value": "coral orange, light pink, pale peach",
+        "region": "braided band",
+        "state": "observed",
+        "observation_id": "fd85b52a8f426e2e734f",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "adjustment_cord_color",
+        "value": "pale peach",
+        "region": "upper adjustment cords",
+        "state": "observed",
+        "observation_id": "7bede503743a559c7aa4",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "adjustment_knot_color",
+        "value": "coral orange",
+        "region": "center adjustment knot",
+        "state": "observed",
+        "observation_id": "6562bc7b563bfe1bc0ce",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "cord_tip_count",
+        "value": "2",
+        "region": "upper ends",
+        "state": "observed",
+        "observation_id": "2b502e0f666d54aafb81",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_shape",
+        "value": "circular",
+        "region": "right side charm",
+        "state": "observed",
+        "observation_id": "30aef32f0fd86665ef2a",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_text",
+        "value": "black lowercase 'p' on white background",
+        "region": "charm center",
+        "state": "observed",
+        "observation_id": "a3e441e30ed374546aec",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_border",
+        "value": "black outer border",
+        "region": "charm edge",
+        "state": "observed",
+        "observation_id": "90f0276e4d4623b83b24",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "plain light gray",
+        "region": "entire image background",
+        "state": "observed",
+        "observation_id": "6781d34b758a77316215",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "band_structure",
+        "value": "three-strand braid of three colors",
+        "region": "lower circular band",
+        "state": "observed",
+        "observation_id": "deae00ce2c667e83e9c3",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "adjustment_cord_length",
+        "value": "two loose ends extending upward from knot",
+        "region": "upper adjustment cords",
+        "state": "observed",
+        "observation_id": "31e648a6b01fc6aad1f7",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "cord_tip_appearance",
+        "value": "small knotted tips on adjustment cords",
+        "region": "upper cord ends",
+        "state": "observed",
+        "observation_id": "7135a41198cf58161581",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_attachment",
+        "value": "attached to right side of bracelet band via small ring",
+        "region": "right side",
+        "state": "observed",
+        "observation_id": "c1aa93b528eca2e51f6a",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "band_shape",
+        "value": "circular loop when adjusted",
+        "region": "lower portion",
+        "state": "observed",
+        "observation_id": "23a0d54d9a79a7986389",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "knot_position",
+        "value": "centered on upper adjustment cords",
+        "region": "upper center",
+        "state": "observed",
+        "observation_id": "7c26bba66b3b33678c63",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      },
+      {
+        "key": "cord_junction",
+        "value": "coral orange knots at band and adjustment cord junctions",
+        "region": "band ends",
+        "state": "observed",
+        "observation_id": "350f5e303deab5eb5dcf",
+        "source_id": "puravida-65102caa4412",
+        "request_id": "dd2c3a1182027e6315361534",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:puravida-65102caa4412",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "dd2c3a1182027e6315361534",
+      "input_sha256": "81ab2e19de4f28073bb989644f2f0f0aa2a08cdec088146c913df13cc65f56fc",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4419.148917077109,
+      "http_status": 200,
+      "provider_id": "021792081995707a8a665f6a6beb22eee245e41a4a7ede1c5e549",
+      "usage": {
+        "completion_tokens": 528,
+        "prompt_tokens": 1612,
+        "total_tokens": 2140,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "stacks-steph-6a5d432e1894": {
+    "observations": [
+      {
+        "key": "bracelet_type",
+        "value": "stretch bracelet made of flat disc beads",
+        "region": "center of image",
+        "state": "observed",
+        "observation_id": "40decaaa1b2f382003a3",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_color",
+        "value": "white",
+        "region": "bracelet body",
+        "state": "observed",
+        "observation_id": "b4a8876689c0c9475e97",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_bead_count",
+        "value": "two distinct gold elements: a cylindrical gold bead cluster and a single round gold bead",
+        "region": "bracelet",
+        "state": "observed",
+        "observation_id": "37aa9882e77e536896d6",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "display_plate_shape",
+        "value": "hexagonal shape",
+        "region": "background holding bracelet",
+        "state": "observed",
+        "observation_id": "5021df1e7b1b9a15dae2",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "display_plate_color",
+        "value": "white with subtle wood grain texture",
+        "region": "background holding bracelet",
+        "state": "observed",
+        "observation_id": "5e33a1e893491159c8bd",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "plain light white surface",
+        "region": "outer background",
+        "state": "observed",
+        "observation_id": "282f7093b487b68d3a75",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_cylindrical_bead",
+        "value": "multiple thin stacked gold disc beads forming a cylindrical segment",
+        "region": "upper part of bracelet",
+        "state": "observed",
+        "observation_id": "67414aeeb7c03ecb33b9",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "gold_round_bead",
+        "value": "single small round gold bead at lower part of bracelet",
+        "region": "lower part of bracelet",
+        "state": "observed",
+        "observation_id": "40d2e250fb3ef344639b",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_layout",
+        "value": "circular shape resting flat on hexagonal plate",
+        "region": "center of image",
+        "state": "observed",
+        "observation_id": "7cf39c6d65faf195de70",
+        "source_id": "stacks-steph-6a5d432e1894",
+        "request_id": "8f6af7078c5dae51d706c243",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:stacks-steph-6a5d432e1894",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "8f6af7078c5dae51d706c243",
+      "input_sha256": "1ad2d2adc4291a32a40a34392bb9db6545302b5fce27855c3e9a43c8dad040fe",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5046.731790993363,
+      "http_status": 200,
+      "provider_id": "021792082000133a8a665f6a6beb22eee245e41a4a7ede1b4a5b7",
+      "usage": {
+        "completion_tokens": 325,
+        "prompt_tokens": 1578,
+        "total_tokens": 1903,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "fahari-c0618befdc51": {
+    "observations": [
+      {
+        "key": "body_part",
+        "value": "person's wrist, hand, upper arm, chest area visible",
+        "region": "central",
+        "state": "observed",
+        "observation_id": "3ae92e7f5340ddb8a527",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_type",
+        "value": "beaded bracelet with red, white, black bead stripes, adjustable with black cord and black beads",
+        "region": "wrist",
+        "state": "observed",
+        "observation_id": "9313f0aa9eed1944f58e",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "ring",
+        "value": "gold-colored ring on a finger of the hand",
+        "region": "hand",
+        "state": "observed",
+        "observation_id": "da18d7e758aeb9a73584",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "tattoo",
+        "value": "dark butterfly tattoo on upper arm",
+        "region": "upper arm",
+        "state": "observed",
+        "observation_id": "26932109df1dc5ee8ed8",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "clothing",
+        "value": "black top partially visible on torso",
+        "region": "torso",
+        "state": "observed",
+        "observation_id": "d4bb0c293293b756b45d",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "nail_polish",
+        "value": "dark red nail polish on fingernails",
+        "region": "hand nails",
+        "state": "observed",
+        "observation_id": "2902cd454ca447222f29",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_position",
+        "value": "worn on the wrist of the arm that is crossed over the other arm",
+        "region": "wrist",
+        "state": "observed",
+        "observation_id": "2a3682304112d2b8ac0f",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_position",
+        "value": "hand resting on the chest area, fingers partially overlapping",
+        "region": "hand",
+        "state": "observed",
+        "observation_id": "454d1424a99d176e1524",
+        "source_id": "fahari-c0618befdc51",
+        "request_id": "d9feea4db507996861e96f4f",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:fahari-c0618befdc51",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "d9feea4db507996861e96f4f",
+      "input_sha256": "b8e4d628444a8474e0f5b62086e9effec4a47498be30ba65858f59868e0bd65a",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4806.240833015181,
+      "http_status": 200,
+      "provider_id": "021792082005194a8a665f6a6beb22eee245e41a4a7ede1412473",
+      "usage": {
+        "completion_tokens": 292,
+        "prompt_tokens": 1589,
+        "total_tokens": 1881,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "sequence-f53ce103eebc": {
+    "observations": [
+      {
+        "key": "product_type",
+        "value": "bracelet set",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "8d44b6a6568718bb08f9",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_count",
+        "value": "2",
+        "region": "upper section",
+        "state": "observed",
+        "observation_id": "37134876ed5d8f7fcf9a",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_count",
+        "value": "1",
+        "region": "lower section",
+        "state": "observed",
+        "observation_id": "8e6c7e0bbaba559ad6e7",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_pattern",
+        "value": "black and white diagonal stripes",
+        "region": "upper bracelets",
+        "state": "observed",
+        "observation_id": "81b8793d14b35ed68de8",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_color",
+        "value": "light metallic (silver-toned)",
+        "region": "upper bracelets",
+        "state": "observed",
+        "observation_id": "ea3d4f1951fea2ff6730",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_arrangement",
+        "value": "evenly spaced along upper bracelets",
+        "region": "upper bracelets",
+        "state": "observed",
+        "observation_id": "a4b2023ba30196b38c89",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_closure",
+        "value": "black knotted band at top center",
+        "region": "upper section",
+        "state": "observed",
+        "observation_id": "9857e9e8b1af782c8a34",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_material",
+        "value": "black cord-like material",
+        "region": "lower section",
+        "state": "observed",
+        "observation_id": "151ebfc25c5829612999",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_knot",
+        "value": "large decorative knot at center of lower bracelet",
+        "region": "lower section",
+        "state": "observed",
+        "observation_id": "07e9d40e6beadc03209f",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "plain white",
+        "region": "entire image",
+        "state": "observed",
+        "observation_id": "611a7ec79da043c72ef4",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "reflection",
+        "value": "faint reflection of lower bracelet on white surface below",
+        "region": "lower section",
+        "state": "observed",
+        "observation_id": "f8a29cd78bf465a07e72",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_structure",
+        "value": "two layered striped bands with beads",
+        "region": "upper section",
+        "state": "observed",
+        "observation_id": "d31aa8fb42bfc8bbbd9d",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_structure",
+        "value": "single double-stranded cord with knot",
+        "region": "lower section",
+        "state": "observed",
+        "observation_id": "cb92dd5a1a64bf46363e",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "small round beads",
+        "region": "upper bracelets",
+        "state": "observed",
+        "observation_id": "f57ed48844106ddeddef",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      },
+      {
+        "key": "knot_type",
+        "value": "decorative interwoven knot on lower bracelet",
+        "region": "lower section",
+        "state": "observed",
+        "observation_id": "d78f558ee4e6be58f396",
+        "source_id": "sequence-f53ce103eebc",
+        "request_id": "0d1554f6c890af0ed068bd68",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:sequence-f53ce103eebc",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "0d1554f6c890af0ed068bd68",
+      "input_sha256": "f3fd14709672be15871cd576cdbe662f29f9f9e31eeb6365af9f6da9fb143230",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4568.23320791591,
+      "http_status": 200,
+      "provider_id": "021792082010194a8a665f6a6beb22eee245e41a4a7ede186e995",
+      "usage": {
+        "completion_tokens": 389,
+        "prompt_tokens": 1592,
+        "total_tokens": 1981,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-1965401279863140778-972d114aa4bb": {
+    "observations": [
+      {
+        "key": "wearing_arm",
+        "value": "A human arm with visible skin and fine hair, wearing a beaded bracelet",
+        "region": "left lower arm and wrist area",
+        "state": "observed",
+        "observation_id": "7a3230f963362da1d50c",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_type",
+        "value": "Wide beaded bracelet worn on a human wrist",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "2ed5d49d389bbc17a84f",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_base_color",
+        "value": "Bracelet has a black base made of small black beads",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "49afc8b4c73b1d9e8cb8",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_pattern",
+        "value": "Bracelet features a pattern with blue, yellow, silver beads on black base",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "fe68e16575813d0335a4",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "pattern_blue_section",
+        "value": "Pattern includes a solid blue section made of small blue beads",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "c60308e42aea07aba717",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "pattern_yellow_section",
+        "value": "Pattern includes a solid yellow section made of small yellow beads",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "aab49aae77405deebaf4",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "pattern_silver_section",
+        "value": "Pattern includes a silver-colored section made of small silver beads",
+        "region": "wrist area",
+        "state": "observed",
+        "observation_id": "422108a740647dd1f939",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "Gray textured surface, likely a wall or fabric, behind the arm",
+        "region": "background area",
+        "state": "observed",
+        "observation_id": "322721b465fa08bd21a8",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "hand_part",
+        "value": "Part of a human hand with fingers visible above the wrist",
+        "region": "upper right of image",
+        "state": "observed",
+        "observation_id": "525006a0a10bdfe023c7",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "arm_hair",
+        "value": "Fine dark hair visible on the forearm",
+        "region": "lower left of image",
+        "state": "observed",
+        "observation_id": "4e4af3c39ad86305c111",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      },
+      {
+        "key": "skin_marks",
+        "value": "Small brown moles visible on the forearm skin",
+        "region": "lower left of image",
+        "state": "observed",
+        "observation_id": "afe8acd85786b3c96f5a",
+        "source_id": "x-1965401279863140778-972d114aa4bb",
+        "request_id": "74b6922db023238cbd0a2297",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-1965401279863140778-972d114aa4bb",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "74b6922db023238cbd0a2297",
+      "input_sha256": "665b451c9ae384a5c6b20bb10ce2260082424df9549fbc2b08c89060148a3764",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4460.344874998555,
+      "http_status": 200,
+      "provider_id": "021792082014576a8a665f6a6beb22eee245e41a4a7ede12940f0",
+      "usage": {
+        "completion_tokens": 360,
+        "prompt_tokens": 1604,
+        "total_tokens": 1964,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-2007285619475591650-4be9a92e93eb": {
+    "observations": [
+      {
+        "key": "image_background",
+        "value": "solid white background",
+        "region": "entire image",
+        "state": "observed",
+        "observation_id": "750340ec3c4ec77d7fec",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_type",
+        "value": "beaded cluster bracelet with silver-toned metal fastener on left end",
+        "region": "upper half of image",
+        "state": "observed",
+        "observation_id": "42a3b189ddd9b79aa24e",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_beads",
+        "value": "round beads in two colors: light gray (pearl-like) and turquoise blue, clustered together",
+        "region": "upper half of image",
+        "state": "observed",
+        "observation_id": "eaf97f3178e8a626cf8c",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_bead_count",
+        "value": "numerous beads, mix of light gray and turquoise blue beads",
+        "region": "upper half of image",
+        "state": "observed",
+        "observation_id": "57346af0833de4cf7c80",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_bead_marks",
+        "value": "some light gray beads have small dark dots on their surface",
+        "region": "upper half of image",
+        "state": "observed",
+        "observation_id": "c77796c8477aefc78040",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_type",
+        "value": "beaded cluster bracelet with silver-toned metal link chain structure at center",
+        "region": "lower half of image",
+        "state": "observed",
+        "observation_id": "e7260486cd26319541d1",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_beads",
+        "value": "round beads in two colors: light gray (pearl-like) and turquoise blue, arranged around central metal chain",
+        "region": "lower half of image",
+        "state": "observed",
+        "observation_id": "038b4c880ad5875d142d",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_bead_condition",
+        "value": "some light gray beads show discoloration or tarnish spots",
+        "region": "lower half of image",
+        "state": "observed",
+        "observation_id": "31459bedcac1929d1fef",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_closure",
+        "value": "silver-toned metal clasp on left end of bottom bracelet",
+        "region": "lower half of image",
+        "state": "observed",
+        "observation_id": "13408bdca491ce969d54",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_comparison",
+        "value": "two bracelets displayed vertically, top has no central metal chain, bottom has central metal link chain structure",
+        "region": "entire image",
+        "state": "observed",
+        "observation_id": "a4b4dc4642b18cf414ba",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "all beads on both bracelets are perfectly round",
+        "region": "both bracelets",
+        "state": "observed",
+        "observation_id": "4f15da1faa4ca5d5cdcc",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "metal_color",
+        "value": "metal components (fasteners, links) of both bracelets are silver-toned",
+        "region": "both bracelets",
+        "state": "observed",
+        "observation_id": "5a8b96d2d308f62c5fdf",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "top_bracelet_layout",
+        "value": "beads arranged in a single clustered row across the top bracelet",
+        "region": "upper half of image",
+        "state": "observed",
+        "observation_id": "a290701e5ef176de0539",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_bracelet_layout",
+        "value": "beads arranged in two layers (top and bottom) around the central metal chain of the bottom bracelet",
+        "region": "lower half of image",
+        "state": "observed",
+        "observation_id": "192ec46da9453da390ea",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_size",
+        "value": "all beads on both bracelets are of similar diameter, no large size variation",
+        "region": "both bracelets",
+        "state": "observed",
+        "observation_id": "8eedcea71780d550ecab",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      },
+      {
+        "key": "metal_link_pattern",
+        "value": "central metal chain of bottom bracelet has repeating rectangular link pattern with small horizontal ridges",
+        "region": "lower half of image",
+        "state": "observed",
+        "observation_id": "e10c264acfeb22c4eabf",
+        "source_id": "x-2007285619475591650-4be9a92e93eb",
+        "request_id": "6f055ccb9e76d9a91bebd8d2",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-2007285619475591650-4be9a92e93eb",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "6f055ccb9e76d9a91bebd8d2",
+      "input_sha256": "8320f1697ff6bfd075702caeaeaf7a0f8792f5907d851034abf85773e00912ff",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 6550.1154999947175,
+      "http_status": 200,
+      "provider_id": "021792082019047a8a665f6a6beb22eee245e41a4a7ede121ca20",
+      "usage": {
+        "completion_tokens": 697,
+        "prompt_tokens": 1629,
+        "total_tokens": 2326,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-1562488657482682368-b13c0c6acf93": {
+    "observations": [
+      {
+        "key": "object_type",
+        "value": "beaded bracelet",
+        "region": "center of image",
+        "state": "observed",
+        "observation_id": "2fd086fc8c052501ae2e",
+        "source_id": "x-1562488657482682368-b13c0c6acf93",
+        "request_id": "b61091aa5698cc8edd5b21c1",
+        "stage": "initial"
+      },
+      {
+        "key": "text_on_beads",
+        "value": "5SOS spelled with white beads and black characters",
+        "region": "lower center of bracelet",
+        "state": "observed",
+        "observation_id": "3f54e35af61980cca552",
+        "source_id": "x-1562488657482682368-b13c0c6acf93",
+        "request_id": "b61091aa5698cc8edd5b21c1",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "gray fuzzy fabric with small openwork patterns",
+        "region": "entire background",
+        "state": "observed",
+        "observation_id": "9fb838338c1e80232a0d",
+        "source_id": "x-1562488657482682368-b13c0c6acf93",
+        "request_id": "b61091aa5698cc8edd5b21c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_colors",
+        "value": "beads in colors including red, orange, light blue, dark blue, purple, peach, white",
+        "region": "bracelet beads",
+        "state": "observed",
+        "observation_id": "c8bc5bfc712e475eede9",
+        "source_id": "x-1562488657482682368-b13c0c6acf93",
+        "request_id": "b61091aa5698cc8edd5b21c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_shape",
+        "value": "circular shape formed by strung beads",
+        "region": "bracelet",
+        "state": "observed",
+        "observation_id": "a41e993d1b4b0ca9fc95",
+        "source_id": "x-1562488657482682368-b13c0c6acf93",
+        "request_id": "b61091aa5698cc8edd5b21c1",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_type",
+        "value": "small cylindrical plastic beads",
+        "region": "bracelet",
+        "state": "observed",
+        "observation_id": "68a63dce9af41130d4a0",
+        "source_id": "x-1562488657482682368-b13c0c6acf93",
+        "request_id": "b61091aa5698cc8edd5b21c1",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-1562488657482682368-b13c0c6acf93",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "b61091aa5698cc8edd5b21c1",
+      "input_sha256": "df20ef163f806841aead851d020c149580b85bacbb919e5111d48fba74e0dee2",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 3125.379625009373,
+      "http_status": 200,
+      "provider_id": "021792082025611a8a665f6a6beb22eee245e41a4a7ede1d7c1a2",
+      "usage": {
+        "completion_tokens": 221,
+        "prompt_tokens": 1629,
+        "total_tokens": 1850,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-1660996700172062721-906bb558f770": {
+    "observations": [],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-1660996700172062721-906bb558f770",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "b3fc5010edcee6182c93d499",
+      "input_sha256": "53bcabc4b345ab4df997a8cda57f961b9e60dbf662c06f228c50ca4b48e93402",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4954.135291976854,
+      "http_status": 200,
+      "provider_id": "021792082028940a8a665f6a6beb22eee245e41a4a7ede155d2d1",
+      "usage": {
+        "completion_tokens": 506,
+        "prompt_tokens": 1630,
+        "total_tokens": 2136,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": "invalid_observation_state"
+  },
+  "x-2027810292218966399-7c25f83553ba": {
+    "observations": [
+      {
+        "key": "layout",
+        "value": "3-panel collage: top panel shows flat beaded bracelet, bottom left shows bracelet open, bottom right shows bracelet on wrist",
+        "region": "overall",
+        "state": "observed",
+        "observation_id": "f5c43e80ede546ad04d3",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_material",
+        "value": "made of small beads, pixelated design style",
+        "region": "all panels",
+        "state": "observed",
+        "observation_id": "c8e9f8207ba8b876be08",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_clasp",
+        "value": "metal slide clasp with brass-colored finish, on both ends of flat bracelet",
+        "region": "top, bottom left panels",
+        "state": "observed",
+        "observation_id": "6f792105ecf946360c0b",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_design_front",
+        "value": "front design has blue sky with white clouds, multiple colorful houses, a figure, pink pig-like shapes",
+        "region": "top, bottom right panels",
+        "state": "observed",
+        "observation_id": "b2dfbfe7cb446a4d75ca",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_design_back",
+        "value": "back design (visible on open bracelet) has blue sky, white clouds, pink pig-like shapes, light blue building with windows",
+        "region": "bottom left panel",
+        "state": "observed",
+        "observation_id": "93c31adca2f881aeadb0",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "wrist_wear",
+        "value": "bottom right panel shows bracelet worn on a person's wrist, fits around the wrist",
+        "region": "bottom right panel",
+        "state": "observed",
+        "observation_id": "1fa5b37658f9516186f4",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "background_color",
+        "value": "solid dark blue background in all panels",
+        "region": "all panels",
+        "state": "observed",
+        "observation_id": "5076e487f0cf993ff94f",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "house_colors",
+        "value": "houses in design have colors: white, red, orange, turquoise, yellow, brown",
+        "region": "top, bottom right panels",
+        "state": "observed",
+        "observation_id": "d2f40d52bbde312b5476",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "figure_design",
+        "value": "pixelated figure with orange hair, red clothing, positioned among houses on front design",
+        "region": "top, bottom right panels",
+        "state": "observed",
+        "observation_id": "5c4444f8d9813fab9d68",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "pig_like_shapes",
+        "value": "pink pig-like pixelated shapes on right side of front design, also on back design of open bracelet",
+        "region": "top, bottom left panels",
+        "state": "observed",
+        "observation_id": "6aeafccfb8855b59eb77",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "sky_details",
+        "value": "blue beaded sky with small white cloud beads in front and back designs",
+        "region": "all panels showing design",
+        "state": "observed",
+        "observation_id": "96c1059d102240d5410f",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_width",
+        "value": "wide beaded bracelet, covers a portion of the wrist when worn",
+        "region": "bottom right panel",
+        "state": "observed",
+        "observation_id": "9df47247e823bd64941e",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "open_bracelet_structure",
+        "value": "bottom left panel shows open bracelet with metal clasp in center, two ends connected by clasp",
+        "region": "bottom left panel",
+        "state": "observed",
+        "observation_id": "14ed2ced19486e0e6798",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_edge_color",
+        "value": "lower edge of beaded design has brown beads as border in front design",
+        "region": "top, bottom right panels",
+        "state": "observed",
+        "observation_id": "cbbf4427a0615948f455",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "window_details",
+        "value": "houses have black window details, some with yellow accents on windows",
+        "region": "top, bottom right panels",
+        "state": "observed",
+        "observation_id": "4f4649944fbcabda59b0",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "panel_borders",
+        "value": "each panel has a rounded corner border",
+        "region": "overall",
+        "state": "observed",
+        "observation_id": "67a904c28530383bc449",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      },
+      {
+        "key": "skin_tone",
+        "value": "person's wrist in bottom right panel has light skin tone",
+        "region": "bottom right panel",
+        "state": "observed",
+        "observation_id": "75495a24c210b51efa7f",
+        "source_id": "x-2027810292218966399-7c25f83553ba",
+        "request_id": "cc118c29c95dd91053336fca",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-2027810292218966399-7c25f83553ba",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "cc118c29c95dd91053336fca",
+      "input_sha256": "7f9182b455ae0e220efde8f3e7c0b30fe2572366e8b56a31fe96266543651b5a",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 8688.932624994777,
+      "http_status": 200,
+      "provider_id": "021792082087100f5a6be93c8798a26ceedbf38a44bb89cc1e1de",
+      "usage": {
+        "completion_tokens": 740,
+        "prompt_tokens": 1630,
+        "total_tokens": 2370,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-1448747411892051978-0c3ea1caeb4d": {
+    "observations": [
+      {
+        "key": "jewelry_type",
+        "value": "Two pieces of jewelry (a necklace and a bracelet)",
+        "region": "central area",
+        "state": "explicitly_absent",
+        "observation_id": "f3d7cb490c0bd384f608",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "stone_type",
+        "value": "Clear, irregularly shaped translucent chip stones",
+        "region": "jewelry components",
+        "state": "observed",
+        "observation_id": "347dec04139e220f3134",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_type",
+        "value": "Silver-toned snowflake-shaped charms",
+        "region": "jewelry pendants",
+        "state": "observed",
+        "observation_id": "92d5db4b7bc9c3c6f17e",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_detail",
+        "value": "Each snowflake charm has small dark circular accents",
+        "region": "jewelry pendants",
+        "state": "observed",
+        "observation_id": "26ea23e1dfc0e6aca4fe",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_detail",
+        "value": "Small silver spacer beads between the chip stones",
+        "region": "jewelry components",
+        "state": "observed",
+        "observation_id": "e91fb1d1a609e046d9a4",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "necklace_shape",
+        "value": "Curved, longer strand of chip stones",
+        "region": "left jewelry",
+        "state": "observed",
+        "observation_id": "1ade5a830f5cdd2fac91",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_shape",
+        "value": "Circular, shorter strand of chip stones",
+        "region": "right jewelry",
+        "state": "observed",
+        "observation_id": "0f46cd112459a75dfffe",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "surface_type",
+        "value": "Rough, patterned stone surface with gray, beige, and dark patches",
+        "region": "background",
+        "state": "observed",
+        "observation_id": "ea6a208ee5113019aaa4",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "background_objects",
+        "value": "Multiple irregular natural stones as background",
+        "region": "background",
+        "state": "observed",
+        "observation_id": "8a5151afe29784b5ef8e",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "stone_transparency",
+        "value": "Chip stones are transparent and clear",
+        "region": "jewelry components",
+        "state": "observed",
+        "observation_id": "9bde23c2ac4a331de4eb",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_metal",
+        "value": "Charms are silver-colored metal",
+        "region": "jewelry pendants",
+        "state": "observed",
+        "observation_id": "4c55822d9519a6e9d445",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "spacer_location",
+        "value": "Silver spacers placed between each chip stone",
+        "region": "jewelry components",
+        "state": "observed",
+        "observation_id": "7d7fb9f4e6fa6d427a54",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "necklace_pendant",
+        "value": "Snowflake charm attached to the left necklace",
+        "region": "left jewelry",
+        "state": "observed",
+        "observation_id": "af97a89b63a67effcb86",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_pendant",
+        "value": "Snowflake charm attached to the right bracelet",
+        "region": "right jewelry",
+        "state": "observed",
+        "observation_id": "a83d68a05a7e385f2599",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "stone_surface",
+        "value": "Natural stone background has rough, uneven texture",
+        "region": "background",
+        "state": "observed",
+        "observation_id": "26a62291e0246bb033be",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      },
+      {
+        "key": "stone_pattern",
+        "value": "Background stone has mottled pattern with light and dark patches",
+        "region": "background",
+        "state": "observed",
+        "observation_id": "14f7d3f67af673094daf",
+        "source_id": "x-1448747411892051978-0c3ea1caeb4d",
+        "request_id": "c3df3b3b8cbb219c8ca5921a",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-1448747411892051978-0c3ea1caeb4d",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "c3df3b3b8cbb219c8ca5921a",
+      "input_sha256": "7e4c9bb181f23f30d726edec28cac80e3eb57780910c13eca7fcfa2efc57fa4e",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5470.405833097175,
+      "http_status": 200,
+      "provider_id": "021792082094903f5a6be93c8798a26ceedbf38a44bb89c261823",
+      "usage": {
+        "completion_tokens": 455,
+        "prompt_tokens": 1612,
+        "total_tokens": 2067,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-1432338272252928005-3eca7229b236": {
+    "observations": [
+      {
+        "key": "background_color",
+        "value": "plain light white or light gray surface",
+        "region": "entire background",
+        "state": "observed",
+        "observation_id": "b40959d4e2405fc5e3c3",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "central_rock",
+        "value": "rough light blue-green mineral rock with brownish patches on upper part",
+        "region": "center top",
+        "state": "observed",
+        "observation_id": "008172d6db1aae252367",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "beaded_bracelet",
+        "value": "circular arrangement of round polished beads, placed around the central rock",
+        "region": "foreground",
+        "state": "observed",
+        "observation_id": "949d0f4b9ebb3d463e9c",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_count",
+        "value": "total 21 round beads in the bracelet",
+        "region": "bracelet",
+        "state": "observed",
+        "observation_id": "670b084307d88baf0664",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_colors",
+        "value": "includes dark blue, light green, dark purple, light blue-green, gray, white, brownish-red, black beads",
+        "region": "bracelet",
+        "state": "observed",
+        "observation_id": "83ecbef6277a6a301205",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "top_green_beads",
+        "value": "four light green round beads arranged above the central rock",
+        "region": "top of central rock",
+        "state": "observed",
+        "observation_id": "12f1844713c9c715bef8",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "dark_blue_beads",
+        "value": "two dark blue round beads, one on left, one on right of central rock",
+        "region": "upper left and right of central rock",
+        "state": "observed",
+        "observation_id": "63decedf2f44b96eb517",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "left_light_green_beads",
+        "value": "three light green beads on left side of bracelet, varying in shade",
+        "region": "left side of bracelet",
+        "state": "observed",
+        "observation_id": "b3fbbc7787335c578382",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "left_purple_bead",
+        "value": "one dark purple bead on lower left of bracelet",
+        "region": "lower left of bracelet",
+        "state": "observed",
+        "observation_id": "5ffe8aacbc1f70fbc2ae",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_left_blue_bead",
+        "value": "one light blue-gray bead on lower left of bracelet",
+        "region": "lower left of bracelet",
+        "state": "observed",
+        "observation_id": "ecc55d380873e57729ee",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "center_lower_blue_bead",
+        "value": "one light turquoise blue bead at bottom center of bracelet",
+        "region": "bottom center of bracelet",
+        "state": "observed",
+        "observation_id": "9d39aab8fce85e2ba9de",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_right_gray_bead",
+        "value": "one light gray bead with dark spots on lower right of bracelet",
+        "region": "lower right of bracelet",
+        "state": "observed",
+        "observation_id": "d7bec6a694a3a65b14df",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "right_white_gray_bead",
+        "value": "one white-gray bead with dark spots on right side of bracelet",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "af45edd9b4f6e7e9ca69",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "right_black_bead",
+        "value": "one dark black bead on right side of bracelet, above the white-gray bead",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "f2ea53a1787d5b10f7fe",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "right_purple_bead",
+        "value": "one dark purple bead on right side of bracelet, above the black bead",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "1b369245fe974caa2f05",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "right_bicolor_bead",
+        "value": "one bead with light green and reddish-brown sections on right side of bracelet, above the purple bead",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "0c9448c797ae2fa05a40",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "right_light_white_bead",
+        "value": "one light white bead on right side of bracelet, above the bicolor bead",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "cb558cbbb4c21b62bf7b",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      },
+      {
+        "key": "right_brown_bead",
+        "value": "one brownish-gray bead on right side of bracelet, above the light white bead",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "53ff5b9ffd6fe067128c",
+        "source_id": "x-1432338272252928005-3eca7229b236",
+        "request_id": "da0bffe032bbb416425d7cf3",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-1432338272252928005-3eca7229b236",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "da0bffe032bbb416425d7cf3",
+      "input_sha256": "bca35cf1c48d4145c7b0f668b3bde959cb7471d1ce26189a3c802ef618c6233a",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 7736.824541934766,
+      "http_status": 200,
+      "provider_id": "021792082100378f5a6be93c8798a26ceedbf38a44bb89cb53171",
+      "usage": {
+        "completion_tokens": 779,
+        "prompt_tokens": 1604,
+        "total_tokens": 2383,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-1541930309603807239-19a7e3bccda0": {
+    "observations": [
+      {
+        "key": "object_type",
+        "value": "beaded bracelet",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "1de3f6ae1e327b4a5963",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "main_bead_type",
+        "value": "black porous lava rock beads",
+        "region": "outer loop of bracelet",
+        "state": "observed",
+        "observation_id": "c7f5898d66b024951419",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "chakra_bead_count",
+        "value": "7 colored beads arranged in a horizontal line",
+        "region": "lower front of bracelet",
+        "state": "observed",
+        "observation_id": "ea0e5f7f482dff774523",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "chakra_bead_colors",
+        "value": "dark blue, turquoise, green, dark brown, yellow, red, black",
+        "region": "lower front of bracelet",
+        "state": "observed",
+        "observation_id": "3cfcae5b766123a678e1",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "metal_spacers",
+        "value": "small gold-colored metal ring spacers between beads",
+        "region": "between chakra beads and clasp area",
+        "state": "observed",
+        "observation_id": "3c05d562b0e58582ac65",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_type",
+        "value": "gold-colored lobster claw clasp",
+        "region": "top center of bracelet",
+        "state": "observed",
+        "observation_id": "1e378a3ad891178ad993",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "plain light white surface",
+        "region": "entire background",
+        "state": "observed",
+        "observation_id": "66070dd1190c6bb38d29",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "all beads are spherical in shape",
+        "region": "all beads of the bracelet",
+        "state": "observed",
+        "observation_id": "d0dd4504243960faf035",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "chakra_bead_finish",
+        "value": "most chakra beads have a faceted cut surface",
+        "region": "lower front chakra beads",
+        "state": "observed",
+        "observation_id": "f5f5047cbcba6a2a0f14",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "lava_bead_finish",
+        "value": "lava beads have a rough porous surface",
+        "region": "outer loop beads",
+        "state": "observed",
+        "observation_id": "79ac846d8af90a58dd2f",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_position",
+        "value": "clasp is located at the top of the bracelet's loop",
+        "region": "top center",
+        "state": "observed",
+        "observation_id": "3a37d4bb8415be477d51",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "small_black_beads",
+        "value": "tiny black beads adjacent to the clasp on both sides",
+        "region": "near clasp",
+        "state": "observed",
+        "observation_id": "efdeccd4e4af247aa359",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_layout",
+        "value": "circular loop with a straight horizontal section of colored beads at the bottom",
+        "region": "overall structure",
+        "state": "observed",
+        "observation_id": "7053629e00fb2b2fb5ae",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "metal_color",
+        "value": "all metal components (spacers, clasp) are gold-colored",
+        "region": "metal parts",
+        "state": "observed",
+        "observation_id": "3c31dfb8019990719c09",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "red_chakra_bead",
+        "value": "red faceted spherical bead at the right end of the chakra line",
+        "region": "right lower front",
+        "state": "observed",
+        "observation_id": "8fd1d2bd9c2040b7c3c6",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "yellow_chakra_bead",
+        "value": "yellow smooth spherical bead next to the red bead",
+        "region": "right lower front",
+        "state": "observed",
+        "observation_id": "1db587cd00ca5cdc61b9",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "green_chakra_bead",
+        "value": "green faceted spherical bead in the middle of the chakra line",
+        "region": "lower front center",
+        "state": "observed",
+        "observation_id": "425b2a54a48d44a9dc12",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      },
+      {
+        "key": "blue_chakra_bead",
+        "value": "dark blue smooth spherical bead at the left end of the chakra line",
+        "region": "left lower front",
+        "state": "observed",
+        "observation_id": "52993b944223ceb31eac",
+        "source_id": "x-1541930309603807239-19a7e3bccda0",
+        "request_id": "6af41371c6666c40405015fd",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-1541930309603807239-19a7e3bccda0",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "6af41371c6666c40405015fd",
+      "input_sha256": "ba9fc554ec3517b69079923ffd1ec0c82f2e24fbdd0eca14c00f177c41b07bf1",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 5607.619374990463,
+      "http_status": 200,
+      "provider_id": "021792082108125f5a6be93c8798a26ceedbf38a44bb89cb2a827",
+      "usage": {
+        "completion_tokens": 689,
+        "prompt_tokens": 1604,
+        "total_tokens": 2293,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "x-2098131365468262541-1255291b603a": {
+    "observations": [
+      {
+        "key": "object_type",
+        "value": "beaded bracelet",
+        "region": "full image",
+        "state": "observed",
+        "observation_id": "c5a63c5da42b3e8783db",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_color",
+        "value": "black",
+        "region": "beads of bracelet",
+        "state": "observed",
+        "observation_id": "9e8e7e7b9e3f1635c0bc",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "round",
+        "region": "beads of bracelet",
+        "state": "observed",
+        "observation_id": "5cf906b73c13539b9e3d",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_count",
+        "value": "25",
+        "region": "full bracelet",
+        "state": "observed",
+        "observation_id": "14751c87ce92149bfcbc",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_type",
+        "value": "silver-toned lobster claw clasp",
+        "region": "upper left section of bracelet",
+        "state": "observed",
+        "observation_id": "7619ed8cc25dccf49079",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_type",
+        "value": "silver-toned scorpion charm",
+        "region": "lower right section of bracelet",
+        "state": "observed",
+        "observation_id": "438fcf54a4da6e459102",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_attachment",
+        "value": "scorpion charm attached to a black bead via silver ring",
+        "region": "lower right section of bracelet",
+        "state": "observed",
+        "observation_id": "40811643ca0fdc324e25",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "background",
+        "value": "plain white",
+        "region": "full image background",
+        "state": "observed",
+        "observation_id": "1d2425ae18c89d52e58a",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_layout",
+        "value": "arranged in a loop shape",
+        "region": "full bracelet",
+        "state": "observed",
+        "observation_id": "beba165bd7ca5328dff8",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "clasp_position",
+        "value": "located at upper left of the bracelet loop",
+        "region": "upper left section of bracelet",
+        "state": "observed",
+        "observation_id": "4f126d9c9f469bad38f7",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      },
+      {
+        "key": "charm_position",
+        "value": "located at lower right of the bracelet loop",
+        "region": "lower right section of bracelet",
+        "state": "observed",
+        "observation_id": "e5adb6fa3a547c471d97",
+        "source_id": "x-2098131365468262541-1255291b603a",
+        "request_id": "9e382149d04f989c95912dd7",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:x-2098131365468262541-1255291b603a",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "9e382149d04f989c95912dd7",
+      "input_sha256": "9ede9d65e31ef61a10e9d247be3fc34ed128a6f71aca382100d2a6163fc4df7c",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 3593.118541990407,
+      "http_status": 200,
+      "provider_id": "021792082113730f5a6be93c8798a26ceedbf38a44bb89c99ab01",
+      "usage": {
+        "completion_tokens": 290,
+        "prompt_tokens": 1631,
+        "total_tokens": 1921,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "xhs-6acf32a60000000002010930-ee400326a2b4": {
+    "observations": [
+      {
+        "key": "hand_visible",
+        "value": "A hand with long, light pink glossy nails holds a beaded bracelet",
+        "region": "left side of image",
+        "state": "observed",
+        "observation_id": "1ae2f304aeace3e59768",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_large_beads",
+        "value": "Multiple large translucent light blue round beads on the bracelet",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "ac3d4667dd37f7c02153",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_small_beads",
+        "value": "Small translucent white round spacer beads between large blue beads",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "7911ce912126e1382168",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_crystal_carving",
+        "value": "A large transparent carved crystal ornament on the bracelet",
+        "region": "right side of bracelet",
+        "state": "observed",
+        "observation_id": "b80dcfe6b856a147c649",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_cross_charm",
+        "value": "A silver cross charm with small clear stones hangs from one blue bead",
+        "region": "lower right of bracelet",
+        "state": "observed",
+        "observation_id": "92a0a2ae83e7fe80d399",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_crown_decor",
+        "value": "Silver crown-shaped decorative settings on several blue beads",
+        "region": "bracelet beads",
+        "state": "observed",
+        "observation_id": "b3f4c629303ba0ac2b15",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_blue_gem_bead",
+        "value": "A small bead with a blue gem set in silver on the bracelet",
+        "region": "upper right of bracelet",
+        "state": "observed",
+        "observation_id": "d8b00cb5e7026787df6d",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "background_curtain",
+        "value": "Beige vertical curtain as background behind the hand",
+        "region": "upper background",
+        "state": "observed",
+        "observation_id": "d3341161d67f3bcc27fd",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "background_decor",
+        "value": "Blurred orange and light-colored decorative elements at bottom of image",
+        "region": "lower background",
+        "state": "observed",
+        "observation_id": "e192cff7c87d0876a842",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      },
+      {
+        "key": "nail_decal",
+        "value": "A small white decorative decal on one nail of the holding hand",
+        "region": "left nail of hand",
+        "state": "observed",
+        "observation_id": "7f5ead580e7412432ea2",
+        "source_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+        "request_id": "f1c0e12a32550e3ccd39e59c",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:xhs-6acf32a60000000002010930-ee400326a2b4",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "f1c0e12a32550e3ccd39e59c",
+      "input_sha256": "61968bbfd62245ef3a693d9cc02f657d836ed2e1f97227bbe9657dbfd691f962",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 4366.182708996348,
+      "http_status": 200,
+      "provider_id": "021792082117337f5a6be93c8798a26ceedbf38a44bb89c10fe5f",
+      "usage": {
+        "completion_tokens": 415,
+        "prompt_tokens": 1610,
+        "total_tokens": 2025,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "xhs-6acf1d4d000000001801096c-3a218f9c141d": {
+    "observations": [
+      {
+        "key": "background",
+        "value": "light off-white embossed decorative surface with floral and geometric patterns",
+        "region": "background area",
+        "state": "observed",
+        "observation_id": "e79d7e6c1e9dd122563b",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "number_of_bracelets",
+        "value": "two bracelets displayed",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "27c759f260475f1ee369",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_bead_color",
+        "value": "main beads of both bracelets are turquoise",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "f78bdcb6ef820e068bc0",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_material_types",
+        "value": "bracelets have wooden beads, white stone beads, silver decorative elements",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "85d18ef3072306365379",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_decor",
+        "value": "upper bracelet has a small silver flower charm, a round white stone bead, small wooden beads",
+        "region": "upper bracelet",
+        "state": "observed",
+        "observation_id": "8be8b5f17aa8e0d32ef9",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_decor",
+        "value": "lower bracelet has a silver flower charm, a large round white stone bead, larger wooden beads",
+        "region": "lower bracelet",
+        "state": "observed",
+        "observation_id": "c7d8fd007cfbfacc11f6",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "text_watermark",
+        "value": "visible text is \"旧九手作\"",
+        "region": "middle right area",
+        "state": "observed",
+        "observation_id": "bfb5685d55c1a3e71449",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_form",
+        "value": "both bracelets are strung on clear circular supports",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "18259bd78398cafdc77a",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_shape",
+        "value": "main turquoise beads are flat disc-shaped",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "04b53b67f7387405ab72",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "wooden_bead_color",
+        "value": "wooden beads are brown",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "a1dc2e6613d90cbe777b",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "silver_element_color",
+        "value": "silver decorative elements are metallic silver",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "c01b598db6a913ebb1ea",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "white_stone_color",
+        "value": "white stone beads are pale white with subtle veining",
+        "region": "bracelets",
+        "state": "observed",
+        "observation_id": "786aa07031567c002de5",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "surface_texture",
+        "value": "background surface has raised embossed texture",
+        "region": "background",
+        "state": "observed",
+        "observation_id": "812ba4e39234f494de5e",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_layout",
+        "value": "one bracelet positioned above the other on the background",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "a385a3a9eb54f19f1569",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "corner_logo",
+        "value": "small logo in bottom right corner, text is unclear",
+        "region": "bottom right corner",
+        "state": "unclear",
+        "observation_id": "7c9ced72a9b7f57b6be7",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "upper_bracelet_silver_top",
+        "value": "upper bracelet has a silver bead at its top opening",
+        "region": "upper bracelet",
+        "state": "observed",
+        "observation_id": "e5695acd5b99548b13af",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      },
+      {
+        "key": "lower_bracelet_silver_top",
+        "value": "lower bracelet has a silver bead at its top opening",
+        "region": "lower bracelet",
+        "state": "observed",
+        "observation_id": "a49e68433e6546afed6d",
+        "source_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+        "request_id": "67f49909cae2a501f4980e32",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:xhs-6acf1d4d000000001801096c-3a218f9c141d",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "67f49909cae2a501f4980e32",
+      "input_sha256": "a30b7cd570406c2c68d5125216392068ab775f46ec3da3efee85953361d8e080",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 7145.802209037356,
+      "http_status": 200,
+      "provider_id": "021792082121722f5a6be93c8798a26ceedbf38a44bb89caade71",
+      "usage": {
+        "completion_tokens": 648,
+        "prompt_tokens": 1611,
+        "total_tokens": 2259,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "xhs-6ad02942000000000200f5f5-8faa14d256dd": {
+    "observations": [
+      {
+        "key": "wrist",
+        "value": "human wrist with light skin tone",
+        "region": "center of image",
+        "state": "observed",
+        "observation_id": "c91acd1629f17b695199",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "green fabric",
+        "value": "soft light green fabric surrounding the wrist, likely clothing",
+        "region": "left and lower area",
+        "state": "observed",
+        "observation_id": "8545570be4ec1c1f3f3b",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "watch strap",
+        "value": "black leather watch strap with silver metal buckle, has holes for size adjustment",
+        "region": "left side of wrist",
+        "state": "observed",
+        "observation_id": "417f73bac253d424f83a",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "buckle text",
+        "value": "silver buckle has engraved text 'IWC'",
+        "region": "watch buckle",
+        "state": "observed",
+        "observation_id": "d20391cba4996adaa488",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "beaded bracelet",
+        "value": "bracelet composed of clear transparent beads and silver metal beads",
+        "region": "right side of wrist",
+        "state": "observed",
+        "observation_id": "c8dccf5aa99fa3a6a540",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet charm",
+        "value": "silver irregular square charm with reversed text",
+        "region": "bracelet lower part",
+        "state": "observed",
+        "observation_id": "48ad65251041fa89a77c",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "charm text",
+        "value": "reversed text on charm: 'you deserve be loved since'",
+        "region": "silver square charm",
+        "state": "observed",
+        "observation_id": "290e12e2ccbea1847c4f",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet extra bead",
+        "value": "small round silver bead hanging from the bracelet",
+        "region": "bracelet lower right",
+        "state": "observed",
+        "observation_id": "e80e8f4ecc284a90cc5a",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      },
+      {
+        "key": "background surface",
+        "value": "light beige smooth surface in upper background",
+        "region": "upper background",
+        "state": "observed",
+        "observation_id": "581535ff0b4655b260a7",
+        "source_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+        "request_id": "9df90521e4e32f99cdf2d563",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:xhs-6ad02942000000000200f5f5-8faa14d256dd",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "9df90521e4e32f99cdf2d563",
+      "input_sha256": "e24d2a458648ecc67187184cf88457da9ba89ed4c674a1f4d6d015d598ef5589",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 3441.814166959375,
+      "http_status": 200,
+      "provider_id": "021792082128914f5a6be93c8798a26ceedbf38a44bb89ca2766d",
+      "usage": {
+        "completion_tokens": 278,
+        "prompt_tokens": 1634,
+        "total_tokens": 1912,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  },
+  "xhs-6acf752d000000001500a9c6-6f28bc97ccf9": {
+    "observations": [
+      {
+        "key": "bracelet_count",
+        "value": "Two beaded bracelets are visible in the image",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "29d9a1693022dec27df5",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_1_beads",
+        "value": "One bracelet has black round beads and light pink round beads, strung together",
+        "region": "left bracelet",
+        "state": "observed",
+        "observation_id": "24ce1e39c1d840ee98a5",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_2_beads",
+        "value": "The other bracelet has black round beads, light pink round beads, and a small silver decorative bead",
+        "region": "right bracelet",
+        "state": "observed",
+        "observation_id": "8d6826f95bc85f69ae2b",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_support",
+        "value": "Both bracelets are placed on clear circular plastic supports",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "df4edbc0dc7898a7ceb1",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "cloth_bag",
+        "value": "A beige linen drawstring bag is in the background, with a black line drawing of a lotus and plant stems on it",
+        "region": "upper background",
+        "state": "observed",
+        "observation_id": "ab4c6cdc56f044962b1a",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "drawstring_bag_tassel",
+        "value": "The drawstring bag has a white tassel on its right side",
+        "region": "upper right background",
+        "state": "observed",
+        "observation_id": "a96aa86dcebe031f36ff",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "mat",
+        "value": "The bracelets and bag rest on a light beige textured woven mat with fringed edges",
+        "region": "lower and central background",
+        "state": "observed",
+        "observation_id": "47ed967cbb1629efd6bb",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "background_surface",
+        "value": "Behind the mat is a dark brown wooden surface",
+        "region": "upper left background",
+        "state": "observed",
+        "observation_id": "9acd64eff759b25d6105",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_color_black",
+        "value": "The black beads on the bracelets are glossy and round",
+        "region": "bracelet beads",
+        "state": "observed",
+        "observation_id": "3232b37d797705cfac06",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bead_color_pink",
+        "value": "The light pink beads on the bracelets are translucent and round",
+        "region": "bracelet beads",
+        "state": "observed",
+        "observation_id": "8b79c53271d473e2d151",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "decorative_bead",
+        "value": "The right bracelet has a small silver-colored bead with a textured surface among black beads",
+        "region": "right bracelet",
+        "state": "observed",
+        "observation_id": "5e8ae458bbd125119a76",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bag_drawing_details",
+        "value": "The line drawing on the bag includes a lotus flower, leaves, and wavy lines representing water at the bottom",
+        "region": "upper background bag",
+        "state": "observed",
+        "observation_id": "a5f0023c84efa58fdaa6",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "mat_texture",
+        "value": "The mat has a woven, slightly raised texture with visible stitch patterns",
+        "region": "lower area",
+        "state": "observed",
+        "observation_id": "afbd36c239a9d180937d",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "bracelet_arrangement",
+        "value": "The two bracelets are placed side by side on the mat, left bracelet slightly behind the right one",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "9e81ee2dd35f461b13d2",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "plastic_support_type",
+        "value": "The clear supports for the bracelets are solid circular rings, one is a closed ring, the other has a small gap",
+        "region": "central area",
+        "state": "observed",
+        "observation_id": "b538b107a59976918b75",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      },
+      {
+        "key": "wooden_surface_appearance",
+        "value": "The wooden surface in the background has a smooth, dark brown appearance with visible wood grain",
+        "region": "upper left background",
+        "state": "observed",
+        "observation_id": "8c4e1e1684ffa15f4af5",
+        "source_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+        "request_id": "a6a2f1c92c6e14d413d4d1d8",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261016-bracelets-seedmini-v1:initial:xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+      "model": "doubao-seed-2-0-mini-260428",
+      "request_id": "a6a2f1c92c6e14d413d4d1d8",
+      "input_sha256": "ade23d24c098f7f78f227079c1b4c05c4fdcb68127e8d31e15e82bd39319f17f",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 7822.520542074926,
+      "http_status": 200,
+      "provider_id": "021792082132363f5a6be93c8798a26ceedbf38a44bb89c6462a5",
+      "usage": {
+        "completion_tokens": 702,
+        "prompt_tokens": 1609,
+        "total_tokens": 2311,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    "validation_error": null
+  }
+}

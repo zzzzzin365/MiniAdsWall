@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const {randomUUID} = require('node:crypto');
 const {database} = require('./helpers/mysql.cjs');
 process.env.MERCHANT_WORKSPACE_ENABLED = 'true';
+process.env.STUDIO_MEDIA_RAG_MODE = 'caption'; // explicit rollback-path coverage
 process.env.ADS_OPERATOR_TOKENS = JSON.stringify({operator:'rag-test-only',outsider:'rag-outsider-only'});
 const {migrateMarketingSchema} = require('../dist/services/marketing/migrations');
 const {studioSchema} = require('../dist/services/merchant/studio/migration');

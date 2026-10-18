@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "main_background_color",
+      "value": "画面主要背景包含浅米色区域和白色区域",
+      "region": "画面背景",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

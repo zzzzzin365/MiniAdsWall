@@ -1,0 +1,134 @@
+[
+  {
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "category": "presence",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  }
+]

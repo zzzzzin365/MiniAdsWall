@@ -1,0 +1,9 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "32d38c45bf6ac9e5e5d4",
+    "4794f2d80ebce8f28c0c"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录顶部三个标签水平分布，居中的中间标签印有红色文字“营销分析”，完全覆盖问题所问内容。"
+}

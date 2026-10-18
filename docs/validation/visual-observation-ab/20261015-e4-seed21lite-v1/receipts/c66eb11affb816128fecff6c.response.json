@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "spend_word",
+      "value": "spend",
+      "region": "DATA WAREHOUSE模块下方的虚线框内",
+      "state": "observed"
+    },
+    {
+      "key": "clicks_word",
+      "value": "clicks",
+      "region": "DATA WAREHOUSE模块下方的虚线框内",
+      "state": "observed"
+    },
+    {
+      "key": "leads_word",
+      "value": "leads",
+      "region": "DATA WAREHOUSE模块下方的虚线框内",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

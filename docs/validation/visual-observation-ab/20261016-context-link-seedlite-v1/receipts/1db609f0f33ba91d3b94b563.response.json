@@ -1,0 +1,11 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "现有图像观测未提及真人的手或手腕相关内容，无法确认原图中是否出现真人的手或手腕。",
+  "image_citations": [
+    "image-019"
+  ],
+  "text_citations": []
+}

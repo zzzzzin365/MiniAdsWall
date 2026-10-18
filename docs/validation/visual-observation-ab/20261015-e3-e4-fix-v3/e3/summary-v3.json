@@ -1,0 +1,20 @@
+{
+  "status": "prepared_not_run",
+  "coverage": {
+    "attempted_rows": 0,
+    "paired_cases_including_repeats": 0,
+    "unpaired_rows": 0,
+    "failures_retained": 0,
+    "comparison": "all arms attempted on identical repeat/case; failures included"
+  },
+  "groups": {},
+  "requests": 0,
+  "money": null,
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "reused_initial_cost_per_reuse_arm": {},
+  "repeats_are_not_more_independent_images": true,
+  "independent_review": false
+}

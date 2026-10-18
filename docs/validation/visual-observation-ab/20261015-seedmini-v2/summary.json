@@ -1,0 +1,151 @@
+{
+  "status": "blocked_provider_usage_limit",
+  "test": {
+    "A": {
+      "n": 24,
+      "answerable_n": 20,
+      "field_and_source_pass": 0.4,
+      "all_tasks_pass": 0.5,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.2273927710484713,
+      "p95_seconds": 1.8977321795246098,
+      "evidence_p95_seconds": 2.9347301460802548e-05,
+      "router_total_seconds": 0.0
+    },
+    "B": {
+      "n": 24,
+      "answerable_n": 20,
+      "field_and_source_pass": 0.9,
+      "all_tasks_pass": 0.9166666666666666,
+      "not_provable_correct": 1.0,
+      "vision_calls": 24,
+      "failures": 0,
+      "p50_seconds": 6.9163271660218015,
+      "p95_seconds": 10.288293279358184,
+      "evidence_p95_seconds": 8.605148387479128,
+      "router_total_seconds": 0.0
+    },
+    "C0": {
+      "n": 24,
+      "answerable_n": 20,
+      "field_and_source_pass": 0.75,
+      "all_tasks_pass": 0.7916666666666666,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 2,
+      "p50_seconds": 1.6442720205523074,
+      "p95_seconds": 3.091861451807198,
+      "evidence_p95_seconds": 0.00027767940773628654,
+      "router_total_seconds": 0.0
+    },
+    "C1": {
+      "n": 24,
+      "answerable_n": 20,
+      "field_and_source_pass": 0.75,
+      "all_tasks_pass": 0.7916666666666666,
+      "not_provable_correct": 1.0,
+      "vision_calls": 2,
+      "failures": 0,
+      "p50_seconds": 3.5105543750105426,
+      "p95_seconds": 6.390775154379662,
+      "evidence_p95_seconds": 5.048313166876319,
+      "router_total_seconds": 44.312790457275696
+    }
+  },
+  "development": {
+    "A": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 0.4,
+      "all_tasks_pass": 0.5,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.487842709000688,
+      "p95_seconds": 2.0300475312105846,
+      "evidence_p95_seconds": 3.0832947231829166e-05,
+      "router_total_seconds": 0.0
+    },
+    "B": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 1.0,
+      "all_tasks_pass": 1.0,
+      "not_provable_correct": 1.0,
+      "vision_calls": 6,
+      "failures": 0,
+      "p50_seconds": 5.521819292043801,
+      "p95_seconds": 6.866716801509028,
+      "evidence_p95_seconds": 5.269087520748144,
+      "router_total_seconds": 0.0
+    },
+    "C0": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 0.8,
+      "all_tasks_pass": 0.8333333333333334,
+      "not_provable_correct": 1.0,
+      "vision_calls": 0,
+      "failures": 0,
+      "p50_seconds": 1.5350205624708906,
+      "p95_seconds": 2.327680020243861,
+      "evidence_p95_seconds": 0.00028231280157342553,
+      "router_total_seconds": 0.0
+    },
+    "C1": {
+      "n": 6,
+      "answerable_n": 5,
+      "field_and_source_pass": 1.0,
+      "all_tasks_pass": 1.0,
+      "not_provable_correct": 1.0,
+      "vision_calls": 2,
+      "failures": 0,
+      "p50_seconds": 5.780888312438037,
+      "p95_seconds": 9.212478166737128,
+      "evidence_p95_seconds": 7.342946364515228,
+      "router_total_seconds": 18.620896291919053
+    }
+  },
+  "repeated": {},
+  "grading": "automated field + source diagnostics; independent semantic review not completed",
+  "scope": "external public images only",
+  "money": null,
+  "test_coverage": {
+    "all_observed_rows": 97,
+    "matched_cases": 24,
+    "unmatched_rows": 1,
+    "all_observed_failures": 3,
+    "comparison_rule": "compare only cases whose four arms were attempted, including failed arms; all rows retained in scores/trace"
+  },
+  "models": {
+    "vision": "doubao-seed-2-0-mini-260428",
+    "answer": "doubao-seed-2-0-mini-260428",
+    "router": "doubao-seed-2-0-mini-260428"
+  },
+  "initial_observations_import": "docs/validation/visual-observation-ab/20261015-v1/initial-observations.json",
+  "paired": {
+    "families": 3,
+    "C1_minus_B_quality_ci95": [
+      -0.4,
+      0.0
+    ],
+    "C1_over_B_p95_ci95": [
+      0.6149783540372838,
+      0.6634817820647598
+    ],
+    "limits": "3 small families; exploratory intervals"
+  },
+  "model_usage": {
+    "doubao-seed-2-0-mini-260428": {
+      "requests": 186,
+      "prompt_tokens": 266746,
+      "completion_tokens": 10016,
+      "failed": 1
+    }
+  },
+  "completed_rows": 121,
+  "planned_rows": 240,
+  "reporter_sha256": "a2197b312fbebd3174be90426eecaf9369fca43f4c7ec43054a12b0ae660b43f"
+}

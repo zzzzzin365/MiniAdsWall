@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "整张图的背景为浅米白色，无额外纹理装饰。",
+      "region": "全图区域",
+      "state": "observed"
+    },
+    {
+      "key": "top_logo",
+      "value": "画面顶部居中是一个圆角方形的陶土橙色图标，内部有白色放射状星芒图案。",
+      "region": "顶部居中区域",
+      "state": "observed"
+    },
+    {
+      "key": "main_title",
+      "value": "图标下方第一行是黑色粗体衬线字体文字“The Claude Ad”，第二行是陶土橙色斜体衬线字体文字“Creative Strategist”。",
+      "region": "顶部图标下方居中区域",
+      "state": "observed"
+    },
+    {
+      "key": "subtitle_text",
+      "value": "主标题下方是深灰色常规衬线字体文字“Have Claude tell you exactly what ads to make next.”。",
+      "region": "主标题下方居中区域",
+      "state": "observed"
+    },
+    {
+      "key": "including_label",
+      "value": "副标题下方有一条横贯画面的细陶土橙色水平线，线的中间位置是陶土橙色圆角胶囊形标签，内部印有白色大写文字“INCLUDING:”。",
+      "region": "副标题下方居中区域",
+      "state": "observed"
+    },
+    {
+      "key": "feature_card_count",
+      "value": "标签下方横向等距排列4个尺寸完全一致的浅桃色圆角卡片，卡片顶部带有突出的陶土橙色小矩形块。",
+      "region": "画面中部横向区域",
+      "state": "observed"
+    },
+    {
+      "key": "first_card_icon",
+      "value": "最左侧第一个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色文档线条图案。",
+      "region": "左数第一个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "first_card_text",
+      "value": "第一个卡片图标下方印有黑色衬线文字“Ad Creative Strategist System Prompt”，文字下方有一条短陶土橙色横线。",
+      "region": "左数第一个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "second_card_icon",
+      "value": "左数第二个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色对勾圆形图案。",
+      "region": "左数第二个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "second_card_text",
+      "value": "第二个卡片图标下方印有黑色衬线文字“Winning Ad Hook Templates”，文字下方有一条短陶土橙色横线。",
+      "region": "左数第二个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "third_card_icon",
+      "value": "左数第三个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色带向下箭头的方形图案。",
+      "region": "左数第三个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "third_card_text",
+      "value": "第三个卡片图标下方印有黑色衬线文字“Structure Of The Perfect Ad”，文字下方有一条短陶土橙色横线。",
+      "region": "左数第三个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "fourth_card_icon",
+      "value": "最右侧第四个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色盾牌图案。",
+      "region": "左数第四个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "fourth_card_text",
+      "value": "第四个卡片图标下方印有黑色衬线文字“Creative Testing Framework”，文字下方有一条短陶土橙色横线。",
+      "region": "左数第四个卡片内部",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_divider",
+      "value": "四个卡片下方有一条横贯画面的细陶土橙色水平线。",
+      "region": "卡片组下方居中区域",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_call_to_action",
+      "value": "水平线下方居中位置，左侧是黑色文字“Comment”，中间是陶土橙色圆角矩形标签，内部印有白色文字“claudeads”，右侧是黑色文字“to get the access”。",
+      "region": "画面底部居中区域",
+      "state": "observed"
+    },
+    {
+      "key": "color_palette",
+      "value": "全图仅使用浅米白、陶土橙、浅桃色、黑色、深灰色五种配色，无其他额外色彩。",
+      "region": "全图区域",
+      "state": "observed"
+    },
+    {
+      "key": "layout_alignment",
+      "value": "所有核心元素均沿画面垂直中轴线居中对齐，四个功能卡片横向均匀分布，左右边距对称。",
+      "region": "全图区域",
+      "state": "observed"
+    }
+  ]
+}

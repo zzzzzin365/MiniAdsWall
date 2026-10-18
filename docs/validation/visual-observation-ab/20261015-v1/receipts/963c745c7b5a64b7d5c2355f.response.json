@@ -1,0 +1,41 @@
+{
+  "observations": [
+    {
+      "key": "title",
+      "value": "(四)给营销/广告人的启示",
+      "region": "顶部标题区",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion_count",
+      "value": "3",
+      "region": "正文区",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion1",
+      "value": "品类破局的关键是反常识内卷",
+      "region": "正文第一条建议",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion2",
+      "value": "IP设计要绑定行为，而非单纯颜值",
+      "region": "正文第二条建议",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion3",
+      "value": "自传播＞硬投放，梗资产是中小预算品牌的最优解",
+      "region": "正文第三条建议",
+      "state": "observed"
+    },
+    {
+      "key": "source",
+      "value": "@有好CASE",
+      "region": "底部右下角",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

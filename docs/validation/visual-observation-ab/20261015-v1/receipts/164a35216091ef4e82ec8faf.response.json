@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "top_left_label",
+      "value": "红色边框白色背景的标签，内有红色文字“品牌洞察”",
+      "region": "左上角",
+      "state": "observed"
+    },
+    {
+      "key": "top_mid_label",
+      "value": "红色边框白色背景的标签，内有红色文字“营销分析”",
+      "region": "顶部中间",
+      "state": "observed"
+    },
+    {
+      "key": "top_right_label",
+      "value": "红色边框白色背景的标签，内有红色文字“广告创意”",
+      "region": "右上角",
+      "state": "observed"
+    },
+    {
+      "key": "title_text",
+      "value": "红色大号文字，分为两行，第一行是“疯狂的”，第二行是“小绿鸟”",
+      "region": "顶部中央",
+      "state": "observed"
+    },
+    {
+      "key": "subtitle_text",
+      "value": "白色矩形背景上的红色文字“多邻国营销大盘点”",
+      "region": "中部",
+      "state": "observed"
+    },
+    {
+      "key": "left_duolingo_bird",
+      "value": "绿色卡通猫头鹰形象，双眼圆睁，无受伤表现",
+      "region": "左下方",
+      "state": "observed"
+    },
+    {
+      "key": "right_duolingo_bird",
+      "value": "绿色卡通猫头鹰形象，额头和身体贴有创可贴，表情痛苦",
+      "region": "右下方",
+      "state": "observed"
+    },
+    {
+      "key": "brand_name",
+      "value": "绿色英文文字“duolingo”，位于左下角",
+      "region": "左下角",
+      "state": "observed"
+    },
+    {
+      "key": "creator_text",
+      "value": "白色文字“@有好CASE”，位于右下角",
+      "region": "右下角",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "渐变背景，上方为浅灰白，中部过渡为粉紫，下方为红色",
+      "region": "整体背景",
+      "state": "observed"
+    }
+  ]
+}

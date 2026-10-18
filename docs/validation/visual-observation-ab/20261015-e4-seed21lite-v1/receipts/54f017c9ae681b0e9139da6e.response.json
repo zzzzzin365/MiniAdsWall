@@ -1,0 +1,11 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "716c739bc2c23a639228",
+    "06fc3aa52943916cddcc",
+    "0d135a649f75a1ff6ed4",
+    "c0d3ba02e2ea8deaca0e"
+  ],
+  "missing": [],
+  "reason": "已存观察明确记录页面内共有3条带数字编号的要点，分别对应1、2、3编号的标题与正文，可直接回答问题。"
+}

@@ -1,0 +1,7 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "2693eafda45dbb4a1307"
+  ],
+  "reason": "已存观察显示YOU / REVIEW区域位于lower right，即整体画面的右侧，可明确回答问题"
+}

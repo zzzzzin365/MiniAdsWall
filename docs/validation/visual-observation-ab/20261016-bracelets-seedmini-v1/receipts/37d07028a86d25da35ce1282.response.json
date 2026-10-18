@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "has_human_hand_wrist",
+      "value": "画面中出现了真人的手和手腕，手的部分可见手指、手背，手腕处佩戴有串珠手链",
+      "region": "画面主体",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

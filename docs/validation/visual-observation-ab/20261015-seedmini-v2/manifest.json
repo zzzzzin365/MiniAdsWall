@@ -1,0 +1,34 @@
+{
+  "scope": "public_external_images_only",
+  "code_sha256": "b23b753574f1d7484b75a7d8fd61c2b1661b87ea0e1d9118a78e25025eed6d2b",
+  "input_hashes": {
+    "cases-gold.json": "e28607a7864d9e93fa6b0fa9d763955a0adcaa0fb28bcafdade452b2a5ac1c7a",
+    "requests.json": "f69484d556bd781aca3647cef7b581bde58d59645a33977241a1f21bf4a369cb",
+    "assets.json": "dc8139172564ada0fb8a727fa976875cc1e07fdbc1ae5a906096a2c73b48fc5f",
+    "protocol.json": "6bff1b90d673a8216ea86351f8206eb0455733e71d530709ad81adbb6adc919e"
+  },
+  "prompts": {
+    "initial": "48ea99ce39157d959d3527190e52423253181272142ff27d700aa1913ea747b1",
+    "reader": "2aae75050d8f1960a81ecb31d977035c08285a77fab5ab4a85e38f4434f992db",
+    "router": "93a250f52cf7dbff397baf4a7d3c95b4829e9c3e5c745ce2f12897545d56caad",
+    "answer": "1705a56e1178fdb1899d2f5a53675d83d8ea4766f7de15ee7274a9ea876e923b"
+  },
+  "models": {
+    "vision": "doubao-seed-2-0-mini-260428",
+    "answer": "doubao-seed-2-0-mini-260428",
+    "router": "doubao-seed-2-0-mini-260428"
+  },
+  "status": "blocked_provider_usage_limit",
+  "independent_human_review": false,
+  "production_mutated": false,
+  "initial_observations_import": "docs/validation/visual-observation-ab/20261015-v1/initial-observations.json",
+  "trace_rows": 24,
+  "blocking_error": {
+    "http_status": 429,
+    "provider_error_code": "SetLimitExceeded",
+    "model": "doubao-seed-2-0-mini-260428",
+    "receipt": "0ad5574422be4ba01299858f.json"
+  },
+  "completed_question_arm_rows": 121,
+  "planned_question_arm_rows": 240
+}

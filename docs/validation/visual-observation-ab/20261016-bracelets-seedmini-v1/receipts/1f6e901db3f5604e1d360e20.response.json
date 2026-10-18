@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "a3d3ea9c4408ab20b7d3"
+  ],
+  "missing": [],
+  "reason": "已存观察明确记录了画面背景为纯白色，可支持回答问题"
+}

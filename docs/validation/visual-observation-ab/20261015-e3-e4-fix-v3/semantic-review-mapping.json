@@ -1,0 +1,386 @@
+[
+  {
+    "review_id": "review-001",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-002",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-003",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-004",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-005",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-006",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-007",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-008",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-009",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-010",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-011",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-012",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-013",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-014",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-015",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-016",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-017",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-018",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-019",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-020",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-021",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-022",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-023",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-024",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-025",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-026",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-027",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-028",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-029",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-030",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-031",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-032",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-033",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-034",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-035",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-036",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-037",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-038",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-039",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-040",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-041",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-042",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-043",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-044",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-045",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-046",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-047",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-048",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-049",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-050",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-051",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-052",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-053",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-054",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-055",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-056",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-057",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-058",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-059",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-060",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-061",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-062",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-063",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-064",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-065",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-066",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-067",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-068",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-069",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-070",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-071",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-072",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-073",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-074",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-075",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-076",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-077",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-078",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-079",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-080",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-081",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-082",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-083",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-084",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-085",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-086",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-087",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-088",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-089",
+    "arm": "C0"
+  },
+  {
+    "review_id": "review-090",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-091",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-092",
+    "arm": "C1"
+  },
+  {
+    "review_id": "review-093",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-094",
+    "arm": "B"
+  },
+  {
+    "review_id": "review-095",
+    "arm": "A"
+  },
+  {
+    "review_id": "review-096",
+    "arm": "C0"
+  }
+]

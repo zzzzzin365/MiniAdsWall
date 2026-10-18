@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "Fahari",
+  "quote": "Free Shipping on Orders Above $99.",
+  "answer": "已从对应来源快照body摘录符合字符数要求的内容并关联对应记录署名字段。",
+  "image_citations": [
+    "image-007"
+  ],
+  "text_citations": [
+    "ctx-556bccbad69742e2"
+  ]
+}

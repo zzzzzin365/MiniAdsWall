@@ -1,0 +1,398 @@
+[
+  {
+    "case_id": "zhihu-display-1",
+    "asset_id": "zhihu-display",
+    "question": "上方广告的主要背景是什么颜色？",
+    "category": "basic",
+    "split": "development",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-display-2",
+    "asset_id": "zhihu-display",
+    "question": "产品界面的图表截图总体在广告左边还是右边？",
+    "category": "basic",
+    "split": "development",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-display-3",
+    "asset_id": "zhihu-display",
+    "question": "上方橙色按钮里写的完整英文是什么？",
+    "category": "detail",
+    "split": "development",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-display-4",
+    "asset_id": "zhihu-display",
+    "question": "上方界面截图中的Site Health百分比是多少？",
+    "category": "detail",
+    "split": "development",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-display-5",
+    "asset_id": "zhihu-display",
+    "question": "上方广告左侧品牌区域是否出现绿色猫头鹰形象？",
+    "category": "presence",
+    "split": "development",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-display-6",
+    "asset_id": "zhihu-display",
+    "question": "使用这张Semrush广告后真实转化率提升了百分之多少？",
+    "category": "not_provable",
+    "split": "development",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "zhihu-components-1",
+    "asset_id": "zhihu-components",
+    "question": "左侧汽车广告的品牌叫什么？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-4",
+    "asset_id": "zhihu-components",
+    "question": "左侧最前方汽车的车身主要是什么颜色？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "category": "presence",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-3",
+    "asset_id": "xhs-duo-1",
+    "question": "顶部紫色圆圈里的白色箭头朝哪个方向？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-5",
+    "asset_id": "xhs-duo-1",
+    "question": "这张建议总结页里是否有彩色汽车照片？",
+    "category": "presence",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-1",
+    "asset_id": "xhs-duo-2",
+    "question": "封面底部的品牌角色是什么颜色的什么动物？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-2",
+    "asset_id": "xhs-duo-2",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-3",
+    "asset_id": "xhs-duo-2",
+    "question": "头上贴着创可贴的是左边还是右边的角色？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-5",
+    "asset_id": "xhs-duo-2",
+    "question": "左边那只猫头鹰的头上是否贴着创可贴？",
+    "category": "presence",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-3",
+    "asset_id": "x-marketing-kb",
+    "question": "左上角最顶部的英文标题是什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-4",
+    "asset_id": "x-marketing-kb",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-5",
+    "asset_id": "x-marketing-kb",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "category": "presence",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-marketing-kb-6",
+    "asset_id": "x-marketing-kb",
+    "question": "搭建作者这套系统实际花了多少钱？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-creative-framework-1",
+    "asset_id": "x-creative-framework",
+    "question": "这张课程宣传图的底色主要是什么颜色？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-creative-framework-2",
+    "asset_id": "x-creative-framework",
+    "question": "INCLUDING下面并排有几张介绍卡片？",
+    "category": "basic",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-creative-framework-3",
+    "asset_id": "x-creative-framework",
+    "question": "最下面Comment后橙色块里要求留言的完整英文词是什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-creative-framework-4",
+    "asset_id": "x-creative-framework",
+    "question": "最左边介绍卡片里的完整英文标题是什么？",
+    "category": "detail",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-creative-framework-5",
+    "asset_id": "x-creative-framework",
+    "question": "最顶部图标是否是一只绿色猫头鹰？",
+    "category": "presence",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-creative-framework-6",
+    "asset_id": "x-creative-framework",
+    "question": "这套私有课程实际售价是多少？",
+    "category": "not_provable",
+    "split": "test",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  }
+]

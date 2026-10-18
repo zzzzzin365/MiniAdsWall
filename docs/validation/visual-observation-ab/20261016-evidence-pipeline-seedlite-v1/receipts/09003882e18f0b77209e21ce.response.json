@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "BranchLaquanya",
+  "quote": null,
+  "answer": "因缺乏原图是否出现真人手或手腕的有效证据，hand_present字段为null，来源记录署名为BranchLaquanya。",
+  "image_citations": [
+    "image-015"
+  ],
+  "text_citations": [
+    "ctx-e7e78bf142059b98"
+  ]
+}

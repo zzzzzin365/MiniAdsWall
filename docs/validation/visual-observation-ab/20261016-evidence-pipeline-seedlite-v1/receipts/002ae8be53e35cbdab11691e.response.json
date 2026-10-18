@@ -1,0 +1,13 @@
+{
+  "status": "answered",
+  "hand_present": null,
+  "publisher": "stillwallsstore",
+  "quote": "the winner can choose any *beaded bracelet* from my store! all u have to do to enter is",
+  "answer": "已从对应来源快照body逐字摘录符合要求的字符，完成信息提取。",
+  "image_citations": [
+    "image-011"
+  ],
+  "text_citations": [
+    "ctx-f3b518556940b3fe"
+  ]
+}

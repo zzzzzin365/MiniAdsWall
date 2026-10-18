@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "body_part",
+      "value": "human left hand and forearm",
+      "region": "left side of image",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_count",
+      "value": "three strands of beaded bracelets",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "bead_color",
+      "value": "beads in shades of brown, light brown, and reddish-brown",
+      "region": "bracelet beads",
+      "state": "observed"
+    },
+    {
+      "key": "carved_element",
+      "value": "one carved cloud-shaped wooden ornament on the bracelet",
+      "region": "wrist bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "dark teal solid background",
+      "region": "entire background",
+      "state": "observed"
+    },
+    {
+      "key": "hand_position",
+      "value": "hand positioned with fingers slightly curved, resting near bottom left",
+      "region": "lower left of image",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_position",
+      "value": "bracelets wrapped around the wrist multiple times",
+      "region": "wrist area",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "all beads are round and spherical",
+      "region": "bracelet beads",
+      "state": "observed"
+    },
+    {
+      "key": "skin_tone",
+      "value": "light skin tone on the hand and forearm",
+      "region": "hand and forearm",
+      "state": "observed"
+    },
+    {
+      "key": "decorative_bead",
+      "value": "small reddish-brown beads interspersed among larger light brown beads",
+      "region": "bracelet strands",
+      "state": "observed"
+    }
+  ]
+}

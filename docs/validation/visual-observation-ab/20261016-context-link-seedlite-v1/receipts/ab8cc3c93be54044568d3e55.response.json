@@ -1,0 +1,94 @@
+{
+  "observations": [
+    {
+      "key": "main_subject",
+      "value": "一只佩戴在手腕上的腕表与一条串珠手链",
+      "region": "画面中心的手腕区域",
+      "state": "observed"
+    },
+    {
+      "key": "watch_strap_color",
+      "value": "黑色",
+      "region": "手腕左侧的表带部分",
+      "state": "observed"
+    },
+    {
+      "key": "watch_strap_material_appearance",
+      "value": "带有纹理的皮革质感表带，设有多个调节孔与表带环",
+      "region": "手腕左侧的表带部分",
+      "state": "observed"
+    },
+    {
+      "key": "watch_buckle_material",
+      "value": "银色金属材质",
+      "region": "表带的扣具位置",
+      "state": "observed"
+    },
+    {
+      "key": "watch_buckle_text",
+      "value": "刻有“IWC”字样",
+      "region": "银色表扣表面",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_bead_types",
+      "value": "由透明圆珠与银色金属圆珠交替串接组成",
+      "region": "手腕右侧的手链区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_pendants_count",
+      "value": "共2个吊坠",
+      "region": "手链的中下部位置",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_pendant1_shape",
+      "value": "不规则方形金属吊牌",
+      "region": "手链左侧吊坠",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_pendant1_text",
+      "value": "吊牌上的文字为反向显示，内容为“You deserve be loved”",
+      "region": "不规则方形金属吊牌表面",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_pendant2_shape",
+      "value": "光面银色小圆球",
+      "region": "手链右侧吊坠",
+      "state": "observed"
+    },
+    {
+      "key": "wrist_skin",
+      "value": "露出的手腕皮肤呈自然肤色",
+      "region": "承载饰品的手腕部位",
+      "state": "observed"
+    },
+    {
+      "key": "surrounding_fabric_color",
+      "value": "浅绿色",
+      "region": "画面边缘的衣物区域",
+      "state": "observed"
+    },
+    {
+      "key": "surrounding_fabric_texture",
+      "value": "带有自然褶皱的轻薄面料",
+      "region": "画面边缘的衣物区域",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "浅米色模糊的平整表面",
+      "region": "画面右上角区域",
+      "state": "observed"
+    },
+    {
+      "key": "watch_dial",
+      "value": "未在画面中呈现",
+      "region": "画面范围内",
+      "state": "explicitly_absent"
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+[
+  {
+    "case_id": "energymuse-f965a98f6102-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "白"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "solid plain white",
+      "answer": "画面主要背景是纯白色",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "x-2027810292218966399-7c25f83553ba-2",
+    "arm": "B",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "蓝"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "dark blue",
+      "answer": "画面主要背景颜色为深蓝色",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "x-2027810292218966399-7c25f83553ba-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "蓝"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "solid dark blue",
+      "answer": "画面主要背景是深蓝色",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-2",
+    "arm": "B",
+    "category": "background_color_ambiguity_or_alias_gap",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "黄",
+      "金",
+      "棕",
+      "褐"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "画面主要背景是浅米色",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-2",
+    "arm": "C1",
+    "category": "background_color_ambiguity_or_alias_gap",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "黄",
+      "金",
+      "棕",
+      "褐"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "米色",
+      "answer": "画面主要背景是米色",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-2",
+    "arm": "B",
+    "category": "background_color_ambiguity_or_alias_gap",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "绿"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "画面主要背景是浅米色",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-2",
+    "arm": "C1",
+    "category": "background_color_ambiguity_or_alias_gap",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "绿"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "画面主要背景是浅米色",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "qi-flow-e1afb7538267-1",
+    "arm": "C1",
+    "category": "subject_synonym_not_in_frozen_aliases",
+    "question": "画面中心主要展示的对象是什么？",
+    "expected": [
+      "手链",
+      "手串",
+      "手镯",
+      "腕饰",
+      "bracelet"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "串有深棕色圆珠、红色配珠和金色装饰珠的三层环形串饰，带有方形白坠和圆形金坠",
+      "answer": "画面中心主要展示的是串有深棕色圆珠、红色配珠和金色装饰珠的三层环形串饰，带有方形白坠和圆形金坠",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "qi-flow-e1afb7538267-1",
+    "arm": "B",
+    "category": "schema_failure",
+    "question": "画面中心主要展示的对象是什么？",
+    "expected": [
+      "手链",
+      "手串",
+      "手镯",
+      "腕饰",
+      "bracelet"
+    ],
+    "answer": {},
+    "format_errors": [
+      "invalid_observation_fields"
+    ],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "x-1541930309603807239-19a7e3bccda0-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "白",
+      "浅紫"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "plain light white",
+      "answer": "画面主要背景是浅白色",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "miansai-9b0418515350-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "白"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "plain light white or light gray",
+      "answer": "画面主要背景是浅白色或浅灰色",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "tanmujiang-90ba0ac20704-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "绿"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "dark teal",
+      "answer": "画面主要背景颜色是深青绿色",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-1",
+    "arm": "C1",
+    "category": "subject_focus_ambiguity_requires_review",
+    "question": "画面中心主要展示的对象是什么？",
+    "expected": [
+      "手链",
+      "手串",
+      "手镯",
+      "腕饰",
+      "bracelet"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "human wrist",
+      "answer": "画面中心主要展示的对象是人的手腕",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-1",
+    "arm": "B",
+    "category": "subject_synonym_not_in_frozen_aliases",
+    "question": "画面中心主要展示的对象是什么？",
+    "expected": [
+      "手链",
+      "手串",
+      "手镯",
+      "腕饰",
+      "bracelet"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "两串放置在透明展示架上的珠串，珠串由黑色圆珠和浅粉色圆珠组成，其中右侧珠串带有银色装饰隔珠",
+      "answer": "画面中心主要展示的是两串放置在透明展示架上的珠串，珠串由黑色圆珠和浅粉色圆珠组成，其中右侧珠串带有银色装饰隔珠",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "tanmujiang-90ba0ac20704-1",
+    "arm": "C1",
+    "category": "schema_failure",
+    "question": "画面中心主要展示的对象是什么？",
+    "expected": [
+      "手链",
+      "手串",
+      "手镯",
+      "腕饰",
+      "bracelet"
+    ],
+    "answer": {},
+    "format_errors": [
+      "invalid_observation_fields"
+    ],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-3",
+    "arm": "C1",
+    "category": "schema_failure",
+    "question": "画面中是否出现真人的手或手腕？",
+    "expected": false,
+    "answer": {},
+    "format_errors": [
+      "unknown_route_evidence"
+    ],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "sequence-f53ce103eebc-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "白"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "plain white",
+      "answer": "画面主要背景是纯白色",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "x-1432338272252928005-3eca7229b236-1",
+    "arm": "C1",
+    "category": "subject_focus_ambiguity_requires_review",
+    "question": "画面中心主要展示的对象是什么？",
+    "expected": [
+      "手链",
+      "手串",
+      "手镯",
+      "腕饰",
+      "bracelet"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "rough light blue-green mineral rock with brownish patches on upper part",
+      "answer": "画面中心主要展示的对象是带有棕褐色斑块的浅蓝绿色粗糙矿物岩石",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "x-2098131365468262541-1255291b603a-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "白"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "plain white",
+      "answer": "画面主要背景是纯白色",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  },
+  {
+    "case_id": "puravida-65102caa4412-2",
+    "arm": "C1",
+    "category": "English_color_not_in_frozen_Chinese_aliases",
+    "question": "画面主要背景是什么颜色？",
+    "expected": [
+      "白"
+    ],
+    "answer": {
+      "status": "answered",
+      "value": "plain light gray",
+      "answer": "画面主要背景是浅灰色",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "format_errors": [],
+    "review": "primary assistant diagnostic, not independent adjudication; frozen scores unchanged"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "component_diagram_position",
+      "value": "组件拆解示意位于汽车广告的右侧",
+      "region": "图片右侧区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

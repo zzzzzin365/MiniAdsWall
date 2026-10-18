@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "PeacefulMeKT",
+  "quote": null,
+  "answer": "因缺乏原图真人手或手腕的明确观察证据，hand_present字段为null，来源记录署名为PeacefulMeKT。",
+  "image_citations": [
+    "image-016"
+  ],
+  "text_citations": [
+    "ctx-3ab3cd362393d485"
+  ]
+}

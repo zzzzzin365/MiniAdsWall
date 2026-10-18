@@ -1,0 +1,2188 @@
+[
+  {
+    "review_id": "review-001",
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "response": {
+      "status": "answered",
+      "value": "视频+图片〔封面图〕",
+      "answer": "右侧视频组件的箭头指向的素材说明完整为“视频+图片〔封面图〕”",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "视频+图片",
+      "视频＋图片",
+      "视频和图片"
+    ],
+    "support_region": "右上第二行箭头终点",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-002",
+    "case_id": "x-marketing-kb-5",
+    "asset_id": "x-marketing-kb",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": true,
+    "support_region": "中部数据仓库框",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-003",
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "未提供页面顶部大标题颜色的相关信息，无法回答",
+      "source_ids": []
+    },
+    "expected": [
+      "红",
+      "red"
+    ],
+    "support_region": "页顶大字",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-004",
+    "case_id": "xhs-duo-2-2",
+    "asset_id": "xhs-duo-2",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "response": {
+      "status": "answered",
+      "value": 2,
+      "answer": "这张封面里一共有2只猫头鹰角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "2",
+      "两",
+      "二"
+    ],
+    "support_region": "底部左右两只角色",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-005",
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "response": {
+      "status": "answered",
+      "value": 3,
+      "answer": "正文用数字编号列出了3条建议",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "3",
+      "三"
+    ],
+    "support_region": "正文编号1、2、3",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-006",
+    "case_id": "xhs-duo-2-1",
+    "asset_id": "xhs-duo-2",
+    "question": "封面底部的品牌角色是什么颜色的什么动物？",
+    "response": {
+      "status": "answered",
+      "value": "绿色的猫头鹰",
+      "answer": "封面底部的品牌角色是绿色的猫头鹰",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green"
+    ],
+    "support_region": "下半幅绿色猫头鹰",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-007",
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及多邻国采用相关方法后的真实年度销量，无法回答。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": null,
+    "support_region": "作者观点页无真实销量数据",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-008",
+    "case_id": "xhs-duo-2-3",
+    "asset_id": "xhs-duo-2",
+    "question": "头上贴着创可贴的是左边还是右边的角色？",
+    "response": {
+      "status": "answered",
+      "value": "右边",
+      "answer": "头上贴着创可贴的是右边的角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-009",
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "未提及多邻国采用相关方法后的真实年度销量",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": null,
+    "support_region": "作者观点页无真实销量数据",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-010",
+    "case_id": "xhs-duo-1-3",
+    "asset_id": "xhs-duo-1",
+    "question": "顶部紫色圆圈里的白色箭头朝哪个方向？",
+    "response": {
+      "status": "answered",
+      "value": "向左下",
+      "answer": "顶部紫色圆圈里的白色箭头朝向左下",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "左下",
+      "下左",
+      "southwest"
+    ],
+    "support_region": "页顶右侧紫圆箭头",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-011",
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "response": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了营销分析",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "营销分析"
+    ],
+    "support_region": "页顶正中标签",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-012",
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "这张图主要是流程示意图",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "流程",
+      "示意",
+      "flow"
+    ],
+    "support_region": "整页节点与连线",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-013",
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "这张图主要是流程示意图",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "流程",
+      "示意",
+      "flow"
+    ],
+    "support_region": "整页节点与连线",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-014",
+    "case_id": "xhs-duo-2-5",
+    "asset_id": "xhs-duo-2",
+    "question": "左边那只猫头鹰的头上是否贴着创可贴？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "左边那只猫头鹰的头上没有贴着创可贴",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": false,
+    "support_region": "左侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-015",
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "response": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名是@有好CASE",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "有好case"
+    ],
+    "support_region": "右下角白色署名",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-016",
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": true,
+    "support_region": "右侧营销组件下的子条目",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-017",
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及该活动的真实ROAS，无法回答",
+      "source_ids": []
+    },
+    "expected": null,
+    "support_region": "封面无活动消耗与营收",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-018",
+    "case_id": "xhs-duo-1-3",
+    "asset_id": "xhs-duo-1",
+    "question": "顶部紫色圆圈里的白色箭头朝哪个方向？",
+    "response": {
+      "status": "answered",
+      "value": "向左下",
+      "answer": "顶部紫色圆圈里的白色箭头朝向左下",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "左下",
+      "下左",
+      "southwest"
+    ],
+    "support_region": "页顶右侧紫圆箭头",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-019",
+    "case_id": "zhihu-components-1",
+    "asset_id": "zhihu-components",
+    "question": "左侧汽车广告的品牌叫什么？",
+    "response": {
+      "status": "answered",
+      "value": "蔚来",
+      "answer": "左侧汽车广告的品牌为蔚来",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "蔚来",
+      "nio"
+    ],
+    "support_region": "左侧顶部品牌标识",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-020",
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有图片证据未提供该活动真实ROAS的相关信息，无法回答",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": null,
+    "support_region": "封面无活动消耗与营收",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-021",
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及右侧视频组件箭头指向的素材说明内容",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "视频+图片",
+      "视频＋图片",
+      "视频和图片"
+    ],
+    "support_region": "右上第二行箭头终点",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-022",
+    "case_id": "zhihu-components-4",
+    "asset_id": "zhihu-components",
+    "question": "左侧最前方汽车的车身主要是什么颜色？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定左侧最前方汽车的车身主要颜色",
+      "source_ids": []
+    },
+    "expected": [
+      "绿",
+      "green",
+      "薄荷"
+    ],
+    "support_region": "左侧照片最前车身",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-023",
+    "case_id": "x-marketing-kb-4",
+    "asset_id": "x-marketing-kb",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "response": {
+      "status": "answered",
+      "value": "右侧",
+      "answer": "YOU / REVIEW区域位于整体画面的右侧",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "下半幅右侧人工审阅区",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-024",
+    "case_id": "x-marketing-kb-4",
+    "asset_id": "x-marketing-kb",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "YOU / REVIEW区域位于整体画面的右侧",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "下半幅右侧人工审阅区",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-025",
+    "case_id": "xhs-duo-2-3",
+    "asset_id": "xhs-duo-2",
+    "question": "头上贴着创可贴的是左边还是右边的角色？",
+    "response": {
+      "status": "answered",
+      "value": "右边",
+      "answer": "头上贴着创可贴的是右边的角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-026",
+    "case_id": "xhs-duo-2-5",
+    "asset_id": "xhs-duo-2",
+    "question": "左边那只猫头鹰的头上是否贴着创可贴？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据无法确认左边猫头鹰头上是否贴着创可贴",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": false,
+    "support_region": "左侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-027",
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据无法得知该活动的真实ROAS",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": null,
+    "support_region": "封面无活动消耗与营收",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-028",
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": true,
+    "support_region": "右侧营销组件下的子条目",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-029",
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "response": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了营销分析",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "营销分析"
+    ],
+    "support_region": "页顶正中标签",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-030",
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要颜色为红色",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "红",
+      "red"
+    ],
+    "support_region": "页顶大字",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-031",
+    "case_id": "xhs-duo-2-1",
+    "asset_id": "xhs-duo-2",
+    "question": "封面底部的品牌角色是什么颜色的什么动物？",
+    "response": {
+      "status": "answered",
+      "value": "绿色的猫头鹰",
+      "answer": "封面底部的品牌角色是绿色的猫头鹰",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green"
+    ],
+    "support_region": "下半幅绿色猫头鹰",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-032",
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了营销按钮（行动按钮组件）",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": true,
+    "support_region": "右侧营销组件下的子条目",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-033",
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未提供该蔚来EC6汽车今天的实际成交价相关信息",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": null,
+    "support_region": "历史宣传不是当前成交价",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-034",
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "response": {
+      "status": "answered",
+      "value": "营销分析",
+      "answer": "顶部三个标签里中间的标签写了营销分析",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "营销分析"
+    ],
+    "support_region": "页顶正中标签",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-035",
+    "case_id": "x-marketing-kb-5",
+    "asset_id": "x-marketing-kb",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "DATA WAREHOUSE框里未明确出现spend、clicks、leads这三个词",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": true,
+    "support_region": "中部数据仓库框",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-036",
+    "case_id": "x-marketing-kb-4",
+    "asset_id": "x-marketing-kb",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "response": null,
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "下半幅右侧人工审阅区",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-037",
+    "case_id": "zhihu-components-4",
+    "asset_id": "zhihu-components",
+    "question": "左侧最前方汽车的车身主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "浅绿色",
+      "answer": "左侧最前方汽车的车身主要为浅绿色",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green",
+      "薄荷"
+    ],
+    "support_region": "左侧照片最前车身",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-038",
+    "case_id": "zhihu-components-5",
+    "asset_id": "zhihu-components",
+    "question": "右侧营销组件下是否明确列出了行动按钮组件？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "右侧营销组件下明确列出了行动按钮组件",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": true,
+    "support_region": "右侧营销组件下的子条目",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-039",
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及多邻国采用相关方法后的真实年度销量，无法回答该问题",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": null,
+    "support_region": "作者观点页无真实销量数据",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-040",
+    "case_id": "zhihu-components-1",
+    "asset_id": "zhihu-components",
+    "question": "左侧汽车广告的品牌叫什么？",
+    "response": {
+      "status": "answered",
+      "value": "蔚来汽车",
+      "answer": "左侧汽车广告的品牌是蔚来汽车",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "蔚来",
+      "nio"
+    ],
+    "support_region": "左侧顶部品牌标识",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-041",
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及右下角作者署名的相关内容，无法回答。",
+      "source_ids": []
+    },
+    "expected": [
+      "有好case"
+    ],
+    "support_region": "右下角白色署名",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-042",
+    "case_id": "x-marketing-kb-3",
+    "asset_id": "x-marketing-kb",
+    "question": "左上角最顶部的英文标题是什么？",
+    "response": {
+      "status": "answered",
+      "value": "SECOND BRAIN FOR MARKETING",
+      "answer": "左上角最顶部的英文标题是SECOND BRAIN FOR MARKETING",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "second brain for marketing"
+    ],
+    "support_region": "左上角第一行英文",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-043",
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "整张流程图的背景主要是黑色",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "黑",
+      "深灰",
+      "black"
+    ],
+    "support_region": "整页深色底",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-044",
+    "case_id": "x-marketing-kb-3",
+    "asset_id": "x-marketing-kb",
+    "question": "左上角最顶部的英文标题是什么？",
+    "response": {
+      "status": "answered",
+      "value": "SECOND BRAIN FOR MARKETING",
+      "answer": "左上角最顶部的英文标题是SECOND BRAIN FOR MARKETING",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "second brain for marketing"
+    ],
+    "support_region": "左上角第一行英文",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-045",
+    "case_id": "zhihu-components-4",
+    "asset_id": "zhihu-components",
+    "question": "左侧最前方汽车的车身主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "浅绿色",
+      "answer": "左侧最前方汽车的车身主要是浅绿色",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green",
+      "薄荷"
+    ],
+    "support_region": "左侧照片最前车身",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-046",
+    "case_id": "xhs-duo-1-3",
+    "asset_id": "xhs-duo-1",
+    "question": "顶部紫色圆圈里的白色箭头朝哪个方向？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定，提供的证据未提及顶部紫色圆圈里白色箭头的方向相关内容",
+      "source_ids": []
+    },
+    "expected": [
+      "左下",
+      "下左",
+      "southwest"
+    ],
+    "support_region": "页顶右侧紫圆箭头",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-047",
+    "case_id": "xhs-duo-2-5",
+    "asset_id": "xhs-duo-2",
+    "question": "左边那只猫头鹰的头上是否贴着创可贴？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "左边那只猫头鹰的头上没有贴着创可贴",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": false,
+    "support_region": "左侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-048",
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据无法确定组件拆解示意的位置，无法回答该问题",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右半幅组件示意",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-049",
+    "case_id": "xhs-duo-2-3",
+    "asset_id": "xhs-duo-2",
+    "question": "头上贴着创可贴的是左边还是右边的角色？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图片中未显示角色头上贴创可贴，无法判断。",
+      "source_ids": []
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-050",
+    "case_id": "zhihu-components-4",
+    "asset_id": "zhihu-components",
+    "question": "左侧最前方汽车的车身主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "浅绿色",
+      "answer": "左侧最前方汽车的车身主要为浅绿色",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green",
+      "薄荷"
+    ],
+    "support_region": "左侧照片最前车身",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-051",
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未提供该汽车今天实际成交价的相关信息",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": null,
+    "support_region": "历史宣传不是当前成交价",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-052",
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "response": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名是@有好CASE",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "有好case"
+    ],
+    "support_region": "右下角白色署名",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-053",
+    "case_id": "x-marketing-kb-5",
+    "asset_id": "x-marketing-kb",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "DATA WAREHOUSE框里明确出现了spend、clicks、leads这三个词",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": true,
+    "support_region": "中部数据仓库框",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-054",
+    "case_id": "xhs-duo-2-2",
+    "asset_id": "xhs-duo-2",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "response": {
+      "status": "answered",
+      "value": 2,
+      "answer": "这张封面里一共有2只猫头鹰角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "2",
+      "两",
+      "二"
+    ],
+    "support_region": "底部左右两只角色",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-055",
+    "case_id": "xhs-duo-1-5",
+    "asset_id": "xhs-duo-1",
+    "question": "这张建议总结页里是否有彩色汽车照片？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "这张建议总结页里没有彩色汽车照片",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": false,
+    "support_region": "整页是标题与文字段落",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-056",
+    "case_id": "xhs-duo-1-5",
+    "asset_id": "xhs-duo-1",
+    "question": "这张建议总结页里是否有彩色汽车照片？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "这张建议总结页里没有彩色汽车照片",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": false,
+    "support_region": "整页是标题与文字段落",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-057",
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要是红色",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "红",
+      "red"
+    ],
+    "support_region": "页顶大字",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-058",
+    "case_id": "xhs-duo-1-6",
+    "asset_id": "xhs-duo-1",
+    "question": "多邻国采用这些方法后的真实年度销量是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及多邻国采用相关方法后的真实年度销量",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": null,
+    "support_region": "作者观点页无真实销量数据",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-059",
+    "case_id": "xhs-duo-1-1",
+    "asset_id": "xhs-duo-1",
+    "question": "页面顶部大标题主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "红色",
+      "answer": "页面顶部大标题主要是红色",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "红",
+      "red"
+    ],
+    "support_region": "页顶大字",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-060",
+    "case_id": "xhs-duo-2-2",
+    "asset_id": "xhs-duo-2",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "response": {
+      "status": "answered",
+      "value": 2,
+      "answer": "这张封面里一共有2只猫头鹰角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "2",
+      "两",
+      "二"
+    ],
+    "support_region": "底部左右两只角色",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-061",
+    "case_id": "x-marketing-kb-3",
+    "asset_id": "x-marketing-kb",
+    "question": "左上角最顶部的英文标题是什么？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定左上角最顶部的英文标题，提供的证据未提及相关内容",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "second brain for marketing"
+    ],
+    "support_region": "左上角第一行英文",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-062",
+    "case_id": "zhihu-components-1",
+    "asset_id": "zhihu-components",
+    "question": "左侧汽车广告的品牌叫什么？",
+    "response": {
+      "status": "answered",
+      "value": "蔚来",
+      "answer": "左侧汽车广告的品牌是蔚来",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "蔚来",
+      "nio"
+    ],
+    "support_region": "左侧顶部品牌标识",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-063",
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "response": {
+      "status": "answered",
+      "value": "流程示意图",
+      "answer": "这张图主要是流程示意图",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "流程",
+      "示意",
+      "flow"
+    ],
+    "support_region": "整页节点与连线",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-064",
+    "case_id": "x-marketing-kb-2",
+    "asset_id": "x-marketing-kb",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "response": {
+      "status": "answered",
+      "value": "流程示意图",
+      "answer": "这张图主要是流程示意图",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "流程",
+      "示意",
+      "flow"
+    ],
+    "support_region": "整页节点与连线",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-065",
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "response": {
+      "status": "answered",
+      "value": "右侧",
+      "answer": "组件拆解示意位于汽车广告的右边",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右半幅组件示意",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-066",
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定该流程图的背景主要颜色，现有证据未提及相关内容",
+      "source_ids": []
+    },
+    "expected": [
+      "黑",
+      "深灰",
+      "black"
+    ],
+    "support_region": "整页深色底",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-067",
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定，缺少图片背景颜色的相关观测信息",
+      "source_ids": []
+    },
+    "expected": [
+      "黑",
+      "深灰",
+      "black"
+    ],
+    "support_region": "整页深色底",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-068",
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未明确右侧视频组件箭头指向的素材完整说明内容，无法回答",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "视频+图片",
+      "视频＋图片",
+      "视频和图片"
+    ],
+    "support_region": "右上第二行箭头终点",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-069",
+    "case_id": "x-marketing-kb-6",
+    "asset_id": "x-marketing-kb",
+    "question": "搭建作者这套系统实际花了多少钱？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及搭建该系统的花费，无法回答",
+      "source_ids": []
+    },
+    "expected": null,
+    "support_region": "流程图不提供采购账单",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-070",
+    "case_id": "x-marketing-kb-6",
+    "asset_id": "x-marketing-kb",
+    "question": "搭建作者这套系统实际花了多少钱？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图片中未显示搭建这套系统的花费相关信息，无法得知具体金额",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": null,
+    "support_region": "流程图不提供采购账单",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-071",
+    "case_id": "xhs-duo-1-5",
+    "asset_id": "xhs-duo-1",
+    "question": "这张建议总结页里是否有彩色汽车照片？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "这张建议总结页里没有彩色汽车照片",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": false,
+    "support_region": "整页是标题与文字段落",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-072",
+    "case_id": "xhs-duo-1-4",
+    "asset_id": "xhs-duo-1",
+    "question": "右下角的作者署名写的是什么？",
+    "response": {
+      "status": "answered",
+      "value": "@有好CASE",
+      "answer": "右下角的作者署名是@有好CASE",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "有好case"
+    ],
+    "support_region": "右下角白色署名",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-073",
+    "case_id": "zhihu-components-1",
+    "asset_id": "zhihu-components",
+    "question": "左侧汽车广告的品牌叫什么？",
+    "response": {
+      "status": "answered",
+      "value": "蔚来",
+      "answer": "左侧汽车广告的品牌是蔚来",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "蔚来",
+      "nio"
+    ],
+    "support_region": "左侧顶部品牌标识",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-074",
+    "case_id": "xhs-duo-1-3",
+    "asset_id": "xhs-duo-1",
+    "question": "顶部紫色圆圈里的白色箭头朝哪个方向？",
+    "response": {
+      "status": "answered",
+      "value": "左下方",
+      "answer": "顶部紫色圆圈里的白色箭头朝左下方",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "左下",
+      "下左",
+      "southwest"
+    ],
+    "support_region": "页顶右侧紫圆箭头",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-075",
+    "case_id": "x-marketing-kb-1",
+    "asset_id": "x-marketing-kb",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "response": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "整张流程图的背景主要是黑色",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "黑",
+      "深灰",
+      "black"
+    ],
+    "support_region": "整页深色底",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-076",
+    "case_id": "zhihu-components-3",
+    "asset_id": "zhihu-components",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定右侧视频组件的箭头指向的素材说明完整内容",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "视频+图片",
+      "视频＋图片",
+      "视频和图片"
+    ],
+    "support_region": "右上第二行箭头终点",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-077",
+    "case_id": "xhs-duo-2-3",
+    "asset_id": "xhs-duo-2",
+    "question": "头上贴着创可贴的是左边还是右边的角色？",
+    "response": {
+      "status": "answered",
+      "value": "右侧",
+      "answer": "头上贴着创可贴的是右侧的角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-078",
+    "case_id": "x-marketing-kb-6",
+    "asset_id": "x-marketing-kb",
+    "question": "搭建作者这套系统实际花了多少钱？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未提及搭建该系统的花费相关信息",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": null,
+    "support_region": "流程图不提供采购账单",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-079",
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未提供该汽车今天实际成交价的相关信息，无法得知具体金额",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": null,
+    "support_region": "历史宣传不是当前成交价",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-080",
+    "case_id": "xhs-duo-2-1",
+    "asset_id": "xhs-duo-2",
+    "question": "封面底部的品牌角色是什么颜色的什么动物？",
+    "response": {
+      "status": "answered",
+      "value": "绿色的猫头鹰",
+      "answer": "封面底部的品牌角色是绿色的猫头鹰",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green"
+    ],
+    "support_region": "下半幅绿色猫头鹰",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-081",
+    "case_id": "xhs-duo-1-5",
+    "asset_id": "xhs-duo-1",
+    "question": "这张建议总结页里是否有彩色汽车照片？",
+    "response": {
+      "status": "answered",
+      "value": false,
+      "answer": "这张建议总结页里没有彩色汽车照片",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": false,
+    "support_region": "整页是标题与文字段落",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-082",
+    "case_id": "x-marketing-kb-4",
+    "asset_id": "x-marketing-kb",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据无法确定YOU / REVIEW区域位于整体画面的左侧还是右侧",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "下半幅右侧人工审阅区",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-083",
+    "case_id": "x-marketing-kb-6",
+    "asset_id": "x-marketing-kb",
+    "question": "搭建作者这套系统实际花了多少钱？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及搭建该系统的花费金额，无法回答。",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": null,
+    "support_region": "流程图不提供采购账单",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-084",
+    "case_id": "x-marketing-kb-5",
+    "asset_id": "x-marketing-kb",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "DATA WAREHOUSE框里明确出现了spend、clicks、leads这三个词",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": true,
+    "support_region": "中部数据仓库框",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-085",
+    "case_id": "xhs-duo-2-4",
+    "asset_id": "xhs-duo-2",
+    "question": "顶部三个标签里中间的标签写了什么？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定顶部三个标签里中间的标签内容，现有证据未提及相关信息",
+      "source_ids": []
+    },
+    "expected": [
+      "营销分析"
+    ],
+    "support_region": "页顶正中标签",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-086",
+    "case_id": "xhs-duo-2-5",
+    "asset_id": "xhs-duo-2",
+    "question": "左边那只猫头鹰的头上是否贴着创可贴？",
+    "response": null,
+    "expected": false,
+    "support_region": "左侧角色头部",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-087",
+    "case_id": "xhs-duo-2-2",
+    "asset_id": "xhs-duo-2",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "response": {
+      "status": "answered",
+      "value": 2,
+      "answer": "这张封面里一共有2只猫头鹰角色",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "2",
+      "两",
+      "二"
+    ],
+    "support_region": "底部左右两只角色",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-088",
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "response": {
+      "status": "answered",
+      "value": 3,
+      "answer": "正文用数字编号列出了3条建议",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "3",
+      "三"
+    ],
+    "support_region": "正文编号1、2、3",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-089",
+    "case_id": "x-marketing-kb-3",
+    "asset_id": "x-marketing-kb",
+    "question": "左上角最顶部的英文标题是什么？",
+    "response": {
+      "status": "answered",
+      "value": "SECOND BRAIN FOR MARKETING",
+      "answer": "左上角最顶部的英文标题是SECOND BRAIN FOR MARKETING",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "expected": [
+      "second brain for marketing"
+    ],
+    "support_region": "左上角第一行英文",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-090",
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "response": {
+      "status": "answered",
+      "value": "右侧",
+      "answer": "组件拆解示意位于汽车广告的右边",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右半幅组件示意",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-091",
+    "case_id": "zhihu-components-6",
+    "asset_id": "zhihu-components",
+    "question": "图中这款汽车今天的实际成交价是多少人民币？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从图中得知这款汽车今天的实际成交价",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": null,
+    "support_region": "历史宣传不是当前成交价",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-092",
+    "case_id": "zhihu-components-2",
+    "asset_id": "zhihu-components",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "response": {
+      "status": "answered",
+      "value": true,
+      "answer": "组件拆解示意位于汽车广告的右侧",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "expected": [
+      "右",
+      "right"
+    ],
+    "support_region": "右半幅组件示意",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-093",
+    "case_id": "xhs-duo-2-1",
+    "asset_id": "xhs-duo-2",
+    "question": "封面底部的品牌角色是什么颜色的什么动物？",
+    "response": {
+      "status": "answered",
+      "value": "绿色的猫头鹰",
+      "answer": "封面底部的品牌角色是绿色的猫头鹰",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": [
+      "绿",
+      "green"
+    ],
+    "support_region": "下半幅绿色猫头鹰",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-094",
+    "case_id": "xhs-duo-2-6",
+    "asset_id": "xhs-duo-2",
+    "question": "这张案例封面对应活动的真实ROAS是多少？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该案例封面未显示活动真实ROAS的相关数据",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "expected": null,
+    "support_region": "封面无活动消耗与营收",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-095",
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "response": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "现有证据未提及正文用数字编号列出建议的数量，无法回答",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "3",
+      "三"
+    ],
+    "support_region": "正文编号1、2、3",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "review-096",
+    "case_id": "xhs-duo-1-2",
+    "asset_id": "xhs-duo-1",
+    "question": "正文用数字编号列出了几条建议？",
+    "response": {
+      "status": "answered",
+      "value": 3,
+      "answer": "正文用数字编号列出了3条建议",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "expected": [
+      "3",
+      "三"
+    ],
+    "support_region": "正文编号1、2、3",
+    "body_supported": null,
+    "value_correct": null,
+    "extra_false_claim": null,
+    "citation_supported": null,
+    "reviewer": null
+  }
+]

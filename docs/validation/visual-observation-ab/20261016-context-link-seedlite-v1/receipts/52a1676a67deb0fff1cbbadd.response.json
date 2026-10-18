@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "现有上下文与关联表中未提供对应来源的采集记录署名信息，无法确定publisher_record。",
+  "image_citations": [
+    "image-010"
+  ],
+  "text_citations": []
+}

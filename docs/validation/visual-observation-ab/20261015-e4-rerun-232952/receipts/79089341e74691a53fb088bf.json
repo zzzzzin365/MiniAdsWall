@@ -1,0 +1,12 @@
+{
+  "call_key": "20261015-e4-rerun-232952:preflight",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "79089341e74691a53fb088bf",
+  "input_sha256": "ef8768aaa102c8ef20f1fa49fccb629ed2140136b69998e5db2a74c7bb003908",
+  "status": "failed_or_submission_unknown",
+  "money": null,
+  "elapsed_ms": 1998.8300420809537,
+  "http_status": 429,
+  "provider_error_code": "SetLimitExceeded",
+  "error_type": "RuntimeError"
+}

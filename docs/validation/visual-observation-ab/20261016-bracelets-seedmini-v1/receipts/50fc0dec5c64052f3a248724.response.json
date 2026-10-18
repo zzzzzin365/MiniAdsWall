@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "image_content",
+      "value": "图中展示了佩戴在手腕上的红白色串珠编织手链、戴有金色戒指的手、手臂上的蝴蝶纹身、黑色上衣",
+      "region": "整个画面",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未在图中发现任何商品真实销量相关的文字或标识",
+      "region": "整个画面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息，无法从图中获取该商品的真实销量"
+  ]
+}

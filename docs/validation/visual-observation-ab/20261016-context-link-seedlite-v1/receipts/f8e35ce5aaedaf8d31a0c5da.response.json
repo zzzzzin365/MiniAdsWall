@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "背景为深青绿色纯色",
+      "region": "画面全部背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "display_subject",
+      "value": "展示佩戴着手串的人手及部分小臂",
+      "region": "画面中下部至右侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_wearing_position",
+      "value": "手串佩戴在人的手腕部位",
+      "region": "手腕区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_coil_count",
+      "value": "手串共缠绕手腕4圈",
+      "region": "手腕佩戴区域",
+      "state": "observed"
+    },
+    {
+      "key": "main_bead_color",
+      "value": "手串主珠为棕黄至深棕的木色",
+      "region": "手串主体区域",
+      "state": "observed"
+    },
+    {
+      "key": "main_bead_shape",
+      "value": "主珠为正圆形圆珠",
+      "region": "手串主体区域",
+      "state": "observed"
+    },
+    {
+      "key": "accent_bead_color",
+      "value": "手串点缀有少量深红色圆珠",
+      "region": "手串各圈间隔位置",
+      "state": "observed"
+    },
+    {
+      "key": "carved_pendant",
+      "value": "手串带有1枚浅棕色雕刻饰件，饰件上有祥云纹样",
+      "region": "手串靠近手腕内侧位置",
+      "state": "observed"
+    },
+    {
+      "key": "hand_skin_tone",
+      "value": "人手肤色为浅自然肤色",
+      "region": "手部及小臂区域",
+      "state": "observed"
+    },
+    {
+      "key": "hand_posture",
+      "value": "手部呈放松微曲姿态，手指自然舒展",
+      "region": "画面左侧手部区域",
+      "state": "observed"
+    },
+    {
+      "key": "extra_text_presence",
+      "value": "画面无清晰可读的额外文字",
+      "region": "全画面",
+      "state": "explicitly_absent"
+    }
+  ]
+}

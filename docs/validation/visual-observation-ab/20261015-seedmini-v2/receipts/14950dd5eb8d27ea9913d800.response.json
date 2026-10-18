@@ -1,0 +1,8 @@
+{
+  "status": "insufficient",
+  "value": null,
+  "answer": "现有证据无法确定组件拆解示意的位置，无法回答该问题",
+  "source_ids": [
+    "zhihu-components"
+  ]
+}

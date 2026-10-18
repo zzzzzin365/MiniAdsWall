@@ -1,0 +1,12 @@
+{
+  "source": "docs/validation/visual-observation-ab/20261016-context-link-seedlite-v1/initial-observations.json",
+  "source_sha256": "fa6d988056376ddaacd157f611c68ffd2723791c4384036b06f90f4969d61ae9",
+  "saved_copy_sha256": "fa6d988056376ddaacd157f611c68ffd2723791c4384036b06f90f4969d61ae9",
+  "model": [
+    "doubao-seed-2-0-lite-260428"
+  ],
+  "observations_equal": true,
+  "derived_E_checked_so_far": 55,
+  "E_D_exact_receipt_and_cost_match": true,
+  "status": "mid_run_check"
+}

@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "top_header_title",
+      "value": "页面最顶部左侧显示白色文字“SECOND BRAIN FOR MARKETING”，右侧显示白色文字“@shannholmberg”。",
+      "region": "页面顶部",
+      "state": "observed"
+    },
+    {
+      "key": "top_subtitle",
+      "value": "顶部标题下方显示白色文字“organize the files → connect the references → give agents what they need to complete the work”。",
+      "region": "页面顶部",
+      "state": "observed"
+    },
+    {
+      "key": "organize_section_label",
+      "value": "第一分区标题为“— 01 / ORGANIZE · a shared library with folders for the work you do”，其中“01 / ORGANIZE”为青绿色文字。",
+      "region": "01 / ORGANIZE分区",
+      "state": "observed"
+    },
+    {
+      "key": "left_folder_tree",
+      "value": "左侧为marketing/目录树结构，包含shared/、content/、seo/、campaigns/product-launch/等子文件夹，以及voice-dna.md、hooks.md等多个.md文件。",
+      "region": "01 / ORGANIZE分区左侧",
+      "state": "observed"
+    },
+    {
+      "key": "shared_files_block",
+      "value": "右侧“SHARED FILES”标题为青绿色，下方堆叠3个带虚线边框的文件框，框内列出company.md、customer.md、offer.md、positioning.md、voice.md、proof.md文件名。",
+      "region": "01 / ORGANIZE分区右侧",
+      "state": "observed"
+    },
+    {
+      "key": "agents_md_note",
+      "value": "SHARED FILES下方显示紫色文字“AGENTS .md”，其下白色文字为“where to read / save / ask for sign-off”。",
+      "region": "01 / ORGANIZE分区右下",
+      "state": "observed"
+    },
+    {
+      "key": "connect_section_label",
+      "value": "第二分区标题为“— 02 / CONNECT · references .md links to all three places”，其中“02 / CONNECT”为橙黄色文字。",
+      "region": "02 / CONNECT分区",
+      "state": "observed"
+    },
+    {
+      "key": "knowledge_base_block",
+      "value": "左侧“BRAIN / KNOWLEDGE BASE”标题为青绿色，下方虚线框内列出customer、offer、campaign brief、voice-dna.md、hooks.md、approved work，框下文字为“read the relevant files”。",
+      "region": "02 / CONNECT分区左侧",
+      "state": "observed"
+    },
+    {
+      "key": "data_warehouse_block",
+      "value": "中间“DATA WAREHOUSE”标题为青绿色，下方虚线框内标注campaign / asset / date，以及spend、clicks、leads、conversions + results，框下文字为“query previous performance”。",
+      "region": "02 / CONNECT分区中间",
+      "state": "observed"
+    },
+    {
+      "key": "moodboard_block",
+      "value": "右侧“MOODBOARD / BRAND BOOK”标题为橙黄色，下方虚线框内标注Figma / Paper、Aa type、三个白色方块、折线波形图，框下文字为“open designs + your feedback”。",
+      "region": "02 / CONNECT分区右侧",
+      "state": "observed"
+    },
+    {
+      "key": "use_section_label",
+      "value": "第三分区标题为“— 03 / USE · example: a launch page + social posts”，其中“03 / USE”为紫色文字。",
+      "region": "03 / USE分区",
+      "state": "observed"
+    },
+    {
+      "key": "your_task_block",
+      "value": "左侧“YOUR TASK”标题为青绿色，下方文字为“launch page + social posts”、“approved offer / audience / goal”，有箭头指向中间的简笔人脸图标。",
+      "region": "03 / USE分区左上",
+      "state": "observed"
+    },
+    {
+      "key": "agent_gathers_block",
+      "value": "右侧“AGENT GATHERS”标题为青绿色，下方文字为“brief + customer evidence”、“voice + hooks + performance”、“brand book + visual references”。",
+      "region": "03 / USE分区右上",
+      "state": "observed"
+    },
+    {
+      "key": "read_plan_node",
+      "value": "简笔人脸图标下方连接虚线框，框内文字为“READ + PLAN”，有箭头向下指向CREATE / CHECK区域。",
+      "region": "03 / USE分区中部",
+      "state": "observed"
+    },
+    {
+      "key": "create_check_blocks",
+      "value": "左侧“CREATE / CHECK”标题为青绿色，下方两个虚线框分别为launch page（含HEADLINE、HERO VISUAL、enquiry form、submit）和social post（含hook from hooks.md、campaign visual），框下文字为“saved to files”。",
+      "region": "03 / USE分区左下",
+      "state": "observed"
+    },
+    {
+      "key": "you_review_block",
+      "value": "右侧“YOU / REVIEW”标题为紫色，下方列出三个待勾选项：claims + offer、voice + design、links + form，下方文字为“approve or give feedback”，有箭头从social post指向该区域。",
+      "region": "03 / USE分区右下",
+      "state": "observed"
+    },
+    {
+      "key": "after_signoff_text",
+      "value": "分区下方显示青绿色文字“AFTER SIGN-OFF”，其后白色文字为“publish the approved work → check the live page + posts → collect results”。",
+      "region": "03 / USE分区底部",
+      "state": "observed"
+    },
+    {
+      "key": "save_back_section",
+      "value": "最底部分区标题为“— SAVE BACK · improve the sources used on the next task”，下方文字为“copy edits → voice-dna.md / hooks.md / examples”、“results → warehouse”、“design feedback → moodboard”，最底部文字为“markdown in GitHub / visual references in Figma or Paper / performance in the data warehouse”。",
+      "region": "页面最底部",
+      "state": "observed"
+    }
+  ]
+}

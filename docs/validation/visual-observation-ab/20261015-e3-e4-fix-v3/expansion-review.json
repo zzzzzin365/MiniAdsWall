@@ -1,0 +1,3089 @@
+{
+  "status": "needs_independent_near_duplicate_review_and_gold",
+  "images": 56,
+  "families": 27,
+  "family_leakage": false,
+  "annotator_instruction": "看原图标注可见事实；不使用风格/受众标签作事实答案；争议和模糊处标unclear。",
+  "assets": [
+    {
+      "asset_id": "tanmujiang-90ba0ac20704",
+      "family_id": "merchant-tanmujiang",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/tanmujiang-90ba0ac20704.jpg",
+      "sha256": "90ba0ac207044c86fb7f2c06c9a081ba2c7a22bea0bd7eea56e442e4d983733c",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "tanmujiang-d6bf87a8edde",
+      "family_id": "merchant-tanmujiang",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/tanmujiang-d6bf87a8edde.jpg",
+      "sha256": "d6bf87a8eddeb1799cfe0b3c1d334739af9e51d7ebc7b2466a28908ba33f8b38",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "tanmujiang-00eadca6d668",
+      "family_id": "merchant-tanmujiang",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/tanmujiang-00eadca6d668.png",
+      "sha256": "00eadca6d6685b1760a460dbec8b12187ed5e43cbf534415a7db62a83b534e2e",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "qi-flow-e1afb7538267",
+      "family_id": "merchant-qi-flow",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/qi-flow-e1afb7538267.jpg",
+      "sha256": "e1afb7538267c24b96eb7daba8e173ab61e002ccdf90c0b1c51a5655acd571f3",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "qi-flow-45e65886dac3",
+      "family_id": "merchant-qi-flow",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/qi-flow-45e65886dac3.jpg",
+      "sha256": "45e65886dac39674c684858509eadb07011497a5887debf049d568d4cf135b9d",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "eclipticjew-4a53a75982af",
+      "family_id": "merchant-eclipticjew",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/eclipticjew-4a53a75982af.jpg",
+      "sha256": "4a53a75982af80ae058562fa81005c2f13e4c9a0593b9b0d17d206e5d55f9fe3",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "eclipticjew-0298cc012daa",
+      "family_id": "merchant-eclipticjew",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/eclipticjew-0298cc012daa.jpg",
+      "sha256": "0298cc012daab61387e771237a051bc017787163aa4db78db45deaf0835c0498",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "eclipticjew-12cdbfbf2f2f",
+      "family_id": "merchant-eclipticjew",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/eclipticjew-12cdbfbf2f2f.jpg",
+      "sha256": "12cdbfbf2f2f4cba82dfeaafaed15dcbe13146aaa721966c522acd7c47743b29",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "miansai-9b0418515350",
+      "family_id": "merchant-miansai",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/miansai-9b0418515350.jpg",
+      "sha256": "9b0418515350dcbe0876e15285a14a6d9b99662f0c5c2ddb75792af5710d6874",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "miansai-376c7e52d12d",
+      "family_id": "merchant-miansai",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/miansai-376c7e52d12d.jpg",
+      "sha256": "376c7e52d12d776c46ae8dc2b7641204d1d124e245c6a3744b4e8d11f24c5151",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "miansai-d5e788cd254e",
+      "family_id": "merchant-miansai",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/miansai-d5e788cd254e.jpg",
+      "sha256": "d5e788cd254e96bae3fd40b3db2ef1c4f54420d9fc4a322feaa555690716014c",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "tinyrituals-40a45d7441d6",
+      "family_id": "merchant-tinyrituals",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/tinyrituals-40a45d7441d6.png",
+      "sha256": "40a45d7441d6a272e9f08adceec9fd5471f4dde07859c0b2f84caa8092be694d",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "tinyrituals-ec9b978c30ac",
+      "family_id": "merchant-tinyrituals",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/tinyrituals-ec9b978c30ac.png",
+      "sha256": "ec9b978c30acfa3f7ad143f792ed1bdb5826df54b2a85177656eb82e8cf5e1fa",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "energymuse-f965a98f6102",
+      "family_id": "merchant-energymuse",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/energymuse-f965a98f6102.png",
+      "sha256": "f965a98f6102656aadb0a3674318c51b3c9fee60c21ead953a18439173cd8496",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "energymuse-e439d77ecae1",
+      "family_id": "merchant-energymuse",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/energymuse-e439d77ecae1.png",
+      "sha256": "e439d77ecae1f62307de7872a5c49cfde87064d83f5645e9c1991fb6ed3db842",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "energymuse-a5cdf9f9b55c",
+      "family_id": "merchant-energymuse",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/energymuse-a5cdf9f9b55c.png",
+      "sha256": "a5cdf9f9b55c74487ab5c07d154aa2705e43f5ee6cf283628541d29bbb7d8daa",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "puravida-65102caa4412",
+      "family_id": "merchant-puravida",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/puravida-65102caa4412.jpg",
+      "sha256": "65102caa4412c6b51bf543ae7acc908b54de99fa658c4663a2a345c2cfd97235",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "puravida-e7f5cb3c7e6b",
+      "family_id": "merchant-puravida",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/puravida-e7f5cb3c7e6b.jpg",
+      "sha256": "e7f5cb3c7e6b8738b25e3c9a1eefa5831de3239061de6045b9d5dfa0857730c3",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "puravida-1fb32bc2cc4f",
+      "family_id": "merchant-puravida",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/puravida-1fb32bc2cc4f.jpg",
+      "sha256": "1fb32bc2cc4f9a1cfc98032fabaccd8fc5cad2deeaaa2a569fe06718daee46a2",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "koss-8ecb34a74194",
+      "family_id": "merchant-koss",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/koss-8ecb34a74194.jpg",
+      "sha256": "8ecb34a74194da0f698aa4556ccf7ba75a13fdefde49081983584c607d5a4b65",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "koss-859051e12b20",
+      "family_id": "merchant-koss",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/koss-859051e12b20.jpg",
+      "sha256": "859051e12b20457767805541515aa55edcde138130042e344a2be6e54021c62f",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "koss-1326387a2d0e",
+      "family_id": "merchant-koss",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/koss-1326387a2d0e.jpg",
+      "sha256": "1326387a2d0e0a26431f456f6843e668c53e7d97b9b6c155d4b98764be3839bc",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "stacks-steph-6a5d432e1894",
+      "family_id": "merchant-stacks-steph",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/stacks-steph-6a5d432e1894.jpg",
+      "sha256": "6a5d432e18949266fdfe76d5a68bbd80dc3f65fac0dafbd4fd5fdfa6eea0eed2",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "stacks-steph-9ffbcd169080",
+      "family_id": "merchant-stacks-steph",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/stacks-steph-9ffbcd169080.jpg",
+      "sha256": "9ffbcd169080f299c4f39b2ba8690683d5ade6398f32b70d4d6f5e54bcfd60dc",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "fahari-c0618befdc51",
+      "family_id": "merchant-fahari",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/fahari-c0618befdc51.jpg",
+      "sha256": "c0618befdc5160552193d6d39963b9c9cdb1450ff91be1ca8414e7bc27fc4821",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "fahari-2b2b529d273c",
+      "family_id": "merchant-fahari",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/fahari-2b2b529d273c.jpg",
+      "sha256": "2b2b529d273c776006deacc42af9d57793230f05df90ad8f4b20e560e84f546b",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "fahari-e6a46266514d",
+      "family_id": "merchant-fahari",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/fahari-e6a46266514d.jpg",
+      "sha256": "e6a46266514d7fecc8b61e90be7c7353eea34cd46bf8f098c965e546dd2b77d6",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "sequence-f53ce103eebc",
+      "family_id": "merchant-sequence",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/sequence-f53ce103eebc.jpg",
+      "sha256": "f53ce103eebcc764e49da59c541d92942ab27b5d04254ea743195c14c9d61d31",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "sequence-84bf4e4ac34e",
+      "family_id": "merchant-sequence",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/sequence-84bf4e4ac34e.jpg",
+      "sha256": "84bf4e4ac34e60995d529b78d904346c71b6ef4b70207f7be486e676212a74e5",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "sequence-26bac09f1f96",
+      "family_id": "merchant-sequence",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/sequence-26bac09f1f96.jpg",
+      "sha256": "26bac09f1f967e403497f8ae50e25407ce7413b87dd88223491e2ad68015507e",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-2109405151840854246-1babe3c86de0",
+      "family_id": "x-merchant-leresean",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-2109405151840854246-1babe3c86de0.jpg",
+      "sha256": "1babe3c86de01acc2c89fa33b9cead2bc87d1f706a573ce95f3615e75b2cab70",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-2109405151840854246-c246959e3ecc",
+      "family_id": "x-merchant-leresean",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-2109405151840854246-c246959e3ecc.jpg",
+      "sha256": "c246959e3ecc6e3372bf0a5f2a63971eff531b99e4676c7f298169a0aeb106ae",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1965401279863140778-972d114aa4bb",
+      "family_id": "x-merchant-ukrainian_art_",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1965401279863140778-972d114aa4bb.jpg",
+      "sha256": "972d114aa4bb9f98f57ed633656fd5b5522f44b4b2116dc6d73e1152415a0dc1",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1965401279863140778-ce447c39db2f",
+      "family_id": "x-merchant-ukrainian_art_",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1965401279863140778-ce447c39db2f.jpg",
+      "sha256": "ce447c39db2f7793840c8a77de6a2fe00f00c817dfa4aef083f58501f7a9c9bd",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-2007285619475591650-4be9a92e93eb",
+      "family_id": "x-merchant-junkyardblonde",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-2007285619475591650-4be9a92e93eb.jpg",
+      "sha256": "4be9a92e93eb0fa97b0e979e258bfea20a8581caad98f4d3f836e71fe4cd4d41",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1562488657482682368-b13c0c6acf93",
+      "family_id": "x-merchant-stillwallsstore",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1562488657482682368-b13c0c6acf93.jpg",
+      "sha256": "b13c0c6acf93f499887ca9be31d71538784add5a5e8b93f7c2070b799bf2bc53",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1562488657482682368-b7a55b95b5d2",
+      "family_id": "x-merchant-stillwallsstore",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1562488657482682368-b7a55b95b5d2.jpg",
+      "sha256": "b7a55b95b5d25a5eee330374b5d3fa980fa1321f05e7ca1ed8fe98beb40de6be",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1660996700172062721-906bb558f770",
+      "family_id": "x-merchant-263juta",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1660996700172062721-906bb558f770.jpg",
+      "sha256": "906bb558f770080e246d08ad11d567711df6d1df7a76e0c918846d5706a43caa",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1660996700172062721-40795958cb2a",
+      "family_id": "x-merchant-263juta",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1660996700172062721-40795958cb2a.jpg",
+      "sha256": "40795958cb2a7c6ce73193ac4e931caef95e852c61f98e63f23df2f505fd706c",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-2027810292218966399-7c25f83553ba",
+      "family_id": "x-merchant-natalyjewellery",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-2027810292218966399-7c25f83553ba.jpg",
+      "sha256": "7c25f83553ba534851e598eb686245cf644849bd7859aab4763f790b3acd7e07",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1448747411892051978-0c3ea1caeb4d",
+      "family_id": "x-merchant-shorelinestudi3",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1448747411892051978-0c3ea1caeb4d.jpg",
+      "sha256": "0c3ea1caeb4de8c5fed384666548b82f4cc179b0c52cf0eebd78b00919fd5934",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1432338272252928005-3eca7229b236",
+      "family_id": "x-merchant-branchlaquanya",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1432338272252928005-3eca7229b236.jpg",
+      "sha256": "3eca7229b236055de85b0d8acf51bdd21ed7de2bcd715895c44df69fcad8d468",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1541930309603807239-19a7e3bccda0",
+      "family_id": "x-merchant-peacefulmekt",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1541930309603807239-19a7e3bccda0.jpg",
+      "sha256": "19a7e3bccda06e194ca411bba6f3f6ac168f9df03fc4731208cbd016ba796e9a",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-1589021877405728769-ff599ce29b26",
+      "family_id": "x-merchant-peacefulmekt",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-1589021877405728769-ff599ce29b26.jpg",
+      "sha256": "ff599ce29b26593dd402cc7660e9e6ceb9334d7b698212ca1ceed2e29e49d9e9",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "x-2098131365468262541-1255291b603a",
+      "family_id": "x-merchant-sochicfinds",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/x-2098131365468262541-1255291b603a.jpg",
+      "sha256": "1255291b603a67a15e578f3b78e4c70ae09b09ee6d6d123201a8d6417e2dd20d",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6ac8cc200000000015014364-35faa1d92c3f",
+      "family_id": "xhs-merchant-5eccf3c0000000000101f5fb",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6ac8cc200000000015014364-35faa1d92c3f.webp",
+      "sha256": "35faa1d92c3f6c548ce626dcc6b6df07e74b8a746c173c2e47941fa691cda1f5",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6ac8cc200000000015014364-f68c74686f37",
+      "family_id": "xhs-merchant-5eccf3c0000000000101f5fb",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6ac8cc200000000015014364-f68c74686f37.webp",
+      "sha256": "f68c74686f37cede508929653f8a26a5b8a77f73a253b0a02e2eddc0a051ca3c",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+      "family_id": "xhs-merchant-69131cfd000000003700bb0c",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6acf32a60000000002010930-ee400326a2b4.webp",
+      "sha256": "ee400326a2b42f7785044f1e8d331a4924892b4aa086123de9ac9c94fdb17ea0",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6acf32a60000000002010930-ec9fc6c44d7c",
+      "family_id": "xhs-merchant-69131cfd000000003700bb0c",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6acf32a60000000002010930-ec9fc6c44d7c.webp",
+      "sha256": "ec9fc6c44d7c7b7db1b6b159e4f25155544db72d47c0dbded535ddadc082e1a3",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+      "family_id": "xhs-merchant-58c398af7fc5b80863c59fbf",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6acf1d4d000000001801096c-3a218f9c141d.webp",
+      "sha256": "3a218f9c141d2979f7f410ce56e2588ef5a9c53d5365f2c795f9c91b849e307f",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6acf1d4d000000001801096c-1c2ea0f50dcd",
+      "family_id": "xhs-merchant-58c398af7fc5b80863c59fbf",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6acf1d4d000000001801096c-1c2ea0f50dcd.webp",
+      "sha256": "1c2ea0f50dcd8a310490844dcec1d75b36ba68790e45821aa4a5417c1c5941f8",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+      "family_id": "xhs-merchant-625e98f10000000010007360",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6ad02942000000000200f5f5-8faa14d256dd.webp",
+      "sha256": "8faa14d256dd06f9156333d578d741281f054b4647d2ff0a0df146540aee62dc",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6ad02942000000000200f5f5-574da0ab0b9b",
+      "family_id": "xhs-merchant-625e98f10000000010007360",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6ad02942000000000200f5f5-574da0ab0b9b.webp",
+      "sha256": "574da0ab0b9bda32efec3a83ca7fde14fb07b34eb18d5f3fefa4cccde3ae55b0",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+      "family_id": "xhs-merchant-6a483933000000000f03bc03",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6acf752d000000001500a9c6-6f28bc97ccf9.webp",
+      "sha256": "6f28bc97ccf9de70d3bc4eb1dd96651885933438bec84dadf588b2bb1b2f547a",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6acf752d000000001500a9c6-655a0cf90b36",
+      "family_id": "xhs-merchant-6a483933000000000f03bc03",
+      "split": "test",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6acf752d000000001500a9c6-655a0cf90b36.webp",
+      "sha256": "655a0cf90b36e42625da2873e249da908db78bd540d700956cdf018793232228",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    },
+    {
+      "asset_id": "xhs-6ac75b0b000000000a02229c-00d26bfc1a86",
+      "family_id": "xhs-merchant-5b6daca2736c7f0001472267",
+      "split": "development",
+      "path": "/Users/admin/.agent-reach/collections/bracelet-ads-20261015-side/images/xhs-6ac75b0b000000000a02229c-00d26bfc1a86.webp",
+      "sha256": "00d26bfc1a868b221400bcb52853aedf2e1b2af7308dad14052e57f720019c76",
+      "duplicate_review": "pending",
+      "questions": [
+        {
+          "question": "画面中心主要展示的对象是什么？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面主要背景是什么颜色？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "画面中是否出现真人的手或手腕？",
+          "answer_contract": {
+            "value_type": "boolean",
+            "verification_scope": "visible"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        },
+        {
+          "question": "这张推广图对应商品的真实销量是多少？",
+          "answer_contract": {
+            "value_type": "text",
+            "verification_scope": "verified_business_fact"
+          },
+          "expected": null,
+          "answerable": null,
+          "support_region": null,
+          "annotation_status": "pending"
+        }
+      ],
+      "reviewer": null
+    }
+  ]
+}

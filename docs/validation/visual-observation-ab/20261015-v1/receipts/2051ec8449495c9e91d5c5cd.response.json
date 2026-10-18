@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "title_text",
+      "value": "SECOND BRAIN FOR MARKETING",
+      "region": "top left",
+      "state": "observed"
+    },
+    {
+      "key": "author_handle",
+      "value": "@shannholmberg",
+      "region": "top right",
+      "state": "observed"
+    },
+    {
+      "key": "organize_text",
+      "value": "organize the files → connect the references → give agents what they need to complete the work",
+      "region": "top below title",
+      "state": "observed"
+    },
+    {
+      "key": "section_01_title",
+      "value": "01 / ORGANIZE",
+      "region": "upper left section header",
+      "state": "observed"
+    },
+    {
+      "key": "marketing_folder_structure",
+      "value": "marketing/ has subfolders shared/, seo/, campaigns/product-launch/; shared/ has content/ with .md files like voice-dna.md, hooks.md",
+      "region": "left upper area",
+      "state": "observed"
+    },
+    {
+      "key": "shared_files_list",
+      "value": "shared files include company.md, customer.md, offer.md, positioning.md, voice.md, proof.md",
+      "region": "upper right area",
+      "state": "observed"
+    },
+    {
+      "key": "agents_md_text",
+      "value": "AGENTS .md, description: where to read / save / ask for sign-off",
+      "region": "upper right below shared files",
+      "state": "observed"
+    },
+    {
+      "key": "section_02_title",
+      "value": "02 / CONNECT",
+      "region": "middle section header",
+      "state": "observed"
+    },
+    {
+      "key": "brain_knowledge_base",
+      "value": "BRAIN / KNOWLEDGE BASE holds customer, offer, campaign brief, voice-dna.md, hooks.md, approved work",
+      "region": "middle left",
+      "state": "observed"
+    },
+    {
+      "key": "data_warehouse_content",
+      "value": "DATA WAREHOUSE holds campaign/asset/date, spend, clicks, leads, conversions, results; function: query previous performance",
+      "region": "middle center",
+      "state": "observed"
+    },
+    {
+      "key": "moodboard_brand_book",
+      "value": "MOODBOARD / BRAND BOOK is Figma/Paper with Aa type, icons; function: open designs + your feedback",
+      "region": "middle right",
+      "state": "observed"
+    },
+    {
+      "key": "section_03_title",
+      "value": "03 / USE",
+      "region": "lower middle section header",
+      "state": "observed"
+    },
+    {
+      "key": "your_task_text",
+      "value": "YOUR TASK: launch page + social posts, approved offer / audience / goal",
+      "region": "lower left",
+      "state": "observed"
+    },
+    {
+      "key": "agent_gathers_text",
+      "value": "AGENT GATHERS: brief + customer evidence, voice + hooks + performance, brand book + visual references",
+      "region": "lower right",
+      "state": "observed"
+    },
+    {
+      "key": "create_check_content",
+      "value": "CREATE / CHECK: launch page with headline, hero visual, enquiry form; social post with hook from hooks.md, campaign visual",
+      "region": "lower left",
+      "state": "observed"
+    },
+    {
+      "key": "you_review_text",
+      "value": "YOU / REVIEW: items to approve: claims + offer, voice + design, links + form; action: approve or give feedback",
+      "region": "lower right",
+      "state": "observed"
+    },
+    {
+      "key": "after_sign_off_text",
+      "value": "AFTER SIGN-OFF: publish approved work → check live page + posts → collect results",
+      "region": "bottom left",
+      "state": "observed"
+    },
+    {
+      "key": "save_back_text",
+      "value": "SAVE BACK: copy edits to voice-dna.md/hooks.md/examples, results to warehouse, design feedback to moodboard",
+      "region": "bottom below after sign-off",
+      "state": "observed"
+    }
+  ]
+}

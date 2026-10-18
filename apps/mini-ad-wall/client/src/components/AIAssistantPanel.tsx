@@ -9,6 +9,19 @@ const TERMINAL = new Set(['succeeded', 'failed', 'cancelled', 'timed_out', 'inte
 const LABELS: Record<string, string> = { queued: '等待执行', running: '正在处理', preflight: '正在检查请求', model: '正在生成回复',
     stopping: '正在停止并清理任务', succeeded: '已完成', failed: '执行失败', cancelled: '已取消', timed_out: '执行超时', interrupted: '任务中断', waiting_approval: '等待确认' };
 
+function AssistantText({ text }: { text: string }) {
+    const inline = (value: string) => value.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+        part.startsWith('**') && part.endsWith('**') ? <strong key={i}>{part.slice(2, -2)}</strong> : part);
+    return <div className="assistant-answer">{text.replace(/([。；;])(?=\S)/g, '$1\n').replace(/([^\n])\s*(窗口总计|缺失数据|统计范围|参考依据)[：:]/g, '$1\n$2：').split(/\n/).map((line, i) => {
+        if (!line.trim()) return null;
+        const heading = line.match(/^#{1,6}\s+(.+)/);
+        if (heading) return <h4 key={i}>{inline(heading[1])}</h4>;
+        const value = line.replace(/^\s*[-*]\s+/, '');
+        const label = value.match(/^(建议|怎么做|为什么|看什么|统计范围|参考依据)[：:](.*)/);
+        return <p key={i} className={label?.[1] === '建议' ? 'assistant-answer-summary' : undefined}>{label ? <><strong>{label[1]}：</strong>{inline(label[2])}</> : inline(value)}</p>;
+    })}</div>;
+}
+
 function AIAssistantPanel({ ads }: { ads: Ad[] }) {
     const {measures,range}=usePerformance();
     const [open, setOpen] = useState(false);
@@ -60,6 +73,32 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
         suppressClick.current = drag.current.moved;
         drag.current = null;
         setDragging(false);
+        if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    const [panelSize, setPanelSize] = useState<{ width: number; height: number }>();
+    const resizing = useRef<{ edge: string; x: number; y: number; width: number; height: number; right: number; bottom: number }>();
+    function beginResize(event: React.PointerEvent<HTMLDivElement>, edge: string) {
+        if (event.button !== 0) return;
+        const panel = event.currentTarget.parentElement!.getBoundingClientRect();
+        const rect = shell.current!.getBoundingClientRect();
+        resizing.current = { edge, x: event.clientX, y: event.clientY, width: panel.width, height: panel.height,
+            right: window.innerWidth - rect.right, bottom: window.innerHeight - rect.bottom };
+        event.preventDefault();
+        event.stopPropagation();
+        event.currentTarget.setPointerCapture(event.pointerId);
+    }
+    function resizePanel(event: React.PointerEvent<HTMLDivElement>) {
+        const r = resizing.current;
+        if (!r) return;
+        const dx = event.clientX - r.x, dy = event.clientY - r.y;
+        const width = Math.max(420, Math.min(window.innerWidth - 24, r.width + (r.edge.includes('w') ? -dx : r.edge.includes('e') ? dx : 0)));
+        const height = Math.max(460, Math.min(window.innerHeight - 180, r.height + (r.edge.includes('n') ? -dy : r.edge.includes('s') ? dy : 0)));
+        setPanelSize({ width, height });
+        setPosition({ right: Math.max(12, Math.min(window.innerWidth - width - 12, r.right - (r.edge.includes('e') ? width - r.width : 0))),
+            bottom: Math.max(12, r.bottom - (r.edge.includes('s') ? height - r.height : 0)) });
+    }
+    function finishResize(event: React.PointerEvent<HTMLDivElement>) {
+        resizing.current = undefined;
         if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
     }
     const [input, setInput] = useState('');
@@ -207,7 +246,7 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
     }
     return (
         <div ref={shell} className={`assistant-shell ${open ? 'open' : ''} ${dragging ? 'dragging' : ''}`} style={position ?? undefined}>
-            {open && <section className="assistant-panel" aria-label="广告运营助手">
+            {open && <section className="assistant-panel" aria-label="广告运营助手" title="拖动任意边缘或角落调整大小" style={panelSize}>
                 <div className="assistant-header" title="拖拽移动助手" onPointerDown={event => startDrag(event, true)} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag}>
                     <div><div className="assistant-title">广告运营助手</div>
                         <div className="assistant-meta">{ads.length} 条广告 · 最近 {range} 天投放指标 · {summary.clicks} 次点击</div></div>
@@ -227,8 +266,8 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
                 <div className="assistant-messages" aria-live="polite">
                     {historyCursor && session && <button type="button" onClick={() => void loadHistory(session.id, historyCursor)}>加载更早记录</button>}
                     {!messages.length && <div className="assistant-message assistant"><div className="assistant-bubble">结合当前广告、看板所选周期的投放指标和营销知识库，给出有数据与来源依据的优化建议。</div></div>}
-                    {messages.map((message, index) => <div key={index} className={`assistant-message ${message.role}`}><div className="assistant-bubble" style={{ whiteSpace: 'pre-wrap' }}>{message.content}</div></div>)}
-                    {liveText && <div className="assistant-message assistant"><div className="assistant-bubble" style={{ whiteSpace: 'pre-wrap' }}>{liveText}</div></div>}
+                    {messages.map((message, index) => <div key={index} className={`assistant-message ${message.role}`}><div className="assistant-bubble">{message.role === 'assistant' ? <AssistantText text={message.content} /> : message.content}</div></div>)}
+                    {liveText && <div className="assistant-message assistant"><div className="assistant-bubble"><AssistantText text={liveText} /></div></div>}
                     {error && <div role="alert">{error}</div>}
                 </div>
                 {stage && <div className="assistant-run-status" role="status">{LABELS[stage] || stage}{busy && ` · ${elapsed} 秒`}</div>}
@@ -245,6 +284,10 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
                     <input aria-label="发送给助手的消息" value={input} onChange={event => setInput(event.target.value)} placeholder="询问投放、素材或出价建议" disabled={busy || !!approval} />
                     <button type="submit" disabled={busy || !input.trim() || !identity || !!approval}>发送</button>
                 </form>
+                {['n', 's', 'e', 'w', 'ne', 'nw', 'se', 'sw'].map(edge => <div key={edge}
+                    className={`assistant-resize assistant-resize-${edge}`} aria-hidden="true"
+                    onPointerDown={event => beginResize(event, edge)} onPointerMove={resizePanel}
+                    onPointerUp={finishResize} onPointerCancel={finishResize} />)}
             </section>}
             <button className="assistant-fab" type="button" onPointerDown={event => startDrag(event)} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onClick={() => { if (suppressClick.current) { suppressClick.current = false; return; } toggle(); }} aria-label={open ? '关闭广告运营助手' : '打开广告运营助手'} aria-expanded={open} title="点击打开助手，拖拽移动">
                 <picture>

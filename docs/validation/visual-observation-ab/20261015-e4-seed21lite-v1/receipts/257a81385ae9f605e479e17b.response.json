@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "colored_car_photo",
+      "value": "页面内未出现任何彩色汽车照片",
+      "region": "全页面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

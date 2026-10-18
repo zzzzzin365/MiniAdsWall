@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "left_owl_bandage",
+      "value": "左边的绿色猫头鹰头上没有贴创可贴",
+      "region": "left owl head",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

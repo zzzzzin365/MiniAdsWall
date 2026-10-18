@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "gray with beige and brown patches",
+      "region": "main background area",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

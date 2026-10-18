@@ -1,0 +1,117 @@
+{
+  "status": "passed",
+  "date": "2026-10-15",
+  "method": "chinese-clip-image-v1",
+  "model": "OFA-Sys/chinese-clip-vit-base-patch16",
+  "model_revision": "36e679e65c2a2fead755ae21162091293ad37834",
+  "dimension": 512,
+  "model_load_ms": 1818.21,
+  "collection": "external_image_chinese_clip_v1",
+  "before": 6,
+  "after": 6,
+  "raw_images": 6,
+  "stored_vectors_verified": 6,
+  "caption_removal_rankings_identical": true,
+  "pixel_reencoding_matches_stored_vectors": true,
+  "joint_forward_text_max_error": 0.0,
+  "api_checks": {
+    "reference_search_status": 200,
+    "embed_status": 200,
+    "reported_method": "chinese-clip-image-v1",
+    "image_vector_dimension": 512,
+    "paid_model_requests": 0,
+    "scope": "real ASGI endpoints; auth tested separately in Koa lifecycle"
+  },
+  "paid_model_requests": 0,
+  "scope": "curated external images only",
+  "queries": [
+    {
+      "query": "紫色背景橙色按钮的广告",
+      "elapsed_ms": 84.02,
+      "retrieved": [
+        {
+          "id": "4815380967780d1eda4e88c68b6e9bc298dd5429dbc442c15999471a95415285",
+          "source_id": "x-2087282914728046825",
+          "label": "x-creative-framework",
+          "score": 0.4284,
+          "image_sha256": "980215e689bfcdbb0d727b11c02b0433f4036c7b460607d4c570135a69b7fb53"
+        },
+        {
+          "id": "7b0e4072e7fe94f8fdeee0deb85ee215500b983f508dc42cbabc6688d7b34e07",
+          "source_id": "zhihu-703076279",
+          "label": "zhihu-display",
+          "score": 0.3564,
+          "image_sha256": "e0b803e1336f1f8f055871febf21c36f0ddd857a8437c9cd0f2f535bd28ddae4"
+        },
+        {
+          "id": "8e2461e6b2bdc45b7522958e93998d58a530245035b8bba7854fdf8593f491df",
+          "source_id": "xhs-69d858be000000001a0323a1",
+          "label": "xhs-duo-1",
+          "score": 0.3503,
+          "image_sha256": "7b200ad6c1cc0f693a394747ea910386e02388ec3d8c1407764f521d9cf7cf5d"
+        }
+      ]
+    },
+    {
+      "query": "汽车展示图",
+      "elapsed_ms": 43.6,
+      "retrieved": [
+        {
+          "id": "e5f92d90d10c51c6fb990ed0de81f0372dbccf8eb38109fe88f81273d6cf89d5",
+          "source_id": "zhihu-1932929206834140237",
+          "label": "zhihu-components",
+          "score": 0.3777,
+          "image_sha256": "71f76b747f9a57e0eedf4d9783be5230e6087fdbdab35b4bd4c481fc5fd9aaa5"
+        },
+        {
+          "id": "0e2325de10b3654ac2b13bd20986a48caf34ea4e76181eb3bf9f296b6e0c62f7",
+          "source_id": "x-2098850243760808268",
+          "label": "x-marketing-kb",
+          "score": 0.3193,
+          "image_sha256": "0457964fc827c379035e1316b30ef2523ff55c630a1d3123466dc3e163a0ea1d"
+        },
+        {
+          "id": "4815380967780d1eda4e88c68b6e9bc298dd5429dbc442c15999471a95415285",
+          "source_id": "x-2087282914728046825",
+          "label": "x-creative-framework",
+          "score": 0.3116,
+          "image_sha256": "980215e689bfcdbb0d727b11c02b0433f4036c7b460607d4c570135a69b7fb53"
+        }
+      ]
+    },
+    {
+      "query": "紫色卡通猫头鹰",
+      "elapsed_ms": 41.55,
+      "retrieved": [
+        {
+          "id": "92febba2772632e725c99aca501bece1b00d3d9fe5ed9a057180a4616ec51895",
+          "source_id": "xhs-69d858be000000001a0323a1",
+          "label": "xhs-duo-2",
+          "score": 0.3259,
+          "image_sha256": "dd1d9fe14029467e0e29a9a0b191bcce8ca3df2b37a412c52af9b0fe9f6e27d6"
+        },
+        {
+          "id": "4815380967780d1eda4e88c68b6e9bc298dd5429dbc442c15999471a95415285",
+          "source_id": "x-2087282914728046825",
+          "label": "x-creative-framework",
+          "score": 0.2848,
+          "image_sha256": "980215e689bfcdbb0d727b11c02b0433f4036c7b460607d4c570135a69b7fb53"
+        },
+        {
+          "id": "0e2325de10b3654ac2b13bd20986a48caf34ea4e76181eb3bf9f296b6e0c62f7",
+          "source_id": "x-2098850243760808268",
+          "label": "x-marketing-kb",
+          "score": 0.2814,
+          "image_sha256": "0457964fc827c379035e1316b30ef2523ff55c630a1d3123466dc3e163a0ea1d"
+        }
+      ]
+    }
+  ],
+  "limits": "Functional smoke, not a Recall/P95 improvement experiment. First request may include indexing if vectors are absent; model load reported separately.",
+  "source_hashes": {
+    "core/image_embeddings.py": "4dfc9dc9416444f562f02318e2d446cf54f72e05367995e9e216a8bbe4241a1d",
+    "core/multimodal_rag.py": "22bc911ddc5219d7f57989c3147ba3d2b36125d348cf18c0bbf7460512e40a2a",
+    "mcp/external_marketing.py": "342a7df65592eff002e1cc1d304a1e9ca184f39479326ac5b42be19b5bb22035",
+    "api/studio.py": "2986a74c652a3b6cbe981e4bbd863aa24732512730c92c626eb33635adbde916"
+  }
+}

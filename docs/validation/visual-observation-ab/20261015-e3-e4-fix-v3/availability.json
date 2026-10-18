@@ -1,0 +1,9 @@
+{
+  "status": "unavailable",
+  "model": "doubao-seed-2-0-mini-260428",
+  "http_status": 429,
+  "provider_error_code": "SetLimitExceeded",
+  "receipt": "9a25a75a3797cf51430f329c",
+  "counted_in_experiment_quality": false,
+  "auto_retry": false
+}

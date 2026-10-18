@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "data_warehouse_content",
+      "value": "框内明确出现spend、clicks、leads三个词，还有conversions + results",
+      "region": "DATA WAREHOUSE区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

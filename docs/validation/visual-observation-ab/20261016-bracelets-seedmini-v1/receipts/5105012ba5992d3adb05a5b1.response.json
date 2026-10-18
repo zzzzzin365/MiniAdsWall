@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product",
+      "value": "白色配金色装饰的串珠手链",
+      "region": "画面中心",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未显示任何商品真实销量相关信息",
+      "region": "整个画面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息"
+  ]
+}

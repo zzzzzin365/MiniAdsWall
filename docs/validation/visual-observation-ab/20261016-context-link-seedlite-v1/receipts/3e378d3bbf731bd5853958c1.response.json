@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "total_bracelet_count",
+      "value": "2",
+      "region": "full image",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_position",
+      "value": "located in upper half of the image",
+      "region": "upper area",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_position",
+      "value": "located in lower half of the image",
+      "region": "lower area",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_bead_types",
+      "value": "two types of round beads: silvery light gray beads and bright turquoise blue beads",
+      "region": "upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_silvery_bead_feature",
+      "value": "most silvery light gray beads have a small dark dot on the surface",
+      "region": "upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_blue_bead_feature",
+      "value": "turquoise blue beads are smooth and round, some have a tiny dark dot",
+      "region": "upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_structure",
+      "value": "beads are clustered and connected by hidden metal components",
+      "region": "upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_clasp_position",
+      "value": "silver-toned clasp is located at the left end of the top bracelet",
+      "region": "left end of upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "top_bracelet_central_metal_part",
+      "value": "no exposed geometric metal chain in the central area of the top bracelet",
+      "region": "middle of upper bracelet",
+      "state": "explicitly_absent"
+    },
+    {
+      "key": "bottom_bracelet_central_component",
+      "value": "central part has a continuous silver-toned geometric metal chain with linked rectangular hollow units",
+      "region": "middle of lower bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_bead_arrangement",
+      "value": "round silvery light gray beads and turquoise blue beads are arranged on both sides of the central metal chain",
+      "region": "lower bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_silvery_bead_feature",
+      "value": "partial silvery light gray beads have visible surface wear or dark patina",
+      "region": "lower bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_blue_bead_feature",
+      "value": "turquoise blue beads are smooth and round, no obvious dark dots on visible surfaces",
+      "region": "lower bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_bracelet_clasp_position",
+      "value": "silver-toned clasp is located at the left end of the bottom bracelet",
+      "region": "left end of lower bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "pure solid white background, no other patterns or objects",
+      "region": "full image background",
+      "state": "observed"
+    },
+    {
+      "key": "text_presence",
+      "value": "no clearly readable text on the two bracelets",
+      "region": "full image",
+      "state": "explicitly_absent"
+    }
+  ]
+}

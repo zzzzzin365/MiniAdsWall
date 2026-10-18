@@ -1,0 +1,9 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "未找到与指定图像ID image-018 存在明确关联的来源快照，无法完成对应摘录。",
+  "image_citations": [],
+  "text_citations": []
+}

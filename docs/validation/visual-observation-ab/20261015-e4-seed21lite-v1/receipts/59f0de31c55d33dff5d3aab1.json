@@ -1,0 +1,22 @@
+{
+  "call_key": "20261015-e4-seed21lite-v1:x-creative-framework-5:fixed_C1:answer",
+  "model": "doubao-seed-2-1-lite-260915",
+  "request_id": "59f0de31c55d33dff5d3aab1",
+  "input_sha256": "8f7e61c0623e817ce0a18738e4a45c61881d9c6b86776b0ca8f2ba11818e4bd2",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1766.239041928202,
+  "http_status": 200,
+  "provider_id": "02179208059683014cea4691e83c1d7ab80acdae8752ced934be5",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 2643,
+    "total_tokens": 2697,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "observations": [
+    {
+      "key": "image_type",
+      "value": "流程示意图",
+      "region": "全图",
+      "state": "observed"
+    },
+    {
+      "key": "title",
+      "value": "SECOND BRAIN FOR MARKETING",
+      "region": "顶部",
+      "state": "observed"
+    },
+    {
+      "key": "process_steps",
+      "value": "分为01/ORGANIZE、02/CONNECT、03/USE、AFTER SIGN-OFF、SAVE BACK五个流程阶段",
+      "region": "全图",
+      "state": "observed"
+    },
+    {
+      "key": "core_content",
+      "value": "展示营销工作的文件组织、参考链接、内容生成及反馈优化的流程",
+      "region": "全图",
+      "state": "observed"
+    },
+    {
+      "key": "no_product_photo",
+      "value": "未出现实物产品摄影内容",
+      "region": "全图",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

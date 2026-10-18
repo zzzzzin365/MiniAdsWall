@@ -1,0 +1,22 @@
+{
+  "call_key": "20261016-e3-seed21lite-v1:0:zhihu-components-3:H:read",
+  "model": "doubao-seed-2-1-lite-260915",
+  "request_id": "d3385f3416648ca4ac7d68f5",
+  "input_sha256": "8311748c0c83b6e09af443f7816a5b60fdf7c225922f66ac479a6509039bacff",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 4007.4074580334127,
+  "http_status": 200,
+  "provider_id": "021792081115810bed15afc0092f915eb01246432c6f7b6e0c1d9",
+  "usage": {
+    "completion_tokens": 49,
+    "prompt_tokens": 1626,
+    "total_tokens": 1675,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

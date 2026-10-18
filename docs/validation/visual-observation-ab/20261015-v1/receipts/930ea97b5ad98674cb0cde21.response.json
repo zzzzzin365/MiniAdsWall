@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "ad_label",
+      "value": "顶部有文字'Advertisement'，表明这是广告内容",
+      "region": "顶部区域",
+      "state": "observed"
+    },
+    {
+      "key": "top_ad_title",
+      "value": "文字为'Find the right keywords & beat competitors'，字体颜色为青绿色和白色",
+      "region": "上方广告左侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "top_ad_logo",
+      "value": "有SEMRUSH品牌logo，为白色图案加文字，位于上方广告左下方",
+      "region": "上方广告左下方",
+      "state": "observed"
+    },
+    {
+      "key": "top_ad_button",
+      "value": "橙色按钮，文字为'Try It Free'，位于上方广告中间偏右",
+      "region": "上方广告中间偏右",
+      "state": "observed"
+    },
+    {
+      "key": "top_ad_audit_title",
+      "value": "右侧面板标题为'Site Audit: Overview'，白色背景面板",
+      "region": "上方广告右侧",
+      "state": "observed"
+    },
+    {
+      "key": "site_health_metric",
+      "value": "Site Health数值为78%，搭配环形图，位于上方右侧面板",
+      "region": "上方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "crawled_pages_metric",
+      "value": "Crawled Pages数值为23,777，搭配条形图，位于上方右侧面板",
+      "region": "上方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "errors_metric",
+      "value": "Errors数值为539，红色文字，搭配折线图，位于上方右侧面板",
+      "region": "上方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "warnings_metric",
+      "value": "Warnings数值为8,072，橙色文字，搭配折线图，位于上方右侧面板",
+      "region": "上方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "notice_metric",
+      "value": "Notice数值为86,053，蓝色文字，搭配折线图，位于上方右侧面板",
+      "region": "上方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_ad_title",
+      "value": "文字为'Analyze rival marketing strategies'，字体颜色为蓝色和白色",
+      "region": "下方广告左侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_ad_logo",
+      "value": "有SEMRUSH品牌logo，为白色图案加文字，位于下方广告左下方",
+      "region": "下方广告左下方",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_ad_button",
+      "value": "橙色按钮，文字为'Try It Free'，位于下方广告中间偏右",
+      "region": "下方广告中间偏右",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_ad_traffic_title",
+      "value": "右侧面板标题为'Traffic Generation Strategy'，白色背景面板",
+      "region": "下方广告右侧",
+      "state": "observed"
+    },
+    {
+      "key": "traffic_legend",
+      "value": "流量来源图例，包含Direct、Referral等8种类型，位于下方右侧面板",
+      "region": "下方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "market_traffic_bar",
+      "value": "名为'Market'的流量条形图，位于下方右侧面板",
+      "region": "下方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "shein_traffic_bar",
+      "value": "名为'Shein.com'的流量条形图，位于下方右侧面板",
+      "region": "下方右侧面板",
+      "state": "observed"
+    },
+    {
+      "key": "watermark_text",
+      "value": "右下角有文字'知乎@谷歌大师兄'，位于下方广告右下角",
+      "region": "右下角区域",
+      "state": "observed"
+    }
+  ]
+}

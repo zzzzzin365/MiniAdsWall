@@ -1,0 +1,23 @@
+{
+  "observations": [
+    {
+      "key": "left_owl",
+      "value": "绿色卡通猫头鹰，双眼圆睁，无绷带，站立姿态",
+      "region": "画面左下方",
+      "state": "observed"
+    },
+    {
+      "key": "right_owl",
+      "value": "绿色卡通猫头鹰，额头和手部贴有创可贴，坐姿，表情疲惫",
+      "region": "画面右下方",
+      "state": "observed"
+    },
+    {
+      "key": "other_owls",
+      "value": "除上述两只外，画面其余区域未出现其他猫头鹰角色",
+      "region": "全画面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

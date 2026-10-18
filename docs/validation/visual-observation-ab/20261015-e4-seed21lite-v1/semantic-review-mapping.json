@@ -1,0 +1,362 @@
+[
+  {
+    "review_id": "895a7301785c5986",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "30a4a88e8dcd5474",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "7b51610f79f336d0",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "a3cdcf3914dc914c",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "d7c49077a223c1be",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "3f901da3ac1769cc",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "cecad98645bb199a",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "4e74357d2f0cf25b",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "27a09adfa3d78d4a",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "4f27b59afda0b835",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "337275eacc76107a",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "98c5ed7f4ac2361e",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "afe3220b68a2e82b",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "d8111853b3970da7",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "a144914beb7e09c1",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "4d5a35aa2cfeae3a",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "31b20ebef946221a",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "ad2407c15d62020d",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "a2b73fc32d0543ab",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "202a72dc56099264",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "e51b5e12b22458c6",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "40a9b7454f272699",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "7c374b8b5108da28",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "aefea74cc170477d",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "00bc1ca246a0248b",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "1576be63fc7a1a76",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "6c0760e75aa892bc",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "30dd29964f367f51",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "f4bb6f63bac67464",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "6173ed8c5e99c441",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "98c5a75d94a34372",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "6a776b13382ca4a8",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "00dbef28f42f890e",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "9eea9ee2d41d6f39",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "014da564686580ce",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "0aa6e37525ba02a8",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "89c1d82ed01e170d",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "ae2c29da51a0b2e0",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "9019b3d447f7d36e",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "8dd1c91bcfce4fa2",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "f45e15b183c91481",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "0b753f1700813134",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "5ae58431267b9715",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "03a10071872a780c",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "7f57452cc35164db",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "b7c240e36e524d95",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "62cfac84a282dcfb",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "c6244a4a1caa0092",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "3ee1b5b2daa4f323",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "6dfc3fb8fa1a1cc9",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "db6c83a5004417f5",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "665ee822e291b0ee",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "833d4dc9e2f27b2f",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "25e8dbbf5d8f4654",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "1c10cf9992dab4bc",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "e4d97ce91ba79f27",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "534d521801da6cdd",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "778031ed383b6873",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "1c303f5c4d7cfac4",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "52776d8fe9e9350f",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "6fa9b1b5b00bf965",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "81269a05a9745c0b",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "c528a3991110425b",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "994c13fc0cac3d5c",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "905211162dbbc979",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "81a176fe7d77ea3d",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "3daf7e00ed5383c4",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "3c472d996d6daf27",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "ff8e1818f41a3b48",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "16776e97379430c5",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "b8bc79b4fb7027e2",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "c5ac2a963b675d48",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "f131c60b55113fb2",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "2affbd43e224b0e5",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "c6fc999e5a55e99b",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "705075496a466994",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "67f8a2f8002aafe2",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "497558c768726c86",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "42600ccc53e2c02b",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "4dea3400d8a105bd",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "870bb415f150e32c",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "7072767ad45a2a47",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "51a3a5a2bfcc984c",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "5ea41ea3280abd3f",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "f2f2f27e67f45209",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "d6267d07c39b1b0a",
+    "arm": "fixed_C1"
+  },
+  {
+    "review_id": "4bc482c7a3b33e44",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "5899848dc243e056",
+    "arm": "always_read_B"
+  },
+  {
+    "review_id": "ec6f72264ed488a2",
+    "arm": "old_C1"
+  },
+  {
+    "review_id": "fc2703094266e5cb",
+    "arm": "fixed_C1"
+  }
+]

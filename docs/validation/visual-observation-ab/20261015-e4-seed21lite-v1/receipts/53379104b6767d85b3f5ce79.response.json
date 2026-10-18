@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "cost_related_text",
+      "value": "全图未出现任何与搭建成本、金额、花费相关的文字内容",
+      "region": "整张信息图",
+      "state": "explicitly_absent"
+    },
+    {
+      "key": "tool_related_text",
+      "value": "仅在图底部标注了使用的工具类型：markdown in GitHub / visual references in Figma or Paper / performance in the data warehouse",
+      "region": "图最底部",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "搭建该系统的实际花费金额、成本构成相关信息"
+  ]
+}

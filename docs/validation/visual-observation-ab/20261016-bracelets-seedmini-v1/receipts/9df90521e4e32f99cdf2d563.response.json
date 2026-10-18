@@ -1,0 +1,58 @@
+{
+  "observations": [
+    {
+      "key": "wrist",
+      "value": "human wrist with light skin tone",
+      "region": "center of image",
+      "state": "observed"
+    },
+    {
+      "key": "green fabric",
+      "value": "soft light green fabric surrounding the wrist, likely clothing",
+      "region": "left and lower area",
+      "state": "observed"
+    },
+    {
+      "key": "watch strap",
+      "value": "black leather watch strap with silver metal buckle, has holes for size adjustment",
+      "region": "left side of wrist",
+      "state": "observed"
+    },
+    {
+      "key": "buckle text",
+      "value": "silver buckle has engraved text 'IWC'",
+      "region": "watch buckle",
+      "state": "observed"
+    },
+    {
+      "key": "beaded bracelet",
+      "value": "bracelet composed of clear transparent beads and silver metal beads",
+      "region": "right side of wrist",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet charm",
+      "value": "silver irregular square charm with reversed text",
+      "region": "bracelet lower part",
+      "state": "observed"
+    },
+    {
+      "key": "charm text",
+      "value": "reversed text on charm: 'you deserve be loved since'",
+      "region": "silver square charm",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet extra bead",
+      "value": "small round silver bead hanging from the bracelet",
+      "region": "bracelet lower right",
+      "state": "observed"
+    },
+    {
+      "key": "background surface",
+      "value": "light beige smooth surface in upper background",
+      "region": "upper background",
+      "state": "observed"
+    }
+  ]
+}

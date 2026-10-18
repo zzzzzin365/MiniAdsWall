@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "top_icon_shape",
+      "value": "圆角方形，底色为暖棕橙色，内部是白色放射状星芒图案",
+      "region": "页面最顶部居中位置",
+      "state": "observed"
+    },
+    {
+      "key": "top_icon_owl",
+      "value": "该区域不存在绿色猫头鹰图案",
+      "region": "页面最顶部居中位置",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "date": "2026-10-15",
+  "python_capabilities": {
+    "policy": "seed-understanding-v2",
+    "text_model": "deepseek-v4-1-flash-260910",
+    "video_model": "doubao-seedance-1-0-pro-fast-251015",
+    "image_generation": true,
+    "image_understanding": true,
+    "understanding_model": "doubao-seed-2-0-mini-260428",
+    "video_understanding": true,
+    "audio_understanding": false,
+    "multimodal_rag": "chinese-clip-image-v1",
+    "image_embedding_model": "OFA-Sys/chinese-clip-vit-base-patch16",
+    "image_embedding_revision": "36e679e65c2a2fead755ae21162091293ad37834"
+  },
+  "koa_capabilities": {
+    "enabled": true,
+    "video": false,
+    "image": true,
+    "visual_understanding": true,
+    "multimodal_rag": "chinese-clip-image-v1",
+    "image_embedding_model": "OFA-Sys/chinese-clip-vit-base-patch16",
+    "understanding_model": "doubao-seed-2-0-mini-260428",
+    "text_model": "deepseek-v4-1-flash-260910",
+    "video_model": "doubao-seedance-1-0-pro-fast-251015",
+    "policy": "seed-understanding-v2"
+  },
+  "reference_search_status": 200,
+  "reference_search_method": "chinese-clip-image-v1",
+  "top_image": "zhihu-components",
+  "preview_status": 200,
+  "preview_hash_matches_vector_source": true,
+  "unauthorized_search_status": 401,
+  "current_authorized_native_assets": 4,
+  "current_authorized_native_frames": 8,
+  "paid_model_requests": 0,
+  "scope": "Real authenticated Koa3001 -> Python8000 -> Chinese-CLIP -> Chroma; private assets only locally migrated, not experiment data.",
+  "dependency_versions": {
+    "torch": "2.14.1",
+    "transformers": "4.46.3",
+    "Pillow": "12.3.0",
+    "tokenizers": "0.20.3",
+    "chromadb": "0.5.23"
+  },
+  "dependency_check": "all compatible",
+  "final_api_checks": {
+    "images": {
+      "status": 200,
+      "method": "chinese-clip-image-v1",
+      "kinds": [
+        "image",
+        "image",
+        "image"
+      ]
+    },
+    "articles": {
+      "status": 200,
+      "method": "text-vector-v1",
+      "kinds": [
+        "article",
+        "article",
+        "article"
+      ]
+    },
+    "all": {
+      "status": 200,
+      "method": "native-image-plus-text-v1",
+      "kinds": [
+        "image",
+        "article",
+        "image"
+      ]
+    }
+  },
+  "direct_unauthorized_embedding_status": 401,
+  "final_koa_search_status": 200,
+  "api_pid": 70609
+}

@@ -1,0 +1,31 @@
+{
+  "A_full_pool": {
+    "unrequested_publisher": 26,
+    "unrequested_quote": 37,
+    "quote_length": 38,
+    "status_fields_inconsistent": 27,
+    "quote_not_literal": 10,
+    "wrong_source_citation": 3,
+    "unrequested_hand_present": 9
+  },
+  "B_assembled": {
+    "unrequested_publisher": 26,
+    "unrequested_quote": 36,
+    "quote_length": 39,
+    "status_fields_inconsistent": 22,
+    "quote_not_literal": 10,
+    "wrong_source_citation": 3,
+    "unrequested_hand_present": 10
+  },
+  "C_selected": {
+    "quote_length": 17,
+    "quote_not_literal": 8,
+    "status_fields_inconsistent": 1
+  },
+  "D_supplement": {
+    "quote_length": 17,
+    "quote_not_literal": 8,
+    "status_fields_inconsistent": 2
+  },
+  "E_validated": {}
+}

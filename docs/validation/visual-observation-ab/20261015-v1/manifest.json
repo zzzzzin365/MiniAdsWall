@@ -1,0 +1,32 @@
+{
+  "scope": "public_external_images_only",
+  "code_sha256": "7561fe0b11aa871b755e0a3a124a5c8aaa67f11c69bb41b0704aaf1552a6bcce",
+  "input_hashes": {
+    "cases-gold.json": "e28607a7864d9e93fa6b0fa9d763955a0adcaa0fb28bcafdade452b2a5ac1c7a",
+    "requests.json": "f69484d556bd781aca3647cef7b581bde58d59645a33977241a1f21bf4a369cb",
+    "assets.json": "dc8139172564ada0fb8a727fa976875cc1e07fdbc1ae5a906096a2c73b48fc5f",
+    "protocol.json": "42d9d2988de5aa1ad200d7da5f4b7c02665ec34812f99924c33bdc973756c025"
+  },
+  "prompts": {
+    "initial": "48ea99ce39157d959d3527190e52423253181272142ff27d700aa1913ea747b1",
+    "reader": "2aae75050d8f1960a81ecb31d977035c08285a77fab5ab4a85e38f4434f992db",
+    "router": "93a250f52cf7dbff397baf4a7d3c95b4829e9c3e5c745ce2f12897545d56caad",
+    "answer": "1705a56e1178fdb1899d2f5a53675d83d8ea4766f7de15ee7274a9ea876e923b"
+  },
+  "models": [
+    "doubao-seed-2-0-mini-260428",
+    "deepseek-v4-1-flash-260910"
+  ],
+  "status": "blocked_provider_usage_limit",
+  "independent_human_review": false,
+  "production_mutated": false,
+  "trace_rows": 24,
+  "blocking_error": {
+    "http_status": 429,
+    "provider_error_code": "SetLimitExceeded",
+    "model": "deepseek-v4-1-flash-260910",
+    "receipt": "5abd0553f21f1710462b7b16.json"
+  },
+  "completed_question_arm_rows": 68,
+  "planned_question_arm_rows": 240
+}

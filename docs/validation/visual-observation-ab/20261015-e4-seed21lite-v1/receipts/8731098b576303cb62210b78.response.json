@@ -1,0 +1,35 @@
+{
+  "observations": [
+    {
+      "key": "card_count",
+      "value": "4",
+      "region": "INCLUDING下方横向并排区域",
+      "state": "observed"
+    },
+    {
+      "key": "card_1_title",
+      "value": "Ad Creative Strategist System Prompt",
+      "region": "最左侧卡片",
+      "state": "observed"
+    },
+    {
+      "key": "card_2_title",
+      "value": "Winning Ad Hook Templates",
+      "region": "左数第二张卡片",
+      "state": "observed"
+    },
+    {
+      "key": "card_3_title",
+      "value": "Structure Of The Perfect Ad",
+      "region": "左数第三张卡片",
+      "state": "observed"
+    },
+    {
+      "key": "card_4_title",
+      "value": "Creative Testing Framework",
+      "region": "最右侧卡片",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

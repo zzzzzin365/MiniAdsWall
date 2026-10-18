@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "brand_area_image",
+      "value": "上方广告左侧品牌区域为SEMRUSH标识，无绿色猫头鹰形象",
+      "region": "上方广告左侧品牌区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "无相关缺失信息"
+  ]
+}

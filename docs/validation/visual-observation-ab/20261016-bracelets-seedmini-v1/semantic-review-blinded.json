@@ -1,0 +1,4201 @@
+[
+  {
+    "review_id": "01323e5d3c64bb43",
+    "case_id": "tanmujiang-90ba0ac20704-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "01da3c89775eea0d",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手，因此出现了真人的手或手腕",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "01f6e95485cad3e4",
+    "case_id": "energymuse-f965a98f6102-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "04b761e6af29c8af",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "两条珠宝（一条项链和一条手链）",
+      "answer": "画面中心主要展示的对象是一条项链和一条手链",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "06f5053342353247",
+    "case_id": "x-1432338272252928005-3eca7229b236-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "07a786d7eb14deef",
+    "case_id": "energymuse-f965a98f6102-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "stretch beaded bracelet",
+      "answer": "画面中心主要展示的对象是弹力串珠手链",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "085ac1c1fdf6b1a1",
+    "case_id": "x-2027810292218966399-7c25f83553ba-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "beaded bracelet with colorful house and figure pattern",
+      "answer": "画面中心主要展示的对象是带有彩色房屋和人物图案的串珠手链",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "088c36c17dfb9a3a",
+    "case_id": "puravida-65102caa4412-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "090fe97e9e7e1b5c",
+    "case_id": "tanmujiang-90ba0ac20704-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0959667bc55ad10a",
+    "case_id": "fahari-c0618befdc51-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图获取对应商品的真实销量",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0ca0699a3028b94a",
+    "case_id": "x-1965401279863140778-972d114aa4bb-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "0e5d1b810e55f320",
+    "case_id": "x-1965401279863140778-972d114aa4bb-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "佩戴在手腕上的串珠手链，带有黑色基底，包含蓝色、黄色、银色的串珠图案",
+      "answer": "画面中心主要展示的是佩戴在手腕上的串珠手链，带有黑色基底，包含蓝色、黄色、银色的串珠图案",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "108eefcb95e1c0c8",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "11edb08554542810",
+    "case_id": "stacks-steph-6a5d432e1894-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅白色",
+      "answer": "画面主要背景是浅白色",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "13cd1c510f5b6a21",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "米色",
+      "answer": "画面主要背景是米色",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黄",
+        "金",
+        "棕",
+        "褐"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "14842d49b6184ed1",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "灰色",
+      "answer": "画面主要背景是灰色",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "15c35375159ca473",
+    "case_id": "puravida-65102caa4412-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "160a8abcdfeb8d42",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "beaded bracelet",
+      "answer": "画面中心主要展示的对象是串珠手链",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "16bb8f17c978381b",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "两条由透明碎石串成、带有雪花造型金属挂饰的首饰（手链/项链）",
+      "answer": "画面中心主要展示的是两条由透明碎石串成、带有雪花造型金属挂饰的首饰（手链/项链）",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "1956053d9a694289",
+    "case_id": "stacks-steph-6a5d432e1894-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "19a73784ecefa76d",
+    "case_id": "fahari-c0618befdc51-2",
+    "question": "手腕后方的衣物主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "手腕后方的衣物主要是黑色",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑"
+      ],
+      "answerable": true,
+      "support_region": "问题指定区域",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "1c049a65a5ed0496",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从这张推广图得知对应商品的真实销量",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "1cf822fc28d07018",
+    "case_id": "qi-flow-e1afb7538267-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米白色",
+      "answer": "画面主要背景是浅米白色",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "1e0e12e2dae2efdc",
+    "case_id": "x-2027810292218966399-7c25f83553ba-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "solid dark blue",
+      "answer": "画面主要背景是深蓝色",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "蓝"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "214e8f11abc289a3",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "22e62f10a9b30265",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片得知对应商品的真实销量",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "23f6ca99031d5423",
+    "case_id": "sequence-f53ce103eebc-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该商品的真实销量相关信息，无法得知",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "2888c302ad3e0625",
+    "case_id": "energymuse-f965a98f6102-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未发现任何与商品真实销量相关的可见文字或数据，无法得知该商品的真实销量",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "2994721a521a75af",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "画面主要背景是浅米色",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "绿"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "30eef6db9f6194cc",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手腕，因此出现了真人的手或手腕",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "311b0fa82fcb1727",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "带有灰、浅褐、米白色斑块的岩石色",
+      "answer": "画面主要背景为带有灰、浅褐、米白色斑块的岩石色",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "棕",
+        "褐",
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "312d9b88bbdb5edf",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "32d66077ceaa0857",
+    "case_id": "tanmujiang-90ba0ac20704-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "深青绿色（偏暗的蓝绿色）",
+      "answer": "画面主要背景为深青绿色（偏暗的蓝绿色）",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "绿"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "349ee4e87819af24",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片得知对应商品的真实销量",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "36d1efe5f8ccc061",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "画面中心主要展示的是两条手链",
+      "answer": "画面中心主要展示的是两条手链",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "392d6c97651d4aa6",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "两串放置在透明展示架上的珠串，珠串由黑色圆珠和浅粉色圆珠组成，其中右侧珠串带有银色装饰隔珠",
+      "answer": "画面中心主要展示的是两串放置在透明展示架上的珠串，珠串由黑色圆珠和浅粉色圆珠组成，其中右侧珠串带有银色装饰隔珠",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "3c5cc29d745cb997",
+    "case_id": "miansai-9b0418515350-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "3c80fc0fcabe884b",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4066c02bcfc3a389",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "Two beaded bracelets",
+      "answer": "画面中心主要展示的是两条串珠手链",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "434ba80a04bbf953",
+    "case_id": "stacks-steph-6a5d432e1894-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "bracelet",
+      "answer": "画面中心主要展示的对象是手链",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "449a6a6932c096b3",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "串有彩色小珠子和白色字母珠（字母为5、S、O、S）的手链",
+      "answer": "画面中心主要展示的是串有彩色小珠子和白色字母珠（字母为5、S、O、S）的手链",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4560068a50962efb",
+    "case_id": "sequence-f53ce103eebc-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片得知对应商品的真实销量",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4567e42a33416ba8",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片获取对应商品的真实销量",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "456b7165e011ccd9",
+    "case_id": "energymuse-f965a98f6102-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4638155f84dd2efd",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4876f5e6d00ef357",
+    "case_id": "qi-flow-e1afb7538267-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "串有深棕色圆珠、红色配珠和金色装饰珠的三层环形串饰，带有方形白坠和圆形金坠",
+      "answer": "画面中心主要展示的是串有深棕色圆珠、红色配珠和金色装饰珠的三层环形串饰，带有方形白坠和圆形金坠",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4992175b9f520d1c",
+    "case_id": "energymuse-f965a98f6102-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "solid plain white",
+      "answer": "画面主要背景是纯白色",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "49a89f12d6d55c83",
+    "case_id": "energymuse-f965a98f6102-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "49e2ae0e16b25b10",
+    "case_id": "miansai-9b0418515350-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "plain light white or light gray",
+      "answer": "画面主要背景是浅白色或浅灰色",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4a14867c8b702c82",
+    "case_id": "x-2098131365468262541-1255291b603a-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片得知对应商品的真实销量",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4beaf6f169e3bee8",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片获取对应商品的真实销量",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4f1d0bf03a1333e5",
+    "case_id": "x-1432338272252928005-3eca7229b236-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4f2fad21071f905e",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "human wrist",
+      "answer": "画面中心主要展示的对象是人的手腕",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "4f761eec455175d5",
+    "case_id": "x-2027810292218966399-7c25f83553ba-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图中未显示商品真实销量的相关信息，无法得知",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "53ab2829dd24f598",
+    "case_id": "x-2027810292218966399-7c25f83553ba-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "带有彩色房屋和人物图案的串珠手链",
+      "answer": "画面中心主要展示的对象是带有彩色房屋和人物图案的串珠手链",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "53beff9aa64f25cc",
+    "case_id": "miansai-9b0418515350-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "554ee934c20d1672",
+    "case_id": "x-1965401279863140778-972d114aa4bb-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该推广商品的真实销量相关信息，无法得知",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "566ead4a47174fec",
+    "case_id": "sequence-f53ce103eebc-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "黑白条纹带金属饰钉的编织手链，搭配黑色绳结装饰",
+      "answer": "画面中心主要展示的对象是黑白条纹带金属饰钉的编织手链，搭配黑色绳结装饰",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "5b787d7dcec67cfb",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "beaded bracelet",
+      "answer": "画面中心主要展示的对象是串珠手链",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "5ba867dab719812d",
+    "case_id": "miansai-9b0418515350-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色细款串珠手链，带有银色搭扣，串珠处有一颗浅绿松石色珠子和一颗浅米色珠子",
+      "answer": "画面中心主要展示的对象是黑色细款串珠手链，带有银色搭扣，串珠处有一颗浅绿松石色珠子和一颗浅米色珠子",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "5c74d40e119d1c54",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "two beaded bracelets with silver-toned metal components, light gray pearl-like beads and turquoise beads",
+      "answer": "画面中心主要展示的是两条带有银色金属配件、浅灰色仿珍珠珠子和绿松石珠子的串珠手链",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "5e4f7a8a648779c4",
+    "case_id": "x-1432338272252928005-3eca7229b236-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅白色或浅灰色",
+      "answer": "画面主要背景是浅白色或浅灰色",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "浅灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "628649393815d054",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-2",
+    "question": "手串下方承托布主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "米白色，带有毛绒质感的织物",
+      "answer": "手串下方承托布主要是米白色，带有毛绒质感的织物",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "米"
+      ],
+      "answerable": true,
+      "support_region": "问题指定区域",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "64b2fcf4b4bcff5b",
+    "case_id": "tanmujiang-90ba0ac20704-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": null,
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "673c7ca5b48e1040",
+    "case_id": "x-1432338272252928005-3eca7229b236-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "由多颗不同颜色、不同材质的圆珠串成的手链，以及一块蓝绿色带棕色纹理的矿石",
+      "answer": "画面中心主要展示的是由多颗不同颜色、不同材质的圆珠串成的手链，以及一块蓝绿色带棕色纹理的矿石",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "68b64805c5f84c73",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "带有浅蓝色圆珠、透明雕刻件、银质装饰及十字架挂饰的水晶手串",
+      "answer": "画面中心主要展示的对象是带有浅蓝色圆珠、透明雕刻件、银质装饰及十字架挂饰的水晶手串",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "699de9b8a6276bec",
+    "case_id": "puravida-65102caa4412-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该商品真实销量的相关信息",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6a4fc94cb8e85697",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "两条串珠手链",
+      "answer": "画面中心主要展示的对象是两条串珠手链",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6a79d5cd9f2ca089",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6af9017859e3c4cd",
+    "case_id": "x-1660996700172062721-906bb558f770-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6bab31ffd2620434",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6d11b88df1aa39ff",
+    "case_id": "x-2098131365468262541-1255291b603a-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该商品真实销量的相关信息，无法得知其真实销量",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6e7394383fe39c5c",
+    "case_id": "puravida-65102caa4412-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "braided adjustable bracelet",
+      "answer": "画面中心主要展示的对象是编织可调节手链",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "6f42554a6eca91f9",
+    "case_id": "puravida-65102caa4412-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "编织手链",
+      "answer": "画面中心主要展示的对象是编织手链",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "705d8df4f42ab133",
+    "case_id": "x-2027810292218966399-7c25f83553ba-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手腕，未出现完整的手",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7243ddf800443a11",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "手腕上佩戴的黑色皮质表带手表、透明珠子与银色珠子组成的手链",
+      "answer": "画面中心主要展示的是手腕上佩戴的黑色皮质表带手表、透明珠子与银色珠子组成的手链",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "747c5f55c7c652e5",
+    "case_id": "x-2098131365468262541-1255291b603a-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "74aa5aa1e1ac8963",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "plain light white",
+      "answer": "画面主要背景是浅白色",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "浅紫"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "788371b1d92e58db",
+    "case_id": "qi-flow-e1afb7538267-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "78d7e1647f4560f3",
+    "case_id": "x-2027810292218966399-7c25f83553ba-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手腕",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "78f09ccd0a25583a",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7ab066aa6c40310f",
+    "case_id": "qi-flow-e1afb7538267-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7d89781eaff4ecc6",
+    "case_id": "tanmujiang-90ba0ac20704-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图中未显示对应商品的真实销量相关信息",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "7e6a739c8b82ce1e",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅白色",
+      "answer": "画面主要背景是浅白色",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "浅紫"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "80cf92dfd0f3fb88",
+    "case_id": "puravida-65102caa4412-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "80e48da41edabaad",
+    "case_id": "x-1432338272252928005-3eca7229b236-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片获取对应商品的真实销量",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "8128a8398a1b05b3",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "81798dc8beaec98c",
+    "case_id": "miansai-9b0418515350-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "847444d9cd967f13",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "画面主要背景是浅米色",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "绿"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "856978224dcf4b46",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "882dd3e36143d3e7",
+    "case_id": "x-1660996700172062721-906bb558f770-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "一条由银色串珠构成、带有五枚蓝黄配色串珠花朵装饰的手链，被放置在手掌上",
+      "answer": "画面中心主要展示的是一条由银色串珠构成、带有五枚蓝黄配色串珠花朵装饰的手链，被放置在手掌上",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "88cf4f2f562d6793",
+    "case_id": "qi-flow-e1afb7538267-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未提供该商品真实销量的相关信息",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "8ab8a71c3e6e55c6",
+    "case_id": "stacks-steph-6a5d432e1894-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "8d1f8a1701f9c928",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该商品真实销量的相关信息，无法得知",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9084548349299526",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图中得知对应商品的真实销量",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "90dd79ba88667dc2",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "91250444be301b29",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9743dd92c9e3117e",
+    "case_id": "x-1432338272252928005-3eca7229b236-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "rough light blue-green mineral rock with brownish patches on upper part",
+      "answer": "画面中心主要展示的对象是带有棕褐色斑块的浅蓝绿色粗糙矿物岩石",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9ad25f902f67c78a",
+    "case_id": "qi-flow-e1afb7538267-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": null,
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9c705e04c3ea497c",
+    "case_id": "x-2098131365468262541-1255291b603a-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "9e72cbfb5512e705",
+    "case_id": "x-2098131365468262541-1255291b603a-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "plain white",
+      "answer": "画面主要背景是纯白色",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a0c7d7b97505aec0",
+    "case_id": "energymuse-f965a98f6102-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "beaded bracelet",
+      "answer": "画面中心主要展示的对象是串珠手链",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a3f5b9e16de48081",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "带有米色和棕色斑块的灰色",
+      "answer": "画面主要背景是带有米色和棕色斑块的灰色",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "棕",
+        "褐",
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a47f1bbf0d651314",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图中未显示商品真实销量的相关信息，无法得知其真实销量",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a4d8286a46e6f659",
+    "case_id": "energymuse-f965a98f6102-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "energymuse-f965a98f6102"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a65a47523f2740ec",
+    "case_id": "sequence-f53ce103eebc-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "plain white",
+      "answer": "画面主要背景是纯白色",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a695e61435894889",
+    "case_id": "miansai-9b0418515350-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从提供的图片中得知该推广图对应商品的真实销量",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "a9985ea36131f09b",
+    "case_id": "sequence-f53ce103eebc-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "aa150b43e822a6e8",
+    "case_id": "x-2027810292218966399-7c25f83553ba-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "dark blue",
+      "answer": "画面主要背景颜色为深蓝色",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "蓝"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "aa2d49a9982a5eb0",
+    "case_id": "x-2007285619475591650-4be9a92e93eb-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-2007285619475591650-4be9a92e93eb"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "acfacf02636be78c",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "一条带有大颗浅蓝色圆珠、白色隔珠，还配有水晶雕饰、银十字架、银皇冠装饰及蓝宝石银饰小珠的串珠手链",
+      "answer": "画面中心主要展示的对象是一条带有大颗浅蓝色圆珠、白色隔珠，还配有水晶雕饰、银十字架、银皇冠装饰及蓝宝石银饰小珠的串珠手链",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "afd8dfaa1c8ae986",
+    "case_id": "x-1965401279863140778-972d114aa4bb-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "画面中心主要展示的是佩戴在人类手腕上的宽版串珠手链，手链以黑色小珠子为基底，带有蓝色、黄色、银色珠子组成的图案",
+      "answer": "画面中心主要展示的是佩戴在人类手腕上的宽版串珠手链，手链以黑色小珠子为基底，带有蓝色、黄色、银色珠子组成的图案",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b2b34025f837d3c7",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "手链，由黑色火山岩珠、彩色圆珠（深蓝色、浅蓝色、绿色、深棕色、黄色、红色）及金色隔片、金色搭扣组成",
+      "answer": "画面中心主要展示的对象是手链，由黑色火山岩珠、彩色圆珠（深蓝色、浅蓝色、绿色、深棕色、黄色、红色）及金色隔片、金色搭扣组成",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b54351598f52d97f",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b54587527221553f",
+    "case_id": "x-1541930309603807239-19a7e3bccda0-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图未显示商品真实销量的相关信息，无法得知对应商品的真实销量",
+      "source_ids": [
+        "x-1541930309603807239-19a7e3bccda0"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b6870fa785655a1b",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米白色",
+      "answer": "画面主要背景为浅米白色",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b70551537776dcd3",
+    "case_id": "x-1432338272252928005-3eca7229b236-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "白色",
+      "answer": "画面主要背景是白色",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "浅灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "b74919e305e0344d",
+    "case_id": "x-2098131365468262541-1255291b603a-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色圆珠手链，带有银色蝎子挂饰和银色搭扣",
+      "answer": "画面中心主要展示的对象是黑色圆珠手链，带有银色蝎子挂饰和银色搭扣",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ba5535aebe9cd71b",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "画面主要背景是浅米色",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黄",
+        "金",
+        "棕",
+        "褐"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "bbf240a79bf2f865",
+    "case_id": "stacks-steph-6a5d432e1894-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "bc40dc831c24eacb",
+    "case_id": "stacks-steph-6a5d432e1894-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图未显示商品真实销量相关信息，无法得知对应商品的真实销量",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "be894aee871a0134",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图未显示商品真实销量的相关信息，无法得知对应商品的真实销量",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "be8e9f0c9900182c",
+    "case_id": "x-1965401279863140778-972d114aa4bb-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "灰色",
+      "answer": "画面主要背景是灰色",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "be9953cb56d04a84",
+    "case_id": "tanmujiang-90ba0ac20704-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "佩戴在手腕上的多圈木质珠串手链",
+      "answer": "画面中心主要展示的对象是佩戴在手腕上的多圈木质珠串手链",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "becebba3a673a6e6",
+    "case_id": "fahari-c0618befdc51-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该推广商品的真实销量相关信息，无法得知",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c025301314ba539e",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "两款带有绿松石色珠、木珠、白色圆珠及银饰的手串",
+      "answer": "画面中心主要展示的是两款带有绿松石色珠、木珠、白色圆珠及银饰的手串",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c1468cbafeaf591b",
+    "case_id": "sequence-f53ce103eebc-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "bracelet set",
+      "answer": "画面中心主要展示的对象是手链套装",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c185609a7ffca4b1",
+    "case_id": "tanmujiang-90ba0ac20704-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "dark teal",
+      "answer": "画面主要背景颜色是深青绿色",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "绿"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c5660de3dcdf2476",
+    "case_id": "sequence-f53ce103eebc-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c700b53791a6156c",
+    "case_id": "x-1965401279863140778-972d114aa4bb-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "灰色",
+      "answer": "画面主要背景是灰色",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c708a853d592ed89",
+    "case_id": "qi-flow-e1afb7538267-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "画面主要背景包含浅米色区域和白色区域",
+      "answer": "画面主要背景包含浅米色区域和白色区域",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "c8aef866e97f0cdc",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "该推广图中未显示商品真实销量的相关信息，无法得知",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ca1998698fb17b88",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该商品的真实销量相关信息，无法得知",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ca2eb8775e1d14b5",
+    "case_id": "x-1965401279863140778-972d114aa4bb-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片获取对应商品的真实销量",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "cb72d34fda1abcc9",
+    "case_id": "fahari-c0618befdc51-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "cbaf480fee341e0d",
+    "case_id": "tanmujiang-90ba0ac20704-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "tanmujiang-90ba0ac20704"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "d3c874614d20c8b5",
+    "case_id": "x-1660996700172062721-906bb558f770-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "一条由银色串珠构成、带有五枚蓝黄配色花朵装饰的串珠手链，被放置在手掌上",
+      "answer": "画面中心主要展示的是一条由银色串珠构成、带有五枚蓝黄配色花朵装饰的串珠手链，被放置在手掌上",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "d5ed4edc847f2be8",
+    "case_id": "qi-flow-e1afb7538267-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片得知对应商品的真实销量",
+      "source_ids": [
+        "qi-flow-e1afb7538267"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "d5f4fd2977d56a34",
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-1448747411892051978-0c3ea1caeb4d"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "d616084fb270ec48",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "daf10ff4c0cecbb6",
+    "case_id": "x-1660996700172062721-906bb558f770-2",
+    "question": "手掌后方的汽车内饰主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "手掌后方的汽车内饰主要为黑色",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "问题指定区域",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "db42140b023110fb",
+    "case_id": "stacks-steph-6a5d432e1894-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "由白色扁圆盘珠串成、带有两个金色装饰（圆柱形金珠簇和单个圆形金珠）的弹力手链，放置在六边形白色带木纹纹理的托盘上",
+      "answer": "画面中心主要展示的是由白色扁圆盘珠串成、带有两个金色装饰（圆柱形金珠簇和单个圆形金珠）的弹力手链，放置在六边形白色带木纹纹理的托盘上",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "dcb9b4c9a6991fae",
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手",
+      "source_ids": [
+        "xhs-6acf32a60000000002010930-ee400326a2b4"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "dcdf6f45690e2cf5",
+    "case_id": "sequence-f53ce103eebc-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "sequence-f53ce103eebc"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "df0cbdb07fd75f00",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米白色",
+      "answer": "画面主要背景是浅米白色",
+      "source_ids": [
+        "xhs-6acf1d4d000000001801096c-3a218f9c141d"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e2c078aa6568fddb",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图得知对应商品的真实销量",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e32048046e128adb",
+    "case_id": "x-2098131365468262541-1255291b603a-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色圆形珠子组成的带银色蝎子挂饰和银色龙虾扣的串珠手链",
+      "answer": "画面中心主要展示的对象是黑色圆形珠子组成的带银色蝎子挂饰和银色龙虾扣的串珠手链",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e371c059a003a361",
+    "case_id": "miansai-9b0418515350-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "beaded bracelet",
+      "answer": "画面中心主要展示的是串珠手链",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e4c71ff1392e401c",
+    "case_id": "x-2027810292218966399-7c25f83553ba-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图得知对应商品的真实销量",
+      "source_ids": [
+        "x-2027810292218966399-7c25f83553ba"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e703262e54721d98",
+    "case_id": "fahari-c0618befdc51-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "e892a84fab9391e9",
+    "case_id": "x-1660996700172062721-906bb558f770-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ea9328e6f52d4671",
+    "case_id": "puravida-65102caa4412-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "plain light gray",
+      "answer": "画面主要背景是浅灰色",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "eb214b72dd0e577d",
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-2",
+    "question": "手串下方承托布主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅米色",
+      "answer": "手串下方承托布主要是浅米色",
+      "source_ids": [
+        "xhs-6acf752d000000001500a9c6-6f28bc97ccf9"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白",
+        "米"
+      ],
+      "answerable": true,
+      "support_region": "问题指定区域",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "eb64785c613f320c",
+    "case_id": "miansai-9b0418515350-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该推广图中得知对应商品的真实销量",
+      "source_ids": [
+        "miansai-9b0418515350"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ece216ebdd9d6434",
+    "case_id": "fahari-c0618befdc51-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "编织手链，带有红、白、黑三色珠饰，配有黑色调节绳",
+      "answer": "画面中心主要展示的是带有红、白、黑三色珠饰且配有黑色调节绳的编织手链",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ee8be1fdda4d8d44",
+    "case_id": "fahari-c0618befdc51-1",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer": {
+      "status": "answered",
+      "value": "画面中心主要展示的是人的手腕、手、上臂及胸部区域，该手腕佩戴有红、白、黑条纹的串珠手链，手上有金色戒指、暗红色指甲油，上臂有深色蝴蝶纹身，胸部可见黑色上衣",
+      "answer": "画面中心主要展示的是人的手腕、手、上臂及胸部区域，该手腕佩戴有红、白、黑条纹的串珠手链，手上有金色戒指、暗红色指甲油，上臂有深色蝴蝶纹身，胸部可见黑色上衣",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "手链",
+        "手串",
+        "手镯",
+        "腕饰",
+        "bracelet"
+      ],
+      "answerable": true,
+      "support_region": "中心腕饰",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ef1ca317a008fc7e",
+    "case_id": "x-1562488657482682368-b13c0c6acf93-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "灰色",
+      "answer": "画面主要背景是灰色",
+      "source_ids": [
+        "x-1562488657482682368-b13c0c6acf93"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "efb4273b2a358639",
+    "case_id": "stacks-steph-6a5d432e1894-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法从该图片获取对应商品的真实销量",
+      "source_ids": [
+        "stacks-steph-6a5d432e1894"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "f52235afb97ca422",
+    "case_id": "x-1660996700172062721-906bb558f770-2",
+    "question": "手掌后方的汽车内饰主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "手掌后方的汽车内饰主要是黑色",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑",
+        "灰"
+      ],
+      "answerable": true,
+      "support_region": "问题指定区域",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fa36fe6a10d23372",
+    "case_id": "x-1660996700172062721-906bb558f770-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fb44afe83345e3f7",
+    "case_id": "fahari-c0618befdc51-2",
+    "question": "手腕后方的衣物主要是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "黑色",
+      "answer": "手腕后方的衣物主要是黑色",
+      "source_ids": [
+        "fahari-c0618befdc51"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "黑"
+      ],
+      "answerable": true,
+      "support_region": "问题指定区域",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fb66f6a230fce589",
+    "case_id": "puravida-65102caa4412-2",
+    "question": "画面主要背景是什么颜色？",
+    "answer": {
+      "status": "answered",
+      "value": "浅白色（或淡灰白色）",
+      "answer": "画面主要背景为浅白色（或淡灰白色）",
+      "source_ids": [
+        "puravida-65102caa4412"
+      ]
+    },
+    "gold": {
+      "expected": [
+        "白"
+      ],
+      "answerable": true,
+      "support_region": "主体以外背景",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fcef91ffe4bb827f",
+    "case_id": "x-1965401279863140778-972d114aa4bb-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手或手腕",
+      "source_ids": [
+        "x-1965401279863140778-972d114aa4bb"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fd689837d1b8ca2d",
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": null,
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fdaf97dff8f3596e",
+    "case_id": "x-1432338272252928005-3eca7229b236-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未显示该商品的真实销量相关信息，无法得知",
+      "source_ids": [
+        "x-1432338272252928005-3eca7229b236"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ff0eae64dd23b6bb",
+    "case_id": "x-1660996700172062721-906bb558f770-4",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "图中未发现商品真实销量的相关信息，无法得知对应商品的真实销量",
+      "source_ids": [
+        "x-1660996700172062721-906bb558f770"
+      ]
+    },
+    "gold": {
+      "expected": null,
+      "answerable": false,
+      "support_region": "原图不能核验真实成交销量",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "ffcf89426dd131f7",
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "画面中出现了真人的手腕",
+      "source_ids": [
+        "xhs-6ad02942000000000200f5f5-8faa14d256dd"
+      ]
+    },
+    "gold": {
+      "expected": true,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  },
+  {
+    "review_id": "fffe35968142d353",
+    "case_id": "x-2098131365468262541-1255291b603a-3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "画面中未出现真人的手或手腕",
+      "source_ids": [
+        "x-2098131365468262541-1255291b603a"
+      ]
+    },
+    "gold": {
+      "expected": false,
+      "answerable": true,
+      "support_region": "画面所有区域；展示架不算真人",
+      "annotation_author": "primary assistant visual preannotation",
+      "human_review": "pending"
+    },
+    "correct": null,
+    "citation_supported": null,
+    "reviewer": null
+  }
+]

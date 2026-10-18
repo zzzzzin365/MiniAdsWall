@@ -1,0 +1,22 @@
+{
+  "call_key": "20261016-evidence-pipeline-seedlite-v1:image-004:cross:D_supplement:answer",
+  "model": "doubao-seed-2-0-lite-260428",
+  "request_id": "2d9833ea51bb693f3c627952",
+  "input_sha256": "a6aa3ce80d173549ff65f9638f3e1c816d3cfefbfb6ae06236bc848054bc236e",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2537.159667001106,
+  "http_status": 200,
+  "provider_id": "0217920862384304734107e4eb0a0b12bf77ca328af219894c26d",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 740,
+    "total_tokens": 820,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,842 @@
+[
+  {
+    "case_id": "tanmujiang-90ba0ac20704-1",
+    "asset_id": "tanmujiang-90ba0ac20704",
+    "family_id": "merchant-tanmujiang",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "tanmujiang-90ba0ac20704-2",
+    "asset_id": "tanmujiang-90ba0ac20704",
+    "family_id": "merchant-tanmujiang",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "tanmujiang-90ba0ac20704-3",
+    "asset_id": "tanmujiang-90ba0ac20704",
+    "family_id": "merchant-tanmujiang",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "tanmujiang-90ba0ac20704-4",
+    "asset_id": "tanmujiang-90ba0ac20704",
+    "family_id": "merchant-tanmujiang",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "qi-flow-e1afb7538267-1",
+    "asset_id": "qi-flow-e1afb7538267",
+    "family_id": "merchant-qi-flow",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "qi-flow-e1afb7538267-2",
+    "asset_id": "qi-flow-e1afb7538267",
+    "family_id": "merchant-qi-flow",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "qi-flow-e1afb7538267-3",
+    "asset_id": "qi-flow-e1afb7538267",
+    "family_id": "merchant-qi-flow",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "qi-flow-e1afb7538267-4",
+    "asset_id": "qi-flow-e1afb7538267",
+    "family_id": "merchant-qi-flow",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "miansai-9b0418515350-1",
+    "asset_id": "miansai-9b0418515350",
+    "family_id": "merchant-miansai",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "miansai-9b0418515350-2",
+    "asset_id": "miansai-9b0418515350",
+    "family_id": "merchant-miansai",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "miansai-9b0418515350-3",
+    "asset_id": "miansai-9b0418515350",
+    "family_id": "merchant-miansai",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "miansai-9b0418515350-4",
+    "asset_id": "miansai-9b0418515350",
+    "family_id": "merchant-miansai",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "energymuse-f965a98f6102-1",
+    "asset_id": "energymuse-f965a98f6102",
+    "family_id": "merchant-energymuse",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "energymuse-f965a98f6102-2",
+    "asset_id": "energymuse-f965a98f6102",
+    "family_id": "merchant-energymuse",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "energymuse-f965a98f6102-3",
+    "asset_id": "energymuse-f965a98f6102",
+    "family_id": "merchant-energymuse",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "energymuse-f965a98f6102-4",
+    "asset_id": "energymuse-f965a98f6102",
+    "family_id": "merchant-energymuse",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "puravida-65102caa4412-1",
+    "asset_id": "puravida-65102caa4412",
+    "family_id": "merchant-puravida",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "puravida-65102caa4412-2",
+    "asset_id": "puravida-65102caa4412",
+    "family_id": "merchant-puravida",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "puravida-65102caa4412-3",
+    "asset_id": "puravida-65102caa4412",
+    "family_id": "merchant-puravida",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "puravida-65102caa4412-4",
+    "asset_id": "puravida-65102caa4412",
+    "family_id": "merchant-puravida",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "stacks-steph-6a5d432e1894-1",
+    "asset_id": "stacks-steph-6a5d432e1894",
+    "family_id": "merchant-stacks-steph",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "stacks-steph-6a5d432e1894-2",
+    "asset_id": "stacks-steph-6a5d432e1894",
+    "family_id": "merchant-stacks-steph",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "stacks-steph-6a5d432e1894-3",
+    "asset_id": "stacks-steph-6a5d432e1894",
+    "family_id": "merchant-stacks-steph",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "stacks-steph-6a5d432e1894-4",
+    "asset_id": "stacks-steph-6a5d432e1894",
+    "family_id": "merchant-stacks-steph",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "fahari-c0618befdc51-1",
+    "asset_id": "fahari-c0618befdc51",
+    "family_id": "merchant-fahari",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "fahari-c0618befdc51-2",
+    "asset_id": "fahari-c0618befdc51",
+    "family_id": "merchant-fahari",
+    "question": "手腕后方的衣物主要是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "fahari-c0618befdc51-3",
+    "asset_id": "fahari-c0618befdc51",
+    "family_id": "merchant-fahari",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "fahari-c0618befdc51-4",
+    "asset_id": "fahari-c0618befdc51",
+    "family_id": "merchant-fahari",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "sequence-f53ce103eebc-1",
+    "asset_id": "sequence-f53ce103eebc",
+    "family_id": "merchant-sequence",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "sequence-f53ce103eebc-2",
+    "asset_id": "sequence-f53ce103eebc",
+    "family_id": "merchant-sequence",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "sequence-f53ce103eebc-3",
+    "asset_id": "sequence-f53ce103eebc",
+    "family_id": "merchant-sequence",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "sequence-f53ce103eebc-4",
+    "asset_id": "sequence-f53ce103eebc",
+    "family_id": "merchant-sequence",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-1965401279863140778-972d114aa4bb-1",
+    "asset_id": "x-1965401279863140778-972d114aa4bb",
+    "family_id": "x-merchant-ukrainian_art_",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1965401279863140778-972d114aa4bb-2",
+    "asset_id": "x-1965401279863140778-972d114aa4bb",
+    "family_id": "x-merchant-ukrainian_art_",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1965401279863140778-972d114aa4bb-3",
+    "asset_id": "x-1965401279863140778-972d114aa4bb",
+    "family_id": "x-merchant-ukrainian_art_",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1965401279863140778-972d114aa4bb-4",
+    "asset_id": "x-1965401279863140778-972d114aa4bb",
+    "family_id": "x-merchant-ukrainian_art_",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-2007285619475591650-4be9a92e93eb-1",
+    "asset_id": "x-2007285619475591650-4be9a92e93eb",
+    "family_id": "x-merchant-junkyardblonde",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2007285619475591650-4be9a92e93eb-2",
+    "asset_id": "x-2007285619475591650-4be9a92e93eb",
+    "family_id": "x-merchant-junkyardblonde",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2007285619475591650-4be9a92e93eb-3",
+    "asset_id": "x-2007285619475591650-4be9a92e93eb",
+    "family_id": "x-merchant-junkyardblonde",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2007285619475591650-4be9a92e93eb-4",
+    "asset_id": "x-2007285619475591650-4be9a92e93eb",
+    "family_id": "x-merchant-junkyardblonde",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-1562488657482682368-b13c0c6acf93-1",
+    "asset_id": "x-1562488657482682368-b13c0c6acf93",
+    "family_id": "x-merchant-stillwallsstore",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1562488657482682368-b13c0c6acf93-2",
+    "asset_id": "x-1562488657482682368-b13c0c6acf93",
+    "family_id": "x-merchant-stillwallsstore",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1562488657482682368-b13c0c6acf93-3",
+    "asset_id": "x-1562488657482682368-b13c0c6acf93",
+    "family_id": "x-merchant-stillwallsstore",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1562488657482682368-b13c0c6acf93-4",
+    "asset_id": "x-1562488657482682368-b13c0c6acf93",
+    "family_id": "x-merchant-stillwallsstore",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-1660996700172062721-906bb558f770-1",
+    "asset_id": "x-1660996700172062721-906bb558f770",
+    "family_id": "x-merchant-263juta",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1660996700172062721-906bb558f770-2",
+    "asset_id": "x-1660996700172062721-906bb558f770",
+    "family_id": "x-merchant-263juta",
+    "question": "手掌后方的汽车内饰主要是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1660996700172062721-906bb558f770-3",
+    "asset_id": "x-1660996700172062721-906bb558f770",
+    "family_id": "x-merchant-263juta",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1660996700172062721-906bb558f770-4",
+    "asset_id": "x-1660996700172062721-906bb558f770",
+    "family_id": "x-merchant-263juta",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-2027810292218966399-7c25f83553ba-1",
+    "asset_id": "x-2027810292218966399-7c25f83553ba",
+    "family_id": "x-merchant-natalyjewellery",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2027810292218966399-7c25f83553ba-2",
+    "asset_id": "x-2027810292218966399-7c25f83553ba",
+    "family_id": "x-merchant-natalyjewellery",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2027810292218966399-7c25f83553ba-3",
+    "asset_id": "x-2027810292218966399-7c25f83553ba",
+    "family_id": "x-merchant-natalyjewellery",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2027810292218966399-7c25f83553ba-4",
+    "asset_id": "x-2027810292218966399-7c25f83553ba",
+    "family_id": "x-merchant-natalyjewellery",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-1",
+    "asset_id": "x-1448747411892051978-0c3ea1caeb4d",
+    "family_id": "x-merchant-shorelinestudi3",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-2",
+    "asset_id": "x-1448747411892051978-0c3ea1caeb4d",
+    "family_id": "x-merchant-shorelinestudi3",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-3",
+    "asset_id": "x-1448747411892051978-0c3ea1caeb4d",
+    "family_id": "x-merchant-shorelinestudi3",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1448747411892051978-0c3ea1caeb4d-4",
+    "asset_id": "x-1448747411892051978-0c3ea1caeb4d",
+    "family_id": "x-merchant-shorelinestudi3",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-1432338272252928005-3eca7229b236-1",
+    "asset_id": "x-1432338272252928005-3eca7229b236",
+    "family_id": "x-merchant-branchlaquanya",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1432338272252928005-3eca7229b236-2",
+    "asset_id": "x-1432338272252928005-3eca7229b236",
+    "family_id": "x-merchant-branchlaquanya",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1432338272252928005-3eca7229b236-3",
+    "asset_id": "x-1432338272252928005-3eca7229b236",
+    "family_id": "x-merchant-branchlaquanya",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1432338272252928005-3eca7229b236-4",
+    "asset_id": "x-1432338272252928005-3eca7229b236",
+    "family_id": "x-merchant-branchlaquanya",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-1541930309603807239-19a7e3bccda0-1",
+    "asset_id": "x-1541930309603807239-19a7e3bccda0",
+    "family_id": "x-merchant-peacefulmekt",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1541930309603807239-19a7e3bccda0-2",
+    "asset_id": "x-1541930309603807239-19a7e3bccda0",
+    "family_id": "x-merchant-peacefulmekt",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1541930309603807239-19a7e3bccda0-3",
+    "asset_id": "x-1541930309603807239-19a7e3bccda0",
+    "family_id": "x-merchant-peacefulmekt",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-1541930309603807239-19a7e3bccda0-4",
+    "asset_id": "x-1541930309603807239-19a7e3bccda0",
+    "family_id": "x-merchant-peacefulmekt",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "x-2098131365468262541-1255291b603a-1",
+    "asset_id": "x-2098131365468262541-1255291b603a",
+    "family_id": "x-merchant-sochicfinds",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2098131365468262541-1255291b603a-2",
+    "asset_id": "x-2098131365468262541-1255291b603a",
+    "family_id": "x-merchant-sochicfinds",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2098131365468262541-1255291b603a-3",
+    "asset_id": "x-2098131365468262541-1255291b603a",
+    "family_id": "x-merchant-sochicfinds",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "x-2098131365468262541-1255291b603a-4",
+    "asset_id": "x-2098131365468262541-1255291b603a",
+    "family_id": "x-merchant-sochicfinds",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-1",
+    "asset_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+    "family_id": "xhs-merchant-69131cfd000000003700bb0c",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-2",
+    "asset_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+    "family_id": "xhs-merchant-69131cfd000000003700bb0c",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-3",
+    "asset_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+    "family_id": "xhs-merchant-69131cfd000000003700bb0c",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf32a60000000002010930-ee400326a2b4-4",
+    "asset_id": "xhs-6acf32a60000000002010930-ee400326a2b4",
+    "family_id": "xhs-merchant-69131cfd000000003700bb0c",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-1",
+    "asset_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+    "family_id": "xhs-merchant-58c398af7fc5b80863c59fbf",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-2",
+    "asset_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+    "family_id": "xhs-merchant-58c398af7fc5b80863c59fbf",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-3",
+    "asset_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+    "family_id": "xhs-merchant-58c398af7fc5b80863c59fbf",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d-4",
+    "asset_id": "xhs-6acf1d4d000000001801096c-3a218f9c141d",
+    "family_id": "xhs-merchant-58c398af7fc5b80863c59fbf",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-1",
+    "asset_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+    "family_id": "xhs-merchant-625e98f10000000010007360",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-2",
+    "asset_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+    "family_id": "xhs-merchant-625e98f10000000010007360",
+    "question": "画面主要背景是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-3",
+    "asset_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+    "family_id": "xhs-merchant-625e98f10000000010007360",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd-4",
+    "asset_id": "xhs-6ad02942000000000200f5f5-8faa14d256dd",
+    "family_id": "xhs-merchant-625e98f10000000010007360",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  },
+  {
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-1",
+    "asset_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+    "family_id": "xhs-merchant-6a483933000000000f03bc03",
+    "question": "画面中心主要展示的对象是什么？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-2",
+    "asset_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+    "family_id": "xhs-merchant-6a483933000000000f03bc03",
+    "question": "手串下方承托布主要是什么颜色？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-3",
+    "asset_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+    "family_id": "xhs-merchant-6a483933000000000f03bc03",
+    "question": "画面中是否出现真人的手或手腕？",
+    "answer_contract": {
+      "value_type": "boolean",
+      "verification_scope": "visible"
+    }
+  },
+  {
+    "case_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9-4",
+    "asset_id": "xhs-6acf752d000000001500a9c6-6f28bc97ccf9",
+    "family_id": "xhs-merchant-6a483933000000000f03bc03",
+    "question": "这张推广图对应商品的真实销量是多少？",
+    "answer_contract": {
+      "value_type": "text",
+      "verification_scope": "verified_business_fact"
+    }
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "0d30fc9c139b2bb43787"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录整张图的背景为浅米白色，无额外纹理装饰，可直接回答底色问题。"
+}

@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "car_color",
+      "value": "左侧最前方汽车的车身主要为浅绿色",
+      "region": "左侧广告图内的汽车区域",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "无额外缺失信息"
+  ]
+}

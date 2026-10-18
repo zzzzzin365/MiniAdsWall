@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "x-creative-framework-2",
+    "arm": "old_C1",
+    "question": "INCLUDING下面并排有几张介绍卡片？",
+    "answer": {
+      "status": "answered",
+      "value": 4,
+      "answer": "INCLUDING下方横向并排有4张尺寸一致的浅桃色圆角介绍卡片。",
+      "source_ids": [
+        "x-creative-framework"
+      ]
+    },
+    "format_errors": [
+      "expected_text_value"
+    ]
+  },
+  {
+    "case_id": "xhs-duo-1-2",
+    "arm": "old_C1",
+    "question": "正文用数字编号列出了几条建议？",
+    "answer": {
+      "status": "answered",
+      "value": 3,
+      "answer": "正文用数字编号列出了3条建议。",
+      "source_ids": [
+        "xhs-duo-1"
+      ]
+    },
+    "format_errors": [
+      "expected_text_value"
+    ]
+  },
+  {
+    "case_id": "xhs-duo-2-2",
+    "arm": "old_C1",
+    "question": "这张封面里一共有几只猫头鹰角色？",
+    "answer": {
+      "status": "answered",
+      "value": 2,
+      "answer": "这张封面里一共有2只绿色猫头鹰卡通角色。",
+      "source_ids": [
+        "xhs-duo-2"
+      ]
+    },
+    "format_errors": [
+      "expected_text_value"
+    ]
+  }
+]

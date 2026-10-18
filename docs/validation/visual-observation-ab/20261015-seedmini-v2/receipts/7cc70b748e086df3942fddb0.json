@@ -1,0 +1,22 @@
+{
+  "call_key": "20261015-seedmini-v2:main:xhs-duo-1:xhs-duo-1-5:B:read",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "7cc70b748e086df3942fddb0",
+  "input_sha256": "e381b4aea5b7369ce666ddd3ca36611fe8553ecc2b674e8d99a19723804df013",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 4365.581790916622,
+  "http_status": 200,
+  "provider_id": "021792045144068f513ed7fef0849b399d81a53a0705617b3dbcf",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 1569,
+    "total_tokens": 1619,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Local Chinese-CLIP runtime, separate from caption-only rollback dependencies.
+torch==2.14.1
+transformers==4.46.3
+Pillow==12.3.0
+tokenizers==0.20.3  # Chroma0.5.x requires <=0.20.3

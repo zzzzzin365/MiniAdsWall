@@ -1,0 +1,27 @@
+{
+  "observations": [
+    {
+      "key": "ad_promotion_text",
+      "value": "“0首付”，开蔚来回家；0购置税，0元终身质保，限时享购车“0首付”",
+      "region": "左侧蔚来广告卡片文案区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_tag_text",
+      "value": "0元质保、0元换电、超长续航",
+      "region": "左侧蔚来广告卡片标签区",
+      "state": "observed"
+    },
+    {
+      "key": "actual_transaction_price",
+      "value": "图中未标注该款蔚来汽车的实际成交价格",
+      "region": "整张图片全区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该款蔚来汽车的具体车型配置",
+    "该款蔚来汽车的官方指导价",
+    "该款汽车今日的实际成交价格"
+  ]
+}

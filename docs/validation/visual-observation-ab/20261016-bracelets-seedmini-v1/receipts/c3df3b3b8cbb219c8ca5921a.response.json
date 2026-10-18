@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "jewelry_type",
+      "value": "Two pieces of jewelry (a necklace and a bracelet)",
+      "region": "central area",
+      "state": "explicitly_absent"
+    },
+    {
+      "key": "stone_type",
+      "value": "Clear, irregularly shaped translucent chip stones",
+      "region": "jewelry components",
+      "state": "observed"
+    },
+    {
+      "key": "charm_type",
+      "value": "Silver-toned snowflake-shaped charms",
+      "region": "jewelry pendants",
+      "state": "observed"
+    },
+    {
+      "key": "charm_detail",
+      "value": "Each snowflake charm has small dark circular accents",
+      "region": "jewelry pendants",
+      "state": "observed"
+    },
+    {
+      "key": "bead_detail",
+      "value": "Small silver spacer beads between the chip stones",
+      "region": "jewelry components",
+      "state": "observed"
+    },
+    {
+      "key": "necklace_shape",
+      "value": "Curved, longer strand of chip stones",
+      "region": "left jewelry",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_shape",
+      "value": "Circular, shorter strand of chip stones",
+      "region": "right jewelry",
+      "state": "observed"
+    },
+    {
+      "key": "surface_type",
+      "value": "Rough, patterned stone surface with gray, beige, and dark patches",
+      "region": "background",
+      "state": "observed"
+    },
+    {
+      "key": "background_objects",
+      "value": "Multiple irregular natural stones as background",
+      "region": "background",
+      "state": "observed"
+    },
+    {
+      "key": "stone_transparency",
+      "value": "Chip stones are transparent and clear",
+      "region": "jewelry components",
+      "state": "observed"
+    },
+    {
+      "key": "charm_metal",
+      "value": "Charms are silver-colored metal",
+      "region": "jewelry pendants",
+      "state": "observed"
+    },
+    {
+      "key": "spacer_location",
+      "value": "Silver spacers placed between each chip stone",
+      "region": "jewelry components",
+      "state": "observed"
+    },
+    {
+      "key": "necklace_pendant",
+      "value": "Snowflake charm attached to the left necklace",
+      "region": "left jewelry",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_pendant",
+      "value": "Snowflake charm attached to the right bracelet",
+      "region": "right jewelry",
+      "state": "observed"
+    },
+    {
+      "key": "stone_surface",
+      "value": "Natural stone background has rough, uneven texture",
+      "region": "background",
+      "state": "observed"
+    },
+    {
+      "key": "stone_pattern",
+      "value": "Background stone has mottled pattern with light and dark patches",
+      "region": "background",
+      "state": "observed"
+    }
+  ]
+}

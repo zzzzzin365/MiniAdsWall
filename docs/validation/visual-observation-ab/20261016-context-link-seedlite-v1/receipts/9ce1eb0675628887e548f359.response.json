@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "total_bracelet_sets",
+      "value": "2组手链套装",
+      "region": "画面中下部",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_set_1_components",
+      "value": "1串黑色圆珠手串、1串浅粉透圆珠手串、1个闭合透明C形环",
+      "region": "画面左侧",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_set_2_components",
+      "value": "1串黑色圆珠手串、1串浅粉透圆珠手串、1个开口透明C形环",
+      "region": "画面右侧",
+      "state": "observed"
+    },
+    {
+      "key": "black_bead_feature",
+      "value": "圆珠为亮面纯黑色，部分珠子间配有银色镶钻装饰环",
+      "region": "两组手串的黑色珠串部分",
+      "state": "observed"
+    },
+    {
+      "key": "pink_bead_feature",
+      "value": "圆珠为浅粉半透明质感，表面光滑",
+      "region": "两组手串的浅粉珠串部分",
+      "state": "observed"
+    },
+    {
+      "key": "transparent_ring_1_shape",
+      "value": "为完整闭合的透明环形",
+      "region": "画面左侧套装",
+      "state": "observed"
+    },
+    {
+      "key": "transparent_ring_2_shape",
+      "value": "为带有缺口的开口透明环形",
+      "region": "画面右侧套装",
+      "state": "observed"
+    },
+    {
+      "key": "placement_surface",
+      "value": "放置在米白色带纹理的毛绒织物表面，织物边缘有流苏毛边",
+      "region": "画面中下部承载物品的区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_pouch",
+      "value": "浅棕色麻布抽绳束口袋，袋身右下角印有黑色荷花简笔画图案",
+      "region": "画面上部背景处",
+      "state": "observed"
+    },
+    {
+      "key": "pouch_drawstring_detail",
+      "value": "抽绳为白色，末端带有流苏，抽绳上可见一颗棕色圆珠",
+      "region": "画面上部束口袋右侧",
+      "state": "observed"
+    },
+    {
+      "key": "far_background",
+      "value": "为深棕色木质平面",
+      "region": "画面最顶部背景",
+      "state": "observed"
+    }
+  ]
+}

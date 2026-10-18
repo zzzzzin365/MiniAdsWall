@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "car_interior_color",
+      "value": "手掌后方的汽车内饰主要为黑色",
+      "region": "手掌后方背景区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,55 @@
+{
+  "observations": [
+    {
+      "key": "ad_platform",
+      "value": "Semrush",
+      "region": "广告区域",
+      "state": "observed"
+    },
+    {
+      "key": "ad_top_text",
+      "value": "Find the right keywords & beat competitors",
+      "region": "上方广告区域",
+      "state": "observed"
+    },
+    {
+      "key": "ad_bottom_text",
+      "value": "Analyze rival marketing strategies",
+      "region": "下方广告区域",
+      "state": "observed"
+    },
+    {
+      "key": "site_health_rate",
+      "value": "78%",
+      "region": "上方广告的Site Audit模块",
+      "state": "observed"
+    },
+    {
+      "key": "crawled_pages_num",
+      "value": "23,777",
+      "region": "上方广告的Site Audit模块",
+      "state": "observed"
+    },
+    {
+      "key": "errors_num",
+      "value": "539",
+      "region": "上方广告的Site Audit模块",
+      "state": "observed"
+    },
+    {
+      "key": "warnings_num",
+      "value": "8,072",
+      "region": "上方广告的Site Audit模块",
+      "state": "observed"
+    },
+    {
+      "key": "notices_num",
+      "value": "86,053",
+      "region": "上方广告的Site Audit模块",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "使用该Semrush广告后真实转化率提升的百分比数据"
+  ]
+}

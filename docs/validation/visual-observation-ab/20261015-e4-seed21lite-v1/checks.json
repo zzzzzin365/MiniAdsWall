@@ -1,0 +1,9 @@
+{
+  "rows": 90,
+  "unique_case_arm": 90,
+  "all_receipts_succeeded": true,
+  "all_same_model": true,
+  "gold_sent_to_model": false,
+  "body_review_completed": false,
+  "focused_tests_passed": 12
+}

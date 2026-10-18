@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "left_card_title",
+      "value": "Ad Creative Strategist System Prompt",
+      "region": "最左侧介绍卡片的文字区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

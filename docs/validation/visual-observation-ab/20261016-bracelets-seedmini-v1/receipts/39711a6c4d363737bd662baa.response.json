@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "dark blue",
+      "region": "main background of the image",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

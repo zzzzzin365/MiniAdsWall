@@ -1,0 +1,142 @@
+[
+  {
+    "case_id": "zhihu-components-2",
+    "arm": "C1",
+    "question": "组件拆解示意位于汽车广告的左边还是右边？",
+    "original_pass": false,
+    "new_contract_format_errors": [
+      "expected_text_value"
+    ],
+    "historical_boolean_in_nonboolean_field": true,
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "组件拆解示意位于汽车广告的右侧",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "manual_semantic_review": "pending",
+    "old_route": "read",
+    "guarded_route": "read",
+    "guard": null
+  },
+  {
+    "case_id": "zhihu-components-3",
+    "arm": "C1",
+    "question": "右侧视频组件的箭头指向的素材说明完整写了什么？",
+    "original_pass": false,
+    "new_contract_format_errors": [],
+    "historical_boolean_in_nonboolean_field": false,
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定右侧视频组件的箭头指向的素材说明完整内容",
+      "source_ids": [
+        "zhihu-components"
+      ]
+    },
+    "manual_semantic_review": "pending",
+    "old_route": "not_provable",
+    "guarded_route": "read",
+    "guard": "missing_visible_fact_requires_read"
+  },
+  {
+    "case_id": "x-marketing-kb-5",
+    "arm": "B",
+    "question": "DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词？",
+    "original_pass": false,
+    "new_contract_format_errors": [],
+    "historical_boolean_in_nonboolean_field": false,
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "DATA WAREHOUSE框里未明确出现spend、clicks、leads这三个词",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "manual_semantic_review": "pending"
+  },
+  {
+    "case_id": "x-marketing-kb-4",
+    "arm": "C1",
+    "question": "YOU / REVIEW区域位于整体画面的左侧还是右侧？",
+    "original_pass": false,
+    "new_contract_format_errors": [
+      "expected_text_value"
+    ],
+    "historical_boolean_in_nonboolean_field": true,
+    "answer": {
+      "status": "answered",
+      "value": false,
+      "answer": "YOU / REVIEW区域位于整体画面的右侧",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "manual_semantic_review": "pending",
+    "old_route": "reuse",
+    "guarded_route": "reuse",
+    "guard": null
+  },
+  {
+    "case_id": "x-marketing-kb-1",
+    "arm": "C1",
+    "question": "整张流程图的背景主要是什么颜色？",
+    "original_pass": false,
+    "new_contract_format_errors": [],
+    "historical_boolean_in_nonboolean_field": false,
+    "answer": {
+      "status": "insufficient",
+      "value": null,
+      "answer": "无法确定该流程图的背景主要颜色，现有证据未提及相关内容",
+      "source_ids": []
+    },
+    "manual_semantic_review": "pending",
+    "old_route": "not_provable",
+    "guarded_route": "read",
+    "guard": "missing_visible_fact_requires_read"
+  },
+  {
+    "case_id": "x-marketing-kb-2",
+    "arm": "B",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "original_pass": false,
+    "new_contract_format_errors": [
+      "expected_text_value"
+    ],
+    "historical_boolean_in_nonboolean_field": true,
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "这张图主要是流程示意图",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "manual_semantic_review": "pending"
+  },
+  {
+    "case_id": "x-marketing-kb-2",
+    "arm": "C1",
+    "question": "这张图主要是流程示意图还是实物产品摄影？",
+    "original_pass": false,
+    "new_contract_format_errors": [
+      "expected_text_value"
+    ],
+    "historical_boolean_in_nonboolean_field": true,
+    "answer": {
+      "status": "answered",
+      "value": true,
+      "answer": "这张图主要是流程示意图",
+      "source_ids": [
+        "x-marketing-kb"
+      ]
+    },
+    "manual_semantic_review": "pending",
+    "old_route": "reuse",
+    "guarded_route": "reuse",
+    "guard": null
+  }
+]

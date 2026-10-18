@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "d73cc68719c750633cc6"
+  ],
+  "missing": [],
+  "reason": "DATA WAREHOUSE框内已明确标注spend、clicks、leads三个词，完全覆盖问题所问的全部细节。"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": true,
+  "publisher": null,
+  "quote": null,
+  "answer": "未找到对应来源的采集记录署名publisher_record相关信息，无法确定该内容。",
+  "image_citations": [
+    "image-001"
+  ],
+  "text_citations": []
+}

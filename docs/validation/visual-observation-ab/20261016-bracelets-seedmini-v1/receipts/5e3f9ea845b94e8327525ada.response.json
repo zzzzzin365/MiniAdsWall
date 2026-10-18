@@ -1,0 +1,25 @@
+{
+  "decision": "read",
+  "evidence_ids": [
+    "750340ec3c4ec77d7fec",
+    "42a3b189ddd9b79aa24e",
+    "eaf97f3178e8a626cf8c",
+    "57346af0833de4cf7c80",
+    "c77796c8477aefc78040",
+    "e7260486cd26319541d1",
+    "038b4c880ad5875d142d",
+    "31459bedcac1929d1fef",
+    "13408bdca491ce969d54",
+    "a4b4dc4642b18cf414ba",
+    "4f15da1faa4ca5d5cdcc",
+    "5a8b96d2d308f62c5fdf",
+    "a290701e5ef176de0539",
+    "192ec46da9453da390ea",
+    "8eedcea71780d550ecab",
+    "e10c264acfeb22c4eabf"
+  ],
+  "missing": [
+    "画面中是否出现真人的手或手腕的相关可见细节"
+  ],
+  "reason": "现有观察仅记录了两款手链的相关信息，未提及画面中是否存在真人的手或手腕，无法确定该内容"
+}

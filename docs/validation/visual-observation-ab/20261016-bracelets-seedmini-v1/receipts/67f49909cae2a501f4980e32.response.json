@@ -1,0 +1,106 @@
+{
+  "observations": [
+    {
+      "key": "background",
+      "value": "light off-white embossed decorative surface with floral and geometric patterns",
+      "region": "background area",
+      "state": "observed"
+    },
+    {
+      "key": "number_of_bracelets",
+      "value": "two bracelets displayed",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_bead_color",
+      "value": "main beads of both bracelets are turquoise",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_material_types",
+      "value": "bracelets have wooden beads, white stone beads, silver decorative elements",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_decor",
+      "value": "upper bracelet has a small silver flower charm, a round white stone bead, small wooden beads",
+      "region": "upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_decor",
+      "value": "lower bracelet has a silver flower charm, a large round white stone bead, larger wooden beads",
+      "region": "lower bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "text_watermark",
+      "value": "visible text is \"旧九手作\"",
+      "region": "middle right area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_form",
+      "value": "both bracelets are strung on clear circular supports",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "main turquoise beads are flat disc-shaped",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "wooden_bead_color",
+      "value": "wooden beads are brown",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "silver_element_color",
+      "value": "silver decorative elements are metallic silver",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "white_stone_color",
+      "value": "white stone beads are pale white with subtle veining",
+      "region": "bracelets",
+      "state": "observed"
+    },
+    {
+      "key": "surface_texture",
+      "value": "background surface has raised embossed texture",
+      "region": "background",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_layout",
+      "value": "one bracelet positioned above the other on the background",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "corner_logo",
+      "value": "small logo in bottom right corner, text is unclear",
+      "region": "bottom right corner",
+      "state": "unclear"
+    },
+    {
+      "key": "upper_bracelet_silver_top",
+      "value": "upper bracelet has a silver bead at its top opening",
+      "region": "upper bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_silver_top",
+      "value": "lower bracelet has a silver bead at its top opening",
+      "region": "lower bracelet",
+      "state": "observed"
+    }
+  ]
+}

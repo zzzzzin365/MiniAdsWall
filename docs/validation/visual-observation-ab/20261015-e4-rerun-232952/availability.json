@@ -1,0 +1,7 @@
+{
+  "status": "unavailable",
+  "model": "doubao-seed-2-0-mini-260428",
+  "http_status": 429,
+  "provider_error_code": "SetLimitExceeded",
+  "output": "docs/validation/visual-observation-ab/20261015-e4-rerun-232952"
+}

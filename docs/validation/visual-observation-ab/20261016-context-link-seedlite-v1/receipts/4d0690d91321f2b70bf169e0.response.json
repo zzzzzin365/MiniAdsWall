@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "Sequence Collection",
+  "quote": "Search\n\n*   [Log in](https://www.sequencecollection.com/customer_authentication/redirect?locale=en&region_country=US)\n*   or\n*   [Create account]",
+  "answer": "已从关联来源快照body摘录符合要求的字符内容，引用对应文本。",
+  "image_citations": [
+    "image-008"
+  ],
+  "text_citations": [
+    "ctx-8dad99eb8a9240e9"
+  ]
+}

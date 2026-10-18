@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "01f17165241f8c3a9b11"
+  ],
+  "missing": [],
+  "reason": "已存观察中DATA WAREHOUSE的内容明确包含spend、clicks、leads三个词，符合问题要求"
+}

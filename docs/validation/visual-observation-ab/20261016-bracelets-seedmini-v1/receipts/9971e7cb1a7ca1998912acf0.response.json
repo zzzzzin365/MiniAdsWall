@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "6e61b96398c5e9469f5a"
+  ],
+  "missing": [],
+  "reason": "已存在明确记录画面主要背景颜色为深青色（dark teal）的观察，可支持问题所需内容"
+}

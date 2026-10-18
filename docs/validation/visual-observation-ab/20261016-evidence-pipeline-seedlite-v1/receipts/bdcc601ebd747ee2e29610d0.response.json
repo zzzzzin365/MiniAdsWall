@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "缺乏可判断原图中是否出现真人手或手腕的有效证据，无法确定相关情况。",
+  "image_citations": [
+    "image-019"
+  ],
+  "text_citations": []
+}

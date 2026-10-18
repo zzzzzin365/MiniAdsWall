@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "backing_plate_shape",
+      "value": "六边形",
+      "region": "画面中部承载饰品的白色板体",
+      "state": "observed"
+    },
+    {
+      "key": "backing_plate_color",
+      "value": "白色，表面带有做旧纹理",
+      "region": "画面中部承载饰品的板体",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_main_color",
+      "value": "主体为白色",
+      "region": "画面中心的环形饰品",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_bead_type",
+      "value": "由大量白色薄圆片状串珠串联而成",
+      "region": "画面中心环形饰品的绝大部分区域",
+      "state": "observed"
+    },
+    {
+      "key": "gold_decoration_1",
+      "value": "顶部有一组多枚堆叠的金色圆片串饰",
+      "region": "环形饰品的上部位置",
+      "state": "observed"
+    },
+    {
+      "key": "gold_decoration_2",
+      "value": "底部有1枚金色圆珠状饰件",
+      "region": "环形饰品的下部位置",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_shape",
+      "value": "整体呈闭合圆环形态",
+      "region": "画面中心",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "背景为纯白色",
+      "region": "六边形背板以外的区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_quantity",
+      "value": "画面中仅存在1条手链",
+      "region": "整幅画面",
+      "state": "observed"
+    },
+    {
+      "key": "text_presence",
+      "value": "画面中无清晰可识别的文字内容",
+      "region": "全画面",
+      "state": "explicitly_absent"
+    }
+  ]
+}

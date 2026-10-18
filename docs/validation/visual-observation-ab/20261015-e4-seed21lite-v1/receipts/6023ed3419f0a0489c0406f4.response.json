@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "comment_block_word",
+      "value": "claudeads",
+      "region": "底部Comment旁的橙色圆角块",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

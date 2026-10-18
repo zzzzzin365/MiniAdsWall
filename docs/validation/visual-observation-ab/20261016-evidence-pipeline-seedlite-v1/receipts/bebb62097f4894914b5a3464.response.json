@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "SoChicFinds",
+  "quote": null,
+  "answer": "因缺乏原图是否出现真人手或手腕的明确证据，hand_present字段为null，来源记录署名为SoChicFinds。",
+  "image_citations": [
+    "image-017"
+  ],
+  "text_citations": [
+    "ctx-6da03ca89d21062f"
+  ]
+}

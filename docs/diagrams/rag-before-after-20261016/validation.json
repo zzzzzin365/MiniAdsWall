@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "strict": true,
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "file": "/Users/admin/MiniAdsWall/docs/diagrams/rag-before-after-20261016/rag-before-after.drawio",
+    "pages": 1,
+    "cells": 42,
+    "vertices": 29,
+    "edges": 11,
+    "embedded_raster": false,
+    "external_image_count": 0,
+    "base64_payload_count": 0,
+    "largest_base64_payload_chars": 0,
+    "caption_like_text": false,
+    "duplicate_id_count": 0,
+    "missing_id_count": 0,
+    "empty_vertex_labels": 1,
+    "empty_edge_labels": 9,
+    "placeholder_label_count": 0,
+    "page_width": 1440.0,
+    "page_height": 1135.0
+  }
+}

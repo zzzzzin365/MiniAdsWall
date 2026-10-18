@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "灰色",
+      "region": "画面背景区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

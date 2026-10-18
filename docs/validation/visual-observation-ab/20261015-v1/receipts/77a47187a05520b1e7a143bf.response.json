@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "title_text",
+      "value": "(四)给营销/广告人的启示",
+      "region": "顶部区域",
+      "state": "observed"
+    },
+    {
+      "key": "icon",
+      "value": "紫色圆形内含白色向左下箭头的图标",
+      "region": "标题右侧",
+      "state": "observed"
+    },
+    {
+      "key": "point1_title",
+      "value": "1.品类破局的关键是反常识内卷",
+      "region": "内容第一部分标题",
+      "state": "observed"
+    },
+    {
+      "key": "point1_content",
+      "value": "不要跟着赛道内卷，教育不一定要卖焦虑，美妆不一定要吹功效，找到用户的情绪痛点，用全新的沟通方式切入，才能形成差异化。",
+      "region": "内容第一部分正文",
+      "state": "observed"
+    },
+    {
+      "key": "point2_title",
+      "value": "2.IP设计要绑定行为，而非单纯颜值",
+      "region": "内容第二部分标题",
+      "state": "observed"
+    },
+    {
+      "key": "point2_content",
+      "value": "IP设计的核心是服务品牌目标，要么促活、要么转化、要么传播，脱离用户行为的IP，只是无用的视觉符号。",
+      "region": "内容第二部分正文",
+      "state": "observed"
+    },
+    {
+      "key": "point3_title",
+      "value": "3.自传播＞硬投放，梗资产是中小预算品牌的最优解",
+      "region": "内容第三部分标题",
+      "state": "observed"
+    },
+    {
+      "key": "point3_content",
+      "value": "放弃大额投放思维，打造可玩梗、可共情、可二创的内容资产，让用户成为传播主体，才是长效低成本的增长路径。",
+      "region": "内容第三部分正文",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_text",
+      "value": "@有好CASE",
+      "region": "底部右下角",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "背景为浅灰色，内容区域背景为浅粉渐变，底部为红色",
+      "region": "整体背景",
+      "state": "observed"
+    },
+    {
+      "key": "text_color",
+      "value": "标题文字为红色，正文文字为黑色",
+      "region": "文字区域",
+      "state": "observed"
+    }
+  ]
+}

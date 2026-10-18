@@ -1,0 +1,82 @@
+{
+  "observations": [
+    {
+      "key": "object_type",
+      "value": "编织手绳手链",
+      "region": "画面整体",
+      "state": "observed"
+    },
+    {
+      "key": "main_braid_color",
+      "value": "由亮橙色、浅粉色、浅裸色三种色线编织而成",
+      "region": "手链环形主体部分",
+      "state": "observed"
+    },
+    {
+      "key": "adjustment_cord_color",
+      "value": "调节绳主体为浅裸色",
+      "region": "手链上部调节结构",
+      "state": "observed"
+    },
+    {
+      "key": "center_knot_color",
+      "value": "调节绳中心的固定结为亮橙色",
+      "region": "手链上部调节绳交汇处",
+      "state": "observed"
+    },
+    {
+      "key": "adjustment_tip_count",
+      "value": "调节绳末端共有2个绳头",
+      "region": "画面上方左右两侧",
+      "state": "observed"
+    },
+    {
+      "key": "adjustment_tip_color",
+      "value": "调节绳末端绳头为浅裸色",
+      "region": "画面上方左右绳头位置",
+      "state": "observed"
+    },
+    {
+      "key": "charm_shape",
+      "value": "挂饰为圆形金属吊牌",
+      "region": "手链右侧靠近编织段位置",
+      "state": "observed"
+    },
+    {
+      "key": "charm_text",
+      "value": "吊牌上印有黑色小写字母p",
+      "region": "圆形吊牌表面",
+      "state": "observed"
+    },
+    {
+      "key": "charm_border",
+      "value": "吊牌带有黑色外圈",
+      "region": "圆形吊牌边缘",
+      "state": "observed"
+    },
+    {
+      "key": "charm_background",
+      "value": "吊牌底色为银色",
+      "region": "圆形吊牌内部区域",
+      "state": "observed"
+    },
+    {
+      "key": "charm_connection",
+      "value": "吊牌通过黑色小挂环连接在手绳上",
+      "region": "吊牌与手绳衔接处",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "背景为纯白色",
+      "region": "画面全部空白区域",
+      "state": "observed"
+    },
+    {
+      "key": "layout",
+      "value": "手链呈开口向下的近似环形摆放在画面中央",
+      "region": "画面整体",
+      "state": "observed"
+    }
+  ]
+}

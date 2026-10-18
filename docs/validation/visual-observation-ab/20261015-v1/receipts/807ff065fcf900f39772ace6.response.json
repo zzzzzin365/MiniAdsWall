@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "brand_image",
+      "value": "上方广告左侧品牌区域为SEMRUSH的白色带火焰的眼睛样式图标，无绿色猫头鹰形象",
+      "region": "上方广告左侧品牌区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "无相关缺失信息"
+  ]
+}

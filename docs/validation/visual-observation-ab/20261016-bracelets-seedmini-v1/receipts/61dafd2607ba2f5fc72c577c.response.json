@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "image_content",
+      "value": "展示了一条由多种颜色圆珠串成的手链，旁边放置一块蓝绿色矿石，背景为白色平面",
+      "region": "full image",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未在图中发现任何与商品真实销量相关的可见信息",
+      "region": "full image",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息，无法从图中获取该数据"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "画面主要背景为带有灰、浅褐、米白色斑块的岩石色",
+      "region": "画面背景区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

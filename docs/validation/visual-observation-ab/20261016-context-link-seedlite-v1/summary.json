@@ -1,0 +1,120 @@
+{
+  "attempted_rows": 252,
+  "paired_cases": 84,
+  "groups": {
+    "A_visual": {
+      "n": 84,
+      "task_pass": 19,
+      "format_pass": 84,
+      "p50_s": 2.8572653335286304,
+      "p95_s": 4.100101506180363,
+      "token_total": 157864,
+      "online_cost_estimate_cny": 0.10892639999999999,
+      "by_task": {
+        "visual": {
+          "n": 21,
+          "passed": 19
+        },
+        "publisher": {
+          "n": 21,
+          "passed": 0
+        },
+        "cross": {
+          "n": 21,
+          "passed": 0
+        },
+        "quote": {
+          "n": 21,
+          "passed": 0
+        }
+      }
+    },
+    "B_context_pool": {
+      "n": 84,
+      "task_pass": 20,
+      "format_pass": 84,
+      "p50_s": 3.003241957980208,
+      "p95_s": 4.190464685624465,
+      "token_total": 218475,
+      "online_cost_estimate_cny": 0.14596199999999995,
+      "by_task": {
+        "visual": {
+          "n": 21,
+          "passed": 19
+        },
+        "publisher": {
+          "n": 21,
+          "passed": 1
+        },
+        "cross": {
+          "n": 21,
+          "passed": 0
+        },
+        "quote": {
+          "n": 21,
+          "passed": 0
+        }
+      }
+    },
+    "C_context_links": {
+      "n": 84,
+      "task_pass": 54,
+      "format_pass": 84,
+      "p50_s": 3.3689997914480045,
+      "p95_s": 5.638910477585155,
+      "token_total": 223853,
+      "online_cost_estimate_cny": 0.15710279999999996,
+      "by_task": {
+        "visual": {
+          "n": 21,
+          "passed": 20
+        },
+        "publisher": {
+          "n": 21,
+          "passed": 21
+        },
+        "cross": {
+          "n": 21,
+          "passed": 12
+        },
+        "quote": {
+          "n": 21,
+          "passed": 1
+        }
+      }
+    }
+  },
+  "total_calls": 274,
+  "estimated_cost_cny": 0.4698222,
+  "shared_initial_cost_per_arm_cny": 0.057711599999999995,
+  "billing_confirmed": false,
+  "human_visual_review": false,
+  "family_bootstrap_task_pass_delta_ci95": {
+    "A_visual->B_context_pool": [
+      -0.023809523809523808,
+      0.047619047619047644
+    ],
+    "B_context_pool->C_context_links": [
+      0.3333333333333333,
+      0.47619047619047616
+    ]
+  },
+  "secondary_instruction_audit": {
+    "C_context_links": {
+      "non_requested_field_populated": 63,
+      "quote_length_outside_12_60": 16,
+      "cross_visual_field_missing": 9,
+      "quote_not_literal_contiguous_source_span": 7
+    },
+    "B_context_pool": {
+      "non_requested_field_populated": 5,
+      "cross_visual_field_missing": 8,
+      "quote_length_outside_12_60": 1
+    },
+    "A_visual": {
+      "cross_visual_field_missing": 10,
+      "non_requested_field_populated": 3
+    }
+  },
+  "format_pass_definition": "base JSON types and allowed citation IDs only; full instruction compliance separate"
+}

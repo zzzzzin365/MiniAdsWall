@@ -1,0 +1,31 @@
+{
+  "observations": [
+    {
+      "key": "cover_title",
+      "value": "疯狂的小绿鸟 多邻国营销大盘点",
+      "region": "画面中上部",
+      "state": "observed"
+    },
+    {
+      "key": "top_tags",
+      "value": "品牌洞察、营销分析、广告创意",
+      "region": "画面顶部",
+      "state": "observed"
+    },
+    {
+      "key": "brand_logo",
+      "value": "duolingo",
+      "region": "画面底部左侧",
+      "state": "observed"
+    },
+    {
+      "key": "roas_value",
+      "value": "未在封面中出现",
+      "region": "全画面",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该多邻国营销活动的真实ROAS数值"
+  ]
+}

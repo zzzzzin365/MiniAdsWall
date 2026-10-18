@@ -1,0 +1,49 @@
+{
+  "observations": [
+    {
+      "key": "car_model",
+      "value": "蔚来EC6",
+      "region": "左侧广告图",
+      "state": "observed"
+    },
+    {
+      "key": "ad_content",
+      "value": "0首付，0购置税，0元终身质保，限时享购车0首付",
+      "region": "左侧广告文案区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_brand",
+      "value": "蔚来（NIO）",
+      "region": "左侧广告品牌区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_creation_components",
+      "value": "包含图片组件、文案组件、品牌形象组件等创意组件",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_creation_materials",
+      "value": "包含图片、视频+图片封面图、图片+文案等创意素材",
+      "region": "右侧创意素材区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_booking_info",
+      "value": "最近有70人预约，发布时间为2分钟前",
+      "region": "左侧广告底部区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_platform_type",
+      "value": "属于小程序广告",
+      "region": "左侧广告底部区",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "图中未提供该款蔚来EC6今天的实际成交价相关信息"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "model": "doubao-seed-2-1-lite-260915",
+  "arms": [
+    "old_C1",
+    "fixed_C1",
+    "always_read_B"
+  ],
+  "cases": 30,
+  "scope": "public images, known-image regression",
+  "same_model_initial_observations": true,
+  "seed": 20261015,
+  "max_calls": 260,
+  "cost_ceiling_estimate_cny": 15,
+  "conservative_cny_per_million_total_tokens": 24,
+  "initial_cost_reported_separately": true,
+  "final_answer_cache": false,
+  "semantic_review": "pending",
+  "production_mutated": false,
+  "runner_sha256": "ea21daa6b0db50dc6fbf60a095711d94d6d618b0ce87eae9ade33ccedc19f24c"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "answered",
+  "hand_present": true,
+  "publisher": null,
+  "quote": null,
+  "answer": "原图中出现了真人的手或手腕，相关观察来自图像image-013的底部右侧小图区域。",
+  "image_citations": [
+    "image-013"
+  ],
+  "text_citations": []
+}

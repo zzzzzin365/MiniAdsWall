@@ -1,0 +1,8 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "ed4f951bcdd9fabee91c"
+  ],
+  "missing": [],
+  "reason": "已存观察明确记录右侧创意组件区包含行动按钮组件，符合问题要求的全部细节"
+}

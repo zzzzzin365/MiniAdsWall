@@ -1,0 +1,40 @@
+{
+  "observations": [
+    {
+      "key": "object_type",
+      "value": "beaded bracelet",
+      "region": "center of image",
+      "state": "observed"
+    },
+    {
+      "key": "text_on_beads",
+      "value": "5SOS spelled with white beads and black characters",
+      "region": "lower center of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "gray fuzzy fabric with small openwork patterns",
+      "region": "entire background",
+      "state": "observed"
+    },
+    {
+      "key": "bead_colors",
+      "value": "beads in colors including red, orange, light blue, dark blue, purple, peach, white",
+      "region": "bracelet beads",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_shape",
+      "value": "circular shape formed by strung beads",
+      "region": "bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bead_type",
+      "value": "small cylindrical plastic beads",
+      "region": "bracelet",
+      "state": "observed"
+    }
+  ]
+}

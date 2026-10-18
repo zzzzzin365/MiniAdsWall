@@ -1,0 +1,8 @@
+{
+  "status": "insufficient",
+  "value": null,
+  "answer": "无法确定DATA WAREHOUSE框里是否明确出现spend、clicks、leads这三个词",
+  "source_ids": [
+    "x-marketing-kb"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "model": "doubao-seed-2-0-mini-260428",
+  "arms": [
+    "B",
+    "C1"
+  ],
+  "images": 21,
+  "cases": 84,
+  "planned_rows": 168,
+  "selection": "first manifest-listed test image per family; unchanged from prior split",
+  "seed": 20261016,
+  "repeats": 1,
+  "concurrency": 1,
+  "max_calls": 500,
+  "estimated_budget_cny": 5,
+  "price_source": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh&redirect=1",
+  "same_model_initial_observations": true,
+  "no_answer_cache": true,
+  "scope": "public external images only; fixed reference image, no retrieval test",
+  "annotation": "assistant visual preannotation before model calls; human review pending",
+  "quality_floor": "observed C1-B >= -0.02 on answerable field+source; not a proof of statistical noninferiority",
+  "speed_goal": "C1 P95 <= 0.8 * B P95",
+  "production_mutated": false,
+  "source_hashes": {
+    "evaluation/run_bracelets_seedmini.py": "082b29afc161107c4f9df0c980af002d762f2c2f42111a7b5c1d5ab167b7eb77",
+    "evaluation/image_rag_provider.py": "41bfc3f3b4614e270d1c35ccd5ea5d281d1f3b822f5a55d6aac23062eef8c26f",
+    "evaluation/run_visual_observation.py": "b23b753574f1d7484b75a7d8fd61c2b1661b87ea0e1d9118a78e25025eed6d2b",
+    "evaluation/visual_observation_v3.py": "b8a8a868a4cdf09c726d153b16c4283a8dcfc50b29a5d6de07d7fd2e357573f3"
+  },
+  "prompts": {
+    "initial": "48ea99ce39157d959d3527190e52423253181272142ff27d700aa1913ea747b1",
+    "reader": "c336f17f27c1f7ad68a5030ed7ceb5d5386a8f5f9cb082f2021ea36450b84d43",
+    "router": "b320aa9c0fdd653e380cd358d181a37bc1361136a4f88bef99f864887c6192a7",
+    "answer": "9348a6086a4a7f68d63c23ade363133c2d72b28c69009af928342a38224559b4"
+  },
+  "input_hashes": {
+    "assets.json": "6a80b495d5826b48e6544388be939b28670e22eefe82c7e7adc3d6f460fe2115",
+    "requests.json": "9da68bf537e932849d361c8c72571ba26991c6aab90cef333418738f39da660f",
+    "cases-gold.json": "f196803aada8aae8f675ec421d22dc983c71323d96d727c1e9d46615247ce501"
+  },
+  "initial_schema_policy": "invalid initial observations retained as empty; C1 must read missing facts; no repair or resubmit",
+  "prior_attempt_archive": "attempt-01-initial-schema-failure"
+}

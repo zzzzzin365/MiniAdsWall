@@ -1,0 +1,9 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "64354ac1fbeda2221a85",
+    "a2380a6a9ee072115ce0"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录INCLUDING标签下方横向等距排列4个尺寸一致的介绍卡片，可直接回答问题。"
+}

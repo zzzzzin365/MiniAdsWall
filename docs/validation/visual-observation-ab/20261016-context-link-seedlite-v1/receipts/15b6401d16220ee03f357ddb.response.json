@@ -1,0 +1,11 @@
+{
+  "status": "answered",
+  "hand_present": false,
+  "publisher": null,
+  "quote": null,
+  "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+  "image_citations": [
+    "image-011"
+  ],
+  "text_citations": []
+}

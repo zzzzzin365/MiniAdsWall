@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product_image",
+      "value": "展示了两款串珠手链，一款为黑色圆珠搭配浅粉色圆珠，另一款为黑色圆珠搭配浅粉色圆珠且带有镶钻装饰件，背景有麻布束口袋和毛绒垫子",
+      "region": "画面主体区域",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未找到任何与商品真实销量相关的文字或标识信息",
+      "region": "画面所有区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图中缺少商品真实销量的相关信息"
+  ]
+}

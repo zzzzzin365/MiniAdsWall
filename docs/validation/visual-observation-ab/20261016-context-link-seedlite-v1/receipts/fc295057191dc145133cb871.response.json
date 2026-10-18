@@ -1,0 +1,76 @@
+{
+  "observations": [
+    {
+      "key": "MainObject",
+      "value": "A single beaded bracelet is the only subject in the frame",
+      "region": "full image",
+      "state": "observed"
+    },
+    {
+      "key": "Background",
+      "value": "Plain uniform light off-white smooth background, no extra patterns or objects",
+      "region": "entire surrounding area of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "ClaspType",
+      "value": "Gold-colored spring ring style toggle clasp at the top of the bracelet",
+      "region": "upper central part of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "ClaspCount",
+      "value": "1 gold-colored metal clasp",
+      "region": "upper section of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "LavaBeadColor",
+      "value": "Black, with porous rough surface with visible small pits",
+      "region": "left and right segments of the bracelet excluding the colored bead section",
+      "state": "observed"
+    },
+    {
+      "key": "LavaBeadCount",
+      "value": "Total 14 black porous lava beads",
+      "region": "two side segments of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "SmallBlackBeadCount",
+      "value": "2 tiny faceted black beads, one on each side adjacent to the clasp",
+      "region": "near the two connection points of the clasp",
+      "state": "observed"
+    },
+    {
+      "key": "ColoredBeadSequence",
+      "value": "From left to right: black faceted bead, blue bead, turquoise bead, green bead, dark brown bead, yellow bead, red bead",
+      "region": "lower front segment of the bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "ColoredBeadSurface",
+      "value": "All colored beads have faceted polished glossy surface with light reflection marks",
+      "region": "front colored bead section",
+      "state": "observed"
+    },
+    {
+      "key": "GoldSpacerCount",
+      "value": "Total 6 thin gold-colored metal spacer rings between colored beads",
+      "region": "between every adjacent colored bead in the front section",
+      "state": "observed"
+    },
+    {
+      "key": "BraceletShape",
+      "value": "Arranged in a closed circular loop shape",
+      "region": "full bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "TextPresence",
+      "value": "No legible text or characters visible anywhere in the image",
+      "region": "full image",
+      "state": "explicitly_absent"
+    }
+  ]
+}

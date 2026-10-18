@@ -1,0 +1,22 @@
+{
+  "call_key": "main:xhs-duo-1:xhs-duo-1-3:C1:route",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "949a477481b5a1926a1897c7",
+  "input_sha256": "8e74c4ff35fefd6d7e2d4aa6edf0baae9dd916a884df4fb8465e13b3b28bf782",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2094.3825830472633,
+  "http_status": 200,
+  "provider_id": "02179204234345978a74243d99c3298b2ec93aa83bab7a0bcfd77",
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 1269,
+    "total_tokens": 1313,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

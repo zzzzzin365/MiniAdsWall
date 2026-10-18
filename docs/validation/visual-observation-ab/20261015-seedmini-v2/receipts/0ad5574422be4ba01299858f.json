@@ -1,0 +1,12 @@
+{
+  "call_key": "20261015-seedmini-v2:main:x-creative-framework:x-creative-framework-1:B:answer",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "0ad5574422be4ba01299858f",
+  "input_sha256": "45977b561948ac2ac2d5cd0cfd976c7a644ade0f2ad39e1cf38a24a0f03f6b4c",
+  "status": "failed_or_submission_unknown",
+  "money": null,
+  "elapsed_ms": 1143.7934580026194,
+  "http_status": 429,
+  "provider_error_code": "SetLimitExceeded",
+  "error_type": "RuntimeError"
+}

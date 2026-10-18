@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": true,
+  "publisher": "Fahari",
+  "quote": null,
+  "answer": "无法从对应来源快照body中摘录符合要求长度的有效正文内容，仅可确认图像关联来源署名为Fahari",
+  "image_citations": [
+    "image-007"
+  ],
+  "text_citations": [
+    "ctx-556bccbad69742e2"
+  ]
+}

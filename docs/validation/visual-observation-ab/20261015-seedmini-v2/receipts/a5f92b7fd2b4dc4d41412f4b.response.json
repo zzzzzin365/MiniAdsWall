@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "video_material_desc",
+      "value": "视频组件箭头指向的创意素材说明为“视频+图片〔封面图〕”",
+      "region": "右侧创意素材区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

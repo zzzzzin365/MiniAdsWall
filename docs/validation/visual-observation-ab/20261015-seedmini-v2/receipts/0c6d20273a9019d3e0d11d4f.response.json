@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "system_cost_info",
+      "value": "No information about the cost of building this system is visible in the image",
+      "region": "entire image",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "The actual cost of building the author's marketing system"
+  ]
+}

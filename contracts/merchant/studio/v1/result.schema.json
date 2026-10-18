@@ -256,6 +256,24 @@
         "source_id": {
           "type": "string",
           "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "image_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "retrieval_method": {
+          "const": "chinese-clip-image-v1"
+        },
+        "embedding_model": {
+          "const": "OFA-Sys/chinese-clip-vit-base-patch16"
+        },
+        "embedding_revision": {
+          "const": "36e679e65c2a2fead755ae21162091293ad37834"
+        },
+        "fusion_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         }
       }
     }
@@ -312,13 +330,15 @@
           "enum": [
             "text_only",
             "capability_unavailable",
-            "seed_understood"
+            "seed_understood",
+            "visual_indexed"
           ]
         },
         "source": {
           "enum": [
             "merchant_text",
-            "seed_analysis"
+            "seed_analysis",
+            "image_embeddings"
           ]
         },
         "limitations": {
@@ -352,7 +372,10 @@
           ]
         },
         "method": {
-          "const": "caption-vector-v1"
+          "enum": [
+            "caption-vector-v1",
+            "chinese-clip-image-v1"
+          ]
         },
         "corpus_assets": {
           "type": "integer",
@@ -465,6 +488,19 @@
                   "type": "string",
                   "maxLength": 500
                 }
+              },
+              "image_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "embedding_model": {
+                "const": "OFA-Sys/chinese-clip-vit-base-patch16"
+              },
+              "embedding_revision": {
+                "const": "36e679e65c2a2fead755ae21162091293ad37834"
+              },
+              "understanding_available": {
+                "type": "boolean"
               }
             }
           }
@@ -572,11 +608,59 @@
                   "type": "string",
                   "maxLength": 500
                 }
+              },
+              "image_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "embedding_model": {
+                "const": "OFA-Sys/chinese-clip-vit-base-patch16"
+              },
+              "embedding_revision": {
+                "const": "36e679e65c2a2fead755ae21162091293ad37834"
+              },
+              "understanding_available": {
+                "type": "boolean"
               }
             }
           }
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "method": {
+                "const": "chinese-clip-image-v1"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "retrieved": {
+                "items": {
+                  "required": [
+                    "image_sha256",
+                    "embedding_model",
+                    "embedding_revision",
+                    "understanding_available"
+                  ]
+                }
+              },
+              "citations": {
+                "items": {
+                  "required": [
+                    "image_sha256",
+                    "embedding_model",
+                    "embedding_revision",
+                    "understanding_available"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "source_ids": {
       "type": "array",
@@ -625,6 +709,13 @@
           "items": {
             "$ref": "#/$defs/ExternalReference"
           }
+        },
+        "method": {
+          "enum": [
+            "chinese-clip-image-v1",
+            "native-image-plus-text-v1",
+            "text-vector-v1"
+          ]
         }
       }
     }

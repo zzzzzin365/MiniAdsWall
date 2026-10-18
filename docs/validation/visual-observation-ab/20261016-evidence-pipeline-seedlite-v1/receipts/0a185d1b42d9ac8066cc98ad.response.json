@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": null,
+  "publisher": "Energy Muse",
+  "quote": "New to Energy Muse? Find your energy match in a few simple questions.",
+  "answer": "已从关联来源快照body中摘录符合要求的字符内容，引用对应文本。",
+  "image_citations": [
+    "image-004"
+  ],
+  "text_citations": [
+    "ctx-1c1af78540f4c179"
+  ]
+}

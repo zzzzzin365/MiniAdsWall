@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "hand_wrist_presence",
+      "value": "画面中出现了真人的手腕，未显示完整的手",
+      "region": "画面主体区域",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "无"
+  ]
+}

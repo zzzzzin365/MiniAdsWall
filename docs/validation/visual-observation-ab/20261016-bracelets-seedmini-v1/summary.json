@@ -1,0 +1,59 @@
+{
+  "paired_cases": 84,
+  "attempted_rows": 168,
+  "groups": {
+    "B": {
+      "n": 84,
+      "answerable_n": 63,
+      "answerable_pass": 58,
+      "field_source_rate": 0.9206349206349206,
+      "unprovable_n": 21,
+      "unprovable_pass": 21,
+      "format_pass": 83,
+      "reads": 84,
+      "route_calls": 0,
+      "p95_s": 7.663163825083756,
+      "reader_p95_s": 6.2824691124085765,
+      "answer_p95_s": 2.2054034544038585,
+      "online_cost_estimate_cny": 0.0583102
+    },
+    "C1": {
+      "n": 84,
+      "answerable_n": 63,
+      "answerable_pass": 48,
+      "field_source_rate": 0.7619047619047619,
+      "unprovable_n": 21,
+      "unprovable_pass": 21,
+      "format_pass": 82,
+      "reads": 20,
+      "route_calls": 83,
+      "p95_s": 6.88912716244231,
+      "reader_p95_s": 3.7330511168402145,
+      "answer_p95_s": 1.9986699705943463,
+      "online_cost_estimate_cny": 0.09751339999999999
+    }
+  },
+  "requests": 375,
+  "estimated_total_cost_cny": 0.18358280000000002,
+  "actual_bill": null,
+  "quality_delta_ci95": [
+    -0.25396825396825395,
+    -0.06349206349206349
+  ],
+  "p95_delta_ci95_s": [
+    -1.8119499288799115,
+    1.0718135482865896
+  ],
+  "independent_images": 21,
+  "human_review_completed": false,
+  "gold_is_assistant_preannotation": true,
+  "cost_breakdown": {
+    "B_online_cny": 0.0583102,
+    "C1_online_cny": 0.09751339999999999,
+    "C1_initial_cny": 0.026416800000000004,
+    "C1_including_initial_cny": 0.12393019999999999,
+    "actual_bill": null
+  },
+  "p95_reduction_pct": 10.10074533585984,
+  "quality_metric_warning": "Chinese-only substring aliases confound English answers; several gold questions ambiguous; not semantic accuracy."
+}

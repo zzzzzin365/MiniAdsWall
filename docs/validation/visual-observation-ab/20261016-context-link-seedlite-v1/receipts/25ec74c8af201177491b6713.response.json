@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "main_subject",
+      "value": "一只手托举展示的串珠手链",
+      "region": "画面中心",
+      "state": "observed"
+    },
+    {
+      "key": "large_blue_bead_count",
+      "value": "手链共有6颗大尺寸浅蓝透圆珠",
+      "region": "手链主体区域",
+      "state": "observed"
+    },
+    {
+      "key": "small_clear_bead_count",
+      "value": "大蓝珠之间搭配多颗小型透明白圆珠",
+      "region": "大蓝珠的间隙位置",
+      "state": "observed"
+    },
+    {
+      "key": "carved_clear_ornament",
+      "value": "手链上有1枚透明雕刻造型的装饰件",
+      "region": "手链右侧中部",
+      "state": "observed"
+    },
+    {
+      "key": "crown_style_decor_count",
+      "value": "手链配有2枚银色皇冠造型装饰",
+      "region": "透明雕刻件两侧的大蓝珠旁",
+      "state": "observed"
+    },
+    {
+      "key": "cross_pendant",
+      "value": "银色镶钻十字造型吊坠悬挂在其中一枚皇冠装饰下方",
+      "region": "手链左下侧",
+      "state": "observed"
+    },
+    {
+      "key": "gem_embedded_bead",
+      "value": "手链有1颗银色包边内嵌蓝色小宝石的装饰珠",
+      "region": "手链右上侧",
+      "state": "observed"
+    },
+    {
+      "key": "hand_nail_style",
+      "value": "托举手链的手做了长款浅裸色美甲，其中一根指甲带有白色立体装饰",
+      "region": "画面左侧的手部区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_curtain",
+      "value": "背景是浅米色带竖条纹的垂坠帘布",
+      "region": "画面上半部分及中后区域",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_blur_decoration",
+      "value": "画面底部有模糊的橙黄色装饰物件",
+      "region": "画面最下方区域",
+      "state": "observed"
+    },
+    {
+      "key": "watermark_text",
+      "value": "画面右下角有模糊小字水印，内容无法清晰辨认",
+      "region": "画面右下角",
+      "state": "unclear"
+    }
+  ]
+}

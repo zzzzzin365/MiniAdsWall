@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "商品真实销量"
+  ],
+  "reason": "提供的观察仅描述了手链的外观，未涉及商品真实销量的相关信息，无法证明该细节"
+}

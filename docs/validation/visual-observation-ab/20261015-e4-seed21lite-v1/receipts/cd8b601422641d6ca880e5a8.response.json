@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "front_car_body_color",
+      "value": "浅绿色（薄荷绿色）",
+      "region": "左侧广告预览的展厅图片区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

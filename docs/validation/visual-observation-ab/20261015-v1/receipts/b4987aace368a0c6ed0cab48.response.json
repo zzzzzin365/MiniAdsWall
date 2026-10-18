@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "ad_platform",
+      "value": "左侧为蔚来的广告卡片，标注有「广告」标识",
+      "region": "左侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "car_image",
+      "value": "广告图片内有两辆蔚来汽车，近处为浅绿色EC6，远处为浅色车辆",
+      "region": "左侧广告图片内",
+      "state": "observed"
+    },
+    {
+      "key": "ad_text",
+      "value": "广告文案含「0首付，开蔚来回家」「0购置税，0元终身质保，限时享购车0首付」",
+      "region": "左侧广告文案区",
+      "state": "observed"
+    },
+    {
+      "key": "ad_tags",
+      "value": "广告内有三个标签：0元质保、0元换电、超长续航",
+      "region": "左侧广告文案下方",
+      "state": "observed"
+    },
+    {
+      "key": "ad_footer",
+      "value": "广告底部标注「2分钟前 最近有70人预约」，含小程序标识",
+      "region": "左侧广告底部",
+      "state": "observed"
+    },
+    {
+      "key": "creative_label",
+      "value": "中间有蓝色文字「创意」，箭头指向右侧内容",
+      "region": "中间区域",
+      "state": "observed"
+    },
+    {
+      "key": "creative_component_title",
+      "value": "右侧上方有蓝色文字「创意组件」「创意素材」",
+      "region": "右侧上方区域",
+      "state": "observed"
+    },
+    {
+      "key": "image_component",
+      "value": "创意组件含图片组件，对应创意素材为图片",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "video_component",
+      "value": "创意组件含视频组件，对应创意素材为视频+图片（封面图）",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "copy_component",
+      "value": "创意组件含文案组件，未标注对应素材",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "brand_component",
+      "value": "创意组件含品牌形象组件，对应创意素材为图片+蔚来文案",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "marketing_component",
+      "value": "创意组件含营销组件，未标注对应素材",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "float_card_component",
+      "value": "创意组件含浮层卡片组件，未标注对应素材",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "action_button_component",
+      "value": "创意组件含行动按钮组件，未标注对应素材",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "tag_component",
+      "value": "创意组件含标签组件，未标注对应素材",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "landing_page_component",
+      "value": "创意组件含落地页组件，包含蹊径落地页、原生推广页、微信小程序落地页等",
+      "region": "右侧创意组件区",
+      "state": "observed"
+    },
+    {
+      "key": "brand_logo",
+      "value": "蔚来品牌标识为青绿色方形图标，内有白色图案，搭配「蔚来」文字",
+      "region": "左侧左上角、右侧创意素材区",
+      "state": "observed"
+    },
+    {
+      "key": "car_brand_mark",
+      "value": "广告图片内有NIO品牌标识",
+      "region": "左侧广告图片内上方",
+      "state": "observed"
+    }
+  ]
+}

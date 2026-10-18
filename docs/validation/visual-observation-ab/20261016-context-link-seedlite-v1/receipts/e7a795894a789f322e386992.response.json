@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "bracelet_count",
+      "value": "画面内共有2条串珠手链",
+      "region": "画面整体",
+      "state": "observed"
+    },
+    {
+      "key": "main_bead_color",
+      "value": "手链主串珠为蓝绿色扁圆珠",
+      "region": "两条手链的主体串珠部分",
+      "state": "observed"
+    },
+    {
+      "key": "wooden_bead_count_top",
+      "value": "上方手链配有3颗小型棕色木质隔珠、1颗大颗棕色木质随形珠",
+      "region": "上方手链的装饰段",
+      "state": "observed"
+    },
+    {
+      "key": "white_bead_top",
+      "value": "上方手链配有1颗圆形半透明白色珠",
+      "region": "上方手链的装饰段",
+      "state": "observed"
+    },
+    {
+      "key": "silver_decoration_top",
+      "value": "上方手链配有2枚银色花形金属装饰件",
+      "region": "上方手链的装饰段",
+      "state": "observed"
+    },
+    {
+      "key": "silver_end_top",
+      "value": "上方手链的一端配有银色金属收尾件",
+      "region": "上方手链的顶端",
+      "state": "observed"
+    },
+    {
+      "key": "wooden_bead_count_bottom",
+      "value": "下方手链配有2颗小型棕色木质隔珠、1颗大颗棕色木质随形珠",
+      "region": "下方手链的装饰段",
+      "state": "observed"
+    },
+    {
+      "key": "white_bead_bottom",
+      "value": "下方手链配有1颗圆形半透明白色珠",
+      "region": "下方手链的装饰段",
+      "state": "observed"
+    },
+    {
+      "key": "silver_decoration_bottom",
+      "value": "下方手链配有1枚银色花形金属装饰件、1个银色隔珠串饰",
+      "region": "下方手链的装饰段",
+      "state": "observed"
+    },
+    {
+      "key": "silver_end_bottom",
+      "value": "下方手链的一端配有做旧质感银色金属收尾件",
+      "region": "下方手链的顶端",
+      "state": "observed"
+    },
+    {
+      "key": "white_spacer_bead",
+      "value": "下方手链蓝绿色串珠段中可见1颗小型白色隔珠",
+      "region": "下方手链右侧串珠段",
+      "state": "observed"
+    },
+    {
+      "key": "supporting_ring",
+      "value": "两条手链分别放置在透明C形塑料支撑环上",
+      "region": "两条手链的内侧",
+      "state": "observed"
+    },
+    {
+      "key": "background_surface",
+      "value": "承载背景为带有立体压花的浅白色板材",
+      "region": "画面全部背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "embossed_pattern_top",
+      "value": "背景板材上方区域压印花卉回纹类浮雕图案",
+      "region": "画面右上角区域",
+      "state": "observed"
+    },
+    {
+      "key": "embossed_pattern_bottom",
+      "value": "背景板材下方区域压印回字几何类浮雕图案",
+      "region": "画面中下部区域",
+      "state": "observed"
+    },
+    {
+      "key": "watermark_text",
+      "value": "画面中部可见白色文字“旧九手作”",
+      "region": "两条手链之间的区域",
+      "state": "observed"
+    },
+    {
+      "key": "corner_watermark",
+      "value": "画面右下角有小字水印，内容unclear",
+      "region": "画面右下角",
+      "state": "unclear"
+    },
+    {
+      "key": "frame_edge",
+      "value": "画面上下边缘可见浅木色边框",
+      "region": "画面顶部和底部边缘",
+      "state": "observed"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "observations": [
+    {
+      "key": "top_left_tag",
+      "value": "顶部左侧有红边白底圆角标签，内部印有红色文字“品牌洞察”",
+      "region": "页面顶部左上角",
+      "state": "observed"
+    },
+    {
+      "key": "top_middle_tag",
+      "value": "顶部居中位置有红边白底圆角标签，内部印有红色文字“营销分析”",
+      "region": "页面顶部居中",
+      "state": "observed"
+    },
+    {
+      "key": "top_right_tag",
+      "value": "顶部右侧有红边白底圆角标签，内部印有红色文字“广告创意”",
+      "region": "页面顶部右上角",
+      "state": "observed"
+    },
+    {
+      "key": "main_title",
+      "value": "页面上半部分居中是大号红色艺术字主标题，第一行是“疯狂的”，第二行是“小绿鸟”",
+      "region": "页面上半部分居中",
+      "state": "observed"
+    },
+    {
+      "key": "subtitle",
+      "value": "主标题下方是白色矩形背景条，内部印有红色文字“多邻国营销大盘点”",
+      "region": "主标题正下方",
+      "state": "observed"
+    },
+    {
+      "key": "left_mascot",
+      "value": "画面左下方是绿色猫头鹰卡通形象，拥有白色眼白、黑色圆形瞳孔、橙色喙和橙色脚，正面朝向观看者",
+      "region": "画面左下方",
+      "state": "observed"
+    },
+    {
+      "key": "right_mascot",
+      "value": "画面右下方是同系列绿色猫头鹰卡通形象，额头和手部各贴有一块浅米色创可贴，呈坐姿，一只眼睛半睁，嘴巴微张",
+      "region": "画面右下方",
+      "state": "observed"
+    },
+    {
+      "key": "brand_logo",
+      "value": "页面左下角印有绿色小写文字“duolingo”",
+      "region": "页面左下角",
+      "state": "observed"
+    },
+    {
+      "key": "watermark",
+      "value": "页面右下角印有白色文字“@有好CASE”",
+      "region": "页面右下角",
+      "state": "observed"
+    },
+    {
+      "key": "background_style",
+      "value": "整体背景为渐变效果，上部是浅灰白色，向下过渡为粉紫色，底部是红色，带有颗粒质感和白色细曲线装饰",
+      "region": "全页面背景",
+      "state": "observed"
+    },
+    {
+      "key": "tag_layout",
+      "value": "顶部三个圆角标签沿水平方向均匀分布，分别位于左、中、右三个位置",
+      "region": "页面顶部区域",
+      "state": "observed"
+    },
+    {
+      "key": "mascot_count",
+      "value": "画面中一共出现2个绿色猫头鹰卡通形象",
+      "region": "画面下半部分",
+      "state": "observed"
+    },
+    {
+      "key": "title_color",
+      "value": "页面内所有标题类文字均为正红色，字体为粗体艺术字",
+      "region": "页面上半部分",
+      "state": "observed"
+    },
+    {
+      "key": "mascot_color",
+      "value": "两个猫头鹰卡通形象主体均为绿色，喙和脚为橙色",
+      "region": "画面下半部分",
+      "state": "observed"
+    },
+    {
+      "key": "decorative_lines",
+      "value": "背景上分布有若干条纤细的白色曲线，作为装饰元素",
+      "region": "全页面背景",
+      "state": "observed"
+    },
+    {
+      "key": "subtitle_bg",
+      "value": "副标题所在的白色矩形背景条宽度横跨画面大部分区域，边缘为直角",
+      "region": "主标题正下方",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_area",
+      "value": "页面底部区域为大面积红色渐变背景，承载品牌logo和右下角水印",
+      "region": "页面底部区域",
+      "state": "observed"
+    },
+    {
+      "key": "text_alignment",
+      "value": "主标题、副标题均为居中对齐排版",
+      "region": "页面上半部分",
+      "state": "observed"
+    }
+  ]
+}

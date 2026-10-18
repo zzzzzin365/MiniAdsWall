@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "bracelet_count",
+      "value": "Two beaded bracelets are visible in the image",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_1_beads",
+      "value": "One bracelet has black round beads and light pink round beads, strung together",
+      "region": "left bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_2_beads",
+      "value": "The other bracelet has black round beads, light pink round beads, and a small silver decorative bead",
+      "region": "right bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_support",
+      "value": "Both bracelets are placed on clear circular plastic supports",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "cloth_bag",
+      "value": "A beige linen drawstring bag is in the background, with a black line drawing of a lotus and plant stems on it",
+      "region": "upper background",
+      "state": "observed"
+    },
+    {
+      "key": "drawstring_bag_tassel",
+      "value": "The drawstring bag has a white tassel on its right side",
+      "region": "upper right background",
+      "state": "observed"
+    },
+    {
+      "key": "mat",
+      "value": "The bracelets and bag rest on a light beige textured woven mat with fringed edges",
+      "region": "lower and central background",
+      "state": "observed"
+    },
+    {
+      "key": "background_surface",
+      "value": "Behind the mat is a dark brown wooden surface",
+      "region": "upper left background",
+      "state": "observed"
+    },
+    {
+      "key": "bead_color_black",
+      "value": "The black beads on the bracelets are glossy and round",
+      "region": "bracelet beads",
+      "state": "observed"
+    },
+    {
+      "key": "bead_color_pink",
+      "value": "The light pink beads on the bracelets are translucent and round",
+      "region": "bracelet beads",
+      "state": "observed"
+    },
+    {
+      "key": "decorative_bead",
+      "value": "The right bracelet has a small silver-colored bead with a textured surface among black beads",
+      "region": "right bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bag_drawing_details",
+      "value": "The line drawing on the bag includes a lotus flower, leaves, and wavy lines representing water at the bottom",
+      "region": "upper background bag",
+      "state": "observed"
+    },
+    {
+      "key": "mat_texture",
+      "value": "The mat has a woven, slightly raised texture with visible stitch patterns",
+      "region": "lower area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_arrangement",
+      "value": "The two bracelets are placed side by side on the mat, left bracelet slightly behind the right one",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "plastic_support_type",
+      "value": "The clear supports for the bracelets are solid circular rings, one is a closed ring, the other has a small gap",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "wooden_surface_appearance",
+      "value": "The wooden surface in the background has a smooth, dark brown appearance with visible wood grain",
+      "region": "upper left background",
+      "state": "observed"
+    }
+  ]
+}

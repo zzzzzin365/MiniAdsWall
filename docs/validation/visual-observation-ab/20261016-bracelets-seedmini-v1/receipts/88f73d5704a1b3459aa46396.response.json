@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "image_content",
+      "value": "展示的是一款由深棕色木珠、金色配珠、红色玛瑙珠、白色方形玉髓挂饰、金色珐琅挂饰组成的多圈手串",
+      "region": "main",
+      "state": "observed"
+    },
+    {
+      "key": "sales_info_exist",
+      "value": "未在图中发现任何与商品真实销量相关的信息",
+      "region": "all",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "图中缺少该商品真实销量的相关信息"
+  ]
+}

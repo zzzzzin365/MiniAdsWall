@@ -1,0 +1,100 @@
+{
+  "observations": [
+    {
+      "key": "image_layout",
+      "value": "整体为三图拼接布局，顶部1张大图，底部左右各1张小图",
+      "region": "整张图片",
+      "state": "observed"
+    },
+    {
+      "key": "top_background",
+      "value": "顶部大图背景为深蓝色纯色平面",
+      "region": "顶部大图区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_top_view",
+      "value": "顶部大图展示串珠手链平铺状态，横向放置",
+      "region": "顶部大图区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_bead_material_appearance",
+      "value": "手链由大量小串珠拼接构成像素图案",
+      "region": "所有展示手链的区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_top_pattern_sky",
+      "value": "手链上部串珠为浅蓝色底，搭配白色串珠组成的云朵图案",
+      "region": "顶部大图的手链上部区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_top_pattern_buildings",
+      "value": "手链下部串珠排列成一排多栋色彩各异的卡通房屋图案",
+      "region": "顶部大图的手链下部区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_edge_color",
+      "value": "手链下边缘由一圈红棕色串珠包边",
+      "region": "所有展示手链的区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_clasp_type",
+      "value": "手链两端配有金属磁吸扣，扣体为黄铜色金属质感",
+      "region": "顶部大图的手链左右两端",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_left_background",
+      "value": "底部左图背景为深蓝色纯色平面",
+      "region": "底部左侧小图区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_curved_view",
+      "value": "底部左图展示手链弯曲成环形的状态，露出内侧部分图案",
+      "region": "底部左侧小图区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_inner_pattern",
+      "value": "手链内侧串珠同样印有蓝天、云朵和卡通房屋的像素图案",
+      "region": "底部左侧小图的手链内侧区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_clasp_connection",
+      "value": "弯曲状态下金属磁吸扣位于环形开口处，连接手链两端",
+      "region": "底部左侧小图的手链开口位置",
+      "state": "observed"
+    },
+    {
+      "key": "bottom_right_background",
+      "value": "底部右图背景为深蓝色纯色平面",
+      "region": "底部右侧小图区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_worn_state",
+      "value": "底部右图展示手链佩戴在人手手腕上的状态",
+      "region": "底部右侧小图区域",
+      "state": "observed"
+    },
+    {
+      "key": "wrist_appearance",
+      "value": "佩戴手链的人手为浅肤色，仅露出手腕及部分小臂",
+      "region": "底部右侧小图的人体部分",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_worn_pattern_display",
+      "value": "佩戴状态下手链外侧的串珠像素图案完整展示在手腕外侧",
+      "region": "底部右侧小图的手链区域",
+      "state": "observed"
+    }
+  ]
+}

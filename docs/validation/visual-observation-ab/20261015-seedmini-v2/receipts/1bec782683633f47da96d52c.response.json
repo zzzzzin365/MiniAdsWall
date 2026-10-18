@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "button_text",
+      "value": "Try It Free",
+      "region": "上方橙色按钮区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

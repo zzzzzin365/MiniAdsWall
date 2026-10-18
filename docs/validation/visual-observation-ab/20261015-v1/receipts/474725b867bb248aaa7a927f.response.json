@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "上方广告的主要背景颜色"
+  ],
+  "reason": "所有已存观察均未描述上方广告的背景颜色，无法从现有数据推断。"
+}

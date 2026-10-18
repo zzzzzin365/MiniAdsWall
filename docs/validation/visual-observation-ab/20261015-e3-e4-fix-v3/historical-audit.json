@@ -1,0 +1,171 @@
+{
+  "status": "offline_historical_diagnostic_not_new_model_results",
+  "e3": {
+    "all": {
+      "H": {
+        "n": 20,
+        "total_ms": {
+          "n": 20,
+          "p50_s": 15.599495542002842,
+          "p95_s": 26.235419616935545
+        },
+        "retrieval_ms": {
+          "n": 20,
+          "p50_s": 0.0981975415488705,
+          "p95_s": 0.38385614848230043
+        },
+        "reader_ms": {
+          "n": 20,
+          "p50_s": 13.036816271021962,
+          "p95_s": 24.550385381310484
+        },
+        "generation_ms": {
+          "n": 20,
+          "p50_s": 2.020517020544503,
+          "p95_s": 2.4791405541298444
+        },
+        "actual_vision_calls": 20
+      },
+      "R": {
+        "n": 20,
+        "total_ms": {
+          "n": 20,
+          "p50_s": 11.78070895851124,
+          "p95_s": 29.57255658183713
+        },
+        "retrieval_ms": {
+          "n": 20,
+          "p50_s": 0.09820906247477978,
+          "p95_s": 0.2790149235632274
+        },
+        "reader_ms": {
+          "n": 12,
+          "p50_s": 13.565673687495291,
+          "p95_s": 29.04808256246615
+        },
+        "generation_ms": {
+          "n": 20,
+          "p50_s": 1.8110924999928102,
+          "p95_s": 2.5536232666578145
+        },
+        "actual_vision_calls": 12
+      }
+    },
+    "requires_visual_detail": {
+      "H": {
+        "n": 12,
+        "total_ms": {
+          "n": 12,
+          "p50_s": 15.87644783349242,
+          "p95_s": 24.500868601986436
+        },
+        "retrieval_ms": {
+          "n": 12,
+          "p50_s": 0.09620152099523693,
+          "p95_s": 0.3833333937451241
+        },
+        "reader_ms": {
+          "n": 12,
+          "p50_s": 13.334408437542152,
+          "p95_s": 22.374139135662695
+        },
+        "generation_ms": {
+          "n": 12,
+          "p50_s": 2.184078667021822,
+          "p95_s": 2.4274003918399103
+        },
+        "actual_vision_calls": 12
+      },
+      "R": {
+        "n": 12,
+        "total_ms": {
+          "n": 12,
+          "p50_s": 15.909337604010943,
+          "p95_s": 31.28387656502891
+        },
+        "retrieval_ms": {
+          "n": 12,
+          "p50_s": 0.09996318747289479,
+          "p95_s": 0.4647866399493065
+        },
+        "reader_ms": {
+          "n": 12,
+          "p50_s": 13.565673687495291,
+          "p95_s": 29.04808256246615
+        },
+        "generation_ms": {
+          "n": 12,
+          "p50_s": 1.944834333495237,
+          "p95_s": 2.581973400292918
+        },
+        "actual_vision_calls": 12
+      }
+    },
+    "caption_or_business_fact": {
+      "H": {
+        "n": 8,
+        "total_ms": {
+          "n": 8,
+          "p50_s": 13.361192667041905,
+          "p95_s": 27.752450502326244
+        },
+        "retrieval_ms": {
+          "n": 8,
+          "p50_s": 0.0992880625417456,
+          "p95_s": 0.33269845672184595
+        },
+        "reader_ms": {
+          "n": 8,
+          "p50_s": 11.235424437501933,
+          "p95_s": 25.56309101654333
+        },
+        "generation_ms": {
+          "n": 8,
+          "p50_s": 1.7560299579636194,
+          "p95_s": 2.544210597622441
+        },
+        "actual_vision_calls": 8
+      },
+      "R": {
+        "n": 8,
+        "total_ms": {
+          "n": 8,
+          "p50_s": 1.83593647897942,
+          "p95_s": 2.4223631248343733
+        },
+        "retrieval_ms": {
+          "n": 8,
+          "p50_s": 0.09731427050428465,
+          "p95_s": 0.12794078183942473
+        },
+        "generation_ms": {
+          "n": 8,
+          "p50_s": 1.7318682704935782,
+          "p95_s": 2.3247597893350753
+        },
+        "actual_vision_calls": 0
+      }
+    }
+  },
+  "e4_matched_cases": 24,
+  "e4_answerable_per_arm": 20,
+  "e4_original_pass_counts": {
+    "B": 18,
+    "C1": 15
+  },
+  "e4_format_error_counts": {
+    "B": 1,
+    "C1": 3
+  },
+  "e4_visible_false_abstention_route_count": 2,
+  "e4_route_overrides_including_previously_passed": 3,
+  "router_seconds_in_24_c1_requests": 44.312790457275696,
+  "old_results_unchanged": true,
+  "input_hashes": {
+    "docs/validation/multimodal-rag-ab/20261014-images-v1/trace.jsonl": "dade142061b2fbc7ab05b7b0c71bb5cdd90ddcd8622d9fb5d7f9af8cbef0d7ad",
+    "docs/validation/visual-observation-ab/20261015-seedmini-v2/trace.jsonl": "bf12f96aa26b3ae6ffa9deb52929412a5ee54551e95bfdd7c17afac787b1ad6a",
+    "docs/validation/visual-observation-ab/20261015-seedmini-v2/scores.json": "54215822523a1766512c110d680b7ee93a9cda68f47fd769fe38dd31df28e739",
+    "docs/validation/visual-observation-ab/20261015-seedmini-v2/report.md": "ed80407b8f9babc79fb57f7606f6a35f37d6d02def692c3accab5e13ba24df5f"
+  },
+  "independent_semantic_review_completed": false
+}

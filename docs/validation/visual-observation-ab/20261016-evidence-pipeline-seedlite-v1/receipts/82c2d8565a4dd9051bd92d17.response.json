@@ -1,0 +1,9 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "未提供对应关联的来源上下文，无法确定该图的采集记录署名。",
+  "image_citations": [],
+  "text_citations": []
+}

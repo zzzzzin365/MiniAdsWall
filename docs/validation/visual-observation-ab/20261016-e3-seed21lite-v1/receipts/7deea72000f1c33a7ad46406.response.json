@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "numbered_suggestion_count",
+      "value": "3",
+      "region": "正文区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

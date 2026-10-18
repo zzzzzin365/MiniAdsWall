@@ -1,0 +1,992 @@
+{
+  "x-creative-framework": {
+    "observations": [
+      {
+        "key": "background_color",
+        "value": "整张图的背景为浅米白色，无额外纹理装饰。",
+        "region": "全图区域",
+        "state": "observed",
+        "observation_id": "0d30fc9c139b2bb43787",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "top_logo",
+        "value": "画面顶部居中是一个圆角方形的陶土橙色图标，内部有白色放射状星芒图案。",
+        "region": "顶部居中区域",
+        "state": "observed",
+        "observation_id": "3cf4c723d2d8d19fa510",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "main_title",
+        "value": "图标下方第一行是黑色粗体衬线字体文字“The Claude Ad”，第二行是陶土橙色斜体衬线字体文字“Creative Strategist”。",
+        "region": "顶部图标下方居中区域",
+        "state": "observed",
+        "observation_id": "f56de0206918488aa6da",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "subtitle_text",
+        "value": "主标题下方是深灰色常规衬线字体文字“Have Claude tell you exactly what ads to make next.”。",
+        "region": "主标题下方居中区域",
+        "state": "observed",
+        "observation_id": "6d487573720f3589ace5",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "including_label",
+        "value": "副标题下方有一条横贯画面的细陶土橙色水平线，线的中间位置是陶土橙色圆角胶囊形标签，内部印有白色大写文字“INCLUDING:”。",
+        "region": "副标题下方居中区域",
+        "state": "observed",
+        "observation_id": "64354ac1fbeda2221a85",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "feature_card_count",
+        "value": "标签下方横向等距排列4个尺寸完全一致的浅桃色圆角卡片，卡片顶部带有突出的陶土橙色小矩形块。",
+        "region": "画面中部横向区域",
+        "state": "observed",
+        "observation_id": "a2380a6a9ee072115ce0",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "first_card_icon",
+        "value": "最左侧第一个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色文档线条图案。",
+        "region": "左数第一个卡片内部",
+        "state": "observed",
+        "observation_id": "6bed60553a5ceeb688c6",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "first_card_text",
+        "value": "第一个卡片图标下方印有黑色衬线文字“Ad Creative Strategist System Prompt”，文字下方有一条短陶土橙色横线。",
+        "region": "左数第一个卡片内部",
+        "state": "observed",
+        "observation_id": "d3bdc25c65e6be3a5610",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "second_card_icon",
+        "value": "左数第二个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色对勾圆形图案。",
+        "region": "左数第二个卡片内部",
+        "state": "observed",
+        "observation_id": "c1910463bbaa47325d75",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "second_card_text",
+        "value": "第二个卡片图标下方印有黑色衬线文字“Winning Ad Hook Templates”，文字下方有一条短陶土橙色横线。",
+        "region": "左数第二个卡片内部",
+        "state": "observed",
+        "observation_id": "aa5a69daf496f56aa794",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "third_card_icon",
+        "value": "左数第三个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色带向下箭头的方形图案。",
+        "region": "左数第三个卡片内部",
+        "state": "observed",
+        "observation_id": "6a6eb68949738786411d",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "third_card_text",
+        "value": "第三个卡片图标下方印有黑色衬线文字“Structure Of The Perfect Ad”，文字下方有一条短陶土橙色横线。",
+        "region": "左数第三个卡片内部",
+        "state": "observed",
+        "observation_id": "e2ff0f83aeb5a8abc2ef",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "fourth_card_icon",
+        "value": "最右侧第四个卡片的中心位置是陶土橙色圆角方形图标，内部印有白色盾牌图案。",
+        "region": "左数第四个卡片内部",
+        "state": "observed",
+        "observation_id": "94092ce1421934ec14c5",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "fourth_card_text",
+        "value": "第四个卡片图标下方印有黑色衬线文字“Creative Testing Framework”，文字下方有一条短陶土橙色横线。",
+        "region": "左数第四个卡片内部",
+        "state": "observed",
+        "observation_id": "925da6685c196c5dc19e",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_divider",
+        "value": "四个卡片下方有一条横贯画面的细陶土橙色水平线。",
+        "region": "卡片组下方居中区域",
+        "state": "observed",
+        "observation_id": "131235b15581c1a2bb55",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_call_to_action",
+        "value": "水平线下方居中位置，左侧是黑色文字“Comment”，中间是陶土橙色圆角矩形标签，内部印有白色文字“claudeads”，右侧是黑色文字“to get the access”。",
+        "region": "画面底部居中区域",
+        "state": "observed",
+        "observation_id": "ca91b28afe509e6d1732",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "color_palette",
+        "value": "全图仅使用浅米白、陶土橙、浅桃色、黑色、深灰色五种配色，无其他额外色彩。",
+        "region": "全图区域",
+        "state": "observed",
+        "observation_id": "f80a199536a2a632a53e",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      },
+      {
+        "key": "layout_alignment",
+        "value": "所有核心元素均沿画面垂直中轴线居中对齐，四个功能卡片横向均匀分布，左右边距对称。",
+        "region": "全图区域",
+        "state": "observed",
+        "observation_id": "49b07f8816d61d23a40f",
+        "source_id": "x-creative-framework",
+        "request_id": "7837236fd2b06802db7c295b",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261015-e4-seed21lite-v1:initial:x-creative-framework",
+      "model": "doubao-seed-2-1-lite-260915",
+      "request_id": "7837236fd2b06802db7c295b",
+      "input_sha256": "3c702b36633b01083f91b772cbad9a93c02547a771036c119c2404e50426da5b",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 14977.837041951716,
+      "http_status": 200,
+      "provider_id": "02179207987364414cea4691e83c1d7ab80acdae8752ced2fe1bc",
+      "usage": {
+        "completion_tokens": 982,
+        "prompt_tokens": 1603,
+        "total_tokens": 2585,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "x-marketing-kb": {
+    "observations": [
+      {
+        "key": "top_header_title",
+        "value": "页面最顶部左侧显示白色文字“SECOND BRAIN FOR MARKETING”，右侧显示白色文字“@shannholmberg”。",
+        "region": "页面顶部",
+        "state": "observed",
+        "observation_id": "8030aa0ea29e1f819480",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "top_subtitle",
+        "value": "顶部标题下方显示白色文字“organize the files → connect the references → give agents what they need to complete the work”。",
+        "region": "页面顶部",
+        "state": "observed",
+        "observation_id": "ff163dc6761c4df08d3e",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "organize_section_label",
+        "value": "第一分区标题为“— 01 / ORGANIZE · a shared library with folders for the work you do”，其中“01 / ORGANIZE”为青绿色文字。",
+        "region": "01 / ORGANIZE分区",
+        "state": "observed",
+        "observation_id": "0d84393fe806f95158ec",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "left_folder_tree",
+        "value": "左侧为marketing/目录树结构，包含shared/、content/、seo/、campaigns/product-launch/等子文件夹，以及voice-dna.md、hooks.md等多个.md文件。",
+        "region": "01 / ORGANIZE分区左侧",
+        "state": "observed",
+        "observation_id": "e9ebb1569f46d7d39946",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "shared_files_block",
+        "value": "右侧“SHARED FILES”标题为青绿色，下方堆叠3个带虚线边框的文件框，框内列出company.md、customer.md、offer.md、positioning.md、voice.md、proof.md文件名。",
+        "region": "01 / ORGANIZE分区右侧",
+        "state": "observed",
+        "observation_id": "5c737a2bc8a4eb9eb55f",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "agents_md_note",
+        "value": "SHARED FILES下方显示紫色文字“AGENTS .md”，其下白色文字为“where to read / save / ask for sign-off”。",
+        "region": "01 / ORGANIZE分区右下",
+        "state": "observed",
+        "observation_id": "c8a7ed59f3f13a4a2b95",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "connect_section_label",
+        "value": "第二分区标题为“— 02 / CONNECT · references .md links to all three places”，其中“02 / CONNECT”为橙黄色文字。",
+        "region": "02 / CONNECT分区",
+        "state": "observed",
+        "observation_id": "403487ebed909ebc5129",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "knowledge_base_block",
+        "value": "左侧“BRAIN / KNOWLEDGE BASE”标题为青绿色，下方虚线框内列出customer、offer、campaign brief、voice-dna.md、hooks.md、approved work，框下文字为“read the relevant files”。",
+        "region": "02 / CONNECT分区左侧",
+        "state": "observed",
+        "observation_id": "5372677a5b24809f71af",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "data_warehouse_block",
+        "value": "中间“DATA WAREHOUSE”标题为青绿色，下方虚线框内标注campaign / asset / date，以及spend、clicks、leads、conversions + results，框下文字为“query previous performance”。",
+        "region": "02 / CONNECT分区中间",
+        "state": "observed",
+        "observation_id": "d73cc68719c750633cc6",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "moodboard_block",
+        "value": "右侧“MOODBOARD / BRAND BOOK”标题为橙黄色，下方虚线框内标注Figma / Paper、Aa type、三个白色方块、折线波形图，框下文字为“open designs + your feedback”。",
+        "region": "02 / CONNECT分区右侧",
+        "state": "observed",
+        "observation_id": "bfc419574dd83fd65613",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "use_section_label",
+        "value": "第三分区标题为“— 03 / USE · example: a launch page + social posts”，其中“03 / USE”为紫色文字。",
+        "region": "03 / USE分区",
+        "state": "observed",
+        "observation_id": "fdd9c3bcdd3b87241ebe",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "your_task_block",
+        "value": "左侧“YOUR TASK”标题为青绿色，下方文字为“launch page + social posts”、“approved offer / audience / goal”，有箭头指向中间的简笔人脸图标。",
+        "region": "03 / USE分区左上",
+        "state": "observed",
+        "observation_id": "201497e3a58b360466ba",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "agent_gathers_block",
+        "value": "右侧“AGENT GATHERS”标题为青绿色，下方文字为“brief + customer evidence”、“voice + hooks + performance”、“brand book + visual references”。",
+        "region": "03 / USE分区右上",
+        "state": "observed",
+        "observation_id": "cb03f278c7ebdc1b875f",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "read_plan_node",
+        "value": "简笔人脸图标下方连接虚线框，框内文字为“READ + PLAN”，有箭头向下指向CREATE / CHECK区域。",
+        "region": "03 / USE分区中部",
+        "state": "observed",
+        "observation_id": "d53f25a2410e633362ef",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "create_check_blocks",
+        "value": "左侧“CREATE / CHECK”标题为青绿色，下方两个虚线框分别为launch page（含HEADLINE、HERO VISUAL、enquiry form、submit）和social post（含hook from hooks.md、campaign visual），框下文字为“saved to files”。",
+        "region": "03 / USE分区左下",
+        "state": "observed",
+        "observation_id": "2aa0b1ab1135f97bde4c",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "you_review_block",
+        "value": "右侧“YOU / REVIEW”标题为紫色，下方列出三个待勾选项：claims + offer、voice + design、links + form，下方文字为“approve or give feedback”，有箭头从social post指向该区域。",
+        "region": "03 / USE分区右下",
+        "state": "observed",
+        "observation_id": "36a983d9b23bf11cda72",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "after_signoff_text",
+        "value": "分区下方显示青绿色文字“AFTER SIGN-OFF”，其后白色文字为“publish the approved work → check the live page + posts → collect results”。",
+        "region": "03 / USE分区底部",
+        "state": "observed",
+        "observation_id": "668f8c97340058c83122",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      },
+      {
+        "key": "save_back_section",
+        "value": "最底部分区标题为“— SAVE BACK · improve the sources used on the next task”，下方文字为“copy edits → voice-dna.md / hooks.md / examples”、“results → warehouse”、“design feedback → moodboard”，最底部文字为“markdown in GitHub / visual references in Figma or Paper / performance in the data warehouse”。",
+        "region": "页面最底部",
+        "state": "observed",
+        "observation_id": "a557d15870ef38b65866",
+        "source_id": "x-marketing-kb",
+        "request_id": "20e219ebff90dc0af7d65553",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261015-e4-seed21lite-v1:initial:x-marketing-kb",
+      "model": "doubao-seed-2-1-lite-260915",
+      "request_id": "20e219ebff90dc0af7d65553",
+      "input_sha256": "9c35590b9fdd03ce2fe207dd9741c99b841353737e6563c212f0ad094a4cb319",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 18853.698042104952,
+      "http_status": 200,
+      "provider_id": "02179207988791214cea4691e83c1d7ab80acdae8752cedae6be2",
+      "usage": {
+        "completion_tokens": 1319,
+        "prompt_tokens": 1608,
+        "total_tokens": 2927,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "xhs-duo-1": {
+    "observations": [
+      {
+        "key": "top_title_text",
+        "value": "页面顶部有大号红色粗体文字“(四) 给营销/广告人的启示”。",
+        "region": "页面顶部区域",
+        "state": "observed",
+        "observation_id": "dacb54a510d4c396cda5",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "purple_circle_icon",
+        "value": "标题右侧有一个紫色圆形图标，内部有白色向左下指向的箭头符号。",
+        "region": "标题右侧区域",
+        "state": "observed",
+        "observation_id": "952f35a4c4f251720c30",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "first_point_heading",
+        "value": "第一条要点的黑色粗体标题为“1.品类破局的关键是反常识内卷”。",
+        "region": "标题下方第一区块",
+        "state": "observed",
+        "observation_id": "716c739bc2c23a639228",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "first_point_body",
+        "value": "第一条正文为黑色常规字体，内容为“不要跟着赛道内卷，教育不一定要卖焦虑，美妆不一定要吹功效，找到用户的情绪痛点，用全新的沟通方式切入，才能形成差异化。”",
+        "region": "第一要点标题下方",
+        "state": "observed",
+        "observation_id": "99f15d78baf12262f8f6",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "second_point_heading",
+        "value": "第二条要点的黑色粗体标题为“2.IP 设计要绑定行为，而非单纯颜值”。",
+        "region": "第一要点下方区块",
+        "state": "observed",
+        "observation_id": "06fc3aa52943916cddcc",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "second_point_body",
+        "value": "第二条正文为黑色常规字体，内容为“IP设计的核心是服务品牌目标，要么促活、要么转化、要么传播，脱离用户行为的IP，只是无用的视觉符号。”",
+        "region": "第二要点标题下方",
+        "state": "observed",
+        "observation_id": "50f32b7e7cb8f27530b6",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "third_point_heading",
+        "value": "第三条要点的黑色粗体标题为“3.自传播＞硬投放，梗资产是中小预算品牌的最优解”。",
+        "region": "第二要点下方区块",
+        "state": "observed",
+        "observation_id": "0d135a649f75a1ff6ed4",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "third_point_body",
+        "value": "第三条正文为黑色常规字体，内容为“放弃大额投放思维，打造可玩梗、可共情、可二创的内容资产，让用户成为传播主体，才是长效低成本的增长路径。”",
+        "region": "第三要点标题下方",
+        "state": "observed",
+        "observation_id": "95368a63f1454e92a801",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_red_banner",
+        "value": "页面最底部有一条横向的红色纹理横幅区域。",
+        "region": "页面最底部",
+        "state": "observed",
+        "observation_id": "94a15829065c04b439bb",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_right_text",
+        "value": "底部红色横幅的右下角有白色文字“@有好CASE”。",
+        "region": "底部红色横幅右下角",
+        "state": "observed",
+        "observation_id": "2fe3e1a9b70c3fb229ae",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "background_grid",
+        "value": "页面整体背景为浅灰色，带有细的浅灰色方格网格线。",
+        "region": "全页面背景",
+        "state": "observed",
+        "observation_id": "e9272a81747ba9530998",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "gradient_side_borders",
+        "value": "页面左右两侧边缘带有粉紫渐变的晕染纹理。",
+        "region": "页面左右边缘",
+        "state": "observed",
+        "observation_id": "123a088eb2e427bf508d",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "content_area_background",
+        "value": "三条要点所在的内容区域背景为白色，向下逐渐过渡为浅粉色渐变。",
+        "region": "三条要点所在的中部区域",
+        "state": "observed",
+        "observation_id": "4392090ea0a7787e7d34",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "point_count",
+        "value": "页面内共列出3条面向营销广告人的启示要点。",
+        "region": "页面中部内容区",
+        "state": "observed",
+        "observation_id": "c0d3ba02e2ea8deaca0e",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "top_blank_strip",
+        "value": "顶部红色标题下方有一条横向的纯白色空白条带。",
+        "region": "顶部标题下方",
+        "state": "observed",
+        "observation_id": "1e55b06c503a0d25ca63",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      },
+      {
+        "key": "no_extra_visual_elements",
+        "value": "页面内未出现人物、产品实物、实景照片类视觉元素。",
+        "region": "全页面",
+        "state": "explicitly_absent",
+        "observation_id": "9d6a1651f06c3d9cf987",
+        "source_id": "xhs-duo-1",
+        "request_id": "7b626edcbafc3540395d031d",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261015-e4-seed21lite-v1:initial:xhs-duo-1",
+      "model": "doubao-seed-2-1-lite-260915",
+      "request_id": "7b626edcbafc3540395d031d",
+      "input_sha256": "907b019c9918798c2deeb549c9fbba6043aa18600c6378712fa4532644ba2da8",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 12501.723084016703,
+      "http_status": 200,
+      "provider_id": "02179207990699214cea4691e83c1d7ab80acdae8752ced7d2392",
+      "usage": {
+        "completion_tokens": 823,
+        "prompt_tokens": 1578,
+        "total_tokens": 2401,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "xhs-duo-2": {
+    "observations": [
+      {
+        "key": "top_left_tag",
+        "value": "顶部左侧有红边白底圆角标签，内部印有红色文字“品牌洞察”",
+        "region": "页面顶部左上角",
+        "state": "observed",
+        "observation_id": "f2ad0a4d285914abc57d",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "top_middle_tag",
+        "value": "顶部居中位置有红边白底圆角标签，内部印有红色文字“营销分析”",
+        "region": "页面顶部居中",
+        "state": "observed",
+        "observation_id": "32d38c45bf6ac9e5e5d4",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "top_right_tag",
+        "value": "顶部右侧有红边白底圆角标签，内部印有红色文字“广告创意”",
+        "region": "页面顶部右上角",
+        "state": "observed",
+        "observation_id": "77db2b2c809efabbf97a",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "main_title",
+        "value": "页面上半部分居中是大号红色艺术字主标题，第一行是“疯狂的”，第二行是“小绿鸟”",
+        "region": "页面上半部分居中",
+        "state": "observed",
+        "observation_id": "bd804ee845f28f39783e",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "subtitle",
+        "value": "主标题下方是白色矩形背景条，内部印有红色文字“多邻国营销大盘点”",
+        "region": "主标题正下方",
+        "state": "observed",
+        "observation_id": "a18f5ea6bb00aee5cde0",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "left_mascot",
+        "value": "画面左下方是绿色猫头鹰卡通形象，拥有白色眼白、黑色圆形瞳孔、橙色喙和橙色脚，正面朝向观看者",
+        "region": "画面左下方",
+        "state": "observed",
+        "observation_id": "974620bf3390f43f2eb7",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "right_mascot",
+        "value": "画面右下方是同系列绿色猫头鹰卡通形象，额头和手部各贴有一块浅米色创可贴，呈坐姿，一只眼睛半睁，嘴巴微张",
+        "region": "画面右下方",
+        "state": "observed",
+        "observation_id": "8f0fc652340ca4c7b6f1",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "brand_logo",
+        "value": "页面左下角印有绿色小写文字“duolingo”",
+        "region": "页面左下角",
+        "state": "observed",
+        "observation_id": "c01eb9301630dafaf692",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "watermark",
+        "value": "页面右下角印有白色文字“@有好CASE”",
+        "region": "页面右下角",
+        "state": "observed",
+        "observation_id": "544e09197de3dad4634a",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "background_style",
+        "value": "整体背景为渐变效果，上部是浅灰白色，向下过渡为粉紫色，底部是红色，带有颗粒质感和白色细曲线装饰",
+        "region": "全页面背景",
+        "state": "observed",
+        "observation_id": "004966da072ebefbd32b",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "tag_layout",
+        "value": "顶部三个圆角标签沿水平方向均匀分布，分别位于左、中、右三个位置",
+        "region": "页面顶部区域",
+        "state": "observed",
+        "observation_id": "4794f2d80ebce8f28c0c",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "mascot_count",
+        "value": "画面中一共出现2个绿色猫头鹰卡通形象",
+        "region": "画面下半部分",
+        "state": "observed",
+        "observation_id": "a4aecd92a4ca34021bff",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "title_color",
+        "value": "页面内所有标题类文字均为正红色，字体为粗体艺术字",
+        "region": "页面上半部分",
+        "state": "observed",
+        "observation_id": "0932117217f59ba4b1f9",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "mascot_color",
+        "value": "两个猫头鹰卡通形象主体均为绿色，喙和脚为橙色",
+        "region": "画面下半部分",
+        "state": "observed",
+        "observation_id": "cfc4747ed0d2a4101e01",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "decorative_lines",
+        "value": "背景上分布有若干条纤细的白色曲线，作为装饰元素",
+        "region": "全页面背景",
+        "state": "observed",
+        "observation_id": "2d81b15cd4a4b3201470",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "subtitle_bg",
+        "value": "副标题所在的白色矩形背景条宽度横跨画面大部分区域，边缘为直角",
+        "region": "主标题正下方",
+        "state": "observed",
+        "observation_id": "b95600f5ccdbda0913c6",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "bottom_area",
+        "value": "页面底部区域为大面积红色渐变背景，承载品牌logo和右下角水印",
+        "region": "页面底部区域",
+        "state": "observed",
+        "observation_id": "a17873b4ef9aa10e203e",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      },
+      {
+        "key": "text_alignment",
+        "value": "主标题、副标题均为居中对齐排版",
+        "region": "页面上半部分",
+        "state": "observed",
+        "observation_id": "a9cd5b0ec5b9f78fc6b6",
+        "source_id": "xhs-duo-2",
+        "request_id": "7c2356ad0eef66eae1f86d01",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261015-e4-seed21lite-v1:initial:xhs-duo-2",
+      "model": "doubao-seed-2-1-lite-260915",
+      "request_id": "7c2356ad0eef66eae1f86d01",
+      "input_sha256": "e72f5bf89e0b766f4c5246ccb14287135a84a5f496b5e9b87f0004cda1a38bd4",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 13135.755666997284,
+      "http_status": 200,
+      "provider_id": "02179207991927114cea4691e83c1d7ab80acdae8752ceda3be8a",
+      "usage": {
+        "completion_tokens": 817,
+        "prompt_tokens": 1578,
+        "total_tokens": 2395,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  },
+  "zhihu-components": {
+    "observations": [
+      {
+        "key": "left_ad_top_brand",
+        "value": "左侧广告卡片左上角为青绿色方形蔚来品牌logo，右侧紧邻灰色“蔚来”文字，右上角为带下拉箭头的“广告”标识。",
+        "region": "左侧广告卡片顶部",
+        "state": "observed",
+        "observation_id": "bbfef9d696a49e45c02c",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "left_ad_car_image",
+        "value": "广告卡片上部的实拍图内，前景为浅绿色蔚来EC6汽车，后方停放另一辆浅色蔚来汽车，背景为蔚来门店室内场景，图左上角带有白色NIO品牌标识。",
+        "region": "左侧广告卡片上部",
+        "state": "observed",
+        "observation_id": "874d3fbe1d7c245f3bb6",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "left_ad_headline",
+        "value": "实拍图下方为黑色大号标题文字“‘0首付’，开蔚来回家”。",
+        "region": "左侧广告卡片中部",
+        "state": "observed",
+        "observation_id": "f5bce1ee6a77a3a438df",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "left_ad_body_copy",
+        "value": "标题下方为黑色正文文字“0购置税，0元终身质保，限时享购车‘0首付’”。",
+        "region": "左侧广告卡片中部",
+        "state": "observed",
+        "observation_id": "aebd83e407617cc9a404",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "left_ad_tag_buttons",
+        "value": "正文下方横向排列三个浅灰色圆角标签按钮，文字分别为“0元质保”“0元换电”“超长续航”。",
+        "region": "左侧广告卡片中下部",
+        "state": "observed",
+        "observation_id": "023be48899269bc857c1",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "left_ad_entry",
+        "value": "标签按钮下方为带小程序图标的“小程序”入口栏。",
+        "region": "左侧广告卡片下部",
+        "state": "observed",
+        "observation_id": "9d99642a8342506b215d",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "left_ad_footer",
+        "value": "广告卡片最底部为浅灰色文字“2分钟前 最近有70人预约”，右下角为带两个圆点的更多操作按钮。",
+        "region": "左侧广告卡片底部",
+        "state": "observed",
+        "observation_id": "b78efecadbde687761ce",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "middle_arrow",
+        "value": "左侧广告卡片右侧有蓝色粗箭头，箭头上方标注蓝色“创意”文字，箭头指向右侧的组件分类区域。",
+        "region": "画面中部",
+        "state": "observed",
+        "observation_id": "cda5708344fb82fa4e13",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "right_column_headers",
+        "value": "画面右上角并列两个蓝色标题，左侧为“创意组件”，右侧为“创意素材”。",
+        "region": "画面右上角",
+        "state": "observed",
+        "observation_id": "46022dff27030f1f468e",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "image_component_mapping",
+        "value": "创意组件列的“图片组件”通过蓝色箭头指向创意素材列的“图片”。",
+        "region": "右侧创意组件区域",
+        "state": "observed",
+        "observation_id": "438ab5f818fc690a7939",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "video_component_mapping",
+        "value": "创意组件列的“视频组件”通过蓝色箭头指向创意素材列的“视频+图片〔封面图〕”。",
+        "region": "右侧创意组件区域",
+        "state": "observed",
+        "observation_id": "d5028127bb1ab85b3845",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "brand_component_mapping",
+        "value": "创意组件列的“品牌形象组件”通过蓝色箭头指向创意素材列的“图片+文案”，下方配有青绿色蔚来logo和“蔚来”文字。",
+        "region": "右侧创意组件区域",
+        "state": "observed",
+        "observation_id": "bbbe07bff8b9bc8876f5",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "marketing_component_subitems",
+        "value": "创意组件列的“营销组件”下方缩进排列三个灰色子项，分别为“浮层卡片组件”“行动按钮组件”“标签组件”。",
+        "region": "右侧创意组件区域",
+        "state": "observed",
+        "observation_id": "a514015d2d05584d0b7b",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "landing_page_subitems",
+        "value": "创意组件列的“落地页组件”下方缩进排列三个灰色子项，分别为“蹊径落地页”“原生推广页”“微信小程序落地页”，末尾带有省略号。",
+        "region": "右侧创意组件区域",
+        "state": "observed",
+        "observation_id": "87be7287dc7429047dcd",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "unmapped_components",
+        "value": "创意组件列的“文案组件”未绘制指向创意素材列的箭头。",
+        "region": "右侧创意组件区域",
+        "state": "observed",
+        "observation_id": "bdb85afc30ec820ea603",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      },
+      {
+        "key": "right_brand_material",
+        "value": "创意素材列品牌形象组件对应位置展示青绿色方形蔚来logo，右侧紧邻灰色“蔚来”文字。",
+        "region": "右侧创意素材区域",
+        "state": "observed",
+        "observation_id": "010f7778042cb4b4c462",
+        "source_id": "zhihu-components",
+        "request_id": "43000c2c60385042a6cf417d",
+        "stage": "initial"
+      }
+    ],
+    "receipt": {
+      "call_key": "20261015-e4-seed21lite-v1:initial:zhihu-components",
+      "model": "doubao-seed-2-1-lite-260915",
+      "request_id": "43000c2c60385042a6cf417d",
+      "input_sha256": "642f510f75caac3b9f99b17f0843063ab156f7a95dd40dcbf8834c00ed4ba0f5",
+      "status": "succeeded",
+      "money": null,
+      "elapsed_ms": 15950.609749997966,
+      "http_status": 200,
+      "provider_id": "02179207993243114cea4691e83c1d7ab80acdae8752ced94d3b9",
+      "usage": {
+        "completion_tokens": 901,
+        "prompt_tokens": 1576,
+        "total_tokens": 2477,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,770 @@
+[
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 1,
+    "setup_plus_online_seconds": 2.3600063329795375,
+    "total_tokens": 401,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 2,
+    "setup_plus_online_seconds": 3.4091464158846065,
+    "total_tokens": 807,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 3,
+    "setup_plus_online_seconds": 4.480889373924583,
+    "total_tokens": 1206,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 4,
+    "setup_plus_online_seconds": 6.144163957913406,
+    "total_tokens": 1606,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 5,
+    "setup_plus_online_seconds": 7.350644832942635,
+    "total_tokens": 2014,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "A",
+    "questions": 6,
+    "setup_plus_online_seconds": 9.00394524994772,
+    "total_tokens": 2424,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 1,
+    "setup_plus_online_seconds": 6.927197166020051,
+    "total_tokens": 2142,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 2,
+    "setup_plus_online_seconds": 13.614406333072111,
+    "total_tokens": 5116,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 3,
+    "setup_plus_online_seconds": 24.034052000031807,
+    "total_tokens": 7229,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 4,
+    "setup_plus_online_seconds": 31.881310750031844,
+    "total_tokens": 9344,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 5,
+    "setup_plus_online_seconds": 38.698685500072315,
+    "total_tokens": 11459,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "B",
+    "questions": 6,
+    "setup_plus_online_seconds": 45.51672925008461,
+    "total_tokens": 13610,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 1,
+    "setup_plus_online_seconds": 11.516590540879406,
+    "total_tokens": 4607,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 2,
+    "setup_plus_online_seconds": 13.088754206895828,
+    "total_tokens": 6869,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 3,
+    "setup_plus_online_seconds": 15.517524623894133,
+    "total_tokens": 9121,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 4,
+    "setup_plus_online_seconds": 17.34877058188431,
+    "total_tokens": 11377,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 5,
+    "setup_plus_online_seconds": 18.39152820687741,
+    "total_tokens": 13636,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C0",
+    "questions": 6,
+    "setup_plus_online_seconds": 19.594158164807595,
+    "total_tokens": 15905,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 1,
+    "setup_plus_online_seconds": 16.738072791835293,
+    "total_tokens": 8686,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 2,
+    "setup_plus_online_seconds": 19.92973779188469,
+    "total_tokens": 13447,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 3,
+    "setup_plus_online_seconds": 23.747682250919752,
+    "total_tokens": 18289,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 4,
+    "setup_plus_online_seconds": 27.06599616690073,
+    "total_tokens": 23052,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 5,
+    "setup_plus_online_seconds": 30.74089466687292,
+    "total_tokens": 27809,
+    "money": null
+  },
+  {
+    "asset_id": "zhihu-components",
+    "arm": "C1",
+    "questions": 6,
+    "setup_plus_online_seconds": 35.58666087582242,
+    "total_tokens": 32583,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 1,
+    "setup_plus_online_seconds": 0.9234796660020947,
+    "total_tokens": 419,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 2,
+    "setup_plus_online_seconds": 2.7784271660493687,
+    "total_tokens": 835,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 3,
+    "setup_plus_online_seconds": 3.811792457010597,
+    "total_tokens": 1253,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 4,
+    "setup_plus_online_seconds": 5.135155747993849,
+    "total_tokens": 1673,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 5,
+    "setup_plus_online_seconds": 6.362057540100068,
+    "total_tokens": 2083,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "A",
+    "questions": 6,
+    "setup_plus_online_seconds": 7.624928748118691,
+    "total_tokens": 2494,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 1,
+    "setup_plus_online_seconds": 4.954660500050522,
+    "total_tokens": 2128,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 2,
+    "setup_plus_online_seconds": 10.378344959113747,
+    "total_tokens": 4279,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 3,
+    "setup_plus_online_seconds": 17.662882584147155,
+    "total_tokens": 6403,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 4,
+    "setup_plus_online_seconds": 26.75681091810111,
+    "total_tokens": 9487,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 5,
+    "setup_plus_online_seconds": 32.24297500110697,
+    "total_tokens": 11628,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "B",
+    "questions": 6,
+    "setup_plus_online_seconds": 38.96645975112915,
+    "total_tokens": 13737,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 1,
+    "setup_plus_online_seconds": 7.980598457972519,
+    "total_tokens": 3672,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 2,
+    "setup_plus_online_seconds": 9.806586374877952,
+    "total_tokens": 5283,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 3,
+    "setup_plus_online_seconds": 14.309482124866918,
+    "total_tokens": 6894,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 4,
+    "setup_plus_online_seconds": 16.46321899991017,
+    "total_tokens": 8514,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 5,
+    "setup_plus_online_seconds": 17.611976124928333,
+    "total_tokens": 10118,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C0",
+    "questions": 6,
+    "setup_plus_online_seconds": 18.68640287499875,
+    "total_tokens": 11727,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 1,
+    "setup_plus_online_seconds": 12.992884999956004,
+    "total_tokens": 5374,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 2,
+    "setup_plus_online_seconds": 15.38374858291354,
+    "total_tokens": 8608,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 3,
+    "setup_plus_online_seconds": 18.666224415879697,
+    "total_tokens": 11841,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 4,
+    "setup_plus_online_seconds": 22.00937524891924,
+    "total_tokens": 15088,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 5,
+    "setup_plus_online_seconds": 25.211327914963476,
+    "total_tokens": 18313,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-1",
+    "arm": "C1",
+    "questions": 6,
+    "setup_plus_online_seconds": 31.152403080952354,
+    "total_tokens": 21545,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "A",
+    "questions": 1,
+    "setup_plus_online_seconds": 1.3195440419949591,
+    "total_tokens": 409,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "A",
+    "questions": 2,
+    "setup_plus_online_seconds": 2.5017388339620084,
+    "total_tokens": 820,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "A",
+    "questions": 3,
+    "setup_plus_online_seconds": 3.7296225839527324,
+    "total_tokens": 1228,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "A",
+    "questions": 4,
+    "setup_plus_online_seconds": 4.759566292981617,
+    "total_tokens": 1636,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "A",
+    "questions": 5,
+    "setup_plus_online_seconds": 5.726718042977154,
+    "total_tokens": 2040,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "A",
+    "questions": 6,
+    "setup_plus_online_seconds": 6.723273542942479,
+    "total_tokens": 2448,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "B",
+    "questions": 1,
+    "setup_plus_online_seconds": 12.676963750040159,
+    "total_tokens": 2111,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "B",
+    "questions": 2,
+    "setup_plus_online_seconds": 22.22092683298979,
+    "total_tokens": 4252,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "B",
+    "questions": 3,
+    "setup_plus_online_seconds": 30.558210500050336,
+    "total_tokens": 6925,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "B",
+    "questions": 4,
+    "setup_plus_online_seconds": 37.93623191700317,
+    "total_tokens": 9402,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "B",
+    "questions": 5,
+    "setup_plus_online_seconds": 44.641625749995,
+    "total_tokens": 12048,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "B",
+    "questions": 6,
+    "setup_plus_online_seconds": 51.54708291601855,
+    "total_tokens": 15041,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C0",
+    "questions": 1,
+    "setup_plus_online_seconds": 6.972640875028446,
+    "total_tokens": 3458,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C0",
+    "questions": 2,
+    "setup_plus_online_seconds": 8.351298792054877,
+    "total_tokens": 3458,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C0",
+    "questions": 3,
+    "setup_plus_online_seconds": 10.431859501055442,
+    "total_tokens": 4926,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C0",
+    "questions": 4,
+    "setup_plus_online_seconds": 12.148239876143634,
+    "total_tokens": 6385,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C0",
+    "questions": 5,
+    "setup_plus_online_seconds": 13.3899405420525,
+    "total_tokens": 7840,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C0",
+    "questions": 6,
+    "setup_plus_online_seconds": 14.690031751058996,
+    "total_tokens": 9300,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C1",
+    "questions": 1,
+    "setup_plus_online_seconds": 9.25820529088378,
+    "total_tokens": 4933,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C1",
+    "questions": 2,
+    "setup_plus_online_seconds": 12.544648582814261,
+    "total_tokens": 7878,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C1",
+    "questions": 3,
+    "setup_plus_online_seconds": 15.007455290760845,
+    "total_tokens": 10811,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C1",
+    "questions": 4,
+    "setup_plus_online_seconds": 23.41838979080785,
+    "total_tokens": 15627,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C1",
+    "questions": 5,
+    "setup_plus_online_seconds": 26.76460004085675,
+    "total_tokens": 18980,
+    "money": null
+  },
+  {
+    "asset_id": "xhs-duo-2",
+    "arm": "C1",
+    "questions": 6,
+    "setup_plus_online_seconds": 30.018102498841472,
+    "total_tokens": 22322,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "A",
+    "questions": 1,
+    "setup_plus_online_seconds": 1.9052824170794338,
+    "total_tokens": 432,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "A",
+    "questions": 2,
+    "setup_plus_online_seconds": 3.051190875004977,
+    "total_tokens": 843,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "A",
+    "questions": 3,
+    "setup_plus_online_seconds": 4.846222124993801,
+    "total_tokens": 1246,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "A",
+    "questions": 4,
+    "setup_plus_online_seconds": 6.519939124933444,
+    "total_tokens": 1660,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "A",
+    "questions": 5,
+    "setup_plus_online_seconds": 7.827582333935425,
+    "total_tokens": 2061,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "A",
+    "questions": 6,
+    "setup_plus_online_seconds": 8.870506000006571,
+    "total_tokens": 2467,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "B",
+    "questions": 1,
+    "setup_plus_online_seconds": 5.499781416030601,
+    "total_tokens": 2220,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "B",
+    "questions": 2,
+    "setup_plus_online_seconds": 13.889348500058986,
+    "total_tokens": 4380,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "B",
+    "questions": 3,
+    "setup_plus_online_seconds": 21.70557300001383,
+    "total_tokens": 6562,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "B",
+    "questions": 4,
+    "setup_plus_online_seconds": 27.6662835420575,
+    "total_tokens": 8721,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "B",
+    "questions": 5,
+    "setup_plus_online_seconds": 33.72039333404973,
+    "total_tokens": 10841,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "B",
+    "questions": 6,
+    "setup_plus_online_seconds": 41.0081321260659,
+    "total_tokens": 13530,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C0",
+    "questions": 1,
+    "setup_plus_online_seconds": 10.851911457953975,
+    "total_tokens": 4886,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C0",
+    "questions": 2,
+    "setup_plus_online_seconds": 12.629240124020725,
+    "total_tokens": 7312,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C0",
+    "questions": 3,
+    "setup_plus_online_seconds": 15.416902124066837,
+    "total_tokens": 9729,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C0",
+    "questions": 4,
+    "setup_plus_online_seconds": 16.752918832120486,
+    "total_tokens": 9729,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C0",
+    "questions": 5,
+    "setup_plus_online_seconds": 18.264250124106184,
+    "total_tokens": 12140,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C0",
+    "questions": 6,
+    "setup_plus_online_seconds": 20.568430541083217,
+    "total_tokens": 14556,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C1",
+    "questions": 1,
+    "setup_plus_online_seconds": 13.139641165966168,
+    "total_tokens": 7342,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C1",
+    "questions": 2,
+    "setup_plus_online_seconds": 16.853942707995884,
+    "total_tokens": 12201,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C1",
+    "questions": 3,
+    "setup_plus_online_seconds": 21.400558667024598,
+    "total_tokens": 17057,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C1",
+    "questions": 4,
+    "setup_plus_online_seconds": 24.11064862506464,
+    "total_tokens": 21908,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C1",
+    "questions": 5,
+    "setup_plus_online_seconds": 26.8445809581317,
+    "total_tokens": 26751,
+    "money": null
+  },
+  {
+    "asset_id": "x-marketing-kb",
+    "arm": "C1",
+    "questions": 6,
+    "setup_plus_online_seconds": 31.57110241614282,
+    "total_tokens": 31927,
+    "money": null
+  }
+]

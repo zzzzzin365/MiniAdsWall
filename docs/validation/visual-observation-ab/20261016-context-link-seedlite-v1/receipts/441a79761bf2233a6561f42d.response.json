@@ -1,0 +1,88 @@
+{
+  "observations": [
+    {
+      "key": "main_subject",
+      "value": "一只佩戴着手串的人手",
+      "region": "画面中右侧及下方区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_type",
+      "value": "串珠编织宽手链",
+      "region": "手腕位置",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_base_color",
+      "value": "手链基底由黑色串珠构成",
+      "region": "手链整体边缘区域",
+      "state": "observed"
+    },
+    {
+      "key": "silver_bead_pattern",
+      "value": "手链左侧区域有银色串珠组成的字符图案",
+      "region": "手链左侧部分",
+      "state": "observed"
+    },
+    {
+      "key": "yellow_bead_pattern",
+      "value": "手链中部有黄色串珠组成的横向色块区域",
+      "region": "手链中间偏左部分",
+      "state": "observed"
+    },
+    {
+      "key": "blue_bead_pattern",
+      "value": "手链右侧有蓝色串珠组成的横向色块区域",
+      "region": "手链中间偏右部分",
+      "state": "observed"
+    },
+    {
+      "key": "hand_skin_feature",
+      "value": "人手手背皮肤纹理清晰，露出四根手指",
+      "region": "画面上方手部区域",
+      "state": "observed"
+    },
+    {
+      "key": "forearm_hair",
+      "value": "手腕下方的前臂分布有浅色汗毛",
+      "region": "画面左下方前臂区域",
+      "state": "observed"
+    },
+    {
+      "key": "forearm_moles",
+      "value": "前臂皮肤上可见三颗小型褐色痣点",
+      "region": "画面左下方前臂区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "背景为灰色",
+      "region": "画面左侧及右下角区域",
+      "state": "observed"
+    },
+    {
+      "key": "background_texture",
+      "value": "背景带有模糊的斑驳纹理",
+      "region": "画面全部背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_position",
+      "value": "手链环绕在人体手腕部位",
+      "region": "手腕处",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_bead_arrangement",
+      "value": "串珠排列整齐，呈横向多行排布",
+      "region": "手链整体",
+      "state": "observed"
+    },
+    {
+      "key": "finger_status",
+      "value": "画面中未显示完整的全部五根手指",
+      "region": "画面上方手部区域",
+      "state": "observed"
+    }
+  ]
+}

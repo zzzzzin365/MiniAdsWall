@@ -9,7 +9,7 @@ import { withAdsConnection } from "../../ads.database";
 import { object, put, authorize, decode } from "./store";
 import { validateResult } from "./contracts";
 import { analysisInput } from "./understanding";
-import { validateUnderstanding } from "./contracts";
+import { validateUnderstanding, validateVisualFrames, nativeMediaRag } from "./contracts";
 import { validateMediaRag } from "./contracts";
 import { mediaCorpus } from "./knowledge";
 import { studioDir, signedAsset, probe } from "./assets";
@@ -230,8 +230,29 @@ export async function tick(
     return true;
   }
   if(job.input.kind==='asset_analysis'){
-    try{const input=await analysisInput(job);const result=await provider('/studio/understand',input);if(!validateUnderstanding(result)||result.asset_id!==job.input.asset_id||result.model!==job.input.model)throw Error('invalid_understanding');await update(job,'succeeded',result);}
-    catch(e){await update(job,'failed',null,(e as any).code==='seed_model_not_open'?'seed_model_not_open':'seed_understanding_failed');}
+    let visual: any[] | undefined;
+    let stage = 'prepare';
+    try {
+      const input=await analysisInput(job);
+      if (nativeMediaRag()) {
+        stage = 'embed';
+        const embedded = await provider('/studio/embed',input);
+        if (embedded.asset_id !== input.asset_id || !validateVisualFrames(embedded.visual_embeddings,input.frames))
+          throw Error('invalid_visual_embeddings');
+        visual = embedded.visual_embeddings;
+      }
+      stage = 'understand';
+      const result=await provider('/studio/understand',input);
+      if(!validateUnderstanding(result)||result.asset_id!==job.input.asset_id||result.model!==job.input.model)
+        throw Error('invalid_understanding');
+      if (visual) result.visual_embeddings = visual;
+      await update(job,'succeeded',result);
+    } catch(e) {
+      // Local pixel embeddings remain usable even if paid Seed understanding is unavailable.
+      // This is a failed understanding job, never a fabricated successful caption.
+      await update(job,'failed',visual ? {asset_id:job.input.asset_id,visual_embeddings:visual} : null,
+        stage === 'embed' ? 'native_image_embedding_failed' : (e as any).code==='seed_model_not_open'?'seed_model_not_open':'seed_understanding_failed');
+    }
     return true;
   }
   if (job.kind === "text") {
@@ -251,12 +272,19 @@ export async function tick(
       if (corpus.sources.length && !validateMediaRag(result.media_rag)) throw Error('missing_media_rag');
       if (result.media_rag) {
         const rag = result.media_rag;
+        const expectedMethod = nativeMediaRag() ? 'chinese-clip-image-v1' : 'caption-vector-v1';
+        if (rag.method !== expectedMethod) throw Error('media_rag_method_mismatch');
         if (rag.corpus_assets !== corpus.sources.length || rag.corpus_truncated !== corpus.truncated ||
             (corpus.sources.length && !['retrieved', 'no_match'].includes(rag.status))) throw Error('invalid_media_scope');
         for (const source of rag.retrieved) {
           if (!corpus.sources.some(s => s.asset_id === source.asset_id &&
             s.asset_revision === source.asset_revision && s.analysis_job_id === source.analysis_job_id))
             throw Error('invalid_media_source');
+          if (expectedMethod === 'chinese-clip-image-v1' && !corpus.sources.some(s => s.asset_id === source.asset_id &&
+              s.understanding_available === source.understanding_available &&
+              s.visual_embeddings?.some((v:any)=>v.frame_index===source.frame_index && v.time_ms===source.time_ms &&
+                v.image_sha256===source.image_sha256 && v.model===source.embedding_model && v.revision===source.embedding_revision)))
+            throw Error('invalid_visual_source');
         }
         if (JSON.stringify(rag.citations.map((s: any) => s.id)) !== JSON.stringify(result.source_ids || []) ||
             rag.citations.some((s: any) => !rag.retrieved.some((r: any) => JSON.stringify(r) === JSON.stringify(s))))
@@ -308,6 +336,7 @@ export async function tick(
         null,
         (e as any).status === 403
           ? "permission_revoked"
+          : (e as any).message === 'native_media_reindex_required' ? 'native_media_reindex_required'
           : (e as any).code === 'media_rag_unavailable' ? 'media_rag_unavailable' : "text_generation_failed",
       );
     }

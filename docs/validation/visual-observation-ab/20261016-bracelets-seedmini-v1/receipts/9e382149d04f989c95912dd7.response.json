@@ -1,0 +1,70 @@
+{
+  "observations": [
+    {
+      "key": "object_type",
+      "value": "beaded bracelet",
+      "region": "full image",
+      "state": "observed"
+    },
+    {
+      "key": "bead_color",
+      "value": "black",
+      "region": "beads of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "round",
+      "region": "beads of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bead_count",
+      "value": "25",
+      "region": "full bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_type",
+      "value": "silver-toned lobster claw clasp",
+      "region": "upper left section of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "charm_type",
+      "value": "silver-toned scorpion charm",
+      "region": "lower right section of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "charm_attachment",
+      "value": "scorpion charm attached to a black bead via silver ring",
+      "region": "lower right section of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "plain white",
+      "region": "full image background",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_layout",
+      "value": "arranged in a loop shape",
+      "region": "full bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_position",
+      "value": "located at upper left of the bracelet loop",
+      "region": "upper left section of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "charm_position",
+      "value": "located at lower right of the bracelet loop",
+      "region": "lower right section of bracelet",
+      "state": "observed"
+    }
+  ]
+}

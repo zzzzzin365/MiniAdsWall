@@ -1,0 +1,41 @@
+{
+  "observations": [
+    {
+      "key": "left_character_color",
+      "value": "绿色",
+      "region": "封面底部左侧",
+      "state": "observed"
+    },
+    {
+      "key": "left_character_animal",
+      "value": "猫头鹰",
+      "region": "封面底部左侧",
+      "state": "observed"
+    },
+    {
+      "key": "right_character_color",
+      "value": "绿色",
+      "region": "封面底部右侧",
+      "state": "observed"
+    },
+    {
+      "key": "right_character_animal",
+      "value": "猫头鹰",
+      "region": "封面底部右侧",
+      "state": "observed"
+    },
+    {
+      "key": "right_character_bandage",
+      "value": "额头和手部贴有浅棕色创可贴",
+      "region": "封面底部右侧",
+      "state": "observed"
+    },
+    {
+      "key": "character_beak_feet",
+      "value": "喙和脚为橙色",
+      "region": "封面底部左右两侧",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

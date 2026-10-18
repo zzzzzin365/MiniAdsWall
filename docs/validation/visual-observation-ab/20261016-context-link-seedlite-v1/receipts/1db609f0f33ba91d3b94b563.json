@@ -1,0 +1,22 @@
+{
+  "call_key": "20261016-context-link-seedlite-v1:image-019:visual:B_context_pool",
+  "model": "doubao-seed-2-0-lite-260428",
+  "request_id": "1db609f0f33ba91d3b94b563",
+  "input_sha256": "6527693dcd835b8c944ffa4f6430bf146d35db2885c4042e4c201dea07ba8032",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 3370.4396249959245,
+  "http_status": 200,
+  "provider_id": "02179208363064737fa1e35c84c0d2e78e1e6ee6f349cd93c7693",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 3131,
+    "total_tokens": 3195,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

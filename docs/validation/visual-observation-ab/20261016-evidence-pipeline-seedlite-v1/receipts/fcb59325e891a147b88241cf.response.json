@@ -1,0 +1,13 @@
+{
+  "status": "partial",
+  "hand_present": true,
+  "publisher": "檀木匠",
+  "quote": "For orders over $100.00, GET 20%Off. Add to shop our products to enjoy the discount.",
+  "answer": "已从关联来源快照body摘录符合字符长度要求的内容，对应图像为image-001。",
+  "image_citations": [
+    "image-001"
+  ],
+  "text_citations": [
+    "ctx-67371c2d74c5270a"
+  ]
+}

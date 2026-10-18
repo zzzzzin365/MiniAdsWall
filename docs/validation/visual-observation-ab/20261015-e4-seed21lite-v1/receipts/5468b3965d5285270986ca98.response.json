@@ -1,0 +1,8 @@
+{
+  "decision": "not_provable",
+  "evidence_ids": [],
+  "missing": [
+    "活动真实ROAS数值"
+  ],
+  "reason": "该图仅为多邻国营销盘点的案例封面，未提供任何与活动真实ROAS相关的信息，无法从图中得出该数值。"
+}

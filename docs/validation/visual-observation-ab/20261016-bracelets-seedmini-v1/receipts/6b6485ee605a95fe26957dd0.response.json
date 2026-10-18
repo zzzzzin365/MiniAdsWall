@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "product_type",
+      "value": "beaded bracelet",
+      "region": "central lower area",
+      "state": "observed"
+    },
+    {
+      "key": "main_bead_color",
+      "value": "black",
+      "region": "main body of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "accent_beads",
+      "value": "one turquoise bead, one light pink bead",
+      "region": "left side of bracelet near clasp",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_type",
+      "value": "silver-toned toggle clasp",
+      "region": "center bottom of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_material",
+      "value": "shiny silver-colored metal",
+      "region": "clasp area",
+      "state": "observed"
+    },
+    {
+      "key": "cord_color",
+      "value": "black braided cord",
+      "region": "clasp connection area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_shape",
+      "value": "circular loop shape",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "plain light white or light gray",
+      "region": "entire background",
+      "state": "observed"
+    },
+    {
+      "key": "bead_shape",
+      "value": "small cylindrical disc-shaped beads",
+      "region": "main body of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "clasp_position",
+      "value": "centered at bottom of the bracelet loop",
+      "region": "center bottom",
+      "state": "observed"
+    }
+  ]
+}

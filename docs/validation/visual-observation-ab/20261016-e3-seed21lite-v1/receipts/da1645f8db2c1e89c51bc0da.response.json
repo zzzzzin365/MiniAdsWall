@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "content_type",
+      "value": "该图是营销工作流的流程示意图，以文字、框图、连线展示从组织文件、连接参考到使用产出、保存反馈的完整流程",
+      "region": "全图",
+      "state": "observed"
+    },
+    {
+      "key": "physical_product",
+      "value": "图中未出现任何实物产品摄影内容",
+      "region": "全图",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

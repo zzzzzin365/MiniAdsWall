@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "title_color",
+      "value": "页面顶部大标题（(四)给营销/广告人的启示）主要颜色为红色",
+      "region": "页面顶部区域",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "无额外缺失信息"
+  ]
+}

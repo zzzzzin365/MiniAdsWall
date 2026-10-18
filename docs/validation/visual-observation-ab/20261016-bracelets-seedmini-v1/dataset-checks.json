@@ -1,0 +1,11 @@
+{
+  "images": 21,
+  "families": 21,
+  "development_family_overlap": false,
+  "old_image_overlap": false,
+  "invalid_initial_observations": {
+    "x-1660996700172062721-906bb558f770": "invalid_observation_state"
+  },
+  "initial_paid_resubmissions": 0,
+  "gold_annotation": "primary assistant visual preannotation before testing; not human gold"
+}

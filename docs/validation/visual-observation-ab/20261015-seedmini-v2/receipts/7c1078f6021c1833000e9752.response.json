@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "animal_type",
+      "value": "猫头鹰",
+      "region": "封面底部左侧",
+      "state": "observed"
+    },
+    {
+      "key": "color",
+      "value": "绿色",
+      "region": "封面底部的品牌角色",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

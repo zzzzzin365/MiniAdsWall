@@ -1,0 +1,23 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "f0ff7a3b5d84db1c5b66",
+    "d135921c7a2394b6f55a",
+    "5ee801c67c9eca2c93cf",
+    "97549d209c2c85e2dc18",
+    "1cedc8c642ccc6142880",
+    "e844c225a876a8a46716",
+    "33f5b67d0e080fcab54c",
+    "1236484bfcd998145c25",
+    "7043a64a66ac6b707267",
+    "55fc512712496fbc4111",
+    "53c431cc1eabb4d56330",
+    "4a3ed732d2420f2f3098",
+    "8972d289de1d2d3c493c",
+    "0b8d5e596486ca22e056",
+    "b104a809c81a734ffe5a",
+    "33fd4f8414f834addda6"
+  ],
+  "missing": [],
+  "reason": "观察显示广告文字/logo/按钮位于左侧，而Site Audit和Traffic Generation Strategy等图表面板位于右侧，明确支持图表在广告右边。"
+}

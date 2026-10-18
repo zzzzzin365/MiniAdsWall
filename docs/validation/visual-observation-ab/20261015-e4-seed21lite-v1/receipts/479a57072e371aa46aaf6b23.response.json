@@ -1,0 +1,10 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "a4aecd92a4ca34021bff",
+    "974620bf3390f43f2eb7",
+    "8f0fc652340ca4c7b6f1"
+  ],
+  "missing": [],
+  "reason": "已有观察明确记录画面中共有2个绿色猫头鹰卡通形象，分别位于左下方和右下方，可直接回答问题。"
+}

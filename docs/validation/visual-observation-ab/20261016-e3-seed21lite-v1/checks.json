@@ -1,0 +1,16 @@
+{
+  "rows": 72,
+  "unique_repeat_case_arm": 72,
+  "expected_rows": 72,
+  "all_calls_same_model": true,
+  "all_provider_calls_succeeded": true,
+  "group_counts": {
+    "requires_visual_detail:R": 18,
+    "requires_visual_detail:H": 18,
+    "caption_or_unprovable:R": 18,
+    "caption_or_unprovable:H": 18
+  },
+  "all_frozen_sources_unchanged": true,
+  "body_review_completed": false,
+  "gold_sent_to_model": false
+}

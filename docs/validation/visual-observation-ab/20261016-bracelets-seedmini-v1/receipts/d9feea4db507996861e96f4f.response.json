@@ -1,0 +1,52 @@
+{
+  "observations": [
+    {
+      "key": "body_part",
+      "value": "person's wrist, hand, upper arm, chest area visible",
+      "region": "central",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_type",
+      "value": "beaded bracelet with red, white, black bead stripes, adjustable with black cord and black beads",
+      "region": "wrist",
+      "state": "observed"
+    },
+    {
+      "key": "ring",
+      "value": "gold-colored ring on a finger of the hand",
+      "region": "hand",
+      "state": "observed"
+    },
+    {
+      "key": "tattoo",
+      "value": "dark butterfly tattoo on upper arm",
+      "region": "upper arm",
+      "state": "observed"
+    },
+    {
+      "key": "clothing",
+      "value": "black top partially visible on torso",
+      "region": "torso",
+      "state": "observed"
+    },
+    {
+      "key": "nail_polish",
+      "value": "dark red nail polish on fingernails",
+      "region": "hand nails",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_position",
+      "value": "worn on the wrist of the arm that is crossed over the other arm",
+      "region": "wrist",
+      "state": "observed"
+    },
+    {
+      "key": "hand_position",
+      "value": "hand resting on the chest area, fingers partially overlapping",
+      "region": "hand",
+      "state": "observed"
+    }
+  ]
+}

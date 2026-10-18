@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product_type",
+      "value": "beaded bracelet with '5SOS' letter beads",
+      "region": "central",
+      "state": "observed"
+    },
+    {
+      "key": "sales_info_exist",
+      "value": "no sales-related information visible",
+      "region": "entire image",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "the real sales volume of this product"
+  ]
+}

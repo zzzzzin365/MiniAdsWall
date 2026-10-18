@@ -1,0 +1,35 @@
+{
+  "observations": [
+    {
+      "key": "owl_count",
+      "value": "2只",
+      "region": "画面下方",
+      "state": "observed"
+    },
+    {
+      "key": "brand_name",
+      "value": "duolingo",
+      "region": "画面左下角",
+      "state": "observed"
+    },
+    {
+      "key": "title_text",
+      "value": "疯狂的小绿鸟 多邻国营销大盘点",
+      "region": "画面中上部",
+      "state": "observed"
+    },
+    {
+      "key": "tag_texts",
+      "value": "品牌洞察、营销分析、广告创意",
+      "region": "画面顶部",
+      "state": "observed"
+    },
+    {
+      "key": "creator_text",
+      "value": "@有好CASE",
+      "region": "画面右下角",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

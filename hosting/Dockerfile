@@ -1,7 +1,7 @@
 FROM python:3.12-slim AS runtime
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/app
-COPY requirements.txt .
+COPY requirements.txt requirements-vision.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN useradd --uid 1000 --create-home agent && mkdir -p /objects && chown agent:agent /objects

@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "product_type",
+      "value": "图中展示的是两款装饰手链",
+      "region": "画面中央区域",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_pattern",
+      "value": "上方手链主体为黑白斜向条纹缠绕样式",
+      "region": "画面上部",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_decoration",
+      "value": "上方手链的条纹层间嵌有一排银色圆形金属饰钉",
+      "region": "画面上部",
+      "state": "observed"
+    },
+    {
+      "key": "upper_bracelet_fastener",
+      "value": "上方手链的闭合结构为黑色编织绳结",
+      "region": "画面上部手链的顶部",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_material",
+      "value": "下方手链由纯黑色编织绳制成",
+      "region": "画面下部",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_structure",
+      "value": "下方手链的绳身呈双股环绕形态",
+      "region": "画面下部",
+      "state": "observed"
+    },
+    {
+      "key": "lower_bracelet_decoration",
+      "value": "下方手链正面中央有一个8字形的黑色绳结装饰",
+      "region": "画面下部手链的中心位置",
+      "state": "observed"
+    },
+    {
+      "key": "background",
+      "value": "整体背景为纯白色",
+      "region": "画面全部背景区域",
+      "state": "observed"
+    },
+    {
+      "key": "reflection",
+      "value": "手链下方的白色平面上带有手链的浅淡倒影",
+      "region": "画面底部手链下方区域",
+      "state": "observed"
+    },
+    {
+      "key": "text_presence",
+      "value": "画面中无清晰可识别的文字内容",
+      "region": "全画面",
+      "state": "explicitly_absent"
+    }
+  ]
+}

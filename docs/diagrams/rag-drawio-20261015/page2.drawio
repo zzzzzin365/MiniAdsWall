@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" pages="1"><diagram id="results" name="02 对照实验与结果">
+    <mxGraphModel dx="1800" dy="1300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1300" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rtitle" value="做了哪些实验？对照了什么？结果如何？" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=32;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="25" width="1720" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="rlegend" value="各实验独立，不能拼成一次“全流程质量和速度双提升”。" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="82" width="1720" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="850" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_title" value="E1 公开检索｜已完成" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=24;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="136" width="530" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line0" value="数据：43个公开片段；新增措辞30道可回答题" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="190" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line1" value="对照：纯向量 vs 向量＋标题／正文词法融合" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="227" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line2" value="语义 Recall@5：51.67% → 76.67%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="264" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line3" value="50%受控缓存命中：检索 P95 458 → 274 ms" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="301" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line4" value="全新查询未证明稳定提速；不含生成耗时" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="338" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line5" value="实验优化未接入业务链路" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="375" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line6" value="另：早期改写小试 Recall@3 77.08% → 72.92%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="412" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_line7" value="改写小试与正式检索实验的数据及Top-K不同" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="449" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry x="920" y="120" width="850" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_title" value="E2 合成库搜索／量化｜已完成" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=24;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="945" y="136" width="530" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line0" value="10万随机向量：HNSW 搜索宽度参数对照" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="190" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line1" value="高召回配置在本机比精确扫描更慢" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="227" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line2" value="3600万：float32 vs 二值粗筛＋浮点精排" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="264" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line3" value="8查询整批耗时：114.64 → 66.03 秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="301" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line4" value="最近邻 Recall@5：100% → 62.5%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="338" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line5" value="结论：提速但漏召回，不替换业务检索" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="375" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_line6" value="批耗时 ≠ 单请求 P95；不是广告语义召回" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="412" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry x="30" y="590" width="850" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_title" value="E3 原图补读｜4张商家图，已完成" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=24;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="606" width="530" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line0" value="数据：4张商家图、20道正式问题" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="660" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line1" value="对照：每题读图 H vs 关键词按需读图 R" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="697" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line2" value="字段＋必要来源通过率：两组均93.75%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="734" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line3" value="在线读图：20 → 12次" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="771" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line4" value="完整 P95：26.24 → 29.57秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="808" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line5" value="结论：调用减少，尾延迟没有下降" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="845" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line6" value="历史商家素材实验，与后续外部图实验分开" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="882" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_line7" value="小样本、自动字段诊断，不是生产验收" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="919" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry x="920" y="590" width="850" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_title" value="E4 观察复用＋缺项补读｜部分完成" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=24;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="945" y="606" width="530" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c4scope" value="6张外部图；完成121/240题次，主比较24题配对" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=19;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="653" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="c4model" value="本轮回答、路由、视觉模型均为 Seed mini" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="689" width="800" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t0a" value="方案" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="945" y="733" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t0b" value="字段＋来源通过率" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="733" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t0c" value="回答 P95" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="733" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t1a" value="A 仅描述" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="768" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t1b" value="40%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="768" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t1c" value="1.90秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="768" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2a" value="B 每题读图" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="803" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2b" value="90%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="803" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t2c" value="10.29秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="803" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t3a" value="C0 仅复用观察" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="838" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t3b" value="75%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="838" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t3c" value="3.09秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="838" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t4a" value="C1 缺项才补读" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="873" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t4b" value="75%" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="873" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t4c" value="6.39秒" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="873" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4reads" value="C1 vs B：在线读图24 → 2次；通过率下降15个百分点" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="945" y="918" width="800" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4decision" value="质量未达标；用量上限中止；尚未人工盲审" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#8b6100;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="945" y="960" width="800" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pending" value="" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;dashed=1;dashPattern=8 6;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1060" width="1740" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="pending_title" value="未执行与解释边界" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=24;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1076" width="1420" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="pending1" value="SQ8＋浮点精排：只有方案。56张外部手串图：已校验、暂定分组，尚未跑实验。" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=20;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1115" width="1680" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="pending2" value="E4固定正确参考图，不证明检索召回提升；语义召回、最近邻召回、回答字段通过率是不同指标。" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=18;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1157" width="1680" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sources" value="依据：源码与报告见同目录 sources.md；所有框、文字、表格、箭头均可在 draw.io 编辑。" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontFamily=PingFang SC;fontSize=16;fontColor=#152332;spacing=10;fillColor=none;strokeColor=none;align=left;spacing=0;fontColor=#152332;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="35" y="1260" width="1720" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

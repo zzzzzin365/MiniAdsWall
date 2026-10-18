@@ -12,7 +12,7 @@ import {
 import { withAdsConnection } from "../services/ads.database";
 import * as store from "../services/merchant/studio/store";
 import { studioSchema } from "../services/merchant/studio/migration";
-import { requireInput } from "../services/merchant/studio/contracts";
+import { requireInput, nativeMediaRag } from "../services/merchant/studio/contracts";
 import {
   storeUpload,
   assetPath,
@@ -66,7 +66,8 @@ router.get("/capabilities", (ctx) => {
     video: process.env.STUDIO_VIDEO_ENABLED === "true",
     image: true,
     visual_understanding: true,
-    multimodal_rag: "caption-vector-v1",
+    multimodal_rag: nativeMediaRag() ? "chinese-clip-image-v1" : "caption-vector-v1",
+    image_embedding_model: "OFA-Sys/chinese-clip-vit-base-patch16",
       understanding_model: process.env.STUDIO_UNDERSTANDING_MODEL||"doubao-seed-2-0-mini-260428",
     text_model: "deepseek-v4-1-flash-260910",
     video_model: "doubao-seedance-1-0-pro-fast-251015",

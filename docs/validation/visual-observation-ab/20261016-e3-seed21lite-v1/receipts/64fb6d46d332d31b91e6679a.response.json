@@ -1,0 +1,8 @@
+{
+  "status": "insufficient",
+  "value": null,
+  "answer": "图中未标注该款汽车的实际成交价格，无法得知其今天的实际成交价。",
+  "source_ids": [
+    "zhihu-components"
+  ]
+}

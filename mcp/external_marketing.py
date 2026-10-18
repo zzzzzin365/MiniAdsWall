@@ -6,6 +6,7 @@ import mimetypes
 import os
 from pathlib import Path
 from urllib.parse import urlparse
+from core.image_embeddings import METHOD, MODEL_ID, MODEL_REVISION, native_enabled, open_visual_index, search_visual
 
 import chromadb
 
@@ -79,8 +80,8 @@ def sync(index=None, catalog=None):
             'images': sum(e['kind'] == 'image' for e in entries), 'vectors': len(entries), 'inserted': len(pending)}
 
 
-def retrieve(query, *, index=None, catalog=None, top_k=3, min_score=.25):
-    entries = records(catalog)
+def retrieve_caption(query, *, index=None, catalog=None, top_k=3, min_score=.25, articles_only=False):
+    entries = [e for e in records(catalog) if not articles_only or e['kind'] == 'article']
     report = {'status': 'empty', 'retrieved': [], 'citations': []}
     if not entries:
         return report
@@ -95,3 +96,68 @@ def retrieve(query, *, index=None, catalog=None, top_k=3, min_score=.25):
             report['retrieved'].append({**by_id[ident], 'score': round(max(-1., min(1., score)), 4)})
     report['status'] = 'retrieved' if report['retrieved'] else 'no_match'
     return report
+
+
+def visual_records(catalog=None):
+    """Raw pixels, locally curated paths only; captions are output context, never embedding input."""
+    path = Path(catalog) if catalog else CATALOG
+    entries = records(catalog)
+    data = json.loads(path.read_text()) if path.exists() else {'sources': []}
+    by_source = {e['source_id']: e for e in entries if e['kind'] == 'article'}
+    allowed_root = (path.parent / 'images').resolve()
+    images = []
+    for source in data['sources']:
+        for image in source.get('images', []):
+            entry = by_source[source['id']]
+            if len(image['caption']) > 4000:
+                raise ValueError('reference_caption_too_long')
+            supplied = Path(image['local_path'])
+            file = (ROOT / supplied).resolve() if catalog is None or path.resolve() == CATALOG.resolve() else (path.parent / supplied).resolve()
+            if not file.is_relative_to(allowed_root) or not file.is_file():
+                raise ValueError('invalid_reference_image_path')
+            if file.stat().st_size > 10 * 1024 * 1024:
+                raise ValueError('reference_image_too_large')
+            raw = file.read_bytes()
+            digest = hashlib.sha256(raw).hexdigest()
+            ident = hashlib.sha256(json.dumps([source['url'], image['label'], digest, MODEL_ID, MODEL_REVISION]).encode()).hexdigest()
+            images.append({**entry, 'id': ident, 'kind': 'image', 'content': image['caption'],
+                           'images': [{'label': image['label'], 'caption': image['caption'],
+                                       'original_url': image['url'], 'mime': mimetypes.guess_type(str(file))[0]}],
+                           'image_sha256': digest, 'retrieval_method': METHOD,
+                           'embedding_model': MODEL_ID, 'embedding_revision': MODEL_REVISION, '_raw': raw})
+    return images
+
+
+def retrieve_images(query, *, catalog=None, index=None, top_k=3, min_score=0., model=None):
+    entries = visual_records(catalog)
+    report = {'status': 'empty', 'method': METHOD, 'retrieved': [], 'citations': []}
+    if not entries or not query.strip():
+        return report
+    index = index if index is not None else open_visual_index('external_image_chinese_clip_v1')
+    report['retrieved'] = search_visual(entries, query, index=index, top_k=top_k, min_score=min_score, model=model)
+    report['status'] = 'retrieved' if report['retrieved'] else 'no_match'
+    return report
+
+
+def retrieve(query, *, index=None, catalog=None, top_k=3, min_score=.25, image_index=None, model=None, mode='all'):
+    if mode not in {'all', 'images', 'articles'}:
+        raise ValueError('invalid_reference_search_mode')
+    if not native_enabled():
+        return retrieve_caption(query, index=index, catalog=catalog, top_k=top_k, min_score=min_score)
+    images = retrieve_images(query, catalog=catalog, index=image_index, top_k=top_k, model=model) if mode != 'articles' else {'retrieved': []}
+    if mode == 'images':
+        return images
+    articles = retrieve_caption(query, index=index, catalog=catalog, top_k=top_k, min_score=min_score,
+                                articles_only=True)
+    if mode == 'articles':
+        return {**articles, 'method': 'text-vector-v1'}
+    # Scores from MiniLM and Chinese-CLIP are not comparable. Rank-fuse the two lists.
+    ranked = []
+    for rank in range(top_k):
+        for result in (images, articles):
+            if rank < len(result['retrieved']):
+                entry = result['retrieved'][rank]
+                ranked.append({**entry, 'fusion_score': round(1 / (60 + rank + 1), 6)})
+    selected = ranked[:top_k]
+    return {'status': 'retrieved' if selected else 'empty', 'method': 'native-image-plus-text-v1',
+            'retrieved': selected, 'citations': []}

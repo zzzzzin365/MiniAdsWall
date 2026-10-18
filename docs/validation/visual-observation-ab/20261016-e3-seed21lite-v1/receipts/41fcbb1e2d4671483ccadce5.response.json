@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "image_type",
+      "value": "这是一张营销工作流的流程示意图，以深色背景搭配白色线条、文字和彩色标注，展示从文件组织、引用关联到任务执行的完整流程。",
+      "region": "全图",
+      "state": "observed"
+    },
+    {
+      "key": "physical_product_presence",
+      "value": "图中未出现任何实物产品摄影内容，所有元素均为流程框图、文件夹结构、文字说明和抽象图标。",
+      "region": "全图",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

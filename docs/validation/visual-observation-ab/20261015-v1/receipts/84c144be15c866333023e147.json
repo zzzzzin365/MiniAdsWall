@@ -1,0 +1,22 @@
+{
+  "call_key": "main:zhihu-components:zhihu-components-5:C1:route",
+  "model": "deepseek-v4-1-flash-260910",
+  "request_id": "84c144be15c866333023e147",
+  "input_sha256": "2d49cd5193cace171eaef51d7b16cab3120ce6d3863f52d4e728b46d00131ce8",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 2167.430084082298,
+  "http_status": 200,
+  "provider_id": "02179204228381378a74243d99c3298b2ec93aa83bab7a0849bca",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 1908,
+    "total_tokens": 1956,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "marketing_component_action_button",
+      "value": "右侧营销组件下明确列出了行动按钮组件",
+      "region": "右侧创意组件区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

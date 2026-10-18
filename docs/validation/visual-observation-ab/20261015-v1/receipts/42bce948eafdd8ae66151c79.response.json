@@ -1,0 +1,10 @@
+{
+  "decision": "reuse",
+  "evidence_ids": [
+    "ed34b74a6f17bf0d5cd8",
+    "b6b0cb9b768e0f171ee4",
+    "f53baa7dd4b614fc109a"
+  ],
+  "missing": [],
+  "reason": "已观察到三个以数字1、2、3编号的建议标题，明确支持正文用数字编号列出了3条建议。"
+}

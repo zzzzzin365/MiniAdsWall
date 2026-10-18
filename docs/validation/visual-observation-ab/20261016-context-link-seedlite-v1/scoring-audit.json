@@ -1,0 +1,6090 @@
+[
+  {
+    "case_id": "image-015:quote",
+    "image_id": "image-015",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定字符摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:quote",
+    "image_id": "image-015",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "BranchLaquanya",
+      "quote": "Find Stone Beaded Bracelet Jewelry Styles On Sale!! 💙💚\n.\n.\n💝💝 Shop Stone Beaded Bracelet Jewelry Styles or Accessories On Sale 🛍🛍",
+      "answer": "已根据关联来源快照body完成指定字符的逐字摘录。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": [
+        "ctx-e7e78bf142059b98"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:quote",
+    "image_id": "image-015",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与当前图像ID对应的可靠来源关联，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:publisher",
+    "image_id": "image-004",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Energy Muse",
+      "quote": "New to Energy Muse? Find your energy match in a few simple questions.",
+      "answer": "本图对应来源的采集记录署名为Energy Muse。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": [
+        "ctx-1c1af78540f4c179"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:publisher",
+    "image_id": "image-004",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:publisher",
+    "image_id": "image-004",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "不存在可确认的对应关联，无法确定本图来源的采集记录署名publisher_record。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:publisher",
+    "image_id": "image-013",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "NatalyJewellery",
+      "quote": "Colorful town beaded bracelet \nWelcome to my store NatalyJewellery on the Etsy",
+      "answer": "已通过关联表确认本图对应来源的采集记录署名为NatalyJewellery",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": [
+        "ctx-b272730a6b2c20d8"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:publisher",
+    "image_id": "image-013",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图来源的采集记录署名。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:publisher",
+    "image_id": "image-013",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与关联表中未找到对应来源的采集记录署名信息，无法确定相关内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:quote",
+    "image_id": "image-008",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:quote",
+    "image_id": "image-008",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与本图对应关联的来源快照正文，无法完成指定摘录。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:quote",
+    "image_id": "image-008",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Sequence Collection",
+      "quote": "Search\n\n*   [Log in](https://www.sequencecollection.com/customer_authentication/redirect?locale=en&region_country=US)\n*   or\n*   [Create account]",
+      "answer": "已从关联来源快照body摘录符合要求的字符内容，引用对应文本。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": [
+        "ctx-8dad99eb8a9240e9"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:visual",
+    "image_id": "image-019",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有图像观察未提及真人手或手腕相关内容，无法确认原图中是否出现真人的手或手腕。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:visual",
+    "image_id": "image-019",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有图像观测未提及真人的手或手腕相关内容，无法确认原图中是否出现真人的手或手腕。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:visual",
+    "image_id": "image-019",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有图像观察记录未提及画面中出现真人的手或手腕，无法确认相关情况。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:cross",
+    "image_id": "image-017",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "未在图像中观测到真人手或手腕，本图对应来源记录署名为SoChicFinds。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:cross",
+    "image_id": "image-017",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图是否出现真人手或手腕，也无对应来源记录署名，无法确定相关信息。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:cross",
+    "image_id": "image-017",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "现有观察未提及原图出现真人手或手腕，仅可确认本图对应来源记录署名为SoChicFinds。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:publisher",
+    "image_id": "image-018",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名publisher_record相关信息，无法确定该内容。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:publisher",
+    "image_id": "image-018",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "黛黛snow能量水晶定制店",
+      "quote": "🏝️🐬❄️🩵海蓝宝 一定会一眼沦陷的水晶～ 高级珠宝#天空蓝海蓝宝[话题]# #水晶[话题]# #海蓝宝手链[话题]#",
+      "answer": "已根据关联记录获取对应来源的采集记录署名",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": [
+        "ctx-09d9ed859eb61b85"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-018:publisher",
+    "image_id": "image-018",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名publisher_record。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:publisher",
+    "image_id": "image-015",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "BranchLaquanya",
+      "quote": "Find Stone Beaded Bracelet Jewelry Styles On Sale!! 💙💚\n.\n.\n💝💝 Shop Stone Beaded Bracelet Jewelry Styles or Accessories On Sale 🛍🛍",
+      "answer": "本图对应来源的采集记录署名为BranchLaquanya，已通过关联上下文确认。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": [
+        "ctx-e7e78bf142059b98"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:publisher",
+    "image_id": "image-015",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名，相关信息无法确认。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:publisher",
+    "image_id": "image-015",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与关联表中未提供该图对应来源的采集记录署名信息，无法确定publisher_record。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:quote",
+    "image_id": "image-004",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Energy Muse",
+      "quote": "New to Energy Muse? Find your energy match in a few simple questions.",
+      "answer": "已从关联来源快照中摘录符合要求的正文内容，引用对应文本与图像。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": [
+        "ctx-1c1af78540f4c179"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:quote",
+    "image_id": "image-004",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:quote",
+    "image_id": "image-004",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与本图对应的确切来源快照正文，无法完成指定摘录。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:quote",
+    "image_id": "image-020",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:quote",
+    "image_id": "image-020",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与image-020明确关联的来源快照，无法完成指定摘录操作。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:quote",
+    "image_id": "image-020",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "南屿jewelry",
+      "quote": "通透澄澈的白水晶圆珠，搭配细闪猫眼银珠，光线里自带细碎柔光，清透冷感直接拉满",
+      "answer": "已从对应来源快照body中摘录符合长度要求的内容",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": [
+        "ctx-1ca04b7f8df106b0"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:quote",
+    "image_id": "image-019",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定摘录，相关字段均为null。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:quote",
+    "image_id": "image-019",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到本图对应的确切来源快照body，无法完成指定摘录。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:quote",
+    "image_id": "image-019",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "四九 | Stone Studio 🐇",
+      "quote": "山野氛围感满满的新中式手串，没想到秋季除了美拉德色系，蓝绿色调的老矿天河石也能扛起一面大旗了。",
+      "answer": "已从对应关联来源快照body中逐字摘录符合字符数要求的内容。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": [
+        "ctx-295e178f25c990a4"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:publisher",
+    "image_id": "image-011",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "stillwallsstore",
+      "quote": "the winner can choose any *beaded bracelet* from my store!",
+      "answer": "本图对应来源的采集记录署名为stillwallsstore",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": [
+        "ctx-f3b518556940b3fe"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-011:publisher",
+    "image_id": "image-011",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与目标图像无明确关联，无法确定对应来源的采集记录署名。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:publisher",
+    "image_id": "image-011",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:quote",
+    "image_id": "image-005",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:quote",
+    "image_id": "image-005",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图匹配的来源快照及对应正文摘录。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:quote",
+    "image_id": "image-005",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Pura Vida",
+      "quote": "Limited Advent Boxes Unlimited holiday magic ✨ Free shipping on all orders $50+",
+      "answer": "已从对应来源快照body摘录符合字符数要求的内容，引用对应文本来源。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": [
+        "ctx-2f83548fad1b8642"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:publisher",
+    "image_id": "image-020",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:publisher",
+    "image_id": "image-020",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "南屿jewelry",
+      "quote": "通透澄澈的白水晶圆珠，搭配细闪猫眼银珠，光线里自带细碎柔光，清透冷感直接拉满",
+      "answer": "已根据关联记录获取对应采集记录署名publisher_record为南屿jewelry",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": [
+        "ctx-1ca04b7f8df106b0"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:publisher",
+    "image_id": "image-020",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图来源的采集记录署名。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:quote",
+    "image_id": "image-021",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与当前图像ID对应的可靠来源关联，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:quote",
+    "image_id": "image-021",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定字符摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:quote",
+    "image_id": "image-021",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "有念｜Eonian",
+      "quote": "情侣水晶手串上新🖤💗\n黑曜石搭粉晶\n男生沉稳｜女生温柔\n成对佩戴，日常氛围感拉满",
+      "answer": "已从对应关联来源快照body中摘录符合要求的文本。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": [
+        "ctx-808e2e4cbf66fb7d"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-014:quote",
+    "image_id": "image-014",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与指定图像ID对应的可靠来源关联，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:quote",
+    "image_id": "image-014",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "ShorelineStudi3",
+      "quote": "Ice Queen handmade beaded bracelet with natural rock crystal and tibetan silver Snowflake charm. Perfect little winter gift.",
+      "answer": "已从对应关联来源快照的body中逐字摘录符合字符数要求的内容。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": [
+        "ctx-4b6a85e7c46bf74d"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:quote",
+    "image_id": "image-014",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定字符摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:cross",
+    "image_id": "image-001",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "檀木匠",
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人手及手腕，对应来源记录署名为檀木匠。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": [
+        "ctx-67371c2d74c5270a"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:cross",
+    "image_id": "image-001",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人手及手腕，无对应来源记录署名可确认。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:cross",
+    "image_id": "image-001",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人手及手腕，但未找到对应来源记录署名信息。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:visual",
+    "image_id": "image-013",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "NatalyJewellery",
+      "quote": "Colorful town beaded bracelet \nWelcome to my store NatalyJewellery on the Etsy",
+      "answer": "原图中出现了佩戴手链的真人手腕及部分小臂，存在真人的手腕。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": [
+        "ctx-b272730a6b2c20d8"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:visual",
+    "image_id": "image-013",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图底部右图展示手链佩戴在人手手腕上，出现了真人的手/手腕。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:visual",
+    "image_id": "image-013",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图底部右侧小图展示了佩戴手链的浅肤色人手手腕及部分小臂，出现真人的手腕。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:quote",
+    "image_id": "image-003",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "Miansai",
+      "quote": "Close menu Search\n*   [Man](https://www.miansai.com/collections/men)\n    *   [Featured](https://www.miansai.com/collections/mens-beaded-bracelets#)",
+      "answer": "已按要求从关联来源快照摘录符合长度的正文内容",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": [
+        "ctx-513e5b32731b2219"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:quote",
+    "image_id": "image-003",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与本图对应的确切来源快照body，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:quote",
+    "image_id": "image-003",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:quote",
+    "image_id": "image-016",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "不存在对应关联关系，无法确定该图匹配的来源快照正文，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:quote",
+    "image_id": "image-016",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "PeacefulMeKT",
+      "quote": "Excited to share this item from my #etsy shop: Lava Rock Beaded Bracelet",
+      "answer": "已从对应来源快照body逐字摘录符合字符数要求的内容，完成引用关联。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": [
+        "ctx-3ab3cd362393d485"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:quote",
+    "image_id": "image-016",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:visual",
+    "image_id": "image-017",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示串珠手链，背景为纯白色，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:visual",
+    "image_id": "image-017",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "依据图像观察，画面中仅展示串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:visual",
+    "image_id": "image-017",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "根据图像观察，画面中仅展示串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:quote",
+    "image_id": "image-006",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与image-006明确关联的来源快照，无法完成对应摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:quote",
+    "image_id": "image-006",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:quote",
+    "image_id": "image-006",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Stacks by Steph",
+      "quote": "Handmade single beaded bracelets featuring different style beads, colors and accents.",
+      "answer": "已从对应关联来源快照body中摘录符合要求的文本内容。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": [
+        "ctx-11a5aef6e6249465"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:cross",
+    "image_id": "image-003",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "从现有观测可知原图未出现真人手或手腕，无对应来源记录署名，无法确定相关关联。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:cross",
+    "image_id": "image-003",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图出现真人手或手腕，也无对应来源记录署名信息，无法确定相关内容。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:cross",
+    "image_id": "image-003",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": "Miansai",
+      "quote": null,
+      "answer": "原图中未出现真人手或手腕，本图对应来源记录署名为Miansai。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": [
+        "ctx-513e5b32731b2219"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:quote",
+    "image_id": "image-011",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "无有效关联来源快照，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:quote",
+    "image_id": "image-011",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录操作。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:quote",
+    "image_id": "image-011",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "stillwallsstore",
+      "quote": "the winner can choose any *beaded bracelet* from my store! all u have to do to enter is",
+      "answer": "已从关联来源快照body中摘录符合要求的指定字符内容",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": [
+        "ctx-f3b518556940b3fe"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:cross",
+    "image_id": "image-016",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中仅出现单只串珠手链，未观察到真人手或手腕，无对应来源记录署名。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:cross",
+    "image_id": "image-016",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": "PeacefulMeKT",
+      "quote": "Excited to share this item from my #etsy shop: Lava Rock Beaded Bracelet",
+      "answer": "原图中未出现真人手或手腕，本图对应来源记录署名为PeacefulMeKT。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": [
+        "ctx-3ab3cd362393d485"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:cross",
+    "image_id": "image-016",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "图像中仅展示单只串珠手链，未出现真人手或手腕，且无对应来源记录署名可匹配。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:visual",
+    "image_id": "image-007",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人的手与手腕，画面可见人物手部、手腕及相关佩戴饰品。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:visual",
+    "image_id": "image-007",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人的手与手腕，可见人物双手交叠放置在胸部前方，手腕处佩戴有串珠手链。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:visual",
+    "image_id": "image-007",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人的手与手腕，可见手部佩戴戒指、指甲油，手腕佩戴手链。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:visual",
+    "image_id": "image-010",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图背景为纯白色，仅展示两条手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:visual",
+    "image_id": "image-010",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图背景为纯白色，仅展示两款手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:visual",
+    "image_id": "image-010",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有图像观测信息未提及真人的手或手腕的相关内容，无法确认原图中是否出现真人的手或手腕。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:cross",
+    "image_id": "image-014",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图未出现真人手或手腕，无对应来源记录署名，无法确认相关关联。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:cross",
+    "image_id": "image-014",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "ShorelineStudi3",
+      "quote": "Excited to share the latest addition to my #etsy shop: Ice Queen handmade beaded bracelet with natural rock crystal and tibetan silver Snowflake charm.",
+      "answer": "现有观测未提及原图是否出现真人手或手腕，仅可确认本图对应来源记录署名为ShorelineStudi3。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": [
+        "ctx-4b6a85e7c46bf74d"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:cross",
+    "image_id": "image-014",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及画面出现真人手或手腕，也无对应来源记录署名信息，无法确定相关内容。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:cross",
+    "image_id": "image-015",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未发现原图中出现真人手或手腕，也无对应来源记录署名的相关信息，无法确定对应内容。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:cross",
+    "image_id": "image-015",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未发现画面中出现真人手或手腕，且无对应关联的来源记录署名，无法确定相关信息。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:cross",
+    "image_id": "image-015",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "BranchLaquanya",
+      "quote": "Find Stone Beaded Bracelet Jewelry Styles On Sale!! 💙💚\n.\n.\n💝💝 Shop Stone Beaded Bracelet Jewelry Styles or Accessories On Sale 🛍🛍",
+      "answer": "未观测到原图中出现真人手或手腕，本图对应来源记录署名为BranchLaquanya。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": [
+        "ctx-e7e78bf142059b98"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:visual",
+    "image_id": "image-012",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人的手，可见人的左手手掌托着串珠手链。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:visual",
+    "image_id": "image-012",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人的手，可见人的左手手掌托着串珠手链。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:visual",
+    "image_id": "image-012",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "263juta",
+      "quote": null,
+      "answer": "原图中出现了真人的左手手掌托着手链，存在真人的手。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:quote",
+    "image_id": "image-010",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:quote",
+    "image_id": "image-010",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "不存在对应关联的来源快照，无法完成指定的正文摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:quote",
+    "image_id": "image-010",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "JunkYardBlonde",
+      "quote": "Vintage Turquoise & White Cha Cha Beaded Bracelet - Signed Japan",
+      "answer": "已从对应来源快照body摘录符合要求的字符内容",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": [
+        "ctx-63e57c3b2d709090"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:cross",
+    "image_id": "image-005",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未发现原图出现真人手或手腕，无可靠对应来源记录署名，无法确认相关信息。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:cross",
+    "image_id": "image-005",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Pura Vida",
+      "quote": "Free shipping on all orders $50+",
+      "answer": "未在图像中观察到真人手或手腕，本图对应来源记录署名为Pura Vida。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": [
+        "ctx-2f83548fad1b8642"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-005:cross",
+    "image_id": "image-005",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中未出现真人手或手腕，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:visual",
+    "image_id": "image-002",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:visual",
+    "image_id": "image-002",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:visual",
+    "image_id": "image-002",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:quote",
+    "image_id": "image-012",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:quote",
+    "image_id": "image-012",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "无法确定本图对应的来源快照，无符合要求的可摘录正文内容。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:quote",
+    "image_id": "image-012",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "263juta",
+      "quote": "beaded star bracelet\nshop: https://t.co/u9mJdvIzxz https://t.co/yP4UZm3Naf",
+      "answer": "已从对应来源快照body完成指定字符摘录",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": [
+        "ctx-74dc6899317089e2"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:visual",
+    "image_id": "image-008",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示两款装饰手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:visual",
+    "image_id": "image-008",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，图中仅展示两款装饰手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:visual",
+    "image_id": "image-008",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，图中仅展示两款装饰手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:publisher",
+    "image_id": "image-016",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "PeacefulMeKT",
+      "quote": "Excited to share this item from my #etsy shop: Lava Rock Beaded Bracelet https://t.co/GckaPD8rwf https://t.co/4alGBe4KeU",
+      "answer": "本图对应来源的采集记录署名为PeacefulMeKT，已引用对应来源文本。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": [
+        "ctx-3ab3cd362393d485"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:publisher",
+    "image_id": "image-016",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "无对应上下文及关联信息，无法确定该来源的采集记录署名。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:publisher",
+    "image_id": "image-016",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图来源的采集记录署名。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:publisher",
+    "image_id": "image-002",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:publisher",
+    "image_id": "image-002",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图来源的采集记录署名。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:publisher",
+    "image_id": "image-002",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "the qi flow",
+      "quote": "Each piece undergoes a traditional three-step consecration journey, crafted with mindfulness and intention before it reaches your hands.",
+      "answer": "已通过关联记录确定本图对应来源的采集记录署名为the qi flow",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": [
+        "ctx-9952b4fbefc8ef53"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:cross",
+    "image_id": "image-013",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图底部右图展示了佩戴在浅肤色人手手腕上的手链，存在真人手/手腕，无对应来源记录署名。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:cross",
+    "image_id": "image-013",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "NatalyJewellery",
+      "quote": "Colorful town beaded bracelet \nWelcome to my store NatalyJewellery on the Etsy",
+      "answer": "原图底部右图展示了手链佩戴在人手手腕上的状态，对应来源记录署名为NatalyJewellery",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": [
+        "ctx-b272730a6b2c20d8"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:cross",
+    "image_id": "image-013",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人的手腕及部分小臂，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:cross",
+    "image_id": "image-021",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未发现原图出现真人手或手腕，且无对应关联来源记录署名，无法确定相关信息。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:cross",
+    "image_id": "image-021",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观察未发现原图中出现真人手或手腕，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:cross",
+    "image_id": "image-021",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "有念｜Eonian",
+      "quote": "情侣水晶手串上新🖤💗\n黑曜石搭粉晶\n男生沉稳｜女生温柔\n成对佩戴，日常氛围感拉满",
+      "answer": "未在图像中观测到真人手或手腕，本图对应来源记录署名为有念｜Eonian。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": [
+        "ctx-808e2e4cbf66fb7d"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-009:publisher",
+    "image_id": "image-009",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名，相关信息无法确认。",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:publisher",
+    "image_id": "image-009",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与关联表中未提供对应来源的采集记录署名信息，无法确定publisher_record。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:publisher",
+    "image_id": "image-009",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Ukrainian_Art_",
+      "quote": "A handmade beaded bracelet with a Trident and the flag of Ukraine is one of them",
+      "answer": "本图对应来源的采集记录署名为Ukrainian_Art_",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": [
+        "ctx-9d0e906f25718e14"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:visual",
+    "image_id": "image-005",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示编织手绳手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:visual",
+    "image_id": "image-005",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示编织手绳手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:visual",
+    "image_id": "image-005",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示编织手绳手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:visual",
+    "image_id": "image-003",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:visual",
+    "image_id": "image-003",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，图中仅展示了一条串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:visual",
+    "image_id": "image-003",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，图中仅展示了一条珠串手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:publisher",
+    "image_id": "image-003",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "无对应关联来源，无法确定本图的采集记录署名publisher_record。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:publisher",
+    "image_id": "image-003",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Miansai",
+      "quote": null,
+      "answer": "本图对应来源的采集记录署名为Miansai。",
+      "image_citations": [
+        "image-003"
+      ],
+      "text_citations": [
+        "ctx-513e5b32731b2219"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-003:publisher",
+    "image_id": "image-003",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联为空，无法确定该图对应来源的采集记录署名。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:visual",
+    "image_id": "image-006",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:visual",
+    "image_id": "image-006",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:visual",
+    "image_id": "image-006",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观察未提及原图中出现真人的手或手腕，无法确认相关情况。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:publisher",
+    "image_id": "image-014",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名publisher_record相关信息，无法确定。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:publisher",
+    "image_id": "image-014",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "ShorelineStudi3",
+      "quote": "Excited to share the latest addition to my #etsy shop: Ice Queen handmade beaded bracelet with natural rock crystal and tibetan silver Snowflake charm.",
+      "answer": "本图对应来源的采集记录署名为ShorelineStudi3。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": [
+        "ctx-4b6a85e7c46bf74d"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:publisher",
+    "image_id": "image-014",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "不存在可确认的对应关联，无法确定本图对应来源的采集记录署名。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:quote",
+    "image_id": "image-009",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与image-009对应的有效来源关联，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:quote",
+    "image_id": "image-009",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定字符摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:quote",
+    "image_id": "image-009",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Ukrainian_Art_",
+      "quote": "A handmade beaded bracelet with a Trident and the flag of Ukraine is one of them",
+      "answer": "已从对应关联来源快照body中摘录符合要求的文本",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": [
+        "ctx-9d0e906f25718e14"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:quote",
+    "image_id": "image-013",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定字符摘录。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:quote",
+    "image_id": "image-013",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "NatalyJewellery",
+      "quote": "Colorful town beaded bracelet Welcome to my store NatalyJewellery on the Etsy",
+      "answer": "已从对应来源快照body摘录符合要求的字符，完成指定引用。",
+      "image_citations": [
+        "image-013"
+      ],
+      "text_citations": [
+        "ctx-b272730a6b2c20d8"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-013:quote",
+    "image_id": "image-013",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源快照，无法完成指定摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:cross",
+    "image_id": "image-008",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测仅记录手链及背景相关内容，未提及真人手或手腕，也无对应来源记录署名信息，无法确定相关内容。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:cross",
+    "image_id": "image-008",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中未出现真人手或手腕，无对应来源记录署名可确定。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:cross",
+    "image_id": "image-008",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": "Sequence Collection",
+      "quote": null,
+      "answer": "原图中未出现真人手或手腕，对应来源记录署名为Sequence Collection。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": [
+        "ctx-8dad99eb8a9240e9"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:publisher",
+    "image_id": "image-001",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "檀木匠",
+      "quote": null,
+      "answer": "根据关联记录，本图对应来源的采集记录署名为檀木匠。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": [
+        "ctx-67371c2d74c5270a"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:publisher",
+    "image_id": "image-001",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名publisher_record相关信息，无法确定该内容。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:publisher",
+    "image_id": "image-001",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图对应来源的采集记录署名。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:publisher",
+    "image_id": "image-021",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "有念｜Eonian",
+      "quote": "情侣水晶手串上新🖤💗黑曜石搭粉晶男生沉稳｜女生温柔成对佩戴，日常氛围感拉满",
+      "answer": "本图对应来源的采集记录署名为有念｜Eonian",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": [
+        "ctx-808e2e4cbf66fb7d"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-021:publisher",
+    "image_id": "image-021",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:publisher",
+    "image_id": "image-021",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:cross",
+    "image_id": "image-011",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "从现有观察可知原图未出现真人手或手腕，无对应来源记录署名，无法确认相关信息。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:cross",
+    "image_id": "image-011",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图出现真人手或手腕，也无对应来源记录署名，无法完成相关字段填写。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:cross",
+    "image_id": "image-011",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "stillwallsstore",
+      "quote": "the winner can choose any *beaded bracelet* from my store!",
+      "answer": "未在原图中观测到真人手或手腕，本图对应来源记录署名为stillwallsstore。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": [
+        "ctx-f3b518556940b3fe"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-004:cross",
+    "image_id": "image-004",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图出现真人手或手腕，也无对应来源记录署名相关信息，无法确定对应内容。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:cross",
+    "image_id": "image-004",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Energy Muse",
+      "quote": "New to Energy Muse? Find your energy match in a few simple questions.",
+      "answer": "现有观察未提及原图是否出现真人手或手腕，仅可确定对应来源记录署名为Energy Muse。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": [
+        "ctx-1c1af78540f4c179"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:cross",
+    "image_id": "image-004",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观察未提及原图出现真人手或手腕，且无对应来源关联记录，无法确定相关信息。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:cross",
+    "image_id": "image-010",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测与上下文未提供原图是否出现真人手或手腕的相关信息，也无对应来源记录署名的相关内容，无法确定对应信息。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:cross",
+    "image_id": "image-010",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "JunkYardBlonde",
+      "quote": "Vintage Turquoise & White Cha Cha Beaded Bracelet - Signed Japan https://t.co/qK8NajvRGw #Etsy #JunkYardBlonde #MidCenturyJewelry https://t.co/4ccab6RFNw",
+      "answer": "现有观测未明确原图是否出现真人手或手腕，仅可确认对应来源记录署名为JunkYardBlonde。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": [
+        "ctx-63e57c3b2d709090"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:cross",
+    "image_id": "image-010",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图是否出现真人手或手腕，且无对应关联来源记录，无法确定相关信息。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:visual",
+    "image_id": "image-009",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "Ukrainian_Art_",
+      "quote": "A handmade beaded bracelet with a Trident and the flag of Ukraine is one of them",
+      "answer": "原图中出现了佩戴着手串的真人的手及手腕。",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": [
+        "ctx-9d0e906f25718e14"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:visual",
+    "image_id": "image-009",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人的手及手腕。",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:visual",
+    "image_id": "image-009",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人手及手腕，有图像证据支持。",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:quote",
+    "image_id": "image-001",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定字符摘录。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:quote",
+    "image_id": "image-001",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "檀木匠",
+      "quote": "For orders over $100.00, GET 20%Off. Add Taxes, discounts and shipping calculated at checkout.",
+      "answer": "已从关联来源快照body摘录符合要求的字符内容，引用对应图像与文本。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": [
+        "ctx-67371c2d74c5270a"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:quote",
+    "image_id": "image-001",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应的来源快照，无法执行指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:visual",
+    "image_id": "image-020",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "南屿jewelry",
+      "quote": "单戴清冷高级，叠戴手表也超有氛围感，日常戴完全不挑人、不挑穿搭",
+      "answer": "原图中出现了带有自然肤色皮肤的真人手腕，存在真人的手腕部位",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": [
+        "ctx-1ca04b7f8df106b0"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:visual",
+    "image_id": "image-020",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了带有自然肤色皮肤的真人手腕，存在真人的手腕部分。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:visual",
+    "image_id": "image-020",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了露出自然肤色的真人手腕，存在真人的手腕部位。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:cross",
+    "image_id": "image-007",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人手及手腕，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:cross",
+    "image_id": "image-007",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人手及手腕，无对应关联的来源记录署名。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:cross",
+    "image_id": "image-007",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "Fahari",
+      "quote": null,
+      "answer": "原图中出现真人手及手腕，对应来源记录署名为Fahari。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": [
+        "ctx-556bccbad69742e2"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:visual",
+    "image_id": "image-011",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示串珠弹力手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:visual",
+    "image_id": "image-011",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-011:visual",
+    "image_id": "image-011",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示串珠弹力手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-011"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:quote",
+    "image_id": "image-007",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与本图对应的确切来源快照body，无法完成指定摘录。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:quote",
+    "image_id": "image-007",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "Fahari",
+      "quote": "Welcome To Fahari! Free Shipping on Orders Above $99.",
+      "answer": "已根据关联来源完成对应字段填写，其余无对应证据字段为null。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": [
+        "ctx-556bccbad69742e2"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:quote",
+    "image_id": "image-007",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:visual",
+    "image_id": "image-018",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了托举手链的真人的手，存在手部区域。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:visual",
+    "image_id": "image-018",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人的手，该手托举展示串珠手链并带有美甲装饰。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:visual",
+    "image_id": "image-018",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了托举手链的真人的手，存在真人的手。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:publisher",
+    "image_id": "image-019",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无有效对应关系，无法确定本图来源的采集记录署名。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:publisher",
+    "image_id": "image-019",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "四九 | Stone Studio 🐇",
+      "quote": "🏔️山野氛围感满满的新中式手串\n没想到秋季除了美拉德色系，蓝绿色调的老矿天河石也能扛起一面大旗了。",
+      "answer": "已根据关联的来源记录获取对应采集记录署名。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": [
+        "ctx-295e178f25c990a4"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-019:publisher",
+    "image_id": "image-019",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名publisher_record相关信息，无法确定该内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:publisher",
+    "image_id": "image-007",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与目标图像无可靠对应关联，无法确定本图对应来源的采集记录署名。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:publisher",
+    "image_id": "image-007",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "Fahari",
+      "quote": null,
+      "answer": "根据关联记录，本图对应来源的采集记录署名为Fahari，无对应可摘录的12-60字符正文内容。",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": [
+        "ctx-556bccbad69742e2"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-007:publisher",
+    "image_id": "image-007",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record内容",
+      "image_citations": [
+        "image-007"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:cross",
+    "image_id": "image-020",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图出现带有自然肤色的真人手腕，无对应来源记录署名可确认。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:cross",
+    "image_id": "image-020",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了带有自然肤色皮肤的真人手腕，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-020:cross",
+    "image_id": "image-020",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "南屿jewelry",
+      "quote": "通透澄澈的白水晶圆珠，搭配细闪猫眼银珠 光线里自带细碎柔光，清透冷感直接拉满",
+      "answer": "原图中出现了真人手腕，对应来源记录署名为南屿jewelry",
+      "image_citations": [
+        "image-020"
+      ],
+      "text_citations": [
+        "ctx-1ca04b7f8df106b0"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-012:cross",
+    "image_id": "image-012",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人手掌，可确认存在真人手，但无对应来源记录署名信息。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:cross",
+    "image_id": "image-012",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "263juta",
+      "quote": "beaded star bracelet\nshop: https://t.co/u9mJdvIzxz https://t.co/yP4UZm3Naf",
+      "answer": "原图中出现真人手掌，对应来源记录署名为263juta",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": [
+        "ctx-74dc6899317089e2"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:cross",
+    "image_id": "image-012",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现真人手掌，存在真人手，但无对应来源记录署名，无法确定publisher相关信息。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:visual",
+    "image_id": "image-021",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:visual",
+    "image_id": "image-021",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-021:visual",
+    "image_id": "image-021",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-021"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:publisher",
+    "image_id": "image-012",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:publisher",
+    "image_id": "image-012",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "263juta",
+      "quote": "beaded star bracelet\nshop: https://t.co/u9mJdvIzxz https://t.co/yP4UZm3Naf",
+      "answer": "本图对应来源的采集记录署名为263juta，关联对应上下文记录。",
+      "image_citations": [
+        "image-012"
+      ],
+      "text_citations": [
+        "ctx-74dc6899317089e2"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-012:publisher",
+    "image_id": "image-012",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher_record内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:visual",
+    "image_id": "image-016",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中仅出现单只串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:visual",
+    "image_id": "image-016",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中仅出现单只串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-016:visual",
+    "image_id": "image-016",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中仅出现单只串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-016"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:visual",
+    "image_id": "image-001",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了真人的手及手腕，佩戴着手串。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:visual",
+    "image_id": "image-001",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人的手及部分小臂，存在真人的手与手腕。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-001:visual",
+    "image_id": "image-001",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人的手及部分小臂，存在真人的手与手腕。",
+      "image_citations": [
+        "image-001"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:quote",
+    "image_id": "image-002",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "无对应来源快照body，无法完成指定字符摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:quote",
+    "image_id": "image-002",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "the qi flow",
+      "quote": "Each piece undergoes a traditional three-step consecration journey, crafted with mindfulness and intention before it reaches your hands.",
+      "answer": "已从对应来源快照body摘录符合字符数要求的内容，完成引用关联。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": [
+        "ctx-9952b4fbefc8ef53"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:quote",
+    "image_id": "image-002",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与image-002对应的可靠来源关联，无法完成指定摘录操作。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:publisher",
+    "image_id": "image-006",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "无有效关联来源，无法确定对应采集记录署名publisher_record",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:publisher",
+    "image_id": "image-006",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表无对应关联，无法确定本图对应来源的采集记录署名。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:publisher",
+    "image_id": "image-006",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Stacks by Steph",
+      "quote": "Handmade single beaded bracelets featuring different style beads, colors and accents.",
+      "answer": "已根据关联记录获取对应来源的采集记录署名。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": [
+        "ctx-11a5aef6e6249465"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:cross",
+    "image_id": "image-002",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图出现真人手或手腕，也无对应来源记录署名相关信息，无法确定对应内容。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:cross",
+    "image_id": "image-002",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "the qi flow",
+      "quote": "Each piece undergoes a traditional three-step consecration journey, crafted with mindfulness and intention before it reaches your hands.",
+      "answer": "现有观测未发现原图出现真人手或手腕，仅可确定对应来源记录署名为the qi flow。",
+      "image_citations": [
+        "image-002"
+      ],
+      "text_citations": [
+        "ctx-9952b4fbefc8ef53"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-002:cross",
+    "image_id": "image-002",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图出现真人手或手腕，且无对应关联来源记录署名，无法确定相关信息。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:cross",
+    "image_id": "image-009",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "Ukrainian_Art_",
+      "quote": "A handmade beaded bracelet with a Trident and the flag of Ukraine is one of them",
+      "answer": "原图中出现了佩戴着手串的真人手及手腕，对应来源记录署名为Ukrainian_Art_",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": [
+        "ctx-9d0e906f25718e14"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:cross",
+    "image_id": "image-009",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人手及手腕，但无可靠对应来源记录署名，无法确定publisher。",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-009:cross",
+    "image_id": "image-009",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了佩戴着手串的真人手及手腕，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-009"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:cross",
+    "image_id": "image-019",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": "四九 | Stone Studio 🐇",
+      "quote": "山野氛围感满满的新中式手串，没想到秋季除了美拉德色系，蓝绿色调的老矿天河石也能扛起一面大旗了。",
+      "answer": "原图未出现真人手或手腕，对应来源记录署名为四九 | Stone Studio 🐇。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": [
+        "ctx-295e178f25c990a4"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:cross",
+    "image_id": "image-019",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观测，原图未出现真人手或手腕，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-019"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-019:cross",
+    "image_id": "image-019",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及画面是否出现真人手或手腕，且无对应来源记录关联本图，无法确定相关信息。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:publisher",
+    "image_id": "image-008",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "无对应关联的采集记录署名信息，无法确定publisher_record",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:publisher",
+    "image_id": "image-008",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名，相关信息均无法确认。",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-008:publisher",
+    "image_id": "image-008",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Sequence Collection",
+      "quote": null,
+      "answer": "已根据关联记录确定本图对应来源的采集记录署名为Sequence Collection",
+      "image_citations": [
+        "image-008"
+      ],
+      "text_citations": [
+        "ctx-8dad99eb8a9240e9"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:quote",
+    "image_id": "image-017",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的body内容，无法完成指定字符摘录。",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:quote",
+    "image_id": "image-017",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "已从对应来源快照body摘录符合要求的内容",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:quote",
+    "image_id": "image-017",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "已根据关联来源完成对应字段摘录与引用",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:visual",
+    "image_id": "image-004",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示串珠手链，背景为纯白色，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:visual",
+    "image_id": "image-004",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示串珠手链，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-004:visual",
+    "image_id": "image-004",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中仅展示串珠手链，背景为纯白色，未出现真人的手或手腕。",
+      "image_citations": [
+        "image-004"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:cross",
+    "image_id": "image-006",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": "Stacks by Steph",
+      "quote": "Handmade single beaded bracelets featuring different style beads, colors and accents.",
+      "answer": "原图未出现真人手或手腕，对应来源记录署名为Stacks by Steph。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": [
+        "ctx-11a5aef6e6249465"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:cross",
+    "image_id": "image-006",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图是否出现真人手或手腕，也无对应来源记录署名相关信息，无法确定对应内容。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-006:cross",
+    "image_id": "image-006",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有观测未提及原图是否出现真人手或手腕，且无有效关联来源记录，无法确定对应信息。",
+      "image_citations": [
+        "image-006"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:visual",
+    "image_id": "image-015",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:visual",
+    "image_id": "image-015",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": "BranchLaquanya",
+      "quote": "Find Stone Beaded Bracelet Jewelry Styles On Sale!! 💙💚 Shop Stone Beaded Bracelet Jewelry Styles or Accessories On Sale",
+      "answer": "经观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": [
+        "ctx-e7e78bf142059b98"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-015:visual",
+    "image_id": "image-015",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，画面中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-015"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:publisher",
+    "image_id": "image-010",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "当前无有效关联证据，无法确定本图对应来源的采集记录署名publisher_record。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:publisher",
+    "image_id": "image-010",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "JunkYardBlonde",
+      "quote": "Vintage Turquoise & White Cha Cha Beaded Bracelet - Signed Japan https://t.co/qK8NajvRGw #Etsy #JunkYardBlonde #MidCenturyJewelry https://t.co/4ccab6RFNw",
+      "answer": "本图对应来源的采集记录署名为JunkYardBlonde。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": [
+        "ctx-63e57c3b2d709090"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-010:publisher",
+    "image_id": "image-010",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与关联表中未提供对应来源的采集记录署名信息，无法确定publisher_record。",
+      "image_citations": [
+        "image-010"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:cross",
+    "image_id": "image-018",
+    "task": "cross",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": "黛黛snow能量水晶定制店",
+      "quote": "🏝️🐬❄️🩵海蓝宝 一定会一眼沦陷的水晶～ 高级珠宝#天空蓝海蓝宝#水晶#海蓝宝手链",
+      "answer": "原图中出现真人手托举展示手链，对应来源记录署名为黛黛snow能量水晶定制店",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": [
+        "ctx-09d9ed859eb61b85"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:cross",
+    "image_id": "image-018",
+    "task": "cross",
+    "arm": "A_visual",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了托举展示手链的真人手，无对应来源记录署名信息。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:cross",
+    "image_id": "image-018",
+    "task": "cross",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": true,
+      "publisher": null,
+      "quote": null,
+      "answer": "原图中出现了托举展示手链的真人手，无对应来源记录署名可确认。",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:visual",
+    "image_id": "image-014",
+    "task": "visual",
+    "arm": "A_visual",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:visual",
+    "image_id": "image-014",
+    "task": "visual",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "partial",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-014:visual",
+    "image_id": "image-014",
+    "task": "visual",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "answered",
+      "hand_present": false,
+      "publisher": null,
+      "quote": null,
+      "answer": "根据图像观察，原图中未出现真人的手或手腕。",
+      "image_citations": [
+        "image-014"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": true,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:publisher",
+    "image_id": "image-017",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "已根据关联对应关系获取到本图来源的采集记录署名",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:publisher",
+    "image_id": "image-017",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "partial",
+      "hand_present": null,
+      "publisher": "SoChicFinds",
+      "quote": "Sterling Silver Scorpion Charm Black Onyx Beaded Bracelet, Jewelry for Men",
+      "answer": "已找到对应来源的采集记录署名为SoChicFinds，引用对应文本内容",
+      "image_citations": [
+        "image-017"
+      ],
+      "text_citations": [
+        "ctx-6da03ca89d21062f"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-017:publisher",
+    "image_id": "image-017",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源的采集记录署名相关信息，无法确定publisher。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:quote",
+    "image_id": "image-018",
+    "task": "quote",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到对应来源快照的正文内容，无法完成指定字符摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:quote",
+    "image_id": "image-018",
+    "task": "quote",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "未找到与指定图像ID image-018 存在明确关联的来源快照，无法完成对应摘录。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-018:quote",
+    "image_id": "image-018",
+    "task": "quote",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": true,
+      "publisher": "黛黛snow能量水晶定制店",
+      "quote": "一定会一眼沦陷的水晶～高级珠宝#天空蓝海蓝宝#水晶#海蓝宝手链#蓝月光#海蓝宝#能量水晶",
+      "answer": "已从对应关联来源快照body中摘录符合要求的文本内容",
+      "image_citations": [
+        "image-018"
+      ],
+      "text_citations": [
+        "ctx-09d9ed859eb61b85"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": true,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:publisher",
+    "image_id": "image-005",
+    "task": "publisher",
+    "arm": "C_context_links",
+    "answer": {
+      "status": "answered",
+      "hand_present": null,
+      "publisher": "Pura Vida",
+      "quote": "Free shipping on all orders $50+",
+      "answer": "本图对应来源的采集记录署名为Pura Vida，关联对应上下文快照。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": [
+        "ctx-2f83548fad1b8642"
+      ]
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": true,
+      "hand_correct": false,
+      "publisher_with_citation": true,
+      "quote_literal_with_citation": true
+    }
+  },
+  {
+    "case_id": "image-005:publisher",
+    "image_id": "image-005",
+    "task": "publisher",
+    "arm": "B_context_pool",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有关联表为空，无法确定本图对应来源的采集记录署名publisher_record。",
+      "image_citations": [],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  },
+  {
+    "case_id": "image-005:publisher",
+    "image_id": "image-005",
+    "task": "publisher",
+    "arm": "A_visual",
+    "answer": {
+      "status": "insufficient",
+      "hand_present": null,
+      "publisher": null,
+      "quote": null,
+      "answer": "现有上下文与关联表中未提供对应来源的采集记录署名信息，无法确定publisher_record。",
+      "image_citations": [
+        "image-005"
+      ],
+      "text_citations": []
+    },
+    "format_errors": [],
+    "metrics": {
+      "pass": false,
+      "hand_correct": false,
+      "publisher_with_citation": false,
+      "quote_literal_with_citation": false
+    }
+  }
+]

@@ -12,7 +12,7 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PYTHONPATH=/app
 
-# curl 用于健康检查；不再需要 gcc/g++（已移除本地 ML 模型）
+# curl 用于健康检查；原生图像检索使用本地CPU模型
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ── 阶段 2：安装 Python 依赖 ──────────────────────────────────────────────────
 FROM base AS dependencies
 
-COPY requirements.txt .
+COPY requirements.txt requirements-vision.txt ./
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
@@ -31,6 +31,9 @@ RUN mkdir -p /root/.cache/chroma/onnx_models/all-MiniLM-L6-v2 && \
     cd /root/.cache/chroma/onnx_models/all-MiniLM-L6-v2 && \
     tar -xzf onnx.tar.gz && \
     rm onnx.tar.gz
+
+# Pin the same native-image model used locally; no request-time weight download.
+RUN HF_HUB_DISABLE_XET=1 python -c "from huggingface_hub import snapshot_download; snapshot_download('OFA-Sys/chinese-clip-vit-base-patch16', revision='36e679e65c2a2fead755ae21162091293ad37834', allow_patterns=['config.json','preprocessor_config.json','vocab.txt','pytorch_model.bin'])"
 
 # ── 阶段 3：生产镜像 ──────────────────────────────────────────────────────────
 FROM base AS production
@@ -43,6 +46,9 @@ COPY --from=dependencies /usr/local/lib/python3.12/site-packages /usr/local/lib/
 COPY --from=dependencies /usr/local/bin /usr/local/bin
 # 复制预下载的 ONNX 模型缓存
 COPY --from=dependencies --chown=miniadswall:miniadswall /root/.cache/chroma /home/miniadswall/.cache/chroma
+
+COPY --from=dependencies --chown=miniadswall:miniadswall /root/.cache/huggingface /home/miniadswall/.cache/huggingface
+ENV HF_HOME=/home/miniadswall/.cache/huggingface
 
 # 复制应用代码
 COPY --chown=miniadswall:miniadswall . .

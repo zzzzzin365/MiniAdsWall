@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "you_review_region_position",
+      "value": "YOU / REVIEW区域位于整体画面的右侧",
+      "region": "画面右侧区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

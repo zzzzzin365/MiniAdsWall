@@ -1,0 +1,140 @@
+{
+  "file": "docs/diagrams/rag-drawio-20261015/page1.drawio",
+  "summary": {
+    "total_findings": 8,
+    "fail": 1,
+    "warn": 7,
+    "passed": false,
+    "clean": false
+  },
+  "fails": [
+    {
+      "rule": "arrow-box-collision",
+      "element_id": "media_read",
+      "message": "Edge 'media_read' passes through box 'media_collection' (1445,415 280×28)",
+      "detail": {
+        "edge_id": "media_read",
+        "box_id": "media_collection",
+        "box_type": "text",
+        "box_rect": "1445,415 280×28",
+        "segment": "(1725,370)→(1725,850)"
+      }
+    }
+  ],
+  "warns": [
+    {
+      "rule": "spacing-inconsistent-v",
+      "element_id": "extract",
+      "message": "Column at x≈340: vertical gaps vary (gaps=['50', '180', '80'], mean=103, cv=0.54). Use uniform spacing.",
+      "detail": {
+        "col_x": 340,
+        "gaps": [
+          50.0,
+          180.0,
+          80.0
+        ],
+        "mean": 103.3,
+        "cv": 0.54,
+        "element_ids": [
+          "extract",
+          "seed",
+          "rewrite",
+          "auth"
+        ]
+      }
+    },
+    {
+      "rule": "spacing-inconsistent-v",
+      "element_id": "emb",
+      "message": "Column at x≈900: vertical gaps vary (gaps=['50', '180', '80'], mean=103, cv=0.54). Use uniform spacing.",
+      "detail": {
+        "col_x": 900,
+        "gaps": [
+          50.0,
+          180.0,
+          80.0
+        ],
+        "mean": 103.3,
+        "cv": 0.54,
+        "element_ids": [
+          "emb",
+          "caption",
+          "rerank",
+          "context"
+        ]
+      }
+    },
+    {
+      "rule": "spacing-inconsistent-v",
+      "element_id": "pubmeta",
+      "message": "Column at x≈1180: vertical gaps vary (gaps=['50', '180', '80'], mean=103, cv=0.54). Use uniform spacing.",
+      "detail": {
+        "col_x": 1180,
+        "gaps": [
+          50.0,
+          180.0,
+          80.0
+        ],
+        "mean": 103.3,
+        "cv": 0.54,
+        "element_ids": [
+          "pubmeta",
+          "memb",
+          "gate",
+          "llm"
+        ]
+      }
+    },
+    {
+      "rule": "spacing-inconsistent-v",
+      "element_id": "pubdb",
+      "message": "Column at x≈1460: vertical gaps vary (gaps=['50', '180', '80'], mean=103, cv=0.54). Use uniform spacing.",
+      "detail": {
+        "col_x": 1460,
+        "gaps": [
+          50.0,
+          180.0,
+          80.0
+        ],
+        "mean": 103.3,
+        "cv": 0.54,
+        "element_ids": [
+          "pubdb",
+          "mediadb",
+          "answer",
+          "cite"
+        ]
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "offline",
+      "message": "Box 'offline' (1740×330) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "offline",
+        "size": "1740×330"
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "online",
+      "message": "Box 'online' (1740×400) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "online",
+        "size": "1740×400"
+      }
+    },
+    {
+      "rule": "orphan-empty-box",
+      "element_id": "experiments",
+      "message": "Box 'experiments' (1740×340) has no text label. Add content or reduce size.",
+      "detail": {
+        "box_id": "experiments",
+        "size": "1740×340"
+      }
+    }
+  ],
+  "vertex_count": 45,
+  "edge_count": 28,
+  "canvas": "1800x1380"
+}

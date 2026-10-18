@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "background_color",
+      "value": "画面主要背景为浅米白色（带有浮雕花纹的浅白色托盘）",
+      "region": "画面整体背景区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

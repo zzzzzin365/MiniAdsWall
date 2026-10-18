@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "clothing_color",
+      "value": "黑色",
+      "region": "手腕后方的衣物区域",
+      "state": "observed"
+    }
+  ],
+  "missing": [
+    "无"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "top_middle_tag_text",
+      "value": "营销分析",
+      "region": "顶部中间的红色圆角标签区域",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

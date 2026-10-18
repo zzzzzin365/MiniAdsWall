@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "key": "hand_visible",
+      "value": "A hand with long, light pink glossy nails holds a beaded bracelet",
+      "region": "left side of image",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_large_beads",
+      "value": "Multiple large translucent light blue round beads on the bracelet",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_small_beads",
+      "value": "Small translucent white round spacer beads between large blue beads",
+      "region": "central area",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_crystal_carving",
+      "value": "A large transparent carved crystal ornament on the bracelet",
+      "region": "right side of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_cross_charm",
+      "value": "A silver cross charm with small clear stones hangs from one blue bead",
+      "region": "lower right of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_crown_decor",
+      "value": "Silver crown-shaped decorative settings on several blue beads",
+      "region": "bracelet beads",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_blue_gem_bead",
+      "value": "A small bead with a blue gem set in silver on the bracelet",
+      "region": "upper right of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background_curtain",
+      "value": "Beige vertical curtain as background behind the hand",
+      "region": "upper background",
+      "state": "observed"
+    },
+    {
+      "key": "background_decor",
+      "value": "Blurred orange and light-colored decorative elements at bottom of image",
+      "region": "lower background",
+      "state": "observed"
+    },
+    {
+      "key": "nail_decal",
+      "value": "A small white decorative decal on one nail of the holding hand",
+      "region": "left nail of hand",
+      "state": "observed"
+    }
+  ]
+}

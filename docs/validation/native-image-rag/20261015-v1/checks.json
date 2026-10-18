@@ -1,0 +1,16 @@
+{
+  "python_tests": 23,
+  "python_failures": 0,
+  "node_mysql_tests": 2,
+  "node_skipped": 0,
+  "node_failures": 0,
+  "typescript_build": "passed",
+  "dependency_check": "compatible",
+  "source_hashes_match_real_model_run": true,
+  "installation_source_hashes": {
+    "requirements.txt": "a21ef9d1afd41c87c238a999b3998c652bcd2417f74d15fb9a4cef515afd3406",
+    "requirements-vision.txt": "0f14eb7c464271e34fbf93e29dc3dc14aa058b0a55fa8649df44b530c11b6ac1",
+    "Dockerfile": "a92fbd7d690f4912c7c2ea5703cff7c0a85825233f1771a3e6ae569728a0c0a8",
+    "hosting/Dockerfile": "e50a5233f8b4342314a4c80045a73185e1a1d15d2749f2746e046074029b67df"
+  }
+}

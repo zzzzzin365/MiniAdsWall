@@ -196,7 +196,7 @@ export async function turn(
     if(a.brand_id!==session.brand_id)throw fail('asset_scope_mismatch',403,'素材作用域不匹配');
     if(a.data.analysis_job_id){const [analysis]=await c.execute<RowDataPacket[]>('SELECT status,result FROM merchant_studio_jobs WHERE id=? AND brand_id=? AND environment=?',[a.data.analysis_job_id,session.brand_id,env]);
       if(analysis.length&&['queued','running'].includes(analysis[0].status))throw fail('analysis_pending',409,'素材正在理解，请等待后再生成创意');
-      if(analysis[0]?.status==='succeeded')assetUnderstandings.push({...decode(analysis[0].result),asset_role:ref.role});
+      if(analysis[0]?.status==='succeeded'){const {visual_embeddings,...understanding}=decode(analysis[0].result);assetUnderstandings.push({...understanding,asset_role:ref.role});}
     }
   }
 

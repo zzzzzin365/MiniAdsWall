@@ -18,6 +18,9 @@ from tests.test_studio import FIXTURE
 
 class ExternalKnowledgeTest(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
+        mode = patch.dict(os.environ, {'STUDIO_MEDIA_RAG_MODE': 'caption'})
+        mode.start()
+        self.addCleanup(mode.stop)
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.catalog = Path(self.tmp.name) / 'catalog.json'

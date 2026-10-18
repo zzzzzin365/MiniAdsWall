@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "key": "sales_info",
+      "value": "图中未显示任何与商品真实销量相关的可见信息",
+      "region": "全图",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供商品真实销量的相关信息，无法获取对应销量数据"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "call_key": "20261016-bracelets-seedmini-v1:puravida-65102caa4412-4:B:answer",
+  "model": "doubao-seed-2-0-mini-260428",
+  "request_id": "0eef4f7d101b04d5e698d979",
+  "input_sha256": "234964101e7a8ee57a039f8e583a825ce855ff63aa53730cb3c19a46c29f6f7b",
+  "status": "succeeded",
+  "money": null,
+  "elapsed_ms": 1212.1965000405908,
+  "http_status": 200,
+  "provider_id": "021792082241943f5a6be93c8798a26ceedbf38a44bb89c8d89a5",
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 697,
+    "total_tokens": 741,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  }
+}

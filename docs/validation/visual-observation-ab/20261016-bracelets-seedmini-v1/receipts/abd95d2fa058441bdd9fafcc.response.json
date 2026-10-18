@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "key": "central_object",
+      "value": "bracelet",
+      "region": "center",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,11 @@
+{
+  "status": "insufficient",
+  "hand_present": null,
+  "publisher": null,
+  "quote": null,
+  "answer": "现有观测与上下文未提供原图是否出现真人手或手腕的相关信息，也无对应来源记录署名的相关内容，无法确定对应信息。",
+  "image_citations": [
+    "image-010"
+  ],
+  "text_citations": []
+}

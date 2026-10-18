@@ -1,0 +1,29 @@
+{
+  "observations": [
+    {
+      "key": "numbered_suggestion_count",
+      "value": "3",
+      "region": "正文区域",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion_1_title",
+      "value": "品类破局的关键是反常识内卷",
+      "region": "正文第1条",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion_2_title",
+      "value": "IP 设计要绑定行为，而非单纯颜值",
+      "region": "正文第2条",
+      "state": "observed"
+    },
+    {
+      "key": "suggestion_3_title",
+      "value": "自传播＞硬投放，梗资产是中小预算品牌的最优解",
+      "region": "正文第3条",
+      "state": "observed"
+    }
+  ],
+  "missing": []
+}

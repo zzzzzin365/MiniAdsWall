@@ -1,0 +1,17 @@
+{
+  "observations": [
+    {
+      "key": "image_content_type",
+      "value": "该图为营销工作流流程示意图，以深色背景搭配白色虚线框、彩色标注文字、连线箭头呈现从文件组织、资源关联、任务执行到结果回写的完整流程逻辑，无任何实物产品的摄影画面。",
+      "region": "整张图",
+      "state": "observed"
+    },
+    {
+      "key": "physical_product_photography",
+      "value": "图中不存在任何实物产品的摄影内容。",
+      "region": "整张图",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": []
+}

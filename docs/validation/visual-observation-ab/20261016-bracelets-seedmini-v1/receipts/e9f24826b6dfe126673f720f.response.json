@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "product_image",
+      "value": "展示的是一款黑白条纹搭配金属饰珠的编织手链，带有绳结设计",
+      "region": "central",
+      "state": "observed"
+    },
+    {
+      "key": "sales_volume_info",
+      "value": "未在图中发现任何商品真实销量的相关信息",
+      "region": "all",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该推广图未提供对应商品的真实销量相关信息，无法获取该数据"
+  ]
+}

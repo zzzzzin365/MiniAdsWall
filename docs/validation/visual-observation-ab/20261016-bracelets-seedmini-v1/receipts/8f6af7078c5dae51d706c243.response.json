@@ -1,0 +1,58 @@
+{
+  "observations": [
+    {
+      "key": "bracelet_type",
+      "value": "stretch bracelet made of flat disc beads",
+      "region": "center of image",
+      "state": "observed"
+    },
+    {
+      "key": "main_bead_color",
+      "value": "white",
+      "region": "bracelet body",
+      "state": "observed"
+    },
+    {
+      "key": "gold_bead_count",
+      "value": "two distinct gold elements: a cylindrical gold bead cluster and a single round gold bead",
+      "region": "bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "display_plate_shape",
+      "value": "hexagonal shape",
+      "region": "background holding bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "display_plate_color",
+      "value": "white with subtle wood grain texture",
+      "region": "background holding bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "background_color",
+      "value": "plain light white surface",
+      "region": "outer background",
+      "state": "observed"
+    },
+    {
+      "key": "gold_cylindrical_bead",
+      "value": "multiple thin stacked gold disc beads forming a cylindrical segment",
+      "region": "upper part of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "gold_round_bead",
+      "value": "single small round gold bead at lower part of bracelet",
+      "region": "lower part of bracelet",
+      "state": "observed"
+    },
+    {
+      "key": "bracelet_layout",
+      "value": "circular shape resting flat on hexagonal plate",
+      "region": "center of image",
+      "state": "observed"
+    }
+  ]
+}

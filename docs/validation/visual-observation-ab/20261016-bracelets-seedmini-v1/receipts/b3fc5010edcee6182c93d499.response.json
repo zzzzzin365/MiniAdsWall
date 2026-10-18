@@ -1,0 +1,84 @@
+{
+  "observations": [
+    {
+      "key": "hand_holding_jewelry",
+      "value": "A person's left palm is holding a beaded bracelet",
+      "region": "foreground left"
+    },
+    {
+      "key": "bracelet_type",
+      "value": "Beaded bracelet made of small silver-colored beads",
+      "region": "center"
+    },
+    {
+      "key": "flower_charms_count",
+      "value": "Five flower-shaped charms attached to the bracelet",
+      "region": "center"
+    },
+    {
+      "key": "flower_color",
+      "value": "Each flower charm has blue petals and yellow centers",
+      "region": "center"
+    },
+    {
+      "key": "clasp_type",
+      "value": "Silver lobster claw clasp on the bracelet",
+      "region": "center upper"
+    },
+    {
+      "key": "extension_chain",
+      "value": "Silver extension chain on the right end of the bracelet",
+      "region": "right side"
+    },
+    {
+      "key": "background",
+      "value": "Dark gray car interior surface behind the hand",
+      "region": "background"
+    },
+    {
+      "key": "bracelet_shape",
+      "value": "Bracelet is curved into a loop shape in the palm",
+      "region": "center"
+    },
+    {
+      "key": "bead_details",
+      "value": "Small yellow beads spaced between flower charms on the bracelet",
+      "region": "center"
+    },
+    {
+      "key": "flower_structure",
+      "value": "Each flower charm is made of small blue and yellow beads arranged in five petals",
+      "region": "center"
+    },
+    {
+      "key": "hand_appearance",
+      "value": "Light-skinned hand holding the bracelet, fingers partially visible",
+      "region": "foreground left"
+    },
+    {
+      "key": "car_part",
+      "value": "Car door panel with a window control button partially visible at bottom right",
+      "region": "bottom right"
+    },
+    {
+      "key": "bracelet_color_scheme",
+      "value": "Bracelet uses silver, blue, and yellow color scheme",
+      "region": "center"
+    },
+    {
+      "key": "clasp_position",
+      "value": "Lobster clasp is positioned near the center of the bracelet's loop",
+      "region": "center upper"
+    },
+    {
+      "key": "extension_chain_length",
+      "value": "Extension chain has several small links for length adjustment",
+      "region": "right side"
+    },
+    {
+      "key": "flower_distribution",
+      "value": "Flower charms are placed at top left, top right, middle left, bottom left, bottom right positions on the bracelet",
+      "region": "center"
+    }
+  ]
+}

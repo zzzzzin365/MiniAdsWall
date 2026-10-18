@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "key": "ad_visible_promotional_info",
+      "value": "广告中可见的购车相关宣传内容为“0首付”、0购置税、0元终身质保、0元换电、超长续航，未标注任何具体车辆售价数字",
+      "region": "左侧蔚来广告卡片区域",
+      "state": "observed"
+    },
+    {
+      "key": "actual_transaction_price",
+      "value": "图中未展示这款汽车今日的实际成交价格相关信息",
+      "region": "全图所有区域",
+      "state": "explicitly_absent"
+    }
+  ],
+  "missing": [
+    "该款蔚来汽车今日的实际成交人民币价格"
+  ]
+}

@@ -132,7 +132,6 @@ export default function AdManagement(props: AdManagementProps) {
                     {creativeOpened && <Suspense fallback={<div className="ad-list-message" role="status">正在加载创意工具…</div>}><CreativeEditor /></Suspense>}
                 </div>}
                 <div hidden={view !== 'list'}>
-                <p className="ad-detail-note">个人手作商户 · {period} · 全店日预算 ¥100，7 天上限 ¥700。出价为单次点击费用上限；未投放广告尚无效果记录。</p>
                 {error ? <div className="ad-list-message" role="alert">{error}<button type="button" className="btn btn-default" onClick={onRetry}>重试</button></div>
                     : !ads.length && loading ? <div className="ad-list-message" role="status">{query ? '正在搜索广告…' : '正在加载广告…'}</div>
                     : !rows.length ? <div className="management-empty">
