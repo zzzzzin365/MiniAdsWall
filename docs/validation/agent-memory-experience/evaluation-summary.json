@@ -1,0 +1,47 @@
+{
+  "dataset_sha256": "694c3cc0146840853dd354b41782d248f49d17520463b50ebf33f8b974f49720",
+  "model": "deepseek-v4-1-flash-260910",
+  "contract_cases": 100,
+  "contract_passed": 100,
+  "groups": {
+    "A": {
+      "total": 100,
+      "passed": 100,
+      "errors": 0,
+      "grounded_objective_count": 9,
+      "procedure_answer_count": 0,
+      "p50_model_ms": 2203.45,
+      "p95_model_ms": 3127.99,
+      "failed_ids": []
+    },
+    "B": {
+      "total": 100,
+      "passed": 100,
+      "errors": 0,
+      "grounded_objective_count": 66,
+      "procedure_answer_count": 0,
+      "p50_model_ms": 2126.27,
+      "p95_model_ms": 3034.49,
+      "failed_ids": []
+    },
+    "C": {
+      "total": 100,
+      "passed": 99,
+      "errors": 0,
+      "grounded_objective_count": 65,
+      "procedure_answer_count": 8,
+      "p50_model_ms": 2103.91,
+      "p95_model_ms": 3788.82,
+      "failed_ids": [
+        "memory-eval-094"
+      ]
+    }
+  },
+  "production_acceptance": false,
+  "limits": [
+    "100 synthetic structured cases; not merchant outcomes or double human review",
+    "C misses one objective and does not demonstrate superiority over B",
+    "initial evaluation scorer TypeError is preserved in initial artifact",
+    "usage attributes were recorded as null by the original evaluator; no monetary or token savings claim"
+  ]
+}

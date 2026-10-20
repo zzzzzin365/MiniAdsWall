@@ -37,13 +37,15 @@ router.get('/identity', async ctx => {
 router.all('(.*)', async ctx => {
     const path = ctx.path.slice('/api/agent'.length);
     const routes: Record<string, RegExp[]> = {
-        GET: [/^\/sessions$/, /^\/sessions\/\d+\/(history|messages|tool-calls)$/, /^\/runs\/\d+$/, /^\/runs\/\d+\/events$/, /^\/runs\/\d+\/objects\/[a-f0-9]{64}$/],
-        POST: [/^\/sessions$/, /^\/sessions\/\d+\/runs$/, /^\/runs\/\d+\/(cancel|resume)$/, /^\/approvals\/\d+\/decision$/]
+        GET: [/^\/sessions\/\d+\/memory\/(candidates|jobs|procedures)$/, /^\/sessions\/\d+\/memory\/revisions\/(preference|summary)\/\d+$/, /^\/sessions\/\d+\/memory\/preferences$/, /^\/sessions$/, /^\/sessions\/\d+\/(history|messages|tool-calls)$/, /^\/runs\/\d+$/, /^\/runs\/\d+\/events$/, /^\/runs\/\d+\/objects\/[a-f0-9]{64}$/],
+        PUT: [/^\/sessions\/\d+\/memory\/preferences$/],
+        DELETE: [/^\/sessions\/\d+\/memory\/sources\/\d+$/, /^\/sessions\/\d+\/memory$/],
+        POST: [/^\/sessions\/\d+\/memory\/procedures$/, /^\/sessions\/\d+\/memory\/(procedures|candidates)\/\d+\/decision$/, /^\/sessions\/\d+\/memory\/jobs\/\d+\/replay$/, /^\/sessions$/, /^\/sessions\/\d+\/(runs|chat)$/, /^\/runs\/\d+\/(cancel|resume)$/, /^\/approvals\/\d+\/decision$/]
     };
     if (!routes[ctx.method]?.some(pattern => pattern.test(path))) ctx.throw(404);
     let session = await login(ctx.state.principal);
     let body = ctx.request.body;
-    if (/^\/sessions\/\d+\/runs$/.test(path) && ctx.method === 'POST') {
+    if (/^\/sessions\/\d+\/(runs|chat)$/.test(path) && ctx.method === 'POST') {
         if (!body || typeof body !== 'object' || Array.isArray(body)) ctx.throw(400, 'invalid_run_input');
         const range = body.performance_range ?? '7';
         if (range !== '7' && range !== '3') ctx.throw(400, 'invalid_performance_range');
@@ -70,7 +72,7 @@ router.all('(.*)', async ctx => {
     const controller = new AbortController();
     const stop = () => controller.abort();
     ctx.res.once('close', stop);
-    const timer = setTimeout(stop, stream ? 15 * 60000 : 15000);
+    const timer = setTimeout(stop, stream ? 15 * 60000 : path.endsWith('/chat') ? 27000 : 15000);
     const send = () => fetch(`${base()}${path}${ctx.querystring ? '?' + ctx.querystring : ''}`, {
         method: ctx.method, signal: controller.signal,
         headers: { ...internalHeaders(), 'Content-Type': 'application/json', 'X-Agent-Session': session.token,

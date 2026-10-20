@@ -3,6 +3,10 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { hostedIdentity, hostedSessions, hostedNewSession, hostedHistory, hostedCreateRun,
     hostedRun, hostedEvents, hostedCancel, hostedResume, hostedApprove, hostedRecordText, HostedSession, HostedRun } from '../api';
 import { Ad, AssistantMessage } from '../types';
+import { hostedMemoryPreferences, hostedMemorySet, hostedMemoryClear, hostedMemoryCandidates,
+    hostedMemoryDecide, hostedMemoryJobs, hostedMemoryReplay, hostedProcedures, hostedProcedureCreate,
+    hostedProcedureDecide, MemoryPreference, MemoryCandidate, MemoryJob, ReviewedProcedure } from '../api';
+
 
 const QUICK_PROMPTS = ['分析当前广告表现，给出三个优化动作', '哪些广告应该提高出价，哪些应该先改素材？', '帮我生成下一轮 A/B 测试计划'];
 const TERMINAL = new Set(['succeeded', 'failed', 'cancelled', 'timed_out', 'interrupted']);
@@ -20,6 +24,100 @@ function AssistantText({ text }: { text: string }) {
         const label = value.match(/^(建议|怎么做|为什么|看什么|统计范围|参考依据)[：:](.*)/);
         return <p key={i} className={label?.[1] === '建议' ? 'assistant-answer-summary' : undefined}>{label ? <><strong>{label[1]}：</strong>{inline(label[2])}</> : inline(value)}</p>;
     })}</div>;
+}
+
+function MemoryControls({ sid, disabled }: { sid: string; disabled: boolean }) {
+    const [expanded, setExpanded] = useState(false);
+    const [section, setSection] = useState<'preferences' | 'procedures' | 'status'>('preferences');
+    const [preferences, setPreferences] = useState<MemoryPreference[]>([]);
+    const [candidates, setCandidates] = useState<MemoryCandidate[]>([]);
+    const [jobs, setJobs] = useState<MemoryJob[]>([]);
+    const [procedures, setProcedures] = useState<ReviewedProcedure[]>([]);
+    const [field, setField] = useState('优化目标');
+    const [value, setValue] = useState('');
+    const [notice, setNotice] = useState('');
+    const [saving, setSaving] = useState(false);
+    const [revision, setRevision] = useState(0);
+    const [draft, setDraft] = useState({ title: '', objective: '', conditions: '', steps: '', limitations: '', source_title: '' });
+    useEffect(() => {
+        if (!expanded) return;
+        let cancelled = false;
+        setNotice('正在读取…');
+        Promise.all([hostedMemoryPreferences(sid), hostedMemoryCandidates(sid), hostedMemoryJobs(sid), hostedProcedures(sid)])
+            .then(([p, c, j, r]) => { if (!cancelled) { setPreferences(p); setCandidates(c); setJobs(j); setProcedures(r); setNotice(''); } })
+            .catch(() => { if (!cancelled) setNotice('记忆暂时不可用，请稍后刷新'); });
+        return () => { cancelled = true; };
+    }, [sid, expanded, revision]);
+    async function change(action: () => Promise<unknown>) {
+        setSaving(true); setNotice('');
+        try { await action(); setRevision(n => n + 1); }
+        catch { setNotice('未完成：请检查权限，或刷新后重试；内容可能已被更新。'); }
+        finally { setSaving(false); }
+    }
+    const locked = disabled || saving;
+    const current = (name: string) => preferences.find(p => p.field === name);
+    const activePreferences = preferences.filter(p => p.status === 'active');
+    const pendingJobs = jobs.filter(j => j.status === 'dead' || j.status === 'retry');
+    return <details className="assistant-memory" open={expanded} onToggle={event => setExpanded(event.currentTarget.open)}>
+        <summary className="assistant-memory-heading">
+            <span className="assistant-memory-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M8 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2M8 3h8v4H8zM8 12h8M8 16h5" /></svg></span>
+            <span className="assistant-memory-heading-text"><strong>偏好与操作经验</strong><span>让建议更贴合你的投放习惯</span></span>
+            <span className="assistant-memory-toggle">{expanded ? '收起' : '管理'}<svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="m5 3 5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+        </summary>
+        <div className="assistant-memory-body">
+            <div className="assistant-memory-toolbar">
+                <div className="assistant-memory-nav" aria-label="记忆设置分类">
+                    {([{ id: 'preferences', label: '长期偏好' }, { id: 'procedures', label: '操作经验' }, { id: 'status', label: '处理状态' }] as const).map(item =>
+                        <button key={item.id} type="button" aria-pressed={section === item.id} onClick={() => setSection(item.id)}>{item.label}{item.id === 'status' && pendingJobs.length > 0 && <span className="assistant-memory-count">{pendingJobs.length}</span>}</button>)}
+                </div>
+                <button className="assistant-memory-text-button" type="button" disabled={locked} onClick={() => setRevision(n => n + 1)}>刷新</button>
+            </div>
+            {notice && <p className="assistant-memory-notice" role="status">{notice}</p>}
+            {section === 'preferences' && <>
+                <p className="assistant-memory-hint">本轮要求优先，已保存的偏好仅用于辅助建议。</p>
+                <div className="assistant-memory-fields">
+                    <label>偏好类型<select value={field} disabled={locked} onChange={event => setField(event.target.value)}>
+                        {['优化目标','关注指标','素材偏好','风险偏好','商品类目','广告活动','目标受众','素材类型'].map(name => <option key={name}>{name}</option>)}
+                    </select></label>
+                    <label>偏好内容<input placeholder="例如：优先使用真人口播素材" value={value} maxLength={120} disabled={locked} onChange={event => setValue(event.target.value)} /></label>
+                    <button className="assistant-memory-primary" type="button" disabled={locked || !value.trim()} onClick={() => void change(() => hostedMemorySet(sid, field, [value.trim()], current(field)?.version || 0))}>{saving ? '保存中…' : '保存偏好'}</button>
+                </div>
+                <div className="assistant-memory-list">
+                    {activePreferences.length === 0 && !notice && <p className="assistant-memory-empty">还没有长期偏好，添加后可用于后续建议。</p>}
+                    {activePreferences.map(p => <div className="assistant-memory-item" key={p.id}><div><span className="assistant-memory-label">{p.field}</span><p>{JSON.parse(p.value_json).join('、')}</p></div>
+                        <button className="assistant-memory-text-button" type="button" disabled={locked} onClick={() => void change(() => hostedMemorySet(sid, p.field, [], p.version))}>撤回</button></div>)}
+                    {candidates.map(c => <div className="assistant-memory-candidate" key={c.id}><span className="assistant-memory-label">待确认 · {c.field}</span><p>{JSON.parse(c.value_json).join('、')}</p><div className="assistant-memory-actions">
+                        <button type="button" disabled={locked} onClick={() => void change(() => hostedMemoryDecide(sid, c.id, true, current(c.field)?.version || 0))}>采用新偏好</button>
+                        <button className="assistant-memory-text-button" type="button" disabled={locked} onClick={() => void change(() => hostedMemoryDecide(sid, c.id, false, current(c.field)?.version || 0))}>保留原偏好</button></div></div>)}
+                </div>
+                <div className="assistant-memory-footer"><span>记忆不会授权修改广告</span><button className="assistant-memory-danger" type="button" disabled={locked} onClick={() => void change(() => hostedMemoryClear(sid))}>清除摘要并停止积累</button></div>
+            </>}
+            {section === 'procedures' && <>
+                <p className="assistant-memory-hint">保存通用做法，审核后供建议参考；不代表已经执行或效果有效。</p>
+                <details className="assistant-memory-create"><summary>＋ 新增操作经验</summary><div className="assistant-memory-procedure-fields">
+                    {(['title','objective','conditions','steps','limitations','source_title'] as const).map(key => <label key={key}>
+                        {{title:'标题',objective:'适用目标',conditions:'必须满足的条件',steps:'操作步骤',limitations:'限制',source_title:'来源标题'}[key]}
+                        <textarea rows={key === 'title' || key === 'objective' || key === 'source_title' ? 1 : 2} placeholder={key === 'conditions' || key === 'steps' || key === 'limitations' ? '每行填写一项' : undefined} value={draft[key]} maxLength={key === 'title' || key === 'objective' || key === 'source_title' ? 120 : 1200} disabled={locked}
+                            onChange={event => setDraft(previous => ({ ...previous, [key]: event.target.value }))} />
+                    </label>)}
+                </div><button className="assistant-memory-primary" type="button" disabled={locked || Object.values(draft).some(v => !v.trim())} onClick={() => void change(() => hostedProcedureCreate(sid, {
+                    ...draft, conditions: draft.conditions.split('\n').filter(Boolean), steps: draft.steps.split('\n').filter(Boolean), limitations: draft.limitations.split('\n').filter(Boolean)
+                }))}>保存待审核流程</button></details>
+                {procedures.length === 0 && !notice && <p className="assistant-memory-empty">还没有操作经验，可添加常用的投放方法。</p>}
+                {procedures.map(p => <div className="assistant-memory-procedure" key={p.id}><div className="assistant-memory-item-heading"><strong>{p.title}</strong><span className={`assistant-memory-badge is-${p.status}`}>{{draft:'待审核',reviewed:'审核通过',withdrawn:'已撤回'}[p.status] || p.status}</span></div>
+                    <p className="assistant-memory-label">来源：{p.source_title}</p>
+                    <p>适用：{JSON.parse(p.conditions_json).join('；')}</p><p>步骤：{JSON.parse(p.steps_json).join('；')}</p><p>限制：{JSON.parse(p.limitations_json).join('；')}</p>
+                    <div className="assistant-memory-actions">{p.status === 'draft' && <button type="button" disabled={locked} onClick={() => void change(() => hostedProcedureDecide(sid, p.id, 'review', p.version))}>确认审核通过</button>}
+                    {p.status !== 'withdrawn' && <button className="assistant-memory-text-button" type="button" disabled={locked} onClick={() => void change(() => hostedProcedureDecide(sid, p.id, 'withdraw', p.version))}>撤回流程</button>}</div></div>)}
+            </>}
+            {section === 'status' && <>
+                <p className="assistant-memory-hint">查看需要重新处理的记忆提取任务。</p>
+                {pendingJobs.length === 0 && !notice && <p className="assistant-memory-empty">暂无需要重试的任务</p>}
+                {pendingJobs.map(j => <div className="assistant-memory-item" key={j.id}><div><strong>记忆提取待重试</strong><p className="assistant-memory-label">已尝试 {j.attempts} 次</p></div>
+                    <button type="button" disabled={locked} onClick={() => void change(() => hostedMemoryReplay(sid, j.id))}>重新处理</button></div>)}
+            </>}
+        </div>
+    </details>;
 }
 
 function AIAssistantPanel({ ads }: { ads: Ad[] }) {
@@ -262,6 +360,7 @@ function AIAssistantPanel({ ads }: { ads: Ad[] }) {
                     }}><option value="">新会话</option>{sessions.map(item => <option value={item.id} key={item.id}>{item.title}</option>)}</select>
                     <button type="button" disabled={busy || !!approval} onClick={() => { setSession(undefined); setMessages([]); setRun(undefined); setHistoryCursor(undefined); setStage(''); }}>新建会话</button>
                 </div>}
+                {identity && session && <MemoryControls key={session.id} sid={session.id} disabled={busy} />}
                 <div className="assistant-prompts">{QUICK_PROMPTS.map(prompt => <button key={prompt} type="button" onClick={() => void sendMessage(prompt)} disabled={busy || !identity || !!approval}>{prompt}</button>)}</div>
                 <div className="assistant-messages" aria-live="polite">
                     {historyCursor && session && <button type="button" onClick={() => void loadHistory(session.id, historyCursor)}>加载更早记录</button>}

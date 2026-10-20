@@ -8,6 +8,7 @@ export async function agentRequest(path: string, body?: unknown, requestId: stri
         headers: {
             'Content-Type': 'application/json',
             'X-Request-ID': requestId,
+            ...(path === '/chat' ? { 'Idempotency-Key': requestId } : {}),
             'Authorization': `Bearer ${process.env.AGENT_SERVICE_TOKEN || ''}`
         },
         body: body === undefined ? undefined : JSON.stringify(body),

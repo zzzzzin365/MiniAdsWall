@@ -3,6 +3,8 @@ import { agentRequest } from './agentHttp';
 import { Ad, AssistantChatInput, AssistantChatOutput } from '../types';
 
 interface AdsAgentChatResponse {
+    run_id?: string;
+    status?: string;
     conv_id: string;
     response: string;
     intent: string;
@@ -119,6 +121,8 @@ async function chat(input: AssistantChatInput, requestId?: string): Promise<Assi
         }, requestId);
         return {
             convId: data.conv_id,
+            runId: data.run_id,
+            runStatus: data.status,
             response: data.response,
             intent: data.intent,
             agentType: data.agent_type,

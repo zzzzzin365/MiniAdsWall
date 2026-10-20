@@ -1,0 +1,9 @@
+{
+  "database": "private MySQL, skip-networking, disposable databases",
+  "tests": 26,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 11.698,
+  "scope": "repository lifecycle, extraction mock; not model semantic quality or load capacity"
+}

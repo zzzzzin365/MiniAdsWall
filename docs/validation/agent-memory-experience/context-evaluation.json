@@ -1,0 +1,1311 @@
+{
+  "dataset_sha256": "694c3cc0146840853dd354b41782d248f49d17520463b50ebf33f8b974f49720",
+  "dataset_size": 100,
+  "data_origin": "100 synthetic cases with explicit gold context rules; no merchant data, not historical measured outcomes",
+  "contract_passed": 100,
+  "cold_sqlite_read_p50_ms": 1.4915,
+  "cold_sqlite_read_p95_ms": 2.014,
+  "scope": "synthetic context contracts and bytes, not model advice correctness or provider token cost",
+  "cases": [
+    {
+      "id": "memory-eval-001",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 3.624,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-002",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.457,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-003",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.714,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-004",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.74,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-005",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.434,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-006",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.416,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-007",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.732,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-008",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.932,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-009",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.483,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-010",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.454,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-011",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.577,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-012",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.45,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-013",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.416,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-014",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.44,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-015",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.593,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-016",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.423,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-017",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.402,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-018",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.397,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-019",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.586,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-020",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.421,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-021",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.426,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-022",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.445,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-023",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.776,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-024",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.47,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-025",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.429,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-026",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.417,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-027",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.593,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-028",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.396,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-029",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.393,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-030",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.456,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-031",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.563,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-032",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.569,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-033",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.418,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-034",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.468,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-035",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.468,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-036",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.455,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-037",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.382,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-038",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.374,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-039",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.321,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-040",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.311,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-041",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.375,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-042",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.336,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-043",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.412,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-044",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.394,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-045",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.514,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-046",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.44,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-047",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.528,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-048",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.519,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-049",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.629,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-050",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.568,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-051",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.494,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-052",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.413,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-053",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.404,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-054",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.602,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-055",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.551,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-056",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.575,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-057",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.444,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-058",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.762,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-059",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.575,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-060",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.558,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-061",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.404,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-062",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.571,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-063",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.44,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-064",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.391,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-065",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.468,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-066",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.623,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-067",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.565,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 538
+      }
+    },
+    {
+      "id": "memory-eval-068",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.424,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-069",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.668,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-070",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.397,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-071",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.478,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-072",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.418,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-073",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.361,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-074",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.512,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-075",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.358,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-076",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.503,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-077",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.425,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-078",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.411,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-079",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.685,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 538
+      }
+    },
+    {
+      "id": "memory-eval-080",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.474,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-081",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.494,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-082",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 2.005,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-083",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.649,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-084",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.662,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-085",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.574,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-086",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 2.267,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-087",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.527,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-088",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.54,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-089",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.665,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-090",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 2.5,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-091",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.609,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-092",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.489,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-093",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.588,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-094",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.675,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-095",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.539,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-096",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.639,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-097",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.561,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-098",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 2.305,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-099",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 2.285,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-100",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 2.014,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    }
+  ]
+}

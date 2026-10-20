@@ -252,7 +252,7 @@ class Repository:
     def get_run(self,user,rid):
         with self.engine.connect() as c: return self._run(c,user,rid)
 
-    def _finish(self,c,r,status,error=None,text='',trace_ref=None):
+    def _finish(self,c,r,status,error=None,text='',trace_ref=None,memory_eligible=False):
         if r['status'] in TERMINAL: return r
         now=time.time()
         c.execute(update(s.runs).where(s.runs.c.id==r['id']).values(status=status,error_code=error,finished_at=now,lease_until=None,trace_ref=trace_ref))
@@ -264,6 +264,11 @@ class Repository:
             self._message(c,r,'assistant',text,status!='succeeded')
             if status=='succeeded':
                 c.execute(insert(s.memories).values(id=uid(),user_id=r['user_id'],workspace_id=r['workspace_id'],session_id=r['session_id'],kind='last_reply',summary=preview(text),source_record_id=r['id'],version=1,created_at=now))
+        from memory.context_service import enabled, allowed_subject
+        if status=='succeeded' and text and memory_eligible and enabled('AGENT_MEMORY_WRITE_ENABLED') and allowed_subject(self._row(c,s.users,r['user_id'])['auth_subject']):
+            from memory.durable_schema import jobs
+            c.execute(insert(jobs).values(id=uid(),run_id=r['id'],status='pending',attempts=0,
+                lease_token=0,next_attempt_at=now,created_at=now))
         self._audit(c,r,'run.finished',status)
         self._event(c,r,'run.finished',{'run_id':r['id'],'status':status,'error_code':error})
         return self._row(c,s.runs,r['id'])
@@ -274,7 +279,7 @@ class Repository:
             r=self.guard(c,rid,token,True)
             if r['status']=='stopping': status=r['stop_reason'] or 'cancelled'
             elif r['deadline_at']<=time.time(): status='timed_out'
-            return self._finish(c,r,status,error,text,trace_ref)
+            return self._finish(c,r,status,error,text,trace_ref,any(span.get('stage')=='memory_eligible' for span in (trace or {}).get('spans',[])))
 
     def stop(self,rid,token,reason):
         with self.tx() as c:
@@ -408,11 +413,22 @@ class Repository:
                     if ids:
                         mapping.update({r['id']:dict(r) for r in c.execute(select(t).where(t.c.session_id==int(sid),t.c.id.in_(ids))).mappings()})
                 rows=[dict(mapping[r['record_id']],record_type=r['record_type']) for r in rows]
+            from memory.extended_schema import suppressed
+            cutoff=c.execute(select(func.max(suppressed.c.created_at)).where(suppressed.c.user_id==int(user),suppressed.c.session_id==int(sid))).scalar() or 0
+            for row in rows:
+                if row.get('created_at',0)<=cutoff:
+                    if row.get('role')=='assistant':
+                        row.update(content_preview='历史回复已因源消息删除而停用',content_ref=None,content_bytes=0,is_partial=True)
+                    elif 'stdout_preview' in row:
+                        row.update(args_preview='',stdout_preview='',stderr_preview='',args_ref=None,output_ref=None)
             return {'items':rows,'next_cursor':self.cursor(scope,rows[-1]['seq']) if more else None}
 
     def read_events(self,user,rid,after,limit=32):
         with self.engine.connect() as c:
             r=self._run(c,user,rid)
+            from memory.extended_schema import suppressed
+            if c.execute(select(suppressed.c.message_id).where(suppressed.c.user_id==int(user),suppressed.c.session_id==r['session_id'],suppressed.c.created_at>=r['created_at'])).first():
+                raise Conflict('memory_source_erased',410)
             first=c.execute(select(func.min(s.events.c.event_seq)).where(s.events.c.run_id==int(rid))).scalar()
             if r['event_seq'] and (first is None or after<first-1): raise Conflict('events_expired',410)
             if after>r['event_seq']: raise Conflict('invalid_event_cursor',400)

@@ -33,14 +33,14 @@ class HostingMigrationTests(unittest.TestCase):
             self.admin.dispose()
         self.tmp.cleanup()
     def test_status_is_read_only_and_upgrade_is_repeatable(self):
-        self.assertEqual([v['state'] for v in status(self.engine)], ['pending', 'pending'])
+        self.assertEqual([v['state'] for v in status(self.engine)], ['pending'] * len(definitions()))
         self.assertEqual(inspect(self.engine).get_table_names(), [])
         first = upgrade(self.engine)
         second = upgrade(self.engine)
-        self.assertEqual([v['state'] for v in second['migrations']], ['applied', 'applied'])
+        self.assertEqual([v['state'] for v in second['migrations']], ['applied'] * len(definitions()))
         with self.engine.connect() as c:
             rows = c.execute(select(attempts)).all()
-            self.assertEqual(len(rows), 2)
+            self.assertEqual(len(rows), len(definitions()))
             self.assertEqual({v.batch_id for v in rows}, {first['batch_id']})
             self.assertEqual(c.execute(select(s.versions.c.version)).scalar_one(), 1)
     def test_parallel_migration_commands_serialize(self):
@@ -48,7 +48,7 @@ class HostingMigrationTests(unittest.TestCase):
         with ThreadPoolExecutor(max_workers=2) as pool:
             futures=[pool.submit(upgrade,self.engine) for _ in range(2)]
             for future in futures: self.assertEqual(future.result()['migrations'][1]['state'],'applied')
-        with self.engine.connect() as c: self.assertEqual(len(c.execute(select(attempts)).all()),2)
+        with self.engine.connect() as c: self.assertEqual(len(c.execute(select(attempts)).all()),len(definitions()))
     def test_migration_lock_timeout_does_not_write_schema(self):
         if self.mysql:
             import hashlib

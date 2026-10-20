@@ -1,0 +1,5528 @@
+{
+  "dataset_sha256": "694c3cc0146840853dd354b41782d248f49d17520463b50ebf33f8b974f49720",
+  "dataset_size": 100,
+  "data_origin": "100 synthetic cases with explicit gold context rules; no merchant data, not historical measured outcomes",
+  "contract_passed": 100,
+  "cold_sqlite_read_p50_ms": 1.4895,
+  "cold_sqlite_read_p95_ms": 1.876,
+  "scope": "synthetic context contracts and bytes, not model advice correctness or provider token cost",
+  "cases": [
+    {
+      "id": "memory-eval-001",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 4.079,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-002",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.785,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-003",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.49,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-004",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.424,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-005",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.387,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-006",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.559,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-007",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.737,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-008",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.489,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-009",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.751,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-010",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.57,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-011",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.693,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-012",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.496,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-013",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.443,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-014",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.437,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-015",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.719,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-016",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.48,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-017",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.427,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-018",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.402,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-019",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.98,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-020",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.424,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-021",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.602,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-022",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 2.016,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-023",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.639,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-024",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.674,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-025",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.471,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-026",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.492,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-027",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.435,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-028",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.388,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-029",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.414,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-030",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.459,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-031",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.616,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-032",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.442,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-033",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.442,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-034",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.475,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-035",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.477,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-036",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.56,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-037",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.41,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-038",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.377,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-039",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.469,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-040",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.842,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-041",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.424,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-042",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.367,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-043",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.477,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-044",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.557,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-045",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.659,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-046",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.42,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-047",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.512,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-048",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.911,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-049",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.546,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-050",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.541,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-051",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.407,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-052",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.374,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-053",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.49,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-054",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.477,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-055",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.447,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-056",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.779,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-057",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.491,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-058",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.434,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-059",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.454,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-060",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.504,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-061",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 2.886,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-062",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.535,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-063",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.554,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-064",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.623,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-065",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.493,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-066",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.4,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-067",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.742,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 538
+      }
+    },
+    {
+      "id": "memory-eval-068",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.491,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-069",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.524,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-070",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.448,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-071",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.446,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-072",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.443,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-073",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.41,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-074",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.612,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-075",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.398,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-076",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.367,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-077",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.557,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-078",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.702,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-079",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.535,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 538
+      }
+    },
+    {
+      "id": "memory-eval-080",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.46,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-081",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.803,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-082",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.592,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-083",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.527,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-084",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.468,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-085",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.546,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-086",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.876,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-087",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.428,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-088",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.449,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-089",
+      "category": "foreign_scope",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.756,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-090",
+      "category": "temporary",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.461,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-091",
+      "category": "reviewed",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": true,
+      "latency_ms": 1.533,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 544
+      }
+    },
+    {
+      "id": "memory-eval-092",
+      "category": "withdrawn",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.416,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-093",
+      "category": "expired",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.455,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-094",
+      "category": "condition_mismatch",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.453,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-095",
+      "category": "long_history",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.447,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 299
+      }
+    },
+    {
+      "id": "memory-eval-096",
+      "category": "injection",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.482,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-097",
+      "category": "preference",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.365,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-098",
+      "category": "override",
+      "passed": true,
+      "target_present": true,
+      "reviewed_case_present": false,
+      "latency_ms": 1.438,
+      "input_bytes": {
+        "A": 0,
+        "B": 273,
+        "C": 234
+      }
+    },
+    {
+      "id": "memory-eval-099",
+      "category": "revoked",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.514,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    },
+    {
+      "id": "memory-eval-100",
+      "category": "missing",
+      "passed": true,
+      "target_present": false,
+      "reviewed_case_present": false,
+      "latency_ms": 1.524,
+      "input_bytes": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      }
+    }
+  ],
+  "live_structured_comparison": {
+    "model": "deepseek-v4-1-flash-260910",
+    "cases_per_group": 100,
+    "results": [
+      {
+        "id": "memory-eval-001",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2862.93,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-001",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2233.99,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-001",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2108.44,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-002",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1709.51,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-002",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1597.21,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-002",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2103.46,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-003",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-003",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2744.79,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-003",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2069.46,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-004",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-004",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1672.09,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-004",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1842.39,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-005",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-005",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2107.7,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-005",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2002.32,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-006",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-006",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2015.72,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-006",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2715.22,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-007",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1708.63,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-007",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1674.61,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-007",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "咖啡店操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 3865.39,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-008",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 4294.58,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-008",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2178.41,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-008",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2643.1,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-009",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2909.88,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-009",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2180.08,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-009",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2341.21,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-010",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2440.16,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-010",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1938.24,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-010",
+        "group": "C",
+        "passed": false,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1838.51,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-011",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1683.67,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-011",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2193.89,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-011",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2096.28,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-012",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2466.32,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-012",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1959.94,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-012",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1933.97,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-013",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2103.95,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-013",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2225.3,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-013",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2247.9,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-014",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2903.32,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-014",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1870.65,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-014",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1850.62,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-015",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-015",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2901.19,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-015",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2251.97,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-016",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-016",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2004.45,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-016",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2239.37,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-017",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-017",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2126.58,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-017",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2711.49,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-018",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-018",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1694.97,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-018",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1946.84,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-019",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1897.2,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-019",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1808.23,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-019",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "烘焙店操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 1930.67,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-020",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1905.34,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-020",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2402.65,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-020",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1882.73,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-021",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1925.16,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-021",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2671.26,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-021",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1909.66,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-022",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2439.15,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-022",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2369.97,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-022",
+        "group": "C",
+        "passed": false,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1783.6,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-023",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2874.57,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-023",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1953.28,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-023",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2088.95,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-024",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2220.06,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-024",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2414.67,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-024",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 4659.14,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-025",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2448.82,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-025",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2838.87,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-025",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2317.57,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-026",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2290.86,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-026",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2161.67,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-026",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1705.75,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-027",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-027",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2696.03,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-027",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2225.51,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-028",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-028",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1857.92,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-028",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1803.84,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-029",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-029",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2395.41,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-029",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1742.76,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-030",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-030",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1911.95,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-030",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2828.27,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-031",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2592.19,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-031",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2169.56,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-031",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "鲜花店操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 2501.1,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-032",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2587.91,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-032",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1766.06,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-032",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2101.43,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-033",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1898.59,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-033",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2398.49,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-033",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1982.23,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-034",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2201.66,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-034",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2463.41,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-034",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1707.5,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-035",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3032.47,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-035",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2533.91,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-035",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2568.27,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-036",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2122.72,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-036",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1917.6,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-036",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1903.38,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-037",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1907.05,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-037",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2871.59,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-037",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2973.98,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-038",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2018.51,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-038",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3034.49,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-038",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2957.24,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-039",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-039",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1873.09,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-039",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1775.07,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-040",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-040",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2965.81,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-040",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1791.31,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-041",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-041",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2606.51,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-041",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2173.35,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-042",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-042",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 8484.7,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-042",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1990.78,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-043",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1767.88,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-043",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1841.91,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-043",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "健身房操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 1964.81,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-044",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1968.46,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-044",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2374.9,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-044",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2485.9,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-045",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1958.66,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-045",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2882.82,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-045",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1979.33,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-046",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2229.86,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-046",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2125.97,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-046",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1882.94,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-047",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2192.83,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-047",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1722.26,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-047",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3386.48,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-048",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3277.48,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-048",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2098.59,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-048",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1912.05,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-049",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1965.46,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-049",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1867.3,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-049",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1946.94,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-050",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2202.81,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-050",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1830.51,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-050",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2096.58,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-051",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-051",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3042.88,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-051",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2252.93,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-052",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-052",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2372.09,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-052",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1824.29,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-053",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-053",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1783.54,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-053",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2098.09,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-054",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-054",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2009.86,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-054",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2792.85,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-055",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1828.07,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-055",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3453.43,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-055",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "宠物店操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 2192.67,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-056",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2500.21,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-056",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2368.87,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-056",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2817.68,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-057",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3140.28,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-057",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1738.59,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-057",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1795.39,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-058",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1812.29,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-058",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2423.52,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-058",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2210.55,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-059",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2068.8,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-059",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3896.7,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-059",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1707.27,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-060",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2057.83,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-060",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1848.41,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-060",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1814.94,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-061",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2964.08,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-061",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2279.35,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-061",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2811.78,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-062",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2702.07,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-062",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1655.75,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-062",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1850.61,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-063",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-063",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1928.25,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-063",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1797.58,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-064",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-064",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2354.82,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-064",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3428.84,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-065",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-065",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1730.11,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-065",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1928.37,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-066",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-066",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2099.64,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-066",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1717.21,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-067",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3127.99,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-067",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2049.99,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-067",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "书店操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 7349.91,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-068",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1755.06,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-068",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2871.58,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-068",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2414.47,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-069",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2051.24,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-069",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2211.63,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-069",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1905.39,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-070",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2456.52,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-070",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1964.68,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-070",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2012.16,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-071",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1863.32,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-071",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1773.31,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-071",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2523.49,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-072",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1757.65,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-072",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1952.01,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-072",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2436.29,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-073",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2587.42,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-073",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3000.04,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-073",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2214.33,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-074",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2243.8,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-074",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2480.82,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-074",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2619.84,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-075",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-075",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1860.69,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-075",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 16063.35,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-076",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-076",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2638.25,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-076",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1972.14,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-077",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-077",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1876.81,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-077",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2544.79,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-078",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-078",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1794.73,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-078",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2274.82,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-079",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2099.52,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-079",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2735.53,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-079",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "面馆操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 2158.93,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-080",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2353.11,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-080",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2648.31,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-080",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1968.9,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-081",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2204.09,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-081",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1766.18,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-081",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2743.99,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-082",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1650.61,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-082",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2399.41,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-082",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1973.02,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-083",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1753.5,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-083",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1765.84,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-083",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2910.49,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-084",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1918.42,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-084",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1845.15,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-084",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1935.01,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-085",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2299.45,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-085",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2335.14,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-085",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2587.62,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-086",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2095.89,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-086",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1913.18,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-086",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 7129.99,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-087",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-087",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1891.92,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-087",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3159.93,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-088",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-088",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2760.08,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-088",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2012.34,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-089",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-089",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2671.54,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-089",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3031.64,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-090",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-090",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2124.1,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-090",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1765.4,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-091",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2580.32,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-091",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1979.61,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-091",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [
+            "摄影店操作流程"
+          ],
+          "budget": null
+        },
+        "latency_ms": 2035.47,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-092",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1844.28,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-092",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2017.88,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-092",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3624.78,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-093",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3518.92,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-093",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2007.68,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-093",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2298.96,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-094",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2511.56,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-094",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2102.75,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-094",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2144.68,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-095",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2656.92,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-095",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2387.05,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-095",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2766.26,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-096",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2471.44,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-096",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2282.05,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-096",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取订单",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1909.73,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-097",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3299.83,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-097",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3144.49,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-097",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "获取咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2850.42,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-098",
+        "group": "A",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2297.75,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-098",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2430.29,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-098",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": "到店咨询",
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2700.8,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-099",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-099",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1908.9,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-099",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 3405.45,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-100",
+        "group": "A",
+        "passed": false,
+        "error": "TypeError"
+      },
+      {
+        "id": "memory-eval-100",
+        "group": "B",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 1896.89,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      },
+      {
+        "id": "memory-eval-100",
+        "group": "C",
+        "passed": true,
+        "response": {
+          "objective": null,
+          "procedures": [],
+          "budget": null
+        },
+        "latency_ms": 2275.5,
+        "usage": {
+          "input_tokens": null,
+          "output_tokens": null
+        }
+      }
+    ],
+    "scope": "structured synthetic objective/procedure/budget checks; no double human annotation, no revenue claim"
+  }
+}

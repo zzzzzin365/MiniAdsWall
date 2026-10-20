@@ -101,6 +101,55 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
         self.assertLessEqual(self.pipeline.rag_manager.call.await_count, 4)
         self.assertEqual(len(self.pipeline.rag_manager._rerank.call_args.args[1]), 2)
 
+    async def test_native_application_memory_reaches_model_and_success_enqueues_job(self):
+        from memory.repository import MemoryRepository
+        from memory.context_service import Scope
+        from memory.durable_schema import jobs
+        from sqlalchemy import select
+        scope=Scope(self.user,self.session['workspace_id'],self.session['id'])
+        store=MemoryRepository(self.repo)
+        store.preference(scope,'优化目标',['获取咨询'],0)
+        async def provider(*args,**kwargs):
+            self.assertIn('获取咨询',kwargs['messages'][-1]['content'])
+            yield '根据本轮事实提出测试建议'
+        with patch.dict(os.environ,AGENT_MEMORY_READ_ENABLED='true',AGENT_MEMORY_WRITE_ENABLED='true',AGENT_MEMORY_SHADOW_ENABLED='false'):
+            state,trace,answer=await self.execute({'status':'sufficient','missing_information':[], 'evidence_ids':['a']},provider)
+        self.assertEqual(state['status'],'succeeded')
+        span=next(v for v in trace['spans'] if v['stage']=='memory_context')
+        snapshot=json.loads(self.repo.objects.get(span['snapshot_ref']))
+        self.assertNotIn('text',snapshot)
+        self.assertEqual(span['experience_status'],'disabled')
+        with self.repo.engine.connect() as c:
+            self.assertEqual(c.execute(select(jobs.c.status)).scalar_one(),'pending')
+
+    async def test_explicit_profile_declaration_commits_task_without_business_rag(self):
+        def run():
+            self.repo.create_run(self.user,self.session['id'],'profile-declaration-key-1234',{'message':'请记住：我的长期素材偏好是真人口播。'})
+            return self.repo.claim('profile-test')
+        self.new_run=run
+        provider=AsyncMock(side_effect=AssertionError('profile declaration must not call generation'))
+        with patch.dict(os.environ,AGENT_MEMORY_WRITE_ENABLED='true',AGENT_MEMORY_SUBJECTS=''):
+            state,trace,answer=await self.execute({'status':'insufficient','missing_information':['投放数据'],'evidence_ids':[]},provider)
+        self.assertEqual(state['status'],'succeeded')
+        self.assertIn('后台提取',answer)
+        provider.assert_not_called()
+        from memory.durable_schema import jobs
+        from sqlalchemy import select
+        with self.repo.engine.connect() as c:self.assertEqual(c.execute(select(jobs.c.status)).scalar_one(),'pending')
+
+    async def test_memory_timeout_degrades_without_disabling_knowledge_evidence(self):
+        import time
+        def slow_read(*args,**kwargs):time.sleep(.05);return {}
+        async def provider(*args,**kwargs):
+            self.assertIn('有用规则',kwargs['messages'][-1]['content'])
+            yield '继续依据本轮知识回答'
+        with patch.dict(os.environ,AGENT_MEMORY_READ_ENABLED='true',AGENT_MEMORY_SUBJECTS='',AGENT_MEMORY_READ_TIMEOUT_MS='10'), patch('memory.context_service.MemoryContextService.build',side_effect=slow_read):
+            state,trace,answer=await self.execute({'status':'sufficient','missing_information':[],'evidence_ids':['a']},provider)
+        self.assertEqual(state['status'],'succeeded')
+        span=next(s for s in trace['spans'] if s['stage']=='memory_context')
+        self.assertEqual(span['status'],'unavailable')
+        self.assertIn('继续依据本轮知识回答',answer)
+
     async def test_full_window_snapshot_and_metric_boundaries_reach_checker_and_model(self):
         original = self.new_run
         def new_run():

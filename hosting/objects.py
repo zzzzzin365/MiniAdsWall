@@ -49,3 +49,12 @@ class Objects:
         if len(data) > MAX_OBJECT or hashlib.sha256(data).hexdigest() != key:
             raise ValueError('object_integrity_error')
         return data
+
+def message_text(objects, row):
+    """Inline short messages are complete only when their byte length proves it."""
+    if row.get('content_ref'):
+        return objects.get(row['content_ref']).decode()
+    value=row.get('content_preview') or ''
+    if row.get('content_bytes') != len(value.encode()):
+        raise ValueError('message_source_incomplete')
+    return value

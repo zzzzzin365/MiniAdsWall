@@ -98,9 +98,9 @@ async function chatAssistant(ctx: RouterContext): Promise<void> {
         ads: context.items,
         ad_context: config.RELIABILITY.features.AD_CONTEXT_V1_ENABLED ? context : undefined,
         confirmationId: body.confirmationId
-    }, ctx.state.requestId);
+    }, ctx.get('Idempotency-Key') || ctx.state.requestId);
 
-    ctx.status = 200;
+    ctx.status = result.runStatus && !['succeeded','failed','cancelled','timed_out','interrupted','waiting_approval'].includes(result.runStatus) ? 202 : 200;
     ctx.body = result;
 }
 

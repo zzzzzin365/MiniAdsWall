@@ -146,12 +146,17 @@ class Worker:
             c.execute(update(s.outbox).where(s.outbox.c.id==ident).values(published_at=time.time()))
     async def serve(self):
         maintained=0
+        memory_task=None
         try:
             while not self.stopping.is_set():
                 self.tasks={t for t in self.tasks if not t.done()}
                 try:
                     if time.monotonic()-maintained>5:
                         await self.maintain(); maintained=time.monotonic()
+                    if getattr(self.pipeline, 'memory_jobs', None) and (memory_task is None or memory_task.done()):
+                        if memory_task is not None:
+                            await memory_task
+                        memory_task=asyncio.create_task(self.pipeline.memory_jobs.once())
                     if len(self.tasks)<self.concurrency:
                         r=await asyncio.to_thread(self.repo.claim,self.id)
                         if r:
@@ -161,6 +166,9 @@ class Worker:
                 except TimeoutError: pass
         finally:
             self.stopping.set()
+            if memory_task is not None:
+                memory_task.cancel()
+                await asyncio.gather(memory_task,return_exceptions=True)
             for task in self.tasks: task.cancel()
             await asyncio.gather(*self.tasks,return_exceptions=True)
 

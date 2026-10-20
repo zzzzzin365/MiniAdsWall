@@ -398,7 +398,11 @@ async def reload_skills():
 
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat(req: ChatRequest):
+async def chat(req: ChatRequest, request: Request = None):
+    from memory.context_service import enabled
+    if enabled('AGENT_SYNC_DURABLE_ENABLED'):
+        from memory.sync_gateway import durable_chat
+        return await durable_chat(req,request)
     try:
         return await asyncio.wait_for(_chat_impl(req), timeout=CHAT_TIMEOUT_SECONDS)
     except ModelBusy as exc:

@@ -122,6 +122,8 @@ export interface AssistantChatInput {
 }
 
 export interface AssistantChatOutput {
+    runId?: string;
+    runStatus?: string;
     convId: string | null;
     response: string;
     intent: string;

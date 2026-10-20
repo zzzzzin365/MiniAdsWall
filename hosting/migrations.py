@@ -70,6 +70,65 @@ def verify_protocols(c):
     for table, name in PROTOCOL_COLUMNS:
         if not check_column(c, table, name): raise MigrationError('missing_column:' + table + '.' + name)
 
+def apply_memory(c, after_statement):
+    from memory.durable_schema import metadata as memory_metadata
+    memory_metadata.create_all(c)
+    c.commit()
+    after_statement(3, 0)
+
+def verify_memory(c):
+    from memory.durable_schema import metadata as memory_metadata
+    inspector = inspect(c)
+    for table in memory_metadata.sorted_tables:
+        if not inspector.has_table(table.name):
+            raise MigrationError('missing_table:' + table.name)
+        if not set(table.columns.keys()) <= {v['name'] for v in inspector.get_columns(table.name)}:
+            raise MigrationError('missing_columns:' + table.name)
+        unique = {tuple(v['column_names']) for v in inspector.get_unique_constraints(table.name)}
+        unique.update(tuple(v['column_names']) for v in inspector.get_indexes(table.name) if v.get('unique'))
+        expected = {tuple(col.name for col in constraint.columns) for constraint in table.constraints if isinstance(constraint, UniqueConstraint)}
+        if not expected <= unique:
+            raise MigrationError('missing_unique_constraints:' + table.name)
+        if not {i.name for i in table.indexes} <= {v['name'] for v in inspector.get_indexes(table.name)}:
+            raise MigrationError('missing_indexes:' + table.name)
+
+def extended_metadata():
+    from memory.extended_schema import metadata as lifecycle
+    from marketing.feedback.schema import metadata as feedback
+    return (lifecycle, feedback)
+
+def apply_memory_lifecycle(c, after_statement):
+    for index, metadata in enumerate(extended_metadata()):
+        metadata.create_all(c)
+        c.commit()
+        after_statement(4,index)
+
+def verify_memory_lifecycle(c):
+    inspector=inspect(c)
+    for metadata in extended_metadata():
+        for table in metadata.sorted_tables:
+            if not inspector.has_table(table.name): raise MigrationError('missing_table:'+table.name)
+            if not set(table.columns.keys()) <= {v['name'] for v in inspector.get_columns(table.name)}:
+                raise MigrationError('missing_columns:'+table.name)
+            expected={tuple(col.name for col in constraint.columns) for constraint in table.constraints if isinstance(constraint,UniqueConstraint)}
+            actual={tuple(v['column_names']) for v in inspector.get_unique_constraints(table.name)}
+            if not expected <= actual: raise MigrationError('missing_unique_constraints:'+table.name)
+            if not {i.name for i in table.indexes} <= {v['name'] for v in inspector.get_indexes(table.name)}:
+                raise MigrationError('missing_indexes:'+table.name)
+
+def apply_sync_aliases(c,after_statement):
+    from memory.sync_schema import metadata
+    metadata.create_all(c);c.commit();after_statement(6,0)
+
+def verify_sync_aliases(c):
+    from memory.sync_schema import aliases
+    inspector=inspect(c)
+    if not inspector.has_table(aliases.name):raise MigrationError('missing_sync_alias_table')
+    if not set(aliases.columns.keys()) <= {v['name'] for v in inspector.get_columns(aliases.name)}:
+        raise MigrationError('invalid_sync_alias_table')
+    if ('user_id','alias_hash') not in {tuple(v['column_names']) for v in inspector.get_unique_constraints(aliases.name)}:
+        raise MigrationError('missing_sync_alias_unique')
+
 @dataclass(frozen=True)
 class Migration:
     version: int
@@ -79,9 +138,14 @@ class Migration:
     verify: object
 
 def definitions():
+    from memory.precision_migration import apply as apply_precision, verify as verify_precision
     initial = (ROOT / 'migrations/001_hosting.sql').read_bytes() + (Path(__file__).parent / 'initial_schema.py').read_bytes()
     return [Migration(1, 'initial', hashlib.sha256(initial).hexdigest(), apply_initial, verify_initial),
-            Migration(2, 'protocol_versions', hashlib.sha256((ROOT / 'migrations/002_hosting_protocols.sql').read_bytes()).hexdigest(), apply_protocols, verify_protocols)]
+            Migration(2, 'protocol_versions', hashlib.sha256((ROOT / 'migrations/002_hosting_protocols.sql').read_bytes()).hexdigest(), apply_protocols, verify_protocols),
+            Migration(3, 'agent_memory', hashlib.sha256((ROOT / 'memory/durable_schema.py').read_bytes()).hexdigest(), apply_memory, verify_memory),
+            Migration(4, 'memory_lifecycle', hashlib.sha256((ROOT / 'memory/extended_schema.py').read_bytes()+(ROOT / 'marketing/feedback/schema.py').read_bytes()).hexdigest(),apply_memory_lifecycle,verify_memory_lifecycle),
+            Migration(5, 'memory_timestamp_precision',hashlib.sha256((ROOT / 'memory/precision_migration.py').read_bytes()).hexdigest(),apply_precision,verify_precision),
+            Migration(6,'sync_conversation_aliases',hashlib.sha256((ROOT / 'memory/sync_schema.py').read_bytes()).hexdigest(),apply_sync_aliases,verify_sync_aliases)]
 
 def now(c):
     return float(c.execute(text('SELECT UNIX_TIMESTAMP(NOW(6))')).scalar_one()) if c.dialect.name == 'mysql' else time.time()

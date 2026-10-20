@@ -60,6 +60,41 @@ class HostingAPITests(unittest.IsolatedAsyncioTestCase):
         with self.repo.engine.connect() as c:
             self.assertEqual(c.execute(select(func.count()).select_from(s.runs)).scalar_one(),1)
 
+    async def test_memory_management_is_authenticated_versioned_and_scoped(self):
+        session=(await self.http.post('/sessions',headers=self.headers,json={'workspace_id':self.identity['workspace_id']})).json()
+        url='/sessions/'+session['id']+'/memory/preferences'
+        value=await self.http.put(url,headers=self.headers,json={'field':'优化目标','values':['获取咨询'],'expected_version':0})
+        self.assertEqual(value.status_code,200,value.text)
+        conflict=await self.http.put(url,headers=self.headers,json={'field':'优化目标','values':['成交'],'expected_version':0})
+        self.assertEqual(conflict.status_code,409)
+        revoke=await self.http.put(url,headers=self.headers,json={'field':'优化目标','values':[],'expected_version':1})
+        self.assertEqual(revoke.json()['status'],'revoked')
+        self.assertEqual((await self.http.get(url)).status_code,401)
+        bob=(await self.http.post('/auth/session',headers={'Authorization':'Bearer test-service'},json={'subject':'bob'})).json()
+        headers={**self.headers,'X-Agent-Session':bob['session_token']}
+        self.assertEqual((await self.http.get(url,headers=headers)).status_code,404)
+        clear=await self.http.delete('/sessions/'+session['id']+'/memory',headers=self.headers)
+        self.assertEqual(clear.status_code,200)
+
+    async def test_synchronous_facade_is_authenticated_idempotent_and_durable(self):
+        from sqlalchemy import select,func
+        from hosting import schema as hs
+        session=(await self.http.post('/sessions',headers=self.headers,json={'workspace_id':self.identity['workspace_id']})).json()
+        url='/sessions/'+session['id']+'/chat'
+        headers={**self.headers,'Idempotency-Key':'sync-memory-key-123456'}
+        with patch.dict(os.environ,AGENT_SYNC_DURABLE_ENABLED='true',AGENT_SYNC_WAIT_SECONDS='0'):
+            pending=await self.http.post(url,headers=headers,json={'message':'hello','user_id':'forged'})
+            self.assertEqual(pending.status_code,202,pending.text)
+            again=await self.http.post(url,headers=headers,json={'message':'hello'})
+            self.assertEqual(pending.json()['run_id'],again.json()['run_id'])
+            run=self.repo.claim('worker')
+            self.repo.finish(run['id'],run['fence_token'],'succeeded','完整回答')
+            answer=await self.http.post(url,headers=headers,json={'message':'hello'})
+            self.assertEqual(answer.status_code,200,answer.text)
+            self.assertEqual(answer.json()['response'],'完整回答')
+            self.assertEqual((await self.http.post(url,headers={'Authorization':'Bearer test-service'},json={'message':'hello'})).status_code,401)
+        with self.repo.engine.connect() as c:self.assertEqual(c.execute(select(func.count()).select_from(hs.runs)).scalar_one(),1)
+
     async def test_auth_and_logout(self):
         self.assertEqual((await self.http.get('/sessions')).status_code,401)
         await self.http.delete('/auth/session',headers=self.headers)

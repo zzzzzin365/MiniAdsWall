@@ -59,7 +59,7 @@ api.interceptors.request.use(config => {
         config.headers.Authorization = `Bearer ${getOperatorToken()}`;
     }
     config.headers['X-Request-ID'] = crypto.randomUUID();
-    config.timeout = url === '/ai/assistant/chat' ? 35000 : url.startsWith('/ai/') ? 60000 : 15000;
+    config.timeout = url === '/ai/assistant/chat' ? 35000 : /^\/agent\/sessions\/\d+\/chat$/.test(url) ? 27000 : url.startsWith('/ai/') ? 60000 : 15000;
     return config;
 });
 api.interceptors.response.use(response => response, error => {
@@ -159,10 +159,17 @@ export const generateAdStrategy = (
 export const getAdStrategyContext = (adId?:string, range:'7'|'3'='7', signal?:AbortSignal):Promise<import('./types').DeliveryContext> =>
     api.get('/ai/strategy-context',{params:{ad_id:adId,range},signal}).then(res=>res.data);
 
-export const chatWithAssistant = (
-    data: AssistantChatInput
-): Promise<AssistantChatOutput> =>
-    api.post('/ai/assistant/chat', data).then(res => res.data);
+export async function chatWithAssistant(data: AssistantChatInput): Promise<AssistantChatOutput> {
+    // Retain the original payload/key after timeout or pending; retries must not submit a new run.
+    const bytes = new TextEncoder().encode(JSON.stringify({ data, principal: getOperatorToken() }));
+    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    const slot = 'assistant-turn:' + Array.from(new Uint8Array(digest), n => n.toString(16).padStart(2, '0')).join('');
+    let key = sessionStorage.getItem(slot);
+    if (!key) { key = crypto.randomUUID(); sessionStorage.setItem(slot, key); }
+    const result = (await api.post<AssistantChatOutput>('/ai/assistant/chat', data, { headers: { 'Idempotency-Key': key } })).data;
+    if (result.source === 'adsAgent' && (!result.runStatus || ['succeeded','failed','cancelled','timed_out','interrupted'].includes(result.runStatus))) sessionStorage.removeItem(slot);
+    return result;
+}
 
 export const getAssistantStatus = (): Promise<AssistantStatus> =>
     api.get('/ai/assistant/status').then(res => res.data);
@@ -277,3 +284,18 @@ export async function studioAsset(id: string): Promise<Blob> {
 }
 
 export const hasStudioCredential = () => !!operatorToken;
+
+export type MemoryPreference = { id: string; field: string; value_json: string; version: number; status: string; source_ref?: string };
+export type MemoryCandidate = { id: string; field: string; value_json: string; expected_version: number };
+export type MemoryJob = { id: string; status: string; attempts: number; error_code?: string };
+export type ReviewedProcedure = { id: string; title: string; version: number; status: string; source_title: string; conditions_json: string; steps_json: string; limitations_json: string };
+export const hostedMemoryPreferences = (sid: string) => api.get<MemoryPreference[]>(`/agent/sessions/${sid}/memory/preferences`).then(r => r.data);
+export const hostedMemorySet = (sid: string, field: string, values: string[], expected_version: number) => api.put(`/agent/sessions/${sid}/memory/preferences`, { field, values, expected_version });
+export const hostedMemoryClear = (sid: string) => api.delete(`/agent/sessions/${sid}/memory`);
+export const hostedMemoryCandidates = (sid: string) => api.get<MemoryCandidate[]>(`/agent/sessions/${sid}/memory/candidates`).then(r => r.data);
+export const hostedMemoryDecide = (sid: string, id: string, accept: boolean, expected_version: number) => api.post(`/agent/sessions/${sid}/memory/candidates/${id}/decision`, { accept, expected_version });
+export const hostedMemoryJobs = (sid: string) => api.get<MemoryJob[]>(`/agent/sessions/${sid}/memory/jobs`).then(r => r.data);
+export const hostedMemoryReplay = (sid: string, id: string) => api.post(`/agent/sessions/${sid}/memory/jobs/${id}/replay`);
+export const hostedProcedures = (sid: string) => api.get<ReviewedProcedure[]>(`/agent/sessions/${sid}/memory/procedures`).then(r => r.data);
+export const hostedProcedureCreate = (sid: string, value: { title: string; objective: string; conditions: string[]; steps: string[]; limitations: string[]; source_title: string }) => api.post(`/agent/sessions/${sid}/memory/procedures`, value);
+export const hostedProcedureDecide = (sid: string, id: string, action: 'review' | 'withdraw', expected_version: number) => api.post(`/agent/sessions/${sid}/memory/procedures/${id}/decision`, { action, expected_version });

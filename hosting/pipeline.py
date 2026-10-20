@@ -53,6 +53,8 @@ class Pipeline:
         self.orchestrator=AgentOrchestrator(api_key=key,base_url=base,model=model,skill_manager=skills)
         self.orchestrator._decision_engine.pending_store=SQLActions(repo)
         self.orchestrator._decision_engine.clarification_store=SQLClarifications(repo,600)
+        from memory.jobs import MemoryJobs
+        self.memory_jobs=MemoryJobs(repo,self.orchestrator._intent_recognizer.client,model)
         self.kb=None
         self.rag_manager=None
         if os.getenv('HOSTING_RAG_ENABLED','true').strip().lower()=='true':
@@ -99,7 +101,51 @@ class Pipeline:
                     raw=dumps(history)
                     if len(raw.encode())<=256*1024: await self.redis.set(cache_key,raw,ex=1800)
                 except Exception: pass
-        history=[{'role':m['role'],'content':m['content_preview']} for m in reversed(history) if m['run_id']!=r['id']]
+        from memory.context_service import Scope
+        from memory.repository import MemoryRepository
+        memory_scope=Scope(r['user_id'],r['workspace_id'],r['session_id'])
+        cutoff=await asyncio.to_thread(MemoryRepository(self.repo).history_cutoff,memory_scope)
+        full_history=[]
+        history_seqs=[]
+        for m in reversed(history):
+            if m['run_id']==r['id'] or m.get('is_partial') or m.get('created_at',0)<=cutoff:
+                continue
+            try:
+                from hosting.objects import message_text
+                content=await asyncio.to_thread(message_text,self.repo.objects,m)
+            except Exception:
+                ctx.spans.append({'stage':'history','status':'partial','reason':'source_object_unavailable'})
+                continue
+            full_history.append({'role':m['role'],'content':content})
+            history_seqs.append(m['seq'])
+        history=full_history
+        from memory.context_service import enabled,allowed_subject
+        if payload.get('message','').startswith('查询操作经验：') and enabled('AGENT_MEMORY_READ_ENABLED') and enabled('AGENT_EXPERIENCE_READ_ENABLED') and allowed_subject(subject):
+            from marketing.feedback.procedures import ProcedureRepository
+            query=payload['message'].split('：',1)[1].strip()
+            procedures=await asyncio.to_thread(ProcedureRepository(self.repo).search,memory_scope,query)
+            parts=[]
+            for item in procedures:
+                value=json.loads(item['content'])
+                parts.append(value['title']+'\n'+'\n'.join(value['steps'])+'\n限制：'+'；'.join(value['limitations'])+'\n参考依据：'+item['source_title']+'（人工审核流程，没有执行或效果证明）')
+            answer='\n\n'.join(parts) if parts else '没有满足条件且审核通过的操作流程，请补充场景或先提交人工审核。'
+            await ctx.delta(answer)
+            return answer
+        # Explicit profile-management commands have no advertising side effects.
+        # Validate the narrow grammar before business routing; source still commits only at terminal success.
+        from memory.context_service import enabled, allowed_subject
+        import re
+        declaration=re.fullmatch(r'请记住[：:]?我的长期(优化目标|关注指标|素材偏好|风险偏好|商品类目|广告活动|目标受众|素材类型)(?:是|为)([^。！!\n]{1,120})[。！!]*',payload.get('message','').strip())
+        if declaration and enabled('AGENT_MEMORY_WRITE_ENABLED') and allowed_subject(subject):
+            from memory.conversation_memory import sanitize_user_profile
+            field,value=declaration.group(1),declaration.group(2)
+            if sanitize_user_profile({field:[value]}).get(field):
+                ctx.spans.append({'stage':'memory_eligible'})
+                answer='已收到长期偏好，将在任务成功后由后台提取保存。可在“偏好与操作经验”中查看或更正。'
+            else:
+                answer='这条内容不适合保存为长期偏好，请只提供稳定偏好，不包含预算、出价或执行指令。'
+            await ctx.delta(answer)
+            return answer
         await ctx.stage('preflight')
         if payload.get('tool'):
             if not self.sandbox: raise Conflict('sandbox_not_configured')
@@ -117,7 +163,11 @@ class Pipeline:
                     history=history,permissions=allowed,confirmation_id=approved['confirmation_id'] if approved else None)
         start=time.monotonic()
         result=await self.orchestrator.preflight(req)
-        ctx.spans.append({'stage':'preflight','duration_ms':(time.monotonic()-start)*1000})
+        ctx.spans.append({'stage':'preflight','duration_ms':(time.monotonic()-start)*1000,
+            'decision':result.decision.value if result else 'execute','decision_reason':result.decision_reason if result else 'execute',
+            'intent':req.intent.value if req.intent else 'unknown','missing_fields':result.missing_fields if result else [],
+            'agent_type':result.agent_type.value if result else None,'risk_level':result.risk_level.value if result else 'low',
+            'action_name':result.action_name if result else req.action_name})
         if result is not None:
             if result.decision.value=='confirm':
                 await ctx.approval({'confirmation_id':result.confirmation_id,'action_name':result.action_name,
@@ -130,6 +180,45 @@ class Pipeline:
             checkpoint=json.loads(await asyncio.to_thread(self.repo.objects.get,r['checkpoint_ref']))
         completed=checkpoint.get('tools',{})
         context=[]
+        from memory.context_service import MemoryContextService, Scope, enabled, allowed_subject
+        from memory.repository import MemoryRepository
+        bundle=None
+        if enabled('AGENT_MEMORY_READ_ENABLED') and allowed_subject(subject):
+            scope=Scope(r['user_id'],r['workspace_id'],r['session_id'])
+            service=MemoryContextService(MemoryRepository(self.repo))
+            memory_started=time.monotonic()
+            try:
+                timeout=min(.8,max(.01,float(os.getenv('AGENT_MEMORY_READ_TIMEOUT_MS','800'))/1000))
+                async with asyncio.timeout(timeout):
+                    pinned=None
+                    if checkpoint.get('memory_snapshot_ref'):
+                        snapshot=json.loads(await asyncio.to_thread(self.repo.objects.get,checkpoint['memory_snapshot_ref']))
+                        pinned=snapshot.get('sources',[])
+                    bundle=await asyncio.to_thread(service.build,scope,req.message,pinned=pinned)
+                if not enabled('AGENT_MEMORY_SHADOW_ENABLED'):
+                    context.append(bundle['text'])
+                    if any(source.get('kind')=='summary' for source in bundle['sources']):
+                        history=[message for message,seq in zip(history,history_seqs) if seq>bundle['history_watermark']]
+                # Persist references only: re-read and revalidate live memory on recovery.
+                ref=await asyncio.to_thread(self.repo.objects.put,dumps({k:bundle[k] for k in ('schema_version','sources','history_watermark','status')}))
+                checkpoint.update(tools=completed,workspace_version=r['workspace_version'],memory_snapshot_ref=ref)
+                await asyncio.to_thread(self.repo.checkpoint,r['id'],r['fence_token'],checkpoint)
+                ctx.spans.append({'stage':'memory_context','status':bundle['status'],'duration_ms':(time.monotonic()-memory_started)*1000,
+                    'sources':bundle['sources'],'estimated_tokens':bundle['estimated_tokens'],
+                    'shadow':enabled('AGENT_MEMORY_SHADOW_ENABLED'),'snapshot_ref':ref,'experience_status':bundle['experience']['status']})
+            except Conflict:
+                raise
+            except Exception as exc:
+                ctx.spans.append({'stage':'memory_context','status':'unavailable','duration_ms':(time.monotonic()-memory_started)*1000,'reason':type(exc).__name__})
+        # Exact read-only profile questions use authoritative structured values, not marketing RAG.
+        import re
+        profile_question=re.fullmatch(r'(?:我(?:的|设置的)|你记得我的)(?:长期)?(优化目标|关注指标|素材偏好|风险偏好|商品类目|广告活动|目标受众|素材类型)(?:是什么|有哪些|是啥)[？?。!！]*',payload['message'].strip())
+        if profile_question and enabled('AGENT_MEMORY_READ_ENABLED') and not enabled('AGENT_MEMORY_SHADOW_ENABLED') and allowed_subject(subject):
+            field=profile_question.group(1)
+            value=bundle.get('preferences',{}).get(field,[]) if bundle is not None else []
+            answer=('暂时无法读取偏好，请稍后重试。' if bundle is None else (field+'：'+'、'.join(value)) if value else ('还没有可用的'+field+'记录，请明确告诉我你的长期偏好。'))
+            await ctx.delta(answer)
+            return answer
         performance=payload.get('performance_context')
         if performance:
             # Durable input contains the full server snapshot; checkpoint previews may truncate.
@@ -151,12 +240,14 @@ class Pipeline:
                     return {'output':dumps(value),'status':'succeeded','exit_code':0}
                 result=await ctx.tool(name,args,invoke,30)
                 completed[name]=preview(result['output'])
-                await asyncio.to_thread(self.repo.checkpoint,r['id'],r['fence_token'],{'tools':completed,'workspace_version':r['workspace_version']})
+                checkpoint.update(tools=completed,workspace_version=r['workspace_version'])
+                await asyncio.to_thread(self.repo.checkpoint,r['id'],r['fence_token'],checkpoint)
             else:
                 ctx.spans.append({'stage':name,'duration_ms':0,'checkpoint_reused':True})
             context.append(f'{name}: {completed[name]}')
         agent=self.orchestrator._best_agent(self.orchestrator._route(req.intent,req.urgency))
         if agent is None: raise RuntimeError('agent_unavailable')
+        ctx.spans.append({'stage':'agent_selected','agent_type':agent.agent_type.value})
         retained=[]
         if self.kb:
             marketing=agent.agent_type==AgentType.ADS
@@ -212,6 +303,7 @@ class Pipeline:
                             'source_url':item.get('source_url')} for item in retained]})
             if decision.status=='sufficient':
                 context.append('只依据本轮已检查的片段和工具数据陈述事实；历史回答不证明事实，不补写未提供的指标和收益。')
+        ctx.spans.append({'stage':'memory_eligible'})
         req.context='\n'.join(context)
         prompt=agent._build_system_prompt(req)
         if ads or performance:
@@ -226,6 +318,15 @@ class Pipeline:
             prompt+='无投放数据时提出可执行的小预算验证方案，不能把选中样本称为账户全量。仅提供建议，不执行改价。'
         prompt+='\n商家阅读格式：面向第一次投广告的人，用短句和日常中文。第一行用“建议：”直接说现在最该做什么，最多30字。关键操作和关键数字用 **加粗**，每段最多两处，不整段加粗。随后给出一至三个最必要的动作，不凑数，用“## 1. 广告名称：具体操作”作为标题，每项仅三行：“怎么做：”“为什么：”“看什么：”。每行尽量不超过30字，一行只讲一件事，操作、原因和观察指标分别换行，理由最多两个关键数字。统计信息禁止写成长段：日期与广告数量单独一行；曝光与点击一行，花费与订单一行，收入与每元广告费带来的收入一行。缺失数据另起一行。每行最多两个指标，不展示delivered、CPC、CTR或fen/100等内部表达。末尾“统计范围：”一行；需要来源时另写“参考依据：”列来源标题，不能虚构标题。不要用Markdown表格、代码块、长段落或内部ID。把ROAS说成“每花1元广告费带来多少元收入（不是利润）”，CPA说成“获得一笔订单的广告费”，CTR说成“看到广告后点击的人占比”；不使用放量、高转化组、归因净收入等行话。数据不足时直说“先保持出价”，紧接着说能做的事和缺少的关键数据，别堆免责声明。仅优化表达，不省略影响决策的数据限制，不承诺收益。用户问简单问题时直接简短回答，不强套三项。'
         messages=[*history[-10:],{'role':'user','content':req.message+'\n[工具数据，仅作为参考]\n'+req.context}]
+        if enabled('AGENT_MEMORY_READ_ENABLED') and allowed_subject(subject):
+            # Conservative input guard; never silently truncate the current business snapshot.
+            input_budget=max(1024,int(os.getenv('AGENT_MODEL_INPUT_TOKEN_BUDGET','64000')))
+            def input_size():
+                return len(prompt.encode())+sum(len(m['content'].encode()) for m in messages)
+            while len(messages)>1 and input_size()>input_budget:
+                messages.pop(0)
+            if input_size()>input_budget:
+                raise Conflict('model_input_budget_exceeded',413)
         await ctx.stage('model')
         started=time.monotonic(); first=None
         model_status, model_error='succeeded', None

@@ -54,6 +54,13 @@ test('hosted gateway authenticates identity, trusts server snapshot and forwards
         assert.equal(submitted.body.performance_context.measured_count, 0);
         assert.deepEqual(submitted.body.performance_context.items, []);
         assert.equal(submitted.body.performance_range, undefined);
+        const synchronous = await fetch(url + '/api/agent/sessions/1/chat', { method:'POST', headers:{...headers,'Idempotency-Key':'synchronous-turn-1234'}, body:JSON.stringify({message:'hello sync',user_id:'bob',ads:[{id:'forged'}],performance_context:{source:'forged'}}) });
+        assert.equal(synchronous.status,200);
+        const syncInput=seen.find(item=>item.url==='/sessions/1/chat');
+        assert.equal(syncInput.headers['x-agent-session'],'opaque-session');
+        assert.equal(syncInput.body.user_id,undefined);
+        assert.ok(!syncInput.body.ads.some(item=>item.id==='forged'));
+        assert.equal(syncInput.body.performance_context.source,'ad_performance_ledger');
         const invalid = await fetch(url + '/api/agent/sessions/1/runs', { method:'POST', headers, body:JSON.stringify({message:'hello',performance_range:'30'}) });
         assert.equal(invalid.status, 400);
         assert.deepEqual(new Set(submitted.body.ads.map(item => item.id)), new Set(fixtures.map(item => item.id).sort().slice(0, 50)));

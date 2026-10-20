@@ -1,0 +1,34 @@
+{
+  "subject": "isolated validation identity",
+  "evidence": [
+    {
+      "case": "cross_session_preference",
+      "passed": true,
+      "response": "优化目标：获取咨询"
+    },
+    {
+      "case": "retraction_effective",
+      "passed": true,
+      "response": "还没有可用的优化目标记录，请明确告诉我你的长期偏好。"
+    },
+    {
+      "case": "real_model_to_durable_extraction",
+      "passed": true,
+      "job_status": "succeeded"
+    },
+    {
+      "case": "grounded_real_preference_extracted",
+      "passed": true
+    },
+    {
+      "case": "reviewed_procedure_read_and_withdraw",
+      "passed": true
+    },
+    {
+      "case": "legacy_sync_alias_and_idempotency",
+      "passed": true,
+      "response": "素材偏好：真人口播"
+    }
+  ],
+  "scope": "local actual HTTP + Worker + configured business model; synthetic data only"
+}

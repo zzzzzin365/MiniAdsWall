@@ -55,6 +55,25 @@ class RunInput(BaseModel):
         return value
 class ApprovalInput(BaseModel):
     allow: bool
+class PreferenceInput(BaseModel):
+    field: str = Field(max_length=80)
+    values: list[str] = Field(default_factory=list, max_length=20)
+    expected_version: int = Field(ge=0)
+
+class CandidateDecision(BaseModel):
+    accept: bool
+    expected_version: int = Field(ge=0)
+class ProcedureInput(BaseModel):
+    title: str = Field(max_length=120)
+    objective: str = Field(max_length=120)
+    conditions: list[str] = Field(min_length=1,max_length=8)
+    steps: list[str] = Field(min_length=1,max_length=8)
+    limitations: list[str] = Field(min_length=1,max_length=8)
+    source_title: str = Field(max_length=120)
+    expires_at: float | None = None
+class ProcedureAction(BaseModel):
+    action: Literal['review','withdraw']
+    expected_version: int = Field(ge=1)
 class LoginInput(BaseModel):
     subject: str = Field(min_length=1,max_length=190)
 
@@ -135,6 +154,75 @@ def create_app(repo=None,redis=None):
     async def commit_workspace(rid:int,user=Depends(principal)):
         return public(await call(app.state.repo.commit_workspace,user,rid))
 
+    def memory_scope(user, sid):
+        from memory.context_service import Scope
+        with app.state.repo.engine.connect() as c:
+            session=app.state.repo._session(c,user,sid)
+        return Scope(user,session['workspace_id'],sid)
+
+    @app.get('/sessions/{sid}/memory/preferences')
+    async def preferences(sid:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        scope=await call(memory_scope,user,sid)
+        return public(await call(MemoryRepository(app.state.repo).list_preferences,scope))
+
+    @app.put('/sessions/{sid}/memory/preferences')
+    async def set_preference(sid:int,body:PreferenceInput,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        scope=await call(memory_scope,user,sid)
+        return public(await call(MemoryRepository(app.state.repo).preference,scope,body.field,body.values,body.expected_version))
+
+    @app.delete('/sessions/{sid}/memory')
+    async def clear_memory(sid:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        scope=await call(memory_scope,user,sid)
+        return await call(MemoryRepository(app.state.repo).clear_session,scope)
+
+    @app.get('/sessions/{sid}/memory/candidates')
+    async def memory_candidates(sid:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        return public(await call(MemoryRepository(app.state.repo).candidates,await call(memory_scope,user,sid)))
+
+    @app.post('/sessions/{sid}/memory/candidates/{cid}/decision')
+    async def candidate_decision(sid:int,cid:int,body:CandidateDecision,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        return public(await call(MemoryRepository(app.state.repo).resolve_candidate,await call(memory_scope,user,sid),cid,body.accept,body.expected_version))
+
+    @app.get('/sessions/{sid}/memory/jobs')
+    async def memory_jobs(sid:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        return public(await call(MemoryRepository(app.state.repo).list_jobs,await call(memory_scope,user,sid)))
+
+    @app.post('/sessions/{sid}/memory/jobs/{jid}/replay')
+    async def memory_replay(sid:int,jid:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        return await call(MemoryRepository(app.state.repo).replay_job,await call(memory_scope,user,sid),jid)
+
+    @app.get('/sessions/{sid}/memory/revisions/{kind}/{ident}')
+    async def memory_revisions(sid:int,kind:Literal['preference','summary'],ident:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        return public(await call(MemoryRepository(app.state.repo).revisions,await call(memory_scope,user,sid),kind,ident))
+
+    @app.delete('/sessions/{sid}/memory/sources/{message_id}')
+    async def erase_memory_source(sid:int,message_id:int,user=Depends(principal)):
+        from memory.repository import MemoryRepository
+        return await call(MemoryRepository(app.state.repo).suppress_source,await call(memory_scope,user,sid),message_id)
+
+    @app.get('/sessions/{sid}/memory/procedures')
+    async def procedures(sid:int,user=Depends(principal)):
+        from marketing.feedback.procedures import ProcedureRepository
+        return public(await call(ProcedureRepository(app.state.repo).list,await call(memory_scope,user,sid)))
+
+    @app.post('/sessions/{sid}/memory/procedures')
+    async def new_procedure(sid:int,body:ProcedureInput,user=Depends(principal)):
+        from marketing.feedback.procedures import ProcedureRepository
+        return public(await call(ProcedureRepository(app.state.repo).save,await call(memory_scope,user,sid),body.model_dump()))
+
+    @app.post('/sessions/{sid}/memory/procedures/{pid}/decision')
+    async def review_procedure(sid:int,pid:int,body:ProcedureAction,user=Depends(principal)):
+        from marketing.feedback.procedures import ProcedureRepository
+        return public(await call(ProcedureRepository(app.state.repo).save,await call(memory_scope,user,sid),{},pid,body.expected_version,body.action))
+
     @app.post('/sessions',status_code=201)
     async def new_session(body:SessionInput,user=Depends(principal)):
         return public(await call(app.state.repo.create_session,user,body.workspace_id,body.title))
@@ -153,6 +241,46 @@ def create_app(repo=None,redis=None):
         if body.tool not in (None,'shell','test'): raise Conflict('unknown_tool',400)
         if body.tool and (not body.argv or any(len(arg)>8192 for arg in body.argv)): raise Conflict('invalid_argv',400)
         return public(await call(app.state.repo.create_run,user,sid,idempotency_key,body.model_dump()))
+    @app.post('/sessions/{sid}/chat')
+    async def synchronous_chat(sid:int,body:RunInput,idempotency_key:str=Header(),user=Depends(principal)):
+        from memory.context_service import enabled
+        if not enabled('AGENT_SYNC_DURABLE_ENABLED'): raise Conflict('feature_disabled',404)
+        if body.tool is not None: raise Conflict('sync_tool_not_supported',400)
+        await app.state.auth.limit(user)
+        run=await call(app.state.repo.create_run,user,sid,idempotency_key,body.model_dump())
+        deadline=time.monotonic()+min(20,max(0,float(os.getenv('AGENT_SYNC_WAIT_SECONDS','20'))))
+        while True:
+            current=await call(app.state.repo.get_run,user,run['id'])
+            if current['status'] in TERMINAL or current['status']=='waiting_approval': break
+            if time.monotonic()>=deadline:
+                return JSONResponse(public({'run_id':run['id'],'conv_id':sid,'status':current['status'],'response':'任务仍在处理，请使用同一请求标识重试或查看任务状态。','intent':'unknown','agent_type':'general','decision':'clarify','decision_reason':'run_pending','missing_fields':[],'risk_level':'low','confirmed':False,'escalated':False,'latency_ms':(time.time()-run['created_at'])*1000,'knowledge_used':False,'tools_used':[]}),status_code=202)
+            await asyncio.sleep(.15)
+        from . import schema as schema
+        from sqlalchemy import select
+        from .objects import message_text
+        def final_answer():
+            with app.state.repo.engine.connect() as c:
+                row=c.execute(select(schema.messages).where(schema.messages.c.run_id==run['id'],schema.messages.c.role=='assistant').order_by(schema.messages.c.seq.desc()).limit(1)).mappings().first()
+            return message_text(app.state.repo.objects,row) if row else ''
+        approval=await call(_pending_approval,app.state.repo,run['id'])
+        spans=[]
+        if current.get('trace_ref'):
+            trace=json.loads(await call(app.state.repo.objects.get,current['trace_ref']))
+            spans=trace.get('spans',[])
+        preflight=next((span for span in spans if span.get('stage')=='preflight'),{})
+        decision='confirm' if approval else preflight.get('decision','execute' if current['status']=='succeeded' else 'reject')
+        selected=next((span.get('agent_type') for span in spans if span.get('stage')=='agent_selected'),None)
+        evidence=next((span.get('evidence',{}) for span in spans if span.get('stage')=='rag_evidence'),{})
+        if not approval and evidence.get('status') in ('insufficient','unavailable'):decision='clarify'
+        return public({'run_id':run['id'],'conv_id':sid,'status':current['status'],
+            'response':await call(final_answer),'approval_id':approval,'confirmation_id':str(approval) if approval else None,'error_code':current['error_code'],
+            'intent':preflight.get('intent','unknown'),'agent_type':selected or preflight.get('agent_type') or 'general','decision':decision,
+            'decision_reason':preflight.get('decision_reason',current['status']),'missing_fields':preflight.get('missing_fields',[]),
+            'risk_level':'high' if approval else preflight.get('risk_level','low'),'action_name':preflight.get('action_name'),'confirmed':False,'escalated':False,
+            'latency_ms':max(0,(time.time()-run['created_at'])*1000),
+            'knowledge_used':any(span.get('stage')=='knowledge_sources' for span in spans),
+            'tools_used':[span['stage'] for span in spans if span.get('tool_call_id')]})
+
     @app.get('/runs/{rid}')
     async def get_run(rid:int,user=Depends(principal)):
         r=await call(app.state.repo.get_run,user,rid)
@@ -210,6 +338,9 @@ def _pending_approval(repo,rid):
 def _object_allowed(repo,r,key):
     from sqlalchemy import select, or_
     from . import schema as s
+    from memory.extended_schema import suppressed
+    with repo.engine.connect() as c:
+        if c.execute(select(suppressed.c.message_id).where(suppressed.c.user_id==r['user_id'],suppressed.c.session_id==r['session_id'],suppressed.c.created_at>=r['created_at'])).first(): return False
     if key in (r['trace_ref'],r['checkpoint_ref']): return True
     with repo.engine.connect() as c:
         return bool(c.execute(select(s.messages.c.id).where(s.messages.c.run_id==r['id'],s.messages.c.content_ref==key)).first() or c.execute(select(s.tools.c.id).where(s.tools.c.run_id==r['id'],or_(s.tools.c.output_ref==key,s.tools.c.args_ref==key))).first())
