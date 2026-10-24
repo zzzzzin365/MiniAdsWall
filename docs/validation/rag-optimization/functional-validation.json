@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-24",
+  "status": "local_functional_validation_passed",
+  "baseline_commit": "ed9a748a32a481e2ec6e81d573fd493f1933d994",
+  "tests": {
+    "count": 83,
+    "duration_seconds": 2.503,
+    "status": "passed",
+    "command": "AGENT_SYNC_DURABLE_ENABLED=false AGENT_MEMORY_SUBJECTS='' AGENT_EXPERIENCE_READ_ENABLED=false .venv/bin/python -m unittest tests.test_rag_optimization tests.test_cosine_knowledge tests.test_delivery_advice tests.test_rag_evidence_runtime tests.test_rag_evidence_hosting tests.test_rag_evidence_gate tests.test_hosted_performance_tools -q"
+  },
+  "file_sha256": {
+    ".env.example": "ca5c72e403b5bf8ae4ddb205b6958a6a0c474d067b7fe6ffff6cc010c6bba0e5",
+    "api/main.py": "96aa0c55d4d6eefda6f8052281c9c8fe0fe1b94243f7cec4572e0c17690ff91c",
+    "hosting/pipeline.py": "696c3d2c8721db342ac418ceeadcc9a22884e4037461f34c171161d4060bb450",
+    "mcp/knowledge_base.py": "f0c4d73873cd4925fcbdf4841fe30c9f3854ef56c7259b1dbf383408fe1be484",
+    "mcp/tool_manager.py": "f96d211225e8bf0014e86398942580c8803e7ff4d20f3e9857c271f03958fd66",
+    "core/rag_evidence.py": "776f89d886f53ac396906df3745fb7b2a6e9da82e35175ed941fcca11b438b40",
+    "core/rag/__init__.py": "f6849bb9cc443d78b7e9dc31f98f19f426b09ca7c5b718664968dc0cfae2c24f",
+    "core/rag/citations.py": "bd2c60a1bacbc1d1d92c50639fc384226452dcdb46ad05d190b5e6156bc58e0e",
+    "core/rag/index.py": "d08ffa2ba87fb241aef215d32edf2339d6c25e43adff99e44a8af314690701ac",
+    "core/rag/reranker.py": "4d01711c8077751c27f122bf6168aa5ed4ff67c76de76a5e64c9494146cb698e",
+    "core/rag/service.py": "29d4300ed6f24ea11122e0082e8b8175209e8cf6aa5cc918d8aab07052db399a",
+    "core/rag/usage.py": "518562ca98bd6ee9ec38058c88712c42527ebb340d435296a71295b67b510e4f"
+  },
+  "smoke_report": "local-embedding-smoke-v2.json",
+  "paid_provider_calls": 0,
+  "runtime_v2_default_enabled": false,
+  "deployed": false,
+  "pending": [
+    "human-reviewed 120-case frozen release set",
+    "all SDD experiment groups and answer evaluation",
+    "end-to-end latency and complete provider costs",
+    "real dedicated reranker acceptance",
+    "corpus migration and deployment rollout"
+  ]
+}

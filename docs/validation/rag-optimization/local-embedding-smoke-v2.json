@@ -1,0 +1,446 @@
+{
+  "kind": "real_local_embedding_retrieval_smoke",
+  "scope": "Six authored smoke cases; not frozen release evaluation. No answer generation or paid calls.",
+  "embedding": "ONNX all-MiniLM-L6-v2 CPU",
+  "receipt": {
+    "generation_id": "22ba54f9ccf8ba93c1de9f0155f63700971668e323d7d4ef36edd9bec849423f",
+    "documents": 30,
+    "chunks": 30
+  },
+  "manifest": {
+    "documents": [
+      [
+        "09747ebcba94c5f0b3f77a65e3aa70a320ea6ad253058b83bd70e49db900f0e1",
+        "67c10525e932867b55ecd87aa58b02e8daadcab86821125867d7dc239c48b3b7"
+      ],
+      [
+        "1648d2214b346a566a77ff40f668c2a283fe3e1b7ec76011f18e340748e07fdb",
+        "91736914fe7968994f48eb94681d9b385355ff54d5e8ba8c2e32d35cfabb7949"
+      ],
+      [
+        "1b929be8357870c0cd99b2c01ed06d1d3a83310c0e59fb9153ca8700a4cb2390",
+        "f2f5228d20fb35c179b8fc70efbba8c5879b391d11d446b972be21ee0a1357a7"
+      ],
+      [
+        "1bb372d17455e40f55901113aa21d5961700622a45f6be8d087ab575341946b3",
+        "aea0eb35456e913b71e327d84a0051ccee4d04003aaddfe3cc48fa2b0dc57fa9"
+      ],
+      [
+        "3a1831fc170d100a30b2339a09ab84b102fc1493f259ea6574b094e819016ad0",
+        "c6476a3e037d1ac012378a0b7b7fb301a1ac92ff8aa7c1c7ff6d8e05603ec390"
+      ],
+      [
+        "41b49e44e9b87dcaad3d3c0d4b1b8407c85db84a739395ac451d89ee90316def",
+        "f4b4054a6e86478e4ab39782002607389d5bb2ce4bc91cfac8d7bcc072102c07"
+      ],
+      [
+        "51b9939e98b48065e4fe525f59ef6ccbb4779f9a3a9c9ecf995fec8564ffa068",
+        "1159eb131ad1c0dcf213626ca26ba2e5008bce320b274866e106f375ba59ae5a"
+      ],
+      [
+        "59ffa0d12cd1839125794044187dad1467afb00d9815b5679d6f36b801a38221",
+        "a3279381f5b8927c5f2b2019aa6e51e82899b5aa8196f57a3b9a85d12715df48"
+      ],
+      [
+        "6b1d94f090b078bd82d6199ffc69c372d838750ed8cca0e3b43916bc3008e4ae",
+        "85e7635c1d922c293e748bce43dfa3bda78e4c219859cd3ffb5084e2cea8a032"
+      ],
+      [
+        "6ef2af74eb4edff1f9d4a3a8c87e0f2d7a15856957a96622e74a0aab78f62f37",
+        "4ead61f8f2e7a2eebf5a787c7fbb81211a7cb7d40ea023b1e70059b246c9d2cf"
+      ],
+      [
+        "77c53409f8e58f28094bec4633c9e4ec1600cd73825356a299bce04531bd4a49",
+        "41e98dd82396ae1d46caf5d655729f89b6fb67f701006df210d372873c0cb4c6"
+      ],
+      [
+        "79a23f7e68313a51b6e40afda31b1617d9438f502ead00ea9299de4d278efc9d",
+        "63d2be4db7581d703d390292527a142aa0b5fc4a8b3fc781e597728189e0667c"
+      ],
+      [
+        "81affa097bb8cc74e36f898090c12a657ee3b107db4953a05454a8c3edcd844f",
+        "7692ff7e2e8dd8dcbb514b88f18165c5427dd826c711de95b1668cbd5f0c724e"
+      ],
+      [
+        "977e098775097484a66802bac7b21c7838f396f724dceb006274f5ea0ae28ad2",
+        "fc493d05175673e10264e52e5f1c81de0e22671bd8ad9abd79bfcb399886e2b0"
+      ],
+      [
+        "9b9685376e672132cbbe2e4628d750b9acb4900ca44757bf9e4191993cf2c8d0",
+        "77e0b1c9b4364c6a46e09267ea93ccd4a88eee2fdffcbdb62a34a2aac4595f9e"
+      ],
+      [
+        "9fb106882ee5d847350658c9d6a1bf4fe6b0331a284e5ed42bc584b078c7a4b7",
+        "bd7bbe22dc0b2a814060d613465514669eeec7408e8ab09766c66a2013b61e43"
+      ],
+      [
+        "a3cf83ad4abbdd520de1d57dd34b301cf72f517c43504da42123bfee5598fac8",
+        "d9703eca309a1d3e35bb06eb25789d398ffada7204f92547e3605f6fdd943a20"
+      ],
+      [
+        "a3dba7c25998b372645adb58998f408d7124f679dde7a624fc5989b720d0caab",
+        "87eff86bba5abea487d0ed0ec28997a794b698097af9b2c02d9e61b2fbc7c553"
+      ],
+      [
+        "baa0eabaede673e48b2703da222a9af5cb40601b90161864dfe8b9ea2954296d",
+        "3a395a8a96277d4129d828747cc7ee5fe6bf6e5b44f094fb6f95477e12b654da"
+      ],
+      [
+        "be5fc868dc43f4622269604dbc7c2fc6fec9921dff7f725d5f44da40edf74a19",
+        "6f84bb10d220822e6a45aa42d1b6f6347bf52243a3a74d5666c590d155c4d6aa"
+      ],
+      [
+        "c9068537993a65d834be7f5a49b9b83347a6f4fe412d073da39f28c8fc292ef5",
+        "fc9f09c8105c1f68612b52fbd35ecd4707052cb7b00624ea2d94f5af14016c3b"
+      ],
+      [
+        "c9572c1742953e58ad1975ab33446d06f52c5c5c81cc4e0fdd43f5fa72de4f39",
+        "d0e14bcf0a528d3c72469fe3ea103f1f632f7528729a9bb6e75249e9ef0caddf"
+      ],
+      [
+        "caae55c1e7040fd2af4212cd36a671120a23e7489828bd2d781986f44d8d644a",
+        "119c68736637541af43161336e3d5900db82fd6aea756db562909fca85f5e957"
+      ],
+      [
+        "cba97d9ef58100a17e15ac47691e61c83f50708c53652c6fb81fdeb76c89cca3",
+        "6140e3d8607b9149253c701feb00f9762b2542073e351609f832b762b965b8b5"
+      ],
+      [
+        "d11411724cfe62ddf4b4347a512d8be065cbac615fe19c0f633a856d276eb448",
+        "ef0e87649873c239b0ab0f44283f5e6a1e854a3b2d1ce2b79a5b9ef46e8a038a"
+      ],
+      [
+        "e9a61157492c13a0de9f7bec4a12de09b0a75ad3cb1d9c2cbb36ad90858eb3e3",
+        "2733690f4b2388e997248c2294d6824749a786e86c37afba68255388919257da"
+      ],
+      [
+        "ed2d74a2c3be6cceb7652a6a45f61181220d097c4d66c520d9131e35fd854094",
+        "399b62cf183d59e66a51bc1acd0c7c322e399a7a7f285d3317ac1baf8c111edf"
+      ],
+      [
+        "efbcaf1b25828d40f561666bc4c92f3cbe26f7d0e01f2eba709718a5918583d4",
+        "506c88c0222ef4da655491f688d5384eda1b4391832ae948315dc0e055981d0b"
+      ],
+      [
+        "f0fd3e9c8681d7715dd17e08b3770131520c0dd54bfdfc702998b65227b02a83",
+        "3befa467fe3a76eb27604d0a236b252c7787ef35fd5c7eaf27e7d1c0d474bfae"
+      ],
+      [
+        "fcaecd780eb1ba67bab0a8d7dff692c9a46ba0133da7a0ca4a4ea8151bfefb8d",
+        "a79f4ef9400a8620bd6420eeede7802526f20f0118c0a9124d44cd04d4100f9f"
+      ]
+    ],
+    "embedding_version": "22b9dab377ea83fe176ccf65896acb10328e5bef9a16b8fe33d848a957384045",
+    "chunker": "paragraph-window-v1",
+    "tokenizer": "unicode-han-bigram-v1",
+    "collection_name": "rag_v2_22ba54f9ccf8ba93c1de9f0155f63700971668e3"
+  },
+  "cases": [
+    {
+      "id": "smoke-1",
+      "family": "广告排序规则",
+      "split": "smoke",
+      "query": "广告排序公式是什么？",
+      "gold": [
+        {
+          "doc_id": "efbcaf1b25828d40f561666bc4c92f3cbe26f7d0e01f2eba709718a5918583d4",
+          "revision": "506c88c0222ef4da655491f688d5384eda1b4391832ae948315dc0e055981d0b",
+          "start": 37,
+          "end": 72
+        }
+      ]
+    },
+    {
+      "id": "smoke-2",
+      "family": "素材与 A/B 测试",
+      "split": "smoke",
+      "query": "A/B 测试每次能改变几个变量？",
+      "gold": [
+        {
+          "doc_id": "d11411724cfe62ddf4b4347a512d8be065cbac615fe19c0f633a856d276eb448",
+          "revision": "ef0e87649873c239b0ab0f44283f5e6a1e854a3b2d1ce2b79a5b9ef46e8a038a",
+          "start": 7,
+          "end": 18
+        }
+      ]
+    },
+    {
+      "id": "smoke-3",
+      "family": "数据看板解读",
+      "split": "smoke",
+      "query": "总点击量能证明转化好吗？",
+      "gold": [
+        {
+          "doc_id": "cba97d9ef58100a17e15ac47691e61c83f50708c53652c6fb81fdeb76c89cca3",
+          "revision": "6140e3d8607b9149253c701feb00f9762b2542073e351609f832b762b965b8b5",
+          "start": 37,
+          "end": 62
+        }
+      ]
+    },
+    {
+      "id": "smoke-4",
+      "family": "广告运营风险边界",
+      "split": "smoke",
+      "query": "能保证加价后收益提升吗？",
+      "gold": [
+        {
+          "doc_id": "be5fc868dc43f4622269604dbc7c2fc6fec9921dff7f725d5f44da40edf74a19",
+          "revision": "6f84bb10d220822e6a45aa42d1b6f6347bf52243a3a74d5666c590d155c4d6aa",
+          "start": 6,
+          "end": 27
+        }
+      ]
+    },
+    {
+      "id": "smoke-5",
+      "family": "出价优化原则",
+      "split": "smoke",
+      "query": "出价高却没人点击怎么办？",
+      "gold": [
+        {
+          "doc_id": "f0fd3e9c8681d7715dd17e08b3770131520c0dd54bfdfc702998b65227b02a83",
+          "revision": "3befa467fe3a76eb27604d0a236b252c7787ef35fd5c7eaf27e7d1c0d474bfae",
+          "start": 70,
+          "end": 89
+        }
+      ]
+    },
+    {
+      "id": "smoke-6",
+      "family": "广告文案优化",
+      "split": "smoke",
+      "query": "广告文案能写无法证明的承诺吗？",
+      "gold": [
+        {
+          "doc_id": "c9572c1742953e58ad1975ab33446d06f52c5c5c81cc4e0fdd43f5fa72de4f39",
+          "revision": "d0e14bcf0a528d3c72469fe3ea103f1f632f7528729a9bb6e75249e9ef0caddf",
+          "start": 60,
+          "end": 74
+        }
+      ]
+    }
+  ],
+  "groups": {
+    "vector": [
+      {
+        "id": "smoke-1",
+        "family": "广告排序规则",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 0.0,
+        "full_required_evidence": false,
+        "retrieved_ids": [
+          "49d0777b766d24196ccd33716328b1ace2b655f736e330faa53d8c9f855d9ea9",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "b65697248dad37076c220e09e92523971800292a8b85909f7874067e323200e8",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "a731b5ea1cc4ef8a31f0be05b8722dab4458bcc1d82164effcce93d8eda4e319",
+          "d507808ea3a59d2b453557a45d954e98bb3a6cf5fab2f4b64af670b4b519af05"
+        ],
+        "duration_ms": 40.901083000790095
+      },
+      {
+        "id": "smoke-2",
+        "family": "素材与 A/B 测试",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "b38795a7aba787267b6edf217af4cf2047473e63c1e02863c6722d6c4b7fbad8",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "7a4ee4f22d2348986c8d99168f888551d57044e146e5b0ab5d30488fbbd1409d",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16"
+        ],
+        "duration_ms": 41.78541700093774
+      },
+      {
+        "id": "smoke-3",
+        "family": "数据看板解读",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da",
+          "a8dd6efd29dd3c0bcbca63b2e8850cb251bdf2cda7a42bd0b417db1185e9ea8c",
+          "d507808ea3a59d2b453557a45d954e98bb3a6cf5fab2f4b64af670b4b519af05"
+        ],
+        "duration_ms": 40.32608299894491
+      },
+      {
+        "id": "smoke-4",
+        "family": "广告运营风险边界",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "a731b5ea1cc4ef8a31f0be05b8722dab4458bcc1d82164effcce93d8eda4e319",
+          "ad4eb18724e232e645358ccc1c6fcf3ef87844923294ce8cd0db9238760d2838",
+          "abab79317fe7a00978147caa268d79ac04ee038618057c0aaa9d99aa532c0a89",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16"
+        ],
+        "duration_ms": 31.521832999715116
+      },
+      {
+        "id": "smoke-5",
+        "family": "出价优化原则",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16",
+          "a731b5ea1cc4ef8a31f0be05b8722dab4458bcc1d82164effcce93d8eda4e319",
+          "db81a31cf35b141b5868618b7eaf54f4c096025dc2906d79d79d7ab06e30d2c9",
+          "abab79317fe7a00978147caa268d79ac04ee038618057c0aaa9d99aa532c0a89"
+        ],
+        "duration_ms": 30.81295799893269
+      },
+      {
+        "id": "smoke-6",
+        "family": "广告文案优化",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 0.0,
+        "full_required_evidence": false,
+        "retrieved_ids": [
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "49d0777b766d24196ccd33716328b1ace2b655f736e330faa53d8c9f855d9ea9",
+          "b65697248dad37076c220e09e92523971800292a8b85909f7874067e323200e8",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da",
+          "a731b5ea1cc4ef8a31f0be05b8722dab4458bcc1d82164effcce93d8eda4e319"
+        ],
+        "duration_ms": 29.005708998738555
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "smoke-1",
+        "family": "广告排序规则",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 0.0,
+        "full_required_evidence": false,
+        "retrieved_ids": [
+          "49d0777b766d24196ccd33716328b1ace2b655f736e330faa53d8c9f855d9ea9",
+          "b65697248dad37076c220e09e92523971800292a8b85909f7874067e323200e8",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "ad4eb18724e232e645358ccc1c6fcf3ef87844923294ce8cd0db9238760d2838",
+          "4534ed20fbd2fecbaac120c5a55b5d76b33f4ca2e2ec961b9a049a39ece2be99",
+          "7fef6c88d90840e0a3ad3becee5467bee5ea6d6395fb64cc02286be731dce932",
+          "d507808ea3a59d2b453557a45d954e98bb3a6cf5fab2f4b64af670b4b519af05"
+        ],
+        "duration_ms": 37.499875001230976
+      },
+      {
+        "id": "smoke-2",
+        "family": "素材与 A/B 测试",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "b38795a7aba787267b6edf217af4cf2047473e63c1e02863c6722d6c4b7fbad8",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "7a4ee4f22d2348986c8d99168f888551d57044e146e5b0ab5d30488fbbd1409d",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16"
+        ],
+        "duration_ms": 34.889374999693246
+      },
+      {
+        "id": "smoke-3",
+        "family": "数据看板解读",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "d507808ea3a59d2b453557a45d954e98bb3a6cf5fab2f4b64af670b4b519af05",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da",
+          "a8dd6efd29dd3c0bcbca63b2e8850cb251bdf2cda7a42bd0b417db1185e9ea8c",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b"
+        ],
+        "duration_ms": 43.432082999061095
+      },
+      {
+        "id": "smoke-4",
+        "family": "广告运营风险边界",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "abab79317fe7a00978147caa268d79ac04ee038618057c0aaa9d99aa532c0a89",
+          "db81a31cf35b141b5868618b7eaf54f4c096025dc2906d79d79d7ab06e30d2c9",
+          "7fef6c88d90840e0a3ad3becee5467bee5ea6d6395fb64cc02286be731dce932",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "a731b5ea1cc4ef8a31f0be05b8722dab4458bcc1d82164effcce93d8eda4e319",
+          "ad4eb18724e232e645358ccc1c6fcf3ef87844923294ce8cd0db9238760d2838"
+        ],
+        "duration_ms": 44.40779100150394
+      },
+      {
+        "id": "smoke-5",
+        "family": "出价优化原则",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "18f7ded04a4542575e22102cdf1cba0f21223b23d95ae2debc67c384ad4d6dda",
+          "db81a31cf35b141b5868618b7eaf54f4c096025dc2906d79d79d7ab06e30d2c9",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "7a4ee4f22d2348986c8d99168f888551d57044e146e5b0ab5d30488fbbd1409d",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16"
+        ],
+        "duration_ms": 44.6925000014744
+      },
+      {
+        "id": "smoke-6",
+        "family": "广告文案优化",
+        "status": "succeeded",
+        "evidence_span_coverage_at8": 1.0,
+        "full_required_evidence": true,
+        "retrieved_ids": [
+          "b3d442e0de97d705eb87f031744d854dcd71f523b6b785ba99069a59bd7e701b",
+          "b91df64317da1b2168bd7c49d32064a3855cb9472cd4a5d12a6a5261fd8fce73",
+          "9fe56e5fe857d47d0ed70e668a38ca583b3365aa5899ad34d86cb79fb4fa6fbc",
+          "784b557e3853266257475096c2e30dc4471d94de47a7facb973d2df65a7f8d16",
+          "d507808ea3a59d2b453557a45d954e98bb3a6cf5fab2f4b64af670b4b519af05",
+          "49d0777b766d24196ccd33716328b1ace2b655f736e330faa53d8c9f855d9ea9",
+          "b65697248dad37076c220e09e92523971800292a8b85909f7874067e323200e8",
+          "1f0636e72cae7b1620edc858febaad9bc800abe2d5720b62f72d34ae197237da"
+        ],
+        "duration_ms": 31.181624999589985
+      }
+    ]
+  }
+}

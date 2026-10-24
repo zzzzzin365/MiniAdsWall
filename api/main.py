@@ -513,7 +513,24 @@ async def _chat_impl(req: ChatRequest):
                 context_parts.append("只依据本轮已检查的知识片段和业务工具数据陈述事实；"
                                      "历史回答不证明事实。不要编造未提供的指标、收益或项目规则。")
             orch_req.context = "\n\n".join(part for part in context_parts if part)
+            from core.rag.citations import enabled as citations_enabled, instruction, validate_and_render, failure_response
+            citation_mode = citations_enabled(knowledge.chunks)
+            versioned_output = any(c.get('generation_id') for c in knowledge.chunks)
+            if citation_mode:
+                orch_req.context += instruction(knowledge.chunks, tool_records)
             result = await _orchestrator.run(orch_req)
+            if versioned_output:
+                tool = _tool_manager._tools.get('knowledge_search')
+                owner = getattr(tool.handler, '__self__', None) if tool else None
+                try:
+                    if owner is None or len(owner.retrieval_service.revalidate(knowledge.chunks)) != len(knowledge.chunks):
+                        raise ValueError('sources_revoked_during_generation')
+                    if citation_mode:
+                        result.response = validate_and_render(result.response, knowledge.chunks,
+                            business_records=tool_records, revalidate=owner.retrieval_service.revalidate)
+                except (ValueError, TypeError, KeyError):
+                    result.response = failure_response()
+                    result.decision_reason = 'rag_citation_validation_failed'
 
     # The current Agent has analysis tools only, not an authenticated business mutation tool.
     # A model response must never be presented as a completed ad change.
@@ -668,6 +685,7 @@ async def _prepare_knowledge_context(message: str, top_k: int = 3, *,
         result = await asyncio.wait_for(
             _tool_manager.search_with_rewrite("knowledge_search", retrieval_query or message, top_k=top_k,
                                                check_retrieved_evidence=False, stage_timeout=retrieval_stage_timeout,
+                                               context={"request_id": request_id},
                                                **({'additional_queries': retrieval_queries} if retrieval_queries else {})),
             timeout=3 * retrieval_stage_timeout + .5,
         )
@@ -728,9 +746,9 @@ async def search(query: str, top_k: int = 5):
     if not 1 <= top_k <= 20:
         raise HTTPException(422, "top_k 必须在 1 到 20 之间")
     result = await _tool_manager.search_with_rewrite("knowledge_search", query, top_k=top_k)
-    if result.evidence and result.evidence["status"] == "unavailable":
-        raise HTTPException(503, detail={"message": "证据检查暂时不可用", "evidence": result.evidence})
-    return {"query": query, "results": result.data, "reranked": result.reranked, "evidence": result.evidence}
+    if not result.success or (result.evidence and result.evidence["status"] == "unavailable"):
+        raise HTTPException(503, detail={"message": "检索或证据检查暂时不可用", "evidence": result.evidence, "retrieval": result.retrieval})
+    return {"query": query, "results": result.data, "reranked": result.reranked, "evidence": result.evidence, "retrieval": result.retrieval}
 
 
 class DocInput(BaseModel):
@@ -786,6 +804,8 @@ async def add_knowledge(body: BatchDocInput):
     if tool is None:
         raise HTTPException(503, "知识库未初始化")
     kb = tool.handler.__self__
+    if getattr(kb, 'optimized_rag', False):
+        raise HTTPException(409, 'RAG v2 文档需要离线构建并发布索引版本')
     count = kb.add_documents([{"title": d.title, "content": d.content} for d in body.documents])
     return {"message": f"成功导入 {count} 个文档片段", "added_chunks": count, "total_chunks": kb.doc_count}
 
@@ -805,6 +825,8 @@ async def upload_knowledge(file: UploadFile = File(...)):
     if tool is None:
         raise HTTPException(503, "知识库未初始化")
     kb = tool.handler.__self__
+    if getattr(kb, 'optimized_rag', False):
+        raise HTTPException(409, 'RAG v2 文档需要离线构建并发布索引版本')
 
     content = await file.read()
     if len(content) > 10 * 1024 * 1024:

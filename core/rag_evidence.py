@@ -42,8 +42,10 @@ def prepare_chunks(items: list, top_k: int = 3) -> list[dict]:
     for item in items:
         if not isinstance(item, dict) or item.get("fallback"):
             continue
-        content = str(item.get("content") or "").strip()
-        if not content:
+        content = str(item.get("content") or "")
+        if not item.get("generation_id"):
+            content = content.strip()
+        if not content.strip():
             continue
         identity = {key: item.get(key) for key in ("title", "content", "chunk", "source_url")}
         chunk_id = item.get("id") or item.get("chunk_id") or hashlib.sha256(
@@ -55,7 +57,8 @@ def prepare_chunks(items: list, top_k: int = 3) -> list[dict]:
         if chunk_id in seen:
             continue
         seen.add(chunk_id)
-        chunks.append({**item, "id": chunk_id, "content": content[:600]})
+        limit = 1600 if item.get("generation_id") else 600
+        chunks.append({**item, "id": chunk_id, "content": content[:limit]})
         if len(chunks) >= top_k:
             break
     return chunks

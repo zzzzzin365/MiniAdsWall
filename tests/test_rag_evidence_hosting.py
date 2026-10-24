@@ -67,7 +67,7 @@ class HostedEvidenceTests(unittest.IsolatedAsyncioTestCase):
                 await Worker(self.repo, self.pipeline).execute(run)
             state = self.repo.get_run(self.user, run["id"])
             trace = json.loads(self.repo.objects.get(state["trace_ref"]))
-            return state, trace, self.repo.history(self.user, self.session["id"])["items"][0]["content_preview"]
+            return state, trace, self.repo.history(self.user, self.session["id"], kind="message")["items"][0]["content_preview"]
         finally:
             for p in reversed(patches):
                 p.stop()

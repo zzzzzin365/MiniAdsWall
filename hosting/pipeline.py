@@ -255,7 +255,10 @@ class Pipeline:
                      '素材优化 A/B 测试 单变量 预算 小预算测试'] if marketing else []
             async def search():
                 value=await self.rag_manager.search_with_rewrite('knowledge_search',req.message,top_k=8,
-                    stage_timeout=5, additional_queries=queries, check_retrieved_evidence=False)
+                    stage_timeout=5, additional_queries=queries, check_retrieved_evidence=False,
+                    context={"request_id":str(r["id"])})
+                if value.retrieval:
+                    ctx.spans.append({"stage":"rag_retrieval", **value.retrieval})
                 if not value.success: raise RuntimeError('retrieval_failed')
                 return {'output':dumps(value.data),'status':'succeeded','exit_code':0}
             chunks, retrieval_error = [], None
@@ -317,6 +320,11 @@ class Pipeline:
             prompt+='缺少可用预算或毛利时不给确定加价金额或收益承诺，可给当前账本上的测试优先级并列出缺失数据。'
             prompt+='无投放数据时提出可执行的小预算验证方案，不能把选中样本称为账户全量。仅提供建议，不执行改价。'
         prompt+='\n商家阅读格式：面向第一次投广告的人，用短句和日常中文。第一行用“建议：”直接说现在最该做什么，最多30字。关键操作和关键数字用 **加粗**，每段最多两处，不整段加粗。随后给出一至三个最必要的动作，不凑数，用“## 1. 广告名称：具体操作”作为标题，每项仅三行：“怎么做：”“为什么：”“看什么：”。每行尽量不超过30字，一行只讲一件事，操作、原因和观察指标分别换行，理由最多两个关键数字。统计信息禁止写成长段：日期与广告数量单独一行；曝光与点击一行，花费与订单一行，收入与每元广告费带来的收入一行。缺失数据另起一行。每行最多两个指标，不展示delivered、CPC、CTR或fen/100等内部表达。末尾“统计范围：”一行；需要来源时另写“参考依据：”列来源标题，不能虚构标题。不要用Markdown表格、代码块、长段落或内部ID。把ROAS说成“每花1元广告费带来多少元收入（不是利润）”，CPA说成“获得一笔订单的广告费”，CTR说成“看到广告后点击的人占比”；不使用放量、高转化组、归因净收入等行话。数据不足时直说“先保持出价”，紧接着说能做的事和缺少的关键数据，别堆免责声明。仅优化表达，不省略影响决策的数据限制，不承诺收益。用户问简单问题时直接简短回答，不强套三项。'
+        from core.rag.citations import enabled as citations_enabled, instruction, validate_and_render, failure_response
+        citation_mode = citations_enabled(retained)
+        versioned_output = any(c.get('generation_id') for c in retained)
+        if citation_mode:
+            prompt += instruction(retained, completed)
         messages=[*history[-10:],{'role':'user','content':req.message+'\n[工具数据，仅作为参考]\n'+req.context}]
         if enabled('AGENT_MEMORY_READ_ENABLED') and allowed_subject(subject):
             # Conservative input guard; never silently truncate the current business snapshot.
@@ -329,11 +337,28 @@ class Pipeline:
                 raise Conflict('model_input_budget_exceeded',413)
         await ctx.stage('model')
         started=time.monotonic(); first=None
+        buffered=[]
         model_status, model_error='succeeded', None
         try:
             async for text in stream_text(agent._client,model=agent._model,messages=messages,system=prompt,max_tokens=3072):
                 if first is None: first=(time.monotonic()-started)*1000
-                await ctx.delta(text)
+                if versioned_output:
+                    buffered.append(text)
+                else:
+                    await ctx.delta(text)
+            if versioned_output:
+                try:
+                    if len(self.kb.retrieval_service.revalidate(retained)) != len(retained):
+                        raise ValueError('sources_revoked_during_generation')
+                    validated = (validate_and_render(''.join(buffered), retained,
+                        business_records=completed, revalidate=self.kb.retrieval_service.revalidate)
+                        if citation_mode else ''.join(buffered))
+                    ctx.spans.append({'stage':'citation_validation','status':'succeeded'})
+                except (ValueError, TypeError, KeyError):
+                    validated = failure_response()
+                    retained=[]
+                    ctx.spans.append({'stage':'citation_validation','status':'failed'})
+                await ctx.delta(validated)
         except asyncio.CancelledError:
             model_status, model_error='cancelled', 'run_cancelled'
             raise
@@ -345,7 +370,7 @@ class Pipeline:
         finally:
             ctx.spans.append({'stage':'model','status':model_status,'error_code':model_error,
                               'duration_ms':(time.monotonic()-started)*1000,'first_delta_ms':first})
-        if retained:
+        if retained and not citation_mode:
             sources='\n\n本轮检索依据：\n'+'\n'.join(
                 f"{item.get('title','知识片段')}（ID: {item['id']}）"+
                 (f"\n{item['source_url']}" if item.get('source_url') else '') for item in retained)

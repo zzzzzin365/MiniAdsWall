@@ -14,6 +14,7 @@ ChromaDB 在这里的角色：
 import asyncio
 import hashlib
 import logging
+import os
 from typing import Any, Dict, List, Optional
 
 import chromadb
@@ -70,6 +71,11 @@ class KnowledgeBase:
 
         # 启动时幂等写入广告领域默认知识，避免旧客服默认文档污染 AdsAgent RAG。
         self._ensure_default_docs()
+        from core.rag.service import RetrievalService, flag
+        self.retrieval_service = RetrievalService(self, os.getenv("RAG_V2_STORE", os.path.join(chroma_path, "rag-text-v2.sqlite3")))
+        self.optimized_rag = flag("RAG_V2_ENABLED")
+        if self.optimized_rag and not self.retrieval_service.index.active():
+            raise RuntimeError("RAG v2 requires a published generation; run scripts/rag_index.py build first")
 
     def _open_cosine_collection(self) -> None:
         """Rebuild the immutable distance index, preserving imported vectors."""
@@ -123,6 +129,8 @@ class KnowledgeBase:
         documents 格式: [{"title": "...", "content": "..."}, ...]
         长文档会自动切片（每片 500 字）。
         """
+        if getattr(self, "optimized_rag", False):
+            raise RuntimeError("RAG v2 uses immutable generations; import with scripts/rag_index.py build")
         ids, docs, metas = [], [], []
 
         for doc in documents:
@@ -134,7 +142,8 @@ class KnowledgeBase:
                 doc_id = hashlib.md5(f"{title}_{i}_{chunk[:50]}".encode()).hexdigest()
                 ids.append(doc_id)
                 docs.append(chunk)
-                metas.append({"title": title, "chunk_index": i, "total_chunks": len(chunks)})
+                metas.append({"title": title, "chunk_index": i, "total_chunks": len(chunks),
+                              "source_url": doc.get("source_url", ""), "source_title": doc.get("source_title", "")})
 
         if ids:
             # ChromaDB 会自动生成 Embedding
@@ -212,6 +221,8 @@ class KnowledgeBase:
 
     @property
     def doc_count(self) -> int:
+        if getattr(self, 'optimized_rag', False):
+            return len(self.retrieval_service.index.chunks(self.retrieval_service.index.active()))
         return self._collection.count()
 
     # ── MCP 工具 handler ─────────────────────────────────────────────────────
@@ -228,6 +239,11 @@ class KnowledgeBase:
         """
         query = params.get("query", "")
         top_k = params.get("top_k", 5)
+        if getattr(self, 'optimized_rag', False):
+            result = await self.retrieval_service.search(None, query, top_k)
+            if not result.success:
+                raise RuntimeError(result.error)
+            return result.data
         # Chroma and embedding calls are synchronous; keep them off the event
         # loop so the caller's retrieval deadline can cancel the await.
         return await asyncio.to_thread(self.search, query, top_k=top_k)

@@ -24,6 +24,7 @@ from typing import Any, Callable, Dict, List, Optional
 from anthropic import AsyncAnthropic
 from core.model_client import create_model_client
 from core.rag_evidence import check_evidence, prepare_chunks
+from core.rag.usage import observed_create
 
 logger = logging.getLogger(__name__)
 
@@ -46,6 +47,7 @@ class ToolResult:
     latency_ms:     float = 0.0
     reranked:       bool = False   # 是否经过重排
     evidence:       Optional[Dict[str, Any]] = None
+    retrieval:      Optional[Dict[str, Any]] = None
 
 
 @dataclass
@@ -168,6 +170,10 @@ class MCPToolManager:
         if not tool:
             return ToolResult(success=False, data=None, tool_name=name, error=f"工具不存在: {name}")
 
+        owner = getattr(tool.handler, '__self__', None)
+        # Immutable generation selection and revocations are checked on every v2 request.
+        if name == 'knowledge_search' and getattr(owner, 'optimized_rag', False):
+            use_cache = False
         # 缓存命中
         if use_cache and tool.cache_ttl > 0:
             cached = self._get_cache(name, params)
@@ -196,14 +202,19 @@ class MCPToolManager:
             tool.breaker.record_success()
 
             # 写缓存
-            if tool.cache_ttl > 0:
+            if use_cache and tool.cache_ttl > 0:
                 self._set_cache(name, params, data, tool.cache_ttl)
 
             # 重排（针对返回列表的检索工具）
             reranked = False
             if rerank_top_k > 0 and tool.supports_rerank and isinstance(data, list):
                 query = params.get("query", "")
-                data, reranked = await self._rerank(query, data, rerank_top_k), True
+                if len(data) > rerank_top_k:
+                    try:
+                        data = await self._rerank(query, data, rerank_top_k)
+                        reranked = True
+                    except Exception:
+                        data = data[:rerank_top_k]
 
             return ToolResult(success=True, data=data, tool_name=name,
                               latency_ms=latency, reranked=reranked)
@@ -265,7 +276,7 @@ class MCPToolManager:
 返回 JSON 数组，例如: ["子查询1", "子查询2", "子查询3"]"""
         prompt = self._clean_text(prompt)
         try:
-            resp = await self._client.messages.create(
+            resp = await observed_create(self._client, stage="rewrite",
                 model=self._model, max_tokens=256, temperature=0.3,
                 messages=[{"role": "user", "content": prompt}],
             )
@@ -294,6 +305,30 @@ class MCPToolManager:
 
         这是解决"检索不全、召回不好"的完整方案。
         """
+        tool = getattr(self, "_tools", {}).get(tool_name)
+        owner = getattr(tool.handler, "__self__", None) if tool else None
+        if tool_name == "knowledge_search" and getattr(owner, "optimized_rag", False):
+            result = await owner.retrieval_service.search(self, query, top_k,
+                stage_timeout=stage_timeout, additional_queries=additional_queries,
+                request_id=(context or {}).get("request_id"))
+            if check_retrieved_evidence:
+                chunks = prepare_chunks(result.data, top_k)
+                decision = await check_evidence(self._client, self._model, query, chunks,
+                    retrieval_error=None if result.success else result.error)
+                result.evidence = decision.to_dict()
+                result.success = result.success and decision.status != "unavailable"
+                result.data = [c for c in chunks if c['id'] in decision.retained_ids]
+            return result
+        if tool_name == 'knowledge_search' and owner is not None and hasattr(owner, 'retrieval_service'):
+            from core.rag.service import flag
+            if flag('RAG_V2_SHADOW_ENABLED'):
+                try:
+                    shadow = await owner.retrieval_service.search(None, query, top_k,
+                        stage_timeout=stage_timeout, request_id=(context or {}).get('request_id'))
+                    logger.info('rag_shadow success=%s generation=%s', shadow.success,
+                        (shadow.retrieval or {}).get('generation_id'))
+                except Exception:
+                    logger.warning('rag_shadow_failed')
         # 1. 查询改写：生成多角度子查询
         try:
             sub_queries = await asyncio.wait_for(self.rewrite_query(query, n=3), stage_timeout)
@@ -344,7 +379,7 @@ class MCPToolManager:
                               error=decision.error_code, evidence=decision.to_dict())
 
         # 4. 重排：用 LLM 对合并结果按相关性打分，取 Top-K
-        did_rerank = True
+        did_rerank = len(merged) > top_k
         try:
             reranked = await asyncio.wait_for(self._rerank(query, merged, top_k), stage_timeout)
         except Exception:
@@ -367,13 +402,13 @@ class MCPToolManager:
         用 LLM 对召回结果重新打分排序。
 
         解决问题：向量检索的相似度分数不等于"对用户有用"，
-        LLM 能理解语义相关性，重排后 Top-K 质量显著提升。
+        重排收益须由固定评测集验证。
         """
         if len(items) <= top_k:
             return items
 
         # 将结果序列化为文本供 LLM 评分
-        items_text = "\n".join(f"{i}. {json.dumps({'title': item.get('title', ''), 'content': str(item.get('content', ''))[:600]}, ensure_ascii=False) if isinstance(item, dict) else str(item)[:600]}"
+        items_text = "\n".join(f"{i}. {json.dumps({'title': item.get('title', ''), 'content': str(item.get('content', ''))}, ensure_ascii=False) if isinstance(item, dict) else str(item)[:600]}"
                                for i, item in enumerate(items))
         prompt = f"""根据用户查询，对以下检索结果按相关性打分（0-10），返回 JSON 数组。
 用户查询: "{query}"
@@ -385,18 +420,21 @@ class MCPToolManager:
         prompt = self._clean_text(prompt)
 
         try:
-            resp = await self._client.messages.create(
+            resp = await observed_create(self._client, stage="rerank",
                 model=self._model, max_tokens=256, temperature=0.0,
                 messages=[{"role": "user", "content": prompt}],
             )
             raw = resp.content[0].text
-            s, e = raw.find("["), raw.rfind("]") + 1
-            order: List[int] = json.loads(raw[s:e])
+            order: List[int] = json.loads(raw)
+            if (not isinstance(order, list) or len(order) != len(items)
+                    or any(type(i) is not int for i in order)
+                    or set(order) != set(range(len(items)))):
+                raise ValueError("invalid_rerank_permutation")
             reranked = [items[i] for i in order if 0 <= i < len(items)]
             return reranked[:top_k]
         except Exception as ex:
-            logger.warning(f"重排失败，返回原始顺序: {ex}")
-            return items[:top_k]
+            logger.warning(f"重排失败，交由调用方降级: {ex}")
+            raise
 
     # ── 缓存 ──────────────────────────────────────────────────────────────────
 
