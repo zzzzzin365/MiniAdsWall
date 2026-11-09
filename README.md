@@ -55,6 +55,10 @@ flowchart LR
   Koa --> FE
 ```
 
+## 多模态rag系统
+
+![多模态rag系统](docs/diagrams/final-multimodal-rag.png)
+
 ## Interviewer Reading Guide
 
 - [存储、Agent 服务托管与性能设计](docs/agent-hosting-design.md)：MySQL/Redis、SSE、取消与超时、隔离执行、并发与恢复的目标设计；[实现与运行](docs/agent-hosting-implementation.md) 说明已实现能力、部署方式和未完成的生产验收。
